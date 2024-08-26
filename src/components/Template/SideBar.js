@@ -9,12 +9,12 @@ const SideBar = () => (
   <section id="sidebar">
     <section id="intro">
       <Link to="/" className="logo">
-        <img src={`${PUBLIC_URL}/images/me.jpg`} alt="" />
+        <img src={`${PUBLIC_URL}/images/Sam.png`} alt="Sam Wong the AI Tutor" />
       </Link>
       <header>
-        <h2>Michael D&apos;Angelo</h2>
+        <h2>SAMUEL WONG</h2>
         <p>
-          <a href="mailto:michael@mldangelo.com">michael@mldangelo.com</a>
+          <a href="mailto:hyperfocusam@gmail.com">hyperfocusam@gmail.com</a>
         </p>
       </header>
     </section>
@@ -22,14 +22,10 @@ const SideBar = () => (
     <section className="blurb">
       <h2>About</h2>
       <p>
-        Hi, I&apos;m Michael. I am a{' '}
-        <a href="https://icme.stanford.edu/">Stanford ICME</a> graduate, YC
-        Alumni, and the VP of Engineering at{' '}
-        <a href="https://smileidentity.com">Smile Identity</a>. Previously, I
-        was the co-founder and CTO of <a href="https://arthena.com">Arthena</a>,
-        co-founder of <a href="https://matroid.com">Matroid</a>, and worked at{' '}
-        <a href="https://planet.com">Planet</a> and{' '}
-        <a href="https://facebook.com">Facebook</a>.
+        Hi, I&apos;m Sam. I am a{' '}
+        <a href="https://www.cuhk.edu.hk/english/index.html">CUHK</a> Master of Arts in Public History graduate. Previously, I was the AI product specialist and AI team lead of <a href="https://renpho.com/">RENPHO</a>,
+        executive assistant to business owner of <a href="https://faoschwarz.com/">FAO SCHWARZ</a>, and {' '}
+        <a href="https://www.sharperimage.com/">SHARPER IMAGE.</a>
       </p>
       <ul className="actions">
         <li>
