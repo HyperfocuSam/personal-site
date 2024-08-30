@@ -3,6 +3,7 @@ const data = [
   {
     title: 'Project RENPHO | Leader',
     subtitle: 'Strategic AI transformation project in corporation',
+    link: 'https://samw-main-hs0dnj6jk-hyperfocusams-projects-dabaf648.vercel.app/projects/projectrenpho/',
     image: '/images/projects/projectrenpho.png',
     date: '2024-02',
     desc:
