@@ -21,7 +21,7 @@ const About = () => {
     .filter((s) => s.length).length;
 
   return (
-    <Main title="About" description="Learn about Sam Wong">
+    <Main title="About" description="About Sam Wong, the AI private tutor in Hong Kong">
       <article className="post markdown" id="about">
         <header>
           <div className="title">

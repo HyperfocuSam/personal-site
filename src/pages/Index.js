@@ -14,14 +14,16 @@ const Index = () => (
       <header>
         <div className="title">
           <h2>
-            <Link to="/">HELLO THERE! THIS IS SAM</Link>
+            <Link to="/">Glad to see you here!</Link>
           </h2>
-          <p>Welcome to my website. Please feel free to read more about me.</p>
+          <p> I&apos;m SAM. I inspire people learn AI and celebrate their individualness.</p>
         </div>
       </header>
-      <p>I am currently running a solo project, Project FORDII.</p>
-      <p>Advised 150+ individuals to find their unique path in AI learning journey.</p>
-      <p>Email me if you want to have a chat about AI, or just want to say hi!</p>
+      <p>I help 150+ individuals to find their unique path in AI learning journey.</p>
+      <p>I teach people how to leverage AI to level up their career and business.</p>
+      <p>I share my insights on human-centered AI and how to archive internal development by AI.</p>
+      <br />
+      <p>Drop me a line if you want to have a chat about AI, or simply anything!</p>
     </article>
   </Main>
 );

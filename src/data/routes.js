@@ -9,16 +9,16 @@ const routes = [
     path: '/about',
   },
   {
-    label: 'Resume',
-    path: '/resume',
-  },
-  {
     label: 'Projects',
     path: '/projects',
   },
   {
     label: 'Stats',
     path: '/stats',
+  },
+  {
+    label: 'My AIGC Gallary',
+    path: 'https://mj-sref-hyperfocusam.vercel.app/grid',
   },
   {
     label: 'Contact',

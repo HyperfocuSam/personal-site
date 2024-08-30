@@ -1,21 +1,17 @@
 # Intro
-I am a tech enthusiast. I believe in human's potential in the era of AI. 
+I am a tech enthusiast, but I believe that humans are the most important factor as we enter the AI era. My goal is to inspire others. I find fulfillment in seeing people unlock their potential and take innovation and creativity to the next level.
+<br>
+# My vision
+I grew up with ADHD but was only diagnosed in my mid-20s. As a history graduate working as an executive assistant, I struggled to overcome the challenges that ADHD brought to my daily life and work. At times, I felt directionless, burned out, and frustrated, doubting whether I would ever find my path and passion. That changed when I discovered the concept of AI and automation.
 <br>
 <br>
-My vision is to bring inspirations to all, and to encourage innovations and creativities. Hope not to be just part in the Industrial Revolution, but also the Renassiance of Humanity.
+What truly motivated me, however, was the visionary future I glimpsed during one-on-one communications with my team members. We were not just impressed by what 'AI could do,' but inspired by what 'we could do' together.
 <br>
 <br>
-Prior to my exploration journey in AI, I formerly work as AI Division Lead and also with 5+ years of experience as executive assistant to top managements in MNCs. 
-<br>
-# ADHD & My vision in AI
-Grew up with ADHD but only been diagnosed until my mid-20s. I am a history graduate, and been working as an assistant to executives in my career. I was working so hard to overcome the impact brought by ADHD to my daily life and work and I was once direction-less, burn-out and frustrated, thinking there is very little chance I could find my path and passion. Until I come up with the concept of AI/automate.
+I believe that as AI development progresses, we should not only focus on how it can change operations from the top down but also consider its impact from the bottom up, emphasizing the importance of humanistic and artistic development.
 <br>
 <br>
-But what truly motivated me was visionary future I saw when I am doing 1-on-1 communications with my team members. We were impressed and enjoyed from what "WE could do", but not just what "AI could do".
+As we move towards, what lays ahead is not only the Fourth Industrial Revolution, but also the Renaissance that belongs to our generation.
 <br>
 <br>
-I believe in the light of AI development, we should not be just focusing on how it could change operations from top-down, but also from bottom-up and focus more on individuals' humanistic and artistic development.
-<br>
-<br>
-Many would agree we are heading towards the 4th industrial revolution. This time the factor of human touch is more important than ever. And everyone should have their own exploration journey.
 <br>

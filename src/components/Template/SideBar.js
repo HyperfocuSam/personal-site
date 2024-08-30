@@ -9,7 +9,7 @@ const SideBar = () => (
   <section id="sidebar">
     <section id="intro">
       <Link to="/" className="logo">
-        <img src={`${PUBLIC_URL}/images/Sam.png`} alt="Sam Wong the AI Tutor" />
+        <img src={`${PUBLIC_URL}/images/Sam.png`} alt="Sam Wong, tutor of AI in Hong Kong" />
       </Link>
       <header>
         <h2>SAMUEL WONG</h2>
@@ -21,11 +21,10 @@ const SideBar = () => (
 
     <section className="blurb">
       <h2>About</h2>
-      <p>
-        Hi, I&apos;m Sam. I am a{' '}
-        <a href="https://www.cuhk.edu.hk/english/index.html">CUHK</a> Master of Arts in Public History graduate. Previously, I was the AI product specialist and AI team lead of <a href="https://renpho.com/">RENPHO</a>,
-        executive assistant to business owner of <a href="https://faoschwarz.com/">FAO SCHWARZ</a>, and {' '}
-        <a href="https://www.sharperimage.com/">SHARPER IMAGE.</a>
+      <p> A lifelong learner. Diagnosed with ADHD. I am a history enthusiast and a {' '}
+        Master of Arts in Public History graduate from <a href="https://www.cuhk.edu.hk/english/index.html">CUHK</a>. I am also an AI enthusiast and a private tutor of AI. <br /><br />
+        Previously, I was the AI Product Specialist and AI Lead at <a href="https://renpho.com/">RENPHO</a>. Before my journey into AI, I served as the Executive Assistant to business owners of international brands, including <a href="https://faoschwarz.com/">FAO SCHWARZ</a>, and {' '}
+        <a href="https://www.sharperimage.com/">SHARPER IMAGE</a>, and RENPHO.
       </p>
       <ul className="actions">
         <li>
@@ -45,7 +44,7 @@ const SideBar = () => (
     <section id="footer">
       <ContactIcons />
       <p className="copyright">
-        &copy; Michael D&apos;Angelo <Link to="/">mldangelo.com</Link>.
+        &copy; SAMUEL WONG <Link to="/">hyperfocusam.com</Link>.
       </p>
     </section>
   </section>
