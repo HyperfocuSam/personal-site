@@ -16,7 +16,7 @@ const Index = () => (
           <h2>
             <Link to="/">Glad to see you here!</Link>
           </h2>
-          <p> I&apos;m SAM. I inspire people learn AI and celebrate their individualness.</p>
+          <p> I&apos;m SAM. I inspire people to explore in AI and celebrate their individualness.</p>
         </div>
       </header>
       <p>I help 150+ individuals to find their unique path in AI learning journey.</p>
