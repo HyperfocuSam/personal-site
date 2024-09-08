@@ -63,13 +63,13 @@ const data = [
   {
     label: 'AI images created via Midjourney',
     key: '',
-    value: 8637,
+    value: 9139,
     link: 'https://mj-sref-hyperfocusam.vercel.app/',
   },
   {
     label: 'Stable Diffusion Lora trained',
     key: '',
-    value: 5,
+    value: 7,
     link: 'https://civitai.com/user/HyperfocuSam',
   },
   {

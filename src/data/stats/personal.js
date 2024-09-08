@@ -27,12 +27,12 @@ const data = [
   {
     key: '',
     label: 'Individuals helped',
-    value: 153,
+    value: 160,
   },
   {
     key: '',
     label: '1-1 Sessions conducted',
-    value: 213,
+    value: 215,
   },
   {
     key: '',
