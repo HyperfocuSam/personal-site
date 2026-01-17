@@ -11,6 +11,12 @@ module.exports = {
   parser: '@babel/eslint-parser',
   plugins: ['react'],
   rules: {
+    'import/no-unresolved': [
+      'error',
+      {
+        ignore: ['^@vercel/analytics'],
+      },
+    ],
     'jsx-a11y/anchor-is-valid': [
       'error',
       {
