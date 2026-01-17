@@ -12,8 +12,8 @@ const Main = (props) => (
     <Analytics />
     <ScrollToTop />
     <Helmet
-      titleTemplate="%s | Samuel Wong"
-      defaultTitle="Samuel Wong"
+      titleTemplate="%s | Sam Wong"
+      defaultTitle="Sam Wong | AI Training Specialist"
       defer={false}
     >
       {props.title && <title>{props.title}</title>}
@@ -41,7 +41,8 @@ Main.defaultProps = {
   children: null,
   fullPage: false,
   title: null,
-  description: "Samuel Wong's personal website.",
+  description: 'Sam Wong - AI Training Specialist helping enterprises and individuals '
+    + 'adopt AI through corporate workshops, 1-1 coaching, and Train-the-Trainer programs.',
 };
 
 export default Main;

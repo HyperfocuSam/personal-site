@@ -1,2 +1,12 @@
+# robots.txt for samwong.me
+
 User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://samwong.me/sitemap.xml
+
+# Disallow non-essential paths
 Disallow: /api
+Disallow: /static/js/*.map
+Disallow: /static/css/*.map

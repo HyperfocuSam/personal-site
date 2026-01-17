@@ -22,7 +22,13 @@ const Navigation = () => (
           .filter((l) => !l.index)
           .map((l) => (
             <li key={l.label}>
-              <Link to={l.path}>{l.label}</Link>
+              {l.path.startsWith('http') ? (
+                <a href={l.path} target="_blank" rel="noopener noreferrer">
+                  {l.label}
+                </a>
+              ) : (
+                <Link to={l.path}>{l.label}</Link>
+              )}
             </li>
           ))}
       </ul>

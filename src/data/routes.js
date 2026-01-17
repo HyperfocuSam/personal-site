@@ -9,16 +9,20 @@ const routes = [
     path: '/about',
   },
   {
+    label: 'Services',
+    path: '/services',
+  },
+  {
     label: 'Projects',
     path: '/projects',
   },
   {
-    label: 'Stats',
-    path: '/stats',
+    label: 'Speaking',
+    path: '/speaking',
   },
   {
-    label: 'My AIGC Gallary',
-    path: 'https://mj-sref-hyperfocusam.vercel.app/grid',
+    label: 'Blog',
+    path: '/blog',
   },
   {
     label: 'Contact',
