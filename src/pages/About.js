@@ -8,12 +8,25 @@ const About = () => {
   const [markdown, setMarkdown] = useState('');
 
   useEffect(() => {
-    import('../data/about.md').then((res) => {
-      fetch(res.default)
-        .then((r) => r.text())
-        .then(setMarkdown);
-    });
-  });
+    let isMounted = true;
+    import('../data/about.md')
+      .then((res) => fetch(res.default))
+      .then((r) => r.text())
+      .then((text) => {
+        if (isMounted) {
+          setMarkdown(text);
+        }
+      })
+      .catch(() => {
+        if (isMounted) {
+          setMarkdown('Error loading about content.');
+        }
+      });
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   const count = markdown
     .split(/\s+/)

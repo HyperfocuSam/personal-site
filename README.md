@@ -1,20 +1,20 @@
 # Personal Website
 
-Welcome to my [personal website](https://mldangelo.com)! This is an [MIT licensed](https://github.com/mldangelo/personal-site/blob/main/LICENSE) React-based Jamstack application. It offers a simple interface, easy modifications, static export capabilities, and free automatic deployments via [GitHub Pages](https://pages.github.com/).
+Welcome to my personal website! This is the source for [samwong.me](https://samwong.me/), a React-based Jamstack site where I share my work as an AI private tutor in Hong Kong. It is [MIT licensed](./LICENSE), easy to customize, and deploys cleanly to static hosting (including [GitHub Pages](https://pages.github.com/)).
 
 ## 🚀 Features
 
-- Built with modern JavaScript, using tools and frameworks like [create-react-app](https://github.com/facebook/create-react-app), [React-Router](https://reactrouter.com/), and SCSS.
-- Automated workflows via [GitHub Actions](https://github.com/features/actions).
+- Built with modern JavaScript using [create-react-app](https://github.com/facebook/create-react-app), [React Router](https://reactrouter.com/), and SCSS.
+- Automated workflows via [GitHub Actions](https://github.com/features/actions) for static deployments.
 - And more!
 
 ## 🛠 Adapting this Project
 
-Want to create your own personal website based on this project? You can set it up in as little as 30 minutes! Follow the setup instructions below and check out the **[detailed guide and checklist](./docs/adapting-guide.md)** on adapting this project to your needs. If you encounter any challenges, don't hesitate to contact me through an issue or email at [help@mldangelo.com](mailto:help@mldangelo.com).
+This repo started from an open source template and has been customized for my site. If you want to adapt it for yourself, follow the setup instructions below and check out the **[detailed guide and checklist](./docs/adapting-guide.md)**.
 
 ## 🤝 Contributing
 
-Your contributions are warmly welcomed! If you wish to contribute, please review the [design goals](./docs/design-goals.md), [roadmap](./docs/roadmap.md), and [contributing guidelines](./docs/contributing.md). For any bugs or suggestions, you can reach out via email, submit a pull request (I'd be happy to get you a coffee as a thank-you!), or open an issue.
+If you spot a bug or have an idea to improve the site, feel free to open an issue or a pull request. See the [design goals](./docs/design-goals.md), [roadmap](./docs/roadmap.md), and [contributing guidelines](./docs/contributing.md) for more detail.
 
 ## 🔧 Dependencies
 
@@ -25,7 +25,7 @@ Ensure you have [node](https://nodejs.org/) >= v16. Optionally, use [nvm](https:
 1. Clone the repository:
 
    ```bash
-   git clone git://github.com/mldangelo/personal-site.git
+   git clone git://github.com/HyperfocuSam/personal-site.git
    cd personal-site
    ```
 
