@@ -10,6 +10,14 @@ const posts = [
     featured: true,
   },
   {
+    slug: 'bochk-banking-ai-training',
+    title: 'What 1,500 Banking Professionals Taught Me About AI Adoption',
+    date: '2025-11-15',
+    excerpt: 'Lessons from training Bank of China (Hong Kong) employees across 13 countries - on safety frameworks, workflow integration, and the 70/30 human-AI split.',
+    tags: ['enterprise', 'ai-adoption', 'banking', 'case-study'],
+    featured: false,
+  },
+  {
     slug: 'welcome-to-my-blog',
     title: 'Welcome to My Blog',
     date: '2025-01-17',
