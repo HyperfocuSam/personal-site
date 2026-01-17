@@ -2,6 +2,8 @@
 
 I recently wrapped up a series of AI training workshops for Bank of China (Hong Kong). The scope: 1,530 participants across 13 countries. The first session alone had 617 people simultaneously online. At that scale, everything I thought I knew about AI training got stress-tested.
 
+![Delivering virtual training to BOCHK teams across multiple countries](/images/blog/bochk-sam-presenting.webp)
+
 Here's what I learned.
 
 ## The Misconception I Had to Unlearn
@@ -39,6 +41,8 @@ For the BOCHK team, this meant different approaches for different groups. The tr
 **Layer 2: Creative Workflows** - For marketing and communications teams, tools like Gamma for presentations and image generation for campaign visuals. Still integrated with existing deliverables, just produced faster.
 
 **Layer 3: Decision Support** - For senior staff, I introduced an IPA framework: Input (what data goes in), Process (how AI analyzes it), Action (what decisions result). This reframed AI from "tool" to "thinking partner" for strategic work.
+
+![The IPA Framework - Data Intake, Processing, and Archive & Action with AI](/images/blog/bochk-ipa-framework.jpeg)
 
 The key insight: don't ask people to learn new workflows. Show them how AI slots into the workflows they've already mastered.
 
