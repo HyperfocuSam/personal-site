@@ -65,7 +65,7 @@ Organizations where AI adoption has stalled, or leaders who want to get it right
 **Clients who chose this path:** HSBC, Bank of China, Chow Tai Fook, Garden, Hong Kong Jockey Club, PolyU`,
     cta: 'Talk About Your Team',
     ctaLink: '/contact',
-    image: '/images/services/corporate-training.png',
+    image: '/images/services/corporate-training.jpeg',
   },
   {
     id: 'one-on-one',
