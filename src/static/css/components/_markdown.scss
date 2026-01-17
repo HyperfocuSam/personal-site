@@ -10,3 +10,14 @@
     margin-top: 3em;
   }
 }
+
+// Blog post images
+.post#blog-post {
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1.5em auto;
+    border-radius: 4px;
+  }
+}
