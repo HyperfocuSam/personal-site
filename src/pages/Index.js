@@ -6,80 +6,90 @@ import Main from '../layouts/Main';
 const Index = () => (
   <Main
     description={
-      'Sam Wong - AI Training Specialist helping enterprises and individuals adopt AI. '
-      + 'Co-founder of Adaptig, Founding member of DotAI. Corporate workshops, 1-1 coaching, '
-      + 'Train-the-Trainer programs in Hong Kong.'
+      'Sam Wong - AI trainer and coach helping people discover what\'s possible with AI. '
+      + 'From ADHD brain to AI mission. Co-founder of Adaptig, Founding member of DotAI. '
+      + 'Human-first approach to AI adoption.'
     }
   >
     <article className="post" id="index">
       <header>
         <div className="title">
           <h2>
-            <Link to="/">Welcome!</Link>
+            <Link to="/">Hey there.</Link>
           </h2>
-          <p>I help people and organizations thrive with AI.</p>
+          <p>
+            I didn&apos;t set out to teach AI. I discovered it while figuring out how to
+            manage my ADHD brain&mdash;and what started as a personal solution became a
+            mission to help others.
+          </p>
         </div>
       </header>
 
       <section className="hero-stats">
         <p>
-          <strong>10,000+ professionals</strong> trained across Hong Kong and globally.
+          <strong>10,000+ people</strong> who&apos;ve gone from skeptical to curious.
           <br />
-          <strong>70+ enterprise clients</strong> including HSBC, Bank of China, Chow Tai Fook.
+          <strong>70+ organizations</strong> that chose practical over hype.
           <br />
-          <strong>3 ventures</strong> driving AI adoption: DotAI, Adaptig, and Loopem.
+          <strong>3 ventures</strong> built on one belief: humans come first.
         </p>
       </section>
 
-      <h3>What I Do</h3>
+      <h3>What I Actually Do</h3>
+      <p>
+        Not teaching tools. Helping people discover what&apos;s possible.
+      </p>
       <ul>
         <li>
-          <strong>Corporate AI Training</strong> - Helping enterprises build AI-capable
-          teams through hands-on workshops and strategic implementation guidance.
+          <strong>Run workshops</strong> where skeptics become curious and the curious
+          become confident. The goal isn&apos;t mastering ChatGPT&mdash;it&apos;s finding
+          what AI makes possible for <em>you</em>.
         </li>
         <li>
-          <strong>1-1 AI Coaching</strong> - Personalized learning journeys for
-          professionals who want to leverage AI in their careers.
+          <strong>Coach individuals</strong> through their own AI journeys. Not a
+          curriculum, but a conversation. We start with your actual work, not hypothetical
+          use cases.
         </li>
         <li>
-          <strong>Train-the-Trainer</strong> - Empowering facilitators to deliver
-          AI workshops through the Adaptig methodology.
+          <strong>Train trainers</strong> who want to bring this to their own organizations.
+          The Adaptig approach: psychological safety first, then practical skills.
         </li>
       </ul>
 
-      <h3>Current Ventures</h3>
-      <p>
-        <strong>
-          <a href="https://dotai.hk" target="_blank" rel="noopener noreferrer">DotAI</a>
-        </strong>
-        {' '}- Founding member. Corporate AI training and community in Hong Kong.
-      </p>
+      <h3>Where I Work</h3>
       <p>
         <strong>
           <a href="https://adaptig.ai" target="_blank" rel="noopener noreferrer">Adaptig</a>
         </strong>
-        {' '}- Co-founder. Global AI workshop platform with trainer network across
-        North America, Latin America, Europe, and Asia-Pacific.
+        {' '}&mdash; A global trainer network I co-founded. We help organizations like
+        Mattel, Toyota, and YPO go from unsure to unstoppable with AI they actually use.
       </p>
       <p>
-        <strong>Loopem</strong> - Exploring AI product opportunities in mainland China.
+        <strong>
+          <a href="https://dotai.hk" target="_blank" rel="noopener noreferrer">DotAI</a>
+        </strong>
+        {' '}&mdash; Hong Kong&apos;s practical AI training community. HSBC, Bank of China,
+        Chow Tai Fook, and others chose us because we focus on adoption, not just awareness.
+      </p>
+      <p>
+        <strong>Loopem</strong> &mdash; An experiment in bringing practical AI to mainland China.
       </p>
 
       <br />
       <p>
-        Ready to explore how AI can transform your work or organization?{' '}
-        <Link to="/contact">Let&apos;s talk</Link>.
+        Curious what this could look like for you or your team?{' '}
+        <Link to="/contact">Let&apos;s have a conversation</Link>.
       </p>
 
       <ul className="actions">
         <li>
           <Link to="/services" className="button">
-            View Services
+            See How I Work
           </Link>
         </li>
         <li>
           <Link to="/about" className="button">
-            Learn More About Me
+            My Story
           </Link>
         </li>
       </ul>

@@ -21,9 +21,10 @@ const Services = () => (
       </header>
 
       <p>
-        I offer AI training through multiple channels to meet different needs.
-        Whether you are an individual looking to level up your skills, or an organization
-        building AI capability across teams, there is a path forward.
+        Most AI training focuses on the tools. Mine focuses on the people using them.
+        Whether you&apos;re an individual trying to figure out where AI fits in your work,
+        or an organization wondering how to actually get your teams to adopt it&mdash;the
+        answer isn&apos;t more features. It&apos;s finding the right starting point.
       </p>
 
       {services.map((service) => (

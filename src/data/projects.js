@@ -1,16 +1,5 @@
 const data = [
   {
-    title: 'DotAI | Founding Member',
-    subtitle: 'Corporate AI Training & Community in Hong Kong',
-    link: 'https://dotai.hk',
-    image: '/images/projects/dotai.jpg',
-    date: '2024-10',
-    desc:
-      'Hong Kong\'s first practical AI training platform. 70+ enterprise clients '
-      + 'including HSBC, Bank of China, Chow Tai Fook, Garden. 50,000+ people served, '
-      + '10,000+ professionals trained.',
-  },
-  {
     title: 'Adaptig | Co-founder',
     subtitle: 'Global AI Adoption Workshop Platform',
     link: 'https://adaptig.ai',
@@ -20,6 +9,17 @@ const data = [
       'AI adoption that sticks. Global trainer network across North America, '
       + 'Latin America, Europe, and Asia-Pacific. Clients include Mattel, Toyota, '
       + 'YPO, Bank of China, HSBC, Hong Kong Jockey Club.',
+  },
+  {
+    title: 'DotAI | Founding Member',
+    subtitle: 'Corporate AI Training & Community in Hong Kong',
+    link: 'https://dotai.hk',
+    image: '/images/projects/dotai.jpg',
+    date: '2024-10',
+    desc:
+      'Hong Kong\'s first practical AI training platform. 70+ enterprise clients '
+      + 'including HSBC, Bank of China, Chow Tai Fook, Garden. 50,000+ people served, '
+      + '10,000+ professionals trained.',
   },
   {
     title: 'Project AICBO | Owner',
