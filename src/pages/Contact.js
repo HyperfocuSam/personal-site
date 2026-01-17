@@ -52,7 +52,7 @@ const Contact = () => (
 
       <br />
       <p>
-        <em>Based in Hong Kong, available globally (remote sessions) and across Asia-Pacific.</em>
+        <em>Based in Hong Kong, available globally and across Asia-Pacific.</em>
       </p>
     </article>
   </Main>

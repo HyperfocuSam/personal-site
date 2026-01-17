@@ -82,7 +82,7 @@ const speaking = {
       'Panel discussions and Q&A',
     ],
     languages: ['English', 'Cantonese', 'Mandarin'],
-    locations: ['Hong Kong', 'Asia-Pacific', 'Global (Virtual)'],
+    locations: ['Hong Kong', 'Asia-Pacific', 'Global'],
   },
 };
 
