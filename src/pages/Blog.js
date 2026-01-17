@@ -52,7 +52,7 @@ const Blog = () => (
       <h3>Want more frequent updates?</h3>
       <p>
         Follow me on{' '}
-        <a href="https://www.linkedin.com/in/samwlt/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/sam-ai-agent/" target="_blank" rel="noopener noreferrer">
           LinkedIn
         </a>{' '}
         for shorter updates and industry discussions.

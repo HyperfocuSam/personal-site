@@ -54,4 +54,4 @@ AI tools change rapidly. What remains constant is the AI design mindset: the abi
 
 ---
 
-*This was my third workshop with Chow Tai Fook's design team. If you're interested in AI adoption training for your organization, feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/samwlt/).*
+*This was my third workshop with Chow Tai Fook's design team. If you're interested in AI adoption training for your organization, feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*

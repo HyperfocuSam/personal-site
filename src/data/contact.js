@@ -19,7 +19,7 @@ const data = [
     icon: faWhatsapp,
   },
   {
-    link: 'https://www.linkedin.com/in/samwlt/',
+    link: 'https://www.linkedin.com/in/sam-ai-agent/',
     label: 'LinkedIn',
     icon: faLinkedinIn,
   },

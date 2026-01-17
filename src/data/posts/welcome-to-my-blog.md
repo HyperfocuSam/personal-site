@@ -20,7 +20,7 @@ You'll find posts covering:
 
 ## Stay Connected
 
-The best way to stay updated is to follow me on [LinkedIn](https://www.linkedin.com/in/samwlt/) where I also share shorter updates and engage with the community.
+The best way to stay updated is to follow me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/) where I also share shorter updates and engage with the community.
 
 If you have topics you'd like me to cover, feel free to [reach out](/contact). I'm always interested in hearing what questions people are wrestling with.
 
