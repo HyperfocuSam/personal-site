@@ -95,6 +95,35 @@ What I've found is that the people who struggle most with traditional ways of le
     ctaLink: '/contact',
     image: '/images/services/one-on-one.png',
   },
+  {
+    id: 'keynotes-events',
+    title: 'Keynotes & Events',
+    subtitle: 'Setting context and lowering fear',
+    provider: 'Sam Wong',
+    description: `People walk into my sessions skeptical, overwhelmed, or convinced AI isn't for them. They leave with clarity about what's possible—and confidence to try it.
+
+The goal isn't to impress people with what AI can do. It's to help them see what *they* can do with it. I create space for questions, lower the fear, and focus on practical wins.
+
+**Available formats:**
+- **Keynotes (30-60 min)** — Setting context, lowering barriers, sparking curiosity
+- **Panel discussions & Q&A** — Real conversations, not scripted talking points
+- **Executive briefings** — For leadership teams who need signal, not noise
+- **Conference workshops** — Hands-on learning for larger audiences
+
+**Topics I cover:**
+- AI for the Rest of Us — Making AI accessible for non-tech people
+- Prompt Engineering That Actually Works — Beyond the basics
+- Getting Your Organization AI-Ready — What adoption actually requires
+- The Human Side of AI — Why technology is the easy part
+
+**Languages:** English, Cantonese, Mandarin
+**Locations:** Hong Kong, Asia-Pacific, Global
+
+Recent appearances include YPO executive sessions, DotAI's Everyone.AI conference (Microsoft, Google, HP partnership), and enterprise events across Asia.`,
+    cta: 'Discuss Your Event',
+    ctaLink: '/contact',
+    image: '/images/services/keynotes-events.png',
+  },
 ];
 
 export default services;

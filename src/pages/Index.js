@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Main from '../layouts/Main';
+import { LeadMagnetBanner } from '../components/LeadCapture';
 
 const Index = () => (
   <Main
@@ -34,6 +35,8 @@ const Index = () => (
           <strong>3 ventures</strong> built on one belief: humans come first.
         </p>
       </section>
+
+      <LeadMagnetBanner variant="homepage" />
 
       <h3>What I Actually Do</h3>
       <p>

@@ -17,10 +17,6 @@ const routes = [
     path: '/projects',
   },
   {
-    label: 'Speaking',
-    path: '/speaking',
-  },
-  {
     label: 'Blog',
     path: '/blog',
   },

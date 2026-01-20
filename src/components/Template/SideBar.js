@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import ContactIcons from '../Contact/ContactIcons';
+import { LeadMagnetBanner } from '../LeadCapture';
 
 const { PUBLIC_URL } = process.env;
 
@@ -44,6 +45,8 @@ const SideBar = () => (
         </li>
       </ul>
     </section>
+
+    <LeadMagnetBanner variant="sidebar" />
 
     <section id="footer">
       <ContactIcons />
