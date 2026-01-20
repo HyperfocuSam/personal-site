@@ -18,6 +18,22 @@ const posts = [
     featured: false,
   },
   {
+    slug: 'polyu-finance-ai-workflow',
+    title: 'How PolyU\'s Finance Team Built an AI Workflow That Actually Works',
+    date: '2025-05-15',
+    excerpt: 'Building sustainable AI workflows for a university finance office - starting with strategy, establishing the ACE framework, and watching tool users become process designers.',
+    tags: ['enterprise', 'ai-adoption', 'education', 'case-study'],
+    featured: false,
+  },
+  {
+    slug: 'hkjc-mt-ai-training',
+    title: 'Teaching Hong Kong Jockey Club\'s Future Leaders to Think in Prompts',
+    date: '2025-04-26',
+    excerpt: 'Training HKJC Management Trainees on AI business communication through a three-layer prompt framework - from precision to structure to context.',
+    tags: ['enterprise', 'ai-adoption', 'leadership', 'case-study'],
+    featured: false,
+  },
+  {
     slug: 'welcome-to-my-blog',
     title: 'Welcome to My Blog',
     date: '2025-01-17',
