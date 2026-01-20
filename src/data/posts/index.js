@@ -20,12 +20,30 @@ const posts = [
     featured: false,
   },
   {
+    slug: 'cts-tourism-ai-training',
+    title: 'Teaching Tourism Executives to Think Like AI Strategists',
+    date: '2025-07-20',
+    excerpt: 'Designing management-level AI training for China Travel Service, focusing on China-native tools and the 80/20 human-AI collaboration principle.',
+    tags: ['enterprise', 'ai-adoption', 'tourism', 'case-study'],
+    image: '/images/blog/cts-ai-workshop.png',
+    featured: false,
+  },
+  {
     slug: 'polyu-finance-ai-workflow',
     title: 'How PolyU\'s Finance Team Built an AI Workflow That Actually Works',
     date: '2025-05-15',
     excerpt: 'Building sustainable AI workflows for a university finance office - starting with strategy, establishing the ACE framework, and watching tool users become process designers.',
     tags: ['enterprise', 'ai-adoption', 'education', 'case-study'],
     image: '/images/blog/polyu-finance-workshop.jpeg',
+    featured: false,
+  },
+  {
+    slug: 'hkct-ai-education-workshop',
+    title: 'How 400 Educators Changed Their Minds About AI in 75 Minutes',
+    date: '2025-04-27',
+    excerpt: 'Introducing the "AI Three-Part Framework" to HKCT staff - a simple mental model for getting 400 educators from skepticism to experimentation.',
+    tags: ['enterprise', 'ai-adoption', 'education', 'case-study'],
+    image: '/images/blog/hkct-ai-workshop.jpg',
     featured: false,
   },
   {
@@ -38,23 +56,32 @@ const posts = [
     featured: false,
   },
   {
+    slug: 'dorich-ai-efficiency-workshop',
+    title: 'Building AI Habits That Stick: A 4-Module Experiment',
+    date: '2025-04-02',
+    excerpt: 'A 2.5-hour workshop designed around four specific skills - literacy, creativity, visual creation, and data analysis - that transformed how participants approach AI tools.',
+    tags: ['workshop', 'ai-adoption', 'productivity', 'case-study'],
+    image: '/images/blog/dorich-ai-workshop.png',
+    featured: false,
+  },
+  {
+    slug: 'arup-ai-lunch-learn',
+    title: 'What Happens When 50 Engineers Get 45 Minutes with AI',
+    date: '2025-03-28',
+    excerpt: 'Introducing "C-How Thinking" at Arup - a framework that bridges left-brain logic and right-brain creativity through Copilot and Canva.',
+    tags: ['enterprise', 'ai-adoption', 'engineering', 'case-study'],
+    image: '/images/blog/arup-ai-workshop.jpg',
+    featured: false,
+  },
+  {
     slug: 'welcome-to-my-blog',
     title: 'Welcome to My Blog',
-    date: '2025-01-17',
+    date: '2024-05-17',
     excerpt: 'Starting a space to share insights on AI adoption, workshop learnings, and the human side of technology.',
     tags: ['announcement', 'ai'],
     image: '/images/og-image.jpg',
     featured: false,
   },
-  // Add more posts here as they are written
-  // {
-  //   slug: 'post-slug-here',
-  //   title: 'Post Title',
-  //   date: 'YYYY-MM-DD',
-  //   excerpt: 'Brief description...',
-  //   tags: ['tag1', 'tag2'],
-  //   featured: false,
-  // },
 ];
 
 export default posts;
