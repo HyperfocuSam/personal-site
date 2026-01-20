@@ -17,7 +17,7 @@
 
   &__badge {
     display: inline-block;
-    background-color: _palette(accent);
+    background-color: _palette(fg-bold);
     color: #ffffff;
     padding: 0.4em 0.8em;
     border-radius: 4px;
@@ -124,13 +124,14 @@
 
 .blog-tag {
   display: inline-block;
-  background: rgba(_palette(accent), 0.1);
-  color: _palette(accent);
+  background: _palette(bg-alt);
+  color: _palette(fg);
   padding: 0.25em 0.6em;
   border-radius: 50px;
   font-size: 0.75em;
   font-weight: 600;
   text-transform: lowercase;
+  border: 1px solid _palette(border);
 }
 
 
@@ -188,7 +189,7 @@
 
 // Pull Quote Styling
 .pull-quote {
-  border-left: 4px solid _palette(accent);
+  border-left: 4px solid _palette(fg-light);
   padding: 1em 0 1em 1.5em;
   margin: 2em 0;
   font-size: 1.15em;
