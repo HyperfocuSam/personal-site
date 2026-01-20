@@ -5,8 +5,6 @@ import dayjs from 'dayjs';
 
 import posts from '../../data/posts';
 
-const { PUBLIC_URL } = process.env;
-
 /**
  * Find related posts based on shared tags
  * @param {string} currentSlug - The slug of the current post
@@ -53,15 +51,6 @@ const RelatedPosts = ({ currentSlug, currentTags }) => {
       <div className="related-posts__grid">
         {relatedPosts.map((post) => (
           <article key={post.slug} className="related-posts__item">
-            {post.image && (
-              <Link to={`/blog/${post.slug}`} className="related-posts__image-link">
-                <img
-                  src={`${PUBLIC_URL}${post.image}`}
-                  alt={post.title}
-                  className="related-posts__image"
-                />
-              </Link>
-            )}
             <div className="related-posts__content">
               <h4 className="related-posts__item-title">
                 <Link to={`/blog/${post.slug}`}>{post.title}</Link>

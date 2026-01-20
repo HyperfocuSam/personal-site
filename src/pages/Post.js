@@ -13,8 +13,6 @@ import {
   calculateReadingTime,
 } from '../components/Blog';
 
-const { PUBLIC_URL } = process.env;
-
 // Custom blockquote component for pull quotes
 const PullQuote = ({ children }) => (
   <blockquote className="pull-quote">{children}</blockquote>
@@ -68,17 +66,6 @@ const Post = () => {
       description={post.excerpt}
     >
       <article className="post post--article" id="blog-post">
-        {/* Featured Image Hero */}
-        {post.image && (
-          <div className="post-hero">
-            <img
-              src={`${PUBLIC_URL}${post.image}`}
-              alt={post.title}
-              className="post-hero__image"
-            />
-          </div>
-        )}
-
         <header className="post-header">
           <div className="title">
             <h2>

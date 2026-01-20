@@ -6,8 +6,6 @@ import Main from '../layouts/Main';
 import posts from '../data/posts';
 import { AuthorCard } from '../components/Blog';
 
-const { PUBLIC_URL } = process.env;
-
 // Separate featured post from other posts
 const featuredPost = posts.find((post) => post.featured);
 const otherPosts = posts.filter((post) => !post.featured);
@@ -40,17 +38,8 @@ const Blog = () => (
           {featuredPost && (
             <section className="blog-featured">
               <Link to={`/blog/${featuredPost.slug}`} className="blog-featured__link">
-                {featuredPost.image && (
-                  <div className="blog-featured__image-container">
-                    <img
-                      src={`${PUBLIC_URL}${featuredPost.image}`}
-                      alt={featuredPost.title}
-                      className="blog-featured__image"
-                    />
-                    <span className="blog-featured__badge">Featured</span>
-                  </div>
-                )}
                 <div className="blog-featured__content">
+                  <span className="blog-featured__badge">Featured</span>
                   <h3 className="blog-featured__title">{featuredPost.title}</h3>
                   <p className="blog-featured__meta">
                     {dayjs(featuredPost.date).format('MMMM D, YYYY')}
@@ -73,15 +62,6 @@ const Blog = () => (
             {otherPosts.map((post) => (
               <article key={post.slug} className="blog-card">
                 <Link to={`/blog/${post.slug}`} className="blog-card__link">
-                  {post.image && (
-                    <div className="blog-card__image-container">
-                      <img
-                        src={`${PUBLIC_URL}${post.image}`}
-                        alt={post.title}
-                        className="blog-card__image"
-                      />
-                    </div>
-                  )}
                   <div className="blog-card__content">
                     <h3 className="blog-card__title">{post.title}</h3>
                     <p className="blog-card__meta">
