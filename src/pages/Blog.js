@@ -39,19 +39,11 @@ const Blog = () => (
             <section className="blog-featured">
               <Link to={`/blog/${featuredPost.slug}`} className="blog-featured__link">
                 <div className="blog-featured__content">
-                  <span className="blog-featured__badge">Featured</span>
                   <h3 className="blog-featured__title">{featuredPost.title}</h3>
                   <p className="blog-featured__meta">
                     {dayjs(featuredPost.date).format('MMMM D, YYYY')}
                   </p>
                   <p className="blog-featured__excerpt">{featuredPost.excerpt}</p>
-                  {featuredPost.tags && featuredPost.tags.length > 0 && (
-                    <div className="blog-tags">
-                      {featuredPost.tags.map((tag) => (
-                        <span key={tag} className="blog-tag">{tag}</span>
-                      ))}
-                    </div>
-                  )}
                 </div>
               </Link>
             </section>
@@ -68,13 +60,6 @@ const Blog = () => (
                       {dayjs(post.date).format('MMM D, YYYY')}
                     </p>
                     <p className="blog-card__excerpt">{post.excerpt}</p>
-                    {post.tags && post.tags.length > 0 && (
-                      <div className="blog-tags">
-                        {post.tags.slice(0, 3).map((tag) => (
-                          <span key={tag} className="blog-tag">{tag}</span>
-                        ))}
-                      </div>
-                    )}
                   </div>
                 </Link>
               </article>

@@ -83,15 +83,6 @@ const Post = () => {
           </div>
         </header>
 
-        {/* Tags */}
-        {post.tags && post.tags.length > 0 && (
-          <div className="blog-tags blog-tags--post">
-            {post.tags.map((tag) => (
-              <span key={tag} className="blog-tag">{tag}</span>
-            ))}
-          </div>
-        )}
-
         {/* Article Content */}
         {loading ? (
           <p>Loading...</p>
