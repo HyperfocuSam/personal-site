@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 
 import Main from '../layouts/Main';
 import posts from '../data/posts';
-import { LeadMagnetBanner } from '../components/LeadCapture';
 import {
   AuthorCard,
   ShareButtons,
@@ -138,9 +137,6 @@ const Post = () => {
           <h3>About the Author</h3>
           <AuthorCard />
         </section>
-
-        {/* Lead Magnet */}
-        <LeadMagnetBanner variant="blog" />
 
         {/* Related Posts */}
         <RelatedPosts currentSlug={slug} currentTags={post.tags} />

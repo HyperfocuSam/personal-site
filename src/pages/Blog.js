@@ -4,7 +4,6 @@ import dayjs from 'dayjs';
 
 import Main from '../layouts/Main';
 import posts from '../data/posts';
-import { LeadMagnetBanner } from '../components/LeadCapture';
 import { AuthorCard } from '../components/Blog';
 
 const { PUBLIC_URL } = process.env;
@@ -103,8 +102,6 @@ const Blog = () => (
           </div>
         </>
       )}
-
-      <LeadMagnetBanner variant="blog" />
 
       <hr />
       <h3>About the Author</h3>
