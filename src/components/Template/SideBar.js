@@ -48,7 +48,7 @@ const SideBar = () => (
     <section id="footer">
       <ContactIcons />
       <p className="copyright">
-        &copy; Sam Wong <Link to="/">samwong.me</Link>
+        &copy; Sam Wong <a href="https://hyperfocusam.com">hyperfocusam.com</a>
       </p>
     </section>
   </section>
