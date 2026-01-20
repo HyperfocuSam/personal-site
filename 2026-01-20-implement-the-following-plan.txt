@@ -1,0 +1,2064 @@
+
+ ▐▛███▜▌   Claude Code v2.1.12
+▝▜█████▛▘  Opus 4.5 · API Usage Billing
+  ▘▘ ▝▝    ~/1. SAMOS/personal-site
+
+❯ Implement the following plan:                                             
+                                                                            
+  # Plan: Personal Website Optimization for Lead Generation & UX            
+                                                                            
+  ## Overview                                                               
+  Optimize samwong.me to be a more effective personal branding and lead     
+  generation platform by:                                                   
+  1. Removing confusing "Speaking" section (merge into Services)            
+  2. Adding email capture with AI Prompt Guide lead magnet                  
+  3. Upgrading blog to magazine-style presentation                          
+                                                                            
+  ---                                                                       
+                                                                            
+  ## Part 1: Remove Speaking Section & Merge into Services                  
+                                                                            
+  ### Files to Delete:                                                      
+  - `/Users/sam/1. SAMOS/personal-site/src/pages/Speaking.js`               
+  - `/Users/sam/1. SAMOS/personal-site/src/data/speaking.js`                
+                                                                            
+  ### Files to Modify:                                                      
+                                                                            
+  **`src/data/routes.js`** - Remove Speaking route:                         
+  ```js                                                                     
+  // Remove this entry:                                                     
+  {                                                                         
+  label: 'Speaking',                                                        
+  path: '/speaking',                                                        
+  }                                                                         
+  ```                                                                       
+                                                                            
+  **`src/App.js`** - Remove Speaking imports and route:                     
+  - Remove `const Speaking = lazy(() => import('./pages/Speaking'));`       
+  - Remove `<Route path="/speaking" element={<Speaking />} />`              
+                                                                            
+  **`src/data/services.js`** - Add speaking/events section:                 
+  - Add "Keynotes & Events" as a new service offering                       
+  - Include formats: keynotes (30-60 min), panel discussions, Q&A sessions  
+  - Keep focus on workshops and training already there                      
+                                                                            
+  ---                                                                       
+                                                                            
+  ## Part 2: Lead Magnet - Free AI Prompt Guide                             
+                                                                            
+  ### New Files to Create:                                                  
+                                                                            
+  **`src/components/LeadCapture/EmailCapture.js`**                          
+  - Email input form component                                              
+  - Styled to match site theme (blue accent #2e59ba)                        
+  - Submit handler (can integrate with ConvertKit, Mailchimp, or simple     
+  form)                                                                     
+  - Success state with download link                                        
+                                                                            
+  **`src/components/LeadCapture/LeadMagnetBanner.js`**                      
+  - Prominent banner component for homepage/blog                            
+  - Headline: "Free Download: 50 AI Prompts That Actually Work"             
+  - Subtext: "Practical prompts for business writing, research, and         
+  decision-making"                                                          
+  - Email capture inline                                                    
+                                                                            
+  **`src/static/css/components/_lead-capture.scss`**                        
+  - Styling for email capture components                                    
+  - Consistent with site design system                                      
+                                                                            
+  ### Files to Modify:                                                      
+                                                                            
+  **`src/pages/Index.js`** - Add lead capture section:                      
+  - Add `<LeadMagnetBanner />` component after hero stats section           
+  - Position as secondary CTA alongside existing "See How I Work"           
+                                                                            
+  **`src/pages/Blog.js`** - Add lead capture:                               
+  - Add `<EmailCapture />` at bottom of blog listing (before LinkedIn CTA)  
+  - Optional: Add sticky banner or sidebar element                          
+                                                                            
+  **`src/components/Template/SideBar.js`** - Add sidebar email capture:     
+  - Replace or augment "View Services" CTA with lead capture                
+  - Compact form that appears on all pages                                  
+                                                                            
+  **`src/static/css/main.scss`** - Import new styles:                       
+  - Add `@import "components/lead-capture";`                                
+                                                                            
+  ### Lead Magnet Asset:                                                    
+  - Create `/public/downloads/ai-prompt-guide.pdf` (placeholder initially)  
+  - Actual PDF content to be created separately                             
+                                                                            
+  ---                                                                       
+                                                                            
+  ## Part 3: Magazine-Style Blog Redesign                                   
+                                                                            
+  ### Files to Modify:                                                      
+                                                                            
+  **`src/pages/Blog.js`** - Blog listing improvements:                      
+  - Add featured post with large hero image card                            
+  - Reading time estimate (calculate from word count)                       
+  - Improved tag styling (pill badges)                                      
+  - Better visual hierarchy with card-based layout                          
+  - Author avatar/name in each card                                         
+                                                                            
+  **`src/pages/Post.js`** - Individual post improvements:                   
+  - Featured image hero at top (full-width)                                 
+  - Author card with photo, name, bio snippet                               
+  - Reading time display in header                                          
+  - Pull quote styling for `<blockquote>`                                   
+  - "Share on LinkedIn/Twitter" buttons                                     
+  - Related posts section at bottom                                         
+  - Previous/Next post navigation                                           
+  - Better CTA at end (lead capture + LinkedIn)                             
+                                                                            
+  **`src/data/posts/index.js`** - Add image field:                          
+  ```js                                                                     
+  {                                                                         
+  slug: 'post-slug',                                                        
+  title: 'Post Title',                                                      
+  date: 'YYYY-MM-DD',                                                       
+  excerpt: 'Brief description...',                                          
+  tags: ['tag1', 'tag2'],                                                   
+  image: '/images/blog/post-image.jpeg',  // NEW                            
+  featured: false,                                                          
+  }                                                                         
+  ```                                                                       
+                                                                            
+  ### New/Modified CSS Files:                                               
+                                                                            
+  **`src/static/css/components/_markdown.scss`** - Enhanced article         
+  typography:                                                               
+  - Larger body text for readability (16-18px)                              
+  - Better line height (1.8)                                                
+  - Pull quote styling with accent color border                             
+  - Image captions support                                                  
+  - Code block improvements                                                 
+                                                                            
+  **`src/static/css/components/_post.scss`** - Article layout:              
+  - Featured image hero styling                                             
+  - Author card styling                                                     
+  - Social share buttons                                                    
+  - Tag pill badges                                                         
+  - Related posts grid                                                      
+                                                                            
+  **`src/static/css/pages/_blog.scss`** (new file):                         
+  - Blog listing card grid                                                  
+  - Featured post hero card                                                 
+  - Responsive layouts                                                      
+                                                                            
+  ### New Components:                                                       
+                                                                            
+  **`src/components/Blog/AuthorCard.js`**                                   
+  - Author photo, name, brief bio                                           
+  - Link to About page                                                      
+  - Social links                                                            
+                                                                            
+  **`src/components/Blog/ShareButtons.js`**                                 
+  - LinkedIn share button                                                   
+  - Twitter/X share button                                                  
+  - Copy link button                                                        
+                                                                            
+  **`src/components/Blog/ReadingTime.js`**                                  
+  - Utility to calculate and display reading time                           
+                                                                            
+  **`src/components/Blog/RelatedPosts.js`**                                 
+  - Show 2-3 related posts based on tags                                    
+                                                                            
+  ---                                                                       
+                                                                            
+  ## Implementation Order                                                   
+                                                                            
+  ### Phase 1: Speaking Merge (Quick win)                                   
+  1. Update routes.js - remove Speaking                                     
+  2. Update App.js - remove Speaking route                                  
+  3. Update services.js - add Keynotes/Events service                       
+  4. Delete Speaking.js and speaking.js                                     
+  5. Test navigation and Services page                                      
+                                                                            
+  ### Phase 2: Lead Capture System                                          
+  1. Create EmailCapture component (basic form)                             
+  2. Create LeadMagnetBanner component                                      
+  3. Add CSS styling                                                        
+  4. Integrate into Index.js homepage                                       
+  5. Integrate into SideBar.js                                              
+  6. Integrate into Blog.js                                                 
+  7. Test email capture flow                                                
+                                                                            
+  ### Phase 3: Blog Magazine Redesign                                       
+  1. Update posts index.js with image fields                                
+  2. Create ReadingTime utility                                             
+  3. Create AuthorCard component                                            
+  4. Create ShareButtons component                                          
+  5. Update Post.js with new layout                                         
+  6. Update Blog.js with card layout                                        
+  7. Add/update CSS for blog styling                                        
+  8. Create RelatedPosts component                                          
+  9. Test all blog pages                                                    
+                                                                            
+  ---                                                                       
+                                                                            
+  ## Verification                                                           
+                                                                            
+  ### Testing Steps:                                                        
+  1. Run `npm run build` - verify no compilation errors                     
+  2. Run `npm start` - test locally at http://localhost:3000                
+  3. Verify:                                                                
+  - [ ] "Speaking" removed from navigation                                  
+  - [ ] Services page includes keynotes/events                              
+  - [ ] Lead capture form visible on homepage                               
+  - [ ] Lead capture form visible in sidebar                                
+  - [ ] Blog listing has card layout with images                            
+  - [ ] Individual posts show featured image hero                           
+  - [ ] Author card displays correctly                                      
+  - [ ] Reading time shows on posts                                         
+  - [ ] Share buttons work (open correct URLs)                              
+  - [ ] Related posts display at bottom                                     
+  - [ ] Mobile responsive on all pages                                      
+  4. Test form submission (if backend connected)                            
+  5. Push to main for deployment                                            
+                                                                            
+  ### Browser Testing:                                                      
+  - Chrome, Safari, Firefox                                                 
+  - Mobile responsive (iPhone, iPad sizes)                                  
+  - Verify images load correctly                                            
+  - Check page load performance                                             
+                                                                            
+  ---                                                                       
+                                                                            
+  ## Files Summary                                                          
+                                                                            
+  ### Delete:                                                               
+  - `src/pages/Speaking.js`                                                 
+  - `src/data/speaking.js`                                                  
+                                                                            
+  ### Create:                                                               
+  - `src/components/LeadCapture/EmailCapture.js`                            
+  - `src/components/LeadCapture/LeadMagnetBanner.js`                        
+  - `src/components/Blog/AuthorCard.js`                                     
+  - `src/components/Blog/ShareButtons.js`                                   
+  - `src/components/Blog/ReadingTime.js`                                    
+  - `src/components/Blog/RelatedPosts.js`                                   
+  - `src/static/css/components/_lead-capture.scss`                          
+  - `src/static/css/pages/_blog.scss`                                       
+  - `public/downloads/ai-prompt-guide.pdf` (placeholder)                    
+                                                                            
+  ### Modify:                                                               
+  - `src/App.js`                                                            
+  - `src/data/routes.js`                                                    
+  - `src/data/services.js`                                                  
+  - `src/data/posts/index.js`                                               
+  - `src/pages/Index.js`                                                    
+  - `src/pages/Blog.js`                                                     
+  - `src/pages/Post.js`                                                     
+  - `src/components/Template/SideBar.js`                                    
+  - `src/static/css/main.scss`                                              
+  - `src/static/css/components/_markdown.scss`                              
+  - `src/static/css/components/_post.scss`                                  
+                                                                            
+                                                                            
+  If you need specific details from before exiting plan mode (like exact    
+  code snippets, error messages, or content you generated), read the full   
+  transcript at: /Users/sam/.claude/projects/-Users-sam-1--SAMOS-Ada/bca5c8 
+  ae-af54-4980-a038-0457d2042b31.jsonl                                      
+
+⏺ I'll implement this plan systematically. Let me start by creating a todo list and exploring the current codebase structure.
+
+⏺ Read(src/data/routes.js)
+  ⎿  Read 34 lines
+
+⏺ Read(src/App.js)
+  ⎿  Read 42 lines
+
+⏺ Read(src/data/services.js)
+  ⎿  Read 101 lines
+
+⏺ Read(src/pages/Speaking.js)
+  ⎿  Read 68 lines
+
+⏺ Read(src/data/speaking.js)
+  ⎿  Read 90 lines
+
+⏺ Let me also read the files needed for Phase 2 and 3.
+
+⏺ Read(src/pages/Index.js)
+  ⎿  Read 101 lines
+
+⏺ Read(src/pages/Blog.js)
+  ⎿  Read 65 lines
+
+⏺ Read(src/pages/Post.js)
+  ⎿  Read 70 lines
+
+⏺ Read(src/components/Template/SideBar.js)
+  ⎿  Read 58 lines
+
+⏺ Read(src/static/css/main.scss)
+  ⎿  Read 74 lines
+
+⏺ Read(src/data/posts/index.js)
+  ⎿  Read 56 lines
+
+⏺ Now I have a clear picture of the codebase. Let me start implementing Phase 1 - Remove Speaking section and merge into Services.
+
+⏺ Update(src/data/routes.js)
+  ⎿  Removed 4 lines                                                     
+      17      path: '/projects',
+      18    },
+      19    {
+      20 -    label: 'Speaking',                                         
+      21 -    path: '/speaking',                                         
+      22 -  },                                                           
+      23 -  {                                                            
+      20      label: 'Blog',
+      21      path: '/blog',
+      22    },
+
+⏺ Update(src/App.js)
+  ⎿  Removed 1 line                                                      
+      15  const Projects = lazy(() => import('./pages/Projects'));
+      16  const Resume = lazy(() => import('./pages/Resume'));
+      17  const Services = lazy(() => import('./pages/Services'));
+      18 -const Speaking = lazy(() => import('./pages/Speaking'));       
+      18  const Stats = lazy(() => import('./pages/Stats'));
+      19  
+      20  const App = () => (
+
+⏺ Update(src/App.js)
+  ⎿  Removed 1 line                                                      
+      29          <Route path="/projects" element={<Projects />} />
+      30          <Route path="/resume" element={<Resume />} />
+      31          <Route path="/services" element={<Services />} />
+      32 -        <Route path="/speaking" element={<Speaking />} />      
+      32          <Route path="/stats" element={<Stats />} />
+      33          <Route path="*" element={<NotFound />} />
+      34        </Routes>
+
+⏺ Now let me add the Keynotes/Events service to services.js and delete the Speaking files.
+
+⏺ Update(src/data/services.js)
+  ⎿  Added 29 lines                                                      
+       95      ctaLink: '/contact',
+       96      image: '/images/services/one-on-one.png',
+       97    },
+       98 +  {                                                           
+       99 +    id: 'keynotes-events',                                    
+      100 +    title: 'Keynotes & Events',                               
+      101 +    subtitle: 'Setting context and lowering fear',            
+      102 +    provider: 'Sam Wong',                                     
+      103 +    description: `People walk into my sessions skeptical, over
+          +whelmed, or convinced AI isn't for them. They leave with clari
+          +ty about what's possible—and confidence to try it.            
+      104 +                                                              
+      105 +The goal isn't to impress people with what AI can do. It's to 
+          +help them see what *they* can do with it. I create space for q
+          +uestions, lower the fear, and focus on practical wins.        
+      106 +                                                              
+      107 +**Available formats:**                                        
+      108 +- **Keynotes (30-60 min)** — Setting context, lowering barrier
+          +s, sparking curiosity                                         
+      109 +- **Panel discussions & Q&A** — Real conversations, not script
+          +ed talking points                                             
+      110 +- **Executive briefings** — For leadership teams who need sign
+          +al, not noise                                                 
+      111 +- **Conference workshops** — Hands-on learning for larger audi
+          +ences                                                         
+      112 +                                                              
+      113 +**Topics I cover:**                                           
+      114 +- AI for the Rest of Us — Making AI accessible for non-tech pe
+          +ople                                                          
+      115 +- Prompt Engineering That Actually Works — Beyond the basics  
+      116 +- Getting Your Organization AI-Ready — What adoption actually 
+          +requires                                                      
+      117 +- The Human Side of AI — Why technology is the easy part      
+      118 +                                                              
+      119 +**Languages:** English, Cantonese, Mandarin                   
+      120 +**Locations:** Hong Kong, Asia-Pacific, Global                
+      121 +                                                              
+      122 +Recent appearances include YPO executive sessions, DotAI's Eve
+          +ryone.AI conference (Microsoft, Google, HP partnership), and e
+          +nterprise events across Asia.`,                               
+      123 +    cta: 'Discuss Your Event',                                
+      124 +    ctaLink: '/contact',                                      
+      125 +    image: '/images/services/keynotes-events.png',            
+      126 +  },                                                          
+      127  ];
+      128  
+      129  export default services;
+
+⏺ Bash(rm /Users/sam/1.\ SAMOS/personal-site/src/pages/Speaking.js
+      /Users/sam/1.\ SAMOS/personal-site/src/data/speaking.js)
+  ⎿  (No content)
+
+⏺ Phase 1 complete. Let me update the todo list and start Phase 2 - Lead Capture System.
+
+⏺ Let me check the existing styles and create the directory structure for new components.
+
+⏺ Bash(ls -la /Users/sam/1.\ SAMOS/personal-site/src/components/)
+  ⎿  total 0                                       
+     drwxr-xr-x@  7 sam  staff  224 Jan 17 01:11 .
+     drwxr-xr-x@ 10 sam  staff  320 Jan 20 03:33 ..
+     … +5 lines (ctrl+o to expand)
+
+⏺ Read(src/static/css/libs/_vars.scss)
+  ⎿  Read 57 lines
+
+⏺ Search(pattern: "**/public/**", path: "~/1. SAMOS/personal-site")
+  ⎿  Found 100 files (ctrl+o to expand)
+
+⏺ Now let me create the lead capture components. First, I'll create the directory structure and components.
+
+⏺ Bash(mkdir -p /Users/sam/1.\ SAMOS/personal-site/src/components/LeadCapture
+      /Users/sam/1.\ SAMOS/personal-site/src/components/Blog /Users/sam/1.\
+      SAMOS/personal-site…)
+  ⎿  (No content)
+
+⏺ Write(src/components/LeadCapture/EmailCapture.js)
+  ⎿  Wrote 102 lines to src/components/LeadCapture/EmailCapture.js       
+      1 import React, { useState } from 'react';
+      2 import PropTypes from 'prop-types';
+      3 const EmailCapture = ({ compact, source }) => {
+      4   const [email, setEmail] = useState('');
+      5   const [status, setStatus] = useState('idle'); // idle, loading,
+         success, error
+      6   const [message, setMessage] = useState('');
+      7   const handleSubmit = async (e) => {
+      8     e.preventDefault();
+     … +92 lines (ctrl+o to expand)
+
+⏺ Write(src/components/LeadCapture/LeadMagnetBanner.js)
+  ⎿  Wrote 29 lines to src/components/LeadCapture/LeadMagnetBanner.js    
+      1 import React from 'react';
+      2 import PropTypes from 'prop-types';
+      3 import EmailCapture from './EmailCapture';
+      4 const LeadMagnetBanner = ({ variant }) => (
+      5   <section className={`lead-magnet-banner lead-magnet-banner--${v
+        ariant}`}>
+      6     <div className="lead-magnet-banner__content">
+      7       <h3 className="lead-magnet-banner__title">
+      8         Free Download: 50 AI Prompts That Actually Work
+      9       </h3>
+     … +19 lines (ctrl+o to expand)
+
+⏺ Write(src/components/LeadCapture/index.js)
+  ⎿  Wrote 3 lines to src/components/LeadCapture/index.js                
+      1 export { default as EmailCapture } from './EmailCapture';
+      2 export { default as LeadMagnetBanner } from './LeadMagnetBanner';
+
+⏺ Now let me create the CSS for lead capture components.
+
+⏺ Write(src/static/css/components/_lead-capture.scss)
+  ⎿  Wrote 190 lines to src/static/css/components/_lead-capture.scss
+      1 // Lead Capture Component Styles
+      2 .email-capture {
+      3   width: 100%;
+      4   &__input-group {
+      5     display: flex;
+      6     gap: 0.5em;
+      7     flex-wrap: wrap;
+     … +180 lines (ctrl+o to expand)
+
+⏺ Now let me update the main.scss to include the new styles and integrate the lead capture into the pages.
+
+⏺ Update(src/static/css/main.scss)
+  ⎿  Added 1 line                                                        
+      55  @import "components/table";
+      56  @import "components/hamburger";
+      57  @import "components/markdown";
+      58 +@import "components/lead-capture";                             
+      59  
+      60  // Layout.
+      61  
+
+⏺ Update(src/pages/Index.js)
+  ⎿  Added 1 line                                                        
+      2  import { Link } from 'react-router-dom';
+      3  
+      4  import Main from '../layouts/Main';
+      5 +import { LeadMagnetBanner } from '../components/LeadCapture';   
+      6  
+      7  const Index = () => (
+      8    <Main
+
+⏺ Update(src/pages/Index.js)
+  ⎿  Added 2 lines                                                       
+      36          </p>
+      37        </section>
+      38  
+      39 +      <LeadMagnetBanner variant="homepage" />                  
+      40 +                                                               
+      41        <h3>What I Actually Do</h3>
+      42        <p>
+      43          Not teaching tools. Helping people discover what&apos;s
+           possible.
+
+⏺ Update(src/pages/Blog.js)
+  ⎿  Added 1 line                                                        
+       4  
+       5  import Main from '../layouts/Main';
+       6  import posts from '../data/posts';
+       7 +import { LeadMagnetBanner } from '../components/LeadCapture';  
+       8  
+       9  const Blog = () => (
+      10    <Main
+
+⏺ Update(src/pages/Blog.js)
+  ⎿  Added 2 lines                                                       
+      49          </div>
+      50        )}
+      51  
+      52 +      <LeadMagnetBanner variant="blog" />                      
+      53 +                                                               
+      54        <hr />
+      55        <h3>Want more frequent updates?</h3>
+      56        <p>
+
+⏺ Now let me update the SideBar to include lead capture.
+
+⏺ Update(src/components/Template/SideBar.js)
+  ⎿  Added 1 line                                                        
+      2  import { Link } from 'react-router-dom';
+      3  
+      4  import ContactIcons from '../Contact/ContactIcons';
+      5 +import { LeadMagnetBanner } from '../LeadCapture';              
+      6  
+      7  const { PUBLIC_URL } = process.env;
+      8  
+
+⏺ Update(src/components/Template/SideBar.js)
+  ⎿  Added 2 lines                                                       
+      46        </ul>
+      47      </section>
+      48  
+      49 +    <LeadMagnetBanner variant="sidebar" />                     
+      50 +                                                               
+      51      <section id="footer">
+      52        <ContactIcons />
+      53        <p className="copyright">
+
+⏺ Phase 2 lead capture is done. Now let me move to Phase 3 - Blog Magazine Redesign.
+
+⏺ Now let me create the Blog components.
+
+⏺ Write(src/components/Blog/ReadingTime.js)
+  ⎿  Wrote 40 lines to src/components/Blog/ReadingTime.js                
+      1 import React from 'react';
+      2 import PropTypes from 'prop-types';
+      3 // Average reading speed: 200-250 words per minute
+      4 const WORDS_PER_MINUTE = 220;
+      5 /**
+      6  * Calculate reading time from text content
+      7  * @param {string} text - The text content to calculate reading t
+        ime for
+      8  * @returns {number} - Estimated reading time in minutes
+     … +30 lines (ctrl+o to expand)
+
+⏺ Write(src/components/Blog/AuthorCard.js)
+  ⎿  Wrote 60 lines to src/components/Blog/AuthorCard.js                 
+      1 import React from 'react';
+      2 import { Link } from 'react-router-dom';
+      3 import PropTypes from 'prop-types';
+      4 const { PUBLIC_URL } = process.env;
+      5 const AuthorCard = ({ compact }) => (
+      6   <div className={`author-card ${compact ? 'author-card--compact'
+         : ''}`}>
+      7     <Link to="/about" className="author-card__image-link">
+      8       <img
+     … +50 lines (ctrl+o to expand)
+
+⏺ Write(src/components/Blog/ShareButtons.js)
+  ⎿  Wrote 75 lines to src/components/Blog/ShareButtons.js               
+      1 import React, { useState } from 'react';
+      2 import PropTypes from 'prop-types';
+      3 const ShareButtons = ({ title, url }) => {
+      4   const [copied, setCopied] = useState(false);
+      5   const shareUrl = url || (typeof window !== 'undefined' ? window
+        .location.href : '');
+      6   const shareTitle = title || 'Check out this article';
+      7   const linkedInUrl = `https://www.linkedin.com/sharing/share-off
+        site/?url=${encodeURIComponent(shareUrl)}`;
+     … +65 lines (ctrl+o to expand)
+
+⏺ Write(src/components/Blog/RelatedPosts.js)
+  ⎿  Wrote 90 lines to src/components/Blog/RelatedPosts.js
+      1 import React from 'react';
+      2 import { Link } from 'react-router-dom';
+      3 import PropTypes from 'prop-types';
+      4 import dayjs from 'dayjs';
+      5 import posts from '../../data/posts';
+      6 const { PUBLIC_URL } = process.env;
+      7 /**
+     … +80 lines (ctrl+o to expand)
+
+⏺ Write(src/components/Blog/index.js)
+  ⎿  Wrote 5 lines to src/components/Blog/index.js                       
+      1 export { default as ReadingTime, calculateReadingTime } from './R
+        eadingTime';
+      2 export { default as AuthorCard } from './AuthorCard';
+      3 export { default as ShareButtons } from './ShareButtons';
+      4 export { default as RelatedPosts } from './RelatedPosts';
+
+⏺ Now let me update the posts index with image fields and update the Blog and Post pages.
+
+⏺ Update(src/data/posts/index.js)
+  ⎿  Added 5 lines                                                       
+       7      date: '2026-01-17',
+       8      excerpt: 'Insights from my third workshop with Chow Tai Foo
+          k, where cross-functional teams competed to create Go-To-Market
+           campaigns using AI tools in a hackathon format.',
+       9      tags: ['workshop', 'ai', 'design-thinking', 'case-study'],
+      10 +    image: '/images/blog/ctf-workshop.jpeg',                   
+      11      featured: true,
+      12    },
+      13    {
+     ...
+      16      date: '2025-11-15',
+      17      excerpt: 'Lessons from training Bank of China (Hong Kong) e
+          mployees across 13 countries - on safety frameworks, workflow i
+          ntegration, and the 70/30 human-AI split.',
+      18      tags: ['enterprise', 'ai-adoption', 'banking', 'case-study'
+          ],
+      19 +    image: '/images/blog/bochk-training.jpeg',                 
+      20      featured: false,
+      21    },
+      22    {
+     ...
+      25      date: '2025-05-15',
+      26      excerpt: 'Building sustainable AI workflows for a universit
+          y finance office - starting with strategy, establishing the ACE
+           framework, and watching tool users become process designers.',
+      27      tags: ['enterprise', 'ai-adoption', 'education', 'case-stud
+          y'],
+      28 +    image: '/images/blog/polyu-finance.jpeg',                  
+      29      featured: false,
+      30    },
+      31    {
+     ...
+      34      date: '2025-04-26',
+      35      excerpt: 'Training HKJC Management Trainees on AI business 
+          communication through a three-layer prompt framework - from pre
+          cision to structure to context.',
+      36      tags: ['enterprise', 'ai-adoption', 'leadership', 'case-stu
+          dy'],
+      37 +    image: '/images/blog/hkjc-training.jpeg',                  
+      38      featured: false,
+      39    },
+      40    {
+     ...
+      43      date: '2025-01-17',
+      44      excerpt: 'Starting a space to share insights on AI adoption
+          , workshop learnings, and the human side of technology.',
+      45      tags: ['announcement', 'ai'],
+      46 +    image: '/images/blog/welcome.jpeg',                        
+      47      featured: false,
+      48    },
+      49    // Add more posts here as they are written
+
+⏺ Now let me rewrite the Blog.js with the magazine-style layout.
+
+⏺ Write(src/pages/Blog.js)
+  ⎿  Added 76 lines, removed 17 lines                                    
+       5  import Main from '../layouts/Main';
+       6  import posts from '../data/posts';
+       7  import { LeadMagnetBanner } from '../components/LeadCapture';
+       8 +import { AuthorCard } from '../components/Blog';               
+       9  
+      10 +const { PUBLIC_URL } = process.env;                            
+      11 +                                                               
+      12 +// Separate featured post from other posts                     
+      13 +const featuredPost = posts.find((post) => post.featured);      
+      14 +const otherPosts = posts.filter((post) => !post.featured);     
+      15 +                                                               
+      16  const Blog = () => (
+      17    <Main
+      18      title="Blog"
+     ...
+       36        {posts.length === 0 ? (
+       37          <p><em>Posts coming soon. Stay tuned!</em></p>
+       38        ) : (
+       32 -        <div className="blog-list">                           
+       33 -          {posts.map((post) => (                              
+       34 -            <article key={post.slug} className="blog-item" sty
+          -le={{ marginBottom: '2rem' }}>                                
+       35 -              <h3>                                            
+       36 -                <Link to={`/blog/${post.slug}`}>{post.title}</
+          -Link>                                                         
+       37 -                {post.featured && <span className="featured-ta
+          -g"> *</span>}                                                 
+       38 -              </h3>                                           
+       39 -              <p className="post-meta" style={{ color: '#666',
+          - marginTop: '-0.5rem' }}>                                     
+       40 -                {dayjs(post.date).format('MMMM D, YYYY')}     
+       41 -                {post.tags && post.tags.length > 0 && (       
+       42 -                  <span> | {post.tags.join(', ')}</span>      
+       39 +        <>                                                    
+       40 +          {/* Featured Post Hero */}                          
+       41 +          {featuredPost && (                                  
+       42 +            <section className="blog-featured">               
+       43 +              <Link to={`/blog/${featuredPost.slug}`} classNam
+          +e="blog-featured__link">                                      
+       44 +                {featuredPost.image && (                      
+       45 +                  <div className="blog-featured__image-contain
+          +er">                                                          
+       46 +                    <img                                      
+       47 +                      src={`${PUBLIC_URL}${featuredPost.image}
+          +`}                                                            
+       48 +                      alt={featuredPost.title}                
+       49 +                      className="blog-featured__image"        
+       50 +                    />                                        
+       51 +                    <span className="blog-featured__badge">Fea
+          +tured</span>                                                  
+       52 +                  </div>                                      
+       53                  )}
+       44 -              </p>                                            
+       45 -              <p>{post.excerpt}</p>                           
+       46 -              <Link to={`/blog/${post.slug}`}>Read more &rarr;
+          -</Link>                                                       
+       47 -            </article>                                        
+       48 -          ))}                                                 
+       49 -        </div>                                                
+       54 +                <div className="blog-featured__content">      
+       55 +                  <h3 className="blog-featured__title">{featur
+          +edPost.title}</h3>                                            
+       56 +                  <p className="blog-featured__meta">         
+       57 +                    {dayjs(featuredPost.date).format('MMMM D, 
+          +YYYY')}                                                       
+       58 +                  </p>                                        
+       59 +                  <p className="blog-featured__excerpt">{featu
+          +redPost.excerpt}</p>                                          
+       60 +                  {featuredPost.tags && featuredPost.tags.leng
+          +th > 0 && (                                                   
+       61 +                    <div className="blog-tags">               
+       62 +                      {featuredPost.tags.map((tag) => (       
+       63 +                        <span key={tag} className="blog-tag">{
+          +tag}</span>                                                   
+       64 +                      ))}                                     
+       65 +                    </div>                                    
+       66 +                  )}                                          
+       67 +                </div>                                        
+       68 +              </Link>                                         
+       69 +            </section>                                        
+       70 +          )}                                                  
+       71 +                                                              
+       72 +          {/* Blog Post Grid */}                              
+       73 +          <div className="blog-grid">                         
+       74 +            {otherPosts.map((post) => (                       
+       75 +              <article key={post.slug} className="blog-card"> 
+       76 +                <Link to={`/blog/${post.slug}`} className="blo
+          +g-card__link">                                                
+       77 +                  {post.image && (                            
+       78 +                    <div className="blog-card__image-container
+          +">                                                            
+       79 +                      <img                                    
+       80 +                        src={`${PUBLIC_URL}${post.image}`}    
+       81 +                        alt={post.title}                      
+       82 +                        className="blog-card__image"          
+       83 +                      />                                      
+       84 +                    </div>                                    
+       85 +                  )}                                          
+       86 +                  <div className="blog-card__content">        
+       87 +                    <h3 className="blog-card__title">{post.tit
+          +le}</h3>                                                      
+       88 +                    <p className="blog-card__meta">           
+       89 +                      {dayjs(post.date).format('MMM D, YYYY')}
+       90 +                    </p>                                      
+       91 +                    <p className="blog-card__excerpt">{post.ex
+          +cerpt}</p>                                                    
+       92 +                    {post.tags && post.tags.length > 0 && (   
+       93 +                      <div className="blog-tags">             
+       94 +                        {post.tags.slice(0, 3).map((tag) => ( 
+       95 +                          <span key={tag} className="blog-tag"
+          +>{tag}</span>                                                 
+       96 +                        ))}                                   
+       97 +                      </div>                                  
+       98 +                    )}                                        
+       99 +                  </div>                                      
+      100 +                </Link>                                       
+      101 +              </article>                                      
+      102 +            ))}                                               
+      103 +          </div>                                              
+      104 +        </>                                                   
+      105        )}
+      106  
+      107        <LeadMagnetBanner variant="blog" />
+      108  
+      109        <hr />
+      110 +      <h3>About the Author</h3>                               
+      111 +      <AuthorCard />                                          
+      112 +                                                              
+      113 +      <hr />                                                  
+      114        <h3>Want more frequent updates?</h3>
+      115        <p>
+      116          Follow me on{' '}
+
+⏺ Now let me update Post.js with the magazine-style layout.
+
+⏺ Write(src/pages/Post.js)
+  ⎿  Added 112 lines, removed 12 lines                                   
+       1 -import React, { useState, useEffect } from 'react';            
+       1 +import React, { useState, useEffect, useMemo } from 'react';   
+       2  import { Link, useParams, Navigate } from 'react-router-dom';
+       3  import Markdown from 'markdown-to-jsx';
+       4  import dayjs from 'dayjs';
+       5  
+       6  import Main from '../layouts/Main';
+       7  import posts from '../data/posts';
+       8 +import { LeadMagnetBanner } from '../components/LeadCapture';  
+       9 +import {                                                       
+      10 +  AuthorCard,                                                  
+      11 +  ShareButtons,                                                
+      12 +  RelatedPosts,                                                
+      13 +  calculateReadingTime,                                        
+      14 +} from '../components/Blog';                                   
+      15  
+      16 +const { PUBLIC_URL } = process.env;                            
+      17 +                                                               
+      18  const Post = () => {
+      19    const { slug } = useParams();
+      20    const [markdown, setMarkdown] = useState('');
+      21    const [loading, setLoading] = useState(true);
+      22  
+      14 -  const post = posts.find((p) => p.slug === slug);             
+      23 +  const postIndex = posts.findIndex((p) => p.slug === slug);   
+      24 +  const post = posts[postIndex];                               
+      25  
+      26 +  // Get previous and next posts for navigation                
+      27 +  const prevPost = postIndex < posts.length - 1 ? posts[postInd
+         +ex + 1] : null;                                                
+      28 +  const nextPost = postIndex > 0 ? posts[postIndex - 1] : null;
+      29 +                                                               
+      30    useEffect(() => {
+      31      if (post) {
+      32        import(`../data/posts/${slug}.md`)
+     ...
+      43      }
+      44    }, [slug, post]);
+      45  
+      46 +  const readingTime = useMemo(() => calculateReadingTime(markdo
+         +wn), [markdown]);                                              
+      47 +                                                               
+      48    if (!post) {
+      49      return <Navigate to="/blog" replace />;
+      50    }
+     ...
+       54        title={post.title}
+       55        description={post.excerpt}
+       56      >
+       41 -      <article className="post" id="blog-post">               
+       42 -        <header>                                              
+       57 +      <article className="post post--article" id="blog-post"> 
+       58 +        {/* Featured Image Hero */}                           
+       59 +        {post.image && (                                      
+       60 +          <div className="post-hero">                         
+       61 +            <img                                              
+       62 +              src={`${PUBLIC_URL}${post.image}`}              
+       63 +              alt={post.title}                                
+       64 +              className="post-hero__image"                    
+       65 +            />                                                
+       66 +          </div>                                              
+       67 +        )}                                                    
+       68 +                                                              
+       69 +        <header className="post-header">                      
+       70            <div className="title">
+       71              <h2>
+       72                <Link to={`/blog/${slug}`}>{post.title}</Link>
+       73              </h2>
+       47 -            <p>{dayjs(post.date).format('MMMM D, YYYY')}</p>  
+       74 +            <div className="post-header__meta">               
+       75 +              <span className="post-header__date">            
+       76 +                {dayjs(post.date).format('MMMM D, YYYY')}     
+       77 +              </span>                                         
+       78 +              <span className="post-header__separator">|</span
+          +>                                                             
+       79 +              <span className="post-header__reading-time">    
+       80 +                {readingTime} min read                        
+       81 +              </span>                                         
+       82 +            </div>                                            
+       83            </div>
+       84          </header>
+       85  
+       86 +        {/* Tags */}                                          
+       87 +        {post.tags && post.tags.length > 0 && (               
+       88 +          <div className="blog-tags blog-tags--post">         
+       89 +            {post.tags.map((tag) => (                         
+       90 +              <span key={tag} className="blog-tag">{tag}</span
+          +>                                                             
+       91 +            ))}                                               
+       92 +          </div>                                              
+       93 +        )}                                                    
+       94 +                                                              
+       95 +        {/* Article Content */}                               
+       96          {loading ? (
+       97            <p>Loading...</p>
+       98          ) : (
+       54 -          <Markdown>{markdown}</Markdown>                     
+       99 +          <div className="post-content">                      
+      100 +            <Markdown                                         
+      101 +              options={{                                      
+      102 +                overrides: {                                  
+      103 +                  blockquote: {                               
+      104 +                    component: ({ children }) => (            
+      105 +                      <blockquote className="pull-quote">{chil
+          +dren}</blockquote>                                            
+      106 +                    ),                                        
+      107 +                  },                                          
+      108 +                },                                            
+      109 +              }}                                              
+      110 +            >                                                 
+      111 +              {markdown}                                      
+      112 +            </Markdown>                                       
+      113 +          </div>                                              
+      114          )}
+      115  
+      116 +        {/* Share Buttons */}                                 
+      117 +        <ShareButtons                                         
+      118 +          title={post.title}                                  
+      119 +          url={typeof window !== 'undefined' ? window.location
+          +.href : ''}                                                   
+      120 +        />                                                    
+      121 +                                                              
+      122          <hr />
+       58 -        <p>                                                   
+       59 -          {post.tags && post.tags.length > 0 && (             
+       60 -            <span><strong>Tags:</strong> {post.tags.join(', ')
+          -}</span>                                                      
+       61 -          )}                                                  
+       62 -        </p>                                                  
+       63 -        <Link to="/blog">&larr; Back to all posts</Link>      
+      123 +                                                              
+      124 +        {/* Author Card */}                                   
+      125 +        <section className="post-author-section">             
+      126 +          <h3>About the Author</h3>                           
+      127 +          <AuthorCard />                                      
+      128 +        </section>                                            
+      129 +                                                              
+      130 +        {/* Lead Magnet */}                                   
+      131 +        <LeadMagnetBanner variant="blog" />                   
+      132 +                                                              
+      133 +        {/* Related Posts */}                                 
+      134 +        <RelatedPosts currentSlug={slug} currentTags={post.tag
+          +s} />                                                         
+      135 +                                                              
+      136 +        {/* Post Navigation */}                               
+      137 +        <nav className="post-navigation">                     
+      138 +          <div className="post-navigation__prev">             
+      139 +            {prevPost && (                                    
+      140 +              <>                                              
+      141 +                <span className="post-navigation__label">Previ
+          +ous</span>                                                    
+      142 +                <Link to={`/blog/${prevPost.slug}`} className=
+          +"post-navigation__link">                                      
+      143 +                  &larr; {prevPost.title}                     
+      144 +                </Link>                                       
+      145 +              </>                                             
+      146 +            )}                                                
+      147 +          </div>                                              
+      148 +          <div className="post-navigation__next">             
+      149 +            {nextPost && (                                    
+      150 +              <>                                              
+      151 +                <span className="post-navigation__label">Next<
+          +/span>                                                        
+      152 +                <Link to={`/blog/${nextPost.slug}`} className=
+          +"post-navigation__link">                                      
+      153 +                  {nextPost.title} &rarr;                     
+      154 +                </Link>                                       
+      155 +              </>                                             
+      156 +            )}                                                
+      157 +          </div>                                              
+      158 +        </nav>                                                
+      159 +                                                              
+      160 +        <hr />                                                
+      161 +        <Link to="/blog" className="button">                  
+      162 +          &larr; Back to all posts                            
+      163 +        </Link>                                               
+      164        </article>
+      165      </Main>
+      166    );
+
+⏺ Now let me check the existing _post.scss and create the blog styles.
+
+⏺ Read(src/static/css/components/_post.scss)
+  ⎿  Read 264 lines
+
+⏺ Now let me create the blog CSS file with all the magazine-style components.
+
+⏺ Write(src/static/css/pages/_blog.scss)
+  ⎿  Wrote 544 lines to src/static/css/pages/_blog.scss
+      1 // Blog Listing Page Styles
+      2 // Featured Post Hero Card
+      3 .blog-featured {
+      4   margin: 2em 0 3em 0;
+      5   &__link {
+      6     display: block;
+      7     border: 0;
+      8     text-decoration: none;
+     … +534 lines (ctrl+o to expand)
+
+⏺ Now let me update main.scss to import the blog styles.
+
+⏺ Update(src/static/css/main.scss)
+  ⎿  Added 1 line                                                        
+      72  @import "pages/resume";
+      73  @import "pages/skills";
+      74  @import "pages/stats";
+      75 +@import "pages/blog";                                          
+
+⏺ Now let me create the blog images directory and placeholder PDF.
+
+⏺ Bash(mkdir -p /Users/sam/1.\ SAMOS/personal-site/public/images/blog && touch
+      /Users/sam/1.\ SAMOS/personal-site/public/downloads/ai-prompt-guide.pdf)
+  ⎿  (No content)
+
+⏺ Phase 3 complete. Now let me update todos and run the build test.
+
+⏺ Bash(cd /Users/sam/1.\ SAMOS/personal-site && npm run build     timeout: 5m 
+      2>&1)                                                       0s
+  ⎿  Error: Exit code 1
+
+     > samwong-personal-site@5.0.0 build
+     > rimraf ./build && react-scripts build
+
+     Creating an optimized production build...
+     Browserslist: caniuse-lite is outdated. Please run:
+       npx update-browserslist-db@latest
+       Why you should do it regularly: 
+     https://github.com/browserslist/update-db#readme
+     Browserslist: caniuse-lite is outdated. Please run:
+     … +20 lines (ctrl+o to see all)
+
+⏺ There's a nested component error. Let me fix that in Post.js.
+
+⏺ Update(src/pages/Post.js)
+  ⎿  Added 5 lines                                                       
+      15  
+      16  const { PUBLIC_URL } = process.env;
+      17  
+      18 +// Custom blockquote component for pull quotes                 
+      19 +const PullQuote = ({ children }) => (                          
+      20 +  <blockquote className="pull-quote">{children}</blockquote>   
+      21 +);                                                             
+      22 +                                                               
+      23  const Post = () => {
+      24    const { slug } = useParams();
+      25    const [markdown, setMarkdown] = useState('');
+
+⏺ Update(src/pages/Post.js)
+  ⎿  Added 1 line, removed 3 lines                                       
+      106                options={{
+      107                  overrides: {
+      108                    blockquote: {
+      109 -                    component: ({ children }) => (            
+      110 -                      <blockquote className="pull-quote">{chil
+          -dren}</blockquote>                                            
+      111 -                    ),                                        
+      109 +                    component: PullQuote,                     
+      110                    },
+      111                  },
+      112                }}
+
+⏺ Update(src/pages/Post.js)
+  ⎿  Added 1 line                                                        
+      2  import { Link, useParams, Navigate } from 'react-router-dom';
+      3  import Markdown from 'markdown-to-jsx';
+      4  import dayjs from 'dayjs';
+      5 +import PropTypes from 'prop-types';                             
+      6  
+      7  import Main from '../layouts/Main';
+      8  import posts from '../data/posts';
+
+⏺ Update(src/pages/Post.js)
+  ⎿  Added 8 lines                                                       
+      21    <blockquote className="pull-quote">{children}</blockquote>
+      22  );
+      23  
+      24 +PullQuote.propTypes = {                                        
+      25 +  children: PropTypes.node,                                    
+      26 +};                                                             
+      27 +                                                               
+      28 +PullQuote.defaultProps = {                                     
+      29 +  children: null,                                              
+      30 +};                                                             
+      31 +                                                               
+      32  const Post = () => {
+      33    const { slug } = useParams();
+      34    const [markdown, setMarkdown] = useState('');
+
+⏺ Bash(cd /Users/sam/1.\ SAMOS/personal-site && npm run build     timeout: 5m 
+      2>&1)                                                       0s
+  ⎿  > samwong-personal-site@5.0.0 build    
+     > rimraf ./build && react-scripts build
+     … +62 lines (ctrl+o to expand)
+
+⏺ Build successful. Let me mark the final todo as complete.
+
+⏺ All phases implemented successfully. Here's the summary:
+
+  Summary of Changes
+
+  Phase 1: Speaking Section Removed & Merged into Services
+
+  - Deleted /src/pages/Speaking.js and /src/data/speaking.js
+  - Removed Speaking route from routes.js and App.js
+  - Added "Keynotes & Events" service to services.js with formats, topics, languages, and locations
+
+  Phase 2: Lead Capture System
+
+  - Created /src/components/LeadCapture/ with:
+    - EmailCapture.js - Form component with validation and success state
+    - LeadMagnetBanner.js - Prominent banner with "50 AI Prompts" lead magnet
+  - Added lead capture to:
+    - Homepage (Index.js) - after hero stats
+    - Blog listing (Blog.js) - before LinkedIn CTA
+    - Sidebar (SideBar.js) - compact version
+  - Created _lead-capture.scss with matching blue accent styling
+  - Created placeholder PDF at /public/downloads/ai-prompt-guide.pdf
+
+  Phase 3: Magazine-Style Blog Redesign
+
+  - Created /src/components/Blog/ with:
+    - ReadingTime.js - Calculates reading time from word count
+    - AuthorCard.js - Author bio with photo and social links
+    - ShareButtons.js - LinkedIn, Twitter, Copy Link buttons
+    - RelatedPosts.js - Shows related posts based on shared tags
+  - Updated posts/index.js with image field for all posts
+  - Redesigned Blog.js with:
+    - Featured post hero card
+    - Card-based grid layout
+    - Tag pill badges
+    - Author card section
+  - Redesigned Post.js with:
+    - Featured image hero
+    - Reading time display
+    - Pull quote styling
+    - Share buttons
+    - Related posts
+    - Previous/Next navigation
+  - Created _blog.scss with all magazine-style CSS
+
+  Build Status
+
+  Build compiles successfully with no errors.
+
+  Next steps:
+  1. Add actual blog post images to /public/images/blog/
+  2. Create the actual AI Prompt Guide PDF
+  3. Connect email capture to your email service (Mailchimp, ConvertKit, etc.)
+  4. Test locally with npm start
+  5. Push to main for deployment
+
+✻ Churned for 5m 39s
+
+❯ help implementing the next step by putting all that images you know from  
+  previous worksteps into the folder // prompt guide just on hold // email  
+  service i will look into it // run it // push                             
+
+⏺ Let me find existing images and copy them to the blog folder, then run and push.
+
+⏺ Bash(ls -la /Users/sam/1.\ SAMOS/personal-site/public/images/)
+  ⎿  total 792                                        
+     drwxr-xr-x@  8 sam  staff     256 Jan 17 03:51 .
+     drwxr-xr-x@  9 sam  staff     288 Jan 20 03:36 ..
+     … +6 lines (ctrl+o to expand)
+
+⏺ Search(pattern: "**/*.{jpeg,jpg,png,webp}", path: "public/images")
+  ⎿  Found 49 files (ctrl+o to expand)
+
+⏺ Bash(ls -la /Users/sam/1.\ SAMOS/personal-site/public/images/blog/)
+  ⎿  total 3880                                       
+     drwxr-xr-x@ 12 sam  staff     384 Jan 20 02:49 .
+     drwxr-xr-x@  8 sam  staff     256 Jan 17 03:51 ..
+     … +15 lines (ctrl+o to expand)
+
+⏺ Let me update posts/index.js with the correct image filenames that exist.
+
+⏺ Update(src/data/posts/index.js)
+  ⎿  Added 1 line, removed 1 line                                        
+       7      date: '2026-01-17',
+       8      excerpt: 'Insights from my third workshop with Chow Tai Foo
+          k, where cross-functional teams competed to create Go-To-Market
+           campaigns using AI tools in a hackathon format.',
+       9      tags: ['workshop', 'ai', 'design-thinking', 'case-study'],
+      10 -    image: '/images/blog/ctf-workshop.jpeg',                   
+      10 +    image: '/images/blog/ctf-workshop-2026.jpeg',              
+      11      featured: true,
+      12    },
+      13    {
+
+⏺ Update(src/data/posts/index.js)
+  ⎿  Added 1 line, removed 1 line                                        
+      16      date: '2025-11-15',
+      17      excerpt: 'Lessons from training Bank of China (Hong Kong) e
+          mployees across 13 countries - on safety frameworks, workflow i
+          ntegration, and the 70/30 human-AI split.',
+      18      tags: ['enterprise', 'ai-adoption', 'banking', 'case-study'
+          ],
+      19 -    image: '/images/blog/bochk-training.jpeg',                 
+      19 +    image: '/images/blog/bochk-sam-presenting.webp',           
+      20      featured: false,
+      21    },
+      22    {
+
+⏺ Update(src/data/posts/index.js)
+  ⎿  Added 1 line, removed 1 line                                        
+      25      date: '2025-05-15',
+      26      excerpt: 'Building sustainable AI workflows for a universit
+          y finance office - starting with strategy, establishing the ACE
+           framework, and watching tool users become process designers.',
+      27      tags: ['enterprise', 'ai-adoption', 'education', 'case-stud
+          y'],
+      28 -    image: '/images/blog/polyu-finance.jpeg',                  
+      28 +    image: '/images/blog/polyu-finance-workshop.jpeg',         
+      29      featured: false,
+      30    },
+      31    {
+
+⏺ Update(src/data/posts/index.js)
+  ⎿  Added 1 line, removed 1 line                                        
+      34      date: '2025-04-26',
+      35      excerpt: 'Training HKJC Management Trainees on AI business 
+          communication through a three-layer prompt framework - from pre
+          cision to structure to context.',
+      36      tags: ['enterprise', 'ai-adoption', 'leadership', 'case-stu
+          dy'],
+      37 -    image: '/images/blog/hkjc-training.jpeg',                  
+      37 +    image: '/images/blog/hkjc-mt-workshop.jpeg',               
+      38      featured: false,
+      39    },
+      40    {
+
+⏺ Update(src/data/posts/index.js)
+  ⎿  Added 1 line, removed 1 line                                        
+      43      date: '2025-01-17',
+      44      excerpt: 'Starting a space to share insights on AI adoption
+          , workshop learnings, and the human side of technology.',
+      45      tags: ['announcement', 'ai'],
+      46 -    image: '/images/blog/welcome.jpeg',                        
+      46 +    image: '/images/og-image.jpg',                             
+      47      featured: false,
+      48    },
+      49    // Add more posts here as they are written
+
+⏺ Images mapped. Now running and pushing.
+
+⏺ Bash(cd /Users/sam/1.\ SAMOS/personal-site && npm run build 2>&1  timeout: 3m 
+      | tail -20)                                                   0s
+
+  ⎿    npm install -g serve        
+       serve -s build
+     … +18 lines (ctrl+o to expand)
+
+⏺ Bash(cd /Users/sam/1.\ SAMOS/personal-site && npm start 2>&1 &)
+  ⎿  Running in the background (↓ to manage)
+
+⏺ Bash(cd /Users/sam/1.\ SAMOS/personal-site && git status)
+  ⎿  On branch main                               
+     Your branch is up to date with 'origin/main'.
+     … +25 lines (ctrl+o to expand)
+
+⏺ Bash(cd /Users/sam/1.\ SAMOS/personal-site && git log --oneline -5)
+  ⎿  edb1c61 Add HKJC and PolyU workshop blog posts    
+     3a9ed37 Add images to BOCHK blog post
+     f1eff63 Add BOCHK enterprise AI training blog post
+     … +3 lines (ctrl+o to expand)
+
+⏺ Bash(cd /Users/sam/1.\ SAMOS/personal-site && git diff --stat)
+  ⎿  2026-01-17-implement-the-following-plan.txt | 1390                  
+    +++++++++----------
+    --------
+     src/App.js                                  |    2 -
+    … +11 lines (ctrl+o to expand)
+
+⏺ Bash(cd /Users/sam/1.\ SAMOS/personal-site && git add -A && git commit -m
+      "Optimize website for lead generation and UX…)
+  ⎿  [main 381f07d] Optimize website for lead generation and UX
+      23 files changed, 1843 insertions(+), 1111 deletions(-)
+      create mode 100644 public/downloads/ai-prompt-guide.pdf
+     … +12 lines (ctrl+o to expand)
+
+⏺ Bash(cd /Users/sam/1.\ SAMOS/personal-site && git push origin main)
+  ⎿  To https://github.com/HyperfocuSam/personal-site.git
+        edb1c61..381f07d  main -> main
+
+⏺ Done. Dev server running at http://localhost:3000
+
+  Summary:
+  - Images mapped to existing workshop photos
+  - All changes committed and pushed to main
+  - Site deploying now via GitHub Pages
+
+  Changes live:
+  - Speaking removed from nav
+  - Keynotes & Events added to Services
+  - Lead capture banner on homepage, blog, sidebar
+  - Magazine-style blog with featured post hero, card grid, tags, author cards, share buttons, related posts
+
+✻ Crunched for 1m 13s
+
+⏺ Background command "Start dev server in background" completed (exit code 0)
+
+⏺ Read agent output b0dd0ff
+  ⎿  Read 1 line
+
+⏺ Bash(lsof -i :3000 2>/dev/null | head -5 || echo "No process on port 3000")
+  ⎿ COMMAND     PID USER   FD   TYPE             DEVICE SIZE/OFF NODE NAM
+    Google     1779  sam   32u  IPv4 0xa9cfce2dee8ba1a7      0t0  TCP
+    local
+    host:56236->localhost:hbci (CLOSE_WAIT)
+    … +6 lines (ctrl+o to expand)
+
+
+⏺ Bash(cd /Users/sam/1.\ SAMOS/personal-site && npm start &)
+  ⎿  Running in the background (↓ to manage)
+
+⏺ Dev server restarted. Visit http://localhost:3000 to test locally.
+
+  Changes are pushed and deploying to samwong.me via GitHub Pages.
+
+⏺ Background command "Start dev server" completed (exit code 0)
+
+⏺ Read agent output bea3d9a
+  ⎿  Read 1 line
+
+⏺ Bash(cd /Users/sam/1.\ SAMOS/personal-site && npx serve -s build -l 3000 &)
+  ⎿  Running in the background (↓ to manage)
+
+⏺ Bash(sleep 2 && curl -s -o /dev/null -w "%{http_code}" http://localhost:3000/
+      2>/dev/null || echo "Server not responding")
+  ⎿  200
+
+⏺ Server running at http://localhost:3000 - returning HTTP 200.
+
+  Site ready to test locally. Changes already pushed to GitHub for production deployment.
+
+⏺ Background command "Serve the build folder" completed (exit code 0)
+
+⏺ Read agent output bdba852
+  ⎿  Read 1 line
+
+⏺ Bash(curl -s http://localhost:3000/ | head -20)
+  ⎿  <!doctype html>                                                   
+     <html itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+       <head>
+     … +23 lines (ctrl+o to expand)
+
+⏺ Site running at http://localhost:3000
+
+  All done - changes live locally and pushed to GitHub for samwong.me deployment.
+
+❯ actually I dont like to lead magnet part, really dont like, remove all    
+  the elements about that , no need to prompt pdf send out part             
+
+⏺ Got it. Removing all lead magnet elements now.
+
+⏺ Update(src/pages/Index.js)
+  ⎿  Removed 1 line                                                      
+      2  import { Link } from 'react-router-dom';
+      3  
+      4  import Main from '../layouts/Main';
+      5 -import { LeadMagnetBanner } from '../components/LeadCapture';   
+      5  
+      6  const Index = () => (
+      7    <Main
+
+⏺ Update(src/pages/Index.js)
+  ⎿  Removed 2 lines                                                     
+      35          </p>
+      36        </section>
+      37  
+      38 -      <LeadMagnetBanner variant="homepage" />                  
+      39 -                                                               
+      38        <h3>What I Actually Do</h3>
+      39        <p>
+      40          Not teaching tools. Helping people discover what&apos;s
+           possible.
+
+⏺ Update(src/pages/Blog.js)
+  ⎿  Removed 1 line                                                      
+       4  
+       5  import Main from '../layouts/Main';
+       6  import posts from '../data/posts';
+       7 -import { LeadMagnetBanner } from '../components/LeadCapture';  
+       7  import { AuthorCard } from '../components/Blog';
+       8  
+       9  const { PUBLIC_URL } = process.env;
+
+⏺ Update(src/pages/Blog.js)
+  ⎿  Removed 2 lines                                                     
+      103          </>
+      104        )}
+      105  
+      106 -      <LeadMagnetBanner variant="blog" />                     
+      107 -                                                              
+      106        <hr />
+      107        <h3>About the Author</h3>
+      108        <AuthorCard />
+
+⏺ Update(src/components/Template/SideBar.js)
+  ⎿  Removed 1 line                                                      
+      2  import { Link } from 'react-router-dom';
+      3  
+      4  import ContactIcons from '../Contact/ContactIcons';
+      5 -import { LeadMagnetBanner } from '../LeadCapture';              
+      5  
+      6  const { PUBLIC_URL } = process.env;
+      7  
+
+⏺ Update(src/components/Template/SideBar.js)
+  ⎿  Removed 2 lines                                                     
+      45        </ul>
+      46      </section>
+      47  
+      48 -    <LeadMagnetBanner variant="sidebar" />                     
+      49 -                                                               
+      48      <section id="footer">
+      49        <ContactIcons />
+      50        <p className="copyright">
+
+⏺ Update(src/pages/Post.js)
+  ⎿  Removed 1 line                                                      
+       6  
+       7  import Main from '../layouts/Main';
+       8  import posts from '../data/posts';
+       9 -import { LeadMagnetBanner } from '../components/LeadCapture';  
+       9  import {
+      10    AuthorCard,
+      11    ShareButtons,
+
+⏺ Update(src/pages/Post.js)
+  ⎿  Removed 3 lines                                                     
+      138            <AuthorCard />
+      139          </section>
+      140  
+      141 -        {/* Lead Magnet */}                                   
+      142 -        <LeadMagnetBanner variant="blog" />                   
+      143 -                                                              
+      141          {/* Related Posts */}
+      142          <RelatedPosts currentSlug={slug} currentTags={post.tag
+           s} />
+      143  
+
+⏺ Bash(rm -rf /Users/sam/1.\ SAMOS/personal-site/src/components/LeadCapture
+      /Users/sam/1.\
+      SAMOS/personal-site/src/static/css/components/_lead-capture.scss
+      /Users/sam/…)
+  ⎿  (No content)
+
+⏺ Update(src/static/css/main.scss)
+  ⎿  Removed 1 line                                                      
+      55  @import "components/table";
+      56  @import "components/hamburger";
+      57  @import "components/markdown";
+      58 -@import "components/lead-capture";                             
+      58  
+      59  // Layout.
+      60  
+
+⏺ Bash(cd /Users/sam/1.\ SAMOS/personal-site && npm run build 2>&1  timeout: 3m 
+      | tail -10)                                                   0s
+
+  ⎿ declaring it in its dependencies. This is currently working because  
+    "@babel/plugin-proposal-private-property-in-object" is already in your
+    node_modules folder for unrelated reasons, but it may break at any 
+    time
+    … +9 lines (ctrl+o to expand)
+
+
+⏺ Bash(cd /Users/sam/1.\ SAMOS/personal-site && git add -A && git commit -m
+      "Remove lead magnet / email capture system…)
+  ⎿  [main a7f676f] Remove lead magnet / email capture system
+      10 files changed, 334 deletions(-)
+      delete mode 100644 public/downloads/ai-prompt-guide.pdf
+     … +6 lines (ctrl+o to expand)
+
+⏺ Done. All lead magnet elements removed and pushed.
+
+  Kept:
+  - Speaking removed, merged into Services
+  - Magazine-style blog (featured hero, card grid, tags, author cards, share buttons, related posts, navigation)
+
+  Removed:
+  - Email capture forms
+  - Lead magnet banners
+  - PDF download
+
+✻ Cooked for 47s
+
+❯ /cost 
+  ⎿  Total cost:            $9.17
+     Total duration (API):  21m 31s
+     Total duration (wall): 1h 17m 21s
+     Total code changes:    1874 lines added, 153 lines removed
+     Usage by model:
+             claude-haiku:  370.1k input, 9.6k output, 658.8k cache read, 161.4k 
+     cache write ($0.69)
+          claude-opus-4-5:  3.6k input, 49.5k output, 8.6m cache read, 469.1k 
+     cache write ($8.48)
+
+
+❯ remove also the image previous function of the blog session , it is       
+  wierd...                                                                  
+
+⏺ Removing blog images from cards, featured post hero, and related posts.
+
+⏺ Update(src/pages/Blog.js)
+  ⎿  Removed 2 lines                                                     
+       6  import posts from '../data/posts';
+       7  import { AuthorCard } from '../components/Blog';
+       8  
+       9 -const { PUBLIC_URL } = process.env;                            
+      10 -                                                               
+       9  // Separate featured post from other posts
+      10  const featuredPost = posts.find((post) => post.featured);
+      11  const otherPosts = posts.filter((post) => !post.featured);
+
+⏺ Update(src/pages/Blog.js)
+  ⎿  Added 1 line, removed 10 lines                                      
+      38            {featuredPost && (
+      39              <section className="blog-featured">
+      40                <Link to={`/blog/${featuredPost.slug}`} className
+          ="blog-featured__link">
+      41 -                {featuredPost.image && (                       
+      42 -                  <div className="blog-featured__image-containe
+         -r">                                                            
+      43 -                    <img                                       
+      44 -                      src={`${PUBLIC_URL}${featuredPost.image}`
+         -}                                                              
+      45 -                      alt={featuredPost.title}                 
+      46 -                      className="blog-featured__image"         
+      47 -                    />                                         
+      48 -                    <span className="blog-featured__badge">Feat
+         -ured</span>                                                    
+      49 -                  </div>                                       
+      50 -                )}                                             
+      41                  <div className="blog-featured__content">
+      42 +                  <span className="blog-featured__badge">Featur
+         +ed</span>                                                      
+      43                    <h3 className="blog-featured__title">{feature
+          dPost.title}</h3>
+      44                    <p className="blog-featured__meta">
+      45                      {dayjs(featuredPost.date).format('MMMM D, Y
+          YYY')}
+
+⏺ Update(src/pages/Blog.js)
+  ⎿  Removed 9 lines                                                     
+      62              {otherPosts.map((post) => (
+      63                <article key={post.slug} className="blog-card">
+      64                  <Link to={`/blog/${post.slug}`} className="blog
+          -card__link">
+      65 -                  {post.image && (                             
+      66 -                    <div className="blog-card__image-container"
+         ->                                                              
+      67 -                      <img                                     
+      68 -                        src={`${PUBLIC_URL}${post.image}`}     
+      69 -                        alt={post.title}                       
+      70 -                        className="blog-card__image"           
+      71 -                      />                                       
+      72 -                    </div>                                     
+      73 -                  )}                                           
+      65                    <div className="blog-card__content">
+      66                      <h3 className="blog-card__title">{post.titl
+          e}</h3>
+      67                      <p className="blog-card__meta">
+
+⏺ Update(src/pages/Post.js)
+  ⎿  Removed 1 line                                                      
+      13    calculateReadingTime,
+      14  } from '../components/Blog';
+      15  
+      16 -const { PUBLIC_URL } = process.env;                            
+      16  
+      17  // Custom blockquote component for pull quotes
+      18  const PullQuote = ({ children }) => (
+
+⏺ Update(src/pages/Post.js)
+  ⎿  Removed 11 lines                                                    
+      67        description={post.excerpt}
+      68      >
+      69        <article className="post post--article" id="blog-post">
+      70 -        {/* Featured Image Hero */}                            
+      71 -        {post.image && (                                       
+      72 -          <div className="post-hero">                          
+      73 -            <img                                               
+      74 -              src={`${PUBLIC_URL}${post.image}`}               
+      75 -              alt={post.title}                                 
+      76 -              className="post-hero__image"                     
+      77 -            />                                                 
+      78 -          </div>                                               
+      79 -        )}                                                     
+      80 -                                                               
+      70          <header className="post-header">
+      71            <div className="title">
+      72              <h2>
+
+⏺ Update(src/components/Blog/RelatedPosts.js)
+  ⎿  Removed 1 line                                                      
+       5  
+       6  import posts from '../../data/posts';
+       7  
+       8 -const { PUBLIC_URL } = process.env;                            
+       8  
+       9  /**
+      10   * Find related posts based on shared tags
+
+⏺ Update(src/components/Blog/RelatedPosts.js)
+  ⎿  Removed 9 lines                                                     
+      52        <div className="related-posts__grid">
+      53          {relatedPosts.map((post) => (
+      54            <article key={post.slug} className="related-posts__it
+          em">
+      55 -            {post.image && (                                   
+      56 -              <Link to={`/blog/${post.slug}`} className="relate
+         -d-posts__image-link">                                          
+      57 -                <img                                           
+      58 -                  src={`${PUBLIC_URL}${post.image}`}           
+      59 -                  alt={post.title}                             
+      60 -                  className="related-posts__image"             
+      61 -                />                                             
+      62 -              </Link>                                          
+      63 -            )}                                                 
+      55              <div className="related-posts__content">
+      56                <h4 className="related-posts__item-title">
+      57                  <Link to={`/blog/${post.slug}`}>{post.title}</L
+          ink>
+
+⏺ Update(src/static/css/pages/_blog.scss)
+  ⎿  Added 3 lines, removed 23 lines                                     
+      12  
+      13      &:hover {
+      14        transform: translateY(-2px);
+      15 -                                                               
+      16 -      .blog-featured__image {                                  
+      17 -        transform: scale(1.02);                                
+      18 -      }                                                        
+      15      }
+      16    }
+      17  
+      22 -  &__image-container {                                         
+      23 -    position: relative;                                        
+      24 -    overflow: hidden;                                          
+      25 -    border-radius: 8px 8px 0 0;                                
+      26 -    max-height: 400px;                                         
+      27 -  }                                                            
+      28 -                                                               
+      29 -  &__image {                                                   
+      30 -    width: 100%;                                               
+      31 -    height: auto;                                              
+      32 -    object-fit: cover;                                         
+      33 -    transition: transform 0.3s ease;                           
+      34 -  }                                                            
+      35 -                                                               
+      18    &__badge {
+      37 -    position: absolute;                                        
+      38 -    top: 1em;                                                  
+      39 -    left: 1em;                                                 
+      19 +    display: inline-block;                                     
+      20      background-color: _palette(accent);
+      21      color: #ffffff;
+      22      padding: 0.4em 0.8em;
+     ...
+      25      font-weight: 700;
+      26      text-transform: uppercase;
+      27      letter-spacing: 0.05em;
+      28 +    margin-bottom: 0.75em;                                     
+      29    }
+      30  
+      31    &__content {
+      32      background: _palette(bg-alt);
+      33      padding: 1.5em;
+      53 -    border-radius: 0 0 8px 8px;                                
+      34 +    border-radius: 8px;                                        
+      35      border: 1px solid _palette(border);
+      55 -    border-top: 0;                                             
+      36    }
+      37  
+      38    &__title {
+
+⏺ Update(src/static/css/pages/_blog.scss)
+  ⎿  Added 1 line, removed 19 lines                                      
+       78  
+       79      &:hover {
+       80        transform: translateY(-2px);
+       81 -                                                              
+       82 -      .blog-card__image {                                     
+       83 -        transform: scale(1.02);                               
+       84 -      }                                                       
+       81      }
+       82    }
+       83  
+       88 -  &__image-container {                                        
+       89 -    overflow: hidden;                                         
+       90 -    border-radius: 8px 8px 0 0;                               
+       91 -    height: 180px;                                            
+       92 -  }                                                           
+       93 -                                                              
+       94 -  &__image {                                                  
+       95 -    width: 100%;                                              
+       96 -    height: 100%;                                             
+       97 -    object-fit: cover;                                        
+       98 -    transition: transform 0.3s ease;                          
+       99 -  }                                                           
+      100 -                                                              
+       84    &__content {
+       85      flex: 1;
+       86      background: _palette(bg-alt);
+       87      padding: 1.25em;
+      105 -    border-radius: 0 0 8px 8px;                               
+       88 +    border-radius: 8px;                                       
+       89      border: 1px solid _palette(border);
+      107 -    border-top: 0;                                            
+       90    }
+       91  
+       92    &__title {
+
+⏺ Update(src/static/css/pages/_blog.scss)
+  ⎿  Removed 17 lines                                                    
+      133    text-transform: lowercase;
+      134  }
+      135  
+      136 -// Post Hero Image                                            
+      137 -.post-hero {                                                  
+      138 -  margin: -#{_size(section-spacing)} -#{_size(section-spacing)
+          -} #{_size(section-spacing)} -#{_size(section-spacing)};       
+      139 -  overflow: hidden;                                           
+      140 -  border-radius: 4px 4px 0 0;                                 
+      141 -  max-height: 500px;                                          
+      136  
+      143 -  &__image {                                                  
+      144 -    width: 100%;                                              
+      145 -    height: auto;                                             
+      146 -    object-fit: cover;                                        
+      147 -  }                                                           
+      148 -                                                              
+      149 -  @include breakpoint(small) {                                
+      150 -    margin: -#{_size(section-spacing-small)} -#{_size(section-
+          -spacing-small)} #{_size(section-spacing-small)} -#{_size(secti
+          -on-spacing-small)};                                           
+      151 -  }                                                           
+      152 -}                                                             
+      153 -                                                              
+      137  // Post Header Meta
+      138  .post-header {
+      139    &__meta {
+
+⏺ Update(src/static/css/pages/_blog.scss)
+  ⎿  Removed 18 lines                                                    
+      387      border: 1px solid _palette(border);
+      388    }
+      389  
+      390 -  &__image-link {                                             
+      391 -    display: block;                                           
+      392 -    border: 0;                                                
+      393 -    overflow: hidden;                                         
+      394 -    height: 120px;                                            
+      395 -  }                                                           
+      396 -                                                              
+      397 -  &__image {                                                  
+      398 -    width: 100%;                                              
+      399 -    height: 100%;                                             
+      400 -    object-fit: cover;                                        
+      401 -    transition: transform 0.3s ease;                          
+      402 -                                                              
+      403 -    &:hover {                                                 
+      404 -      transform: scale(1.05);                                 
+      405 -    }                                                         
+      406 -  }                                                           
+      407 -                                                              
+      390    &__content {
+      391      padding: 1em;
+      392    }
+
+⏺ Bash(cd /Users/sam/1.\ SAMOS/personal-site && npm run build 2>&1  timeout: 3m 
+      | tail -5)                                                    0s
+
+  ⎿   Line 16:1:  More than 1 blank line not allowed                     
+    no-multiple-empty-lin
+    es
+
+    Search for the keywords to learn more about each error.
+
+⏺ Update(src/pages/Post.js)
+  ⎿  Removed 1 line                                                      
+      13    calculateReadingTime,
+      14  } from '../components/Blog';
+      15  
+      16 -                                                               
+      16  // Custom blockquote component for pull quotes
+      17  const PullQuote = ({ children }) => (
+      18    <blockquote className="pull-quote">{children}</blockquote>
+
+⏺ Update(src/components/Blog/RelatedPosts.js)
+  ⎿  Removed 1 line                                                      
+       5  
+       6  import posts from '../../data/posts';
+       7  
+       8 -                                                               
+       8  /**
+       9   * Find related posts based on shared tags
+      10   * @param {string} currentSlug - The slug of the current post
+
+⏺ Bash(cd /Users/sam/1.\ SAMOS/personal-site && npm run build 2>&1  timeout: 3m 
+      | tail -5)                                                    0s
+
+  ⎿ is not maintianed anymore. It is thus unlikely that this bug will    
+    ever be fixed. Add "@babel/plugin-proposal-private-property-in-object"
+    to
+    … +3 lines (ctrl+o to expand)
+
+
+⏺ Bash(cd /Users/sam/1.\ SAMOS/personal-site && git add -A && git commit -m
+      "Remove blog image previews…)
+  ⎿  [main dea6e1a] Remove blog image previews           
+      4 files changed, 5 insertions(+), 122 deletions(-)
+     To https://github.com/HyperfocuSam/personal-site.git
+        a7f676f..dea6e1a  main -> main
+
+⏺ Done. Removed all blog image previews - cards, featured hero, posts, and related posts now show clean text only. Pushed to main.
+
+✻ Churned for 1m 24s
+
+❯ in your share botton created , the size is also not right! 
+
+⏺ Let me check and fix the share buttons styling.
+
+⏺ Read(src/static/css/pages/_blog.scss)
+  ⎿  Read 60 lines
+
+⏺ Search(pattern: "share-buttons", path: "src/static/css/pages/_blog.scss",
+        output_mode: "content")
+  ⎿  Found 1 line (ctrl+o to expand)
+
+⏺ Read(src/static/css/pages/_blog.scss)
+  ⎿  Read 50 lines
+
+⏺ Update(src/static/css/pages/_blog.scss)
+  ⎿  Added 10 lines, removed 10 lines                                    
+      301  .share-buttons {
+      302    display: flex;
+      303    align-items: center;
+      304 -  gap: 1em;                                                   
+      304 +  gap: 0.75em;                                                
+      305    margin: 2em 0;
+      306 -  padding: 1em;                                               
+      307 -  background: _palette(bg-alt);                               
+      308 -  border-radius: 8px;                                         
+      306  
+      307    &__label {
+      308      font-weight: 600;
+      309      color: _palette(fg-bold);
+      310      font-size: 0.9em;
+      311 +    margin-right: 0.25em;                                     
+      312    }
+      313  
+      314    &__button {
+      315      display: inline-block;
+      318 -    padding: 0.5em 1em;                                       
+      316 +    padding: 0.4em 0.75em;                                    
+      317      border-radius: 4px;
+      320 -    font-size: 0.85em;                                        
+      321 -    font-weight: 600;                                         
+      318 +    font-size: 0.8em;                                         
+      319 +    font-weight: 500;                                         
+      320      border: 1px solid _palette(border);
+      321      background: _palette(bg);
+      322      color: _palette(fg-bold);
+      323      cursor: pointer;
+      324      transition: all 0.2s ease;
+      325 +    text-decoration: none;                                    
+      326 +    line-height: 1.4;                                         
+      327 +    height: auto;                                             
+      328  
+      329      &:hover {
+      330        background: _palette(accent);
+     ...
+      349  
+      350    @include breakpoint(small) {
+      351      flex-wrap: wrap;
+      351 -    justify-content: center;                                  
+      352  
+      353      &__label {
+      354 -      width: 100%;                                            
+      355 -      text-align: center;                                     
+      354 +      margin-right: 0;                                        
+      355        margin-bottom: 0.5em;
+      356 +      width: 100%;                                            
+      357      }
+      358    }
+      359  }
+
+⏺ Bash(cd /Users/sam/1.\ SAMOS/personal-site && npm run build 2>&1   timeout: 3m 
+      | tail -3 && git add -A && git commit -m "Fix share buttons    0s
+      sizing…)
+  ⎿    https://cra.link/deployment          
+
+     [main 92ca4a3] Fix share buttons sizing
+     … +3 lines (ctrl+o to expand)
+
+⏺ Fixed. Share buttons now smaller and cleaner - removed background box, reduced padding and font size. Pushed.
+
+✻ Baked for 43s
+
+❯ just remove the copy link please , the font and everything is still not   
+  the same as others. only if you could fix it you fix it otherwise remove  
+
+⏺ Read(src/components/Blog/ShareButtons.js)
+  ⎿  Read 75 lines
+
+⏺ Write(src/components/Blog/ShareButtons.js)
+  ⎿  Added 1 line, removed 29 lines                                      
+       1 -import React, { useState } from 'react';                       
+       1 +import React from 'react';                                     
+       2  import PropTypes from 'prop-types';
+       3  
+       4  const ShareButtons = ({ title, url }) => {
+       5 -  const [copied, setCopied] = useState(false);                 
+       6 -                                                               
+       5    const shareUrl = url || (typeof window !== 'undefined' ? wind
+          ow.location.href : '');
+       6    const shareTitle = title || 'Check out this article';
+       7  
+       8    const linkedInUrl = `https://www.linkedin.com/sharing/share-o
+          ffsite/?url=${encodeURIComponent(shareUrl)}`;
+       9    const twitterUrl = `https://twitter.com/intent/tweet?url=${en
+          codeURIComponent(shareUrl)}&text=${encodeURIComponent(shareTitl
+          e)}`;
+      10  
+      13 -  const handleCopyLink = async () => {                         
+      14 -    try {                                                      
+      15 -      await navigator.clipboard.writeText(shareUrl);           
+      16 -      setCopied(true);                                         
+      17 -      setTimeout(() => setCopied(false), 2000);                
+      18 -    } catch (err) {                                            
+      19 -      // Fallback for older browsers                           
+      20 -      const textArea = document.createElement('textarea');     
+      21 -      textArea.value = shareUrl;                               
+      22 -      document.body.appendChild(textArea);                     
+      23 -      textArea.select();                                       
+      24 -      document.execCommand('copy');                            
+      25 -      document.body.removeChild(textArea);                     
+      26 -      setCopied(true);                                         
+      27 -      setTimeout(() => setCopied(false), 2000);                
+      28 -    }                                                          
+      29 -  };                                                           
+      30 -                                                               
+      11    return (
+      12      <div className="share-buttons">
+      13        <span className="share-buttons__label">Share:</span>
+     ...
+      29        >
+      30          Twitter
+      31        </a>
+      52 -      <button                                                  
+      53 -        type="button"                                          
+      54 -        onClick={handleCopyLink}                               
+      55 -        className="share-buttons__button share-buttons__button-
+         --copy"                                                         
+      56 -        aria-label="Copy link"                                 
+      57 -      >                                                        
+      58 -        {copied ? 'Copied!' : 'Copy Link'}                     
+      59 -      </button>                                                
+      32      </div>
+      33    );
+      34  };
+
+⏺ Update(src/static/css/pages/_blog.scss)
+  ⎿  Removed 3 lines                                                     
+      342        border-color: #1da1f2;
+      343      }
+      344  
+      345 -    &--copy {                                                 
+      346 -      font-family: inherit;                                   
+      347 -    }                                                         
+      345    }
+      346  
+      347    @include breakpoint(small) {
+
+⏺ Bash(cd /Users/sam/1.\ SAMOS/personal-site && npm run build 2>&1   timeout: 3m 
+      | tail -3 && git add -A && git commit -m "Remove Copy Link     0s
+      button from share buttons…)
+  ⎿ your devDependencies to work around this error. This will make this  
+    mes
+    sage
+    go away.
+    … +5 lines (ctrl+o to expand)
+
+⏺ Done. Removed Copy Link - now just LinkedIn and Twitter. Pushed.
+
+❯ lets also just keep the project session without photo preview. and the    
+  header navigation bar I would like ABOUT | BLOG | SERVICE | PROJECT |     
+  CONTACT in this order                                                     
+
+⏺ Read(src/data/routes.js)
+  ⎿  Read 30 lines
+
+⏺ Read(src/pages/Projects.js)
+  ⎿  Read 28 lines
+
+⏺ Read(src/components/Projects/Cell.js)
+  ⎿  Read 37 lines
+
+⏺ Write(src/data/routes.js)
+  ⎿  Added 4 lines, removed 4 lines                                      
+       9      path: '/about',
+      10    },
+      11    {
+      12 +    label: 'Blog',                                             
+      13 +    path: '/blog',                                             
+      14 +  },                                                           
+      15 +  {                                                            
+      16      label: 'Services',
+      17      path: '/services',
+      18    },
+     ...
+      21      path: '/projects',
+      22    },
+      23    {
+      20 -    label: 'Blog',                                             
+      21 -    path: '/blog',                                             
+      22 -  },                                                           
+      23 -  {                                                            
+      24      label: 'Contact',
+      25      path: '/contact',
+      26    },
+
+⏺ Update(src/components/Projects/Cell.js)
+  ⎿  Removed 3 lines                                                     
+      13            {dayjs(data.date).format('MMMM, YYYY')}
+      14          </time>
+      15        </header>
+      16 -      <a href={data.link} className="image">                   
+      17 -        <img src={`${process.env.PUBLIC_URL}${data.image}`} alt
+         -={data.title} />                                               
+      18 -      </a>                                                     
+      16        <div className="description">
+      17          <p>{data.desc}</p>
+      18        </div>
+
+⏺ Bash(cd /Users/sam/1.\ SAMOS/personal-site && npm run build 2>&1   timeout: 3m 
+      | tail -3 && git add -A && git commit -m "Reorder nav and      0s
+      remove project images…)
+  ⎿ your devDependencies to work around this error. This will make this  
+    mes
+    sage
+    go away.
+    … +5 lines (ctrl+o to expand)
+
+⏺ Done.
+  - Nav: About | Blog | Services | Projects | Contact
+  - Project photos removed
+
+  Pushed.
+
+✻ Sautéed for 34s
+
+❯ /cost 
+  ⎿  Total cost:            $11.04
+     Total duration (API):  24m 20s
+     Total duration (wall): 1h 24m 1s
+     Total code changes:    1894 lines added, 324 lines removed
+     Usage by model:
+             claude-haiku:  373.4k input, 9.9k output, 658.8k cache read, 161.4k 
+     cache write ($0.69)
+          claude-opus-4-5:  3.8k input, 58.7k output, 11.6m cache read, 489.0k 
+     cache write ($10.35)
+
+
+
+
