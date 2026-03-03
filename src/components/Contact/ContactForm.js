@@ -27,52 +27,57 @@ const ContactForm = ({ actionUrl, initialInterest }) => {
       <h3>Let&apos;s talk</h3>
       <p>Share what you are working on. I&apos;ll get back to you soon.</p>
       <form className="contact-form" action={actionUrl} method="POST">
-        <p className="contact-form__field-label">Name</p>
-        <input id="name" name="name" type="text" autoComplete="name" aria-label="Name" required />
+        <label className="contact-form__field" htmlFor="name">
+          <span className="contact-form__field-label">Name</span>
+          <input id="name" name="name" type="text" autoComplete="name" required />
+        </label>
 
-        <p className="contact-form__field-label">Email</p>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          autoComplete="email"
-          aria-label="Email"
-          required
-        />
-
-        <p className="contact-form__field-label">Interest</p>
-        <div className="select-wrapper">
-          <select
-            id="interest"
-            name="interest"
-            value={interest}
-            onChange={(event) => setInterest(event.target.value)}
-            aria-label="Interest"
+        <label className="contact-form__field" htmlFor="email">
+          <span className="contact-form__field-label">Email</span>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autoComplete="email"
             required
-          >
-            {interestOptions.map((option) => (
-              <option key={option} value={option}>
-                {option}
-              </option>
-            ))}
-          </select>
-        </div>
+          />
+        </label>
 
-        <p className="contact-form__field-label">Message</p>
-        <textarea
-          id="message"
-          name="message"
-          rows="6"
-          aria-label="Message"
-          required
-          placeholder="Tell me your goals, context, and what support you are looking for."
-        />
+        <label className="contact-form__field" htmlFor="interest">
+          <span className="contact-form__field-label">Interest</span>
+          <div className="select-wrapper">
+            <select
+              id="interest"
+              name="interest"
+              value={interest}
+              onChange={(event) => setInterest(event.target.value)}
+              required
+            >
+              {interestOptions.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+          </div>
+        </label>
+
+        <label className="contact-form__field" htmlFor="message">
+          <span className="contact-form__field-label">Message</span>
+          <textarea
+            id="message"
+            name="message"
+            rows="6"
+            required
+            placeholder="Tell me your goals, context, and what support you are looking for."
+          />
+        </label>
 
         <input type="hidden" name="_subject" value="New inquiry from hyperfocusam.com" />
 
         <ul className="actions">
           <li>
-            <button type="submit" className="button">
+            <button type="submit" className="button contact-form__submit">
               Send Message
             </button>
           </li>

@@ -6,14 +6,26 @@
   border-left: 4px solid _palette(accent);
 
   h3 {
+    text-transform: none;
+    letter-spacing: 0.04em;
+    font-size: 1.1em;
     margin-bottom: 0.35em;
   }
 
   p {
+    color: _palette(fg-bold);
+    line-height: 1.65;
     margin-bottom: 1em;
   }
 
   &__form {
+    margin: 0;
+  }
+
+  &__field {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
     margin: 0;
   }
 
@@ -27,6 +39,7 @@
   }
 
   &__controls {
+    align-items: center;
     display: grid;
     grid-template-columns: 1fr auto;
     gap: 0.75em;
@@ -40,9 +53,12 @@
     margin: 0;
   }
 
-  .button {
+  &__submit {
     margin: 0;
-    min-width: 140px;
+    height: _size(element-height);
+    line-height: _size(element-height);
+    min-width: 150px;
+    padding: 0 1.5em;
     text-align: center;
   }
 }

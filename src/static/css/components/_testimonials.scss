@@ -5,10 +5,14 @@
     margin-bottom: 1.5em;
 
     h3 {
+      text-transform: none;
+      letter-spacing: 0.04em;
+      font-size: 1.15em;
       margin-bottom: 0.4em;
     }
 
     p {
+      color: _palette(fg-bold);
       margin-bottom: 0;
     }
   }
@@ -32,17 +36,16 @@
 
   &__quote {
     color: _palette(fg-bold);
-    font-size: 1em;
+    font-size: 1.03em;
     line-height: 1.6;
     margin: 0 0 0.8em;
   }
 
   &__author {
-    color: _palette(fg);
-    font-size: 0.85em;
+    color: _palette(fg-bold);
+    font-size: 0.95em;
+    letter-spacing: 0.02em;
     margin-bottom: 0;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
   }
 
   &--featured {

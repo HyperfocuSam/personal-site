@@ -16,15 +16,17 @@ const EmailCapture = ({
       <input type="hidden" name="source" value={source} />
       <input type="hidden" name="embed" value="1" />
       <div className="email-capture__controls">
-        <input
-          id={`email-capture-${source}`}
-          name="email"
-          type="email"
-          placeholder="you@example.com"
-          aria-label="Email address"
-          required
-        />
-        <button type="submit" className="button">
+        <label htmlFor={`email-capture-${source}`} className="email-capture__field">
+          <span className="email-capture__label">Email</span>
+          <input
+            id={`email-capture-${source}`}
+            name="email"
+            type="email"
+            placeholder="you@example.com"
+            required
+          />
+        </label>
+        <button type="submit" className="button email-capture__submit">
           Subscribe
         </button>
       </div>
