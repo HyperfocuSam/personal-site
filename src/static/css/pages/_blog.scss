@@ -466,3 +466,19 @@
 .post-author-section {
   margin: 2em 0;
 }
+
+.trainer-banner {
+  margin: 2em 0;
+  padding: 1.25em;
+  background: _palette(bg-alt);
+  border: 1px solid _palette(border);
+  border-left: 4px solid _palette(accent);
+
+  h3 {
+    margin-bottom: 0.5em;
+  }
+
+  p {
+    margin-bottom: 1em;
+  }
+}

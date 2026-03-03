@@ -12,6 +12,8 @@ import {
   RelatedPosts,
   calculateReadingTime,
 } from '../components/Blog';
+import TrainerRecruitmentBanner from '../components/Blog/TrainerRecruitmentBanner';
+import EmailCapture from '../components/EmailCapture/EmailCapture';
 
 // Custom blockquote component for pull quotes
 const PullQuote = ({ children }) => (
@@ -55,6 +57,12 @@ const Post = () => {
   }, [slug, post]);
 
   const readingTime = useMemo(() => calculateReadingTime(markdown), [markdown]);
+  const shouldShowTrainerBanner = useMemo(() => {
+    if (!post || !post.tags) {
+      return false;
+    }
+    return post.tags.some((tag) => ['workshop', 'case-study'].includes(tag));
+  }, [post]);
 
   if (!post) {
     return <Navigate to="/blog" replace />;
@@ -115,6 +123,16 @@ const Post = () => {
           <h3>About the Author</h3>
           <AuthorCard />
         </section>
+
+        {shouldShowTrainerBanner && (
+          <TrainerRecruitmentBanner ctaHref="/contact?interest=trainer" />
+        )}
+
+        <EmailCapture
+          source={`blog-post-${slug}`}
+          title="Stay in the loop"
+          blurb="Occasional insights on AI adoption. No spam, no hype."
+        />
 
         {/* Related Posts */}
         <RelatedPosts currentSlug={slug} currentTags={post.tags} />

@@ -1,6 +1,31 @@
 // Contact page (/contact)
 
 #contact {
+  .contact-form-section {
+    margin-bottom: 2.5em;
+  }
+
+  .contact-form {
+    max-width: 760px;
+
+    &__field-label {
+      color: _palette(fg-bold);
+      display: block;
+      font-size: 0.9em;
+      font-weight: _font(weight-bold);
+      margin: 1em 0 (_size(element-margin) * 0.5) 0;
+    }
+
+    label {
+      margin-top: 1em;
+    }
+
+    .actions {
+      margin-top: 1.4em;
+      margin-bottom: 0;
+    }
+  }
+
   .email-at {
     margin: 3em 0;
 

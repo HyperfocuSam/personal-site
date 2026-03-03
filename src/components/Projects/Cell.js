@@ -5,9 +5,22 @@ import dayjs from 'dayjs';
 const Cell = ({ data }) => (
   <div className="cell-container">
     <article className="mini-post">
+      {data.link ? (
+        <a href={data.link} className="image">
+          <img src={data.image} alt={data.title} />
+        </a>
+      ) : (
+        <span className="image">
+          <img src={data.image} alt={data.title} />
+        </span>
+      )}
       <header>
         <h3>
-          <a href={data.link}>{data.title}</a>
+          {data.link ? (
+            <a href={data.link}>{data.title}</a>
+          ) : (
+            <span>{data.title}</span>
+          )}
         </h3>
         <time className="published">
           {dayjs(data.date).format('MMMM, YYYY')}

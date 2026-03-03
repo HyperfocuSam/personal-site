@@ -2,6 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Main from '../layouts/Main';
+import testimonials from '../data/testimonials';
+import TestimonialSection from '../components/Testimonials/TestimonialSection';
+import FeaturedCaseStudies from '../components/Home/FeaturedCaseStudies';
+import RevenuePathCTA from '../components/Home/RevenuePathCTA';
+import EmailCapture from '../components/EmailCapture/EmailCapture';
 
 const Index = () => (
   <Main
@@ -35,6 +40,14 @@ const Index = () => (
         </p>
       </section>
 
+      <TestimonialSection
+        title="Trusted by leaders"
+        subtitle="From executive teams to founders and emerging leaders."
+        testimonials={testimonials}
+        limit={1}
+        featured
+      />
+
       <h3>What I Actually Do</h3>
       <p>
         Not teaching tools. Helping people discover what&apos;s possible.
@@ -56,6 +69,8 @@ const Index = () => (
         </li>
       </ul>
 
+      <FeaturedCaseStudies limit={3} tag="case-study" />
+
       <h3>Where I Work</h3>
       <p>
         <strong>
@@ -71,15 +86,14 @@ const Index = () => (
         {' '}&mdash; Hong Kong&apos;s practical AI training community. HSBC, Bank of China,
         Chow Tai Fook, and others chose us because we focus on adoption, not just awareness.
       </p>
-      <p>
-        <strong>Loopem</strong> &mdash; An experiment in bringing practical AI to mainland China.
-      </p>
 
-      <br />
-      <p>
-        Curious what this could look like for you or your team?{' '}
-        <Link to="/contact">Let&apos;s have a conversation</Link>.
-      </p>
+      <RevenuePathCTA />
+
+      <EmailCapture
+        source="homepage"
+        title="Stay in the loop"
+        blurb="Occasional insights on AI adoption. No spam, no hype."
+      />
 
       <ul className="actions">
         <li>
@@ -88,8 +102,8 @@ const Index = () => (
           </Link>
         </li>
         <li>
-          <Link to="/about" className="button">
-            My Story
+          <Link to="/contact" className="button">
+            Start a Conversation
           </Link>
         </li>
       </ul>

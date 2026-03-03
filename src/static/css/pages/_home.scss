@@ -1,0 +1,181 @@
+#index {
+  .hero-stats {
+    background: _palette(bg-alt);
+    border-left: 4px solid _palette(accent);
+    padding: 1.1em 1.2em;
+    margin: 0 0 2em;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.home-case-studies {
+  margin: 2.5em 0;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1em;
+
+    @include breakpoint(medium) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__card {
+    background: _palette(bg-alt);
+    border: 1px solid _palette(border);
+    padding: 1.1em;
+
+    h4 {
+      margin-bottom: 0.4em;
+    }
+
+    p {
+      margin-bottom: 0.6em;
+    }
+  }
+
+  &__date {
+    color: _palette(fg-light);
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  &__all {
+    margin-top: 1em;
+    margin-bottom: 0;
+  }
+}
+
+.revenue-path-cta {
+  margin: 2.5em 0;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1em;
+
+    @include breakpoint(medium) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__card {
+    background: _palette(bg-alt);
+    border: 1px solid _palette(border);
+    border-top: 3px solid _palette(accent);
+    padding: 1.2em;
+
+    h4 {
+      margin-bottom: 0.5em;
+    }
+
+    p {
+      min-height: 5em;
+
+      @include breakpoint(medium) {
+        min-height: 0;
+      }
+    }
+
+    .button {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+.service-group {
+  margin: 2.5em 0;
+  padding-top: 0.5em;
+  border-top: 1px solid _palette(border);
+
+  &__header {
+    margin-bottom: 1em;
+  }
+
+  &__social-proof {
+    margin-top: 0.75em;
+  }
+
+  &__testimonial {
+    margin: 1.25em 0;
+    padding: 1em 1.2em;
+    background: _palette(bg-alt);
+    border-left: 4px solid _palette(accent);
+
+    footer {
+      margin-top: 0.75em;
+      font-size: 0.8em;
+      color: _palette(fg-light);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+  }
+
+  &__item {
+    margin: 0 0 2em;
+    padding: 0 0 2em;
+    border-bottom: 1px solid _palette(border);
+  }
+
+  &__item-subtitle {
+    margin-bottom: 0.75em;
+  }
+
+  &__tiers {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1em;
+    margin: 1.25em 0;
+
+    @include breakpoint(medium) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__tier {
+    padding: 1em;
+    background: _palette(bg-alt);
+    border: 1px solid _palette(border);
+    border-left: 3px solid _palette(accent);
+
+    h5 {
+      margin-bottom: 0.4em;
+    }
+
+    p {
+      margin-bottom: 0.9em;
+    }
+  }
+
+  &__item-cta {
+    margin-bottom: 0;
+  }
+
+  &__primary-cta {
+    margin-top: 1em;
+  }
+}
+
+.related-case-studies {
+  margin: 1.2em 0;
+
+  h5 {
+    font-size: 0.7em;
+    margin-bottom: 0.6em;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 1.3em;
+  }
+
+  li {
+    margin: 0.4em 0;
+  }
+}

@@ -5,6 +5,7 @@ import dayjs from 'dayjs';
 import Main from '../layouts/Main';
 import posts from '../data/posts';
 import { AuthorCard } from '../components/Blog';
+import EmailCapture from '../components/EmailCapture/EmailCapture';
 
 // Separate featured post from other posts
 const featuredPost = posts.find((post) => post.featured);
@@ -73,14 +74,11 @@ const Blog = () => (
       <AuthorCard />
 
       <hr />
-      <h3>Want more frequent updates?</h3>
-      <p>
-        Follow me on{' '}
-        <a href="https://www.linkedin.com/in/sam-ai-agent/" target="_blank" rel="noopener noreferrer">
-          LinkedIn
-        </a>{' '}
-        for shorter updates and industry discussions.
-      </p>
+      <EmailCapture
+        source="blog-listing"
+        title="Stay in the loop"
+        blurb="Occasional insights on AI adoption. No spam, no hype."
+      />
     </article>
   </Main>
 );

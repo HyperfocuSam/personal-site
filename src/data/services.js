@@ -1,128 +1,131 @@
 const services = [
   {
     id: 'workshops',
+    category: 'organizations',
+    anchor: 'organizations',
     title: 'Adaptig Workshops',
     subtitle: 'From unsure to unstoppable',
     provider: 'Adaptig',
-    description: `Here's what I've seen: most people walk into AI workshops skeptical, overwhelmed, or both. They leave impressed by what AI can do—but unclear about what *they* can do with it.
+    description: `Practical, human-first workshops that move people from hesitation to real application.
 
-Our workshops flip that. We start with psychological safety (nobody's going to look stupid here), move through guided discovery (finding your own use cases), and end with practical skills you'll actually use. The goal isn't mastering tools—it's that "A-Ha" moment when someone realizes what's possible for them.
-
-**The Adaptig programs:**
-- **Spark Productivity** — Your current workflow, but smarter
-- **Spark Creativity** — From blank page to finished work, AI-assisted
-- **Pioneer Program** — 6 weeks to become your organization's AI champion
-
-Not tool training. Transformation training.
-
-**Organizations that got it:** Mattel, Toyota, YPO, Bank of China, HSBC, Hong Kong Jockey Club`,
+**What this looks like:**
+- Psychological safety first, then practical skills
+- Guided discovery so teams find their own use cases
+- Exercises tied to real workflow problems, not generic demos
+- Follow-through support to turn momentum into habits`,
     cta: 'Explore Adaptig',
     ctaLink: 'https://adaptig.ai',
-    image: '/images/services/adaptig-workshops.png',
-  },
-  {
-    id: 'train-the-trainer',
-    title: 'Train-the-Trainer',
-    subtitle: 'Teach what everyone\'s talking about',
-    provider: 'Adaptig',
-    description: `You know AI. You want to help others get there. But there's a gap between knowing and teaching—especially when your audience is skeptical, scared, or skeptical *and* scared.
-
-The TTT program isn't about making you an AI expert. It's about making you an AI facilitator—someone who can create the conditions for others to learn. We'll set you up with everything you need to train with confidence.
-
-**What you get:**
-- The Adaptig facilitation methodology (psychological safety meets practical skills)
-- Complete workshop materials you can customize
-- Techniques for handling resistance and building confidence
-- A community of trainers doing this work globally
-- Certification that means something
-
-**Who this is for:**
-Corporate trainers, consultants, HR leaders, educators—anyone who wants to bring AI capability to their own people.
-
-**Our trainers work across:** North America, Latin America, Europe, Asia-Pacific`,
-    cta: 'Learn About Certification',
-    ctaLink: 'https://adaptig.ai',
-    image: '/images/services/train-the-trainer.png',
+    external: true,
+    relatedPosts: [
+      'bochk-banking-ai-training',
+      'ctf-ai-design-thinking-workshop-2026',
+    ],
   },
   {
     id: 'corporate-training',
-    title: 'Corporate AI Training',
-    subtitle: 'When your team needs to actually use AI, not just hear about it',
+    category: 'organizations',
+    anchor: 'organizations',
+    title: 'Corporate AI Training (DotAI)',
+    subtitle: 'Designed around your team, your context, your constraints',
     provider: 'DotAI',
-    description: `The challenge isn't finding AI tools. It's getting people to use them.
+    description: `Most training creates short-term excitement. This one builds working behavior.
 
-Most corporate training ends with enthusiasm that fades by Monday. Ours ends with people actually changing how they work. The difference? We meet your team where they are—not where we think they should be.
-
-**What this looks like:**
-- Workshops designed around your actual business scenarios, not generic demos
-- Hands-on practice with problems your team recognizes
-- The "smallest shippable step" approach—one win at a time
-- Follow-up to turn experimentation into habit
-
-**Who this is for:**
-Organizations where AI adoption has stalled, or leaders who want to get it right the first time.
-
-**Clients who chose this path:** HSBC, Bank of China, Chow Tai Fook, Garden, Hong Kong Jockey Club, PolyU`,
+**Ideal for teams that need:**
+- AI adoption in compliance-heavy environments
+- Better prompting, workflow design, and decision support
+- Clear, role-based use cases across departments
+- Practical wins leadership can measure`,
     cta: 'Talk About Your Team',
     ctaLink: '/contact',
-    image: '/images/services/corporate-training.jpeg',
-  },
-  {
-    id: 'one-on-one',
-    title: '1-1 AI Coaching',
-    subtitle: 'Your questions, your pace, your actual work',
-    provider: 'Sam Wong',
-    description: `Workshops are great for teams. But sometimes you need space to figure out your own relationship with AI.
-
-This isn't a course. It's a conversation that starts with: *What are you actually trying to do?* From there, we explore together—your workflows, your challenges, your specific context. No generic advice, no "here's what everyone's doing."
-
-What I've found is that the people who struggle most with traditional ways of learning might be the ones who benefit most from this approach.
-
-**How it works:**
-- 60-90 minute sessions, online
-- We work on your real projects, not hypotheticals
-- You set the pace and direction
-- Between-session support when you get stuck
-
-**This might be for you if:**
-- You've tried AI but it hasn't "clicked" yet
-- You want to go deeper than workshops allow
-- You're figuring out how AI fits your career
-- You need a thinking partner, not a teacher
-
-**150+ professionals** have used these sessions to find their own way forward.`,
-    cta: 'Book a Session',
-    ctaLink: '/contact',
-    image: '/images/services/one-on-one.png',
+    external: false,
+    relatedPosts: [
+      'hkct-ai-education-workshop',
+      'arup-ai-lunch-learn',
+    ],
   },
   {
     id: 'keynotes-events',
+    category: 'organizations',
+    anchor: 'organizations',
     title: 'Keynotes & Events',
-    subtitle: 'Setting context and lowering fear',
+    subtitle: 'Set context, lower fear, spark action',
     provider: 'Sam Wong',
-    description: `People walk into my sessions skeptical, overwhelmed, or convinced AI isn't for them. They leave with clarity about what's possible—and confidence to try it.
+    description: `For leadership sessions, conferences, and internal events where teams need clarity, not hype.
 
-The goal isn't to impress people with what AI can do. It's to help them see what *they* can do with it. I create space for questions, lower the fear, and focus on practical wins.
-
-**Available formats:**
-- **Keynotes (30-60 min)** — Setting context, lowering barriers, sparking curiosity
-- **Panel discussions & Q&A** — Real conversations, not scripted talking points
-- **Executive briefings** — For leadership teams who need signal, not noise
-- **Conference workshops** — Hands-on learning for larger audiences
-
-**Topics I cover:**
-- AI for the Rest of Us — Making AI accessible for non-tech people
-- Prompt Engineering That Actually Works — Beyond the basics
-- Getting Your Organization AI-Ready — What adoption actually requires
-- The Human Side of AI — Why technology is the easy part
-
-**Languages:** English, Cantonese, Mandarin
-**Locations:** Hong Kong, Asia-Pacific, Global
-
-Recent appearances include YPO executive sessions, DotAI's Everyone.AI conference (Microsoft, Google, HP partnership), and enterprise events across Asia.`,
+**Formats:**
+- Keynotes (30-60 min)
+- Executive briefings
+- Panel conversations and Q&A
+- Hands-on conference workshops`,
     cta: 'Discuss Your Event',
     ctaLink: '/contact',
-    image: '/images/services/keynotes-events.png',
+    external: false,
+    relatedPosts: [
+      'hkjc-mt-ai-training',
+      'cts-tourism-ai-training',
+    ],
+  },
+  {
+    id: 'one-on-one',
+    category: 'individuals',
+    anchor: 'one-on-one',
+    title: '1-1 Coaching Paths',
+    subtitle: 'Your questions, your pace, your real projects',
+    description: `For professionals who want practical progress with AI in their own work context.
+
+No generic curriculum. We start from where you are and build from there.`,
+    cta: 'Talk About Fit',
+    ctaLink: '/contact',
+    external: false,
+    relatedPosts: ['polyu-finance-ai-workflow'],
+    tiers: [
+      {
+        id: 'discovery-call',
+        title: 'Discovery Call (Free, 30 min)',
+        description: 'Not sure if coaching is right for you? Let us talk through your goals.',
+        cta: 'Book Discovery Call',
+        ctaLink: 'https://ro.am/samwong/',
+        external: true,
+      },
+      {
+        id: 'standard-coaching',
+        title: 'AI Coaching Sessions (Standard)',
+        description: '60-90 minute sessions focused on your live projects and workflows.',
+        cta: 'Book Coaching Session',
+        ctaLink: 'https://ro.am/samwong/',
+        external: true,
+      },
+      {
+        id: 'executive-advisory',
+        title: 'Executive AI Advisory (Premium)',
+        description: 'Ongoing strategic partnership for leaders navigating AI transformation.',
+        cta: 'Inquire About Executive Advisory',
+        ctaLink: '/contact',
+        external: false,
+      },
+    ],
+  },
+  {
+    id: 'train-the-trainer',
+    category: 'trainers',
+    anchor: 'train-the-trainer',
+    title: 'Train-the-Trainer Program',
+    subtitle: 'Join a global network across four continents',
+    provider: 'Adaptig',
+    description: `A recruitment-focused pathway for trainers, facilitators, consultants, HR leaders, and educators who want to teach practical AI confidently.
+
+**What trainers get:**
+- Adaptig facilitation methodology
+- Complete workshop materials and delivery structure
+- Trainer community and support
+- Certification and ongoing opportunities`,
+    cta: 'Apply to Join the Network',
+    ctaLink: '/contact?interest=trainer',
+    external: false,
+    relatedPosts: [
+      'ctf-ai-design-thinking-workshop-2026',
+      'bochk-banking-ai-training',
+    ],
   },
 ];
 
