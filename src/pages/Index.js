@@ -11,9 +11,8 @@ import EmailCapture from '../components/EmailCapture/EmailCapture';
 const Index = () => (
   <Main
     description={
-      'Sam Wong - AI trainer and coach helping people discover what\'s possible with AI. '
-      + 'From ADHD brain to AI mission. Co-founder of Adaptig, Founding member of DotAI. '
-      + 'Human-first approach to AI adoption.'
+      'Sam Wong helps teams and professionals adopt AI with confidence through workshops, '
+      + 'coaching, and trainer development. Human-first, practical, and outcome-focused.'
     }
   >
     <article className="post" id="index">
@@ -23,20 +22,20 @@ const Index = () => (
             <Link to="/">Hey there.</Link>
           </h2>
           <p>
-            I didn&apos;t set out to teach AI. I discovered it while figuring out how to
-            manage my ADHD brain&mdash;and what started as a personal solution became a
-            mission to help others.
+            I help organizations and professionals adopt AI in ways that actually stick.
+            If you are exploring training, coaching, or trainer development, you are in
+            the right place.
           </p>
         </div>
       </header>
 
       <section className="hero-stats">
         <p>
-          <strong>10,000+ people</strong> who&apos;ve gone from skeptical to curious.
+          <strong>10,000+ people</strong> trained across workshops and programs.
           <br />
-          <strong>70+ organizations</strong> that chose practical over hype.
+          <strong>70+ organizations</strong> supported with practical AI adoption.
           <br />
-          <strong>3 ventures</strong> built on one belief: humans come first.
+          <strong>150+ one-on-one sessions</strong> delivered for professionals.
         </p>
       </section>
 
@@ -50,22 +49,23 @@ const Index = () => (
 
       <h3>What I Actually Do</h3>
       <p>
-        Not teaching tools. Helping people discover what&apos;s possible.
+        Three ways I help people make AI useful in real work:
       </p>
       <ul>
         <li>
-          <strong>Run workshops</strong> where skeptics become curious and the curious
-          become confident. The goal isn&apos;t mastering ChatGPT&mdash;it&apos;s finding
-          what AI makes possible for <em>you</em>.
+          <strong>Workshops for organizations:</strong>
+          {' '}
+          Align teams, lower fear, and build practical skills tied to daily workflows.
         </li>
         <li>
-          <strong>Coach individuals</strong> through their own AI journeys. Not a
-          curriculum, but a conversation. We start with your actual work, not hypothetical
-          use cases.
+          <strong>One-on-one coaching:</strong>
+          {' '}
+          Personalized sessions focused on your projects, your role, and your goals.
         </li>
         <li>
-          <strong>Train trainers</strong> who want to bring this to their own organizations.
-          The Adaptig approach: psychological safety first, then practical skills.
+          <strong>Train-the-trainer programs:</strong>
+          {' '}
+          Equip facilitators to teach AI confidently with the Adaptig methodology.
         </li>
       </ul>
 
@@ -76,15 +76,14 @@ const Index = () => (
         <strong>
           <a href="https://adaptig.ai" target="_blank" rel="noopener noreferrer">Adaptig</a>
         </strong>
-        {' '}&mdash; A global trainer network I co-founded. We help organizations like
-        Mattel, Toyota, and YPO go from unsure to unstoppable with AI they actually use.
+        {' '}&mdash; Global trainer network and workshops for enterprise AI adoption.
       </p>
       <p>
         <strong>
           <a href="https://dotai.hk" target="_blank" rel="noopener noreferrer">DotAI</a>
         </strong>
-        {' '}&mdash; Hong Kong&apos;s practical AI training community. HSBC, Bank of China,
-        Chow Tai Fook, and others chose us because we focus on adoption, not just awareness.
+        {' '}&mdash; Hong Kong AI training community serving clients including HSBC,
+        Bank of China, and Chow Tai Fook.
       </p>
 
       <RevenuePathCTA />
@@ -98,12 +97,12 @@ const Index = () => (
       <ul className="actions">
         <li>
           <Link to="/services" className="button">
-            See How I Work
+            View Services
           </Link>
         </li>
         <li>
           <Link to="/contact" className="button">
-            Start a Conversation
+            Book a Discovery Conversation
           </Link>
         </li>
       </ul>

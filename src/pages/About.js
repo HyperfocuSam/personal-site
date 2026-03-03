@@ -13,12 +13,20 @@ const About = () => (
           <h2>
             <Link to="/about">About Me</Link>
           </h2>
-          <p>Human-first AI adoption, built from lived experience.</p>
+          <p>Why I do this work and how I got here.</p>
         </div>
       </header>
 
       <section>
-        <h3>Intro</h3>
+        <h3>Quick Version</h3>
+        <p>
+          I help people and organizations adopt AI in practical, human-first ways.
+          My focus is not tool hype. It is real behavior change.
+        </p>
+      </section>
+
+      <section>
+        <h3>How It Started</h3>
         <p>
           I grew up with ADHD but did not know it until my mid-20s.
           As a history graduate working as an executive assistant,
@@ -32,7 +40,7 @@ const About = () => (
       </section>
 
       <section>
-        <h3>The Discovery</h3>
+        <h3>What Changed</h3>
         <p>
           AI did not just help me work better. It helped me think differently
           about work itself. I started building systems for clarity, not just
@@ -41,7 +49,7 @@ const About = () => (
       </section>
 
       <section>
-        <h3>The Path</h3>
+        <h3>Career Path</h3>
         <p>
           My career moved from Executive Assistant roles at FAO Schwarz and Sharper
           Image to AI Product Manager and AI Team Lead at RENPHO, where I built an
@@ -133,7 +141,7 @@ const About = () => (
       />
 
       <section>
-        <h3>The Bigger Picture</h3>
+        <h3>Why This Matters</h3>
         <p>
           What motivates me is the shift from &ldquo;AI is not for me&rdquo;
           to &ldquo;I can use this.&rdquo; We are in a major transition, and
@@ -144,12 +152,12 @@ const About = () => (
       <ul className="actions">
         <li>
           <Link to="/services" className="button">
-            View Services
+            See Service Options
           </Link>
         </li>
         <li>
           <Link to="/contact" className="button">
-            Get in Touch
+            Contact Me
           </Link>
         </li>
       </ul>

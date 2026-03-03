@@ -6,14 +6,14 @@ const services = [
     title: 'Adaptig Workshops',
     subtitle: 'From unsure to unstoppable',
     provider: 'Adaptig',
-    description: `Practical, human-first workshops that move people from hesitation to real application.
+    description: `Best for leadership teams and departments that need AI adoption, not just awareness.
 
-**What this looks like:**
-- Psychological safety first, then practical skills
-- Guided discovery so teams find their own use cases
-- Exercises tied to real workflow problems, not generic demos
-- Follow-through support to turn momentum into habits`,
-    cta: 'Explore Adaptig',
+**What you get:**
+- Human-first facilitation that lowers fear and builds confidence
+- Hands-on exercises tied to your real workflows
+- Practical use cases teams can apply immediately
+- Follow-through guidance to turn learning into habit`,
+    cta: 'Explore Adaptig Workshops',
     ctaLink: 'https://adaptig.ai',
     external: true,
     relatedPosts: [
@@ -28,14 +28,14 @@ const services = [
     title: 'Corporate AI Training (DotAI)',
     subtitle: 'Designed around your team, your context, your constraints',
     provider: 'DotAI',
-    description: `Most training creates short-term excitement. This one builds working behavior.
+    description: `Best for organizations that need role-specific training and measurable outcomes.
 
-**Ideal for teams that need:**
-- AI adoption in compliance-heavy environments
-- Better prompting, workflow design, and decision support
-- Clear, role-based use cases across departments
-- Practical wins leadership can measure`,
-    cta: 'Talk About Your Team',
+**Ideal when you need:**
+- Adoption in compliance-heavy or high-accountability environments
+- Better prompting and workflow design by role
+- Department-specific use cases people can use by next week
+- A practical rollout that leadership can evaluate`,
+    cta: 'Discuss Corporate Training',
     ctaLink: '/contact',
     external: false,
     relatedPosts: [
@@ -50,14 +50,14 @@ const services = [
     title: 'Keynotes & Events',
     subtitle: 'Set context, lower fear, spark action',
     provider: 'Sam Wong',
-    description: `For leadership sessions, conferences, and internal events where teams need clarity, not hype.
+    description: `Best for events where you need clear signal, practical examples, and audience engagement.
 
-**Formats:**
+**Available formats:**
 - Keynotes (30-60 min)
 - Executive briefings
 - Panel conversations and Q&A
 - Hands-on conference workshops`,
-    cta: 'Discuss Your Event',
+    cta: 'Discuss Speaking or Events',
     ctaLink: '/contact',
     external: false,
     relatedPosts: [
@@ -70,11 +70,11 @@ const services = [
     category: 'individuals',
     anchor: 'one-on-one',
     title: '1-1 Coaching Paths',
-    subtitle: 'Your questions, your pace, your real projects',
-    description: `For professionals who want practical progress with AI in their own work context.
+    subtitle: 'Your goals, your pace, your real projects',
+    description: `Best for professionals who want direct support applying AI to real work.
 
-No generic curriculum. We start from where you are and build from there.`,
-    cta: 'Talk About Fit',
+No generic curriculum. We start from your current role, tools, and constraints.`,
+    cta: 'Talk About Coaching Fit',
     ctaLink: '/contact',
     external: false,
     relatedPosts: ['polyu-finance-ai-workflow'],
@@ -82,7 +82,7 @@ No generic curriculum. We start from where you are and build from there.`,
       {
         id: 'discovery-call',
         title: 'Discovery Call (Free, 30 min)',
-        description: 'Not sure if coaching is right for you? Let us talk through your goals.',
+        description: 'A no-pressure call to define goals and see if coaching is a fit.',
         cta: 'Book Discovery Call',
         ctaLink: 'https://ro.am/samwong/',
         external: true,
@@ -90,7 +90,7 @@ No generic curriculum. We start from where you are and build from there.`,
       {
         id: 'standard-coaching',
         title: 'AI Coaching Sessions (Standard)',
-        description: '60-90 minute sessions focused on your live projects and workflows.',
+        description: '60-90 minute sessions focused on your active projects and workflows.',
         cta: 'Book Coaching Session',
         ctaLink: 'https://ro.am/samwong/',
         external: true,
@@ -98,7 +98,7 @@ No generic curriculum. We start from where you are and build from there.`,
       {
         id: 'executive-advisory',
         title: 'Executive AI Advisory (Premium)',
-        description: 'Ongoing strategic partnership for leaders navigating AI transformation.',
+        description: 'Ongoing partnership for leaders navigating AI transformation decisions.',
         cta: 'Inquire About Executive Advisory',
         ctaLink: '/contact',
         external: false,
@@ -112,12 +112,12 @@ No generic curriculum. We start from where you are and build from there.`,
     title: 'Train-the-Trainer Program',
     subtitle: 'Join a global network across four continents',
     provider: 'Adaptig',
-    description: `A recruitment-focused pathway for trainers, facilitators, consultants, HR leaders, and educators who want to teach practical AI confidently.
+    description: `Best for trainers, consultants, HR leaders, and educators who want to teach AI with confidence.
 
-**What trainers get:**
+**What you get:**
 - Adaptig facilitation methodology
 - Complete workshop materials and delivery structure
-- Trainer community and support
+- Trainer community and delivery support
 - Certification and ongoing opportunities`,
     cta: 'Apply to Join the Network',
     ctaLink: '/contact?interest=trainer',

@@ -24,8 +24,11 @@ const ContactForm = ({ actionUrl, initialInterest }) => {
 
   return (
     <section className="contact-form-section">
-      <h3>Let&apos;s talk</h3>
-      <p>Share what you are working on. I&apos;ll get back to you soon.</p>
+      <h3>Tell me what you need</h3>
+      <p>
+        Share your goals, current context, and timeline.
+        I will reply with a recommended next step.
+      </p>
       <form className="contact-form" action={actionUrl} method="POST">
         <label className="contact-form__field" htmlFor="name">
           <span className="contact-form__field-label">Name</span>

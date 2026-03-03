@@ -19,7 +19,7 @@ const FeaturedCaseStudies = ({ limit, tag }) => {
     <section className="home-case-studies">
       <header>
         <h3>Featured Case Studies</h3>
-        <p>Real outcomes from teams and leaders adopting AI in practical ways.</p>
+        <p>See how teams and leaders turned training into practical AI workflows.</p>
       </header>
       <div className="home-case-studies__grid">
         {caseStudies.map((post) => (
@@ -35,7 +35,7 @@ const FeaturedCaseStudies = ({ limit, tag }) => {
         ))}
       </div>
       <p className="home-case-studies__all">
-        <Link to="/blog">See All Case Studies</Link>
+        <Link to="/blog">See all case studies and insights</Link>
       </p>
     </section>
   );

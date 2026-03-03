@@ -36,20 +36,20 @@ const Contact = () => {
             <h2>
               <Link to="/contact">Contact</Link>
             </h2>
-            <p>Let us Connect</p>
+            <p>Let&apos;s find the right next step</p>
           </div>
         </header>
 
         <p>
-          Whether you are interested in corporate AI training, 1-1 coaching, speaking engagements,
-          or just want to have a conversation about AI, I would love to hear from you.
+          Whether you need team training, one-on-one coaching, speaking support, or trainer
+          recruitment details, share your situation and I&apos;ll guide you to the best option.
         </p>
 
         <ContactForm initialInterest={initialInterest} />
 
         <h3>Prefer a direct message?</h3>
         <div className="email-at">
-          <p>Drop me a message at:</p>
+          <p>Email me directly:</p>
           <EmailLink />
         </div>
 
@@ -63,10 +63,10 @@ const Contact = () => {
 
         <h3>What I Can Help With</h3>
         <ul>
-          <li><strong>Corporate Training</strong> - AI workshops for your organization</li>
-          <li><strong>1-1 Coaching</strong> - Personalized AI learning sessions</li>
-          <li><strong>Speaking</strong> - Keynotes and workshop facilitation</li>
-          <li><strong>Consulting</strong> - AI strategy and implementation guidance</li>
+          <li><strong>Corporate Training</strong> - Team workshops and adoption programs</li>
+          <li><strong>1-1 Coaching</strong> - Personalized support for your own workflow</li>
+          <li><strong>Speaking</strong> - Keynotes, briefings, and event sessions</li>
+          <li><strong>Trainer Recruitment</strong> - Joining the Adaptig trainer network</li>
         </ul>
 
         <h3>Connect on Social</h3>

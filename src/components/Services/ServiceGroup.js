@@ -76,6 +76,13 @@ const ServiceGroup = ({
       {services.map((service) => (
         <article key={service.id} className="service-group__item">
           <h4>{service.title}</h4>
+          {service.provider && (
+            <p className="service-group__item-subtitle">
+              Delivered via
+              {' '}
+              <strong>{service.provider}</strong>
+            </p>
+          )}
           {service.subtitle && (
             <p className="service-group__item-subtitle">
               <em>{service.subtitle}</em>
@@ -85,6 +92,7 @@ const ServiceGroup = ({
 
           {service.tiers && service.tiers.length > 0 && (
             <div className="service-group__tiers">
+              <p><strong>Choose your level of support:</strong></p>
               {service.tiers.map((tier) => (
                 <div key={tier.id} className="service-group__tier">
                   <h5>{tier.title}</h5>

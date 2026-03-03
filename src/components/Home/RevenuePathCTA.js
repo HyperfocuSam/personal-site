@@ -3,21 +3,21 @@ import { Link } from 'react-router-dom';
 
 const paths = [
   {
-    title: 'Explore working together',
-    description: 'For companies and teams ready to build practical AI capability.',
-    cta: 'Corporate Services',
+    title: 'I lead a team or organization',
+    description: 'Get workshops, training, or keynotes that turn AI interest into real adoption.',
+    cta: 'Explore Organization Options',
     link: '/contact',
   },
   {
-    title: 'Personal AI coaching',
-    description: 'One-on-one support for professionals navigating real AI workflows.',
-    cta: 'See Coaching Paths',
+    title: 'I want personal coaching',
+    description: 'Work one-on-one on your own projects, workflows, and career goals.',
+    cta: 'View Coaching Tiers',
     link: '/services#one-on-one',
   },
   {
-    title: 'Become an Adaptig trainer',
-    description: 'Join a global network bringing human-first AI facilitation to organizations.',
-    cta: 'Apply as Trainer',
+    title: 'I want to become a trainer',
+    description: 'Join the Adaptig network to teach practical, human-first AI workshops.',
+    cta: 'Apply as an Adaptig Trainer',
     link: '/services#train-the-trainer',
   },
 ];
@@ -25,8 +25,8 @@ const paths = [
 const RevenuePathCTA = () => (
   <section className="revenue-path-cta">
     <header>
-      <h3>Choose Your Starting Point</h3>
-      <p>Three ways to work together based on your role and goals.</p>
+      <h3>Start Here</h3>
+      <p>Choose the path that matches your role.</p>
     </header>
     <div className="revenue-path-cta__grid">
       {paths.map((path) => (

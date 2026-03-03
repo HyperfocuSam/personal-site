@@ -22,13 +22,13 @@ const Blog = () => (
           <h2>
             <Link to="/blog">Blog</Link>
           </h2>
-          <p>Insights & Learnings</p>
+          <p>Case Studies & Practical Insights</p>
         </div>
       </header>
 
       <p>
-        Thoughts on AI adoption, workshop observations, and the intersection of
-        technology and humanity.
+        Real examples from workshops and coaching engagements, plus practical
+        lessons on what helps people adopt AI with confidence.
       </p>
 
       {posts.length === 0 ? (

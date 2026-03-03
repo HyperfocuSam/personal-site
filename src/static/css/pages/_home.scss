@@ -165,6 +165,11 @@
     gap: 1em;
     margin: 1.25em 0;
 
+    > p {
+      grid-column: 1 / -1;
+      margin-bottom: 0;
+    }
+
     @include breakpoint(medium) {
       grid-template-columns: 1fr;
     }

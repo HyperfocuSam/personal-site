@@ -11,7 +11,7 @@ const groups = [
     id: 'organizations',
     category: 'organizations',
     title: 'For Organizations',
-    subtitle: 'Workshops, training, and events that move teams from interest to adoption.',
+    subtitle: 'Workshops, training, and events that move teams from interest to real adoption.',
     socialProof:
       'BOCHK (1,530 participants, 9.2/10), Chow Tai Fook (third repeat), HSBC, Mattel, Toyota, YPO.',
     testimonial: testimonials[0],
@@ -25,7 +25,7 @@ const groups = [
     id: 'one-on-one',
     category: 'individuals',
     title: 'For Individuals',
-    subtitle: 'Personalized coaching support for professionals building practical AI habits.',
+    subtitle: 'Personalized coaching for professionals building practical AI habits.',
     socialProof: '150+ professionals coached across industries and roles.',
     testimonial: testimonials[1],
     primaryCta: {
@@ -38,7 +38,7 @@ const groups = [
     id: 'train-the-trainer',
     category: 'trainers',
     title: 'For Trainers',
-    subtitle: 'Dedicated recruitment path for facilitators who want to teach practical AI.',
+    subtitle: 'Recruitment path for facilitators who want to teach practical AI.',
     socialProof:
       'Join a global network across North America, Latin America, Europe, and Asia-Pacific.',
     testimonial: testimonials[2],
@@ -76,15 +76,27 @@ const Services = () => {
             <h2>
               <Link to="/services">Services</Link>
             </h2>
-            <p>Three paths to practical AI adoption</p>
+            <p>Choose the path that matches your goal</p>
           </div>
         </header>
 
         <p>
-          Most AI training focuses on tools. Mine focuses on the humans using them.
-          Whether you are guiding an organization, building personal capability, or
-          teaching others, we can start from your real context.
+          If you are not sure where to start, use this rule:
+          organizations start with workshops, individuals start with one-on-one coaching,
+          and facilitators start with train-the-trainer.
         </p>
+
+        <ul>
+          <li>
+            <Link to="/services#organizations">I need team or company training</Link>
+          </li>
+          <li>
+            <Link to="/services#one-on-one">I want personal coaching</Link>
+          </li>
+          <li>
+            <Link to="/services#train-the-trainer">I want to teach AI as a trainer</Link>
+          </li>
+        </ul>
 
         {groups.map((group) => (
           <ServiceGroup
