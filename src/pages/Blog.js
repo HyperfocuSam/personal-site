@@ -23,7 +23,6 @@ const featuredPost = posts.find((post) => post.featured);
 const blogPosts = posts.filter(
   (p) => !p.featured && p.type !== 'case-study',
 );
-const clientCaseStudies = posts.filter((p) => !p.featured && p.type === 'case-study');
 
 const BlogCard = ({ post }) => (
   <article className={`blog-card blog-card--${post.type}`}>
@@ -74,13 +73,13 @@ const Blog = () => (
           <h2>
             <Link to="/blog">Blog</Link>
           </h2>
-          <p>Case Studies & Practical Insights</p>
+          <p>Insights & Ideas</p>
         </div>
       </header>
 
       <p>
-        Real examples from workshops and coaching engagements, plus practical
-        lessons on what helps people adopt AI with confidence.
+        Practical lessons on AI adoption trends, tools, and what helps
+        people work with AI confidently.
       </p>
 
       {posts.length === 0 ? (
@@ -131,22 +130,6 @@ const Blog = () => (
             </section>
           )}
 
-          {/* Clients Section */}
-          {clientCaseStudies.length > 0 && (
-            <section className="blog-section">
-              <div className="blog-section__header">
-                <h3 className="blog-section__title">Clients</h3>
-                <p className="blog-section__subtitle">
-                  Real examples from enterprise workshops and engagements.
-                </p>
-              </div>
-              <div className="blog-grid">
-                {clientCaseStudies.map((post) => (
-                  <BlogCard key={post.slug} post={post} />
-                ))}
-              </div>
-            </section>
-          )}
         </>
       )}
 

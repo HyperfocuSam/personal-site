@@ -25,6 +25,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://samwong.me/clients</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://samwong.me/contact</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
