@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Link, useParams, Navigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import Markdown from 'markdown-to-jsx';
 import dayjs from 'dayjs';
 import PropTypes from 'prop-types';
@@ -14,6 +15,8 @@ import {
 } from '../components/Blog';
 import TrainerRecruitmentBanner from '../components/Blog/TrainerRecruitmentBanner';
 import EmailCapture from '../components/EmailCapture/EmailCapture';
+
+const SITE_URL = 'https://samwong.me';
 
 // Custom blockquote component for pull quotes
 const PullQuote = ({ children }) => (
@@ -68,11 +71,46 @@ const Post = () => {
     return <Navigate to="/blog" replace />;
   }
 
+  const postUrl = `${SITE_URL}/blog/${slug}`;
+  const imageUrl = post.image ? `${SITE_URL}${post.image}` : `${SITE_URL}/images/og-image.jpg`;
+
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.excerpt,
+    author: { '@type': 'Person', name: 'Sam Wong', url: SITE_URL },
+    datePublished: post.date,
+    image: imageUrl,
+    url: postUrl,
+    publisher: {
+      '@type': 'Organization',
+      name: 'Adaptig',
+      url: 'https://adaptig.com',
+    },
+  };
+
   return (
     <Main
       title={post.title}
       description={post.excerpt}
+      canonicalUrl={postUrl}
+      ogTitle={post.title}
+      ogDescription={post.excerpt}
+      ogImage={imageUrl}
+      ogUrl={postUrl}
+      ogType="article"
+      twitterTitle={post.title}
+      twitterDescription={post.excerpt}
+      twitterImage={imageUrl}
+      articlePublishedTime={post.date}
+      articleTags={post.tags}
     >
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(articleJsonLd)}
+        </script>
+      </Helmet>
       <article className="post post--article" id="blog-post">
         <header className="post-header">
           <div className="title">

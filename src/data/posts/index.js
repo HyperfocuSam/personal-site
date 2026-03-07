@@ -2,13 +2,22 @@
 // Add new posts here in reverse chronological order (newest first)
 const posts = [
   {
+    slug: 'what-my-ai-drew-when-i-asked',
+    title: 'What My AI Drew When I Asked What\'s in Its Mind',
+    date: '2026-03-06',
+    excerpt: 'After 200 sessions working together, I asked my AI assistant to draw what\'s in its mind. What happened next — the art, the conversation, and rebuilding our system together.',
+    tags: ['ai', 'personal-reflection', 'ai-adoption'],
+    image: '/images/blog/adas-mind-line-art.png',
+    featured: true,
+  },
+  {
     slug: 'ctf-ai-design-thinking-workshop-2026',
     title: 'Training the World\'s Largest Jewelry Retailer on AI x Design Thinking',
     date: '2026-01-17',
     excerpt: 'Insights from my third workshop with Chow Tai Fook, where cross-functional teams competed to create Go-To-Market campaigns using AI tools in a hackathon format.',
     tags: ['workshop', 'ai', 'design-thinking', 'case-study'],
     image: '/images/blog/ctf-workshop-2026.jpeg',
-    featured: true,
+    featured: false,
   },
   {
     slug: 'bochk-banking-ai-training',
