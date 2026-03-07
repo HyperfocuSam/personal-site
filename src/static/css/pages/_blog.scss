@@ -305,11 +305,17 @@
     margin-bottom: 1.5em;
   }
 
-  h2, h3, h4 {
+  h1, h2, h3, h4 {
     margin-top: 2em;
     margin-bottom: 0.75em;
     text-transform: none;
     letter-spacing: 0.02em;
+  }
+
+  // First heading in article shouldn't have top margin
+  > h1:first-child,
+  > h2:first-child {
+    margin-top: 0;
   }
 
   img {
