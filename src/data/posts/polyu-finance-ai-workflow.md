@@ -2,8 +2,6 @@
 
 In May, I worked with Hong Kong Polytechnic University's Finance Office on something different from a standard AI workshop. They weren't looking for a one-day introduction to ChatGPT. They wanted a sustainable workflow - something their team could actually use every day within the constraints of a public institution.
 
-![Strategy session with PolyU Finance Office team](/images/blog/polyu-finance-workshop.jpeg)
-
 University finance isn't a typical corporate function. The volumes are high - endless purchase orders, reimbursement claims, reconciliation reports. The compliance requirements are strict. And the consequences of errors are visible. Any AI solution needed to respect these realities, not ignore them.
 
 ## Why Strategy Before Training
@@ -41,8 +39,6 @@ What we explicitly excluded: anything involving external-facing financial commun
 The most meaningful change wasn't in the workflows themselves - it was in how the team approached problems.
 
 In the early sessions, questions were tool-focused: "How do I use this feature?" "What prompt should I write?" The team members were learning AI as a new skill, with the hesitation that comes from unfamiliar territory.
-
-![Finance team applying AI workflow principles](/images/blog/polyu-team-transformation.jpeg)
 
 By the later sessions, the questions had changed: "Could we apply this to our quarterly reporting process?" "What if we built a prompt template for vendor communications?"
 
