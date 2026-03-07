@@ -20,10 +20,10 @@ const typeLabels = {
 
 // Separate posts by section
 const featuredPost = posts.find((post) => post.featured);
-const caseStudies = posts.filter((p) => !p.featured && p.type === 'case-study');
-const insights = posts.filter(
+const blogPosts = posts.filter(
   (p) => !p.featured && p.type !== 'case-study',
 );
+const clientCaseStudies = posts.filter((p) => !p.featured && p.type === 'case-study');
 
 const BlogCard = ({ post }) => (
   <article className={`blog-card blog-card--${post.type}`}>
@@ -114,34 +114,34 @@ const Blog = () => (
             </section>
           )}
 
-          {/* Case Studies Section */}
-          {caseStudies.length > 0 && (
+          {/* Blog Posts Section */}
+          {blogPosts.length > 0 && (
             <section className="blog-section">
               <div className="blog-section__header">
-                <h3 className="blog-section__title">Case Studies</h3>
+                <h3 className="blog-section__title">Blog</h3>
                 <p className="blog-section__subtitle">
-                  Real examples from enterprise workshops and engagements.
+                  Commentary on AI adoption trends, tools, and methodology.
                 </p>
               </div>
               <div className="blog-grid">
-                {caseStudies.map((post) => (
+                {blogPosts.map((post) => (
                   <BlogCard key={post.slug} post={post} />
                 ))}
               </div>
             </section>
           )}
 
-          {/* Insights & Ideas Section */}
-          {insights.length > 0 && (
+          {/* Clients Section */}
+          {clientCaseStudies.length > 0 && (
             <section className="blog-section">
               <div className="blog-section__header">
-                <h3 className="blog-section__title">Insights & Ideas</h3>
+                <h3 className="blog-section__title">Clients</h3>
                 <p className="blog-section__subtitle">
-                  Commentary on AI adoption trends, tools, and methodology.
+                  Real examples from enterprise workshops and engagements.
                 </p>
               </div>
               <div className="blog-grid">
-                {insights.map((post) => (
+                {clientCaseStudies.map((post) => (
                   <BlogCard key={post.slug} post={post} />
                 ))}
               </div>
