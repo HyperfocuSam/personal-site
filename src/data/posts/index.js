@@ -3,6 +3,15 @@
 // Types: case-study, insight, methodology, framework, reflection, announcement
 const posts = [
   {
+    slug: 'ada-gersang-gamifying-claude-code',
+    title: 'I Built an RTK-Style Strategy Game on Top of My AI Workflow',
+    date: '2026-03-07',
+    excerpt: 'Every tool call in my AI assistant logs to SQLite. So I turned it into a Romance of the Three Kingdoms-style strategy game -- with named skills, fractional XP, and a six-agent squad.',
+    tags: ['ai-adoption', 'developer-tools', 'personal-reflection'],
+    type: 'reflection',
+    featured: false,
+  },
+  {
     slug: 'i-built-voice-mode-claude-code',
     title: 'I Built a Voice Mode for Claude Code Because I Can\'t Read',
     date: '2026-03-07',
