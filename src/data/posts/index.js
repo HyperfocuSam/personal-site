@@ -3,6 +3,16 @@
 // Types: case-study, insight, methodology, framework, reflection, announcement
 const posts = [
   {
+    slug: 'i-built-voice-mode-claude-code',
+    title: 'I Built a Voice Mode for Claude Code Because I Can\'t Read',
+    date: '2026-03-07',
+    excerpt: 'Long terminal output is attention-hostile for ADHD developers. So I built a plugin that speaks Claude Code responses aloud -- zero deps, one install command.',
+    tags: ['ai-adoption', 'accessibility', 'developer-tools', 'open-source'],
+    type: 'reflection',
+    image: '/images/blog/claude-voice-cover.png',
+    featured: true,
+  },
+  {
     slug: 'what-my-ai-drew-when-i-asked',
     title: 'What My AI Drew When I Asked What\'s in Its Mind',
     date: '2026-03-06',
@@ -10,7 +20,7 @@ const posts = [
     tags: ['ai', 'personal-reflection', 'ai-adoption'],
     type: 'reflection',
     image: '/images/blog/adas-mind-line-art.png',
-    featured: true,
+    featured: false,
   },
   {
     slug: 'how-to-design-ai-pioneer-program',
