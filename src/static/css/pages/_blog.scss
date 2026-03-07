@@ -1,6 +1,85 @@
 // Blog Listing Page Styles
 
-// Featured Post Hero Card
+// ── Blog Section Headers ──────────────────────────
+.blog-section {
+  margin: 2.5em 0;
+
+  &__header {
+    margin-bottom: 1.5em;
+    padding-bottom: 0.75em;
+    border-bottom: 2px solid _palette(fg-bold);
+  }
+
+  &__title {
+    text-transform: none !important;
+    letter-spacing: 0.02em !important;
+    font-size: 1.2em !important;
+    font-weight: 800;
+    margin-bottom: 0.25em !important;
+  }
+
+  &__subtitle {
+    color: _palette(fg-light);
+    font-size: 0.9em;
+    margin: 0;
+  }
+}
+
+// ── Type Pills ────────────────────────────────────
+.blog-type-pill {
+  display: inline-block;
+  padding: 0.2em 0.6em;
+  border-radius: 3px;
+  font-size: 0.7em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.6em;
+  font-family: _font(family);
+
+  // Default
+  background: _palette(bg-alt);
+  color: _palette(fg);
+  border: 1px solid _palette(border);
+
+  &--case-study {
+    background: _palette(fg-bold);
+    color: #ffffff;
+    border-color: _palette(fg-bold);
+  }
+
+  &--insight {
+    background: _palette(accent);
+    color: #ffffff;
+    border-color: _palette(accent);
+  }
+
+  &--methodology {
+    background: #2a7d4f;
+    color: #ffffff;
+    border-color: #2a7d4f;
+  }
+
+  &--framework {
+    background: #7c4dbd;
+    color: #ffffff;
+    border-color: #7c4dbd;
+  }
+
+  &--reflection {
+    background: transparent;
+    color: _palette(fg-bold);
+    border: 1px solid _palette(fg-bold);
+  }
+
+  &--announcement {
+    background: transparent;
+    color: _palette(fg-light);
+    border: 1px solid _palette(border-alt);
+  }
+}
+
+// ── Featured Post Hero ────────────────────────────
 .blog-featured {
   margin: 2em 0 3em 0;
 
@@ -9,36 +88,45 @@
     border: 0;
     text-decoration: none;
     transition: transform 0.2s ease;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid _palette(border);
 
     &:hover {
       transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+      .blog-featured__image {
+        transform: scale(1.03);
+      }
     }
   }
 
-  &__badge {
-    display: inline-block;
-    background-color: _palette(fg-bold);
-    color: #ffffff;
-    padding: 0.4em 0.8em;
-    border-radius: 4px;
-    font-size: 0.75em;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 0.75em;
+  &__image-wrapper {
+    width: 100%;
+    aspect-ratio: 21 / 9;
+    overflow: hidden;
+    background: _palette(bg-alt);
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
   }
 
   &__content {
-    background: _palette(bg-alt);
     padding: 1.5em;
-    border-radius: 8px;
-    border: 1px solid _palette(border);
   }
 
   &__title {
     color: _palette(fg-bold);
     margin: 0 0 0.5em 0;
     font-size: 1.5em;
+    text-transform: none !important;
+    letter-spacing: 0.01em !important;
+    line-height: 1.3;
   }
 
   &__meta {
@@ -49,51 +137,104 @@
 
   &__excerpt {
     color: _palette(fg);
-    margin-bottom: 1em;
+    margin-bottom: 0;
     line-height: 1.6;
   }
 }
 
-// Blog Post Card Grid
+// ── Blog Post Card Grid ───────────────────────────
 .blog-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2em;
-  margin: 2em 0;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5em;
 
   @include breakpoint(medium) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25em;
+  }
+
+  @include breakpoint(small) {
     grid-template-columns: 1fr;
-    gap: 1.5em;
+    gap: 1.25em;
   }
 }
 
 .blog-card {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid _palette(border);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    .blog-card__image {
+      transform: scale(1.03);
+    }
+  }
+
+  // Subtle left-border accent by type
+  &--case-study {
+    border-left: 3px solid _palette(fg-bold);
+  }
+
+  &--insight {
+    border-left: 3px solid _palette(accent);
+  }
+
+  &--methodology {
+    border-left: 3px solid #2a7d4f;
+  }
+
+  &--framework {
+    border-left: 3px solid #7c4dbd;
+  }
+
+  &--reflection {
+    border-left: 3px solid _palette(fg-light);
+  }
+
+  &--announcement {
+    border-left: 3px solid _palette(border-alt);
+  }
+
   &__link {
     display: flex;
     flex-direction: column;
     height: 100%;
     border: 0;
     text-decoration: none;
-    transition: transform 0.2s ease;
+  }
 
-    &:hover {
-      transform: translateY(-2px);
-    }
+  &__image-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: _palette(bg-alt);
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
   }
 
   &__content {
     flex: 1;
-    background: _palette(bg-alt);
-    padding: 1.25em;
-    border-radius: 8px;
-    border: 1px solid _palette(border);
+    padding: 1em 1.25em 1.25em;
   }
 
   &__title {
     color: _palette(fg-bold);
-    margin: 0 0 0.5em 0;
-    font-size: 1.1em;
-    line-height: 1.3;
+    margin: 0 0 0.4em 0;
+    font-size: 1em;
+    line-height: 1.35;
+    // Override the global uppercase heading style for blog cards
+    text-transform: none !important;
+    letter-spacing: 0.01em !important;
+    font-weight: 700;
   }
 
   &__meta {
@@ -104,13 +245,13 @@
 
   &__excerpt {
     color: _palette(fg);
-    font-size: 0.9em;
+    font-size: 0.85em;
     line-height: 1.5;
-    margin-bottom: 0.75em;
+    margin-bottom: 0;
   }
 }
 
-// Tag Pills
+// ── Tag Pills ─────────────────────────────────────
 .blog-tags {
   display: flex;
   flex-wrap: wrap;
@@ -134,8 +275,7 @@
   border: 1px solid _palette(border);
 }
 
-
-// Post Header Meta
+// ── Post Header Meta ──────────────────────────────
 .post-header {
   &__meta {
     display: flex;
@@ -155,10 +295,11 @@
   }
 }
 
-// Post Content Typography
+// ── Post Content Typography ───────────────────────
 .post-content {
   font-size: 1.05em;
   line-height: 1.8;
+  color: #4a4a4a;
 
   p {
     margin-bottom: 1.5em;
@@ -167,6 +308,8 @@
   h2, h3, h4 {
     margin-top: 2em;
     margin-bottom: 0.75em;
+    text-transform: none;
+    letter-spacing: 0.02em;
   }
 
   img {
@@ -187,9 +330,9 @@
   }
 }
 
-// Pull Quote Styling
+// ── Pull Quote Styling ────────────────────────────
 .pull-quote {
-  border-left: 4px solid _palette(fg-light);
+  border-left: 4px solid _palette(accent);
   padding: 1em 0 1em 1.5em;
   margin: 2em 0;
   font-size: 1.15em;
@@ -207,7 +350,7 @@
   }
 }
 
-// Author Card
+// ── Author Card ───────────────────────────────────
 .author-card {
   display: flex;
   align-items: flex-start;
@@ -298,7 +441,7 @@
   }
 }
 
-// Share Buttons
+// ── Share Buttons ─────────────────────────────────
 .share-buttons {
   display: flex;
   align-items: center;
@@ -342,7 +485,6 @@
       background: #1da1f2;
       border-color: #1da1f2;
     }
-
   }
 
   @include breakpoint(small) {
@@ -356,7 +498,7 @@
   }
 }
 
-// Related Posts
+// ── Related Posts ─────────────────────────────────
 .related-posts {
   margin: 3em 0;
 
@@ -393,6 +535,8 @@
     font-size: 0.95em;
     margin: 0 0 0.5em 0;
     line-height: 1.3;
+    text-transform: none;
+    letter-spacing: 0.01em;
 
     a {
       color: _palette(fg-bold);
@@ -411,7 +555,7 @@
   }
 }
 
-// Post Navigation
+// ── Post Navigation ───────────────────────────────
 .post-navigation {
   display: flex;
   justify-content: space-between;
@@ -462,7 +606,7 @@
   }
 }
 
-// Post Author Section
+// ── Post Author Section ───────────────────────────
 .post-author-section {
   margin: 2em 0;
 }
