@@ -6,6 +6,21 @@ import Main from '../layouts/Main';
 
 const episodes = [
   {
+    id: 'ep012',
+    number: '012',
+    title: '點用AI救到你？｜使用AI三大心法 | How Can AI Save You?',
+    date: 'May 12, 2025',
+    views: '64K+',
+    likes: null,
+    embedUrl: 'https://www.youtube.com/embed/lWY4JVlz960',
+    membersOnly: false,
+    description: {
+      zh: 'Sam 分享 AI 三大心法，並即場示範如何用 AI 拒絕朋友借錢，全場爆笑。',
+      en: 'Sam shares three core principles for using AI and demonstrates live how to use AI to decline a friend\'s loan request — to hilarious effect.',
+    },
+    highlights: [],
+  },
+  {
     id: 'ep024',
     number: '024',
     title: '點解要課金用AI？！| Why Pay for AI Tools?',
@@ -244,7 +259,7 @@ EpisodeCard.propTypes = {
 const Media = () => (
   <Main
     title="Media"
-    description="Sam Wong's media appearances - guest expert on Club 80 (會八十), a popular Cantonese YouTube show covering AI tools, productivity, and technology."
+    description="Sam Wong's media appearances - recurring guest expert on Club 80 (會八十), a popular Cantonese YouTube show. 3 episodes, 98K+ combined views."
     ogTitle="Media Appearances | Sam Wong"
     ogDescription="Watch Sam Wong's guest appearances on Club 80 (會八十), discussing AI tools, productivity, and practical technology adoption."
     ogType="website"
@@ -267,13 +282,14 @@ const Media = () => (
           <span>Popular Cantonese YouTube show</span>
         </div>
         <p>
-          Sam has appeared as a guest expert on
+          Sam has appeared as a recurring guest expert on
           {' '}
           <strong>Club 80 (會八十)</strong>
           , a popular Cantonese YouTube show hosted by
           阿Bu, 陳強, and Greg.
           The show covers technology, AI tools, and practical digital skills
-          for a Hong Kong audience.
+          for a Hong Kong audience. Sam&apos;s three episodes have collectively
+          reached over 98,000 views.
         </p>
       </section>
 

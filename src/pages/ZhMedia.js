@@ -7,6 +7,18 @@ import Main from '../layouts/Main';
 
 const episodes = [
   {
+    id: 'ep012',
+    number: '012',
+    title: '點用AI救到你？｜使用AI三大心法',
+    date: '2025年5月12日',
+    views: '64K+',
+    likes: null,
+    embedUrl: 'https://www.youtube.com/embed/lWY4JVlz960',
+    membersOnly: false,
+    description: 'Sam 分享 AI 三大心法，並即場示範如何用 AI 拒絕朋友借錢，全場爆笑。',
+    highlights: [],
+  },
+  {
     id: 'ep024',
     number: '024',
     title: '點解要課金用AI？！',
@@ -259,11 +271,12 @@ const ZhMedia = () => (
           <span>熱門廣東話 YouTube 節目</span>
         </div>
         <p>
-          Sam 曾以嘉賓專家身份出演
+          Sam 曾以嘉賓專家身份三度出演
           {' '}
           <strong>會八十</strong>
           ，一個由阿Bu、陳強同 Greg 主持嘅熱門廣東話 YouTube 節目。
           節目涵蓋科技、AI 工具同實用數碼技能，面向香港觀眾。
+          Sam 嘅三集節目累計觀看次數超過 98,000。
         </p>
       </section>
 

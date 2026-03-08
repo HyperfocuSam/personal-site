@@ -432,6 +432,14 @@ const MediaKit = () => (
         <div style={{ marginBottom: '1.5em' }}>
           <div style={s.mediaItem}>
             <span style={s.mediaLabel}>
+              {'Club 80 \u6703\u516B\u5341 \u2014 Episode 012'}
+            </span>
+            <span style={s.mediaSub}>
+              64K+ views &mdash; &ldquo;How Can AI Save You?&rdquo;
+            </span>
+          </div>
+          <div style={s.mediaItem}>
+            <span style={s.mediaLabel}>
               {'Club 80 \u6703\u516B\u5341 \u2014 Episode 024'}
             </span>
             <span style={s.mediaSub}>
