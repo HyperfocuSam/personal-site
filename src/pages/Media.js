@@ -292,10 +292,17 @@ const Media = () => (
           Sam is available for podcast interviews, live streams, panel discussions,
           and conference talks on AI adoption, productivity, and practical technology use.
         </p>
-        <p style={{ fontSize: '0.9em', color: '#888', marginBottom: '1.5em' }}>
-          Media kit coming soon.
-        </p>
         <ul className="actions" style={{ justifyContent: 'center' }}>
+          <li>
+            <a
+              href="/media/Sam_Wong_Media_Kit_2026.pdf"
+              className="button"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download Media Kit (PDF)
+            </a>
+          </li>
           <li>
             <Link to="/contact" className="button">
               Get in Touch
