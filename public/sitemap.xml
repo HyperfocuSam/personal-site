@@ -49,12 +49,28 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://samwong.me/zh</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://samwong.me/zh" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://samwong.me/" />
+  </url>
+  <url>
     <loc>https://samwong.me/zh/about</loc>
     <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://samwong.me/zh/about" />
     <xhtml:link rel="alternate" hreflang="en" href="https://samwong.me/about" />
+  </url>
+  <url>
+    <loc>https://samwong.me/zh/blog</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://samwong.me/zh/blog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://samwong.me/blog" />
   </url>
   <url>
     <loc>https://samwong.me/zh/services</loc>

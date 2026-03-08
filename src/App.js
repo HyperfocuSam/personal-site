@@ -20,7 +20,9 @@ const Services = lazy(() => import('./pages/Services'));
 const Stats = lazy(() => import('./pages/Stats'));
 
 // Chinese (Traditional) pages
+const ZhIndex = lazy(() => import('./pages/ZhIndex'));
 const ZhAbout = lazy(() => import('./pages/ZhAbout'));
+const ZhBlog = lazy(() => import('./pages/ZhBlog'));
 const ZhMedia = lazy(() => import('./pages/ZhMedia'));
 const ZhServices = lazy(() => import('./pages/ZhServices'));
 
@@ -39,7 +41,9 @@ const App = () => (
         <Route path="/contact" element={<Contact />} />
         <Route path="/media/kit" element={<MediaKit />} />
         <Route path="/media" element={<Media />} />
+        <Route path="/zh" element={<ZhIndex />} />
         <Route path="/zh/about" element={<ZhAbout />} />
+        <Route path="/zh/blog" element={<ZhBlog />} />
         <Route path="/zh/media" element={<ZhMedia />} />
         <Route path="/zh/services" element={<ZhServices />} />
         <Route path="/projects" element={<Projects />} />

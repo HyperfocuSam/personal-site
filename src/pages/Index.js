@@ -106,6 +106,10 @@ const Index = () => (
           </Link>
         </li>
       </ul>
+
+      <p style={{ fontSize: '0.85em', color: '#888', marginTop: '2em' }}>
+        <Link to="/zh">&#x4E2D;&#x6587;&#x7248;&#x672C;</Link>
+      </p>
     </article>
   </Main>
 );
