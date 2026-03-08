@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import dayjs from 'dayjs';
 import PropTypes from 'prop-types';
@@ -18,11 +18,12 @@ const typeLabels = {
   announcement: 'Announcement',
 };
 
-// Separate posts by section
-const featuredPost = posts.find((post) => post.featured);
-const blogPosts = posts.filter(
-  (p) => !p.featured && p.type !== 'case-study',
-);
+// Language filter options
+const languageLabels = {
+  all: 'All',
+  en: 'English',
+  'zh-Hant': '中文',
+};
 
 const BlogCard = ({ post }) => (
   <article className={`blog-card blog-card--${post.type}`}>
@@ -62,89 +63,136 @@ BlogCard.propTypes = {
   }).isRequired,
 };
 
-const Blog = () => (
-  <Main
-    title="Blog"
-    description="Insights on AI adoption, workshop learnings, and the human side of technology by Sam Wong."
-  >
-    <article className="post" id="blog">
-      <header>
-        <div className="title">
-          <h2>
-            <Link to="/blog">Blog</Link>
-          </h2>
-          <p>Insights & Ideas</p>
-        </div>
-      </header>
+// Check if any Chinese posts exist to show the language filter
+const hasChinesePosts = posts.some((p) => p.language === 'zh-Hant');
 
-      <p>
-        Practical lessons on AI adoption trends, tools, and what helps
-        people work with AI confidently.
-      </p>
+const Blog = () => {
+  const [langFilter, setLangFilter] = useState('all');
 
-      {posts.length === 0 ? (
-        <p><em>Posts coming soon. Stay tuned!</em></p>
-      ) : (
-        <>
-          {/* Featured Post Hero */}
-          {featuredPost && (
-            <section className="blog-featured">
-              <Link to={`/blog/${featuredPost.slug}`} className="blog-featured__link">
-                {featuredPost.image && (
-                  <div className="blog-featured__image-wrapper">
-                    <img
-                      src={featuredPost.image}
-                      alt={featuredPost.title}
-                      className="blog-featured__image"
-                    />
+  // Filter posts by language
+  const filteredPosts = langFilter === 'all'
+    ? posts
+    : posts.filter((p) => (p.language || 'en') === langFilter);
+
+  const featuredPost = filteredPosts.find((post) => post.featured);
+  const blogPosts = filteredPosts.filter(
+    (p) => !p.featured && p.type !== 'case-study',
+  );
+
+  return (
+    <Main
+      title="Blog"
+      description="Insights on AI adoption, workshop learnings, and the human side of technology by Sam Wong."
+    >
+      <article className="post" id="blog">
+        <header>
+          <div className="title">
+            <h2>
+              <Link to="/blog">Blog</Link>
+            </h2>
+            <p>Insights & Ideas</p>
+          </div>
+        </header>
+
+        <p>
+          Practical lessons on AI adoption trends, tools, and what helps
+          people work with AI confidently.
+        </p>
+
+        {/* Language Filter */}
+        {hasChinesePosts && (
+          <div
+            className="blog-lang-filter"
+            style={{ display: 'flex', gap: '0.5rem', margin: '1rem 0 1.5rem' }}
+          >
+            {Object.entries(languageLabels).map(([key, label]) => (
+              <button
+                key={key}
+                type="button"
+                onClick={() => setLangFilter(key)}
+                className={`blog-lang-btn${langFilter === key ? ' blog-lang-btn--active' : ''}`}
+                style={{
+                  padding: '0.35rem 0.9rem',
+                  borderRadius: '2rem',
+                  border: langFilter === key ? '2px solid #6c63ff' : '1px solid #ddd',
+                  background: langFilter === key ? '#6c63ff' : 'transparent',
+                  color: langFilter === key ? '#fff' : 'inherit',
+                  cursor: 'pointer',
+                  fontSize: '0.85rem',
+                  fontWeight: langFilter === key ? '600' : '400',
+                  transition: 'all 0.2s ease',
+                }}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+        )}
+
+        {filteredPosts.length === 0 ? (
+          <p><em>Posts coming soon. Stay tuned!</em></p>
+        ) : (
+          <>
+            {/* Featured Post Hero */}
+            {featuredPost && (
+              <section className="blog-featured">
+                <Link to={`/blog/${featuredPost.slug}`} className="blog-featured__link">
+                  {featuredPost.image && (
+                    <div className="blog-featured__image-wrapper">
+                      <img
+                        src={featuredPost.image}
+                        alt={featuredPost.title}
+                        className="blog-featured__image"
+                      />
+                    </div>
+                  )}
+                  <div className="blog-featured__content">
+                    <span className={`blog-type-pill blog-type-pill--${featuredPost.type}`}>
+                      {typeLabels[featuredPost.type] || featuredPost.type}
+                    </span>
+                    <h3 className="blog-featured__title">{featuredPost.title}</h3>
+                    <p className="blog-featured__meta">
+                      {dayjs(featuredPost.date).format('MMMM D, YYYY')}
+                    </p>
+                    <p className="blog-featured__excerpt">{featuredPost.excerpt}</p>
                   </div>
-                )}
-                <div className="blog-featured__content">
-                  <span className={`blog-type-pill blog-type-pill--${featuredPost.type}`}>
-                    {typeLabels[featuredPost.type] || featuredPost.type}
-                  </span>
-                  <h3 className="blog-featured__title">{featuredPost.title}</h3>
-                  <p className="blog-featured__meta">
-                    {dayjs(featuredPost.date).format('MMMM D, YYYY')}
+                </Link>
+              </section>
+            )}
+
+            {/* Blog Posts Section */}
+            {blogPosts.length > 0 && (
+              <section className="blog-section">
+                <div className="blog-section__header">
+                  <h3 className="blog-section__title">Blog</h3>
+                  <p className="blog-section__subtitle">
+                    Commentary on AI adoption trends, tools, and methodology.
                   </p>
-                  <p className="blog-featured__excerpt">{featuredPost.excerpt}</p>
                 </div>
-              </Link>
-            </section>
-          )}
+                <div className="blog-grid">
+                  {blogPosts.map((post) => (
+                    <BlogCard key={post.slug} post={post} />
+                  ))}
+                </div>
+              </section>
+            )}
 
-          {/* Blog Posts Section */}
-          {blogPosts.length > 0 && (
-            <section className="blog-section">
-              <div className="blog-section__header">
-                <h3 className="blog-section__title">Blog</h3>
-                <p className="blog-section__subtitle">
-                  Commentary on AI adoption trends, tools, and methodology.
-                </p>
-              </div>
-              <div className="blog-grid">
-                {blogPosts.map((post) => (
-                  <BlogCard key={post.slug} post={post} />
-                ))}
-              </div>
-            </section>
-          )}
+          </>
+        )}
 
-        </>
-      )}
+        <hr />
+        <h3>About the Author</h3>
+        <AuthorCard />
 
-      <hr />
-      <h3>About the Author</h3>
-      <AuthorCard />
-
-      <hr />
-      <EmailCapture
-        source="blog-listing"
-        title="Stay in the loop"
-        blurb="Occasional insights on AI adoption. No spam, no hype."
-      />
-    </article>
-  </Main>
-);
+        <hr />
+        <EmailCapture
+          source="blog-listing"
+          title="Stay in the loop"
+          blurb="Occasional insights on AI adoption. No spam, no hype."
+        />
+      </article>
+    </Main>
+  );
+};
 
 export default Blog;

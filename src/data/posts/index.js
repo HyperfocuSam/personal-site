@@ -1,6 +1,8 @@
 // Blog posts metadata
 // Add new posts here in reverse chronological order (newest first)
 // Types: case-study, insight, methodology, framework, reflection, announcement
+// Language: 'en' (default) or 'zh-Hant' (Traditional Chinese)
+// linkedPost: slug of the corresponding post in another language (for hreflang)
 const posts = [
   {
     slug: 'ada-gersang-gamifying-claude-code',
@@ -162,6 +164,27 @@ const posts = [
     featured: false,
   },
   {
+    slug: '3-ai-tools-save-focus',
+    title: '3 AI Tools That Saved My Focus (And Can Save Yours)',
+    date: '2025-08-10',
+    excerpt: 'Three specific AI tools that solve real attention problems: information triage, meeting recovery, and structured thinking. Based on my second appearance on Club 80.',
+    tags: ['ai-adoption', 'tools', 'productivity', 'media-appearance'],
+    type: 'insight',
+    featured: false,
+    linkedPost: 'zh-3-ai-tools-save-focus',
+  },
+  {
+    slug: 'zh-3-ai-tools-save-focus',
+    title: '三個拯救專注力嘅 AI 工具：我喺會八十嘅分享',
+    date: '2025-08-10',
+    excerpt: '三個真正幫到手嘅 AI 工具：資訊分類、會議筆記、結構化思考。基於我喺會八十第二次做嘉賓嘅分享。',
+    tags: ['ai-adoption', 'tools', 'productivity', 'media-appearance'],
+    type: 'insight',
+    language: 'zh-Hant',
+    featured: false,
+    linkedPost: '3-ai-tools-save-focus',
+  },
+  {
     slug: 'cts-tourism-ai-training',
     title: 'Teaching Tourism Executives to Think Like AI Strategists',
     date: '2025-07-20',
@@ -170,6 +193,27 @@ const posts = [
     type: 'case-study',
     image: '/images/blog/cts-ai-workshop.png',
     featured: false,
+  },
+  {
+    slug: 'why-pay-for-ai-tools',
+    title: 'Why Free AI Isn\'t Enough: The Case for Paying for AI Tools',
+    date: '2025-06-15',
+    excerpt: '76% of viewers in a live poll said they don\'t pay for AI tools. Most of the 24% who do aren\'t using the features they paid for. The actual percentage using AI at full capability is vanishingly small.',
+    tags: ['ai-adoption', 'commentary', 'tools', 'media-appearance'],
+    type: 'insight',
+    featured: false,
+    linkedPost: 'zh-why-pay-for-ai-tools',
+  },
+  {
+    slug: 'zh-why-pay-for-ai-tools',
+    title: '點解免費AI唔夠用：我喺會八十分享嘅課金實戰經驗',
+    date: '2025-06-15',
+    excerpt: '在會八十直播的投票中，76% 觀眾沒有付費使用 AI 工具。大部分付了費的人也沒有使用他們付費解鎖的功能。真正充分利用 AI 的人少之又少。',
+    tags: ['ai-adoption', 'commentary', 'tools', 'media-appearance'],
+    type: 'insight',
+    language: 'zh-Hant',
+    featured: false,
+    linkedPost: 'why-pay-for-ai-tools',
   },
   {
     slug: 'polyu-finance-ai-workflow',

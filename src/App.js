@@ -11,6 +11,7 @@ const Blog = lazy(() => import('./pages/Blog'));
 const Clients = lazy(() => import('./pages/Clients'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Index = lazy(() => import('./pages/Index'));
+const Media = lazy(() => import('./pages/Media'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 const Post = lazy(() => import('./pages/Post'));
 const Projects = lazy(() => import('./pages/Projects'));
@@ -28,6 +29,7 @@ const App = () => (
         <Route path="/blog/:slug" element={<Post />} />
         <Route path="/clients" element={<Clients />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/media" element={<Media />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/resume" element={<Resume />} />
         <Route path="/services" element={<Services />} />

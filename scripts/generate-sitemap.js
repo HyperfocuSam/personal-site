@@ -15,6 +15,7 @@ const STATIC_PAGES = [
   { path: '/services', priority: '0.9', changefreq: 'weekly' },
   { path: '/about', priority: '0.8', changefreq: 'monthly' },
   { path: '/blog', priority: '0.8', changefreq: 'weekly' },
+  { path: '/media', priority: '0.8', changefreq: 'monthly' },
   { path: '/clients', priority: '0.8', changefreq: 'monthly' },
   { path: '/contact', priority: '0.7', changefreq: 'monthly' },
 ];
@@ -23,14 +24,24 @@ function parsePosts() {
   const content = fs.readFileSync(POSTS_FILE, 'utf-8');
   const posts = [];
 
-  // Match each post object block in the array
+  // Match each post object block in the array (including optional language and linkedPost)
   const postRegex = /\{\s*slug:\s*'([^']+)'[\s\S]*?date:\s*'([^']+)'[\s\S]*?featured:\s*(true|false)/g;
   let match;
   while ((match = postRegex.exec(content)) !== null) {
+    // Extract the full block to find language and linkedPost
+    const blockStart = match.index;
+    const blockEnd = content.indexOf('},', blockStart);
+    const block = content.substring(blockStart, blockEnd > -1 ? blockEnd : undefined);
+
+    const langMatch = block.match(/language:\s*'([^']+)'/);
+    const linkedMatch = block.match(/linkedPost:\s*'([^']+)'/);
+
     posts.push({
       slug: match[1],
       date: match[2],
       featured: match[3] === 'true',
+      language: langMatch ? langMatch[1] : 'en',
+      linkedPost: linkedMatch ? linkedMatch[1] : null,
     });
   }
 
@@ -38,7 +49,7 @@ function parsePosts() {
   if (posts.length === 0) {
     const simpleRegex = /slug:\s*'([^']+)'[\s\S]*?date:\s*'([^']+)'/g;
     while ((match = simpleRegex.exec(content)) !== null) {
-      posts.push({ slug: match[1], date: match[2], featured: false });
+      posts.push({ slug: match[1], date: match[2], featured: false, language: 'en', linkedPost: null });
     }
   }
 
@@ -50,7 +61,8 @@ function generateSitemap() {
   const posts = parsePosts();
 
   let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
-  xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+  xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"';
+  xml += ' xmlns:xhtml="http://www.w3.org/1999/xhtml">\n';
 
   // Static pages
   for (const page of STATIC_PAGES) {
@@ -62,21 +74,35 @@ function generateSitemap() {
     xml += '  </url>\n';
   }
 
-  // Blog posts
+  // Blog posts with hreflang for bilingual pairs
   for (const post of posts) {
     const priority = post.featured ? '0.8' : '0.7';
+    const lang = post.language === 'zh-Hant' ? 'zh-Hant' : 'en';
     xml += '  <url>\n';
     xml += `    <loc>${SITE_URL}/blog/${post.slug}</loc>\n`;
     xml += `    <lastmod>${post.date}</lastmod>\n`;
     xml += '    <changefreq>monthly</changefreq>\n';
     xml += `    <priority>${priority}</priority>\n`;
+
+    // Add hreflang for bilingual post pairs
+    if (post.linkedPost) {
+      const linked = posts.find((p) => p.slug === post.linkedPost);
+      if (linked) {
+        const linkedLang = linked.language === 'zh-Hant' ? 'zh-Hant' : 'en';
+        xml += `    <xhtml:link rel="alternate" hreflang="${lang}" href="${SITE_URL}/blog/${post.slug}" />\n`;
+        xml += `    <xhtml:link rel="alternate" hreflang="${linkedLang}" href="${SITE_URL}/blog/${linked.slug}" />\n`;
+      }
+    }
+
     xml += '  </url>\n';
   }
 
   xml += '</urlset>\n';
 
   fs.writeFileSync(OUTPUT_FILE, xml);
-  console.log(`Sitemap generated: ${posts.length} posts + ${STATIC_PAGES.length} static pages`);
+  const zhCount = posts.filter((p) => p.language === 'zh-Hant').length;
+  const enCount = posts.length - zhCount;
+  console.log(`Sitemap generated: ${enCount} EN + ${zhCount} TC posts + ${STATIC_PAGES.length} static pages`);
 }
 
 generateSitemap();

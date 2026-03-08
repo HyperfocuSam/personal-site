@@ -74,6 +74,12 @@ const Post = () => {
   const postUrl = `${SITE_URL}/blog/${slug}`;
   const imageUrl = post.image ? `${SITE_URL}${post.image}` : `${SITE_URL}/images/og-image.jpg`;
 
+  // Find linked post for hreflang (bilingual SEO)
+  const linkedPost = post.linkedPost
+    ? posts.find((p) => p.slug === post.linkedPost)
+    : null;
+  const postLang = post.language || 'en';
+
   const articleJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -83,6 +89,7 @@ const Post = () => {
     datePublished: post.date,
     image: imageUrl,
     url: postUrl,
+    inLanguage: postLang === 'zh-Hant' ? 'zh-Hant' : 'en',
     publisher: {
       '@type': 'Organization',
       name: 'Adaptig',
@@ -107,9 +114,19 @@ const Post = () => {
       articleTags={post.tags}
     >
       <Helmet>
+        <html lang={postLang === 'zh-Hant' ? 'zh-Hant' : 'en'} />
         <script type="application/ld+json">
           {JSON.stringify(articleJsonLd)}
         </script>
+        {/* hreflang tags for bilingual posts */}
+        <link rel="alternate" hrefLang={postLang === 'zh-Hant' ? 'zh-Hant' : 'en'} href={postUrl} />
+        {linkedPost && (
+          <link
+            rel="alternate"
+            hrefLang={linkedPost.language === 'zh-Hant' ? 'zh-Hant' : 'en'}
+            href={`${SITE_URL}/blog/${linkedPost.slug}`}
+          />
+        )}
       </Helmet>
       <article className="post post--article" id="blog-post">
         <header className="post-header">

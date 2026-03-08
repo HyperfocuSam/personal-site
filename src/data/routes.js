@@ -17,6 +17,10 @@ const routes = [
     path: '/blog',
   },
   {
+    label: 'Media',
+    path: '/media',
+  },
+  {
     label: 'Clients',
     path: '/clients',
   },
