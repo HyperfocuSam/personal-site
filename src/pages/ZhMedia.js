@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import PropTypes from 'prop-types';
 
 import Main from '../layouts/Main';
@@ -8,41 +9,35 @@ const episodes = [
   {
     id: 'ep024',
     number: '024',
-    title: '點解要課金用AI？！| Why Pay for AI Tools?',
-    date: 'June 9, 2025',
+    title: '點解要課金用AI？！',
+    date: '2025年6月9日',
     views: '34K+',
     likes: '944+',
     embedUrl: 'https://www.youtube.com/embed/1cJ6dwOad6g',
     membersOnly: false,
-    description: {
-      zh: 'Sam 拆解三大 AI 工具迷思，比較 o3 與 4o 的分別，並示範大部分付費用戶都忽略的隱藏功能。',
-      en: 'Sam discusses three myths about AI tools, explains o3 vs 4o, and reveals hidden features most paid users miss.',
-    },
+    description: 'Sam 拆解三大 AI 工具迷思，比較 o3 與 4o 的分別，並示範大部分付費用戶都忽略的隱藏功能。',
     highlights: [
-      { time: '08:53', label: "Sam's introduction" },
-      { time: '13:33', label: '"Paying for AI = investing in yourself"' },
-      { time: '30:00', label: 'o3 vs 4o deep dive' },
-      { time: '44:19', label: 'Hidden features walkthrough' },
+      { time: '08:53', label: 'Sam 自我介紹' },
+      { time: '13:33', label: '「課金 AI = 投資自己」' },
+      { time: '30:00', label: 'o3 vs 4o 深入解析' },
+      { time: '44:19', label: '隱藏功能示範' },
     ],
   },
   {
     id: 'ep049',
     number: '049',
-    title: '拯救專注力！增加生產力！三個AI工具自救指南！| 3 AI Tools for Focus & Productivity',
-    date: 'August 6, 2025',
+    title: '拯救專注力！增加生產力！三個AI工具自救指南！',
+    date: '2025年8月6日',
     views: null,
     likes: null,
     embedUrl: 'https://www.youtube.com/embed/7Gswgk7Qd7Q',
     membersOnly: true,
-    description: {
-      zh: 'Sam 分享三個幫助你拯救專注力、提升生產力的 AI 工具。',
-      en: 'Sam shares three AI tools for saving focus and boosting productivity.',
-    },
+    description: 'Sam 分享三個幫助你拯救專注力、提升生產力的 AI 工具。',
     highlights: [],
   },
 ];
 
-const mediaStyles = {
+const styles = {
   episodeCard: {
     marginBottom: '2.5em',
     paddingBottom: '2em',
@@ -95,16 +90,13 @@ const mediaStyles = {
     height: '100%',
     border: 0,
   },
-  description: {
-    marginBottom: '1em',
-  },
-  descZh: {
-    fontSize: '0.95em',
-    marginBottom: '0.35em',
-  },
-  descEn: {
-    fontSize: '0.9em',
-    color: '#666',
+  statsRow: {
+    display: 'flex',
+    gap: '1.5em',
+    fontSize: '0.85em',
+    color: '#888',
+    marginBottom: '0.5em',
+    flexWrap: 'wrap',
   },
   highlights: {
     listStyle: 'none',
@@ -146,14 +138,6 @@ const mediaStyles = {
     color: '#fff',
     whiteSpace: 'nowrap',
   },
-  statsRow: {
-    display: 'flex',
-    gap: '1.5em',
-    fontSize: '0.85em',
-    color: '#888',
-    marginBottom: '0.5em',
-    flexWrap: 'wrap',
-  },
   ctaSection: {
     background: '#f5f6f7',
     padding: '2em',
@@ -167,29 +151,29 @@ const mediaStyles = {
 };
 
 const EpisodeCard = ({ episode }) => (
-  <div style={mediaStyles.episodeCard} id={episode.id}>
-    <div style={mediaStyles.episodeHeader}>
-      <h4 style={mediaStyles.episodeTitle}>
-        {`直播${episode.number}: ${episode.title}`}
+  <div style={styles.episodeCard} id={episode.id}>
+    <div style={styles.episodeHeader}>
+      <h4 style={styles.episodeTitle}>
+        {`\u76F4\u64AD${episode.number}: ${episode.title}`}
       </h4>
-      <span style={mediaStyles.episodeMeta}>
+      <span style={styles.episodeMeta}>
         {episode.date}
         {episode.membersOnly && (
-          <span style={mediaStyles.badge}>Members Only</span>
+          <span style={styles.badge}>會員專屬</span>
         )}
       </span>
     </div>
 
     {episode.views && (
-      <div style={mediaStyles.statsRow}>
-        <span>{`${episode.views} views`}</span>
-        <span>{`${episode.likes} likes`}</span>
+      <div style={styles.statsRow}>
+        <span>{`${episode.views} 觀看次數`}</span>
+        <span>{`${episode.likes} 讚好`}</span>
       </div>
     )}
 
-    <div style={mediaStyles.videoWrapper}>
+    <div style={styles.videoWrapper}>
       <iframe
-        style={mediaStyles.videoIframe}
+        style={styles.videoIframe}
         src={episode.embedUrl}
         title={episode.title}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -197,18 +181,17 @@ const EpisodeCard = ({ episode }) => (
       />
     </div>
 
-    <div style={mediaStyles.description}>
-      <p style={mediaStyles.descZh}>{episode.description.zh}</p>
-      <p style={mediaStyles.descEn}>{episode.description.en}</p>
-    </div>
+    <p style={{ fontSize: '0.95em', marginBottom: '0.5em' }}>
+      {episode.description}
+    </p>
 
     {episode.highlights.length > 0 && (
       <>
-        <strong style={{ fontSize: '0.9em' }}>Key Moments</strong>
-        <ul style={mediaStyles.highlights}>
+        <strong style={{ fontSize: '0.9em' }}>重點時刻</strong>
+        <ul style={styles.highlights}>
           {episode.highlights.map((h) => (
-            <li key={h.time} style={mediaStyles.highlightItem}>
-              <span style={mediaStyles.highlightTime}>{h.time}</span>
+            <li key={h.time} style={styles.highlightItem}>
+              <span style={styles.highlightTime}>{h.time}</span>
               <span>{h.label}</span>
             </li>
           ))}
@@ -228,10 +211,7 @@ EpisodeCard.propTypes = {
     likes: PropTypes.string,
     embedUrl: PropTypes.string.isRequired,
     membersOnly: PropTypes.bool,
-    description: PropTypes.shape({
-      zh: PropTypes.string.isRequired,
-      en: PropTypes.string.isRequired,
-    }).isRequired,
+    description: PropTypes.string.isRequired,
     highlights: PropTypes.arrayOf(
       PropTypes.shape({
         time: PropTypes.string.isRequired,
@@ -241,76 +221,84 @@ EpisodeCard.propTypes = {
   }).isRequired,
 };
 
-const Media = () => (
+const ZhMedia = () => (
   <Main
-    title="Media"
-    description="Sam Wong's media appearances - guest expert on Club 80 (會八十), a popular Cantonese YouTube show covering AI tools, productivity, and technology."
-    ogTitle="Media Appearances | Sam Wong"
-    ogDescription="Watch Sam Wong's guest appearances on Club 80 (會八十), discussing AI tools, productivity, and practical technology adoption."
+    title="媒體"
+    description="Sam Wong 媒體出演 — 會八十嘉賓專家，討論 AI 工具、生產力同實用科技應用。AI顧問 香港、企業AI培訓。"
+    ogTitle="媒體出演 | Sam Wong"
+    ogDescription="睇 Sam Wong 喺會八十嘅嘉賓出演，討論 AI 工具、生產力同實用科技應用。"
     ogType="website"
   >
-    <article className="post" id="media">
+    <Helmet>
+      <html lang="zh-Hant" />
+      <link
+        rel="alternate"
+        hrefLang="zh-Hant"
+        href="https://samwong.me/zh/media"
+      />
+      <link
+        rel="alternate"
+        hrefLang="en"
+        href="https://samwong.me/media"
+      />
+    </Helmet>
+    <article className="post" id="zh-media">
       <header>
         <div className="title">
           <h2>
-            <Link to="/media">Media / 媒體</Link>
+            <Link to="/zh/media">媒體</Link>
           </h2>
-          <p>Guest appearances, interviews, and panel discussions.</p>
+          <p>嘉賓出演、訪問同座談討論。</p>
         </div>
       </header>
 
-      {/* As Seen On */}
       <section>
-        <h3 style={mediaStyles.sectionHeading}>As Seen On</h3>
-        <div style={mediaStyles.showIntro}>
-          <span style={mediaStyles.showBadge}>Club 80 會八十</span>
-          <span>Popular Cantonese YouTube show</span>
+        <h3 style={styles.sectionHeading}>曾出演</h3>
+        <div style={styles.showIntro}>
+          <span style={styles.showBadge}>Club 80 會八十</span>
+          <span>熱門廣東話 YouTube 節目</span>
         </div>
         <p>
-          Sam has appeared as a guest expert on
+          Sam 曾以嘉賓專家身份出演
           {' '}
-          <strong>Club 80 (會八十)</strong>
-          , a popular Cantonese YouTube show hosted by
-          阿Bu, 陳強, and Greg.
-          The show covers technology, AI tools, and practical digital skills
-          for a Hong Kong audience.
+          <strong>會八十</strong>
+          ，一個由阿Bu、陳強同 Greg 主持嘅熱門廣東話 YouTube 節目。
+          節目涵蓋科技、AI 工具同實用數碼技能，面向香港觀眾。
         </p>
       </section>
 
-      {/* Episodes */}
       <section>
-        <h3 style={mediaStyles.sectionHeading}>Episodes</h3>
+        <h3 style={styles.sectionHeading}>節目集數</h3>
         {episodes.map((ep) => (
           <EpisodeCard key={ep.id} episode={ep} />
         ))}
       </section>
 
-      {/* Contact CTA */}
-      <section style={mediaStyles.ctaSection}>
-        <h3 style={mediaStyles.ctaHeading}>Interested in having Sam on your show?</h3>
+      <section style={styles.ctaSection}>
+        <h3 style={styles.ctaHeading}>有興趣邀請 Sam 上你嘅節目？</h3>
         <p>
-          Sam is available for podcast interviews, live streams, panel discussions,
-          and conference talks on AI adoption, productivity, and practical technology use.
+          Sam 可以接受 Podcast 訪問（直播或預錄）、YouTube 直播、座談討論、
+          會議主題演講，主題包括 AI 應用、生產力同實用科技。
         </p>
         <ul className="actions" style={{ justifyContent: 'center' }}>
           <li>
             <Link to="/media/kit" className="button">
-              View Media Kit
+              睇媒體資料包
             </Link>
           </li>
           <li>
             <Link to="/contact" className="button">
-              Get in Touch
+              聯絡我
             </Link>
           </li>
         </ul>
       </section>
 
       <p style={{ fontSize: '0.85em', color: '#888', marginTop: '2em' }}>
-        <Link to="/zh/media">中文版本</Link>
+        <Link to="/media">View in English</Link>
       </p>
     </article>
   </Main>
 );
 
-export default Media;
+export default ZhMedia;

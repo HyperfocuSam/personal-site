@@ -19,6 +19,14 @@ const Resume = lazy(() => import('./pages/Resume'));
 const Services = lazy(() => import('./pages/Services'));
 const Stats = lazy(() => import('./pages/Stats'));
 
+// Chinese (Traditional) pages
+const ZhAbout = lazy(() => import('./pages/ZhAbout'));
+const ZhMedia = lazy(() => import('./pages/ZhMedia'));
+const ZhServices = lazy(() => import('./pages/ZhServices'));
+
+// Media Kit (designed HTML version)
+const MediaKit = lazy(() => import('./pages/MediaKit'));
+
 const App = () => (
   <BrowserRouter basename={PUBLIC_URL}>
     <Suspense fallback={<Main />}>
@@ -29,7 +37,11 @@ const App = () => (
         <Route path="/blog/:slug" element={<Post />} />
         <Route path="/clients" element={<Clients />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/media/kit" element={<MediaKit />} />
         <Route path="/media" element={<Media />} />
+        <Route path="/zh/about" element={<ZhAbout />} />
+        <Route path="/zh/media" element={<ZhMedia />} />
+        <Route path="/zh/services" element={<ZhServices />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/resume" element={<Resume />} />
         <Route path="/services" element={<Services />} />

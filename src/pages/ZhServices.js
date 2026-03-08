@@ -1,0 +1,138 @@
+import React, { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+
+import Main from '../layouts/Main';
+import servicesZh from '../data/services-zh';
+import testimonials from '../data/testimonials';
+import ServiceGroup from '../components/Services/ServiceGroup';
+
+const groups = [
+  {
+    id: 'organizations',
+    category: 'organizations',
+    title: '企業服務',
+    subtitle: '工作坊、培訓同活動，推動團隊由興趣到真正應用。',
+    socialProof:
+      '中銀香港 (1,530 位參加者, 9.2/10)、周大福 (第三次合作)、匯豐、美泰、豐田、YPO。',
+    testimonial: testimonials[0],
+    primaryCta: {
+      cta: '聯絡我哋',
+      ctaLink: '/contact',
+      external: false,
+    },
+  },
+  {
+    id: 'one-on-one',
+    category: 'individuals',
+    title: '個人服務',
+    subtitle: '為建立實用 AI 習慣嘅專業人士提供個人化輔導。',
+    socialProof: '150+ 位跨行業專業人士接受輔導。',
+    testimonial: testimonials[1],
+    primaryCta: {
+      cta: '預約免費諮詢',
+      ctaLink: 'https://ro.am/samwong/',
+      external: true,
+    },
+  },
+  {
+    id: 'train-the-trainer',
+    category: 'trainers',
+    title: '培訓師計劃',
+    subtitle: '培訓師招募——想教授實用 AI 嘅引導者。',
+    socialProof:
+      '加入橫跨北美、拉丁美洲、歐洲同亞太嘅全球網絡。',
+    testimonial: testimonials[2],
+    primaryCta: {
+      cta: '申請加入網絡',
+      ctaLink: '/contact?interest=trainer',
+      external: false,
+    },
+  },
+];
+
+const ZhServices = () => {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (!hash) {
+      return;
+    }
+
+    const id = hash.replace('#', '');
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [hash]);
+
+  return (
+    <Main
+      title="服務"
+      description="Sam Wong AI 培訓服務 — 企業工作坊、培訓師培訓計劃、一對一輔導。透過 DotAI 同 Adaptig 提供。AI顧問 香港、企業AI培訓。"
+    >
+      <Helmet>
+        <html lang="zh-Hant" />
+        <link
+          rel="alternate"
+          hrefLang="zh-Hant"
+          href="https://samwong.me/zh/services"
+        />
+        <link
+          rel="alternate"
+          hrefLang="en"
+          href="https://samwong.me/services"
+        />
+      </Helmet>
+      <article className="post" id="zh-services">
+        <header>
+          <div className="title">
+            <h2>
+              <Link to="/zh/services">服務</Link>
+            </h2>
+            <p>選擇符合你目標嘅路徑</p>
+          </div>
+        </header>
+
+        <p>
+          如果你唔確定從邊度開始，用呢個規則：
+          企業由工作坊開始，個人由一對一輔導開始，
+          引導者由培訓師培訓開始。
+        </p>
+
+        <ul>
+          <li>
+            <Link to="/zh/services#organizations">我需要團隊或企業培訓</Link>
+          </li>
+          <li>
+            <Link to="/zh/services#one-on-one">我想要個人輔導</Link>
+          </li>
+          <li>
+            <Link to="/zh/services#train-the-trainer">我想做 AI 培訓師</Link>
+          </li>
+        </ul>
+
+        {groups.map((group) => (
+          <ServiceGroup
+            key={group.id}
+            id={group.id}
+            title={group.title}
+            subtitle={group.subtitle}
+            services={servicesZh.filter(
+              (service) => service.category === group.category,
+            )}
+            socialProof={group.socialProof}
+            testimonial={group.testimonial}
+            primaryCta={group.primaryCta}
+          />
+        ))}
+
+        <p style={{ fontSize: '0.85em', color: '#888', marginTop: '2em' }}>
+          <Link to="/services">View in English</Link>
+        </p>
+      </article>
+    </Main>
+  );
+};
+
+export default ZhServices;

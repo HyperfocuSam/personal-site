@@ -16,8 +16,13 @@ const STATIC_PAGES = [
   { path: '/about', priority: '0.8', changefreq: 'monthly' },
   { path: '/blog', priority: '0.8', changefreq: 'weekly' },
   { path: '/media', priority: '0.8', changefreq: 'monthly' },
+  { path: '/media/kit', priority: '0.8', changefreq: 'monthly' },
   { path: '/clients', priority: '0.8', changefreq: 'monthly' },
   { path: '/contact', priority: '0.7', changefreq: 'monthly' },
+  // Chinese key pages
+  { path: '/zh/about', priority: '0.8', changefreq: 'monthly', lang: 'zh-Hant', alternate: '/about' },
+  { path: '/zh/services', priority: '0.9', changefreq: 'weekly', lang: 'zh-Hant', alternate: '/services' },
+  { path: '/zh/media', priority: '0.8', changefreq: 'monthly', lang: 'zh-Hant', alternate: '/media' },
 ];
 
 function parsePosts() {
@@ -71,6 +76,11 @@ function generateSitemap() {
     xml += `    <lastmod>${today}</lastmod>\n`;
     xml += `    <changefreq>${page.changefreq}</changefreq>\n`;
     xml += `    <priority>${page.priority}</priority>\n`;
+    // hreflang for bilingual page pairs
+    if (page.lang && page.alternate) {
+      xml += `    <xhtml:link rel="alternate" hreflang="${page.lang}" href="${SITE_URL}${page.path}" />\n`;
+      xml += `    <xhtml:link rel="alternate" hreflang="en" href="${SITE_URL}${page.alternate}" />\n`;
+    }
     xml += '  </url>\n';
   }
 
