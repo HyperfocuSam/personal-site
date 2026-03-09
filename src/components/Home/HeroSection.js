@@ -4,17 +4,22 @@ import { Link } from 'react-router-dom';
 const { PUBLIC_URL } = process.env;
 
 const HeroSection = () => (
-  <section className="home-hero hero-gradient full-bleed">
+  <section className="home-hero full-bleed">
     <div className="home-hero__inner content-wide">
       <div className="home-hero__text">
-        <h1>I help organizations adopt AI in ways that actually stick.</h1>
+        <p className="home-hero__greeting">Hey, I&rsquo;m Sam.</p>
+        <h1>
+          I help teams adopt AI
+          <br />
+          <span className="home-hero__highlight">in ways that actually stick.</span>
+        </h1>
         <p className="home-hero__subtitle">
-          Workshops, coaching, and trainer development that turn AI interest into real
-          behavior change. Human-first, practical, and outcome-focused.
+          Workshops, coaching, and trainer development for organizations
+          that want real behavior change &mdash; not just another AI demo.
         </p>
         <div className="home-hero__actions">
           <Link to="/services" className="button">
-            View Services
+            How I Can Help
           </Link>
           <Link to="/contact" className="button-secondary">
             Book a Conversation
@@ -22,6 +27,7 @@ const HeroSection = () => (
         </div>
       </div>
       <div className="home-hero__photo">
+        <div className="home-hero__photo-blob" />
         <img
           src={`${PUBLIC_URL}/images/Sam.png`}
           alt="Sam Wong - AI Training Specialist"

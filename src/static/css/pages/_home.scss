@@ -1,45 +1,58 @@
-/* Homepage — Ali Abdaal warm funnel style */
+/* Homepage — Ali Abdaal inspired warm funnel */
 
-// Hero section — conversational, warm
+// ─── Hero — LIGHT background, conversational ───────────────
 .home-hero {
+  background-color: _palette(surface-base);
   padding: 0;
 
   &__inner {
     display: flex;
     align-items: center;
-    gap: 3.5rem;
-    padding: 5rem 1.5rem 4rem;
+    gap: 4rem;
+    padding: 6rem 1.5rem 4rem;
 
     @include breakpoint(medium) {
       flex-direction: column;
       text-align: center;
-      padding: 3.5rem 1.5rem 3rem;
+      padding: 4rem 1.5rem 3rem;
     }
   }
 
   &__text {
     flex: 1;
+  }
 
-    h1 {
-      color: _palette(text-on-dark);
-      font-size: 3rem;
-      font-weight: _font(weight-heading);
-      letter-spacing: _font(kerning-heading);
-      line-height: 1.15;
-      margin-bottom: 1.25rem;
+  &__greeting {
+    font-family: _font(family-heading);
+    font-size: 1.35rem;
+    color: _palette(peach);
+    margin-bottom: 0.5rem;
+    font-weight: _font(weight-heading);
+  }
 
-      @include breakpoint(small) {
-        font-size: 2.15rem;
-      }
+  h1 {
+    color: _palette(text-primary);
+    font-size: 3.5rem;
+    font-weight: _font(weight-heading);
+    letter-spacing: _font(kerning-heading);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+
+    @include breakpoint(small) {
+      font-size: 2.25rem;
     }
   }
 
+  &__highlight {
+    color: _palette(amber);
+  }
+
   &__subtitle {
-    color: _palette(text-on-dark-muted);
+    color: _palette(text-body);
     font-size: 1.15rem;
-    line-height: 1.65;
-    margin-bottom: 2rem;
-    max-width: 540px;
+    line-height: 1.7;
+    margin-bottom: 2.25rem;
+    max-width: 520px;
 
     @include breakpoint(medium) {
       margin-left: auto;
@@ -55,76 +68,126 @@
     @include breakpoint(medium) {
       justify-content: center;
     }
-
-    .button {
-      background-color: _palette(amber);
-      color: _palette(ink) !important;
-      border-radius: map-get($radius, pill);
-      font-size: 0.95rem;
-      padding: 0.9em 2.25em;
-
-      &:hover {
-        background-color: _palette(peach);
-      }
-    }
-
-    .button-secondary {
-      background-color: transparent;
-      border: 1.5px solid _palette(text-on-dark);
-      color: _palette(text-on-dark) !important;
-      border-radius: map-get($radius, pill);
-
-      &:hover {
-        background-color: _palette(text-on-dark);
-        color: _palette(ink) !important;
-      }
-    }
   }
 
   &__photo {
     flex-shrink: 0;
-    width: 300px;
-    height: 300px;
+    width: 360px;
+    height: 400px;
     position: relative;
 
-    // Decorative peach blob behind photo
-    &::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) rotate(-15deg);
-      width: 340px;
-      height: 340px;
-      background: radial-gradient(ellipse, rgba(253, 151, 109, 0.2) 0%, transparent 65%);
-      border-radius: 40% 60% 55% 45% / 55% 40% 60% 45%;
-      z-index: 0;
-    }
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: map-get($radius, xl);
-      position: relative;
-      z-index: 1;
-    }
-
     @include breakpoint(medium) {
-      width: 220px;
-      height: 220px;
+      width: 260px;
+      height: 290px;
       order: -1;
-
-      &::before {
-        width: 260px;
-        height: 260px;
-      }
     }
+  }
+
+  // Decorative blob behind photo — Ali's yellow shape style
+  &__photo-blob {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-12deg);
+    width: 110%;
+    height: 110%;
+    background: _palette(yellow);
+    border-radius: 35% 65% 55% 45% / 55% 35% 65% 45%;
+    z-index: 0;
+    opacity: 0.85;
+  }
+
+  &__photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: map-get($radius, xl);
+    position: relative;
+    z-index: 1;
   }
 }
 
-// Override #main content width for full-bleed sections on key pages
-// Full-bleed overrides — allow section bands and heroes to span full width
+// ─── Section headings — large serif ────────────────────────
+.section-heading {
+  font-family: _font(family-heading);
+  font-size: 2.75rem;
+  font-weight: _font(weight-heading);
+  color: _palette(text-primary);
+  line-height: 1.15;
+  margin-bottom: 1.75rem;
+
+  @include breakpoint(small) {
+    font-size: 2rem;
+  }
+}
+
+.heading-accent {
+  color: _palette(peach);
+}
+
+// ─── Yellow section band — Ali's signature ─────────────────
+.section-yellow {
+  background-color: _palette(yellow-subtle);
+  // Replace with solid yellow for stronger effect:
+  background-color: #FEF3D0;
+}
+
+// ─── How Can I Help grid ───────────────────────────────────
+.help-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+
+  @include breakpoint(medium) {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+.help-card {
+  display: flex;
+  flex-direction: column;
+  background: _palette(surface-raised);
+  border: 1px solid _palette(border-subtle);
+  border-radius: map-get($radius, xl);
+  padding: 2.25rem;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: map-get($shadow, lg);
+    color: inherit !important;
+  }
+
+  &__icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1;
+  }
+
+  h3 {
+    font-size: 1.35rem;
+    margin-bottom: 0.5rem;
+    color: _palette(text-primary);
+  }
+
+  p {
+    color: _palette(text-body);
+    line-height: 1.65;
+    margin-bottom: 1.25rem;
+    flex: 1;
+  }
+
+  &__cta {
+    color: _palette(amber);
+    font-weight: _font(weight-bold);
+    font-size: 0.95rem;
+  }
+}
+
+// ─── Full-bleed overrides ──────────────────────────────────
 #index,
 #blog,
 #blog-post,
@@ -145,21 +208,23 @@
   > .section-base,
   > .section-sunken,
   > .section-dark,
+  > .section-yellow,
   > .hero-gradient,
   > .page-hero,
-  > .email-capture {
+  > .email-capture,
+  > .home-hero {
     max-width: 100%;
     padding-left: 0;
     padding-right: 0;
   }
 }
 
-// Stats floating card (homepage only)
+// Stats floating card
 #index > .stats-floating {
   max-width: _size(content-standard);
 }
 
-// Case studies cards
+// ─── Case studies ──────────────────────────────────────────
 .home-case-studies {
   margin: 0;
 
@@ -167,6 +232,8 @@
     margin-bottom: 1.5rem;
 
     h3 {
+      font-family: _font(family-heading);
+      font-size: 2rem;
       margin-bottom: 0.25rem;
     }
 
@@ -222,7 +289,7 @@
   }
 }
 
-// Revenue path CTA cards
+// ─── Revenue path CTA ─────────────────────────────────────
 .revenue-path-cta {
   margin: 0;
 
@@ -278,7 +345,7 @@
   }
 }
 
-// Service group (shared between homepage and services page)
+// ─── Service group (shared) ────────────────────────────────
 .service-group {
   margin: 2.5em 0;
   padding-top: 1em;
@@ -375,7 +442,6 @@
       margin-bottom: 0.9em;
     }
 
-    // Premium tier accent
     &--premium {
       border-top: 3px solid _palette(peach);
     }

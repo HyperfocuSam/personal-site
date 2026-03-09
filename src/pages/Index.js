@@ -8,7 +8,6 @@ import TestimonialSection from '../components/Testimonials/TestimonialSection';
 import HeroSection from '../components/Home/HeroSection';
 import StatsBar from '../components/Home/StatsBar';
 import FeaturedCaseStudies from '../components/Home/FeaturedCaseStudies';
-import RevenuePathCTA from '../components/Home/RevenuePathCTA';
 import EmailCapture from '../components/EmailCapture/EmailCapture';
 
 const Index = () => (
@@ -33,73 +32,86 @@ const Index = () => (
     ]}
   >
     <article className="post" id="index">
-      {/* Hero — full-bleed dark gradient */}
+      {/* Hero — light background, conversational */}
       <HeroSection />
 
-      {/* Stats — floating card overlapping hero/content boundary */}
+      {/* Stats bar — social proof numbers */}
       <StatsBar />
 
-      {/* Trusted By Leaders */}
-      <section className="section-base section-padding">
+      {/* Newsletter — high on the page like Ali */}
+      <EmailCapture
+        source="homepage"
+        title="Stay in the loop"
+        blurb="Occasional insights on AI adoption, practical prompts, and what I'm learning from training 10,000+ professionals. No spam, no hype."
+      />
+
+      {/* How Can I Help You? — the service router */}
+      <section className="section-yellow section-padding full-bleed">
         <div className="content-wide">
+          <h2 className="section-heading">
+            How Can I
+            {' '}
+            <span className="heading-accent">Help You?</span>
+          </h2>
+          <div className="help-grid">
+            <Link to="/services#organizations" className="help-card">
+              <div className="help-card__icon">&#x1F3E2;</div>
+              <h3>Workshops for Organizations</h3>
+              <p>
+                Align your team, lower the fear, and build practical AI skills
+                tied to daily workflows.
+              </p>
+              <span className="help-card__cta">Learn more &rarr;</span>
+            </Link>
+            <Link to="/services#one-on-one" className="help-card">
+              <div className="help-card__icon">&#x1F91D;</div>
+              <h3>One-on-One Coaching</h3>
+              <p>
+                Personalized sessions focused on your projects, your role,
+                and your goals.
+              </p>
+              <span className="help-card__cta">Learn more &rarr;</span>
+            </Link>
+            <Link to="/services#train-the-trainer" className="help-card">
+              <div className="help-card__icon">&#x1F393;</div>
+              <h3>Train-the-Trainer</h3>
+              <p>
+                Become a certified AI trainer with the Adaptig methodology.
+                Teach with confidence.
+              </p>
+              <span className="help-card__cta">Learn more &rarr;</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Trusted by leaders — testimonials on white */}
+      <section className="section-base section-padding full-bleed">
+        <div className="content-wide">
+          <h2 className="section-heading">
+            Trusted by
+            {' '}
+            <span className="heading-accent">Leaders</span>
+          </h2>
           <TestimonialSection
-            title="Trusted by leaders"
-            subtitle="From executive teams to founders and emerging leaders."
             testimonials={testimonials}
-            limit={1}
+            limit={2}
             featured
           />
         </div>
       </section>
 
-      {/* What I Actually Do */}
-      <section className="section-sunken section-padding">
-        <div className="content-wide">
-          <h3>What I Actually Do</h3>
-          <p>Three ways I help people make AI useful in real work:</p>
-          <div className="card-grid cols-3">
-            <div className="card">
-              <h4>Workshops for Organizations</h4>
-              <p>
-                Align teams, lower fear, and build practical skills tied to daily workflows.
-              </p>
-              <Link to="/services#organizations" className="button-ghost">
-                Learn more &rarr;
-              </Link>
-            </div>
-            <div className="card">
-              <h4>One-on-One Coaching</h4>
-              <p>
-                Personalized sessions focused on your projects, your role, and your goals.
-              </p>
-              <Link to="/services#one-on-one" className="button-ghost">
-                Learn more &rarr;
-              </Link>
-            </div>
-            <div className="card">
-              <h4>Train-the-Trainer</h4>
-              <p>
-                Equip facilitators to teach AI confidently with the Adaptig methodology.
-              </p>
-              <Link to="/services#train-the-trainer" className="button-ghost">
-                Learn more &rarr;
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Featured Case Studies */}
-      <section className="section-base section-padding">
+      <section className="section-sunken section-padding full-bleed">
         <div className="content-wide">
           <FeaturedCaseStudies limit={3} tag="case-study" />
         </div>
       </section>
 
       {/* Where I Work */}
-      <section className="section-base section-padding">
+      <section className="section-base section-padding full-bleed">
         <div className="content-wide">
-          <h3>Where I Work</h3>
+          <h2 className="section-heading">Where I Work</h2>
           <div className="card-grid cols-2">
             <div className="card">
               <h4>
@@ -127,18 +139,11 @@ const Index = () => (
         </div>
       </section>
 
-      {/* Start Here — conversion paths */}
-      <section className="section-sunken section-padding">
-        <div className="content-wide">
-          <RevenuePathCTA />
-        </div>
-      </section>
-
-      {/* Newsletter */}
+      {/* Bottom CTA — newsletter repeat */}
       <EmailCapture
-        source="homepage"
-        title="Stay in the loop"
-        blurb="Occasional insights on AI adoption. No spam, no hype."
+        source="homepage-bottom"
+        title="Ready to bring AI to your team?"
+        blurb="Drop your email for practical AI insights, or book a free conversation to explore what's possible."
       />
 
       <p style={{

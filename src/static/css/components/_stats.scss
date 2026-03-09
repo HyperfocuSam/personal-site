@@ -1,9 +1,9 @@
-/* Stats — warm number highlight component */
+/* Stats — prominent number strip */
 
 .stats-bar {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
+  gap: 2rem;
   padding: 2rem 0;
 
   @include breakpoint(medium) {
@@ -12,7 +12,7 @@
 
   @include breakpoint(small) {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: 1.25rem;
   }
 }
 
@@ -23,19 +23,19 @@
     display: block;
     font-family: _font(family-heading);
     font-weight: _font(weight-heading);
-    font-size: 2.5rem;
-    color: _palette(peach);
-    line-height: 1.2;
-    margin-bottom: 0.25rem;
+    font-size: 2.75rem;
+    color: _palette(text-primary);
+    line-height: 1.1;
+    margin-bottom: 0.35rem;
 
     @include breakpoint(small) {
-      font-size: 1.85rem;
+      font-size: 2rem;
     }
   }
 
   &__label {
     display: block;
-    font-size: 0.8125rem;
+    font-size: 0.85rem;
     font-weight: _font(weight-medium);
     letter-spacing: _font(kerning-meta);
     text-transform: uppercase;
@@ -44,20 +44,20 @@
   }
 }
 
-// Stats on cards (floating over section boundary)
+// Stats floating card
 .stats-floating {
   background: _palette(surface-raised);
   border: 1px solid _palette(border-subtle);
   border-radius: map-get($radius, xl);
-  box-shadow: map-get($shadow, md);
-  padding: 1.5rem 2rem;
-  margin: -2rem auto 0;
+  box-shadow: map-get($shadow, lg);
+  padding: 2rem 2.5rem;
+  margin: -2.5rem auto 0;
   position: relative;
   z-index: 2;
   max-width: _size(content-standard);
 
   @include breakpoint(small) {
-    margin: -1rem 1rem 0;
-    padding: 1rem;
+    margin: -1.5rem 1rem 0;
+    padding: 1.25rem;
   }
 }

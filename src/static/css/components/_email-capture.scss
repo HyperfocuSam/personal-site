@@ -1,26 +1,34 @@
-/* Email Capture — warm card-style newsletter */
+/* Email Capture — warm prominent newsletter block */
 
 .email-capture {
   background-color: _palette(surface-sunken);
   color: _palette(text-primary);
   margin: 0;
-  padding: 3.5rem 1.5rem;
+  padding: 4rem 1.5rem;
   width: 100%;
+  text-align: center;
 
   h3 {
     text-transform: none;
     letter-spacing: _font(kerning-heading);
     font-family: _font(family-heading);
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: _font(weight-heading);
     color: _palette(text-primary);
-    margin-bottom: 0.35em;
+    margin-bottom: 0.5em;
+
+    @include breakpoint(small) {
+      font-size: 1.5rem;
+    }
   }
 
   p {
     color: _palette(text-body);
     line-height: 1.65;
-    margin-bottom: 1.25em;
+    margin-bottom: 1.5em;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   a {
@@ -31,6 +39,8 @@
   &__form {
     max-width: _size(content-standard);
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
   }
 
   &__field {
@@ -51,28 +61,31 @@
 
   &__controls {
     align-items: center;
-    display: grid;
-    grid-template-columns: 1fr auto;
+    display: flex;
     gap: 0.75em;
-    max-width: 500px;
+    max-width: 480px;
+    width: 100%;
 
     @include breakpoint(small) {
-      grid-template-columns: 1fr;
+      flex-direction: column;
     }
   }
 
   input[type="email"] {
     margin: 0;
+    flex: 1;
     background: _palette(surface-raised);
     border: 1px solid _palette(border-strong);
     border-radius: map-get($radius, pill);
     color: _palette(text-body);
-    padding: 0.85em 1.25em;
+    padding: 0.9em 1.25em;
+    font-size: 1rem;
+    width: 100%;
 
     &:focus {
       border-color: _palette(amber);
       outline: none;
-      box-shadow: 0 0 0 2px _palette(amber-subtle);
+      box-shadow: 0 0 0 3px _palette(amber-subtle);
     }
   }
 
@@ -83,15 +96,17 @@
     border: 0;
     border-radius: map-get($radius, pill);
     font-weight: _font(weight-bold);
-    padding: 0.85em 1.75em;
+    font-size: 1rem;
+    padding: 0.9em 2em;
     min-width: 150px;
     text-align: center;
     cursor: pointer;
-    transition: background-color 0.25s ease, transform 0.2s ease;
+    transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
 
     &:hover {
       background-color: _palette(peach);
-      transform: translateY(-1px);
+      transform: translateY(-2px);
+      box-shadow: map-get($shadow, md);
     }
   }
 }
