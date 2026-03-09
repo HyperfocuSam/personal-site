@@ -223,9 +223,9 @@ ul {
     }
 
     article {
-      @include vendor("display", "flex");
-      @include vendor("align-items", "flex-start");
-      @include vendor("flex-direction", "row-reverse");
+      display: flex;
+      align-items: flex-start;
+      flex-direction: row-reverse;
 
       .image {
         display: block;
@@ -239,8 +239,7 @@ ul {
       }
 
       header {
-        @include vendor("flex-grow", "1");
-        -ms-flex: 1;
+        flex-grow: 1;
 
         h3 {
           font-size: 0.7em;
