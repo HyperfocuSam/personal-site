@@ -54,7 +54,7 @@ const styles = {
   episodeCard: {
     marginBottom: '2.5em',
     paddingBottom: '2em',
-    borderBottom: '1px solid rgba(160, 160, 160, 0.3)',
+    borderBottom: '1px solid #e5e2db',
   },
   episodeHeader: {
     display: 'flex',
@@ -71,7 +71,7 @@ const styles = {
   },
   episodeMeta: {
     fontSize: '0.85em',
-    color: '#888',
+    color: '#6b6d7a',
     whiteSpace: 'nowrap',
   },
   badge: {
@@ -79,11 +79,11 @@ const styles = {
     fontSize: '0.7em',
     fontWeight: 700,
     textTransform: 'uppercase',
-    letterSpacing: '0.1em',
+    letterSpacing: '0.08em',
     padding: '0.25em 0.6em',
-    borderRadius: '3px',
-    background: '#f4f4f4',
-    color: '#888',
+    borderRadius: '4px',
+    background: '#edeae4',
+    color: '#6b6d7a',
     marginLeft: '0.75em',
   },
   videoWrapper: {
@@ -93,7 +93,7 @@ const styles = {
     overflow: 'hidden',
     maxWidth: '100%',
     marginBottom: '1.25em',
-    borderRadius: '4px',
+    borderRadius: '8px',
   },
   videoIframe: {
     position: 'absolute',
@@ -107,7 +107,7 @@ const styles = {
     display: 'flex',
     gap: '1.5em',
     fontSize: '0.85em',
-    color: '#888',
+    color: '#6b6d7a',
     marginBottom: '0.5em',
     flexWrap: 'wrap',
   },
@@ -123,13 +123,12 @@ const styles = {
     fontSize: '0.9em',
   },
   highlightTime: {
-    fontFamily: '"Source Sans Pro", sans-serif',
     fontWeight: 700,
-    color: '#3d4449',
+    color: '#1a1d2b',
     minWidth: '3.5em',
   },
   sectionHeading: {
-    borderBottom: '1px solid rgba(160, 160, 160, 0.3)',
+    borderBottom: '1px solid #e5e2db',
     paddingBottom: '0.5em',
     marginBottom: '1.25em',
   },
@@ -147,19 +146,9 @@ const styles = {
     letterSpacing: '0.05em',
     padding: '0.4em 0.8em',
     borderRadius: '4px',
-    background: '#3d4449',
-    color: '#fff',
+    background: '#0f1729',
+    color: '#e8e6e1',
     whiteSpace: 'nowrap',
-  },
-  ctaSection: {
-    background: '#f5f6f7',
-    padding: '2em',
-    borderRadius: '4px',
-    marginTop: '1em',
-    textAlign: 'center',
-  },
-  ctaHeading: {
-    marginBottom: '0.5em',
   },
 };
 
@@ -255,59 +244,68 @@ const ZhMedia = () => (
   >
     <Helmet><html lang="zh-Hant" /></Helmet>
     <article className="post" id="zh-media">
-      <header>
-        <div className="title">
-          <h2>
-            <Link to="/zh/media">媒體</Link>
-          </h2>
-          <p>嘉賓出演、訪問同座談討論。</p>
+      {/* Dark hero */}
+      <header className="page-hero">
+        <div className="content-standard">
+          <div className="title">
+            <h2>
+              <Link to="/zh/media">媒體</Link>
+            </h2>
+            <p>嘉賓出演、訪問同座談討論。</p>
+          </div>
         </div>
       </header>
 
-      <section>
-        <h3 style={styles.sectionHeading}>曾出演</h3>
-        <div style={styles.showIntro}>
-          <span style={styles.showBadge}>Club 80 會八十</span>
-          <span>熱門廣東話 YouTube 節目</span>
+      <section className="section-base section-padding">
+        <div className="content-standard">
+          <h3 style={styles.sectionHeading}>曾出演</h3>
+          <div style={styles.showIntro}>
+            <span style={styles.showBadge}>Club 80 會八十</span>
+            <span>熱門廣東話 YouTube 節目</span>
+          </div>
+          <p>
+            Sam 曾以嘉賓專家身份三度出演
+            {' '}
+            <strong>會八十</strong>
+            ，一個由阿Bu、陳強同 Greg 主持嘅熱門廣東話 YouTube 節目。
+            節目涵蓋科技、AI 工具同實用數碼技能，面向香港觀眾。
+            Sam 嘅三集節目累計觀看次數超過 98,000。
+          </p>
         </div>
-        <p>
-          Sam 曾以嘉賓專家身份三度出演
-          {' '}
-          <strong>會八十</strong>
-          ，一個由阿Bu、陳強同 Greg 主持嘅熱門廣東話 YouTube 節目。
-          節目涵蓋科技、AI 工具同實用數碼技能，面向香港觀眾。
-          Sam 嘅三集節目累計觀看次數超過 98,000。
-        </p>
       </section>
 
-      <section>
-        <h3 style={styles.sectionHeading}>節目集數</h3>
-        {episodes.map((ep) => (
-          <EpisodeCard key={ep.id} episode={ep} />
-        ))}
+      <section className="section-sunken section-padding">
+        <div className="content-standard">
+          <h3 style={styles.sectionHeading}>節目集數</h3>
+          {episodes.map((ep) => (
+            <EpisodeCard key={ep.id} episode={ep} />
+          ))}
+        </div>
       </section>
 
-      <section style={styles.ctaSection}>
-        <h3 style={styles.ctaHeading}>有興趣邀請 Sam 上你嘅節目？</h3>
-        <p>
-          Sam 可以接受 Podcast 訪問（直播或預錄）、YouTube 直播、座談討論、
-          會議主題演講，主題包括 AI 應用、生產力同實用科技。
-        </p>
-        <ul className="actions" style={{ justifyContent: 'center' }}>
-          <li>
-            <Link to="/media/kit" className="button">
-              睇媒體資料包
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact" className="button">
-              聯絡我
-            </Link>
-          </li>
-        </ul>
+      <section className="section-dark section-padding" style={{ textAlign: 'center' }}>
+        <div className="content-standard">
+          <h3>有興趣邀請 Sam 上你嘅節目？</h3>
+          <p>
+            Sam 可以接受 Podcast 訪問（直播或預錄）、YouTube 直播、座談討論、
+            會議主題演講，主題包括 AI 應用、生產力同實用科技。
+          </p>
+          <ul className="actions" style={{ justifyContent: 'center' }}>
+            <li>
+              <Link to="/media/kit" className="button">
+                睇媒體資料包
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className="button-secondary">
+                聯絡我
+              </Link>
+            </li>
+          </ul>
+        </div>
       </section>
 
-      <p style={{ fontSize: '0.85em', color: '#888', marginTop: '2em' }}>
+      <p style={{ fontSize: '0.85em', color: '#6b6d7a', marginTop: '2em' }}>
         <Link to="/media">View in English</Link>
       </p>
     </article>

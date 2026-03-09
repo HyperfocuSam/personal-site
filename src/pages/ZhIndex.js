@@ -28,103 +28,105 @@ const ZhIndex = () => (
   >
     <Helmet><html lang="zh-Hant" /></Helmet>
     <article className="post" id="zh-index">
-      <header>
-        <div className="title">
-          <h2>
-            <Link to="/zh">你好。</Link>
-          </h2>
-          <p>
-            我幫助機構同專業人士以真正落地嘅方式應用 AI。
-            如果你正在探索培訓、輔導或培訓師發展，你嚟啱地方。
-          </p>
+      {/* Dark hero */}
+      <header className="page-hero">
+        <div className="content-standard">
+          <div className="title">
+            <h2>
+              <Link to="/zh">你好。</Link>
+            </h2>
+            <p>
+              我幫助機構同專業人士以真正落地嘅方式應用 AI。
+              如果你正在探索培訓、輔導或培訓師發展，你嚟啱地方。
+            </p>
+          </div>
         </div>
       </header>
 
-      <section className="hero-stats">
-        <p>
-          <strong>10,000+ 人</strong>
-          {' '}
-          接受過工作坊同培訓。
-          <br />
-          <strong>70+ 機構</strong>
-          {' '}
-          獲得實用 AI 應用支援。
-          <br />
-          <strong>150+ 場一對一輔導</strong>
-          {' '}
-          為專業人士提供。
-        </p>
+      <section className="section-base section-padding">
+        <div className="content-wide">
+          <TestimonialSection
+            title="獲各界領袖信賴"
+            subtitle="來自高管團隊、創辦人同新晉領袖嘅聲音。"
+            testimonials={testimonials}
+            limit={1}
+            featured
+          />
+        </div>
       </section>
 
-      <TestimonialSection
-        title="獲各界領袖信賴"
-        subtitle="來自高管團隊、創辦人同新晉領袖嘅聲音。"
-        testimonials={testimonials}
-        limit={1}
-        featured
-      />
+      <section className="section-sunken section-padding">
+        <div className="content-wide">
+          <h3>我實際做啲乜</h3>
+          <p>三個方式幫你將 AI 應用到真實工作中：</p>
+          <div className="card-grid cols-3">
+            <div className="card">
+              <h4>企業工作坊</h4>
+              <p>統一團隊認知、降低恐懼、建立同日常工作流程掛鈎嘅實用技能。</p>
+              <Link to="/zh/services#organizations" className="button-ghost">
+                了解更多 &rarr;
+              </Link>
+            </div>
+            <div className="card">
+              <h4>一對一輔導</h4>
+              <p>圍繞你嘅項目、角色同目標嘅個人化課程。</p>
+              <Link to="/zh/services#one-on-one" className="button-ghost">
+                了解更多 &rarr;
+              </Link>
+            </div>
+            <div className="card">
+              <h4>培訓師培訓計劃</h4>
+              <p>裝備引導者運用 Adaptig 方法論自信教授 AI。</p>
+              <Link to="/zh/services#train-the-trainer" className="button-ghost">
+                了解更多 &rarr;
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <h3>我實際做啲乜</h3>
-      <p>
-        三個方式幫你將 AI 應用到真實工作中：
-      </p>
-      <ul>
-        <li>
-          <strong>企業工作坊：</strong>
-          統一團隊認知、降低恐懼、建立同日常工作流程掛鈎嘅實用技能。
-        </li>
-        <li>
-          <strong>一對一輔導：</strong>
-          圍繞你嘅項目、角色同目標嘅個人化課程。
-        </li>
-        <li>
-          <strong>培訓師培訓計劃：</strong>
-          裝備引導者運用 Adaptig 方法論自信教授 AI。
-        </li>
-      </ul>
+      <section className="section-base section-padding">
+        <div className="content-wide">
+          <h3>我嘅平台</h3>
+          <div className="card-grid cols-2">
+            <div className="card">
+              <h4>
+                <a href="https://adaptig.ai" target="_blank" rel="noopener noreferrer">
+                  Adaptig
+                </a>
+              </h4>
+              <p>全球培訓師網絡，為企業提供 AI 應用工作坊。</p>
+            </div>
+            <div className="card">
+              <h4>
+                <a href="https://dotai.hk" target="_blank" rel="noopener noreferrer">
+                  DotAI
+                </a>
+              </h4>
+              <p>香港 AI 培訓社群，服務客戶包括匯豐銀行、中國銀行同周大福。</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <h3>我嘅平台</h3>
-      <p>
-        <strong>
-          <a
-            href="https://adaptig.ai"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Adaptig
-          </a>
-        </strong>
-        {' '}
-        &mdash; 全球培訓師網絡，為企業提供 AI 應用工作坊。
-      </p>
-      <p>
-        <strong>
-          <a
-            href="https://dotai.hk"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            DotAI
-          </a>
-        </strong>
-        {' '}
-        &mdash; 香港 AI 培訓社群，服務客戶包括匯豐銀行、中國銀行同周大福。
-      </p>
+      <section className="section-dark section-padding" style={{ textAlign: 'center' }}>
+        <div className="content-standard">
+          <ul className="actions" style={{ justifyContent: 'center' }}>
+            <li>
+              <Link to="/zh/services" className="button">
+                睇服務選項
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className="button-secondary">
+                預約諮詢
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-      <ul className="actions">
-        <li>
-          <Link to="/zh/services" className="button">
-            睇服務選項
-          </Link>
-        </li>
-        <li>
-          <Link to="/contact" className="button">
-            預約諮詢
-          </Link>
-        </li>
-      </ul>
-
-      <p style={{ fontSize: '0.85em', color: '#888', marginTop: '2em' }}>
+      <p style={{ fontSize: '0.85em', color: '#6b6d7a', marginTop: '2em' }}>
         <Link to="/">View in English</Link>
       </p>
     </article>

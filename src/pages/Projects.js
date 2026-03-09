@@ -22,17 +22,24 @@ const Projects = () => (
     twitterImage={DEFAULT_OG_IMAGE}
   >
     <article className="post" id="projects">
-      <header>
-        <div className="title">
-          <h2>
-            <Link to="/projects">Projects</Link>
-          </h2>
-          <p>Projects are all about making an impact.</p>
+      {/* Dark hero */}
+      <header className="page-hero">
+        <div className="content-standard">
+          <div className="title">
+            <h2>
+              <Link to="/projects">Projects</Link>
+            </h2>
+            <p>Projects are all about making an impact.</p>
+          </div>
         </div>
       </header>
-      {data.map((project) => (
-        <Cell data={project} key={project.title} />
-      ))}
+      <section className="section-base section-padding">
+        <div className="content-standard">
+          {data.map((project) => (
+            <Cell data={project} key={project.title} />
+          ))}
+        </div>
+      </section>
     </article>
   </Main>
 );

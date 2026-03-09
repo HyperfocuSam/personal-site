@@ -80,34 +80,40 @@ const ZhBlog = () => (
   >
     <Helmet><html lang="zh-Hant" /></Helmet>
     <article className="post" id="zh-blog">
-      <header>
-        <div className="title">
-          <h2>
-            <Link to="/zh/blog">網誌</Link>
-          </h2>
-          <p>洞察與想法</p>
+      {/* Dark hero */}
+      <header className="page-hero">
+        <div className="content-standard">
+          <div className="title">
+            <h2>
+              <Link to="/zh/blog">網誌</Link>
+            </h2>
+            <p>關於 AI 應用趨勢、工具同幫助人自信地使用 AI 嘅實用經驗。</p>
+          </div>
         </div>
       </header>
 
-      <p>
-        關於 AI 應用趨勢、工具同幫助人自信地使用 AI 嘅實用經驗。
-      </p>
-
-      {zhPosts.length === 0 ? (
-        <p><em>中文文章即將推出，敬請期待！</em></p>
-      ) : (
-        <div className="blog-grid">
-          {zhPosts.map((post) => (
-            <BlogCard key={post.slug} post={post} />
-          ))}
+      <section className="section-base section-padding">
+        <div className="content-standard">
+          {zhPosts.length === 0 ? (
+            <p><em>中文文章即將推出，敬請期待！</em></p>
+          ) : (
+            <div className="blog-grid">
+              {zhPosts.map((post) => (
+                <BlogCard key={post.slug} post={post} />
+              ))}
+            </div>
+          )}
         </div>
-      )}
+      </section>
 
-      <hr />
-      <h3>關於作者</h3>
-      <AuthorCard />
+      <section className="section-sunken section-padding">
+        <div className="content-standard">
+          <h3>關於作者</h3>
+          <AuthorCard />
+        </div>
+      </section>
 
-      <p style={{ fontSize: '0.85em', color: '#888', marginTop: '2em' }}>
+      <p style={{ fontSize: '0.85em', color: '#6b6d7a', marginTop: '2em' }}>
         <Link to="/blog">View in English</Link>
       </p>
     </article>

@@ -4,16 +4,16 @@ import { Link } from 'react-router-dom';
 import Main from '../layouts/Main';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 
-const NAVY = '#1a1f36';
-const GOLD = '#d4a843';
-const LIGHT_BG = '#f8f9fa';
-const TEXT_DARK = '#1a1f36';
-const TEXT_MID = '#4a4a5a';
-const TEXT_LIGHT = '#6b7280';
+const NAVY = '#0f1729';
+const GOLD = '#c8965a';
+const LIGHT_BG = '#edeae4';
+const TEXT_DARK = '#1a1d2b';
+const TEXT_MID = '#3d3f4e';
+const TEXT_LIGHT = '#6b6d7a';
 
 const s = {
   hero: {
-    background: `linear-gradient(135deg, ${NAVY} 0%, #2d3561 100%)`,
+    background: `linear-gradient(135deg, ${NAVY} 0%, #1e2a45 100%)`,
     padding: '4em 2em',
     textAlign: 'center',
     color: '#fff',
@@ -131,7 +131,7 @@ const s = {
   },
   topicCard: {
     background: '#fff',
-    border: '1px solid #e8e8ee',
+    border: '1px solid #e5e2db',
     borderRadius: '8px',
     padding: '1.75em',
     transition: 'box-shadow 0.2s ease',
@@ -141,7 +141,7 @@ const s = {
     fontSize: '0.7em',
     fontWeight: 800,
     color: GOLD,
-    background: 'rgba(212,168,67,0.1)',
+    background: 'rgba(200,150,90,0.12)',
     borderRadius: '4px',
     padding: '0.3em 0.6em',
     marginBottom: '0.75em',
@@ -214,7 +214,7 @@ const s = {
     marginLeft: '0.5em',
   },
   contactSection: {
-    background: `linear-gradient(135deg, ${NAVY} 0%, #2d3561 100%)`,
+    background: `linear-gradient(135deg, ${NAVY} 0%, #1e2a45 100%)`,
     color: '#fff',
   },
   contactGrid: {

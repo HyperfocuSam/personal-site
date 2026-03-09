@@ -39,23 +39,30 @@ const Resume = () => (
     twitterImage={DEFAULT_OG_IMAGE}
   >
     <article className="post" id="resume">
-      <header>
-        <div className="title">
-          <h2>
-            <Link to="resume">Resume</Link>
-          </h2>
-          <div className="link-container">
+      {/* Dark hero */}
+      <header className="page-hero">
+        <div className="content-standard">
+          <div className="title">
+            <h2>
+              <Link to="/resume">Resume</Link>
+            </h2>
+          </div>
+          <div className="services-anchor-pills">
             {Object.keys(sections).map((sec) => (
-              <h4 key={sec}>
-                <a href={`#${sec.toLowerCase()}`}>{sec}</a>
-              </h4>
+              <a key={sec} href={`#${sec.toLowerCase()}`} className="anchor-pill">
+                {sec}
+              </a>
             ))}
           </div>
         </div>
       </header>
-      {Object.entries(sections).map(([name, Section]) => (
-        <Section key={name} />
-      ))}
+      <section className="section-base section-padding">
+        <div className="content-standard">
+          {Object.entries(sections).map(([name, Section]) => (
+            <Section key={name} />
+          ))}
+        </div>
+      </section>
     </article>
   </Main>
 );

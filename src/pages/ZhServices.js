@@ -22,6 +22,7 @@ const groups = [
       ctaLink: '/contact',
       external: false,
     },
+    band: 'section-base',
   },
   {
     id: 'one-on-one',
@@ -35,6 +36,7 @@ const groups = [
       ctaLink: 'https://ro.am/samwong/',
       external: true,
     },
+    band: 'section-sunken',
   },
   {
     id: 'train-the-trainer',
@@ -49,6 +51,7 @@ const groups = [
       ctaLink: '/contact?interest=trainer',
       external: false,
     },
+    band: 'section-base',
   },
 ];
 
@@ -88,49 +91,49 @@ const ZhServices = () => {
     >
       <Helmet><html lang="zh-Hant" /></Helmet>
       <article className="post" id="zh-services">
-        <header>
-          <div className="title">
-            <h2>
-              <Link to="/zh/services">服務</Link>
-            </h2>
-            <p>選擇符合你目標嘅路徑</p>
+        {/* Dark hero with anchor pills */}
+        <header className="page-hero">
+          <div className="content-standard">
+            <div className="title">
+              <h2>
+                <Link to="/zh/services">服務</Link>
+              </h2>
+              <p>選擇符合你目標嘅路徑</p>
+            </div>
+            <div className="services-anchor-pills">
+              <Link to="/zh/services#organizations" className="anchor-pill">
+                企業
+              </Link>
+              <Link to="/zh/services#one-on-one" className="anchor-pill">
+                個人
+              </Link>
+              <Link to="/zh/services#train-the-trainer" className="anchor-pill">
+                培訓師
+              </Link>
+            </div>
           </div>
         </header>
 
-        <p>
-          如果你唔確定從邊度開始，用呢個規則：
-          企業由工作坊開始，個人由一對一輔導開始，
-          引導者由培訓師培訓開始。
-        </p>
-
-        <ul>
-          <li>
-            <Link to="/zh/services#organizations">我需要團隊或企業培訓</Link>
-          </li>
-          <li>
-            <Link to="/zh/services#one-on-one">我想要個人輔導</Link>
-          </li>
-          <li>
-            <Link to="/zh/services#train-the-trainer">我想做 AI 培訓師</Link>
-          </li>
-        </ul>
-
+        {/* Service groups in alternating section bands */}
         {groups.map((group) => (
-          <ServiceGroup
-            key={group.id}
-            id={group.id}
-            title={group.title}
-            subtitle={group.subtitle}
-            services={servicesZh.filter(
-              (service) => service.category === group.category,
-            )}
-            socialProof={group.socialProof}
-            testimonial={group.testimonial}
-            primaryCta={group.primaryCta}
-          />
+          <section key={group.id} className={`${group.band} section-padding`}>
+            <div className="content-standard">
+              <ServiceGroup
+                id={group.id}
+                title={group.title}
+                subtitle={group.subtitle}
+                services={servicesZh.filter(
+                  (service) => service.category === group.category,
+                )}
+                socialProof={group.socialProof}
+                testimonial={group.testimonial}
+                primaryCta={group.primaryCta}
+              />
+            </div>
+          </section>
         ))}
 
-        <p style={{ fontSize: '0.85em', color: '#888', marginTop: '2em' }}>
+        <p style={{ fontSize: '0.85em', color: '#6b6d7a', marginTop: '2em' }}>
           <Link to="/services">View in English</Link>
         </p>
       </article>

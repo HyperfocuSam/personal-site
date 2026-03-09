@@ -120,14 +120,23 @@
 }
 
 // Override #main content width for full-bleed sections on key pages
+// Full-bleed overrides — allow section bands and heroes to span full width
 #index,
 #blog,
 #blog-post,
 #about,
 #services,
 #media,
+#media-kit,
 #clients,
-#contact {
+#contact,
+#resume,
+#projects,
+#zh-index,
+#zh-about,
+#zh-services,
+#zh-blog,
+#zh-media {
   > .full-bleed,
   > .section-base,
   > .section-sunken,
