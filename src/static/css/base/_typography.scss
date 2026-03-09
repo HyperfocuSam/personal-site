@@ -1,71 +1,37 @@
-///
-/// Future Imperfect by HTML5 UP
-/// html5up.net | @ajlkn
-/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-///
-
-/* Type */
+/* Typography — Inter-based system */
 
 body,
 input,
 select,
 textarea {
-  color: _palette(fg);
+  color: _palette(text-body);
   font-family: _font(family);
-  font-size: 14pt;
+  font-size: 17px;
   font-weight: _font(weight);
   line-height: 1.75;
-
-  @include breakpoint(xlarge) {
-    font-size: 12pt;
-  }
-
-  @include breakpoint(large) {
-    font-size: 12pt;
-  }
-
-  @include breakpoint(medium) {
-    font-size: 12pt;
-  }
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
   @include breakpoint(small) {
-    font-size: 12pt;
-  }
-
-  @include breakpoint(xsmall) {
-    font-size: 12pt;
+    font-size: 16px;
   }
 }
 
 a {
-  @include vendor(
-    "transition",
-    (
-      "color #{_duration(transition)} ease",
-      "border-bottom-color #{_duration(transition)} ease"
-    )
-  );
-  border-bottom: dotted 1px _palette(border-alt);
-  color: inherit;
+  transition: color 0.25s ease, border-bottom-color 0.25s ease;
+  border-bottom: 1px solid transparent;
+  color: _palette(amber);
   text-decoration: none;
 
-  &:before {
-    @include vendor("transition", ("color #{_duration(transition)} ease"));
-  }
-
   &:hover {
-    border-bottom-color: transparent;
-    color: _palette(accent) !important;
-
-    &:before {
-      color: _palette(accent) !important;
-    }
+    border-bottom-color: _palette(amber);
+    color: _palette(amber-light) !important;
   }
 }
 
 strong,
 b {
-  color: _palette(fg-bold);
+  color: _palette(text-primary);
   font-weight: _font(weight-bold);
 }
 
@@ -78,44 +44,64 @@ p {
   margin: 0 0 _size(element-margin) 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: _palette(fg-bold);
+h1, h2, h3, h4, h5, h6 {
+  color: _palette(text-primary);
   font-family: _font(family-heading);
   font-weight: _font(weight-heading-bold);
   letter-spacing: _font(kerning-heading);
-  line-height: 1.65;
+  line-height: 1.3;
   margin: 0 0 (_size(element-margin) * 0.5) 0;
-  text-transform: uppercase;
+  text-transform: none;
 
   a {
     color: inherit;
     border-bottom: 0;
+
+    &:hover {
+      color: _palette(amber) !important;
+    }
+  }
+}
+
+h1 {
+  font-size: 2.5rem;
+
+  @include breakpoint(small) {
+    font-size: 1.85rem;
   }
 }
 
 h2 {
-  font-size: 1.1em;
+  font-size: 1.75rem;
+
+  @include breakpoint(small) {
+    font-size: 1.4rem;
+  }
 }
 
 h3 {
-  font-size: 0.9em;
+  font-size: 1.35rem;
 }
 
 h4 {
-  font-size: 0.7em;
+  font-size: 1.1rem;
 }
 
 h5 {
-  font-size: 0.7em;
+  font-size: 1rem;
 }
 
 h6 {
-  font-size: 0.7em;
+  font-size: 0.9rem;
+}
+
+// Metadata / label style — the ONLY place we use uppercase
+.meta-label {
+  font-size: 0.8125rem;
+  font-weight: _font(weight-medium);
+  letter-spacing: _font(kerning-meta);
+  text-transform: uppercase;
+  color: _palette(text-secondary);
 }
 
 sub {
@@ -131,20 +117,22 @@ sup {
 }
 
 blockquote {
-  border-left: solid 4px _palette(border);
+  border-left: 3px solid _palette(amber);
+  background: _palette(surface-sunken);
   font-style: italic;
   margin: 0 0 _size(element-margin) 0;
-  padding: calc(_size(element-margin) / 4) 0 calc(_size(element-margin) / 4)
-    _size(element-margin);
+  padding: 1.25em 1.5em;
+  border-radius: 0 map-get($radius, lg) map-get($radius, lg) 0;
 }
 
 code {
-  background: _palette(border-bg);
-  border: solid 1px _palette(border);
+  background: _palette(surface-sunken);
+  border: solid 1px _palette(border-subtle);
   font-family: _font(family-fixed);
   font-size: 0.9em;
   margin: 0 0.25em;
-  padding: 0.25em 0.65em;
+  padding: 0.2em 0.5em;
+  border-radius: map-get($radius, sm);
 }
 
 pre {
@@ -158,12 +146,13 @@ pre {
     line-height: 1.75em;
     padding: 1em 1.5em;
     overflow-x: auto;
+    border-radius: map-get($radius, lg);
   }
 }
 
 hr {
   border: 0;
-  border-bottom: solid 1px _palette(border);
+  border-bottom: solid 1px _palette(border-subtle);
   margin: _size(element-margin) 0;
 
   &.major {
@@ -171,14 +160,6 @@ hr {
   }
 }
 
-.align-left {
-  text-align: left;
-}
-
-.align-center {
-  text-align: center;
-}
-
-.align-right {
-  text-align: right;
-}
+.align-left { text-align: left; }
+.align-center { text-align: center; }
+.align-right { text-align: right; }
