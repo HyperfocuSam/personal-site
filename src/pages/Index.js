@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Main from '../layouts/Main';
+import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 import testimonials from '../data/testimonials';
 import TestimonialSection from '../components/Testimonials/TestimonialSection';
 import FeaturedCaseStudies from '../components/Home/FeaturedCaseStudies';
@@ -14,6 +15,20 @@ const Index = () => (
       'Sam Wong helps teams and professionals adopt AI with confidence through workshops, '
       + 'coaching, and trainer development. Human-first, practical, and outcome-focused.'
     }
+    canonicalUrl={`${SITE_URL}/`}
+    ogTitle="Sam Wong | AI Training Specialist"
+    ogDescription="Helping enterprises and individuals thrive with AI. Corporate workshops, 1-1 coaching, and Train-the-Trainer programs."
+    ogImage={DEFAULT_OG_IMAGE}
+    ogUrl={`${SITE_URL}/`}
+    ogType="website"
+    twitterTitle="Sam Wong | AI Training Specialist"
+    twitterDescription="Helping enterprises and individuals thrive with AI."
+    twitterImage={DEFAULT_OG_IMAGE}
+    hreflangTags={[
+      { lang: 'en', href: `${SITE_URL}/` },
+      { lang: 'zh-Hant', href: `${SITE_URL}/zh` },
+      { lang: 'x-default', href: `${SITE_URL}/` },
+    ]}
   >
     <article className="post" id="index">
       <header>

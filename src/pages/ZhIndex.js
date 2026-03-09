@@ -3,26 +3,30 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
 import Main from '../layouts/Main';
+import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 import testimonials from '../data/testimonials';
 import TestimonialSection from '../components/Testimonials/TestimonialSection';
 
 const ZhIndex = () => (
   <Main
+    title="Sam Wong | AI 培訓專家 - 香港"
     description="Sam Wong 幫助團隊同專業人士自信地應用 AI——透過工作坊、輔導同培訓師發展。以人為本、實用、注重成果。AI顧問 香港、企業AI培訓。"
+    canonicalUrl={`${SITE_URL}/zh`}
+    ogTitle="Sam Wong | AI 培訓專家"
+    ogDescription="幫助企業同個人自信應用 AI。企業工作坊、一對一輔導、培訓師培訓計劃。"
+    ogImage={DEFAULT_OG_IMAGE}
+    ogUrl={`${SITE_URL}/zh`}
+    ogType="website"
+    twitterTitle="Sam Wong | AI 培訓專家"
+    twitterDescription="幫助企業同個人自信應用 AI。"
+    twitterImage={DEFAULT_OG_IMAGE}
+    hreflangTags={[
+      { lang: 'en', href: `${SITE_URL}/` },
+      { lang: 'zh-Hant', href: `${SITE_URL}/zh` },
+      { lang: 'x-default', href: `${SITE_URL}/` },
+    ]}
   >
-    <Helmet>
-      <html lang="zh-Hant" />
-      <link
-        rel="alternate"
-        hrefLang="zh-Hant"
-        href="https://samwong.me/zh"
-      />
-      <link
-        rel="alternate"
-        hrefLang="en"
-        href="https://samwong.me/"
-      />
-    </Helmet>
+    <Helmet><html lang="zh-Hant" /></Helmet>
     <article className="post" id="zh-index">
       <header>
         <div className="title">

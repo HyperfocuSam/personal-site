@@ -1,10 +1,29 @@
-# robots.txt for samwong.me
+# robots.txt for hyperfocusam.com
 
 User-agent: *
 Allow: /
 
+# AI crawlers — explicitly permitted
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
 # Sitemap
-Sitemap: https://samwong.me/sitemap.xml
+Sitemap: https://hyperfocusam.com/sitemap.xml
 
 # Disallow non-essential paths
 Disallow: /api

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
 import Main from '../layouts/Main';
+import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 import testimonials from '../data/testimonials';
 import TestimonialSection from '../components/Testimonials/TestimonialSection';
 
@@ -10,20 +11,22 @@ const ZhAbout = () => (
   <Main
     title="關於我"
     description="Sam Wong — 香港AI顧問、企業AI培訓師。提供實用人工智能培訓、一對一AI輔導、企業工作坊，幫助團隊真正應用AI。"
+    canonicalUrl={`${SITE_URL}/zh/about`}
+    ogTitle="關於 Sam Wong | AI 培訓專家"
+    ogDescription="點解我做呢份工，同埋我點樣走到今日。由 ADHD 診斷到培訓超過 10,000 位專業人士應用 AI。"
+    ogImage={DEFAULT_OG_IMAGE}
+    ogUrl={`${SITE_URL}/zh/about`}
+    ogType="profile"
+    twitterTitle="關於 Sam Wong | AI 培訓專家"
+    twitterDescription="點解我做呢份工，同埋我點樣走到今日。"
+    twitterImage={DEFAULT_OG_IMAGE}
+    hreflangTags={[
+      { lang: 'en', href: `${SITE_URL}/about` },
+      { lang: 'zh-Hant', href: `${SITE_URL}/zh/about` },
+      { lang: 'x-default', href: `${SITE_URL}/about` },
+    ]}
   >
-    <Helmet>
-      <html lang="zh-Hant" />
-      <link
-        rel="alternate"
-        hrefLang="en"
-        href="https://samwong.info/about"
-      />
-      <link
-        rel="alternate"
-        hrefLang="zh-Hant"
-        href="https://samwong.info/zh/about"
-      />
-    </Helmet>
+    <Helmet><html lang="zh-Hant" /></Helmet>
     <article className="post markdown" id="about">
       <header>
         <div className="title">

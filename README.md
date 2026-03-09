@@ -1,6 +1,6 @@
 # Personal Website
 
-Welcome to my personal website! This is the source for [samwong.me](https://samwong.me/), a React-based Jamstack site where I share my work as an AI private tutor in Hong Kong. It is [MIT licensed](./LICENSE), easy to customize, and deploys cleanly to static hosting (including [GitHub Pages](https://pages.github.com/)).
+Welcome to my personal website! This is the source for [hyperfocusam.com](https://hyperfocusam.com/), a React-based Jamstack site where I share my work as an AI private tutor in Hong Kong. It is [MIT licensed](./LICENSE), easy to customize, and deploys cleanly to static hosting (including [GitHub Pages](https://pages.github.com/)).
 
 ## 🚀 Features
 

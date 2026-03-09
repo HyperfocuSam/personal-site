@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet-async';
 
 import Main from '../layouts/Main';
+import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 import posts from '../data/posts';
 import { AuthorCard } from '../components/Blog';
 
@@ -62,20 +63,22 @@ const ZhBlog = () => (
   <Main
     title="網誌"
     description="Sam Wong 嘅 AI 應用洞察、工作坊經驗同科技人性面嘅分享。AI培訓 香港、企業AI顧問、人工智能工具推薦。"
+    canonicalUrl={`${SITE_URL}/zh/blog`}
+    ogTitle="網誌 | Sam Wong"
+    ogDescription="AI 應用洞察、工作坊經驗同科技人性面嘅分享。"
+    ogImage={DEFAULT_OG_IMAGE}
+    ogUrl={`${SITE_URL}/zh/blog`}
+    ogType="website"
+    twitterTitle="網誌 | Sam Wong"
+    twitterDescription="AI 應用洞察、工作坊經驗同科技人性面嘅分享。"
+    twitterImage={DEFAULT_OG_IMAGE}
+    hreflangTags={[
+      { lang: 'en', href: `${SITE_URL}/blog` },
+      { lang: 'zh-Hant', href: `${SITE_URL}/zh/blog` },
+      { lang: 'x-default', href: `${SITE_URL}/blog` },
+    ]}
   >
-    <Helmet>
-      <html lang="zh-Hant" />
-      <link
-        rel="alternate"
-        hrefLang="zh-Hant"
-        href="https://samwong.me/zh/blog"
-      />
-      <link
-        rel="alternate"
-        hrefLang="en"
-        href="https://samwong.me/blog"
-      />
-    </Helmet>
+    <Helmet><html lang="zh-Hant" /></Helmet>
     <article className="post" id="zh-blog">
       <header>
         <div className="title">

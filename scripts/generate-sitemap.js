@@ -6,11 +6,21 @@
 const fs = require('fs');
 const path = require('path');
 
-const SITE_URL = 'https://samwong.me';
+const SITE_URL = 'https://hyperfocusam.com';
 const POSTS_FILE = path.join(__dirname, '..', 'src', 'data', 'posts', 'index.js');
 const OUTPUT_FILE = path.join(__dirname, '..', 'public', 'sitemap.xml');
 
+// Bilingual page pairs: English path -> Chinese path
+const BILINGUAL_PAIRS = {
+  '/': '/zh',
+  '/about': '/zh/about',
+  '/services': '/zh/services',
+  '/blog': '/zh/blog',
+  '/media': '/zh/media',
+};
+
 const STATIC_PAGES = [
+  // English pages
   { path: '/', priority: '1.0', changefreq: 'weekly' },
   { path: '/services', priority: '0.9', changefreq: 'weekly' },
   { path: '/about', priority: '0.8', changefreq: 'monthly' },
@@ -19,7 +29,9 @@ const STATIC_PAGES = [
   { path: '/media/kit', priority: '0.8', changefreq: 'monthly' },
   { path: '/clients', priority: '0.8', changefreq: 'monthly' },
   { path: '/contact', priority: '0.7', changefreq: 'monthly' },
-  // Chinese key pages
+  { path: '/resume', priority: '0.6', changefreq: 'monthly' },
+  { path: '/projects', priority: '0.6', changefreq: 'monthly' },
+  // Chinese pages
   { path: '/zh', priority: '1.0', changefreq: 'weekly', lang: 'zh-Hant', alternate: '/' },
   { path: '/zh/about', priority: '0.8', changefreq: 'monthly', lang: 'zh-Hant', alternate: '/about' },
   { path: '/zh/blog', priority: '0.8', changefreq: 'weekly', lang: 'zh-Hant', alternate: '/blog' },
@@ -78,10 +90,17 @@ function generateSitemap() {
     xml += `    <lastmod>${today}</lastmod>\n`;
     xml += `    <changefreq>${page.changefreq}</changefreq>\n`;
     xml += `    <priority>${page.priority}</priority>\n`;
-    // hreflang for bilingual page pairs
+    // Bidirectional hreflang for bilingual page pairs
     if (page.lang && page.alternate) {
+      // Chinese page: point to self (zh-Hant), English alternate, and x-default
       xml += `    <xhtml:link rel="alternate" hreflang="${page.lang}" href="${SITE_URL}${page.path}" />\n`;
       xml += `    <xhtml:link rel="alternate" hreflang="en" href="${SITE_URL}${page.alternate}" />\n`;
+      xml += `    <xhtml:link rel="alternate" hreflang="x-default" href="${SITE_URL}${page.alternate}" />\n`;
+    } else if (BILINGUAL_PAIRS[page.path]) {
+      // English page with a Chinese counterpart: point to self (en), Chinese alternate, and x-default
+      xml += `    <xhtml:link rel="alternate" hreflang="en" href="${SITE_URL}${page.path}" />\n`;
+      xml += `    <xhtml:link rel="alternate" hreflang="zh-Hant" href="${SITE_URL}${BILINGUAL_PAIRS[page.path]}" />\n`;
+      xml += `    <xhtml:link rel="alternate" hreflang="x-default" href="${SITE_URL}${page.path}" />\n`;
     }
     xml += '  </url>\n';
   }
@@ -96,13 +115,16 @@ function generateSitemap() {
     xml += '    <changefreq>monthly</changefreq>\n';
     xml += `    <priority>${priority}</priority>\n`;
 
-    // Add hreflang for bilingual post pairs
+    // Add hreflang for bilingual post pairs (bidirectional + x-default)
     if (post.linkedPost) {
       const linked = posts.find((p) => p.slug === post.linkedPost);
       if (linked) {
         const linkedLang = linked.language === 'zh-Hant' ? 'zh-Hant' : 'en';
         xml += `    <xhtml:link rel="alternate" hreflang="${lang}" href="${SITE_URL}/blog/${post.slug}" />\n`;
         xml += `    <xhtml:link rel="alternate" hreflang="${linkedLang}" href="${SITE_URL}/blog/${linked.slug}" />\n`;
+        // x-default points to the English version
+        const enSlug = lang === 'en' ? post.slug : linked.slug;
+        xml += `    <xhtml:link rel="alternate" hreflang="x-default" href="${SITE_URL}/blog/${enSlug}" />\n`;
       }
     }
 

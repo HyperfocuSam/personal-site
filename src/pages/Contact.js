@@ -2,6 +2,7 @@ import React, { useMemo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 import Main from '../layouts/Main';
+import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 import EmailLink from '../components/Contact/EmailLink';
 import ContactIcons from '../components/Contact/ContactIcons';
 import ContactForm from '../components/Contact/ContactForm';
@@ -29,6 +30,15 @@ const Contact = () => {
     <Main
       title="Contact"
       description="Contact Sam Wong for AI training, workshops, coaching, and speaking engagements. Email: sam@adaptig.com"
+      canonicalUrl={`${SITE_URL}/contact`}
+      ogTitle="Contact | Sam Wong"
+      ogDescription="Get in touch for AI training, workshops, coaching, and speaking engagements."
+      ogImage={DEFAULT_OG_IMAGE}
+      ogUrl={`${SITE_URL}/contact`}
+      ogType="website"
+      twitterTitle="Contact | Sam Wong"
+      twitterDescription="Get in touch for AI training, workshops, coaching, and speaking engagements."
+      twitterImage={DEFAULT_OG_IMAGE}
     >
       <article className="post" id="contact">
         <header>

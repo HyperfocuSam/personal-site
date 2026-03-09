@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Main from '../layouts/Main';
+import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 
 const NAVY = '#1a1f36';
 const GOLD = '#d4a843';
@@ -9,20 +10,6 @@ const LIGHT_BG = '#f8f9fa';
 const TEXT_DARK = '#1a1f36';
 const TEXT_MID = '#4a4a5a';
 const TEXT_LIGHT = '#6b7280';
-
-const printStyles = `
-@media print {
-  nav, footer, .print-hide, .sidebar-nav, header nav { display: none !important; }
-  body { background: #fff !important; color: #000 !important; font-size: 11pt !important; }
-  * { box-shadow: none !important; }
-  a { color: #000 !important; text-decoration: underline !important; }
-  .media-kit-hero { background: #1a1f36 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .media-kit-hero * { color: #fff !important; }
-  .media-kit-section { page-break-inside: avoid; }
-  .topic-card { break-inside: avoid; page-break-inside: avoid; }
-  .print-btn { display: none !important; }
-}
-`;
 
 const s = {
   hero: {
@@ -278,7 +265,7 @@ const s = {
 };
 
 const stats = [
-  { number: '3,000+', label: 'Professionals Trained' },
+  { number: '10,000+', label: 'Professionals Trained' },
   { number: '6', label: 'Sectors' },
   { number: '13', label: 'Countries Reached' },
   { number: '9.2/10', label: 'Avg. Satisfaction' },
@@ -332,13 +319,16 @@ const MediaKit = () => (
   <Main
     title="Media Kit"
     description="Speaker media kit for Sam Wong - AI Training Specialist based in Hong Kong. Available for keynotes, panels, podcasts, and livestreams."
+    canonicalUrl={`${SITE_URL}/media/kit`}
     ogTitle="Media Kit | Sam Wong"
-    ogDescription="Speaker media kit for Sam Wong, AI Training Specialist. 3,000+ professionals trained across 13 countries."
+    ogDescription="Speaker media kit for Sam Wong, AI Training Specialist. 10,000+ professionals trained across 13 countries."
+    ogImage={DEFAULT_OG_IMAGE}
+    ogUrl={`${SITE_URL}/media/kit`}
     ogType="website"
+    twitterTitle="Media Kit | Sam Wong"
+    twitterDescription="Speaker media kit for Sam Wong, AI Training Specialist. 10,000+ professionals trained across 13 countries."
+    twitterImage={DEFAULT_OG_IMAGE}
   >
-    {/* eslint-disable-next-line react/no-danger */}
-    <style dangerouslySetInnerHTML={{ __html: printStyles }} />
-
     <article id="media-kit">
       {/* Hero */}
       <div className="media-kit-hero media-kit-section" style={s.hero}>
@@ -373,7 +363,7 @@ const MediaKit = () => (
           <div style={s.bioColumn}>
             <span style={s.bioLangLabel}>English</span>
             <p>
-              Sam Wong is an AI training specialist who has trained over 3,000
+              Sam Wong is an AI training specialist who has trained over 10,000
               professionals across banking, retail, education, and technology
               sectors. He designs and delivers corporate AI workshops through
               Adaptig (Animo Technology Limited), helping organizations move
@@ -387,7 +377,7 @@ const MediaKit = () => (
             <span style={s.bioLangLabel}>中文</span>
             <p>
               Sam Wong
-              是一位AI培訓專家，已為超過3,000名來自銀行、零售、教育及科技行業的專業人士提供培訓。他透過
+              是一位AI培訓專家，已為超過10,000名來自銀行、零售、教育及科技行業的專業人士提供培訓。他透過
               Adaptig（Animo Technology
               Limited）設計及執行企業AI工作坊，協助機構從AI好奇階段進入AI實戰能力階段。客戶包括中銀香港、周大福、香港賽馬會、Arup
               及理工大學。Sam
@@ -521,12 +511,12 @@ const MediaKit = () => (
             <p style={s.contactLabel}>LinkedIn</p>
             <p style={s.contactValue}>
               <a
-                href="https://linkedin.com/in/hyperfocusam"
+                href="https://linkedin.com/in/sam-ai-agent/"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={s.contactLink}
               >
-                linkedin.com/in/hyperfocusam
+                linkedin.com/in/sam-ai-agent
               </a>
             </p>
 
@@ -542,14 +532,6 @@ const MediaKit = () => (
               </a>
             </p>
 
-            <button
-              type="button"
-              className="print-btn"
-              style={s.printBtn}
-              onClick={() => window.print()}
-            >
-              Print / Save as PDF
-            </button>
           </div>
         </div>
       </div>

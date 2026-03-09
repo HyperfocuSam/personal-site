@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Main from '../layouts/Main';
+import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 
 import Education from '../components/Resume/Education';
 import Experience from '../components/Resume/Experience';
@@ -27,6 +28,15 @@ const Resume = () => (
   <Main
     title="Resume"
     description="Resume and background of Sam Wong, focused on AI training, transformation, and human-centered adoption."
+    canonicalUrl={`${SITE_URL}/resume`}
+    ogTitle="Resume | Sam Wong"
+    ogDescription="Resume and background of Sam Wong, focused on AI training, transformation, and human-centered adoption."
+    ogImage={DEFAULT_OG_IMAGE}
+    ogUrl={`${SITE_URL}/resume`}
+    ogType="website"
+    twitterTitle="Resume | Sam Wong"
+    twitterDescription="Resume and background of Sam Wong, focused on AI training and human-centered adoption."
+    twitterImage={DEFAULT_OG_IMAGE}
   >
     <article className="post" id="resume">
       <header>

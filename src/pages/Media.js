@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import Main from '../layouts/Main';
+import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 
 const episodes = [
   {
@@ -260,9 +261,20 @@ const Media = () => (
   <Main
     title="Media"
     description="Sam Wong's media appearances - recurring guest expert on Club 80 (會八十), a popular Cantonese YouTube show. 3 episodes, 98K+ combined views."
+    canonicalUrl={`${SITE_URL}/media`}
     ogTitle="Media Appearances | Sam Wong"
     ogDescription="Watch Sam Wong's guest appearances on Club 80 (會八十), discussing AI tools, productivity, and practical technology adoption."
+    ogImage={DEFAULT_OG_IMAGE}
+    ogUrl={`${SITE_URL}/media`}
     ogType="website"
+    twitterTitle="Media Appearances | Sam Wong"
+    twitterDescription="Watch Sam Wong's guest appearances on Club 80 (會八十), discussing AI tools, productivity, and practical technology adoption."
+    twitterImage={DEFAULT_OG_IMAGE}
+    hreflangTags={[
+      { lang: 'en', href: `${SITE_URL}/media` },
+      { lang: 'zh-Hant', href: `${SITE_URL}/zh/media` },
+      { lang: 'x-default', href: `${SITE_URL}/media` },
+    ]}
   >
     <article className="post" id="media">
       <header>

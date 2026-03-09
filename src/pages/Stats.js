@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 import Main from '../layouts/Main';
 
@@ -11,6 +12,9 @@ const Stats = () => (
     title="Stats"
     description="Some statistics about Sam Wong's project as AI Tutor in Hong Kong"
   >
+    <Helmet>
+      <meta name="robots" content="noindex" />
+    </Helmet>
     <article className="post" id="stats">
       <header>
         <div className="title">

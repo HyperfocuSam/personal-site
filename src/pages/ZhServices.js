@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
 import Main from '../layouts/Main';
+import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 import servicesZh from '../data/services-zh';
 import testimonials from '../data/testimonials';
 import ServiceGroup from '../components/Services/ServiceGroup';
@@ -70,20 +71,22 @@ const ZhServices = () => {
     <Main
       title="服務"
       description="Sam Wong AI 培訓服務 — 企業工作坊、培訓師培訓計劃、一對一輔導。透過 DotAI 同 Adaptig 提供。AI顧問 香港、企業AI培訓。"
+      canonicalUrl={`${SITE_URL}/zh/services`}
+      ogTitle="AI 培訓服務 | Sam Wong"
+      ogDescription="企業工作坊、培訓師培訓計劃、一對一輔導。透過 DotAI 同 Adaptig 提供。"
+      ogImage={DEFAULT_OG_IMAGE}
+      ogUrl={`${SITE_URL}/zh/services`}
+      ogType="website"
+      twitterTitle="AI 培訓服務 | Sam Wong"
+      twitterDescription="企業工作坊、培訓師培訓計劃、一對一輔導。"
+      twitterImage={DEFAULT_OG_IMAGE}
+      hreflangTags={[
+        { lang: 'en', href: `${SITE_URL}/services` },
+        { lang: 'zh-Hant', href: `${SITE_URL}/zh/services` },
+        { lang: 'x-default', href: `${SITE_URL}/services` },
+      ]}
     >
-      <Helmet>
-        <html lang="zh-Hant" />
-        <link
-          rel="alternate"
-          hrefLang="zh-Hant"
-          href="https://samwong.me/zh/services"
-        />
-        <link
-          rel="alternate"
-          hrefLang="en"
-          href="https://samwong.me/services"
-        />
-      </Helmet>
+      <Helmet><html lang="zh-Hant" /></Helmet>
       <article className="post" id="zh-services">
         <header>
           <div className="title">

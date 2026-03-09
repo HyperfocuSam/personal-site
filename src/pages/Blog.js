@@ -4,6 +4,7 @@ import dayjs from 'dayjs';
 import PropTypes from 'prop-types';
 
 import Main from '../layouts/Main';
+import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 import posts from '../data/posts';
 import { AuthorCard } from '../components/Blog';
 import EmailCapture from '../components/EmailCapture/EmailCapture';
@@ -83,6 +84,20 @@ const Blog = () => {
     <Main
       title="Blog"
       description="Insights on AI adoption, workshop learnings, and the human side of technology by Sam Wong."
+      canonicalUrl={`${SITE_URL}/blog`}
+      ogTitle="Blog | Sam Wong"
+      ogDescription="Insights on AI adoption, workshop learnings, and the human side of technology."
+      ogImage={DEFAULT_OG_IMAGE}
+      ogUrl={`${SITE_URL}/blog`}
+      ogType="website"
+      twitterTitle="Blog | Sam Wong"
+      twitterDescription="Insights on AI adoption, workshop learnings, and the human side of technology."
+      twitterImage={DEFAULT_OG_IMAGE}
+      hreflangTags={[
+        { lang: 'en', href: `${SITE_URL}/blog` },
+        { lang: 'zh-Hant', href: `${SITE_URL}/zh/blog` },
+        { lang: 'x-default', href: `${SITE_URL}/blog` },
+      ]}
     >
       <article className="post" id="blog">
         <header>

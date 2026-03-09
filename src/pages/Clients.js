@@ -4,6 +4,7 @@ import dayjs from 'dayjs';
 import PropTypes from 'prop-types';
 
 import Main from '../layouts/Main';
+import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 import posts from '../data/posts';
 
 const clientPosts = posts.filter((p) => p.type === 'case-study');
@@ -46,6 +47,15 @@ const Clients = () => (
   <Main
     title="Clients"
     description="Case studies from enterprise AI workshops and training engagements by Sam Wong."
+    canonicalUrl={`${SITE_URL}/clients`}
+    ogTitle="Clients | Sam Wong"
+    ogDescription="Case studies from enterprise AI workshops and training engagements by Sam Wong."
+    ogImage={DEFAULT_OG_IMAGE}
+    ogUrl={`${SITE_URL}/clients`}
+    ogType="website"
+    twitterTitle="Clients | Sam Wong"
+    twitterDescription="Case studies from enterprise AI workshops and training engagements."
+    twitterImage={DEFAULT_OG_IMAGE}
   >
     <article className="post" id="clients">
       <header>

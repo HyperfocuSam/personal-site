@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 import Main from '../layouts/Main';
+import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 import services from '../data/services';
 import testimonials from '../data/testimonials';
 import ServiceGroup from '../components/Services/ServiceGroup';
@@ -69,6 +71,20 @@ const Services = () => {
     <Main
       title="Services"
       description="AI Training Services by Sam Wong - Corporate workshops, Train-the-Trainer programs, and 1-1 coaching through DotAI and Adaptig."
+      canonicalUrl={`${SITE_URL}/services`}
+      ogTitle="AI Training Services | Sam Wong"
+      ogDescription="Corporate workshops, Train-the-Trainer programs, and 1-1 coaching through DotAI and Adaptig."
+      ogImage={DEFAULT_OG_IMAGE}
+      ogUrl={`${SITE_URL}/services`}
+      ogType="website"
+      twitterTitle="AI Training Services | Sam Wong"
+      twitterDescription="Corporate workshops, Train-the-Trainer programs, and 1-1 coaching."
+      twitterImage={DEFAULT_OG_IMAGE}
+      hreflangTags={[
+        { lang: 'en', href: `${SITE_URL}/services` },
+        { lang: 'zh-Hant', href: `${SITE_URL}/zh/services` },
+        { lang: 'x-default', href: `${SITE_URL}/services` },
+      ]}
     >
       <article className="post" id="services">
         <header>
@@ -110,6 +126,86 @@ const Services = () => {
             primaryCta={group.primaryCta}
           />
         ))}
+
+        <Helmet>
+          <script type="application/ld+json">
+            {JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'ProfessionalService',
+              name: 'Sam Wong - AI Training Services',
+              url: `${SITE_URL}/services`,
+              provider: {
+                '@type': 'Person', name: 'Sam Wong', url: SITE_URL,
+              },
+              areaServed: ['Hong Kong', 'Asia-Pacific'],
+              serviceType: ['AI Training', 'Corporate Workshops', 'Executive Coaching', 'Train-the-Trainer'],
+            })}
+          </script>
+          <script type="application/ld+json">
+            {JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: [
+                {
+                  '@type': 'Question',
+                  name: 'What types of AI training does Sam Wong offer?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Sam Wong offers corporate AI workshops through Adaptig and DotAI, multi-session AI Pioneer Programs for cohort-based learning, 1-1 AI coaching for professionals, Train-the-Trainer certification programs, and keynotes and event sessions. Services are available for organizations, individuals, and aspiring AI trainers.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'Who are Sam Wong\'s typical clients for AI training?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Sam Wong works with enterprises across banking, retail, education, engineering, tourism, and technology sectors. Notable clients include Bank of China (Hong Kong) with 1,530 participants across 13 countries, Chow Tai Fook (three repeat engagements), Hong Kong Jockey Club, HSBC, Arup, PolyU, Mattel, Toyota, and YPO.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'What results can teams expect from corporate AI workshops?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Workshops achieve a 9.2/10 average satisfaction rating. The focus is on behavior change rather than tool awareness — teams learn to integrate AI into their actual daily workflows. Multi-session Pioneer Programs have shown participants saving 5-8 hours per week through AI-assisted workflow redesign.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'What is the Adaptig Train-the-Trainer program?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'The Adaptig Train-the-Trainer program is a certification path for trainers, consultants, HR leaders, and educators who want to teach AI with confidence. Participants receive the Adaptig facilitation methodology, complete workshop materials and delivery structure, trainer community support, certification, and ongoing delivery opportunities through a global network spanning North America, Latin America, Europe, and Asia-Pacific.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'How does Sam Wong\'s AI coaching work?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'AI coaching is personalized 1-1 sessions starting from the individual\'s current role, tools, and constraints — no generic curriculum. There are three tiers: a free 30-minute discovery call, standard 60-90 minute sessions focused on active projects, and premium executive AI advisory for leaders navigating AI transformation decisions. Over 150 sessions have been delivered across industries.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'What is the AI Pioneer Program model?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'The AI Pioneer Program is a multi-session cohort approach (typically 6 sessions over 6 weeks) based on change management principles. Instead of training everyone at once, 10-20 curious and influential people are selected and trained deeply. They work on real tasks from their actual jobs each week. These Pioneers then become internal champions who drive adoption across the wider organization.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'Where is Sam Wong based and what languages does he work in?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Sam Wong is based in Hong Kong and available globally, with particular focus across the Asia-Pacific region. He delivers training in English and Cantonese. Workshops have been delivered to teams across 13 countries.',
+                  },
+                },
+              ],
+            })}
+          </script>
+        </Helmet>
 
         <p style={{ fontSize: '0.85em', color: '#888', marginTop: '2em' }}>
           <Link to="/zh/services">&#x4E2D;&#x6587;&#x7248;&#x672C;</Link>

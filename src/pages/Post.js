@@ -16,7 +16,7 @@ import {
 import TrainerRecruitmentBanner from '../components/Blog/TrainerRecruitmentBanner';
 import EmailCapture from '../components/EmailCapture/EmailCapture';
 
-const SITE_URL = 'https://samwong.me';
+import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 
 // Custom blockquote component for pull quotes
 const PullQuote = ({ children }) => (
@@ -72,7 +72,7 @@ const Post = () => {
   }
 
   const postUrl = `${SITE_URL}/blog/${slug}`;
-  const imageUrl = post.image ? `${SITE_URL}${post.image}` : `${SITE_URL}/images/og-image.jpg`;
+  const imageUrl = post.image ? `${SITE_URL}${post.image}` : DEFAULT_OG_IMAGE;
 
   // Find linked post for hreflang (bilingual SEO)
   const linkedPost = post.linkedPost
@@ -118,6 +118,23 @@ const Post = () => {
         <script type="application/ld+json">
           {JSON.stringify(articleJsonLd)}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/`,
+              },
+              {
+                '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE_URL}/blog`,
+              },
+              {
+                '@type': 'ListItem', position: 3, name: post.title,
+              },
+            ],
+          })}
+        </script>
         {/* hreflang tags for bilingual posts */}
         <link rel="alternate" hrefLang={postLang === 'zh-Hant' ? 'zh-Hant' : 'en'} href={postUrl} />
         {linkedPost && (
@@ -125,6 +142,14 @@ const Post = () => {
             rel="alternate"
             hrefLang={linkedPost.language === 'zh-Hant' ? 'zh-Hant' : 'en'}
             href={`${SITE_URL}/blog/${linkedPost.slug}`}
+          />
+        )}
+        {/* x-default hreflang — points to English version or self if English */}
+        {linkedPost && (
+          <link
+            rel="alternate"
+            hrefLang="x-default"
+            href={postLang === 'en' ? postUrl : `${SITE_URL}/blog/${linkedPost.slug}`}
           />
         )}
       </Helmet>

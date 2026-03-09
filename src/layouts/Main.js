@@ -32,8 +32,13 @@ const Main = (props) => (
       {props.twitterImage && <meta name="twitter:image" content={props.twitterImage} />}
       {/* Article metadata */}
       {props.articlePublishedTime && <meta property="article:published_time" content={props.articlePublishedTime} />}
+      {props.articleModifiedTime && <meta property="article:modified_time" content={props.articleModifiedTime} />}
       {props.articleTags && props.articleTags.map((tag) => (
         <meta key={tag} property="article:tag" content={tag} />
+      ))}
+      {/* hreflang tags */}
+      {props.hreflangTags && props.hreflangTags.map((tag) => (
+        <link key={tag.lang} rel="alternate" hrefLang={tag.lang} href={tag.href} />
       ))}
     </Helmet>
     <div id="wrapper">
@@ -63,7 +68,12 @@ Main.propTypes = {
   twitterDescription: PropTypes.string,
   twitterImage: PropTypes.string,
   articlePublishedTime: PropTypes.string,
+  articleModifiedTime: PropTypes.string,
   articleTags: PropTypes.arrayOf(PropTypes.string),
+  hreflangTags: PropTypes.arrayOf(PropTypes.shape({
+    lang: PropTypes.string.isRequired,
+    href: PropTypes.string.isRequired,
+  })),
 };
 
 Main.defaultProps = {
@@ -83,7 +93,9 @@ Main.defaultProps = {
   twitterDescription: null,
   twitterImage: null,
   articlePublishedTime: null,
+  articleModifiedTime: null,
   articleTags: null,
+  hreflangTags: null,
 };
 
 export default Main;

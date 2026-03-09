@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import PropTypes from 'prop-types';
 
 import Main from '../layouts/Main';
+import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 
 const episodes = [
   {
@@ -237,23 +238,22 @@ const ZhMedia = () => (
   <Main
     title="媒體"
     description="Sam Wong 媒體出演 — 會八十嘉賓專家，討論 AI 工具、生產力同實用科技應用。AI顧問 香港、企業AI培訓。"
+    canonicalUrl={`${SITE_URL}/zh/media`}
     ogTitle="媒體出演 | Sam Wong"
     ogDescription="睇 Sam Wong 喺會八十嘅嘉賓出演，討論 AI 工具、生產力同實用科技應用。"
+    ogImage={DEFAULT_OG_IMAGE}
+    ogUrl={`${SITE_URL}/zh/media`}
     ogType="website"
+    twitterTitle="媒體出演 | Sam Wong"
+    twitterDescription="睇 Sam Wong 喺會八十嘅嘉賓出演，討論 AI 工具、生產力同實用科技應用。"
+    twitterImage={DEFAULT_OG_IMAGE}
+    hreflangTags={[
+      { lang: 'en', href: `${SITE_URL}/media` },
+      { lang: 'zh-Hant', href: `${SITE_URL}/zh/media` },
+      { lang: 'x-default', href: `${SITE_URL}/media` },
+    ]}
   >
-    <Helmet>
-      <html lang="zh-Hant" />
-      <link
-        rel="alternate"
-        hrefLang="zh-Hant"
-        href="https://samwong.me/zh/media"
-      />
-      <link
-        rel="alternate"
-        hrefLang="en"
-        href="https://samwong.me/media"
-      />
-    </Helmet>
+    <Helmet><html lang="zh-Hant" /></Helmet>
     <article className="post" id="zh-media">
       <header>
         <div className="title">
