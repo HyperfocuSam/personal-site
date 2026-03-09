@@ -1,5 +1,47 @@
-// Not found page
+/* Hamburger — animated three-bar to X */
 
+.hamburger-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  gap: 5px;
+
+  .hamburger-bar {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: _palette(text-on-dark);
+    border-radius: 1px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+  }
+
+  // Animate to X when open
+  &.is-open {
+    .hamburger-bar:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .hamburger-bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger-bar:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+  }
+
+  &:hover .hamburger-bar {
+    background-color: _palette(amber);
+  }
+}
+
+// Mobile menu list styling (dark theme)
 .bm-item-list {
   margin-top: 0;
 }
@@ -17,24 +59,26 @@
 
   li a h3 {
     border: 0;
-    border-top: dotted 1px rgba(160, 160, 160, 0.3);
-    margin: 1.5em 0 0 0;
-    padding: 1.5em 0 0 0;
+    border-top: solid 1px _palette(ink-light);
+    margin: 1.25em 0 0 0;
+    padding: 1.25em 0 0 0;
+    color: _palette(text-on-dark);
+    font-size: 0.95rem;
+    font-weight: _font(weight-bold);
+    text-transform: none;
+    letter-spacing: 0;
   }
 
   li a h3:hover {
-    color: _palette(accent);
+    color: _palette(amber);
   }
 
   li {
     display: block !important;
   }
 
-  h3 {
-    font-size: 0.7em;
-  }
-
   .index-li {
     border-top: none;
+    color: _palette(amber);
   }
 }

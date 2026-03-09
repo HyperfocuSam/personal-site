@@ -12,19 +12,20 @@ const Hamburger = () => {
     <div className="hamburger-container">
       <nav className="main" id="hambuger-nav">
         <ul>
-          {open ? (
-            <li className="menu close-menu">
-              <div onClick={() => setOpen(!open)} className="menu-hover">
-                &#10005;
-              </div>
-            </li>
-          ) : (
-            <li className="menu open-menu">
-              <div onClick={() => setOpen(!open)} className="menu-hover">
-                &#9776;
-              </div>
-            </li>
-          )}
+          <li className={`menu ${open ? 'close-menu' : 'open-menu'}`}>
+            <div
+              onClick={() => setOpen(!open)}
+              className={`hamburger-btn ${open ? 'is-open' : ''}`}
+              role="button"
+              tabIndex={0}
+              aria-label={open ? 'Close menu' : 'Open menu'}
+              onKeyDown={(e) => { if (e.key === 'Enter') setOpen(!open); }}
+            >
+              <span className="hamburger-bar" />
+              <span className="hamburger-bar" />
+              <span className="hamburger-bar" />
+            </div>
+          </li>
         </ul>
       </nav>
       <Suspense fallback={<></>}>
@@ -37,13 +38,13 @@ const Hamburger = () => {
                     href={l.path}
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={() => setOpen(!open)}
+                    onClick={() => setOpen(false)}
                   >
-                    <h3 className={l.index && 'index-li'}>{l.label}</h3>
+                    <h3 className={l.index ? 'index-li' : undefined}>{l.label}</h3>
                   </a>
                 ) : (
-                  <Link to={l.path} onClick={() => setOpen(!open)}>
-                    <h3 className={l.index && 'index-li'}>{l.label}</h3>
+                  <Link to={l.path} onClick={() => setOpen(false)}>
+                    <h3 className={l.index ? 'index-li' : undefined}>{l.label}</h3>
                   </Link>
                 )}
               </li>
