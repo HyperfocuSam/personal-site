@@ -52,7 +52,7 @@ $font: (
     -apple-system,
     sans-serif,
   ),
-  weight: 400,
+  weight: 500,
   weight-medium: 500,
   weight-bold: 600,
   weight-heading: 400,
@@ -90,9 +90,9 @@ $palette: (
   surface-sunken: #F3EDE9,
   surface-deep: #ECE5E1,
 
-  // Text
+  // Text — Ali uses same dark ink for body AND headings
   text-primary: #1B1624,
-  text-body: #4a4553,
+  text-body: #1B1624,
   text-secondary: #6b6777,
   text-on-dark: #F9F6F3,
   text-on-dark-muted: #b0adb8,
@@ -107,7 +107,7 @@ $palette: (
   // Legacy mappings
   bg: #FFFFFF,
   bg-alt: #F9F6F3,
-  fg: #4a4553,
+  fg: #1B1624,
   fg-bold: #1B1624,
   fg-light: #6b6777,
   border: #ECE5E1,

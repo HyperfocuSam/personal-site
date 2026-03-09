@@ -12,7 +12,7 @@ button,
   display: inline-block;
   font-family: _font(family);
   font-size: 1rem;
-  font-weight: _font(weight-bold);
+  font-weight: _font(weight-medium);
   letter-spacing: 0;
   line-height: 1;
   padding: 0.75em 2.25em;
@@ -30,8 +30,8 @@ button,
   &:hover {
     background-color: _palette(peach-light);
     color: _palette(ink) !important;
-    transform: translateY(-2px);
-    box-shadow: map-get($shadow, lg);
+    transform: translateY(-1px);
+    box-shadow: map-get($shadow, md);
   }
 
   &:active {

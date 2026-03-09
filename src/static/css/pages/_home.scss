@@ -95,7 +95,7 @@
   &__subtitle {
     color: _palette(text-body);
     font-size: 1.25rem;
-    line-height: 1.75;
+    line-height: 1.6;
     margin-bottom: 2.5rem;
     max-width: 480px;
 
@@ -196,7 +196,7 @@
 
   p {
     color: _palette(text-body);
-    line-height: 1.75;
+    line-height: 1.6;
     margin-bottom: 1.5rem;
     flex: 1;
     font-size: 1.05rem;
@@ -310,7 +310,7 @@
 
     p {
       color: _palette(text-body);
-      line-height: 1.75;
+      line-height: 1.6;
       margin-bottom: 0.6em;
     }
 
@@ -364,7 +364,7 @@
     border-bottom: 0;
 
     h4 { font-size: 1.15rem; margin-bottom: 0.5em; }
-    p { color: _palette(text-body); line-height: 1.75; margin-bottom: 1.25em; flex: 1; }
+    p { color: _palette(text-body); line-height: 1.6; margin-bottom: 1.25em; flex: 1; }
     .button { align-self: flex-start; font-size: 0.85rem; }
 
     @include breakpoint(small) {
@@ -455,7 +455,7 @@
     border: 0;
 
     h5 { font-size: 1rem; margin-bottom: 0.4em; }
-    p { color: _palette(text-body); line-height: 1.75; margin-bottom: 0.9em; }
+    p { color: _palette(text-body); line-height: 1.6; margin-bottom: 0.9em; }
 
     &--premium { border-top: 3px solid _palette(peach); }
 
