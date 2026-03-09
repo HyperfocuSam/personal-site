@@ -11,7 +11,9 @@ const HeroSection = () => (
         <h1>
           I help teams adopt AI
           <br />
-          <span className="home-hero__highlight">in ways that actually stick.</span>
+          in ways that
+          {' '}
+          <em>actually stick.</em>
         </h1>
         <p className="home-hero__subtitle">
           Workshops, coaching, and trainer development for organizations
@@ -21,16 +23,15 @@ const HeroSection = () => (
           <Link to="/services" className="button">
             How I Can Help
           </Link>
-          <Link to="/contact" className="button-secondary">
+          <Link to="/contact" className="button button--outline">
             Book a Conversation
           </Link>
         </div>
       </div>
       <div className="home-hero__photo">
-        <div className="home-hero__photo-blob" />
         <img
           src={`${PUBLIC_URL}/images/Sam.png`}
-          alt="Sam Wong - AI Training Specialist"
+          alt="Sam Wong"
         />
       </div>
     </div>

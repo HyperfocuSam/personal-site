@@ -1,11 +1,11 @@
-/* Card — warm rounded card system */
+/* Card — clean shadow-driven cards (no borders) */
 
 .card {
   background-color: _palette(surface-raised);
-  border: 1px solid _palette(border-subtle);
+  border: 0;
   border-radius: map-get($radius, xl);
   box-shadow: map-get($shadow, sm);
-  padding: 2rem;
+  padding: 2.25rem;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 
   &:hover {
@@ -25,7 +25,7 @@
 // Card grid layouts
 .card-grid {
   display: grid;
-  gap: 1.5rem;
+  gap: 2rem;
 
   &.cols-2 {
     grid-template-columns: repeat(2, 1fr);
@@ -60,7 +60,6 @@
   }
 }
 
-// Card with peach accent top border
 .card-accent {
   border-top: 3px solid _palette(peach);
 }

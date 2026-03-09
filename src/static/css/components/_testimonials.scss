@@ -1,23 +1,27 @@
-/* Testimonials — warm rounded quote cards */
+/* Testimonials — editorial quote cards */
 
 .testimonials {
-  margin: 2.5em 0;
+  margin: 0;
 
   &__header {
-    margin-bottom: 1.5em;
+    margin-bottom: 2rem;
 
     h3 {
       text-transform: none;
-      letter-spacing: _font(kerning-heading);
       font-family: _font(family-heading);
-      font-size: 1.5rem;
+      font-size: 2.5rem;
       font-weight: _font(weight-heading);
       color: _palette(text-primary);
       margin-bottom: 0.4em;
+
+      @include breakpoint(small) {
+        font-size: 1.75rem;
+      }
     }
 
     p {
       color: _palette(text-secondary);
+      font-size: 1.05rem;
       margin-bottom: 0;
     }
   }
@@ -25,7 +29,7 @@
   &__grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.5rem;
+    gap: 2rem;
 
     @include breakpoint(small) {
       grid-template-columns: 1fr;
@@ -35,36 +39,37 @@
 
 .testimonial-card {
   background: _palette(surface-raised);
-  border: 1px solid _palette(border-subtle);
   border-radius: map-get($radius, xl);
-  padding: 2rem;
+  padding: 2.5rem;
   position: relative;
+  box-shadow: map-get($shadow, sm);
+  border: 0;
 
-  // Decorative peach quote mark
+  // Large decorative quote mark
   &::before {
     content: '\201C';
     position: absolute;
-    top: 0.75rem;
-    left: 1.25rem;
-    font-size: 3rem;
+    top: 1rem;
+    left: 1.5rem;
+    font-size: 4rem;
     line-height: 1;
     color: _palette(peach);
     font-family: _font(family-heading);
-    opacity: 0.6;
+    opacity: 0.35;
   }
 
   &__quote {
     color: _palette(text-body);
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-style: italic;
-    line-height: 1.7;
-    margin: 1.5rem 0 1rem;
+    line-height: 1.75;
+    margin: 2rem 0 1.25rem;
     padding: 0;
   }
 
   &__author {
     color: _palette(text-primary);
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     font-weight: _font(weight-bold);
     margin-bottom: 0;
 
@@ -72,17 +77,16 @@
       color: _palette(text-secondary);
       font-weight: _font(weight);
       display: block;
-      font-size: 0.85rem;
-      margin-top: 0.15rem;
+      font-size: 0.875rem;
+      margin-top: 0.2rem;
     }
   }
 
   &--featured {
-    border-left: 3px solid _palette(peach);
+    border-left: 4px solid _palette(peach);
   }
 }
 
-// Testimonials on dark backgrounds
 .section-dark .testimonial-card {
   background: _palette(surface-raised);
 }

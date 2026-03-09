@@ -32,66 +32,63 @@ const Index = () => (
     ]}
   >
     <article className="post" id="index">
-      {/* Hero — light background, conversational */}
+      {/* Hero — light, conversational, big serif */}
       <HeroSection />
 
-      {/* Stats bar — social proof numbers */}
+      {/* Stats */}
       <StatsBar />
 
-      {/* Newsletter — high on the page like Ali */}
+      {/* Newsletter — high on page */}
       <EmailCapture
         source="homepage"
         title="Stay in the loop"
-        blurb="Occasional insights on AI adoption, practical prompts, and what I'm learning from training 10,000+ professionals. No spam, no hype."
+        blurb="Practical AI insights from training 10,000+ professionals. No spam, no hype."
       />
 
-      {/* How Can I Help You? — the service router */}
-      <section className="section-yellow section-padding full-bleed">
+      {/* How Can I Help You? */}
+      <section className="section-warm section-padding-xl full-bleed">
         <div className="content-wide">
-          <h2 className="section-heading">
+          <h2 className="home-section-title">
             How Can I
-            {' '}
-            <span className="heading-accent">Help You?</span>
+            <br />
+            <em>Help You?</em>
           </h2>
           <div className="help-grid">
             <Link to="/services#organizations" className="help-card">
-              <div className="help-card__icon">&#x1F3E2;</div>
               <h3>Workshops for Organizations</h3>
               <p>
                 Align your team, lower the fear, and build practical AI skills
                 tied to daily workflows.
               </p>
-              <span className="help-card__cta">Learn more &rarr;</span>
+              <span className="help-card__arrow">&rarr;</span>
             </Link>
             <Link to="/services#one-on-one" className="help-card">
-              <div className="help-card__icon">&#x1F91D;</div>
               <h3>One-on-One Coaching</h3>
               <p>
                 Personalized sessions focused on your projects, your role,
                 and your goals.
               </p>
-              <span className="help-card__cta">Learn more &rarr;</span>
+              <span className="help-card__arrow">&rarr;</span>
             </Link>
             <Link to="/services#train-the-trainer" className="help-card">
-              <div className="help-card__icon">&#x1F393;</div>
               <h3>Train-the-Trainer</h3>
               <p>
                 Become a certified AI trainer with the Adaptig methodology.
                 Teach with confidence.
               </p>
-              <span className="help-card__cta">Learn more &rarr;</span>
+              <span className="help-card__arrow">&rarr;</span>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Trusted by leaders — testimonials on white */}
-      <section className="section-base section-padding full-bleed">
+      {/* Testimonials */}
+      <section className="section-base section-padding-xl full-bleed">
         <div className="content-wide">
-          <h2 className="section-heading">
+          <h2 className="home-section-title">
             Trusted by
             {' '}
-            <span className="heading-accent">Leaders</span>
+            <em>Leaders</em>
           </h2>
           <TestimonialSection
             testimonials={testimonials}
@@ -101,17 +98,17 @@ const Index = () => (
         </div>
       </section>
 
-      {/* Featured Case Studies */}
-      <section className="section-sunken section-padding full-bleed">
+      {/* Case Studies */}
+      <section className="section-sunken section-padding-xl full-bleed">
         <div className="content-wide">
           <FeaturedCaseStudies limit={3} tag="case-study" />
         </div>
       </section>
 
       {/* Where I Work */}
-      <section className="section-base section-padding full-bleed">
+      <section className="section-base section-padding-xl full-bleed">
         <div className="content-wide">
-          <h2 className="section-heading">Where I Work</h2>
+          <h2 className="home-section-title">Where I Work</h2>
           <div className="card-grid cols-2">
             <div className="card">
               <h4>
@@ -139,11 +136,11 @@ const Index = () => (
         </div>
       </section>
 
-      {/* Bottom CTA — newsletter repeat */}
+      {/* Bottom CTA */}
       <EmailCapture
         source="homepage-bottom"
         title="Ready to bring AI to your team?"
-        blurb="Drop your email for practical AI insights, or book a free conversation to explore what's possible."
+        blurb="Drop your email for practical insights, or book a free conversation to explore what's possible."
       />
 
       <p style={{

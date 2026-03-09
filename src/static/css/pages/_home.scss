@@ -1,6 +1,42 @@
-/* Homepage — Ali Abdaal inspired warm funnel */
+/* Homepage — editorial warm style */
 
-// ─── Hero — LIGHT background, conversational ───────────────
+// ─── Extra-large section padding for homepage ──────────────
+.section-padding-xl {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+
+  @include breakpoint(small) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+// ─── Warm cream section (Ali's yellow wash) ────────────────
+.section-warm {
+  background-color: #FDF6E8;
+}
+
+// ─── Homepage section titles — huge editorial serif ────────
+.home-section-title {
+  font-family: _font(family-heading);
+  font-size: 3.25rem;
+  font-weight: _font(weight-heading);
+  color: _palette(text-primary);
+  line-height: 1.1;
+  margin-bottom: 2.5rem;
+
+  em {
+    font-style: italic;
+    color: _palette(peach);
+  }
+
+  @include breakpoint(small) {
+    font-size: 2.25rem;
+    margin-bottom: 1.75rem;
+  }
+}
+
+// ─── Hero — LIGHT, editorial, breathing ────────────────────
 .home-hero {
   background-color: _palette(surface-base);
   padding: 0;
@@ -8,51 +44,55 @@
   &__inner {
     display: flex;
     align-items: center;
-    gap: 4rem;
-    padding: 6rem 1.5rem 4rem;
+    gap: 5rem;
+    padding: 7rem 1.5rem 5rem;
 
     @include breakpoint(medium) {
       flex-direction: column;
       text-align: center;
-      padding: 4rem 1.5rem 3rem;
+      padding: 4.5rem 1.5rem 3.5rem;
+      gap: 3rem;
     }
   }
 
   &__text {
     flex: 1;
+    max-width: 600px;
   }
 
   &__greeting {
     font-family: _font(family-heading);
-    font-size: 1.35rem;
+    font-size: 1.5rem;
     color: _palette(peach);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     font-weight: _font(weight-heading);
+    font-style: italic;
   }
 
   h1 {
     color: _palette(text-primary);
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-weight: _font(weight-heading);
-    letter-spacing: _font(kerning-heading);
-    line-height: 1.1;
-    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    margin-bottom: 1.75rem;
+
+    em {
+      font-style: italic;
+      color: _palette(amber);
+    }
 
     @include breakpoint(small) {
-      font-size: 2.25rem;
+      font-size: 2.5rem;
     }
-  }
-
-  &__highlight {
-    color: _palette(amber);
   }
 
   &__subtitle {
     color: _palette(text-body);
-    font-size: 1.15rem;
-    line-height: 1.7;
-    margin-bottom: 2.25rem;
-    max-width: 520px;
+    font-size: 1.2rem;
+    line-height: 1.75;
+    margin-bottom: 2.5rem;
+    max-width: 480px;
 
     @include breakpoint(medium) {
       margin-left: auto;
@@ -68,80 +108,59 @@
     @include breakpoint(medium) {
       justify-content: center;
     }
-  }
 
-  &__photo {
-    flex-shrink: 0;
-    width: 360px;
-    height: 400px;
-    position: relative;
+    .button--outline {
+      background-color: transparent;
+      border: 2px solid _palette(text-primary);
+      color: _palette(text-primary) !important;
 
-    @include breakpoint(medium) {
-      width: 260px;
-      height: 290px;
-      order: -1;
+      &:hover {
+        background-color: _palette(text-primary);
+        color: _palette(surface-base) !important;
+      }
     }
   }
 
-  // Decorative blob behind photo — Ali's yellow shape style
-  &__photo-blob {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-12deg);
-    width: 110%;
-    height: 110%;
-    background: _palette(yellow);
-    border-radius: 35% 65% 55% 45% / 55% 35% 65% 45%;
-    z-index: 0;
-    opacity: 0.85;
-  }
-
-  &__photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top center;
-    border-radius: map-get($radius, xl);
+  // ── Photo — clean solid yellow background ──
+  &__photo {
+    flex-shrink: 0;
+    width: 380px;
+    height: 440px;
     position: relative;
-    z-index: 1;
+    background: _palette(yellow);
+    border-radius: map-get($radius, xl);
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+
+    @include breakpoint(medium) {
+      width: 280px;
+      height: 320px;
+      order: -1;
+    }
+
+    @include breakpoint(small) {
+      width: 240px;
+      height: 280px;
+    }
   }
 }
 
-// ─── Section headings — large serif ────────────────────────
-.section-heading {
-  font-family: _font(family-heading);
-  font-size: 2.75rem;
-  font-weight: _font(weight-heading);
-  color: _palette(text-primary);
-  line-height: 1.15;
-  margin-bottom: 1.75rem;
-
-  @include breakpoint(small) {
-    font-size: 2rem;
-  }
-}
-
-.heading-accent {
-  color: _palette(peach);
-}
-
-// ─── Yellow section band — Ali's signature ─────────────────
-.section-yellow {
-  background-color: _palette(yellow-subtle);
-  // Replace with solid yellow for stronger effect:
-  background-color: #FEF3D0;
-}
-
-// ─── How Can I Help grid ───────────────────────────────────
+// ─── Help grid — clean text cards, no emoji ────────────────
 .help-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.75rem;
+  gap: 2rem;
 
   @include breakpoint(medium) {
     grid-template-columns: 1fr;
-    gap: 1.25rem;
+    gap: 1.5rem;
   }
 }
 
@@ -149,11 +168,12 @@
   display: flex;
   flex-direction: column;
   background: _palette(surface-raised);
-  border: 1px solid _palette(border-subtle);
   border-radius: map-get($radius, xl);
-  padding: 2.25rem;
+  padding: 2.5rem;
   text-decoration: none;
+  box-shadow: map-get($shadow, sm);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 0;
 
   &:hover {
     transform: translateY(-4px);
@@ -161,29 +181,32 @@
     color: inherit !important;
   }
 
-  &__icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    line-height: 1;
-  }
-
   h3 {
     font-size: 1.35rem;
-    margin-bottom: 0.5rem;
+    font-family: _font(family-heading);
+    margin-bottom: 0.75rem;
     color: _palette(text-primary);
+    line-height: 1.25;
   }
 
   p {
     color: _palette(text-body);
-    line-height: 1.65;
-    margin-bottom: 1.25rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
     flex: 1;
+    font-size: 1rem;
   }
 
-  &__cta {
+  &__arrow {
     color: _palette(amber);
+    font-size: 1.5rem;
     font-weight: _font(weight-bold);
-    font-size: 0.95rem;
+    transition: transform 0.2s ease;
+    align-self: flex-start;
+  }
+
+  &:hover &__arrow {
+    transform: translateX(4px);
   }
 }
 
@@ -208,6 +231,7 @@
   > .section-base,
   > .section-sunken,
   > .section-dark,
+  > .section-warm,
   > .section-yellow,
   > .hero-gradient,
   > .page-hero,
@@ -219,7 +243,6 @@
   }
 }
 
-// Stats floating card
 #index > .stats-floating {
   max-width: _size(content-standard);
 }
@@ -229,16 +252,21 @@
   margin: 0;
 
   header {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 
     h3 {
       font-family: _font(family-heading);
-      font-size: 2rem;
-      margin-bottom: 0.25rem;
+      font-size: 2.5rem;
+      margin-bottom: 0.35rem;
+
+      @include breakpoint(small) {
+        font-size: 1.75rem;
+      }
     }
 
     p {
       color: _palette(text-secondary);
+      font-size: 1.05rem;
       margin: 0;
     }
   }
@@ -246,7 +274,7 @@
   &__grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.5rem;
+    gap: 2rem;
 
     @include breakpoint(medium) {
       grid-template-columns: 1fr;
@@ -255,11 +283,11 @@
 
   &__card {
     background: _palette(surface-raised);
-    border: 1px solid _palette(border-subtle);
     border-radius: map-get($radius, xl);
     box-shadow: map-get($shadow, sm);
-    padding: 2rem;
+    padding: 2.25rem;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
+    border: 0;
 
     &:hover {
       box-shadow: map-get($shadow, md);
@@ -267,13 +295,13 @@
     }
 
     h4 {
-      font-size: 1.1rem;
-      margin-bottom: 0.4em;
+      font-size: 1.15rem;
+      margin-bottom: 0.5em;
     }
 
     p {
       color: _palette(text-body);
-      line-height: 1.65;
+      line-height: 1.7;
       margin-bottom: 0.6em;
     }
   }
@@ -284,7 +312,7 @@
   }
 
   &__all {
-    margin-top: 1.25rem;
+    margin-top: 1.5rem;
     margin-bottom: 0;
   }
 }
@@ -296,20 +324,14 @@
   header {
     margin-bottom: 1.5rem;
 
-    h3 {
-      margin-bottom: 0.25rem;
-    }
-
-    p {
-      color: _palette(text-secondary);
-      margin: 0;
-    }
+    h3 { margin-bottom: 0.25rem; }
+    p { color: _palette(text-secondary); margin: 0; }
   }
 
   &__grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.5rem;
+    gap: 2rem;
 
     @include breakpoint(medium) {
       grid-template-columns: 1fr;
@@ -318,30 +340,19 @@
 
   &__card {
     background: _palette(surface-raised);
-    border: 1px solid _palette(border-subtle);
     border-top: 3px solid _palette(peach);
     border-radius: map-get($radius, xl);
     box-shadow: map-get($shadow, sm);
-    padding: 2rem;
+    padding: 2.25rem;
     display: flex;
     flex-direction: column;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
 
-    h4 {
-      font-size: 1.1rem;
-      margin-bottom: 0.5em;
-    }
-
-    p {
-      color: _palette(text-body);
-      line-height: 1.65;
-      margin-bottom: 1.25em;
-      flex: 1;
-    }
-
-    .button {
-      align-self: flex-start;
-      font-size: 0.85rem;
-    }
+    h4 { font-size: 1.1rem; margin-bottom: 0.5em; }
+    p { color: _palette(text-body); line-height: 1.7; margin-bottom: 1.25em; flex: 1; }
+    .button { align-self: flex-start; font-size: 0.85rem; }
   }
 }
 
@@ -351,9 +362,7 @@
   padding-top: 1em;
   scroll-margin-top: 5em;
 
-  &__header {
-    margin-bottom: 1.25em;
-  }
+  &__header { margin-bottom: 1.25em; }
 
   &__social-proof {
     color: _palette(text-secondary);
@@ -364,7 +373,7 @@
 
   &__testimonial {
     margin: 1.5em 0;
-    padding: 1.5em;
+    padding: 2em;
     background: _palette(surface-sunken);
     border-radius: map-get($radius, xl);
     position: relative;
@@ -372,13 +381,13 @@
     &::before {
       content: '\201C';
       position: absolute;
-      top: 0.5rem;
-      left: 1rem;
+      top: 0.75rem;
+      left: 1.25rem;
       font-size: 2.5rem;
       line-height: 1;
       color: _palette(peach);
       font-family: _font(family-heading);
-      opacity: 0.5;
+      opacity: 0.4;
     }
 
     blockquote {
@@ -411,13 +420,10 @@
   &__tiers {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.5rem;
+    gap: 2rem;
     margin: 1.5em 0;
 
-    > p {
-      grid-column: 1 / -1;
-      margin-bottom: 0;
-    }
+    > p { grid-column: 1 / -1; margin-bottom: 0; }
 
     @include breakpoint(medium) {
       grid-template-columns: 1fr;
@@ -425,26 +431,16 @@
   }
 
   &__tier {
-    padding: 2rem;
+    padding: 2.25rem;
     background: _palette(surface-raised);
-    border: 1px solid _palette(border-subtle);
     border-radius: map-get($radius, xl);
     box-shadow: map-get($shadow, sm);
+    border: 0;
 
-    h5 {
-      font-size: 1rem;
-      margin-bottom: 0.4em;
-    }
+    h5 { font-size: 1rem; margin-bottom: 0.4em; }
+    p { color: _palette(text-body); line-height: 1.7; margin-bottom: 0.9em; }
 
-    p {
-      color: _palette(text-body);
-      line-height: 1.65;
-      margin-bottom: 0.9em;
-    }
-
-    &--premium {
-      border-top: 3px solid _palette(peach);
-    }
+    &--premium { border-top: 3px solid _palette(peach); }
   }
 
   &__item-cta,
@@ -457,17 +453,7 @@
 .related-case-studies {
   margin: 1.5em 0;
 
-  h5 {
-    font-size: 0.95rem;
-    margin-bottom: 0.6em;
-  }
-
-  ul {
-    margin: 0;
-    padding-left: 1.3em;
-  }
-
-  li {
-    margin: 0.4em 0;
-  }
+  h5 { font-size: 0.95rem; margin-bottom: 0.6em; }
+  ul { margin: 0; padding-left: 1.3em; }
+  li { margin: 0.4em 0; }
 }
