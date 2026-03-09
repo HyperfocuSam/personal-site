@@ -1,15 +1,15 @@
-/* Card — clean shadow-driven cards (no borders) */
+/* Card — cream on white, no borders, no shadows (Ali Abdaal style) */
 
 .card {
   background-color: _palette(surface-raised);
   border: 0;
   border-radius: map-get($radius, xl);
-  box-shadow: map-get($shadow, sm);
-  padding: 2.25rem;
+  box-shadow: none;
+  padding: 4rem;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 
   &:hover {
-    box-shadow: map-get($shadow, md);
+    box-shadow: map-get($shadow, sm);
     transform: translateY(-3px);
   }
 
@@ -19,6 +19,10 @@
 
   p:last-child {
     margin-bottom: 0;
+  }
+
+  @include breakpoint(small) {
+    padding: 2.5rem;
   }
 }
 

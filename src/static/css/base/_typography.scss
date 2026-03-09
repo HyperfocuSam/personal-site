@@ -6,7 +6,7 @@ select,
 textarea {
   color: _palette(text-body);
   font-family: _font(family);
-  font-size: 17px;
+  font-size: 18px;
   font-weight: _font(weight);
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
@@ -20,11 +20,11 @@ textarea {
 a {
   transition: color 0.25s ease, border-bottom-color 0.25s ease;
   border-bottom: 0;
-  color: _palette(amber);
+  color: _palette(peach);
   text-decoration: none;
 
   &:hover {
-    color: _palette(peach) !important;
+    color: _palette(peach-light) !important;
   }
 }
 
@@ -48,7 +48,7 @@ h1, h2, h3 {
   font-family: _font(family-heading);
   font-weight: _font(weight-heading);
   letter-spacing: _font(kerning-heading);
-  line-height: 1.2;
+  line-height: 1.15;
   margin: 0 0 (_size(element-margin) * 0.5) 0;
   text-transform: none;
 
@@ -57,7 +57,7 @@ h1, h2, h3 {
     border-bottom: 0;
 
     &:hover {
-      color: _palette(amber) !important;
+      color: _palette(peach) !important;
     }
   }
 }
@@ -77,33 +77,33 @@ h4, h5, h6 {
     border-bottom: 0;
 
     &:hover {
-      color: _palette(amber) !important;
+      color: _palette(peach) !important;
     }
   }
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
 
   @include breakpoint(small) {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
 }
 
 h2 {
-  font-size: 2.25rem;
+  font-size: 2.5rem;
 
   @include breakpoint(small) {
-    font-size: 1.65rem;
+    font-size: 1.75rem;
   }
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 
 h4 {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
 }
 
 h5 {
@@ -136,7 +136,7 @@ sup {
 }
 
 blockquote {
-  border-left: 3px solid _palette(amber);
+  border-left: 3px solid _palette(peach);
   background: _palette(surface-sunken);
   font-style: italic;
   margin: 0 0 _size(element-margin) 0;

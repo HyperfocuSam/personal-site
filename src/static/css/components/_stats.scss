@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
-  padding: 2rem 0;
+  padding: 2.5rem 0;
 
   @include breakpoint(medium) {
     grid-template-columns: repeat(2, 1fr);
@@ -23,13 +23,13 @@
     display: block;
     font-family: _font(family-heading);
     font-weight: _font(weight-heading);
-    font-size: 2.75rem;
+    font-size: 3rem;
     color: _palette(text-primary);
     line-height: 1.1;
     margin-bottom: 0.35rem;
 
     @include breakpoint(small) {
-      font-size: 2rem;
+      font-size: 2.25rem;
     }
   }
 
@@ -44,13 +44,13 @@
   }
 }
 
-// Stats floating card
+// Stats floating card — cream bg, no border, warm shadow
 .stats-floating {
   background: _palette(surface-raised);
-  border: 1px solid _palette(border-subtle);
+  border: 0;
   border-radius: map-get($radius, xl);
   box-shadow: map-get($shadow, lg);
-  padding: 2rem 2.5rem;
+  padding: 2.5rem 3rem;
   margin: -2.5rem auto 0;
   position: relative;
   z-index: 2;
@@ -58,6 +58,6 @@
 
   @include breakpoint(small) {
     margin: -1.5rem 1rem 0;
-    padding: 1.25rem;
+    padding: 1.5rem;
   }
 }

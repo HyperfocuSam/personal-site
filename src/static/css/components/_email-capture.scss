@@ -1,44 +1,44 @@
-/* Email Capture — editorial centered newsletter */
+/* Email Capture — oversized editorial newsletter (Ali Abdaal style) */
 
 .email-capture {
   background-color: _palette(surface-sunken);
   color: _palette(text-primary);
   margin: 0;
-  padding: 5rem 1.5rem;
+  padding: 6rem 1.5rem;
   width: 100%;
   text-align: center;
 
   @include breakpoint(small) {
-    padding: 3.5rem 1.5rem;
+    padding: 4rem 1.5rem;
   }
 
   h3 {
     text-transform: none;
     font-family: _font(family-heading);
-    font-size: 2.5rem;
+    font-size: 3.25rem;
     font-weight: _font(weight-heading);
     color: _palette(text-primary);
     margin-bottom: 0.5em;
-    letter-spacing: -0.01em;
+    letter-spacing: _font(kerning-heading);
 
     @include breakpoint(small) {
-      font-size: 1.75rem;
+      font-size: 2rem;
     }
   }
 
   p {
     color: _palette(text-body);
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     line-height: 1.7;
-    margin-bottom: 2em;
-    max-width: 480px;
+    margin-bottom: 2.5em;
+    max-width: 520px;
     margin-left: auto;
     margin-right: auto;
   }
 
   a {
-    color: _palette(amber);
-    &:hover { color: _palette(peach) !important; }
+    color: _palette(peach);
+    &:hover { color: _palette(peach-light) !important; }
   }
 
   &__form {
@@ -68,7 +68,7 @@
     align-items: center;
     display: flex;
     gap: 0.75em;
-    max-width: 460px;
+    max-width: 540px;
     width: 100%;
 
     @include breakpoint(small) {
@@ -79,39 +79,39 @@
   input[type="email"] {
     margin: 0;
     flex: 1;
-    background: _palette(surface-raised);
+    background: _palette(surface-base);
     border: 2px solid _palette(border-strong);
     border-radius: map-get($radius, pill);
     color: _palette(text-body);
-    padding: 1em 1.5em;
-    font-size: 1rem;
+    padding: 1.25em 2em;
+    font-size: 1.2rem;
     width: 100%;
 
     &:focus {
-      border-color: _palette(amber);
+      border-color: _palette(peach);
       outline: none;
-      box-shadow: 0 0 0 3px _palette(amber-subtle);
+      box-shadow: 0 0 0 3px _palette(peach-subtle);
     }
   }
 
   &__submit {
     margin: 0;
-    background-color: _palette(amber);
+    background-color: _palette(peach);
     color: _palette(ink) !important;
     border: 0;
     border-radius: map-get($radius, pill);
     font-weight: _font(weight-bold);
-    font-size: 1rem;
-    padding: 1em 2.25em;
-    min-width: 140px;
+    font-size: 1.05rem;
+    padding: 1.15em 2.5em;
+    min-width: 160px;
     text-align: center;
     cursor: pointer;
     transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
 
     &:hover {
-      background-color: _palette(peach);
+      background-color: _palette(peach-light);
       transform: translateY(-2px);
-      box-shadow: map-get($shadow, md);
+      box-shadow: map-get($shadow, lg);
     }
   }
 }

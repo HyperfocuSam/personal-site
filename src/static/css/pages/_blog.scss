@@ -88,11 +88,11 @@
     transition: transform 0.2s ease;
     overflow: hidden;
     border-radius: map-get($radius, xl);
-    border: 1px solid _palette(border-subtle);
+    border: 0;
 
     &:hover {
       transform: translateY(-3px);
-      box-shadow: map-get($shadow, md);
+      box-shadow: map-get($shadow, sm);
 
       .blog-featured__image {
         transform: scale(1.03);
@@ -158,12 +158,13 @@
 .blog-card {
   border-radius: map-get($radius, xl);
   overflow: hidden;
-  border: 1px solid _palette(border-subtle);
+  border: 0;
+  background: _palette(surface-raised);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 
   &:hover {
     transform: translateY(-3px);
-    box-shadow: map-get($shadow, md);
+    box-shadow: map-get($shadow, sm);
 
     .blog-card__image {
       transform: scale(1.03);
@@ -395,7 +396,7 @@
   padding: 1.5em;
   background: _palette(surface-raised);
   border-radius: map-get($radius, xl);
-  border: 1px solid _palette(border-subtle);
+  border: 0;
 
   &__image-link {
     border: 0;
@@ -563,7 +564,7 @@
     background: _palette(surface-raised);
     border-radius: map-get($radius, xl);
     overflow: hidden;
-    border: 1px solid _palette(border-subtle);
+    border: 0;
   }
 
   &__content {
@@ -652,7 +653,7 @@
   margin: 2em 0;
   padding: 1.25em;
   background: _palette(surface-raised);
-  border: 1px solid _palette(border-subtle);
+  border: 0;
   border-left: 4px solid _palette(peach);
   border-radius: 0 map-get($radius, xl) map-get($radius, xl) 0;
 

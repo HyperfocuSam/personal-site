@@ -1,27 +1,28 @@
-/* Testimonials — editorial quote cards */
+/* Testimonials — editorial quote cards (Ali Abdaal style) */
 
 .testimonials {
   margin: 0;
 
   &__header {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 
     h3 {
       text-transform: none;
       font-family: _font(family-heading);
-      font-size: 2.5rem;
+      font-size: 3rem;
       font-weight: _font(weight-heading);
       color: _palette(text-primary);
       margin-bottom: 0.4em;
+      letter-spacing: _font(kerning-heading);
 
       @include breakpoint(small) {
-        font-size: 1.75rem;
+        font-size: 2rem;
       }
     }
 
     p {
       color: _palette(text-secondary);
-      font-size: 1.05rem;
+      font-size: 1.1rem;
       margin-bottom: 0;
     }
   }
@@ -40,30 +41,30 @@
 .testimonial-card {
   background: _palette(surface-raised);
   border-radius: map-get($radius, xl);
-  padding: 2.5rem;
+  padding: 3rem;
   position: relative;
-  box-shadow: map-get($shadow, sm);
+  box-shadow: none;
   border: 0;
 
   // Large decorative quote mark
   &::before {
     content: '\201C';
     position: absolute;
-    top: 1rem;
-    left: 1.5rem;
+    top: 1.25rem;
+    left: 1.75rem;
     font-size: 4rem;
     line-height: 1;
     color: _palette(peach);
     font-family: _font(family-heading);
-    opacity: 0.35;
+    opacity: 0.3;
   }
 
   &__quote {
     color: _palette(text-body);
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     font-style: italic;
     line-height: 1.75;
-    margin: 2rem 0 1.25rem;
+    margin: 2rem 0 1.5rem;
     padding: 0;
   }
 
@@ -84,6 +85,10 @@
 
   &--featured {
     border-left: 4px solid _palette(peach);
+  }
+
+  @include breakpoint(small) {
+    padding: 2.25rem;
   }
 }
 

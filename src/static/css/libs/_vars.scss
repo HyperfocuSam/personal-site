@@ -1,6 +1,6 @@
 // Design System: hyperfocusam.com
-// Style: Ali Abdaal-inspired warm personal brand + funnel
-// Serif headings, warm cream surfaces, peach/amber accents
+// Directly matched to Ali Abdaal's computed CSS values
+// White base, cream cards, peach CTAs, massive typography
 
 // Misc.
 $misc: (
@@ -17,14 +17,14 @@ $duration: (
 $size: (
   element-height: 2.75em,
   element-margin: 2em,
-  section-spacing: 5rem,
-  section-spacing-small: 3rem,
+  section-spacing: 6rem,
+  section-spacing-small: 4rem,
   menu: 20em,
   content-narrow: 720px,
   content-standard: 960px,
-  content-wide: 1200px,
-  nav-height: 72px,
-  nav-height-small: 60px,
+  content-wide: 1440px,
+  nav-height: 80px,
+  nav-height-small: 64px,
 );
 
 // Font.
@@ -58,34 +58,34 @@ $font: (
   weight-heading: 400,
   weight-heading-bold: 400,
   weight-heading-extrabold: 400,
-  kerning-heading: -0.01em,
+  kerning-heading: -0.03em,
   kerning-meta: 0.08em,
 );
 
-// Palette — warm personal brand
+// Palette — white base, cream cards (Ali's inverted system)
 $palette: (
-  // Ink (used sparingly — nav, footer, dark accents)
+  // Ink
   ink: #1B1624,
   ink-mid: #2a2535,
   ink-light: #3d3850,
 
-  // Amber (primary accent — buttons, links, highlights)
-  amber: #c8965a,
-  amber-light: #d4a96e,
-  amber-subtle: rgba(200, 150, 90, 0.12),
-
-  // Peach coral (secondary accent — blobs, decorative shapes)
+  // Peach (PRIMARY accent — CTAs, subscribe buttons)
   peach: #FD976D,
   peach-light: #fdb99a,
   peach-subtle: rgba(253, 151, 109, 0.12),
 
-  // Yellow (tertiary — highlights, badges)
+  // Amber (secondary — links, decorative)
+  amber: #c8965a,
+  amber-light: #d4a96e,
+  amber-subtle: rgba(200, 150, 90, 0.12),
+
+  // Yellow (section backgrounds, photo backing)
   yellow: #FDD46B,
   yellow-subtle: rgba(253, 212, 107, 0.15),
 
-  // Surfaces (Ali's 4-tier warm cream system)
-  surface-base: #F9F6F3,
-  surface-raised: #FFFFFF,
+  // Surfaces — WHITE base, cream for cards/raised elements
+  surface-base: #FFFFFF,
+  surface-raised: #F9F6F3,
   surface-overlay: #FFFFFF,
   surface-sunken: #F3EDE9,
   surface-deep: #ECE5E1,
@@ -101,11 +101,11 @@ $palette: (
   border-subtle: #ECE5E1,
   border-strong: #E0D8D0,
 
-  // Shadows (warm-tinted)
-  shadow-color: rgba(27, 22, 36, 0.06),
+  // Shadows (warm-tinted, Ali's massive shadow style)
+  shadow-color: rgba(224, 216, 208, 0.65),
 
-  // Legacy mappings (Skel compatibility)
-  bg: #F9F6F3,
+  // Legacy mappings
+  bg: #FFFFFF,
   bg-alt: #F9F6F3,
   fg: #4a4553,
   fg-bold: #1B1624,
@@ -113,17 +113,17 @@ $palette: (
   border: #ECE5E1,
   border-bg: #F3EDE9,
   border-alt: #E0D8D0,
-  accent: #c8965a,
+  accent: #FD976D,
 );
 
-// Shadows (softer, warmer)
+// Shadows — Ali's warm massive shadows
 $shadow: (
-  sm: 0 1px 3px rgba(27, 22, 36, 0.04),
-  md: 0 4px 16px rgba(27, 22, 36, 0.06),
-  lg: 0 8px 30px rgba(27, 22, 36, 0.10),
+  sm: 0 2px 8px rgba(224, 216, 208, 0.3),
+  md: 0 8px 30px rgba(224, 216, 208, 0.4),
+  lg: 0 50px 80px -15px rgba(224, 216, 208, 0.65),
 );
 
-// Border radius (much rounder — Ali style)
+// Border radius
 $radius: (
   sm: 6px,
   md: 10px,

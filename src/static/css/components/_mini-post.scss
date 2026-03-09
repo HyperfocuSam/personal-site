@@ -21,7 +21,7 @@
   display: flex;
   flex-direction: column;
   background: _palette(surface-raised);
-  border: solid 1px _palette(border-subtle);
+  border: 0;
   border-radius: map-get($radius, xl);
   margin: 0 0 _size(element-margin);
 
