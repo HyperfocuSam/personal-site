@@ -1,3 +1,5 @@
+/* Testimonials — warm accent blocks */
+
 .testimonials {
   margin: 2.5em 0;
 
@@ -6,49 +8,81 @@
 
     h3 {
       text-transform: none;
-      letter-spacing: 0.04em;
-      font-size: 1.15em;
+      letter-spacing: _font(kerning-heading);
+      font-size: 1.35rem;
+      font-weight: _font(weight-heading-bold);
+      color: _palette(text-primary);
       margin-bottom: 0.4em;
     }
 
     p {
-      color: _palette(fg-bold);
+      color: _palette(text-secondary);
       margin-bottom: 0;
     }
   }
 
   &__grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1em;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
 
-    @include breakpoint(medium) {
+    @include breakpoint(small) {
       grid-template-columns: 1fr;
     }
   }
 }
 
 .testimonial-card {
-  background: _palette(bg-alt);
-  border: 1px solid _palette(border);
-  border-left: 4px solid _palette(accent);
-  padding: 1.1em;
+  background: _palette(surface-sunken);
+  border: 0;
+  border-radius: map-get($radius, lg);
+  padding: 1.75rem;
+  position: relative;
+
+  // Decorative amber quote mark
+  &::before {
+    content: '\201C';
+    position: absolute;
+    top: 0.75rem;
+    left: 1.25rem;
+    font-size: 3rem;
+    line-height: 1;
+    color: _palette(amber);
+    font-family: Georgia, serif;
+    opacity: 0.6;
+  }
 
   &__quote {
-    color: _palette(fg-bold);
-    font-size: 1.03em;
-    line-height: 1.6;
-    margin: 0 0 0.8em;
+    color: _palette(text-body);
+    font-size: 1rem;
+    font-style: italic;
+    line-height: 1.7;
+    margin: 1.5rem 0 1rem;
+    padding: 0;
   }
 
   &__author {
-    color: _palette(fg-bold);
-    font-size: 0.95em;
-    letter-spacing: 0.02em;
+    color: _palette(text-primary);
+    font-size: 0.9rem;
+    font-weight: _font(weight-bold);
     margin-bottom: 0;
+
+    span {
+      color: _palette(text-secondary);
+      font-weight: _font(weight);
+      display: block;
+      font-size: 0.85rem;
+      margin-top: 0.15rem;
+    }
   }
 
   &--featured {
-    border-left-width: 6px;
+    border-left: 3px solid _palette(amber);
   }
+}
+
+// Testimonials on dark backgrounds
+.section-dark .testimonial-card,
+.section-sunken .testimonial-card {
+  background: _palette(surface-raised);
 }

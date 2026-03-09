@@ -1,10 +1,4 @@
-///
-/// Future Imperfect by HTML5 UP
-/// html5up.net | @ajlkn
-/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-///
-
-/* Section/Article */
+/* Section/Article — base + header styling */
 
 section,
 article {
@@ -13,14 +7,64 @@ article {
   }
 }
 
+// Page/post header inside articles
 header {
+  .title {
+    margin-bottom: 1.5rem;
+
+    h2 {
+      margin-bottom: 0.25rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: _palette(text-secondary);
+      margin: 0;
+      line-height: 1.5;
+    }
+  }
+
+  // Standalone header paragraphs (subtitles)
   p {
-    font-family: _font(family-heading);
-    font-size: 0.7em;
-    font-weight: _font(weight-heading);
-    letter-spacing: _font(kerning-heading);
-    line-height: 2.5;
-    margin-top: -1em;
-    text-transform: uppercase;
+    font-size: 0.95rem;
+    color: _palette(text-secondary);
+    line-height: 1.5;
+    margin-top: -0.5rem;
+  }
+}
+
+// Page hero sections (dark background band at top of pages)
+.page-hero {
+  background: linear-gradient(135deg, _palette(ink) 0%, _palette(ink-mid) 50%, #172038 100%);
+  color: _palette(text-on-dark);
+  padding: 3.5rem 1.5rem 3rem;
+  width: 100%;
+
+  h2 {
+    color: _palette(text-on-dark);
+    font-size: 2rem;
+    margin-bottom: 0.35rem;
+
+    a {
+      color: _palette(text-on-dark);
+      &:hover { color: _palette(amber) !important; }
+    }
+  }
+
+  p {
+    color: _palette(text-on-dark-muted);
+    margin: 0;
+  }
+
+  .title p {
+    color: _palette(text-on-dark-muted);
+  }
+
+  @include breakpoint(small) {
+    padding: 2.5rem 1.25rem 2rem;
+
+    h2 {
+      font-size: 1.5rem;
+    }
   }
 }

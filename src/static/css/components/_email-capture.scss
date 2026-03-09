@@ -1,25 +1,35 @@
+/* Email Capture — dark band newsletter */
+
 .email-capture {
-  margin: 2.5em 0;
-  padding: 1.5em;
-  background: _palette(bg-alt);
-  border: 1px solid _palette(border);
-  border-left: 4px solid _palette(accent);
+  background-color: _palette(ink);
+  color: _palette(text-on-dark);
+  margin: 0;
+  padding: 3rem 1.5rem;
+  width: 100%;
 
   h3 {
     text-transform: none;
-    letter-spacing: 0.04em;
-    font-size: 1.1em;
+    letter-spacing: _font(kerning-heading);
+    font-size: 1.35rem;
+    font-weight: _font(weight-heading-bold);
+    color: _palette(text-on-dark);
     margin-bottom: 0.35em;
   }
 
   p {
-    color: _palette(fg-bold);
+    color: _palette(text-on-dark-muted);
     line-height: 1.65;
-    margin-bottom: 1em;
+    margin-bottom: 1.25em;
+  }
+
+  a {
+    color: _palette(amber);
+    &:hover { color: _palette(amber-light) !important; }
   }
 
   &__form {
-    margin: 0;
+    max-width: _size(content-standard);
+    margin: 0 auto;
   }
 
   &__field {
@@ -43,6 +53,7 @@
     display: grid;
     grid-template-columns: 1fr auto;
     gap: 0.75em;
+    max-width: 500px;
 
     @include breakpoint(small) {
       grid-template-columns: 1fr;
@@ -51,14 +62,34 @@
 
   input[type="email"] {
     margin: 0;
+    background: _palette(surface-overlay);
+    border: 1px solid _palette(ink-light);
+    border-radius: map-get($radius, md);
+    color: _palette(text-body);
+    padding: 0.75em 1em;
+
+    &:focus {
+      border-color: _palette(amber);
+      outline: none;
+      box-shadow: 0 0 0 2px _palette(amber-subtle);
+    }
   }
 
   &__submit {
     margin: 0;
-    height: _size(element-height);
-    line-height: _size(element-height);
+    background-color: _palette(amber);
+    color: _palette(ink) !important;
+    border: 0;
+    border-radius: map-get($radius, md);
+    font-weight: _font(weight-bold);
+    padding: 0.75em 1.5em;
     min-width: 150px;
-    padding: 0 1.5em;
     text-align: center;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+
+    &:hover {
+      background-color: _palette(amber-light);
+    }
   }
 }

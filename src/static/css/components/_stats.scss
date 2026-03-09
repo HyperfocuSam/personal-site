@@ -1,0 +1,63 @@
+/* Stats — number highlight component */
+
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding: 2rem 0;
+
+  @include breakpoint(medium) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include breakpoint(small) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+.stat-item {
+  text-align: center;
+
+  &__number {
+    display: block;
+    font-family: _font(family-heading);
+    font-weight: _font(weight-heading-bold);
+    font-size: 2.25rem;
+    color: _palette(amber);
+    line-height: 1.2;
+    margin-bottom: 0.25rem;
+
+    @include breakpoint(small) {
+      font-size: 1.75rem;
+    }
+  }
+
+  &__label {
+    display: block;
+    font-size: 0.8125rem;
+    font-weight: _font(weight-medium);
+    letter-spacing: _font(kerning-meta);
+    text-transform: uppercase;
+    color: _palette(text-secondary);
+    line-height: 1.4;
+  }
+}
+
+// Stats on cards (floating over section boundary)
+.stats-floating {
+  background: _palette(surface-raised);
+  border: 1px solid _palette(border-subtle);
+  border-radius: map-get($radius, lg);
+  box-shadow: map-get($shadow, md);
+  padding: 1.5rem 2rem;
+  margin: -2rem auto 0;
+  position: relative;
+  z-index: 2;
+  max-width: _size(content-standard);
+
+  @include breakpoint(small) {
+    margin: -1rem 1rem 0;
+    padding: 1rem;
+  }
+}
