@@ -20,12 +20,12 @@ textarea {
 a {
   transition: color 0.25s ease, border-bottom-color 0.25s ease;
   border-bottom: 1px solid transparent;
-  color: _palette(amber);
+  color: _palette(text-primary);
   text-decoration: none;
 
   &:hover {
     border-bottom-color: _palette(amber);
-    color: _palette(amber-light) !important;
+    color: _palette(amber) !important;
   }
 }
 
