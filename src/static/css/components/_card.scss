@@ -1,0 +1,66 @@
+/* Card — unified card system */
+
+.card {
+  background-color: _palette(surface-raised);
+  border: 1px solid _palette(border-subtle);
+  border-radius: map-get($radius, lg);
+  box-shadow: map-get($shadow, sm);
+  padding: 1.5rem;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    box-shadow: map-get($shadow, md);
+    transform: translateY(-2px);
+  }
+
+  h3, h4 {
+    margin-bottom: 0.5rem;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Card grid layouts
+.card-grid {
+  display: grid;
+  gap: 1.5rem;
+
+  &.cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+
+    @include breakpoint(small) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &.cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+
+    @include breakpoint(medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint(small) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &.cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+
+    @include breakpoint(medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint(small) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+// Card with amber accent top border
+.card-accent {
+  border-top: 3px solid _palette(amber);
+}
