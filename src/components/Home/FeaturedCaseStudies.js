@@ -5,6 +5,8 @@ import dayjs from 'dayjs';
 
 import posts from '../../data/posts';
 
+const { PUBLIC_URL } = process.env;
+
 const FeaturedCaseStudies = ({ limit, tag }) => {
   const caseStudies = posts
     .filter((post) => post.tags && post.tags.includes(tag))
@@ -24,13 +26,26 @@ const FeaturedCaseStudies = ({ limit, tag }) => {
       <div className="home-case-studies__grid">
         {caseStudies.map((post) => (
           <article key={post.slug} className="home-case-studies__card">
-            <h4>
-              <Link to={`/blog/${post.slug}`}>{post.title}</Link>
-            </h4>
-            <p className="home-case-studies__date">
-              {dayjs(post.date).format('MMMM D, YYYY')}
-            </p>
-            <p>{post.excerpt}</p>
+            {post.image && (
+              <Link to={`/blog/${post.slug}`} className="home-case-studies__image-link">
+                <div className="home-case-studies__image-wrap">
+                  <img
+                    src={`${PUBLIC_URL}${post.image}`}
+                    alt={post.title}
+                    className="home-case-studies__image"
+                  />
+                </div>
+              </Link>
+            )}
+            <div className="home-case-studies__content">
+              <h4>
+                <Link to={`/blog/${post.slug}`}>{post.title}</Link>
+              </h4>
+              <p className="home-case-studies__date">
+                {dayjs(post.date).format('MMMM D, YYYY')}
+              </p>
+              <p>{post.excerpt}</p>
+            </div>
           </article>
         ))}
       </div>

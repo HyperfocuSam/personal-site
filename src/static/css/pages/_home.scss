@@ -174,32 +174,53 @@
   flex-direction: column;
   background: _palette(surface-raised);
   border-radius: map-get($radius, xl);
-  padding: 3rem;
+  padding: 0;
   text-decoration: none;
   box-shadow: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 0;
+  overflow: hidden;
 
   &:hover {
     transform: translateY(-4px);
     box-shadow: map-get($shadow, md);
     color: inherit !important;
+
+    .help-card__image img {
+      transform: scale(1.05);
+    }
+  }
+
+  &__image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+      display: block;
+    }
   }
 
   h3 {
     font-size: 1.5rem;
     font-family: _font(family-heading);
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
     color: _palette(text-primary);
     line-height: 1.25;
+    padding: 1.75rem 2rem 0;
   }
 
   p {
     color: _palette(text-body);
     line-height: 1.6;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
     flex: 1;
-    font-size: 1.05rem;
+    font-size: 1rem;
+    padding: 0 2rem;
   }
 
   &__arrow {
@@ -208,14 +229,11 @@
     font-weight: _font(weight-bold);
     transition: transform 0.2s ease;
     align-self: flex-start;
+    padding: 0 2rem 1.75rem;
   }
 
   &:hover &__arrow {
     transform: translateX(4px);
-  }
-
-  @include breakpoint(small) {
-    padding: 2.25rem;
   }
 }
 
@@ -294,13 +312,18 @@
     background: _palette(surface-raised);
     border-radius: map-get($radius, xl);
     box-shadow: none;
-    padding: 3rem;
+    padding: 0;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     border: 0;
+    overflow: hidden;
 
     &:hover {
       box-shadow: map-get($shadow, sm);
       transform: translateY(-3px);
+
+      .home-case-studies__image {
+        transform: scale(1.05);
+      }
     }
 
     h4 {
@@ -313,10 +336,30 @@
       line-height: 1.6;
       margin-bottom: 0.6em;
     }
+  }
 
-    @include breakpoint(small) {
-      padding: 2.25rem;
-    }
+  &__image-link {
+    display: block;
+    border: 0;
+  }
+
+  &__image-wrap {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: _palette(surface-sunken);
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  &__content {
+    padding: 1.75rem 2rem;
   }
 
   &__date {

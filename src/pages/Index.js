@@ -55,6 +55,9 @@ const Index = () => (
           </h2>
           <div className="help-grid">
             <Link to="/services#organizations" className="help-card">
+              <div className="help-card__image">
+                <img src={`${process.env.PUBLIC_URL}/images/home/workshop-corporate.jpg`} alt="Corporate AI workshop" />
+              </div>
               <h3>Workshops for Organizations</h3>
               <p>
                 Align your team, lower the fear, and build practical AI skills
@@ -63,6 +66,9 @@ const Index = () => (
               <span className="help-card__arrow">&rarr;</span>
             </Link>
             <Link to="/services#one-on-one" className="help-card">
+              <div className="help-card__image">
+                <img src={`${process.env.PUBLIC_URL}/images/home/coaching-session.jpg`} alt="One-on-one AI coaching" />
+              </div>
               <h3>One-on-One Coaching</h3>
               <p>
                 Personalized sessions focused on your projects, your role,
@@ -71,6 +77,9 @@ const Index = () => (
               <span className="help-card__arrow">&rarr;</span>
             </Link>
             <Link to="/services#train-the-trainer" className="help-card">
+              <div className="help-card__image">
+                <img src={`${process.env.PUBLIC_URL}/images/home/train-the-trainer.jpg`} alt="Train-the-Trainer program" />
+              </div>
               <h3>Train-the-Trainer</h3>
               <p>
                 Become a certified AI trainer with the Adaptig methodology.

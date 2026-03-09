@@ -11,6 +11,7 @@ const posts = [
     excerpt: 'Every tool call in my AI assistant logs to SQLite. So I turned it into a Romance of the Three Kingdoms-style strategy game -- with named skills, fractional XP, and a six-agent squad.',
     tags: ['ai-adoption', 'developer-tools', 'personal-reflection'],
     type: 'reflection',
+    image: '/images/blog/ada-gersang-cover.png',
     featured: false,
   },
   {
