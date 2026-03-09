@@ -119,28 +119,30 @@ const Index = () => (
         <div className="content-wide">
           <h2 className="home-section-title">Where I Work</h2>
           <div className="card-grid cols-2">
-            <div className="card">
-              <h4>
-                <a href="https://adaptig.ai" target="_blank" rel="noopener noreferrer">
-                  Adaptig
-                </a>
-              </h4>
+            <a href="https://adaptig.ai" target="_blank" rel="noopener noreferrer" className="card work-card">
+              <img
+                src={`${process.env.PUBLIC_URL}/images/home/adaptig-logo.png`}
+                alt="Adaptig"
+                className="work-card__logo"
+              />
               <p>
                 Global trainer network and workshops for enterprise AI adoption.
                 Spanning North America, Latin America, Europe, and Asia-Pacific.
               </p>
-            </div>
-            <div className="card">
-              <h4>
-                <a href="https://dotai.hk" target="_blank" rel="noopener noreferrer">
-                  DotAI
-                </a>
-              </h4>
+              <span className="help-card__arrow">&rarr;</span>
+            </a>
+            <a href="https://dotai.hk" target="_blank" rel="noopener noreferrer" className="card work-card">
+              <img
+                src={`${process.env.PUBLIC_URL}/images/home/dotai-logo.png`}
+                alt="DotAI"
+                className="work-card__logo"
+              />
               <p>
                 Hong Kong AI training community serving clients including HSBC,
                 Bank of China, and Chow Tai Fook.
               </p>
-            </div>
+              <span className="help-card__arrow">&rarr;</span>
+            </a>
           </div>
         </div>
       </section>

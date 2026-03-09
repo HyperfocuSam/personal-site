@@ -514,6 +514,34 @@
   }
 }
 
+// ─── Work cards (Where I Work) ─────────────────────────────
+.work-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  border: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: map-get($shadow, md);
+    color: inherit !important;
+  }
+
+  &__logo {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    align-self: flex-start;
+    margin-bottom: 1.25rem;
+  }
+
+  p {
+    flex: 1;
+    margin-bottom: 1.25rem;
+  }
+}
+
 .related-case-studies {
   margin: 1.5em 0;
 
