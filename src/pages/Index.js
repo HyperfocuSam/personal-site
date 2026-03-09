@@ -5,6 +5,8 @@ import Main from '../layouts/Main';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 import testimonials from '../data/testimonials';
 import TestimonialSection from '../components/Testimonials/TestimonialSection';
+import HeroSection from '../components/Home/HeroSection';
+import StatsBar from '../components/Home/StatsBar';
 import FeaturedCaseStudies from '../components/Home/FeaturedCaseStudies';
 import RevenuePathCTA from '../components/Home/RevenuePathCTA';
 import EmailCapture from '../components/EmailCapture/EmailCapture';
@@ -31,98 +33,118 @@ const Index = () => (
     ]}
   >
     <article className="post" id="index">
-      <header>
-        <div className="title">
-          <h2>
-            <Link to="/">Hey there.</Link>
-          </h2>
-          <p>
-            I help organizations and professionals adopt AI in ways that actually stick.
-            If you are exploring training, coaching, or trainer development, you are in
-            the right place.
-          </p>
-        </div>
-      </header>
+      {/* Hero — full-bleed dark gradient */}
+      <HeroSection />
 
-      <section className="hero-stats">
-        <p>
-          <strong>10,000+ people</strong> trained across workshops and programs.
-          <br />
-          <strong>70+ organizations</strong> supported with practical AI adoption.
-          <br />
-          <strong>150+ one-on-one sessions</strong> delivered for professionals.
-        </p>
+      {/* Stats — floating card overlapping hero/content boundary */}
+      <StatsBar />
+
+      {/* Trusted By Leaders */}
+      <section className="section-base section-padding">
+        <div className="content-wide">
+          <TestimonialSection
+            title="Trusted by leaders"
+            subtitle="From executive teams to founders and emerging leaders."
+            testimonials={testimonials}
+            limit={1}
+            featured
+          />
+        </div>
       </section>
 
-      <TestimonialSection
-        title="Trusted by leaders"
-        subtitle="From executive teams to founders and emerging leaders."
-        testimonials={testimonials}
-        limit={1}
-        featured
-      />
+      {/* What I Actually Do */}
+      <section className="section-sunken section-padding">
+        <div className="content-wide">
+          <h3>What I Actually Do</h3>
+          <p>Three ways I help people make AI useful in real work:</p>
+          <div className="card-grid cols-3">
+            <div className="card">
+              <h4>Workshops for Organizations</h4>
+              <p>
+                Align teams, lower fear, and build practical skills tied to daily workflows.
+              </p>
+              <Link to="/services#organizations" className="button-ghost">
+                Learn more &rarr;
+              </Link>
+            </div>
+            <div className="card">
+              <h4>One-on-One Coaching</h4>
+              <p>
+                Personalized sessions focused on your projects, your role, and your goals.
+              </p>
+              <Link to="/services#one-on-one" className="button-ghost">
+                Learn more &rarr;
+              </Link>
+            </div>
+            <div className="card">
+              <h4>Train-the-Trainer</h4>
+              <p>
+                Equip facilitators to teach AI confidently with the Adaptig methodology.
+              </p>
+              <Link to="/services#train-the-trainer" className="button-ghost">
+                Learn more &rarr;
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <h3>What I Actually Do</h3>
-      <p>
-        Three ways I help people make AI useful in real work:
-      </p>
-      <ul>
-        <li>
-          <strong>Workshops for organizations:</strong>
-          {' '}
-          Align teams, lower fear, and build practical skills tied to daily workflows.
-        </li>
-        <li>
-          <strong>One-on-one coaching:</strong>
-          {' '}
-          Personalized sessions focused on your projects, your role, and your goals.
-        </li>
-        <li>
-          <strong>Train-the-trainer programs:</strong>
-          {' '}
-          Equip facilitators to teach AI confidently with the Adaptig methodology.
-        </li>
-      </ul>
+      {/* Featured Case Studies */}
+      <section className="section-base section-padding">
+        <div className="content-wide">
+          <FeaturedCaseStudies limit={3} tag="case-study" />
+        </div>
+      </section>
 
-      <FeaturedCaseStudies limit={3} tag="case-study" />
+      {/* Where I Work */}
+      <section className="section-base section-padding">
+        <div className="content-wide">
+          <h3>Where I Work</h3>
+          <div className="card-grid cols-2">
+            <div className="card">
+              <h4>
+                <a href="https://adaptig.ai" target="_blank" rel="noopener noreferrer">
+                  Adaptig
+                </a>
+              </h4>
+              <p>
+                Global trainer network and workshops for enterprise AI adoption.
+                Spanning North America, Latin America, Europe, and Asia-Pacific.
+              </p>
+            </div>
+            <div className="card">
+              <h4>
+                <a href="https://dotai.hk" target="_blank" rel="noopener noreferrer">
+                  DotAI
+                </a>
+              </h4>
+              <p>
+                Hong Kong AI training community serving clients including HSBC,
+                Bank of China, and Chow Tai Fook.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <h3>Where I Work</h3>
-      <p>
-        <strong>
-          <a href="https://adaptig.ai" target="_blank" rel="noopener noreferrer">Adaptig</a>
-        </strong>
-        {' '}&mdash; Global trainer network and workshops for enterprise AI adoption.
-      </p>
-      <p>
-        <strong>
-          <a href="https://dotai.hk" target="_blank" rel="noopener noreferrer">DotAI</a>
-        </strong>
-        {' '}&mdash; Hong Kong AI training community serving clients including HSBC,
-        Bank of China, and Chow Tai Fook.
-      </p>
+      {/* Start Here — conversion paths */}
+      <section className="section-sunken section-padding">
+        <div className="content-wide">
+          <RevenuePathCTA />
+        </div>
+      </section>
 
-      <RevenuePathCTA />
-
+      {/* Newsletter */}
       <EmailCapture
         source="homepage"
         title="Stay in the loop"
         blurb="Occasional insights on AI adoption. No spam, no hype."
       />
 
-      <ul className="actions">
-        <li>
-          <Link to="/services" className="button">
-            View Services
-          </Link>
-        </li>
-        <li>
-          <Link to="/contact" className="button">
-            Book a Discovery Conversation
-          </Link>
-        </li>
-      </ul>
-
-      <p style={{ fontSize: '0.85em', color: '#888', marginTop: '2em' }}>
+      <p style={{
+        fontSize: '0.85em', color: '#888', marginTop: '2em', textAlign: 'center',
+      }}
+      >
         <Link to="/zh">&#x4E2D;&#x6587;&#x7248;&#x672C;</Link>
       </p>
     </article>
