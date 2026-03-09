@@ -68,3 +68,28 @@ header {
     }
   }
 }
+
+// Anchor pill buttons (used in services hero)
+.services-anchor-pills {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.anchor-pill {
+  display: inline-block;
+  padding: 0.5em 1.25em;
+  border: 1px solid rgba(232, 230, 225, 0.3);
+  border-radius: 100px;
+  color: _palette(text-on-dark-muted);
+  font-size: 0.875rem;
+  font-weight: _font(weight-medium);
+  transition: all 0.25s ease;
+
+  &:hover {
+    color: _palette(amber) !important;
+    border-color: _palette(amber);
+    background: _palette(amber-subtle);
+  }
+}

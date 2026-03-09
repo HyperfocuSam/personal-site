@@ -22,6 +22,7 @@ const groups = [
       ctaLink: '/contact',
       external: false,
     },
+    band: 'section-base',
   },
   {
     id: 'one-on-one',
@@ -35,6 +36,7 @@ const groups = [
       ctaLink: 'https://ro.am/samwong/',
       external: true,
     },
+    band: 'section-sunken',
   },
   {
     id: 'train-the-trainer',
@@ -49,6 +51,7 @@ const groups = [
       ctaLink: '/contact?interest=trainer',
       external: false,
     },
+    band: 'section-base',
   },
 ];
 
@@ -87,44 +90,44 @@ const Services = () => {
       ]}
     >
       <article className="post" id="services">
-        <header>
-          <div className="title">
-            <h2>
-              <Link to="/services">Services</Link>
-            </h2>
-            <p>Choose the path that matches your goal</p>
+        {/* Dark hero with anchor pills */}
+        <header className="page-hero">
+          <div className="content-standard">
+            <div className="title">
+              <h2>
+                <Link to="/services">Services</Link>
+              </h2>
+              <p>Choose the path that matches your goal</p>
+            </div>
+            <div className="services-anchor-pills">
+              <Link to="/services#organizations" className="anchor-pill">
+                Organizations
+              </Link>
+              <Link to="/services#one-on-one" className="anchor-pill">
+                Individuals
+              </Link>
+              <Link to="/services#train-the-trainer" className="anchor-pill">
+                Trainers
+              </Link>
+            </div>
           </div>
         </header>
 
-        <p>
-          If you are not sure where to start, use this rule:
-          organizations start with workshops, individuals start with one-on-one coaching,
-          and facilitators start with train-the-trainer.
-        </p>
-
-        <ul>
-          <li>
-            <Link to="/services#organizations">I need team or company training</Link>
-          </li>
-          <li>
-            <Link to="/services#one-on-one">I want personal coaching</Link>
-          </li>
-          <li>
-            <Link to="/services#train-the-trainer">I want to teach AI as a trainer</Link>
-          </li>
-        </ul>
-
+        {/* Service groups in alternating section bands */}
         {groups.map((group) => (
-          <ServiceGroup
-            key={group.id}
-            id={group.id}
-            title={group.title}
-            subtitle={group.subtitle}
-            services={services.filter((service) => service.category === group.category)}
-            socialProof={group.socialProof}
-            testimonial={group.testimonial}
-            primaryCta={group.primaryCta}
-          />
+          <section key={group.id} className={`${group.band} section-padding`}>
+            <div className="content-standard">
+              <ServiceGroup
+                id={group.id}
+                title={group.title}
+                subtitle={group.subtitle}
+                services={services.filter((s) => s.category === group.category)}
+                socialProof={group.socialProof}
+                testimonial={group.testimonial}
+                primaryCta={group.primaryCta}
+              />
+            </div>
+          </section>
         ))}
 
         <Helmet>
