@@ -1,26 +1,134 @@
-///
-/// Future Imperfect by HTML5 UP
-/// html5up.net | @ajlkn
-/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-///
+/* Footer — three-column dark footer */
 
-/* Footer */
+#site-footer {
+  background-color: _palette(ink);
+  color: _palette(text-on-dark-muted);
+  border-top: 1px solid _palette(amber-subtle);
+  width: 100%;
 
-#footer {
-  .icons {
-    color: _palette(fg-light);
+  a {
+    color: _palette(amber);
+    border-bottom: 0;
+
+    &:hover {
+      color: _palette(amber-light) !important;
+    }
   }
 
-  .copyright {
-    color: _palette(fg-light);
-    font-family: _font(family-heading);
-    font-size: 0.5em;
-    font-weight: _font(weight-heading);
-    letter-spacing: _font(kerning-heading);
+  h3, h4 {
+    color: _palette(text-on-dark);
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+  }
+
+  h4 {
+    font-size: 0.875rem;
+    font-weight: _font(weight-bold);
     text-transform: uppercase;
+    letter-spacing: _font(kerning-meta);
+    color: _palette(text-on-dark-muted);
+    margin-bottom: 1rem;
+  }
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+  max-width: _size(content-wide);
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+
+  @include breakpoint(medium) {
+    grid-template-columns: 1fr 1fr;
   }
 
-  body.single & {
-    text-align: center;
+  @include breakpoint(small) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2.5rem 1.5rem 2rem;
+  }
+}
+
+.footer-tagline {
+  color: _palette(amber);
+  font-weight: _font(weight-medium);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.footer-bio {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: _palette(text-on-dark-muted);
+}
+
+// Quick links column
+.footer-links {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 0.5rem;
+
+      a {
+        font-size: 0.9rem;
+        color: _palette(text-on-dark-muted);
+        transition: color 0.25s ease;
+
+        &:hover {
+          color: _palette(amber) !important;
+        }
+      }
+    }
+  }
+}
+
+// Social column
+.footer-social {
+  .icons {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+
+    li {
+      list-style: none;
+
+      a {
+        color: _palette(text-on-dark-muted);
+        font-size: 1.1rem;
+        transition: color 0.25s ease;
+
+        &:hover {
+          color: _palette(amber) !important;
+        }
+      }
+    }
+  }
+}
+
+.footer-email a {
+  font-size: 0.9rem;
+}
+
+// Bottom bar
+.footer-bottom {
+  border-top: 1px solid _palette(ink-light);
+  max-width: _size(content-wide);
+  margin: 0 auto;
+  padding: 1.5rem;
+  text-align: center;
+
+  p {
+    font-size: 0.8rem;
+    color: _palette(text-on-dark-muted);
+    margin: 0;
   }
 }

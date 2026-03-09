@@ -5,6 +5,7 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 import Analytics from '../components/Template/Analytics';
 import Navigation from '../components/Template/Navigation';
 import ScrollToTop from '../components/Template/ScrollToTop';
+import Footer from '../components/Template/Footer';
 
 const Main = (props) => (
   <HelmetProvider>
@@ -43,7 +44,7 @@ const Main = (props) => (
     <div id="wrapper">
       <Navigation />
       <div id="main">{props.children}</div>
-      {/* Footer will be added in Task 5 */}
+      <Footer />
     </div>
   </HelmetProvider>
 );
