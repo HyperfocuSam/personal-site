@@ -1,4 +1,4 @@
-/* Stats — number highlight component */
+/* Stats — warm number highlight component */
 
 .stats-bar {
   display: grid;
@@ -22,14 +22,14 @@
   &__number {
     display: block;
     font-family: _font(family-heading);
-    font-weight: _font(weight-heading-bold);
-    font-size: 2.25rem;
-    color: _palette(amber);
+    font-weight: _font(weight-heading);
+    font-size: 2.5rem;
+    color: _palette(peach);
     line-height: 1.2;
     margin-bottom: 0.25rem;
 
     @include breakpoint(small) {
-      font-size: 1.75rem;
+      font-size: 1.85rem;
     }
   }
 
@@ -48,7 +48,7 @@
 .stats-floating {
   background: _palette(surface-raised);
   border: 1px solid _palette(border-subtle);
-  border-radius: map-get($radius, lg);
+  border-radius: map-get($radius, xl);
   box-shadow: map-get($shadow, md);
   padding: 1.5rem 2rem;
   margin: -2rem auto 0;

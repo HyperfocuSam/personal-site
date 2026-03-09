@@ -1,4 +1,4 @@
-/* Testimonials — warm accent blocks */
+/* Testimonials — warm rounded quote cards */
 
 .testimonials {
   margin: 2.5em 0;
@@ -9,8 +9,9 @@
     h3 {
       text-transform: none;
       letter-spacing: _font(kerning-heading);
-      font-size: 1.35rem;
-      font-weight: _font(weight-heading-bold);
+      font-family: _font(family-heading);
+      font-size: 1.5rem;
+      font-weight: _font(weight-heading);
       color: _palette(text-primary);
       margin-bottom: 0.4em;
     }
@@ -33,13 +34,13 @@
 }
 
 .testimonial-card {
-  background: _palette(surface-sunken);
-  border: 0;
-  border-radius: map-get($radius, lg);
-  padding: 1.75rem;
+  background: _palette(surface-raised);
+  border: 1px solid _palette(border-subtle);
+  border-radius: map-get($radius, xl);
+  padding: 2rem;
   position: relative;
 
-  // Decorative amber quote mark
+  // Decorative peach quote mark
   &::before {
     content: '\201C';
     position: absolute;
@@ -47,8 +48,8 @@
     left: 1.25rem;
     font-size: 3rem;
     line-height: 1;
-    color: _palette(amber);
-    font-family: Georgia, serif;
+    color: _palette(peach);
+    font-family: _font(family-heading);
     opacity: 0.6;
   }
 
@@ -77,12 +78,11 @@
   }
 
   &--featured {
-    border-left: 3px solid _palette(amber);
+    border-left: 3px solid _palette(peach);
   }
 }
 
 // Testimonials on dark backgrounds
-.section-dark .testimonial-card,
-.section-sunken .testimonial-card {
+.section-dark .testimonial-card {
   background: _palette(surface-raised);
 }

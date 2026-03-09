@@ -1,5 +1,6 @@
-// Design System: hyperfocusam.com Visual Redesign
-// Atmosphere: "Warm study at dusk"
+// Design System: hyperfocusam.com
+// Style: Ali Abdaal-inspired warm personal brand + funnel
+// Serif headings, warm cream surfaces, peach/amber accents
 
 // Misc.
 $misc: (
@@ -16,14 +17,14 @@ $duration: (
 $size: (
   element-height: 2.75em,
   element-margin: 2em,
-  section-spacing: 6rem,
+  section-spacing: 5rem,
   section-spacing-small: 3rem,
   menu: 20em,
   content-narrow: 720px,
   content-standard: 960px,
   content-wide: 1200px,
-  nav-height: 64px,
-  nav-height-small: 56px,
+  nav-height: 72px,
+  nav-height-small: 60px,
 );
 
 // Font.
@@ -41,11 +42,9 @@ $font: (
     monospace,
   ),
   family-heading: (
-    "Inter",
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif,
+    "DM Serif Display",
+    "Georgia",
+    serif,
   ),
   family-chinese: (
     "Noto Sans TC",
@@ -56,69 +55,80 @@ $font: (
   weight: 400,
   weight-medium: 500,
   weight-bold: 600,
-  weight-heading: 600,
-  weight-heading-bold: 700,
-  weight-heading-extrabold: 700,
-  kerning-heading: -0.02em,
+  weight-heading: 400,
+  weight-heading-bold: 400,
+  weight-heading-extrabold: 400,
+  kerning-heading: -0.01em,
   kerning-meta: 0.08em,
 );
 
-// Palette — "Warm study at dusk"
+// Palette — warm personal brand
 $palette: (
-  // Ink (primary dark)
-  ink: #0f1729,
-  ink-mid: #1e2a45,
-  ink-light: #2d3b5e,
+  // Ink (used sparingly — nav, footer, dark accents)
+  ink: #1B1624,
+  ink-mid: #2a2535,
+  ink-light: #3d3850,
 
-  // Amber (warm accent)
+  // Amber (primary accent — buttons, links, highlights)
   amber: #c8965a,
   amber-light: #d4a96e,
   amber-subtle: rgba(200, 150, 90, 0.12),
 
-  // Surfaces (layered depth)
-  surface-base: #f6f4f0,
-  surface-raised: #faf8f5,
-  surface-overlay: #ffffff,
-  surface-sunken: #edeae4,
+  // Peach coral (secondary accent — blobs, decorative shapes)
+  peach: #FD976D,
+  peach-light: #fdb99a,
+  peach-subtle: rgba(253, 151, 109, 0.12),
+
+  // Yellow (tertiary — highlights, badges)
+  yellow: #FDD46B,
+  yellow-subtle: rgba(253, 212, 107, 0.15),
+
+  // Surfaces (Ali's 4-tier warm cream system)
+  surface-base: #F9F6F3,
+  surface-raised: #FFFFFF,
+  surface-overlay: #FFFFFF,
+  surface-sunken: #F3EDE9,
+  surface-deep: #ECE5E1,
 
   // Text
-  text-primary: #1a1d2b,
-  text-body: #3d3f4e,
-  text-secondary: #636574,
-  text-on-dark: #e8e6e1,
-  text-on-dark-muted: #9a9ba8,
+  text-primary: #1B1624,
+  text-body: #4a4553,
+  text-secondary: #6b6777,
+  text-on-dark: #F9F6F3,
+  text-on-dark-muted: #b0adb8,
 
   // Borders
-  border-subtle: #e5e2db,
-  border-strong: #d0cdc5,
+  border-subtle: #ECE5E1,
+  border-strong: #E0D8D0,
 
-  // Shadows (navy-tinted)
-  shadow-color: rgba(15, 23, 41, 0.08),
+  // Shadows (warm-tinted)
+  shadow-color: rgba(27, 22, 36, 0.06),
 
-  // Legacy mappings (for Skel compatibility — avoids breaking functions that use old keys)
-  bg: #f6f4f0,
-  bg-alt: #f6f4f0,
-  fg: #3d3f4e,
-  fg-bold: #1a1d2b,
-  fg-light: #636574,
-  border: #e5e2db,
-  border-bg: #edeae4,
-  border-alt: #d0cdc5,
+  // Legacy mappings (Skel compatibility)
+  bg: #F9F6F3,
+  bg-alt: #F9F6F3,
+  fg: #4a4553,
+  fg-bold: #1B1624,
+  fg-light: #6b6777,
+  border: #ECE5E1,
+  border-bg: #F3EDE9,
+  border-alt: #E0D8D0,
   accent: #c8965a,
 );
 
-// Shadows
+// Shadows (softer, warmer)
 $shadow: (
-  sm: 0 1px 2px rgba(15, 23, 41, 0.05),
-  md: 0 4px 12px rgba(15, 23, 41, 0.08),
-  lg: 0 8px 24px rgba(15, 23, 41, 0.12),
+  sm: 0 1px 3px rgba(27, 22, 36, 0.04),
+  md: 0 4px 16px rgba(27, 22, 36, 0.06),
+  lg: 0 8px 30px rgba(27, 22, 36, 0.10),
 );
 
-// Border radius
+// Border radius (much rounder — Ali style)
 $radius: (
-  sm: 4px,
-  md: 6px,
-  lg: 8px,
-  xl: 12px,
+  sm: 6px,
+  md: 10px,
+  lg: 16px,
+  xl: 20px,
+  pill: 100px,
   full: 50%,
 );

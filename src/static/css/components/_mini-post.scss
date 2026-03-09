@@ -22,7 +22,7 @@
   flex-direction: column;
   background: _palette(surface-raised);
   border: solid 1px _palette(border-subtle);
-  border-radius: map-get($radius, lg);
+  border-radius: map-get($radius, xl);
   margin: 0 0 _size(element-margin);
 
   .image {

@@ -1,13 +1,13 @@
-/* Homepage */
+/* Homepage — Ali Abdaal warm funnel style */
 
-// Hero section
+// Hero section — conversational, warm
 .home-hero {
   padding: 0;
 
   &__inner {
     display: flex;
     align-items: center;
-    gap: 3rem;
+    gap: 3.5rem;
     padding: 5rem 1.5rem 4rem;
 
     @include breakpoint(medium) {
@@ -22,21 +22,21 @@
 
     h1 {
       color: _palette(text-on-dark);
-      font-size: 2.75rem;
-      font-weight: _font(weight-heading-bold);
+      font-size: 3rem;
+      font-weight: _font(weight-heading);
       letter-spacing: _font(kerning-heading);
       line-height: 1.15;
       margin-bottom: 1.25rem;
 
       @include breakpoint(small) {
-        font-size: 2rem;
+        font-size: 2.15rem;
       }
     }
   }
 
   &__subtitle {
     color: _palette(text-on-dark-muted);
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     line-height: 1.65;
     margin-bottom: 2rem;
     max-width: 540px;
@@ -59,9 +59,12 @@
     .button {
       background-color: _palette(amber);
       color: _palette(ink) !important;
+      border-radius: map-get($radius, pill);
+      font-size: 0.95rem;
+      padding: 0.9em 2.25em;
 
       &:hover {
-        background-color: _palette(amber-light);
+        background-color: _palette(peach);
       }
     }
 
@@ -69,6 +72,7 @@
       background-color: transparent;
       border: 1.5px solid _palette(text-on-dark);
       color: _palette(text-on-dark) !important;
+      border-radius: map-get($radius, pill);
 
       &:hover {
         background-color: _palette(text-on-dark);
@@ -79,21 +83,21 @@
 
   &__photo {
     flex-shrink: 0;
-    width: 280px;
-    height: 280px;
+    width: 300px;
+    height: 300px;
     position: relative;
 
-    // Amber radial glow behind photo
+    // Decorative peach blob behind photo
     &::before {
       content: '';
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
-      width: 320px;
-      height: 320px;
-      background: radial-gradient(circle, rgba(200, 150, 90, 0.15) 0%, transparent 70%);
-      border-radius: 50%;
+      transform: translate(-50%, -50%) rotate(-15deg);
+      width: 340px;
+      height: 340px;
+      background: radial-gradient(ellipse, rgba(253, 151, 109, 0.2) 0%, transparent 65%);
+      border-radius: 40% 60% 55% 45% / 55% 40% 60% 45%;
       z-index: 0;
     }
 
@@ -107,13 +111,13 @@
     }
 
     @include breakpoint(medium) {
-      width: 200px;
-      height: 200px;
+      width: 220px;
+      height: 220px;
       order: -1;
 
       &::before {
-        width: 240px;
-        height: 240px;
+        width: 260px;
+        height: 260px;
       }
     }
   }
@@ -185,14 +189,14 @@
   &__card {
     background: _palette(surface-raised);
     border: 1px solid _palette(border-subtle);
-    border-radius: map-get($radius, lg);
+    border-radius: map-get($radius, xl);
     box-shadow: map-get($shadow, sm);
-    padding: 1.5rem;
+    padding: 2rem;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 
     &:hover {
       box-shadow: map-get($shadow, md);
-      transform: translateY(-2px);
+      transform: translateY(-3px);
     }
 
     h4 {
@@ -248,10 +252,10 @@
   &__card {
     background: _palette(surface-raised);
     border: 1px solid _palette(border-subtle);
-    border-top: 3px solid _palette(amber);
-    border-radius: map-get($radius, lg);
+    border-top: 3px solid _palette(peach);
+    border-radius: map-get($radius, xl);
     box-shadow: map-get($shadow, sm);
-    padding: 1.5rem;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
 
@@ -295,7 +299,7 @@
     margin: 1.5em 0;
     padding: 1.5em;
     background: _palette(surface-sunken);
-    border-radius: map-get($radius, lg);
+    border-radius: map-get($radius, xl);
     position: relative;
 
     &::before {
@@ -305,8 +309,8 @@
       left: 1rem;
       font-size: 2.5rem;
       line-height: 1;
-      color: _palette(amber);
-      font-family: Georgia, serif;
+      color: _palette(peach);
+      font-family: _font(family-heading);
       opacity: 0.5;
     }
 
@@ -354,10 +358,10 @@
   }
 
   &__tier {
-    padding: 1.5rem;
+    padding: 2rem;
     background: _palette(surface-raised);
     border: 1px solid _palette(border-subtle);
-    border-radius: map-get($radius, lg);
+    border-radius: map-get($radius, xl);
     box-shadow: map-get($shadow, sm);
 
     h5 {
@@ -373,7 +377,7 @@
 
     // Premium tier accent
     &--premium {
-      border-top: 3px solid _palette(amber);
+      border-top: 3px solid _palette(peach);
     }
   }
 

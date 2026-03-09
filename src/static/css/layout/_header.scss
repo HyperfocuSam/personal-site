@@ -1,4 +1,4 @@
-/* Header — Dark sticky navigation */
+/* Header — warm dark sticky navigation */
 
 body {
   padding-top: _size(nav-height);
@@ -24,10 +24,10 @@ body {
 
   // Scrolled state — glass effect
   &.scrolled {
-    background-color: rgba(15, 23, 41, 0.92);
+    background-color: rgba(27, 22, 36, 0.92);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    box-shadow: 0 1px 8px rgba(15, 23, 41, 0.25);
+    box-shadow: 0 1px 8px rgba(27, 22, 36, 0.25);
   }
 
   a {
@@ -63,7 +63,7 @@ body {
     a {
       font-family: _font(family-heading);
       font-weight: _font(weight-heading-bold);
-      font-size: 1rem;
+      font-size: 1.1rem;
       color: _palette(text-on-dark);
       letter-spacing: 0;
       text-transform: none;
@@ -100,40 +100,52 @@ body {
         a {
           display: inline-block;
           border-bottom: 0;
-          font-family: _font(family-heading);
+          font-family: _font(family);
           font-size: 0.875rem;
-          font-weight: _font(weight);
+          font-weight: _font(weight-medium);
           letter-spacing: 0;
           text-transform: none;
           color: _palette(text-on-dark-muted);
           padding: 0.5rem 0.75rem;
-          transition: color 0.25s ease;
+          border-radius: map-get($radius, pill);
+          transition: color 0.25s ease, background-color 0.25s ease;
 
           &:hover {
             color: _palette(text-on-dark) !important;
+            background-color: rgba(255, 255, 255, 0.06);
           }
 
-          // Active state — amber underline
+          // Active state — subtle pill highlight
           &.active {
             color: _palette(amber);
-            position: relative;
-
-            &::after {
-              content: '';
-              position: absolute;
-              bottom: -2px;
-              left: 0.75rem;
-              right: 0.75rem;
-              height: 2px;
-              background-color: _palette(amber);
-              border-radius: 1px;
-            }
 
             &:hover {
               color: _palette(amber-light) !important;
             }
           }
         }
+      }
+    }
+  }
+
+  // CTA button in nav
+  .nav-cta {
+    margin-right: 1.5rem;
+
+    a {
+      display: inline-block;
+      background-color: _palette(amber);
+      color: _palette(ink) !important;
+      font-family: _font(family);
+      font-size: 0.8rem;
+      font-weight: _font(weight-bold);
+      padding: 0.6em 1.5em;
+      border-radius: map-get($radius, pill);
+      transition: background-color 0.25s ease;
+
+      &:hover {
+        background-color: _palette(peach) !important;
+        color: _palette(ink) !important;
       }
     }
   }
@@ -160,6 +172,10 @@ body {
 
   @include breakpoint(medium) {
     .links {
+      display: none;
+    }
+
+    .nav-cta {
       display: none;
     }
   }
