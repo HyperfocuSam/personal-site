@@ -100,106 +100,101 @@ const Blog = () => {
       ]}
     >
       <article className="post" id="blog">
-        <header>
-          <div className="title">
-            <h2>
-              <Link to="/blog">Blog</Link>
-            </h2>
-            <p>Insights & Ideas</p>
+        {/* Dark hero */}
+        <header className="page-hero">
+          <div className="content-standard">
+            <div className="title">
+              <h2>
+                <Link to="/blog">Blog</Link>
+              </h2>
+              <p>
+                Practical lessons on AI adoption trends, tools, and what helps
+                people work with AI confidently.
+              </p>
+            </div>
           </div>
         </header>
 
-        <p>
-          Practical lessons on AI adoption trends, tools, and what helps
-          people work with AI confidently.
-        </p>
+        {/* Blog listing content */}
+        <section className="section-base section-padding">
+          <div className="content-standard">
+            {/* Language Filter */}
+            {hasChinesePosts && (
+              <div className="blog-lang-filter">
+                {Object.entries(languageLabels).map(([key, label]) => (
+                  <button
+                    key={key}
+                    type="button"
+                    onClick={() => setLangFilter(key)}
+                    className={`blog-lang-btn${langFilter === key ? ' blog-lang-btn--active' : ''}`}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+            )}
 
-        {/* Language Filter */}
-        {hasChinesePosts && (
-          <div
-            className="blog-lang-filter"
-            style={{ display: 'flex', gap: '0.5rem', margin: '1rem 0 1.5rem' }}
-          >
-            {Object.entries(languageLabels).map(([key, label]) => (
-              <button
-                key={key}
-                type="button"
-                onClick={() => setLangFilter(key)}
-                className={`blog-lang-btn${langFilter === key ? ' blog-lang-btn--active' : ''}`}
-                style={{
-                  padding: '0.35rem 0.9rem',
-                  borderRadius: '2rem',
-                  border: langFilter === key ? '2px solid #6c63ff' : '1px solid #ddd',
-                  background: langFilter === key ? '#6c63ff' : 'transparent',
-                  color: langFilter === key ? '#fff' : 'inherit',
-                  cursor: 'pointer',
-                  fontSize: '0.85rem',
-                  fontWeight: langFilter === key ? '600' : '400',
-                  transition: 'all 0.2s ease',
-                }}
-              >
-                {label}
-              </button>
-            ))}
-          </div>
-        )}
+            {filteredPosts.length === 0 ? (
+              <p><em>Posts coming soon. Stay tuned!</em></p>
+            ) : (
+              <>
+                {/* Featured Post Hero */}
+                {featuredPost && (
+                  <section className="blog-featured">
+                    <Link to={`/blog/${featuredPost.slug}`} className="blog-featured__link">
+                      {featuredPost.image && (
+                        <div className="blog-featured__image-wrapper">
+                          <img
+                            src={featuredPost.image}
+                            alt={featuredPost.title}
+                            className="blog-featured__image"
+                          />
+                        </div>
+                      )}
+                      <div className="blog-featured__content">
+                        <span className={`blog-type-pill blog-type-pill--${featuredPost.type}`}>
+                          {typeLabels[featuredPost.type] || featuredPost.type}
+                        </span>
+                        <h3 className="blog-featured__title">{featuredPost.title}</h3>
+                        <p className="blog-featured__meta">
+                          {dayjs(featuredPost.date).format('MMMM D, YYYY')}
+                        </p>
+                        <p className="blog-featured__excerpt">{featuredPost.excerpt}</p>
+                      </div>
+                    </Link>
+                  </section>
+                )}
 
-        {filteredPosts.length === 0 ? (
-          <p><em>Posts coming soon. Stay tuned!</em></p>
-        ) : (
-          <>
-            {/* Featured Post Hero */}
-            {featuredPost && (
-              <section className="blog-featured">
-                <Link to={`/blog/${featuredPost.slug}`} className="blog-featured__link">
-                  {featuredPost.image && (
-                    <div className="blog-featured__image-wrapper">
-                      <img
-                        src={featuredPost.image}
-                        alt={featuredPost.title}
-                        className="blog-featured__image"
-                      />
+                {/* Blog Posts Section */}
+                {blogPosts.length > 0 && (
+                  <section className="blog-section">
+                    <div className="blog-section__header">
+                      <h3 className="blog-section__title">Blog</h3>
+                      <p className="blog-section__subtitle">
+                        Commentary on AI adoption trends, tools, and methodology.
+                      </p>
                     </div>
-                  )}
-                  <div className="blog-featured__content">
-                    <span className={`blog-type-pill blog-type-pill--${featuredPost.type}`}>
-                      {typeLabels[featuredPost.type] || featuredPost.type}
-                    </span>
-                    <h3 className="blog-featured__title">{featuredPost.title}</h3>
-                    <p className="blog-featured__meta">
-                      {dayjs(featuredPost.date).format('MMMM D, YYYY')}
-                    </p>
-                    <p className="blog-featured__excerpt">{featuredPost.excerpt}</p>
-                  </div>
-                </Link>
-              </section>
+                    <div className="blog-grid">
+                      {blogPosts.map((post) => (
+                        <BlogCard key={post.slug} post={post} />
+                      ))}
+                    </div>
+                  </section>
+                )}
+
+              </>
             )}
+          </div>
+        </section>
 
-            {/* Blog Posts Section */}
-            {blogPosts.length > 0 && (
-              <section className="blog-section">
-                <div className="blog-section__header">
-                  <h3 className="blog-section__title">Blog</h3>
-                  <p className="blog-section__subtitle">
-                    Commentary on AI adoption trends, tools, and methodology.
-                  </p>
-                </div>
-                <div className="blog-grid">
-                  {blogPosts.map((post) => (
-                    <BlogCard key={post.slug} post={post} />
-                  ))}
-                </div>
-              </section>
-            )}
+        {/* Author + Newsletter */}
+        <section className="section-sunken section-padding">
+          <div className="content-standard">
+            <h3>About the Author</h3>
+            <AuthorCard />
+          </div>
+        </section>
 
-          </>
-        )}
-
-        <hr />
-        <h3>About the Author</h3>
-        <AuthorCard />
-
-        <hr />
         <EmailCapture
           source="blog-listing"
           title="Stay in the loop"

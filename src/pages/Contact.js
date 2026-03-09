@@ -41,51 +41,80 @@ const Contact = () => {
       twitterImage={DEFAULT_OG_IMAGE}
     >
       <article className="post" id="contact">
-        <header>
-          <div className="title">
-            <h2>
-              <Link to="/contact">Contact</Link>
-            </h2>
-            <p>Let&apos;s find the right next step</p>
+        {/* Dark hero */}
+        <header className="page-hero">
+          <div className="content-narrow">
+            <div className="title">
+              <h2>
+                <Link to="/contact">Contact</Link>
+              </h2>
+              <p>Let&apos;s find the right next step</p>
+            </div>
           </div>
         </header>
 
-        <p>
-          Whether you need team training, one-on-one coaching, speaking support, or trainer
-          recruitment details, share your situation and I&apos;ll guide you to the best option.
-        </p>
+        {/* Contact form */}
+        <section className="section-base section-padding">
+          <div className="content-narrow">
+            <p>
+              Whether you need team training, one-on-one coaching, speaking support, or trainer
+              recruitment details, share your situation and I&apos;ll guide you to the best option.
+            </p>
 
-        <ContactForm initialInterest={initialInterest} />
+            <ContactForm initialInterest={initialInterest} />
+          </div>
+        </section>
 
-        <h3>Prefer a direct message?</h3>
-        <div className="email-at">
-          <p>Email me directly:</p>
-          <EmailLink />
-        </div>
+        {/* Other contact methods */}
+        <section className="section-sunken section-padding">
+          <div className="content-narrow">
+            <h3>Prefer a direct message?</h3>
+            <div className="email-at">
+              <p>Email me directly:</p>
+              <EmailLink />
+            </div>
 
-        <h3>Quick Response via WhatsApp</h3>
-        <p>
-          For faster responses, reach me on{' '}
-          <a href="https://wa.me/85264315177" target="_blank" rel="noopener noreferrer">
-            WhatsApp
-          </a>.
-        </p>
+            <h3>Quick Response via WhatsApp</h3>
+            <p>
+              For faster responses, reach me on{' '}
+              <a href="https://wa.me/85264315177" target="_blank" rel="noopener noreferrer">
+                WhatsApp
+              </a>.
+            </p>
+          </div>
+        </section>
 
-        <h3>What I Can Help With</h3>
-        <ul>
-          <li><strong>Corporate Training</strong> - Team workshops and adoption programs</li>
-          <li><strong>1-1 Coaching</strong> - Personalized support for your own workflow</li>
-          <li><strong>Speaking</strong> - Keynotes, briefings, and event sessions</li>
-          <li><strong>Trainer Recruitment</strong> - Joining the Adaptig trainer network</li>
-        </ul>
+        {/* What I help with + social */}
+        <section className="section-base section-padding">
+          <div className="content-narrow">
+            <h3>What I Can Help With</h3>
+            <div className="card-grid cols-2">
+              <div className="card">
+                <h4>Corporate Training</h4>
+                <p>Team workshops and adoption programs</p>
+              </div>
+              <div className="card">
+                <h4>1-1 Coaching</h4>
+                <p>Personalized support for your own workflow</p>
+              </div>
+              <div className="card">
+                <h4>Speaking</h4>
+                <p>Keynotes, briefings, and event sessions</p>
+              </div>
+              <div className="card">
+                <h4>Trainer Recruitment</h4>
+                <p>Joining the Adaptig trainer network</p>
+              </div>
+            </div>
 
-        <h3>Connect on Social</h3>
-        <ContactIcons />
+            <h3>Connect on Social</h3>
+            <ContactIcons />
 
-        <br />
-        <p>
-          <em>Based in Hong Kong, available globally and across Asia-Pacific.</em>
-        </p>
+            <p style={{ marginTop: '2em' }}>
+              <em>Based in Hong Kong, available globally and across Asia-Pacific.</em>
+            </p>
+          </div>
+        </section>
       </article>
     </Main>
   );

@@ -58,25 +58,32 @@ const Clients = () => (
     twitterImage={DEFAULT_OG_IMAGE}
   >
     <article className="post" id="clients">
-      <header>
-        <div className="title">
-          <h2>
-            <Link to="/clients">Clients</Link>
-          </h2>
-          <p>Enterprise AI Training Case Studies</p>
+      {/* Dark hero */}
+      <header className="page-hero">
+        <div className="content-standard">
+          <div className="title">
+            <h2>
+              <Link to="/clients">Clients</Link>
+            </h2>
+            <p>Enterprise AI Training Case Studies</p>
+          </div>
         </div>
       </header>
 
-      <p>
-        Real examples from workshops and coaching engagements across banking,
-        retail, education, and engineering.
-      </p>
+      <section className="section-base section-padding">
+        <div className="content-standard">
+          <p>
+            Real examples from workshops and coaching engagements across banking,
+            retail, education, and engineering.
+          </p>
 
-      <div className="blog-grid">
-        {clientPosts.map((post) => (
-          <ClientCard key={post.slug} post={post} />
-        ))}
-      </div>
+          <div className="blog-grid">
+            {clientPosts.map((post) => (
+              <ClientCard key={post.slug} post={post} />
+            ))}
+          </div>
+        </div>
+      </section>
     </article>
   </Main>
 );

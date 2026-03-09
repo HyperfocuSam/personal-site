@@ -119,23 +119,31 @@
   }
 }
 
-// Override #main content width for homepage full-bleed sections
-#index {
+// Override #main content width for full-bleed sections on key pages
+#index,
+#blog,
+#blog-post,
+#about,
+#services,
+#media,
+#clients,
+#contact {
   > .full-bleed,
   > .section-base,
   > .section-sunken,
   > .section-dark,
   > .hero-gradient,
+  > .page-hero,
   > .email-capture {
     max-width: 100%;
     padding-left: 0;
     padding-right: 0;
   }
+}
 
-  // Stats floating card
-  > .stats-floating {
-    max-width: _size(content-standard);
-  }
+// Stats floating card (homepage only)
+#index > .stats-floating {
+  max-width: _size(content-standard);
 }
 
 // Case studies cards

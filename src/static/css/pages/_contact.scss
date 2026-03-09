@@ -3,12 +3,6 @@
 #contact {
   .contact-form-section {
     margin-bottom: 2.5em;
-
-    h3 {
-      text-transform: none;
-      letter-spacing: 0.04em;
-      font-size: 1.1em;
-    }
   }
 
   .contact-form {
@@ -20,13 +14,12 @@
     }
 
     &__field-label {
-      color: _palette(fg-bold);
+      color: _palette(text-primary);
       display: block;
       letter-spacing: 0.03em;
       font-size: 0.9em;
       font-weight: _font(weight-bold);
       margin: 1em 0 (_size(element-margin) * 0.5) 0;
-      text-transform: none;
     }
 
     &__submit {
@@ -42,7 +35,7 @@
   }
 
   .email-at {
-    margin: 3em 0;
+    margin: 1.5em 0;
 
     p {
       margin: 0;

@@ -7,19 +7,17 @@
   &__header {
     margin-bottom: 1.5em;
     padding-bottom: 0.75em;
-    border-bottom: 2px solid _palette(fg-bold);
+    border-bottom: 2px solid _palette(text-primary);
   }
 
   &__title {
-    text-transform: none !important;
-    letter-spacing: 0.02em !important;
-    font-size: 1.2em !important;
-    font-weight: 800;
-    margin-bottom: 0.25em !important;
+    font-size: 1.2em;
+    font-weight: _font(weight-heading-bold);
+    margin-bottom: 0.25em;
   }
 
   &__subtitle {
-    color: _palette(fg-light);
+    color: _palette(text-secondary);
     font-size: 0.9em;
     margin: 0;
   }
@@ -29,29 +27,29 @@
 .blog-type-pill {
   display: inline-block;
   padding: 0.2em 0.6em;
-  border-radius: 3px;
+  border-radius: map-get($radius, sm);
   font-size: 0.7em;
-  font-weight: 700;
+  font-weight: _font(weight-heading);
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: _font(kerning-meta);
   margin-bottom: 0.6em;
   font-family: _font(family);
 
   // Default
-  background: _palette(bg-alt);
-  color: _palette(fg);
-  border: 1px solid _palette(border);
+  background: _palette(surface-sunken);
+  color: _palette(text-body);
+  border: 1px solid _palette(border-subtle);
 
   &--case-study {
-    background: _palette(fg-bold);
-    color: #ffffff;
-    border-color: _palette(fg-bold);
+    background: _palette(ink);
+    color: _palette(text-on-dark);
+    border-color: _palette(ink);
   }
 
   &--insight {
-    background: _palette(accent);
-    color: #ffffff;
-    border-color: _palette(accent);
+    background: _palette(amber);
+    color: _palette(ink);
+    border-color: _palette(amber);
   }
 
   &--methodology {
@@ -68,14 +66,14 @@
 
   &--reflection {
     background: transparent;
-    color: _palette(fg-bold);
-    border: 1px solid _palette(fg-bold);
+    color: _palette(text-primary);
+    border: 1px solid _palette(text-primary);
   }
 
   &--announcement {
     background: transparent;
-    color: _palette(fg-light);
-    border: 1px solid _palette(border-alt);
+    color: _palette(text-secondary);
+    border: 1px solid _palette(border-strong);
   }
 }
 
@@ -89,12 +87,12 @@
     text-decoration: none;
     transition: transform 0.2s ease;
     overflow: hidden;
-    border-radius: 8px;
-    border: 1px solid _palette(border);
+    border-radius: map-get($radius, lg);
+    border: 1px solid _palette(border-subtle);
 
     &:hover {
       transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      box-shadow: map-get($shadow, md);
 
       .blog-featured__image {
         transform: scale(1.03);
@@ -106,7 +104,7 @@
     width: 100%;
     aspect-ratio: 21 / 9;
     overflow: hidden;
-    background: _palette(bg-alt);
+    background: _palette(surface-sunken);
   }
 
   &__image {
@@ -121,22 +119,20 @@
   }
 
   &__title {
-    color: _palette(fg-bold);
+    color: _palette(text-primary);
     margin: 0 0 0.5em 0;
     font-size: 1.5em;
-    text-transform: none !important;
-    letter-spacing: 0.01em !important;
     line-height: 1.3;
   }
 
   &__meta {
-    color: _palette(fg-light);
+    color: _palette(text-secondary);
     font-size: 0.85em;
     margin-bottom: 0.75em;
   }
 
   &__excerpt {
-    color: _palette(fg);
+    color: _palette(text-body);
     margin-bottom: 0;
     line-height: 1.6;
   }
@@ -160,14 +156,14 @@
 }
 
 .blog-card {
-  border-radius: 8px;
+  border-radius: map-get($radius, lg);
   overflow: hidden;
-  border: 1px solid _palette(border);
+  border: 1px solid _palette(border-subtle);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: map-get($shadow, md);
 
     .blog-card__image {
       transform: scale(1.03);
@@ -176,11 +172,11 @@
 
   // Subtle left-border accent by type
   &--case-study {
-    border-left: 3px solid _palette(fg-bold);
+    border-left: 3px solid _palette(ink);
   }
 
   &--insight {
-    border-left: 3px solid _palette(accent);
+    border-left: 3px solid _palette(amber);
   }
 
   &--methodology {
@@ -192,11 +188,11 @@
   }
 
   &--reflection {
-    border-left: 3px solid _palette(fg-light);
+    border-left: 3px solid _palette(text-secondary);
   }
 
   &--announcement {
-    border-left: 3px solid _palette(border-alt);
+    border-left: 3px solid _palette(border-strong);
   }
 
   &__link {
@@ -211,7 +207,7 @@
     width: 100%;
     aspect-ratio: 16 / 9;
     overflow: hidden;
-    background: _palette(bg-alt);
+    background: _palette(surface-sunken);
   }
 
   &__image {
@@ -227,24 +223,21 @@
   }
 
   &__title {
-    color: _palette(fg-bold);
+    color: _palette(text-primary);
     margin: 0 0 0.4em 0;
     font-size: 1em;
     line-height: 1.35;
-    // Override the global uppercase heading style for blog cards
-    text-transform: none !important;
-    letter-spacing: 0.01em !important;
-    font-weight: 700;
+    font-weight: _font(weight-heading-bold);
   }
 
   &__meta {
-    color: _palette(fg-light);
+    color: _palette(text-secondary);
     font-size: 0.8em;
     margin-bottom: 0.5em;
   }
 
   &__excerpt {
-    color: _palette(fg);
+    color: _palette(text-body);
     font-size: 0.85em;
     line-height: 1.5;
     margin-bottom: 0;
@@ -265,14 +258,45 @@
 
 .blog-tag {
   display: inline-block;
-  background: _palette(bg-alt);
-  color: _palette(fg);
+  background: _palette(surface-sunken);
+  color: _palette(text-body);
   padding: 0.25em 0.6em;
   border-radius: 50px;
   font-size: 0.75em;
-  font-weight: 600;
+  font-weight: _font(weight-heading);
   text-transform: lowercase;
-  border: 1px solid _palette(border);
+  border: 1px solid _palette(border-subtle);
+}
+
+// ── Language Filter ──────────────────────────────
+.blog-lang-filter {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.blog-lang-btn {
+  padding: 0.35rem 0.9rem;
+  border-radius: 2rem;
+  border: 1px solid _palette(border-subtle);
+  background: transparent;
+  color: _palette(text-body);
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: _font(weight);
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-color: _palette(amber);
+    color: _palette(amber);
+  }
+
+  &--active {
+    border: 2px solid _palette(amber);
+    background: _palette(amber);
+    color: _palette(ink);
+    font-weight: _font(weight-heading);
+  }
 }
 
 // ── Post Header Meta ──────────────────────────────
@@ -281,13 +305,13 @@
     display: flex;
     align-items: center;
     gap: 0.5em;
-    color: _palette(fg-light);
+    color: _palette(text-secondary);
     font-size: 0.9em;
     margin-top: 0.5em;
   }
 
   &__separator {
-    color: _palette(border-alt);
+    color: _palette(border-strong);
   }
 
   &__reading-time {
@@ -295,11 +319,20 @@
   }
 }
 
+// Post header meta inside dark hero
+.page-hero .post-header__meta {
+  color: _palette(text-on-dark-muted);
+}
+
+.page-hero .post-header__separator {
+  color: _palette(text-on-dark-muted);
+}
+
 // ── Post Content Typography ───────────────────────
 .post-content {
   font-size: 1.05em;
   line-height: 1.8;
-  color: #4a4a4a;
+  color: _palette(text-body);
 
   p {
     margin-bottom: 1.5em;
@@ -308,8 +341,6 @@
   h1, h2, h3, h4 {
     margin-top: 2em;
     margin-bottom: 0.75em;
-    text-transform: none;
-    letter-spacing: 0.02em;
   }
 
   // First heading in article shouldn't have top margin
@@ -321,7 +352,7 @@
   img {
     max-width: 100%;
     height: auto;
-    border-radius: 4px;
+    border-radius: map-get($radius, sm);
     margin: 1.5em 0;
   }
 
@@ -329,7 +360,7 @@
   img + em {
     display: block;
     text-align: center;
-    color: _palette(fg-light);
+    color: _palette(text-secondary);
     font-size: 0.9em;
     margin-top: -1em;
     margin-bottom: 1.5em;
@@ -338,14 +369,14 @@
 
 // ── Pull Quote Styling ────────────────────────────
 .pull-quote {
-  border-left: 4px solid _palette(accent);
+  border-left: 4px solid _palette(amber);
   padding: 1em 0 1em 1.5em;
   margin: 2em 0;
   font-size: 1.15em;
   font-style: italic;
-  color: _palette(fg-bold);
-  background: _palette(bg-alt);
-  border-radius: 0 4px 4px 0;
+  color: _palette(text-primary);
+  background: _palette(surface-sunken);
+  border-radius: 0 map-get($radius, sm) map-get($radius, sm) 0;
 
   p {
     margin-bottom: 0;
@@ -362,9 +393,9 @@
   align-items: flex-start;
   gap: 1.5em;
   padding: 1.5em;
-  background: _palette(bg-alt);
-  border-radius: 8px;
-  border: 1px solid _palette(border);
+  background: _palette(surface-raised);
+  border-radius: map-get($radius, lg);
+  border: 1px solid _palette(border-subtle);
 
   &__image-link {
     border: 0;
@@ -374,7 +405,7 @@
   &__image {
     width: 80px;
     height: 80px;
-    border-radius: 50%;
+    border-radius: map-get($radius, full);
     object-fit: cover;
   }
 
@@ -384,19 +415,19 @@
 
   &__name {
     display: block;
-    font-weight: 700;
+    font-weight: _font(weight-heading-bold);
     font-size: 1.1em;
-    color: _palette(fg-bold);
+    color: _palette(text-primary);
     margin-bottom: 0.5em;
     border: 0;
 
     &:hover {
-      color: _palette(accent);
+      color: _palette(amber);
     }
   }
 
   &__bio {
-    color: _palette(fg);
+    color: _palette(text-body);
     font-size: 0.9em;
     line-height: 1.5;
     margin-bottom: 0.75em;
@@ -407,7 +438,7 @@
   }
 
   &__social {
-    color: _palette(accent);
+    color: _palette(amber);
     border: 0;
 
     &:hover {
@@ -416,7 +447,7 @@
   }
 
   &__separator {
-    color: _palette(fg-light);
+    color: _palette(text-secondary);
     margin: 0 0.5em;
   }
 
@@ -455,8 +486,8 @@
   margin: 2em 0;
 
   &__label {
-    font-weight: 600;
-    color: _palette(fg-bold);
+    font-weight: _font(weight-heading);
+    color: _palette(text-primary);
     font-size: 0.9em;
     margin-right: 0.25em;
   }
@@ -464,12 +495,12 @@
   &__button {
     display: inline-block;
     padding: 0.4em 0.75em;
-    border-radius: 4px;
+    border-radius: map-get($radius, sm);
     font-size: 0.8em;
-    font-weight: 500;
-    border: 1px solid _palette(border);
-    background: _palette(bg);
-    color: _palette(fg-bold);
+    font-weight: _font(weight-medium);
+    border: 1px solid _palette(border-subtle);
+    background: _palette(surface-raised);
+    color: _palette(text-primary);
     cursor: pointer;
     transition: all 0.2s ease;
     text-decoration: none;
@@ -477,18 +508,20 @@
     height: auto;
 
     &:hover {
-      background: _palette(accent);
-      color: #ffffff;
-      border-color: _palette(accent);
+      background: _palette(amber);
+      color: _palette(ink);
+      border-color: _palette(amber);
     }
 
     &--linkedin:hover {
       background: #0077b5;
+      color: #ffffff;
       border-color: #0077b5;
     }
 
     &--twitter:hover {
       background: #1da1f2;
+      color: #ffffff;
       border-color: #1da1f2;
     }
   }
@@ -527,10 +560,10 @@
   }
 
   &__item {
-    background: _palette(bg-alt);
-    border-radius: 8px;
+    background: _palette(surface-raised);
+    border-radius: map-get($radius, lg);
     overflow: hidden;
-    border: 1px solid _palette(border);
+    border: 1px solid _palette(border-subtle);
   }
 
   &__content {
@@ -541,21 +574,19 @@
     font-size: 0.95em;
     margin: 0 0 0.5em 0;
     line-height: 1.3;
-    text-transform: none;
-    letter-spacing: 0.01em;
 
     a {
-      color: _palette(fg-bold);
+      color: _palette(text-primary);
       border: 0;
 
       &:hover {
-        color: _palette(accent);
+        color: _palette(amber);
       }
     }
   }
 
   &__date {
-    color: _palette(fg-light);
+    color: _palette(text-secondary);
     font-size: 0.8em;
     margin: 0;
   }
@@ -568,8 +599,8 @@
   gap: 2em;
   margin: 3em 0;
   padding: 2em 0;
-  border-top: 1px solid _palette(border);
-  border-bottom: 1px solid _palette(border);
+  border-top: 1px solid _palette(border-subtle);
+  border-bottom: 1px solid _palette(border-subtle);
 
   &__prev,
   &__next {
@@ -584,19 +615,19 @@
   &__label {
     display: block;
     font-size: 0.8em;
-    color: _palette(fg-light);
+    color: _palette(text-secondary);
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: _font(kerning-meta);
     margin-bottom: 0.5em;
   }
 
   &__link {
-    color: _palette(fg-bold);
-    font-weight: 600;
+    color: _palette(text-primary);
+    font-weight: _font(weight-heading);
     border: 0;
 
     &:hover {
-      color: _palette(accent);
+      color: _palette(amber);
     }
   }
 
@@ -620,9 +651,10 @@
 .trainer-banner {
   margin: 2em 0;
   padding: 1.25em;
-  background: _palette(bg-alt);
-  border: 1px solid _palette(border);
-  border-left: 4px solid _palette(accent);
+  background: _palette(surface-raised);
+  border: 1px solid _palette(border-subtle);
+  border-left: 4px solid _palette(amber);
+  border-radius: 0 map-get($radius, lg) map-get($radius, lg) 0;
 
   h3 {
     margin-bottom: 0.5em;
