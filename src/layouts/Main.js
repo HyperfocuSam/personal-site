@@ -4,7 +4,6 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 import Analytics from '../components/Template/Analytics';
 import Navigation from '../components/Template/Navigation';
-import SideBar from '../components/Template/SideBar';
 import ScrollToTop from '../components/Template/ScrollToTop';
 
 const Main = (props) => (
@@ -44,7 +43,7 @@ const Main = (props) => (
     <div id="wrapper">
       <Navigation />
       <div id="main">{props.children}</div>
-      {props.fullPage ? null : <SideBar />}
+      {/* Footer will be added in Task 5 */}
     </div>
   </HelmetProvider>
 );
@@ -54,7 +53,6 @@ Main.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]),
-  fullPage: PropTypes.bool,
   title: PropTypes.string,
   description: PropTypes.string,
   canonicalUrl: PropTypes.string,
@@ -78,7 +76,6 @@ Main.propTypes = {
 
 Main.defaultProps = {
   children: null,
-  fullPage: false,
   title: null,
   description: 'Sam Wong - AI Training Specialist helping enterprises and individuals '
     + 'adopt AI through corporate workshops, 1-1 coaching, and Train-the-Trainer programs.',
