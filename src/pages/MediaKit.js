@@ -549,15 +549,14 @@ const MediaKit = () => (
 
     {/* Responsive overrides via inline style tag */}
     {/* eslint-disable-next-line react/no-danger */}
-    <style
-      dangerouslySetInnerHTML={{
-        __html: `
-          @media (max-width: 768px) {
-            .bio-grid { grid-template-columns: 1fr !important; gap: 1.5em !important; }
-            .contact-grid { grid-template-columns: 1fr !important; gap: 1.5em !important; }
-          }
-        `,
-      }}
+    <style dangerouslySetInnerHTML={{
+      __html: `
+        @media (max-width: 768px) {
+          .bio-grid { grid-template-columns: 1fr !important; gap: 1.5em !important; }
+          .contact-grid { grid-template-columns: 1fr !important; gap: 1.5em !important; }
+        }
+      `,
+    }}
     />
   </Main>
 );
