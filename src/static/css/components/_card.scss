@@ -1,16 +1,16 @@
-/* Card — cream on white, no borders, no shadows (Ali Abdaal style) */
+/* Card — surface-raised with subtle border and shadow */
 
 .card {
   background-color: _palette(surface-raised);
-  border: 0;
-  border-radius: map-get($radius, xl);
-  box-shadow: none;
-  padding: 2.5rem;
+  border: 1px solid _palette(border-subtle);
+  border-radius: map-get($radius, lg);
+  box-shadow: map-get($shadow, sm);
+  padding: 1.5rem;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 
   &:hover {
-    box-shadow: map-get($shadow, sm);
-    transform: translateY(-3px);
+    box-shadow: map-get($shadow, md);
+    transform: translateY(-2px);
   }
 
   h3, h4 {
@@ -22,7 +22,7 @@
   }
 
   @include breakpoint(small) {
-    padding: 2rem;
+    padding: 1.25rem;
   }
 }
 
@@ -65,5 +65,5 @@
 }
 
 .card-accent {
-  border-top: 3px solid _palette(peach);
+  border-top: 3px solid _palette(amber);
 }

@@ -1,4 +1,4 @@
-/* Buttons — peach primary CTA, Ali Abdaal style */
+/* Buttons — three-tier system: primary (ink), secondary (outlined), ghost (amber text) */
 
 // Base button reset
 input[type="submit"],
@@ -20,16 +20,16 @@ button,
   text-decoration: none;
   text-transform: none;
   white-space: nowrap;
-  border-radius: map-get($radius, pill);
+  border-radius: map-get($radius, md);
   border: 0;
 
-  // Primary: PEACH bg, dark text (Ali's CTA color)
-  background-color: _palette(peach);
-  color: _palette(ink) !important;
+  // Primary: ink bg, light text
+  background-color: _palette(ink);
+  color: _palette(text-on-dark) !important;
 
   &:hover {
-    background-color: _palette(peach-light);
-    color: _palette(ink) !important;
+    background-color: _palette(ink-mid);
+    color: _palette(text-on-dark) !important;
     transform: translateY(-1px);
     box-shadow: map-get($shadow, md);
   }
@@ -62,7 +62,7 @@ button,
   }
 }
 
-// Secondary: outlined with pill shape
+// Secondary: outlined
 .button-secondary {
   background-color: transparent;
   border: 2px solid _palette(ink);
@@ -75,17 +75,17 @@ button,
   }
 }
 
-// Ghost: text only with peach arrow
+// Ghost: text only, amber
 .button-ghost {
   background-color: transparent;
-  color: _palette(peach) !important;
+  color: _palette(amber) !important;
   padding: 0.5em 0;
   border: 0;
   border-radius: 0;
   font-weight: _font(weight-bold);
 
   &:hover {
-    color: _palette(peach-light) !important;
+    color: _palette(amber-light) !important;
     transform: none;
     box-shadow: none;
   }
@@ -95,11 +95,11 @@ button,
 .section-dark,
 .hero-gradient {
   .button {
-    background-color: _palette(peach);
+    background-color: _palette(amber);
     color: _palette(ink) !important;
 
     &:hover {
-      background-color: _palette(peach-light);
+      background-color: _palette(amber-light);
     }
   }
 
