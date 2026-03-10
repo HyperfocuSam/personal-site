@@ -89,6 +89,15 @@ const About = () => (
         </div>
       </section>
 
+      {/* Photo: Sam on stage */}
+      <div className="full-bleed photo-band">
+        <img
+          src="/images/home/train-the-trainer.jpg"
+          alt="Sam Wong presenting The 45 Mins AI Show on stage at the Skirball Center"
+          loading="lazy"
+        />
+      </div>
+
       {/* What I Believe — 2x2 card grid */}
       <section className="section-sunken section-padding">
         <div className="content-standard">
@@ -222,6 +231,23 @@ const About = () => (
             <Link to="/projects">Projects</Link>
             .
           </p>
+          <div className="photo-grid cols-3">
+            <img
+              src="/images/blog/ctf-workshop-2026.jpeg"
+              alt="DotAI x Chow Tai Fook Design Thinking Workshop group"
+              loading="lazy"
+            />
+            <img
+              src="/images/blog/arup-ai-workshop.jpg"
+              alt="Sam presenting at Arup University AI workshop in Hong Kong"
+              loading="lazy"
+            />
+            <img
+              src="/images/blog/hkjc-mt-workshop.jpeg"
+              alt="Sam and colleague at the Hong Kong Jockey Club College"
+              loading="lazy"
+            />
+          </div>
         </div>
       </section>
 

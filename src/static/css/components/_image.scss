@@ -70,3 +70,58 @@
     }
   }
 }
+
+// Full-bleed photo band — section divider between content blocks
+.photo-band {
+  width: 100%;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    object-position: center 30%;
+    display: block;
+  }
+
+  @include breakpoint(medium) {
+    img {
+      height: 320px;
+    }
+  }
+
+  @include breakpoint(small) {
+    img {
+      height: 220px;
+    }
+  }
+}
+
+// Photo grid — multi-image evidence layout
+.photo-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+
+  &.cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+
+    @include breakpoint(small) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: map-get($radius, lg);
+    display: block;
+  }
+
+  @include breakpoint(small) {
+    img {
+      height: 200px;
+    }
+  }
+}
