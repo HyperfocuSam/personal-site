@@ -299,8 +299,52 @@ const Media = () => (
         </div>
       </section>
 
-      {/* Episodes */}
+      {/* Press & Mentions */}
       <section className="section-sunken section-padding">
+        <div className="content-standard">
+          <h3 style={mediaStyles.sectionHeading}>
+            Press &amp; Mentions
+          </h3>
+          <div className="card-grid cols-2">
+            <div className="card">
+              <h4>HKEJ Master Class</h4>
+              <p>
+                DotAI invited to co-create a Master Class
+                with Hong Kong Economic Journal on Vibe
+                Marketing and AI employee mindset.
+              </p>
+            </div>
+            <div className="card">
+              <h4>Ming Pao Partnership</h4>
+              <p>
+                Ming Pao partners with DotAI for an AI
+                journalism application course covering
+                translation, fact-checking, and automated
+                news planning.
+              </p>
+            </div>
+            <div className="card">
+              <h4>CTgoodjobs Future Leader Awards</h4>
+              <p>
+                DotAI invited as judges and mentors for
+                the CTgoodjobs Future Leader Awards 2025,
+                sharing AI entrepreneurship methods.
+              </p>
+            </div>
+            <div className="card">
+              <h4>JoJo Ventures Speaker Spotlight</h4>
+              <p>
+                Featured as Head of Corporate Training
+                at DotAI and Co-Founder of Adaptig at
+                JoJo Ventures event.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Episodes */}
+      <section className="section-base section-padding">
         <div className="content-standard">
           <h3 style={mediaStyles.sectionHeading}>Episodes</h3>
           {episodes.map((ep) => (

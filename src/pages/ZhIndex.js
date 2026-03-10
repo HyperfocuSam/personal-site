@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 
 import Main from '../layouts/Main';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
-import testimonials from '../data/testimonials';
+import testimonialsZh from '../data/testimonials-zh';
 import TestimonialSection from '../components/Testimonials/TestimonialSection';
 
 const ZhIndex = () => (
@@ -48,8 +48,8 @@ const ZhIndex = () => (
           <TestimonialSection
             title="獲各界領袖信賴"
             subtitle="來自高管團隊、創辦人同新晉領袖嘅聲音。"
-            testimonials={testimonials}
-            limit={1}
+            testimonials={testimonialsZh}
+            limit={2}
             featured
           />
         </div>

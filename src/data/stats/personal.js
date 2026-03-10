@@ -4,7 +4,7 @@ const Age = () => {
   const [age, setAge] = useState();
 
   const tick = () => {
-    const divisor = 1000 * 60 * 60 * 24; // ms in an average year
+    const divisor = 1000 * 60 * 60 * 24;
     const birthTime = new Date('2024-06-18T09:00:00');
     setAge(((Date.now() - birthTime) / divisor).toFixed(11));
   };
@@ -21,23 +21,68 @@ const Age = () => {
 const data = [
   {
     key: 'age',
-    label: 'Days since tutoring',
+    label: 'Days since first AI tutoring session',
     value: <Age />,
   },
   {
     key: '',
-    label: 'Individuals helped',
+    label: 'Professionals trained (total)',
+    value: '10,000+',
+  },
+  {
+    key: '',
+    label: 'Organizations served',
+    value: '70+',
+  },
+  {
+    key: '',
+    label: 'Countries reached',
+    value: 13,
+  },
+  {
+    key: '',
+    label: 'Largest single program (BOCHK)',
+    value: '1,530 participants',
+  },
+  {
+    key: '',
+    label: 'Largest simultaneous session (BOCHK)',
+    value: '617 participants',
+  },
+  {
+    key: '',
+    label: 'Avg. satisfaction (BOCHK)',
+    value: '9.2/10',
+  },
+  {
+    key: '',
+    label: 'Individuals coached (AICBO 1-1)',
     value: 160,
   },
   {
     key: '',
-    label: '1-1 Sessions conducted',
+    label: '1-1 coaching sessions conducted',
     value: 215,
   },
   {
     key: '',
-    label: 'Group workshops conducted',
-    value: 3,
+    label: 'Pioneer Program: hours saved per week',
+    value: '5-8 per participant',
+  },
+  {
+    key: '',
+    label: 'YouTube guest appearances (Club 80)',
+    value: '3 episodes',
+  },
+  {
+    key: '',
+    label: 'Highest video views (Club 80 Ep 012)',
+    value: '64K+',
+  },
+  {
+    key: '',
+    label: 'Blog posts published',
+    value: '25+',
   },
   {
     key: '',
