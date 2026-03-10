@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import dayjs from 'dayjs';
 import PropTypes from 'prop-types';
 
+import { Helmet } from 'react-helmet-async';
+
 import Main from '../layouts/Main';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 import posts from '../data/posts';
@@ -56,7 +58,31 @@ const Clients = () => (
     twitterTitle="Clients | Sam Wong"
     twitterDescription="Case studies from enterprise AI workshops and training engagements."
     twitterImage={DEFAULT_OG_IMAGE}
+    hreflangTags={[
+      { lang: 'en', href: `${SITE_URL}/clients` },
+      { lang: 'x-default', href: `${SITE_URL}/clients` },
+    ]}
   >
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'CollectionPage',
+          name: 'Clients | Sam Wong',
+          url: `${SITE_URL}/clients`,
+          description: 'Case studies from enterprise AI workshops and training engagements.',
+          mainEntity: {
+            '@type': 'ItemList',
+            itemListElement: clientPosts.map((post, i) => ({
+              '@type': 'ListItem',
+              position: i + 1,
+              url: `${SITE_URL}/blog/${post.slug}`,
+              name: post.title,
+            })),
+          },
+        })}
+      </script>
+    </Helmet>
     <article className="post" id="clients">
       {/* Dark hero */}
       <header className="page-hero">

@@ -49,6 +49,18 @@ const data = [
       + 'living economy, and era progression. FastAPI backend with macOS Swift HUD.',
   },
   {
+    title: 'LetMeLLMForYou | Builder',
+    subtitle: 'Playful prompt-improvement tool powered by Claude',
+    link: 'https://letmellmforyou.com',
+    image: '/images/projects/letmellmforyou.jpg',
+    date: '2026-02',
+    desc:
+      'A prompt-improvement tool that rewrites bad prompts into effective ones. '
+      + 'Express backend with Claude API, better-sqlite3 for history, '
+      + 'dark cinematic frontend with GSAP animations, PostHog analytics. '
+      + 'Deployed on Railway. Built under Adaptig.',
+  },
+  {
     title: 'hyperfocusam.com | Builder',
     subtitle: 'Personal portfolio and blog',
     link: 'https://hyperfocusam.com',

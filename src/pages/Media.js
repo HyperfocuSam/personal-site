@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
+import { Helmet } from 'react-helmet-async';
+
 import Main from '../layouts/Main';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 
@@ -265,6 +267,31 @@ const Media = () => (
       { lang: 'x-default', href: `${SITE_URL}/media` },
     ]}
   >
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'CollectionPage',
+          name: 'Media Appearances | Sam Wong',
+          url: `${SITE_URL}/media`,
+          description: 'Sam Wong\'s media appearances on Club 80, press mentions, and speaking engagements.',
+          mainEntity: {
+            '@type': 'ItemList',
+            itemListElement: episodes.map((ep, i) => ({
+              '@type': 'ListItem',
+              position: i + 1,
+              item: {
+                '@type': 'VideoObject',
+                name: ep.title,
+                description: ep.description.en,
+                embedUrl: ep.embedUrl,
+                uploadDate: ep.date,
+              },
+            })),
+          },
+        })}
+      </script>
+    </Helmet>
     <article className="post" id="media">
       {/* Dark hero */}
       <header className="page-hero">

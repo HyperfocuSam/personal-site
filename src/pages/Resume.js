@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { Helmet } from 'react-helmet-async';
+
 import Main from '../layouts/Main';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 
@@ -37,7 +39,32 @@ const Resume = () => (
     twitterTitle="Resume | Sam Wong"
     twitterDescription="Resume and background of Sam Wong, focused on AI training and human-centered adoption."
     twitterImage={DEFAULT_OG_IMAGE}
+    hreflangTags={[
+      { lang: 'en', href: `${SITE_URL}/resume` },
+      { lang: 'x-default', href: `${SITE_URL}/resume` },
+    ]}
   >
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'ProfilePage',
+          name: 'Resume | Sam Wong',
+          url: `${SITE_URL}/resume`,
+          mainEntity: {
+            '@type': 'Person',
+            name: 'Sam Wong',
+            jobTitle: 'AI Training Specialist',
+            worksFor: [
+              { '@type': 'Organization', name: 'DotAI', url: 'https://dotai.hk' },
+              { '@type': 'Organization', name: 'Adaptig', url: 'https://adaptig.ai' },
+            ],
+            alumniOf: { '@type': 'CollegeOrUniversity', name: 'Chinese University of Hong Kong' },
+            knowsAbout: ['AI Training', 'Corporate Workshops', 'Prompt Engineering', 'AI Adoption'],
+          },
+        })}
+      </script>
+    </Helmet>
     <article className="post" id="resume">
       {/* Dark hero */}
       <header className="page-hero">

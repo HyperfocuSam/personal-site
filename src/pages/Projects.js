@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { Helmet } from 'react-helmet-async';
+
 import Main from '../layouts/Main';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 
@@ -20,7 +22,23 @@ const Projects = () => (
     twitterTitle="Projects | Sam Wong"
     twitterDescription="Projects and ventures across AI adoption, coaching, and product development."
     twitterImage={DEFAULT_OG_IMAGE}
+    hreflangTags={[
+      { lang: 'en', href: `${SITE_URL}/projects` },
+      { lang: 'x-default', href: `${SITE_URL}/projects` },
+    ]}
   >
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'CollectionPage',
+          name: 'Projects | Sam Wong',
+          url: `${SITE_URL}/projects`,
+          description: 'Projects and ventures by Sam Wong across AI adoption, coaching, and product development.',
+          author: { '@type': 'Person', name: 'Sam Wong' },
+        })}
+      </script>
+    </Helmet>
     <article className="post" id="projects">
       {/* Dark hero */}
       <header className="page-hero">

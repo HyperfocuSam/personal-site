@@ -60,14 +60,36 @@ TestimonialSection.defaultProps = {
   subtitle: null,
 };
 
-const schema = {
-  '@context': 'https://schema.org',
-  '@type': 'WebPage',
-  name: 'Testimonials | Sam Wong',
-  description:
-    'Real feedback from AI workshop participants and enterprise training clients.',
-  url: `${SITE_URL}/testimonials`,
-};
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Testimonials | Sam Wong',
+    description:
+      'Real feedback from AI workshop participants and enterprise training clients.',
+    url: `${SITE_URL}/testimonials`,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'EducationalOrganization',
+    name: 'Adaptig',
+    url: 'https://adaptig.ai',
+    description: 'Enterprise AI training and adoption consultancy. Corporate workshops, coaching, and Train-the-Trainer programs across Asia-Pacific, Europe, and the Americas.',
+    founder: { '@type': 'Person', name: 'Sam Wong' },
+    areaServed: ['Hong Kong', 'Asia-Pacific', 'Global'],
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '9.2',
+      bestRating: '10',
+      ratingCount: '1500',
+      itemReviewed: {
+        '@type': 'Course',
+        name: 'Adaptig AI Training Programs',
+        provider: { '@type': 'Organization', name: 'Adaptig', url: 'https://adaptig.ai' },
+      },
+    },
+  },
+];
 
 const Testimonials = () => (
   <Main
@@ -82,6 +104,10 @@ const Testimonials = () => (
     twitterTitle="Testimonials | Sam Wong"
     twitterDescription="Real feedback from AI workshop participants and enterprise training clients."
     twitterImage={DEFAULT_OG_IMAGE}
+    hreflangTags={[
+      { lang: 'en', href: `${SITE_URL}/testimonials` },
+      { lang: 'x-default', href: `${SITE_URL}/testimonials` },
+    ]}
   >
     <Helmet>
       <script type="application/ld+json">

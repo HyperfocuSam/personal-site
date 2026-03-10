@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import dayjs from 'dayjs';
 import PropTypes from 'prop-types';
 
+import { Helmet } from 'react-helmet-async';
+
 import Main from '../layouts/Main';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 import posts from '../data/posts';
@@ -99,6 +101,26 @@ const Blog = () => {
         { lang: 'x-default', href: `${SITE_URL}/blog` },
       ]}
     >
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'CollectionPage',
+            name: 'Blog | Sam Wong',
+            url: `${SITE_URL}/blog`,
+            description: 'AI adoption insights, workshop learnings, and the human side of technology.',
+            mainEntity: {
+              '@type': 'ItemList',
+              itemListElement: filteredPosts.slice(0, 10).map((post, i) => ({
+                '@type': 'ListItem',
+                position: i + 1,
+                url: `${SITE_URL}/blog/${post.slug}`,
+                name: post.title,
+              })),
+            },
+          })}
+        </script>
+      </Helmet>
       <article className="post" id="blog">
         {/* Dark hero */}
         <header className="page-hero">
@@ -148,6 +170,7 @@ const Blog = () => {
                             src={featuredPost.image}
                             alt={featuredPost.title}
                             className="blog-featured__image"
+                            loading="lazy"
                           />
                         </div>
                       )}

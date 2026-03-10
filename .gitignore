@@ -49,3 +49,4 @@ build/
 nohup.out
 .vercel
 Sam-original.png
+.env*.local

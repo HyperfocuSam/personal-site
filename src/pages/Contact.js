@@ -1,6 +1,8 @@
 import React, { useMemo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
+import { Helmet } from 'react-helmet-async';
+
 import Main from '../layouts/Main';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 import EmailLink from '../components/Contact/EmailLink';
@@ -39,7 +41,33 @@ const Contact = () => {
       twitterTitle="Contact | Sam Wong"
       twitterDescription="Get in touch for AI training, workshops, coaching, and speaking engagements."
       twitterImage={DEFAULT_OG_IMAGE}
+      hreflangTags={[
+        { lang: 'en', href: `${SITE_URL}/contact` },
+        { lang: 'x-default', href: `${SITE_URL}/contact` },
+      ]}
     >
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'ContactPage',
+            name: 'Contact Sam Wong',
+            url: `${SITE_URL}/contact`,
+            mainEntity: {
+              '@type': 'Person',
+              name: 'Sam Wong',
+              email: 'sam@adaptig.com',
+              contactPoint: {
+                '@type': 'ContactPoint',
+                contactType: 'customer service',
+                email: 'sam@adaptig.com',
+                areaServed: ['Hong Kong', 'Asia-Pacific', 'Global'],
+                availableLanguage: ['English', 'Cantonese', 'Mandarin'],
+              },
+            },
+          })}
+        </script>
+      </Helmet>
       <article className="post" id="contact">
         {/* Dark hero */}
         <header className="page-hero">
