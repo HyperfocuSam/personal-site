@@ -1,6 +1,5 @@
-// Design System: hyperfocusam.com
-// Directly matched to Ali Abdaal's computed CSS values
-// White base, cream cards, peach CTAs, massive typography
+// Design System: hyperfocusam.com Visual Redesign
+// Atmosphere: "Warm study at dusk"
 
 // Misc.
 $misc: (
@@ -18,13 +17,13 @@ $size: (
   element-height: 2.75em,
   element-margin: 2em,
   section-spacing: 6rem,
-  section-spacing-small: 4rem,
+  section-spacing-small: 3rem,
   menu: 20em,
   content-narrow: 720px,
   content-standard: 960px,
-  content-wide: 1440px,
-  nav-height: 80px,
-  nav-height-small: 64px,
+  content-wide: 1200px,
+  nav-height: 64px,
+  nav-height-small: 56px,
 );
 
 // Font.
@@ -42,9 +41,11 @@ $font: (
     monospace,
   ),
   family-heading: (
-    "DM Serif Display",
-    "Georgia",
-    serif,
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif,
   ),
   family-chinese: (
     "Noto Sans TC",
@@ -52,83 +53,81 @@ $font: (
     -apple-system,
     sans-serif,
   ),
-  weight: 500,
+  weight: 400,
   weight-medium: 500,
   weight-bold: 600,
-  weight-heading: 400,
-  weight-heading-bold: 400,
-  weight-heading-extrabold: 400,
-  kerning-heading: -0.03em,
+  weight-heading: 600,
+  weight-heading-bold: 700,
+  weight-heading-extrabold: 700,
+  kerning-heading: -0.02em,
   kerning-meta: 0.08em,
 );
 
-// Palette — white base, cream cards (Ali's inverted system)
+// Palette — "Warm study at dusk"
 $palette: (
-  // Ink
-  ink: #1B1624,
-  ink-mid: #2a2535,
-  ink-light: #3d3850,
+  // Ink (primary dark)
+  ink: #0f1729,
+  ink-mid: #1e2a45,
+  ink-light: #2d3b5e,
 
-  // Peach (PRIMARY accent — CTAs, subscribe buttons)
-  peach: #FD976D,
-  peach-light: #fdb99a,
-  peach-subtle: rgba(253, 151, 109, 0.12),
-
-  // Amber (secondary — links, decorative)
+  // Amber (warm accent)
   amber: #c8965a,
   amber-light: #d4a96e,
   amber-subtle: rgba(200, 150, 90, 0.12),
 
-  // Yellow (section backgrounds, photo backing)
-  yellow: #FDD46B,
-  yellow-subtle: rgba(253, 212, 107, 0.15),
+  // Surfaces (layered depth)
+  surface-base: #f6f4f0,
+  surface-raised: #faf8f5,
+  surface-overlay: #ffffff,
+  surface-sunken: #edeae4,
 
-  // Surfaces — WHITE base, cream for cards/raised elements
-  surface-base: #FFFFFF,
-  surface-raised: #F9F6F3,
-  surface-overlay: #FFFFFF,
-  surface-sunken: #F3EDE9,
-  surface-deep: #ECE5E1,
-
-  // Text — Ali uses same dark ink for body AND headings
-  text-primary: #1B1624,
-  text-body: #1B1624,
-  text-secondary: #6b6777,
-  text-on-dark: #F9F6F3,
-  text-on-dark-muted: #b0adb8,
+  // Text
+  text-primary: #1a1d2b,
+  text-body: #3d3f4e,
+  text-secondary: #6b6d7a,
+  text-on-dark: #e8e6e1,
+  text-on-dark-muted: #9a9ba8,
 
   // Borders
-  border-subtle: #ECE5E1,
-  border-strong: #E0D8D0,
+  border-subtle: #e5e2db,
+  border-strong: #d0cdc5,
 
-  // Shadows (warm-tinted, Ali's massive shadow style)
-  shadow-color: rgba(224, 216, 208, 0.65),
+  // Shadows (navy-tinted)
+  shadow-color: rgba(15, 23, 41, 0.08),
 
-  // Legacy mappings
-  bg: #FFFFFF,
-  bg-alt: #F9F6F3,
-  fg: #1B1624,
-  fg-bold: #1B1624,
-  fg-light: #6b6777,
-  border: #ECE5E1,
-  border-bg: #F3EDE9,
-  border-alt: #E0D8D0,
-  accent: #FD976D,
+  // Legacy mappings (for Skel compatibility — avoids breaking functions that use old keys)
+  bg: #f6f4f0,
+  bg-alt: #f6f4f0,
+  fg: #3d3f4e,
+  fg-bold: #1a1d2b,
+  fg-light: #6b6d7a,
+  border: #e5e2db,
+  border-bg: #edeae4,
+  border-alt: #d0cdc5,
+  accent: #c8965a,
+
+  // Deprecated aliases (map old names to new values — remove as files are rewritten)
+  peach: #c8965a,
+  peach-light: #d4a96e,
+  peach-subtle: rgba(200, 150, 90, 0.12),
+  yellow: rgba(200, 150, 90, 0.15),
+  yellow-subtle: rgba(200, 150, 90, 0.10),
+  surface-deep: #edeae4,
 );
 
-// Shadows — Ali's warm massive shadows
+// Shadows
 $shadow: (
-  sm: 0 2px 8px rgba(224, 216, 208, 0.3),
-  md: 0 8px 30px rgba(224, 216, 208, 0.4),
-  lg: 0 50px 80px -15px rgba(224, 216, 208, 0.65),
+  sm: 0 1px 2px rgba(15, 23, 41, 0.05),
+  md: 0 4px 12px rgba(15, 23, 41, 0.08),
+  lg: 0 8px 24px rgba(15, 23, 41, 0.12),
 );
 
 // Border radius
 $radius: (
-  sm: 6px,
-  md: 10px,
-  lg: 16px,
-  xl: 20px,
-  pill: 100px,
+  sm: 4px,
+  md: 6px,
+  lg: 8px,
+  xl: 12px,
   full: 50%,
+  pill: 100px, // deprecated alias — remove as files are rewritten
 );
