@@ -25,6 +25,10 @@ const routes = [
     path: '/clients',
   },
   {
+    label: 'Testimonials',
+    path: '/testimonials',
+  },
+  {
     label: 'Contact',
     path: '/contact',
   },

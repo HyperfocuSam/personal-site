@@ -1,48 +1,41 @@
-// Testimonials data - from enterprise clients and coaching engagements
-// Source: Knowledge/adaptig (registered knowledge)/copywriting-style/Adaptig_Client_Testimonials.md
+// Real testimonials from DotAI Academy feedback surveys and corporate training engagements
+// Used by homepage, about, services — shows a curated subset via the TestimonialSection component
 const testimonials = [
   {
-    quote: 'For the first time, our people felt excited about AI '
-      + '— not intimidated by it. The Adaptig team met us where we '
-      + 'were, listened deeply, and delivered a live, practical session '
-      + 'that changed everything. It wasn\'t about learning tools — '
-      + 'it was about unlocking confidence.',
-    name: 'G.B.',
-    title: 'President',
-    company: 'Bachar Investments',
+    quote: 'I absolutely loved this lesson — very useful! Sam did a fantastic job explaining '
+      + 'NotebookLM using a real-life example, making it easy to understand since we encounter '
+      + 'similar situations all the time.',
+    name: 'Participant',
+    title: 'AI x Audio-to-Text Workshop',
+    company: 'DotAI Academy, Feb 2025',
   },
   {
-    quote: 'This wasn\'t a passive demo. It was hands-on, human, '
-      + 'and energising. The team left not just informed, but excited '
-      + 'to apply what they\'d learned.',
-    name: 'A.W.',
-    title: 'CEO',
-    company: 'Paly Adventures',
+    quote: 'Sam is deeply experienced and professional. The way he teaches vibe coding, '
+      + 'Stripe integration, and website deployment — he knows the full stack inside out. '
+      + '100% recommend this course!',
+    name: 'Participant',
+    title: 'AI Agent & No-Code Lv 2',
+    company: 'DotAI Academy, Sep 2025',
   },
   {
-    quote: 'Having a real person in the room made all the '
-      + 'difference. Our teams didn\'t feel like they were being taught '
-      + 'by a system — they felt like they were being heard, supported, '
-      + 'and genuinely encouraged. It turned fear into curiosity.',
-    name: 'J.P.',
-    title: 'CEO',
-    company: 'Litmus',
+    quote: 'Finally, AI training that\'s actually useful!',
+    name: 'Banking Professional',
+    title: '9.2/10 satisfaction',
+    company: 'Bank of China (Hong Kong)',
   },
   {
-    quote: 'Adaptig\'s team truly understands our challenges. They '
-      + 'didn\'t just deliver a workshop — they guided us every step '
-      + 'of the way, building confidence and momentum across all levels.',
-    name: 'Client',
-    title: '',
-    company: 'Fortune 500 Company',
+    quote: 'The instructors\' passion, knowledge and experience in AI, and their '
+      + 'selflessness to share with participants.',
+    name: 'Participant',
+    title: 'DotAI Academy',
+    company: 'Sep 2025',
   },
   {
-    quote: 'The trainers were not only knowledgeable and approachable, '
-      + 'but they made the content feel immediately relevant. I left '
-      + 'energized and ready to put AI to work.',
-    name: 'Workshop Participant',
-    title: '',
-    company: '',
+    quote: 'Very comprehensive and practical experience sharing with hands-on '
+      + 'in-class exercises using AI tools.',
+    name: 'Participant',
+    title: 'DotAI Academy',
+    company: 'Jul 2025',
   },
 ];
 

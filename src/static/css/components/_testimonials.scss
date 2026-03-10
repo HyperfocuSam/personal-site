@@ -36,6 +36,30 @@
       grid-template-columns: 1fr;
     }
   }
+
+  &__section {
+    margin-bottom: 0;
+
+    h3 {
+      text-transform: none;
+      font-family: _font(family-heading);
+      font-size: 2rem;
+      font-weight: _font(weight-heading-bold);
+      color: _palette(text-primary);
+      margin-bottom: 0.35em;
+      letter-spacing: _font(kerning-heading);
+
+      @include breakpoint(small) {
+        font-size: 1.5rem;
+      }
+    }
+
+    > p {
+      color: _palette(text-secondary);
+      font-size: 1.05rem;
+      margin-bottom: 2rem;
+    }
+  }
 }
 
 .testimonial-card {

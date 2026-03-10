@@ -24,6 +24,10 @@ body::before {
   background-color: _palette(surface-base);
 }
 
+.section-alt {
+  background-color: _palette(surface-sunken);
+}
+
 .section-sunken {
   background-color: _palette(surface-sunken);
 }
