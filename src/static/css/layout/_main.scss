@@ -24,8 +24,9 @@
   }
 }
 
-// Markdown content in blog posts (flat content, no section bands)
+// Markdown content in articles (about, blog posts)
 .post.markdown {
+  > section,
   > p,
   > ul,
   > ol {
