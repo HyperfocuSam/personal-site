@@ -27,7 +27,7 @@ const data = [
     title: 'Ada | Creator',
     subtitle: 'AI executive assistant built on Claude Code',
     link: 'https://hyperfocusam.com/blog/ada-gersang-gamifying-claude-code',
-    image: '/images/projects/adaptig.jpg',
+    image: '/images/projects/ada-assistant.png',
     date: '2026-03',
     desc:
       'A persistent AI executive assistant managing multiple businesses. '
@@ -40,7 +40,7 @@ const data = [
     title: 'Ada Gersang | Creator',
     subtitle: 'RTK-styled gamification layer for Claude Code',
     link: 'https://hyperfocusam.com/blog/ada-gersang-gamifying-claude-code',
-    image: '/images/projects/adaptig.jpg',
+    image: '/images/projects/ada-gersang.png',
     date: '2026-03',
     desc:
       'Turns AI-assisted work into a persistent RPG inspired by '
@@ -52,7 +52,7 @@ const data = [
     title: 'hyperfocusam.com | Builder',
     subtitle: 'Personal portfolio and blog',
     link: 'https://hyperfocusam.com',
-    image: '/images/projects/adaptig.jpg',
+    image: '/images/projects/hyperfocusam.png',
     date: '2025-01',
     desc:
       'Bilingual personal site built with React 18, react-snap pre-rendering, '
@@ -74,7 +74,7 @@ const data = [
     title: 'Adaptig Public Classes | Builder',
     subtitle: 'Workshop registration platform',
     link: 'https://adaptig.ai',
-    image: '/images/projects/adaptig.jpg',
+    image: '/images/projects/dotai-workshop.jpg',
     date: '2026-02',
     desc:
       'Full-stack registration platform for public AI workshops. '
