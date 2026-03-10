@@ -74,38 +74,42 @@ const EpisodeCard = ({ episode }) => (
       </span>
     </div>
 
-    {episode.views && (
-      <div className="episode-card__stats">
-        <span>{`${episode.views} views`}</span>
-        {episode.likes && <span>{`${episode.likes} likes`}</span>}
-      </div>
-    )}
-
-    <div className="video-wrapper">
-      <iframe
-        src={episode.embedUrl}
-        title={episode.title}
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      />
-    </div>
-
-    <div className="episode-card__description">
-      <p className="episode-card__desc-zh">{episode.description.zh}</p>
-      <p className="episode-card__desc-en">{episode.description.en}</p>
-    </div>
-
-    {episode.highlights.length > 0 && (
+    {!episode.membersOnly && (
       <>
-        <strong style={{ fontSize: '0.9em' }}>Key Moments</strong>
-        <ul className="episode-highlights">
-          {episode.highlights.map((h) => (
-            <li key={h.time} className="episode-highlights__item">
-              <span className="episode-highlights__time">{h.time}</span>
-              <span>{h.label}</span>
-            </li>
-          ))}
-        </ul>
+        {episode.views && (
+          <div className="episode-card__stats">
+            <span>{`${episode.views} views`}</span>
+            {episode.likes && <span>{`${episode.likes} likes`}</span>}
+          </div>
+        )}
+
+        <div className="video-wrapper">
+          <iframe
+            src={episode.embedUrl}
+            title={episode.title}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
+
+        <div className="episode-card__description">
+          <p className="episode-card__desc-zh">{episode.description.zh}</p>
+          <p className="episode-card__desc-en">{episode.description.en}</p>
+        </div>
+
+        {episode.highlights.length > 0 && (
+          <>
+            <strong style={{ fontSize: '0.9em' }}>Key Moments</strong>
+            <ul className="episode-highlights">
+              {episode.highlights.map((h) => (
+                <li key={h.time} className="episode-highlights__item">
+                  <span className="episode-highlights__time">{h.time}</span>
+                  <span>{h.label}</span>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
       </>
     )}
   </div>
