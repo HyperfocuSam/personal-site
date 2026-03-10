@@ -196,9 +196,8 @@ const Blog = () => {
         </section>
 
         <EmailCapture
-          source="blog-listing"
-          title="Stay in the loop"
-          blurb="Occasional insights on AI adoption. No spam, no hype."
+          title="Want to discuss AI adoption?"
+          blurb="Reach out for a conversation about training, coaching, or anything AI."
         />
       </article>
     </Main>

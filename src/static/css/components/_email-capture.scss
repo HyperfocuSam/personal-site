@@ -41,64 +41,18 @@
     &:hover { color: _palette(peach-light) !important; }
   }
 
-  &__form {
-    max-width: _size(content-standard);
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-  }
-
-  &__field {
-    color: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    margin: 0;
-  }
-
-  &__label {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-  }
-
   &__controls {
     align-items: center;
     display: flex;
-    gap: 0.75em;
-    max-width: 540px;
-    width: 100%;
-
-    @include breakpoint(small) {
-      flex-direction: column;
-    }
-  }
-
-  input[type="email"] {
-    margin: 0;
-    flex: 1;
-    background: _palette(surface-base);
-    border: 2px solid _palette(border-strong);
-    border-radius: map-get($radius, pill);
-    color: _palette(text-body);
-    padding: 1.25em 2em;
-    font-size: 1.2rem;
-    width: 100%;
-
-    &:focus {
-      border-color: _palette(peach);
-      outline: none;
-      box-shadow: 0 0 0 3px _palette(peach-subtle);
-    }
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
   }
 
   &__submit {
     margin: 0;
-    background-color: _palette(peach);
-    color: _palette(ink) !important;
-    border: 0;
+    text-decoration: none;
+    display: inline-block;
     border-radius: map-get($radius, pill);
     font-weight: _font(weight-bold);
     font-size: 1.05rem;
@@ -106,12 +60,33 @@
     min-width: 160px;
     text-align: center;
     cursor: pointer;
-    transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+
+    // Primary (Email)
+    background-color: _palette(peach);
+    color: _palette(ink) !important;
+    border: 2px solid _palette(peach);
 
     &:hover {
       background-color: _palette(peach-light);
+      border-color: _palette(peach-light);
       transform: translateY(-2px);
       box-shadow: map-get($shadow, lg);
+      color: _palette(ink) !important;
+    }
+
+    // Outline variant (WhatsApp)
+    &.button--outline {
+      background-color: transparent;
+      border: 2px solid _palette(text-primary);
+      color: _palette(text-primary) !important;
+
+      &:hover {
+        background-color: _palette(text-primary);
+        color: _palette(surface-base) !important;
+        transform: translateY(-2px);
+        box-shadow: map-get($shadow, lg);
+      }
     }
   }
 }

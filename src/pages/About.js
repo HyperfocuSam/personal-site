@@ -13,7 +13,7 @@ const About = () => (
     description="About Sam Wong, the AI private tutor in Hong Kong"
     canonicalUrl={`${SITE_URL}/about`}
     ogTitle="About Sam Wong | AI Training Specialist"
-    ogDescription="Why I do this work and how I got here. From ADHD diagnosis to training 10,000+ professionals in AI adoption."
+    ogDescription="From ADHD diagnosis to training 10,000+ professionals in AI adoption. The story behind Adaptig and DotAI."
     ogImage={DEFAULT_OG_IMAGE}
     ogUrl={`${SITE_URL}/about`}
     ogType="profile"
@@ -69,9 +69,17 @@ const About = () => (
 
           <h3>Career Path</h3>
           <p>
-            My career moved from Executive Assistant roles at FAO Schwarz and Sharper
-            Image to AI Product Manager and AI Team Lead at RENPHO, where I built an
-            AI division from scratch.
+            I studied Public &amp; Comparative History at the Chinese University
+            of Hong Kong, specializing in records management and knowledge systems.
+            My career moved from Executive Assistant to the President of ThreeSixty
+            Group (the company behind Sharper Image and FAO Schwarz) to AI Product
+            Manager at RENPHO, where I built an AI division from scratch.
+          </p>
+          <p>
+            In 2024, I left that stable role to start AICBO &mdash; free, one-on-one
+            AI tutoring sessions for anyone who wanted to learn. What began as a small
+            experiment became 150+ sessions and eventually led to co-founding Adaptig
+            and joining DotAI as a founding member.
           </p>
           <p>
             I learned a simple truth: adoption is rarely a tool problem.
@@ -101,6 +109,67 @@ const About = () => (
             <div className="card">
               <h4>Frameworks beat features.</h4>
               <p>Tools change. Thinking patterns endure.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Signature Frameworks */}
+      <section className="section-base section-padding">
+        <div className="content-standard">
+          <h3>Signature Frameworks</h3>
+          <p>
+            I create named, repeatable thinking patterns that make AI adoption
+            feel concrete instead of abstract. A few examples:
+          </p>
+          <div className="card-grid cols-2">
+            <div className="card">
+              <h4>Traffic Light Framework</h4>
+              <p>
+                Red / Yellow / Green classification for AI task
+                suitability. Helps teams quickly assess what to
+                delegate, what to co-create, and what to keep human.
+              </p>
+            </div>
+            <div className="card">
+              <h4>IPA Framework</h4>
+              <p>
+                Input &rarr; Process &rarr; Audit. A three-step
+                mental model for working with any AI tool safely
+                and effectively.
+              </p>
+            </div>
+            <div className="card">
+              <h4>C-How Thinking</h4>
+              <p>
+                Bridges left-brain logic and right-brain creativity
+                through structured prompting. Used in engineering
+                and design workshops.
+              </p>
+            </div>
+            <div className="card">
+              <h4>AI Pioneer Program</h4>
+              <p>
+                A 6-session cohort model based on change management.
+                Train 10-20 internal champions who drive adoption
+                across the wider organization.
+              </p>
+            </div>
+            <div className="card">
+              <h4>70/30 Split</h4>
+              <p>
+                70% AI execution, 30% human judgment.
+                A principle for delegating work to AI while
+                keeping critical thinking with the human.
+              </p>
+            </div>
+            <div className="card">
+              <h4>AI Maturity Model</h4>
+              <p>
+                Four stages from Awareness to Transformation.
+                Helps organizations diagnose where they are
+                and what to do next.
+              </p>
             </div>
           </div>
         </div>
@@ -217,7 +286,7 @@ const About = () => (
                 name: 'What is Sam Wong\'s background?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Sam Wong is a history graduate from the Chinese University of Hong Kong. His career moved from Executive Assistant roles at FAO Schwarz and Sharper Image to AI Product Manager and AI Team Lead at RENPHO, where he built an AI division from scratch. Diagnosed with ADHD in his mid-20s, he discovered AI as a way to manage his own challenges and turned that into a mission to help others adopt AI effectively.',
+                  text: 'Sam Wong holds a Master of Arts in Public & Comparative History from the Chinese University of Hong Kong, specializing in records management and knowledge systems. His career moved from Executive Assistant to the President of ThreeSixty Group (Sharper Image / FAO Schwarz) to AI Product Manager at RENPHO, where he built an AI division from scratch. In 2024, he started AICBO — free 1-on-1 AI tutoring — which grew into 150+ coaching sessions and led to co-founding Adaptig and DotAI.',
                 },
               },
               {

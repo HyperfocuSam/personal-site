@@ -218,9 +218,8 @@ const Post = () => {
         </section>
 
         <EmailCapture
-          source={`blog-post-${slug}`}
-          title="Stay in the loop"
-          blurb="Occasional insights on AI adoption. No spam, no hype."
+          title="Want to discuss this topic?"
+          blurb="Reach out for a conversation about AI training, coaching, or team adoption."
         />
 
         {/* Related Posts + Navigation */}

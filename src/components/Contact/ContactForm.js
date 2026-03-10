@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
-
-const DEFAULT_FORMSPREE_ENDPOINT = 'https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID';
 
 const interestOptions = [
   'Corporate Training',
@@ -11,8 +9,11 @@ const interestOptions = [
   'Other',
 ];
 
-const ContactForm = ({ actionUrl, initialInterest }) => {
+const ContactForm = ({ initialInterest }) => {
   const [interest, setInterest] = useState(initialInterest);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
   useEffect(() => {
     if (interestOptions.includes(initialInterest)) {
@@ -22,6 +23,21 @@ const ContactForm = ({ actionUrl, initialInterest }) => {
     }
   }, [initialInterest]);
 
+  const handleSubmit = useCallback((e) => {
+    e.preventDefault();
+    const subject = encodeURIComponent(
+      `[${interest}] Inquiry from ${name}`,
+    );
+    const body = encodeURIComponent(
+      `Hi Sam,\n\n${message}\n\n---\n`
+      + `Name: ${name}\nEmail: ${email}\n`
+      + `Interest: ${interest}`,
+    );
+    window.location.href = (
+      `mailto:sam@adaptig.com?subject=${subject}&body=${body}`
+    );
+  }, [interest, name, email, message]);
+
   return (
     <section className="contact-form-section">
       <h3>Tell me what you need</h3>
@@ -29,10 +45,21 @@ const ContactForm = ({ actionUrl, initialInterest }) => {
         Share your goals, current context, and timeline.
         I will reply with a recommended next step.
       </p>
-      <form className="contact-form" action={actionUrl} method="POST">
+      <form
+        className="contact-form"
+        onSubmit={handleSubmit}
+      >
         <label className="contact-form__field" htmlFor="name">
           <span className="contact-form__field-label">Name</span>
-          <input id="name" name="name" type="text" autoComplete="name" required />
+          <input
+            id="name"
+            name="name"
+            type="text"
+            autoComplete="name"
+            required
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
         </label>
 
         <label className="contact-form__field" htmlFor="email">
@@ -43,17 +70,21 @@ const ContactForm = ({ actionUrl, initialInterest }) => {
             type="email"
             autoComplete="email"
             required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
         </label>
 
         <label className="contact-form__field" htmlFor="interest">
-          <span className="contact-form__field-label">Interest</span>
+          <span className="contact-form__field-label">
+            Interest
+          </span>
           <div className="select-wrapper">
             <select
               id="interest"
               name="interest"
               value={interest}
-              onChange={(event) => setInterest(event.target.value)}
+              onChange={(e) => setInterest(e.target.value)}
               required
             >
               {interestOptions.map((option) => (
@@ -66,21 +97,29 @@ const ContactForm = ({ actionUrl, initialInterest }) => {
         </label>
 
         <label className="contact-form__field" htmlFor="message">
-          <span className="contact-form__field-label">Message</span>
+          <span className="contact-form__field-label">
+            Message
+          </span>
           <textarea
             id="message"
             name="message"
             rows="6"
             required
-            placeholder="Tell me your goals, context, and what support you are looking for."
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            placeholder={
+              'Tell me your goals, context, and what '
+              + 'support you are looking for.'
+            }
           />
         </label>
 
-        <input type="hidden" name="_subject" value="New inquiry from hyperfocusam.com" />
-
         <ul className="actions">
           <li>
-            <button type="submit" className="button contact-form__submit">
+            <button
+              type="submit"
+              className="button contact-form__submit"
+            >
               Send Message
             </button>
           </li>
@@ -91,12 +130,10 @@ const ContactForm = ({ actionUrl, initialInterest }) => {
 };
 
 ContactForm.propTypes = {
-  actionUrl: PropTypes.string,
   initialInterest: PropTypes.string,
 };
 
 ContactForm.defaultProps = {
-  actionUrl: process.env.REACT_APP_FORMSPREE_ENDPOINT || DEFAULT_FORMSPREE_ENDPOINT,
   initialInterest: 'Corporate Training',
 };
 

@@ -38,11 +38,10 @@ const Index = () => (
       {/* Stats */}
       <StatsBar />
 
-      {/* Newsletter — high on page */}
+      {/* CTA — high on page */}
       <EmailCapture
-        source="homepage"
-        title="Stay in the loop"
-        blurb="Practical AI insights from training 10,000+ professionals. No spam, no hype."
+        title="Want to talk?"
+        blurb="Whether it's team training, coaching, or just a question about AI adoption — reach out."
       />
 
       {/* How Can I Help You? */}
@@ -149,9 +148,8 @@ const Index = () => (
 
       {/* Bottom CTA */}
       <EmailCapture
-        source="homepage-bottom"
         title="Ready to bring AI to your team?"
-        blurb="Drop your email for practical insights, or book a free conversation to explore what's possible."
+        blurb="Start with a conversation. No pitch, just honest guidance on what makes sense for your situation."
       />
 
       <p style={{
