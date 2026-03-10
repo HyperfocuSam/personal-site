@@ -24,10 +24,10 @@ body {
 
   // Scrolled state — glass effect
   &.scrolled {
-    background-color: rgba(27, 22, 36, 0.92);
+    background-color: rgba(15, 23, 41, 0.92);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    box-shadow: 0 1px 8px rgba(27, 22, 36, 0.25);
+    box-shadow: 0 1px 8px rgba(15, 23, 41, 0.25);
   }
 
   a {
@@ -107,7 +107,7 @@ body {
           text-transform: none;
           color: _palette(text-on-dark-muted);
           padding: 0.5rem 0.75rem;
-          border-radius: map-get($radius, pill);
+          border-radius: map-get($radius, md);
           transition: color 0.25s ease, background-color 0.25s ease;
 
           &:hover {
@@ -140,11 +140,11 @@ body {
       font-size: 0.8rem;
       font-weight: _font(weight-bold);
       padding: 0.6em 1.5em;
-      border-radius: map-get($radius, pill);
+      border-radius: map-get($radius, md);
       transition: background-color 0.25s ease;
 
       &:hover {
-        background-color: _palette(peach) !important;
+        background-color: _palette(amber-light) !important;
         color: _palette(ink) !important;
       }
     }
