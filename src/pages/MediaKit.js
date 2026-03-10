@@ -4,266 +4,6 @@ import { Link } from 'react-router-dom';
 import Main from '../layouts/Main';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 
-const NAVY = '#0f1729';
-const GOLD = '#c8965a';
-const LIGHT_BG = '#edeae4';
-const TEXT_DARK = '#1a1d2b';
-const TEXT_MID = '#3d3f4e';
-const TEXT_LIGHT = '#6b6d7a';
-
-const s = {
-  hero: {
-    background: `linear-gradient(135deg, ${NAVY} 0%, #1e2a45 100%)`,
-    padding: '4em 2em',
-    textAlign: 'center',
-    color: '#fff',
-    position: 'relative',
-    overflow: 'hidden',
-  },
-  heroInner: {
-    maxWidth: '800px',
-    margin: '0 auto',
-    position: 'relative',
-    zIndex: 1,
-  },
-  heroImage: {
-    width: '150px',
-    height: '150px',
-    borderRadius: '50%',
-    objectFit: 'cover',
-    border: `4px solid ${GOLD}`,
-    marginBottom: '1.5em',
-  },
-  heroName: {
-    fontSize: '2.8em',
-    fontWeight: 800,
-    margin: 0,
-    letterSpacing: '-0.02em',
-    lineHeight: 1.1,
-    color: '#fff',
-  },
-  heroSubtitle: {
-    fontSize: '1.1em',
-    fontWeight: 400,
-    color: 'rgba(255,255,255,0.7)',
-    marginTop: '0.5em',
-    marginBottom: '0.75em',
-    letterSpacing: '0.05em',
-    textTransform: 'uppercase',
-  },
-  heroTagline: {
-    fontSize: '1.4em',
-    fontWeight: 300,
-    fontStyle: 'italic',
-    color: GOLD,
-    marginTop: '0.25em',
-    marginBottom: '2em',
-  },
-  statsRow: {
-    display: 'flex',
-    justifyContent: 'center',
-    gap: '2.5em',
-    flexWrap: 'wrap',
-  },
-  statItem: {
-    textAlign: 'center',
-    minWidth: '100px',
-  },
-  statNumber: {
-    display: 'block',
-    fontSize: '2.2em',
-    fontWeight: 800,
-    color: GOLD,
-    lineHeight: 1,
-  },
-  statLabel: {
-    display: 'block',
-    fontSize: '0.8em',
-    color: 'rgba(255,255,255,0.6)',
-    textTransform: 'uppercase',
-    letterSpacing: '0.08em',
-    marginTop: '0.35em',
-  },
-  section: {
-    maxWidth: '900px',
-    margin: '0 auto',
-    padding: '3.5em 2em',
-  },
-  sectionHeading: {
-    fontSize: '1.6em',
-    fontWeight: 700,
-    color: TEXT_DARK,
-    marginBottom: '0.25em',
-    letterSpacing: '-0.01em',
-  },
-  sectionRule: {
-    width: '50px',
-    height: '3px',
-    background: GOLD,
-    border: 'none',
-    margin: '0.5em 0 2em 0',
-  },
-  bioGrid: {
-    display: 'grid',
-    gridTemplateColumns: '1fr 1fr',
-    gap: '3em',
-  },
-  bioColumn: {
-    fontSize: '0.95em',
-    lineHeight: 1.75,
-    color: TEXT_MID,
-  },
-  bioLangLabel: {
-    display: 'inline-block',
-    fontSize: '0.7em',
-    fontWeight: 700,
-    textTransform: 'uppercase',
-    letterSpacing: '0.1em',
-    color: GOLD,
-    marginBottom: '0.75em',
-    borderBottom: `2px solid ${GOLD}`,
-    paddingBottom: '0.25em',
-  },
-  topicGrid: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
-    gap: '1.5em',
-  },
-  topicCard: {
-    background: '#fff',
-    border: '1px solid #e5e2db',
-    borderRadius: '8px',
-    padding: '1.75em',
-    transition: 'box-shadow 0.2s ease',
-  },
-  topicNumber: {
-    display: 'inline-block',
-    fontSize: '0.7em',
-    fontWeight: 800,
-    color: GOLD,
-    background: 'rgba(200,150,90,0.12)',
-    borderRadius: '4px',
-    padding: '0.3em 0.6em',
-    marginBottom: '0.75em',
-    letterSpacing: '0.05em',
-  },
-  topicTitle: {
-    fontSize: '1.05em',
-    fontWeight: 700,
-    color: TEXT_DARK,
-    marginBottom: '0.6em',
-    lineHeight: 1.35,
-  },
-  topicDesc: {
-    fontSize: '0.88em',
-    color: TEXT_LIGHT,
-    lineHeight: 1.65,
-    margin: 0,
-  },
-  proofSection: {
-    background: LIGHT_BG,
-  },
-  pullQuote: {
-    borderLeft: `4px solid ${GOLD}`,
-    padding: '1em 1.5em',
-    margin: '2em 0',
-    background: '#fff',
-    borderRadius: '0 8px 8px 0',
-  },
-  pullQuoteText: {
-    fontSize: '1.2em',
-    fontStyle: 'italic',
-    color: TEXT_DARK,
-    margin: 0,
-    lineHeight: 1.5,
-  },
-  pullQuoteAttr: {
-    fontSize: '0.85em',
-    color: TEXT_LIGHT,
-    marginTop: '0.5em',
-  },
-  clientList: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    gap: '0.6em',
-    listStyle: 'none',
-    padding: 0,
-    margin: '1.5em 0',
-  },
-  clientPill: {
-    display: 'inline-block',
-    fontSize: '0.82em',
-    fontWeight: 600,
-    color: TEXT_DARK,
-    background: '#fff',
-    border: '1px solid #ddd',
-    borderRadius: '20px',
-    padding: '0.4em 1em',
-  },
-  mediaItem: {
-    marginBottom: '1em',
-  },
-  mediaLabel: {
-    fontWeight: 700,
-    color: TEXT_DARK,
-    fontSize: '0.95em',
-  },
-  mediaSub: {
-    fontSize: '0.85em',
-    color: TEXT_LIGHT,
-    marginLeft: '0.5em',
-  },
-  contactSection: {
-    background: `linear-gradient(135deg, ${NAVY} 0%, #1e2a45 100%)`,
-    color: '#fff',
-  },
-  contactGrid: {
-    display: 'grid',
-    gridTemplateColumns: '1fr 1fr',
-    gap: '2.5em',
-  },
-  contactLabel: {
-    fontSize: '0.75em',
-    fontWeight: 700,
-    textTransform: 'uppercase',
-    letterSpacing: '0.1em',
-    color: 'rgba(255,255,255,0.5)',
-    marginBottom: '0.3em',
-  },
-  contactValue: {
-    fontSize: '0.95em',
-    color: '#fff',
-    marginBottom: '1.25em',
-  },
-  contactLink: {
-    color: GOLD,
-    textDecoration: 'none',
-  },
-  formatList: {
-    listStyle: 'none',
-    padding: 0,
-    margin: 0,
-  },
-  formatItem: {
-    padding: '0.3em 0',
-    fontSize: '0.95em',
-    color: '#fff',
-  },
-  printBtn: {
-    display: 'inline-block',
-    padding: '0.75em 2em',
-    background: GOLD,
-    color: NAVY,
-    border: 'none',
-    borderRadius: '6px',
-    fontSize: '0.9em',
-    fontWeight: 700,
-    cursor: 'pointer',
-    letterSpacing: '0.03em',
-    marginTop: '1em',
-  },
-};
-
 const stats = [
   { number: '10,000+', label: 'Professionals Trained' },
   { number: '6', label: 'Sectors' },
@@ -331,21 +71,23 @@ const MediaKit = () => (
   >
     <article id="media-kit">
       {/* Hero */}
-      <div className="media-kit-hero media-kit-section" style={s.hero}>
-        <div style={s.heroInner}>
+      <div className="media-kit-hero">
+        <div className="media-kit-hero__inner">
           <img
             src="/images/Sam.png"
             alt="Sam Wong"
-            style={s.heroImage}
+            className="media-kit-hero__image"
+            width={150}
+            height={150}
           />
-          <h1 style={s.heroName}>Sam Wong</h1>
-          <p style={s.heroSubtitle}>AI Training Specialist | Hong Kong</p>
-          <p style={s.heroTagline}>AI adoption that sticks.</p>
-          <div style={s.statsRow}>
+          <h1 className="media-kit-hero__name">Sam Wong</h1>
+          <p className="media-kit-hero__subtitle">AI Training Specialist | Hong Kong</p>
+          <p className="media-kit-hero__tagline">AI adoption that sticks.</p>
+          <div className="media-kit-hero__stats">
             {stats.map((item) => (
-              <div key={item.label} style={s.statItem}>
-                <span style={s.statNumber}>{item.number}</span>
-                <span style={s.statLabel}>{item.label}</span>
+              <div key={item.label} className="media-kit-hero__stat">
+                <span className="media-kit-hero__stat-number">{item.number}</span>
+                <span className="media-kit-hero__stat-label">{item.label}</span>
               </div>
             ))}
           </div>
@@ -353,15 +95,12 @@ const MediaKit = () => (
       </div>
 
       {/* Bio */}
-      <div className="media-kit-section" style={s.section}>
-        <h2 style={s.sectionHeading}>Biography</h2>
-        <hr style={s.sectionRule} />
-        <div
-          className="bio-grid"
-          style={s.bioGrid}
-        >
-          <div style={s.bioColumn}>
-            <span style={s.bioLangLabel}>English</span>
+      <div className="media-kit-section">
+        <h2 className="media-kit-section__heading">Biography</h2>
+        <hr className="media-kit-section__rule" />
+        <div className="media-kit-bio">
+          <div className="media-kit-bio__column">
+            <span className="media-kit-bio__lang-label">English</span>
             <p>
               Sam Wong is an AI training specialist who has trained over 10,000
               professionals across banking, retail, education, and technology
@@ -373,8 +112,8 @@ const MediaKit = () => (
               adoption that changes behavior, not just builds awareness.
             </p>
           </div>
-          <div style={s.bioColumn}>
-            <span style={s.bioLangLabel}>中文</span>
+          <div className="media-kit-bio__column">
+            <span className="media-kit-bio__lang-label">中文</span>
             <p>
               Sam Wong
               是一位AI培訓專家，已為超過10,000名來自銀行、零售、教育及科技行業的專業人士提供培訓。他透過
@@ -388,176 +127,132 @@ const MediaKit = () => (
       </div>
 
       {/* Speaking Topics */}
-      <div
-        className="media-kit-section"
-        style={{ ...s.section, background: LIGHT_BG }}
-      >
-        <h2 style={s.sectionHeading}>Speaking Topics</h2>
-        <hr style={s.sectionRule} />
-        <div style={s.topicGrid}>
+      <div className="media-kit-section media-kit-section--warm">
+        <h2 className="media-kit-section__heading">Speaking Topics</h2>
+        <hr className="media-kit-section__rule" />
+        <div className="media-kit-topics">
           {topics.map((topic, idx) => (
-            <div
-              key={topic.title}
-              className="topic-card"
-              style={s.topicCard}
-            >
-              <span style={s.topicNumber}>
+            <div key={topic.title} className="media-kit-topic">
+              <span className="media-kit-topic__number">
                 {`TOPIC ${String(idx + 1).padStart(2, '0')}`}
               </span>
-              <h3 style={s.topicTitle}>{topic.title}</h3>
-              <p style={s.topicDesc}>{topic.desc}</p>
+              <h3 className="media-kit-topic__title">{topic.title}</h3>
+              <p className="media-kit-topic__desc">{topic.desc}</p>
             </div>
           ))}
         </div>
       </div>
 
       {/* Social Proof */}
-      <div className="media-kit-section" style={s.section}>
-        <h2 style={s.sectionHeading}>Social Proof &amp; Media</h2>
-        <hr style={s.sectionRule} />
+      <div className="media-kit-section">
+        <h2 className="media-kit-section__heading">Social Proof &amp; Media</h2>
+        <hr className="media-kit-section__rule" />
 
-        <h3 style={{ fontSize: '1.1em', fontWeight: 700, color: TEXT_DARK }}>
-          As Seen On
-        </h3>
-        <div style={{ marginBottom: '1.5em' }}>
-          <div style={s.mediaItem}>
-            <span style={s.mediaLabel}>
+        <h3 className="media-kit-section__subheading">As Seen On</h3>
+        <div>
+          <div className="media-kit-media-item">
+            <span className="media-kit-media-item__label">
               {'Club 80 \u6703\u516B\u5341 \u2014 Episode 012'}
             </span>
-            <span style={s.mediaSub}>
+            <span className="media-kit-media-item__sub">
               64K+ views &mdash; &ldquo;How Can AI Save You?&rdquo;
             </span>
           </div>
-          <div style={s.mediaItem}>
-            <span style={s.mediaLabel}>
+          <div className="media-kit-media-item">
+            <span className="media-kit-media-item__label">
               {'Club 80 \u6703\u516B\u5341 \u2014 Episode 024'}
             </span>
-            <span style={s.mediaSub}>
+            <span className="media-kit-media-item__sub">
               34K+ views, 944+ likes, 1,300 concurrent viewers
             </span>
           </div>
-          <div style={s.mediaItem}>
-            <span style={s.mediaLabel}>
+          <div className="media-kit-media-item">
+            <span className="media-kit-media-item__label">
               {'Club 80 \u6703\u516B\u5341 \u2014 Episode 049'}
             </span>
-            <span style={s.mediaSub}>Focus &amp; Productivity tools</span>
+            <span className="media-kit-media-item__sub">Focus &amp; Productivity tools</span>
           </div>
         </div>
 
-        <div style={s.pullQuote}>
-          <p style={s.pullQuoteText}>
+        <div className="media-kit-quote">
+          <p className="media-kit-quote__text">
             {'\u300C\u6DCA\u4FC2\u5462\u500B\u76F4\u56DE\u7968\u50F9\uFF01\u300D'}
           </p>
-          <p style={s.pullQuoteText}>
+          <p className="media-kit-quote__text">
             &ldquo;Just this alone is worth the ticket price!&rdquo;
           </p>
-          <p style={s.pullQuoteAttr}>
+          <p className="media-kit-quote__attr">
             {'— Greg, Club 80 (\u6703\u516B\u5341) host'}
           </p>
         </div>
 
-        <h3
-          style={{
-            fontSize: '1.1em',
-            fontWeight: 700,
-            color: TEXT_DARK,
-            marginTop: '2em',
-          }}
-        >
-          Select Clients
-        </h3>
-        <ul style={s.clientList}>
+        <h3 className="media-kit-section__subheading">Select Clients</h3>
+        <ul className="media-kit-clients">
           {clients.map((client) => (
-            <li key={client} style={s.clientPill}>{client}</li>
+            <li key={client} className="media-kit-clients__pill">{client}</li>
           ))}
         </ul>
       </div>
 
       {/* Contact */}
-      <div
-        className="media-kit-section"
-        style={{ ...s.section, ...s.contactSection }}
-      >
-        <h2 style={{ ...s.sectionHeading, color: '#fff' }}>
-          Contact &amp; Availability
-        </h2>
-        <hr style={s.sectionRule} />
-        <div className="contact-grid" style={s.contactGrid}>
+      <div className="media-kit-section media-kit-section--dark">
+        <h2 className="media-kit-section__heading">Contact &amp; Availability</h2>
+        <hr className="media-kit-section__rule" />
+        <div className="media-kit-contact">
           <div>
-            <p style={s.contactLabel}>Available Formats</p>
-            <ul style={s.formatList}>
+            <p className="media-kit-contact__label">Available Formats</p>
+            <ul className="media-kit-formats">
               {formats.map((f) => (
-                <li key={f} style={s.formatItem}>{f}</li>
+                <li key={f}>{f}</li>
               ))}
             </ul>
 
-            <p style={{ ...s.contactLabel, marginTop: '1.5em' }}>Languages</p>
-            <p style={s.contactValue}>English, Cantonese</p>
+            <p className="media-kit-contact__label media-kit-contact__label--spaced">Languages</p>
+            <p className="media-kit-contact__value">English, Cantonese</p>
 
-            <p style={s.contactLabel}>Location</p>
-            <p style={s.contactValue}>Hong Kong (in-person or remote)</p>
+            <p className="media-kit-contact__label">Location</p>
+            <p className="media-kit-contact__value">Hong Kong (in-person or remote)</p>
           </div>
           <div>
-            <p style={s.contactLabel}>Email</p>
-            <p style={s.contactValue}>
-              <a
-                href="mailto:sam@adaptig.com"
-                style={s.contactLink}
-              >
+            <p className="media-kit-contact__label">Email</p>
+            <p className="media-kit-contact__value">
+              <a href="mailto:sam@adaptig.com" className="media-kit-contact__link">
                 sam@adaptig.com
               </a>
             </p>
 
-            <p style={s.contactLabel}>LinkedIn</p>
-            <p style={s.contactValue}>
+            <p className="media-kit-contact__label">LinkedIn</p>
+            <p className="media-kit-contact__value">
               <a
                 href="https://linkedin.com/in/sam-ai-agent/"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={s.contactLink}
+                className="media-kit-contact__link"
               >
                 linkedin.com/in/sam-ai-agent
               </a>
             </p>
 
-            <p style={s.contactLabel}>Website</p>
-            <p style={s.contactValue}>
+            <p className="media-kit-contact__label">Website</p>
+            <p className="media-kit-contact__value">
               <a
                 href="https://hyperfocusam.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={s.contactLink}
+                className="media-kit-contact__link"
               >
                 hyperfocusam.com
               </a>
             </p>
-
           </div>
         </div>
       </div>
 
       {/* Back link */}
-      <div
-        className="print-hide"
-        style={{ textAlign: 'center', padding: '2em' }}
-      >
-        <Link to="/media" style={{ color: TEXT_LIGHT, fontSize: '0.9em' }}>
-          &larr; Back to Media
-        </Link>
+      <div className="media-kit-back print-hide">
+        <Link to="/media">&larr; Back to Media</Link>
       </div>
     </article>
-
-    {/* Responsive overrides via inline style tag */}
-    {/* eslint-disable-next-line react/no-danger */}
-    <style dangerouslySetInnerHTML={{
-      __html: `
-        @media (max-width: 768px) {
-          .bio-grid { grid-template-columns: 1fr !important; gap: 1.5em !important; }
-          .contact-grid { grid-template-columns: 1fr !important; gap: 1.5em !important; }
-        }
-      `,
-    }}
-    />
   </Main>
 );
 
