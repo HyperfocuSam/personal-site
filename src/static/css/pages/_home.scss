@@ -554,10 +554,10 @@
   li { margin: 0.4em 0; }
 }
 
-// ─── Client logo bar — understated text strip ───────────────
+// ─── Client logo bar — grayscale logo strip ─────────────────
 .client-logo-bar {
   background-color: _palette(surface-sunken);
-  padding: 2.5rem 0;
+  padding: 3rem 0;
   text-align: center;
 
   &__label {
@@ -566,7 +566,7 @@
     letter-spacing: _font(kerning-meta);
     text-transform: uppercase;
     color: _palette(text-secondary);
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
   }
 
   &__list {
@@ -574,27 +574,43 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 0.5rem 1.75rem;
+    gap: 1.5rem 2.5rem;
     list-style: none;
     margin: 0;
     padding: 0;
   }
 
   &__item {
-    color: _palette(text-secondary);
-    font-weight: _font(weight-medium);
-    font-size: 0.95rem;
-    white-space: nowrap;
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    // Separator dot between items
-    &:not(:last-child)::after {
-      content: '\00B7';
-      position: absolute;
-      right: -1.05rem;
-      color: _palette(border-strong);
+    &--text {
+      color: _palette(text-secondary);
       font-weight: _font(weight-bold);
-      pointer-events: none;
+      font-size: 0.95rem;
+      white-space: nowrap;
+      opacity: 0.5;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__logo {
+    height: 32px;
+    width: auto;
+    max-width: 140px;
+    object-fit: contain;
+    filter: grayscale(1);
+    opacity: 0.45;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+
+    &:hover {
+      filter: grayscale(0);
+      opacity: 0.85;
     }
   }
 
@@ -602,15 +618,16 @@
     padding: 2rem 1rem;
 
     &__list {
-      gap: 0.5rem 1.5rem;
+      gap: 1.25rem 2rem;
     }
 
-    &__item {
-      font-size: 0.875rem;
+    &__logo {
+      height: 26px;
+      max-width: 110px;
+    }
 
-      &:not(:last-child)::after {
-        right: -0.9rem;
-      }
+    &__item--text {
+      font-size: 0.85rem;
     }
   }
 }
