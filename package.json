@@ -32,7 +32,6 @@
     "react": "^18.3.1",
     "react-burger-menu": "^3.0.9",
     "react-dom": "^18.3.1",
-    "react-ga": "^3.3.1",
     "react-helmet-async": "^2.0.5",
     "react-router-dom": "^6.26.1",
     "react-scripts": "^5.0.1"
@@ -68,5 +67,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "reactSnap": {
+    "skipThirdPartyRequests": true,
+    "minifyHtml": {
+      "collapseWhitespace": true,
+      "removeComments": true
+    }
   }
 }

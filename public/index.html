@@ -2,25 +2,28 @@
 <html itemscope="" itemtype="http://schema.org/WebPage" lang="en">
   <head>
     <script>
-      (function loadAnalytics() {
-        const isReactSnap = window.navigator.userAgent === 'ReactSnap';
+      (function deferAnalytics() {
+        var isReactSnap = window.navigator.userAgent === 'ReactSnap';
         if (isReactSnap) return;
 
-        const gaScript = document.createElement('script');
-        gaScript.async = true;
-        gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-W9JG51JBY2';
-        document.head.appendChild(gaScript);
+        var idle = window.requestIdleCallback || function(cb) { setTimeout(cb, 1); };
+        idle(function() {
+          var gaScript = document.createElement('script');
+          gaScript.async = true;
+          gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-W9JG51JBY2';
+          document.head.appendChild(gaScript);
 
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { window.dataLayer.push(arguments); }
-        window.gtag = gtag;
-        gtag('js', new Date());
-        gtag('config', 'G-W9JG51JBY2');
+          window.dataLayer = window.dataLayer || [];
+          function gtag() { window.dataLayer.push(arguments); }
+          window.gtag = gtag;
+          gtag('js', new Date());
+          gtag('config', 'G-W9JG51JBY2');
 
-        !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group identify setPersonProperties setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags resetGroups onFeatureFlags addFeatureFlagsHandler onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-        window.posthog.init('phc_J1HRDoTxYEByM1SpZOw8kMzF5XZfspYSW1g4h5CogZb', {
-          api_host: 'https://us.i.posthog.com',
-          defaults: '2026-01-30'
+          !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group identify setPersonProperties setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags resetGroups onFeatureFlags addFeatureFlagsHandler onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+          window.posthog.init('phc_J1HRDoTxYEByM1SpZOw8kMzF5XZfspYSW1g4h5CogZb', {
+            api_host: 'https://us.i.posthog.com',
+            defaults: '2026-01-30'
+          });
         });
       }());
     </script>
@@ -141,19 +144,9 @@
     }
     </script>
     
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="57x57" href="%PUBLIC_URL%/images/favicon/apple-icon-57x57.png" />
-    <link rel="apple-touch-icon" sizes="60x60" href="%PUBLIC_URL%/images/favicon/apple-icon-60x60.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="%PUBLIC_URL%/images/favicon/apple-icon-72x72.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="%PUBLIC_URL%/images/favicon/apple-icon-76x76.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="%PUBLIC_URL%/images/favicon/apple-icon-114x114.png" />
-    <link rel="apple-touch-icon" sizes="120x120" href="%PUBLIC_URL%/images/favicon/apple-icon-120x120.png" />
-    <link rel="apple-touch-icon" sizes="144x144" href="%PUBLIC_URL%/images/favicon/apple-icon-144x144.png" />
-    <link rel="apple-touch-icon" sizes="152x152" href="%PUBLIC_URL%/images/favicon/apple-icon-152x152.png" />
+    <!-- Favicons (consolidated) -->
     <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/images/favicon/apple-icon-180x180.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="%PUBLIC_URL%/images/favicon/android-icon-192x192.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/images/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="96x96" href="%PUBLIC_URL%/images/favicon/favicon-96x96.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/images/favicon/favicon-16x16.png" />
     <link rel="manifest" href="%PUBLIC_URL%/images/favicon/manifest.json" />
     
