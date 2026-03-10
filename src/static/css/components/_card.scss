@@ -5,7 +5,7 @@
   border: 0;
   border-radius: map-get($radius, xl);
   box-shadow: none;
-  padding: 4rem;
+  padding: 2.5rem;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 
   &:hover {
@@ -22,7 +22,7 @@
   }
 
   @include breakpoint(small) {
-    padding: 2.5rem;
+    padding: 2rem;
   }
 }
 

@@ -1,4 +1,5 @@
 // Testimonials data - from enterprise clients and coaching engagements
+// Source: Knowledge/adaptig (registered knowledge)/copywriting-style/Adaptig_Client_Testimonials.md
 const testimonials = [
   {
     quote: 'For the first time, our people felt excited about AI '
@@ -28,22 +29,20 @@ const testimonials = [
     company: 'Litmus',
   },
   {
-    quote: 'Thanks so much for leading such an informative AI '
-      + 'session! There was a lot of material covered, but it was '
-      + 'delivered in a very practical, non-technical manner. I '
-      + 'especially liked the comparison of AI tools to the stapler '
-      + 'or paperclips in everyone\'s toolbox.',
-    name: 'P.R.',
-    title: 'Senior Executive',
-    company: 'Toy Company',
+    quote: 'Adaptig\'s team truly understands our challenges. They '
+      + 'didn\'t just deliver a workshop — they guided us every step '
+      + 'of the way, building confidence and momentum across all levels.',
+    name: 'Client',
+    title: '',
+    company: 'Fortune 500 Company',
   },
   {
-    quote: 'Colleagues felt very fulfilled learning the latest AI. '
-      + 'The response was overwhelmingly positive — five teams '
-      + 'completed full design proposals in a single 3.5-hour session.',
-    name: 'Project Lead',
-    title: 'Senior Manager',
-    company: 'Fortune 500 Retailer',
+    quote: 'The trainers were not only knowledgeable and approachable, '
+      + 'but they made the content feel immediately relevant. I left '
+      + 'energized and ready to put AI to work.',
+    name: 'Workshop Participant',
+    title: '',
+    company: '',
   },
 ];
 

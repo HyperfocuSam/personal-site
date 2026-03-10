@@ -26,7 +26,7 @@ const About = () => (
       { lang: 'x-default', href: `${SITE_URL}/about` },
     ]}
   >
-    <article className="post markdown" id="about">
+    <article className="post" id="about">
       {/* Dark hero */}
       <header className="page-hero">
         <div className="content-narrow">
@@ -94,19 +94,19 @@ const About = () => (
         <div className="content-standard">
           <h3>What I Believe</h3>
           <div className="card-grid cols-2">
-            <div className="card">
+            <div className="card card-accent">
               <h4>Humans are the point.</h4>
               <p>AI is a tool. The goal is meaningful work.</p>
             </div>
-            <div className="card">
+            <div className="card card-accent">
               <h4>Start with the smallest step.</h4>
               <p>Small wins compound into real change.</p>
             </div>
-            <div className="card">
+            <div className="card card-accent">
               <h4>Psychological safety comes first.</h4>
               <p>People do not adopt what they fear.</p>
             </div>
-            <div className="card">
+            <div className="card card-accent">
               <h4>Frameworks beat features.</h4>
               <p>Tools change. Thinking patterns endure.</p>
             </div>
@@ -122,8 +122,8 @@ const About = () => (
             I create named, repeatable thinking patterns that make AI adoption
             feel concrete instead of abstract. A few examples:
           </p>
-          <div className="card-grid cols-2">
-            <div className="card">
+          <div className="card-grid cols-3">
+            <div className="card card-accent">
               <h4>Traffic Light Framework</h4>
               <p>
                 Red / Yellow / Green classification for AI task
@@ -131,7 +131,7 @@ const About = () => (
                 delegate, what to co-create, and what to keep human.
               </p>
             </div>
-            <div className="card">
+            <div className="card card-accent">
               <h4>IPA Framework</h4>
               <p>
                 Input &rarr; Process &rarr; Audit. A three-step
@@ -139,7 +139,7 @@ const About = () => (
                 and effectively.
               </p>
             </div>
-            <div className="card">
+            <div className="card card-accent">
               <h4>C-How Thinking</h4>
               <p>
                 Bridges left-brain logic and right-brain creativity
@@ -147,7 +147,7 @@ const About = () => (
                 and design workshops.
               </p>
             </div>
-            <div className="card">
+            <div className="card card-accent">
               <h4>AI Pioneer Program</h4>
               <p>
                 A 6-session cohort model based on change management.
@@ -155,7 +155,7 @@ const About = () => (
                 across the wider organization.
               </p>
             </div>
-            <div className="card">
+            <div className="card card-accent">
               <h4>70/30 Split</h4>
               <p>
                 70% AI execution, 30% human judgment.
@@ -163,7 +163,7 @@ const About = () => (
                 keeping critical thinking with the human.
               </p>
             </div>
-            <div className="card">
+            <div className="card card-accent">
               <h4>AI Maturity Model</h4>
               <p>
                 Four stages from Awareness to Transformation.
@@ -176,7 +176,7 @@ const About = () => (
       </section>
 
       {/* What I've Built */}
-      <section className="section-base section-padding">
+      <section className="section-sunken section-padding">
         <div className="content-narrow">
           <h3>What I&apos;ve Built</h3>
           <ul>
@@ -226,7 +226,7 @@ const About = () => (
       </section>
 
       {/* Testimonials band */}
-      <section className="section-sunken section-padding">
+      <section className="section-base section-padding">
         <div className="content-wide">
           <TestimonialSection
             title="What leaders say"
@@ -237,22 +237,16 @@ const About = () => (
         </div>
       </section>
 
-      {/* Why This Matters */}
-      <section className="section-base section-padding">
-        <div className="content-narrow">
+      {/* CTA band */}
+      <section className="section-dark section-padding" style={{ textAlign: 'center' }}>
+        <div className="content-standard">
           <h3>Why This Matters</h3>
           <p>
             What motivates me is the shift from &ldquo;AI is not for me&rdquo;
             to &ldquo;I can use this.&rdquo; We are in a major transition, and
             people who learn to think alongside AI while staying human will thrive.
           </p>
-        </div>
-      </section>
-
-      {/* CTA band */}
-      <section className="section-dark section-padding" style={{ textAlign: 'center' }}>
-        <div className="content-standard">
-          <ul className="actions" style={{ justifyContent: 'center' }}>
+          <ul className="actions" style={{ justifyContent: 'center', marginTop: '1.5rem' }}>
             <li>
               <Link to="/services" className="button">
                 See Service Options
@@ -310,7 +304,7 @@ const About = () => (
         </script>
       </Helmet>
 
-      <p style={{ fontSize: '0.85em', color: '#888', marginTop: '2em' }}>
+      <p style={{ fontSize: '0.85em', color: '#6b6777', marginTop: '2em' }}>
         <Link to="/zh/about">&#x4E2D;&#x6587;&#x7248;&#x672C;</Link>
       </p>
     </article>

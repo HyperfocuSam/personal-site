@@ -1,27 +1,12 @@
-// Chinese testimonials - from DotAI students and enterprise clients
+// Chinese testimonials - from enterprise clients
+// Sources: memory_ctf.md (WhatsApp), Adaptig_Client_Testimonials.md (translated)
 const testimonialsZh = [
   {
-    quote: '我好欣賞阿Sam設計呢個課程嘅理念。佢唔係單純教你學幾多AI工具，'
-      + '而係由心態出發，教你點樣將AI融入自己嘅工作流程，'
-      + '令我用一個全新嘅角度去諗點樣將AI帶入生活。',
-    name: 'Ceci',
-    title: 'DotAI 學員',
-    company: '',
-  },
-  {
-    quote: '阿Sam喺商業世界嘅經驗好豐富，佢分享咗好多實際案例，'
-      + '點樣用AI解決問題同取得成功，仲一步步教埋我哋點樣行，'
-      + '令我對AI應用有咗更清晰嘅方向。',
-    name: 'Ceci',
-    title: 'DotAI 學員',
-    company: '',
-  },
-  {
-    quote: '同事們都非常滿足學到最新嘅AI技術。反應非常正面'
+    quote: '同事都因為學到最新嘅AI，而覺得非常之充實，反應唔錯'
       + '——五個團隊喺一個3.5小時嘅環節入面完成咗完整嘅設計方案。',
     name: '項目負責人',
     title: '高級經理',
-    company: '財富500強零售商',
+    company: '周大福',
   },
   {
     quote: '第一次，我哋嘅同事對AI感到興奮——而唔係被嚇倒。'
@@ -30,6 +15,21 @@ const testimonialsZh = [
     name: 'G.B.',
     title: '總裁',
     company: 'Bachar Investments',
+  },
+  {
+    quote: '呢次唔係一場被動嘅演示。係落手落腳、有人情味、充滿活力。'
+      + '團隊離開嘅時候唔止係多咗認識，仲好期待將學到嘅嘢應用出嚟。',
+    name: 'A.W.',
+    title: 'CEO',
+    company: 'Paly Adventures',
+  },
+  {
+    quote: '有一個真人喺房入面，完全唔同。我哋嘅團隊唔覺得自己'
+      + '係被一個系統教緊——佢哋覺得被聆聽、被支持、被真心鼓勵。'
+      + '將恐懼變成好奇心。',
+    name: 'J.P.',
+    title: 'CEO',
+    company: 'Litmus',
   },
 ];
 
