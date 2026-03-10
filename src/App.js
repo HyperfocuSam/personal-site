@@ -18,6 +18,7 @@ const Projects = lazy(() => import('./pages/Projects'));
 const Resume = lazy(() => import('./pages/Resume'));
 const Services = lazy(() => import('./pages/Services'));
 const Stats = lazy(() => import('./pages/Stats'));
+const Speaking = lazy(() => import('./pages/Speaking'));
 const Testimonials = lazy(() => import('./pages/Testimonials'));
 
 // Chinese (Traditional) pages
@@ -50,6 +51,7 @@ const App = () => (
         <Route path="/projects" element={<Projects />} />
         <Route path="/resume" element={<Resume />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/speaking" element={<Speaking />} />
         <Route path="/stats" element={<Stats />} />
         <Route path="/testimonials" element={<Testimonials />} />
         <Route path="*" element={<NotFound />} />

@@ -1,0 +1,83 @@
+// Speaking & Events Page
+
+// ── Engagement list — vertical timeline-style list ──
+.engagement-list {
+  margin: 0;
+  padding: 0;
+}
+
+.engagement-item {
+  display: flex;
+  gap: 2rem;
+  padding: 1.75rem 0;
+  border-bottom: 1px solid _palette(border-subtle);
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  &__left {
+    flex-shrink: 0;
+    width: 5.5rem;
+    padding-top: 0.15rem;
+  }
+
+  &__year {
+    font-size: 0.8rem;
+    font-weight: _font(weight-bold);
+    color: _palette(amber);
+    text-transform: uppercase;
+    letter-spacing: _font(kerning-meta);
+  }
+
+  &__right {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__org {
+    font-size: 1.1rem;
+    font-weight: _font(weight-heading-bold);
+    margin: 0 0 0.2rem;
+    color: _palette(text-primary);
+  }
+
+  &__title {
+    font-size: 0.95rem;
+    color: _palette(text-secondary);
+    margin: 0 0 0.5rem;
+    font-style: italic;
+  }
+
+  &__desc {
+    font-size: 0.95rem;
+    color: _palette(text-body);
+    line-height: 1.6;
+    margin: 0 0 0.5rem;
+  }
+
+  &__stat {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: _font(weight-medium);
+    color: _palette(amber);
+    background: _palette(amber-subtle);
+    padding: 0.3em 0.75em;
+    border-radius: map-get($radius, md);
+    letter-spacing: 0.01em;
+  }
+
+  @include breakpoint(small) {
+    flex-direction: column;
+    gap: 0.5rem;
+
+    &__left {
+      width: auto;
+    }
+  }
+}

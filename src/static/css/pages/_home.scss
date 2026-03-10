@@ -254,7 +254,8 @@
 #zh-about,
 #zh-services,
 #zh-blog,
-#zh-media {
+#zh-media,
+#speaking {
   > .full-bleed,
   > .section-base,
   > .section-sunken,
@@ -264,7 +265,8 @@
   > .hero-gradient,
   > .page-hero,
   > .email-capture,
-  > .home-hero {
+  > .home-hero,
+  > .client-logo-bar {
     max-width: 100%;
     padding-left: 0;
     padding-right: 0;
@@ -549,4 +551,65 @@
   h5 { font-size: 0.95rem; margin-bottom: 0.6em; }
   ul { margin: 0; padding-left: 1.3em; }
   li { margin: 0.4em 0; }
+}
+
+// ─── Client logo bar — understated text strip ───────────────
+.client-logo-bar {
+  background-color: _palette(surface-sunken);
+  padding: 2.5rem 0;
+  text-align: center;
+
+  &__label {
+    font-size: 0.8125rem;
+    font-weight: _font(weight-medium);
+    letter-spacing: _font(kerning-meta);
+    text-transform: uppercase;
+    color: _palette(text-secondary);
+    margin-bottom: 1.25rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem 1.75rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    color: _palette(text-secondary);
+    font-weight: _font(weight-medium);
+    font-size: 0.95rem;
+    white-space: nowrap;
+    position: relative;
+
+    // Separator dot between items
+    &:not(:last-child)::after {
+      content: '\00B7';
+      position: absolute;
+      right: -1.05rem;
+      color: _palette(border-strong);
+      font-weight: _font(weight-bold);
+      pointer-events: none;
+    }
+  }
+
+  @include breakpoint(small) {
+    padding: 2rem 1rem;
+
+    &__list {
+      gap: 0.5rem 1.5rem;
+    }
+
+    &__item {
+      font-size: 0.875rem;
+
+      &:not(:last-child)::after {
+        right: -0.9rem;
+      }
+    }
+  }
 }

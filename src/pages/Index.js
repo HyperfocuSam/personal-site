@@ -7,6 +7,7 @@ import testimonials from '../data/testimonials';
 import TestimonialSection from '../components/Testimonials/TestimonialSection';
 import HeroSection from '../components/Home/HeroSection';
 import StatsBar from '../components/Home/StatsBar';
+import ClientLogoBar from '../components/Home/ClientLogoBar';
 import FeaturedCaseStudies from '../components/Home/FeaturedCaseStudies';
 import EmailCapture from '../components/EmailCapture/EmailCapture';
 
@@ -37,6 +38,9 @@ const Index = () => (
 
       {/* Stats */}
       <StatsBar />
+
+      {/* Client Logo Bar */}
+      <ClientLogoBar />
 
       {/* How Can I Help You? */}
       <section className="section-warm section-padding-xl full-bleed">

@@ -31,6 +31,7 @@ const STATIC_PAGES = [
   { path: '/contact', priority: '0.7', changefreq: 'monthly' },
   { path: '/resume', priority: '0.6', changefreq: 'monthly' },
   { path: '/projects', priority: '0.6', changefreq: 'monthly' },
+  { path: '/speaking', priority: '0.8', changefreq: 'monthly' },
   { path: '/testimonials', priority: '0.8', changefreq: 'monthly' },
   // Chinese pages
   { path: '/zh', priority: '1.0', changefreq: 'weekly', lang: 'zh-Hant', alternate: '/' },

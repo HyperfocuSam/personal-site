@@ -109,6 +109,9 @@ const Services = () => {
               <Link to="/services#train-the-trainer" className="anchor-pill">
                 Trainers
               </Link>
+              <Link to="/speaking" className="anchor-pill">
+                Speaking
+              </Link>
             </div>
           </div>
         </header>
