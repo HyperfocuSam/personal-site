@@ -264,7 +264,7 @@ const About = () => (
       </section>
 
       {/* CTA band */}
-      <section className="section-dark section-padding" style={{ textAlign: 'center' }}>
+      <section className="section-dark section-dark--centered section-padding">
         <div className="content-standard">
           <h3>Why This Matters</h3>
           <p>
@@ -272,7 +272,7 @@ const About = () => (
             to &ldquo;I can use this.&rdquo; We are in a major transition, and
             people who learn to think alongside AI while staying human will thrive.
           </p>
-          <ul className="actions" style={{ justifyContent: 'center', marginTop: '1.5rem' }}>
+          <ul className="actions" style={{ marginTop: '1.5rem' }}>
             <li>
               <Link to="/services" className="button">
                 See Service Options
@@ -330,7 +330,7 @@ const About = () => (
         </script>
       </Helmet>
 
-      <p style={{ fontSize: '0.85em', color: '#6b6777', marginTop: '2em' }}>
+      <p className="lang-toggle">
         <Link to="/zh/about">&#x4E2D;&#x6587;&#x7248;&#x672C;</Link>
       </p>
     </article>

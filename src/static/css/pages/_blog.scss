@@ -53,15 +53,15 @@
   }
 
   &--methodology {
-    background: #2a7d4f;
+    background: _palette(tag-green);
     color: #ffffff;
-    border-color: #2a7d4f;
+    border-color: _palette(tag-green);
   }
 
   &--framework {
-    background: #7c4dbd;
+    background: _palette(tag-purple);
     color: #ffffff;
-    border-color: #7c4dbd;
+    border-color: _palette(tag-purple);
   }
 
   &--reflection {
@@ -181,11 +181,11 @@
   }
 
   &--methodology {
-    border-left: 3px solid #2a7d4f;
+    border-left: 3px solid _palette(tag-green);
   }
 
   &--framework {
-    border-left: 3px solid #7c4dbd;
+    border-left: 3px solid _palette(tag-purple);
   }
 
   &--reflection {

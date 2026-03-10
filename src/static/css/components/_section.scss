@@ -93,3 +93,12 @@ header {
     background: _palette(amber-subtle);
   }
 }
+
+// ─── Centered dark section variant ───────────
+.section-dark--centered {
+  text-align: center;
+
+  .actions {
+    justify-content: center;
+  }
+}

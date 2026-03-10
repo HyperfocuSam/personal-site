@@ -156,10 +156,7 @@ const Index = () => (
         blurb="Whether it's team training, coaching, or just a question about AI adoption — start with a conversation."
       />
 
-      <p style={{
-        fontSize: '0.85em', color: '#888', marginTop: '2em', textAlign: 'center',
-      }}
-      >
+      <p className="lang-toggle" style={{ textAlign: 'center' }}>
         <Link to="/zh">&#x4E2D;&#x6587;&#x7248;&#x672C;</Link>
       </p>
     </article>

@@ -183,13 +183,13 @@ const EpisodeCard = ({ episode }) => (
       />
     </div>
 
-    <p style={{ fontSize: '0.95em', marginBottom: '0.5em' }}>
+    <p className="episode-card__desc-zh">
       {episode.description}
     </p>
 
     {episode.highlights.length > 0 && (
       <>
-        <strong style={{ fontSize: '0.9em' }}>重點時刻</strong>
+        <strong className="episode-highlights__label">重點時刻</strong>
         <ul style={styles.highlights}>
           {episode.highlights.map((h) => (
             <li key={h.time} style={styles.highlightItem}>
@@ -283,14 +283,14 @@ const ZhMedia = () => (
         </div>
       </section>
 
-      <section className="section-dark section-padding" style={{ textAlign: 'center' }}>
+      <section className="section-dark section-dark--centered section-padding">
         <div className="content-standard">
           <h3>有興趣邀請 Sam 上你嘅節目？</h3>
           <p>
             Sam 可以接受 Podcast 訪問（直播或預錄）、YouTube 直播、座談討論、
             會議主題演講，主題包括 AI 應用、生產力同實用科技。
           </p>
-          <ul className="actions" style={{ justifyContent: 'center' }}>
+          <ul className="actions">
             <li>
               <Link to="/media/kit" className="button">
                 睇媒體資料包
@@ -305,7 +305,7 @@ const ZhMedia = () => (
         </div>
       </section>
 
-      <p style={{ fontSize: '0.85em', color: '#6b6d7a', marginTop: '2em' }}>
+      <p className="lang-toggle">
         <Link to="/media">View in English</Link>
       </p>
     </article>

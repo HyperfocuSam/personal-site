@@ -133,7 +133,7 @@ const ZhServices = () => {
           </section>
         ))}
 
-        <p style={{ fontSize: '0.85em', color: '#6b6d7a', marginTop: '2em' }}>
+        <p className="lang-toggle">
           <Link to="/services">View in English</Link>
         </p>
       </article>

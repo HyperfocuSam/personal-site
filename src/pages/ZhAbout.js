@@ -159,9 +159,9 @@ const ZhAbout = () => (
         </div>
       </section>
 
-      <section className="section-dark section-padding" style={{ textAlign: 'center' }}>
+      <section className="section-dark section-dark--centered section-padding">
         <div className="content-standard">
-          <ul className="actions" style={{ justifyContent: 'center' }}>
+          <ul className="actions">
             <li>
               <Link to="/zh/services" className="button">
                 睇服務選項
@@ -176,7 +176,7 @@ const ZhAbout = () => (
         </div>
       </section>
 
-      <p style={{ fontSize: '0.85em', color: '#6b6d7a', marginTop: '2em' }}>
+      <p className="lang-toggle">
         <Link to="/about">View in English</Link>
       </p>
     </article>

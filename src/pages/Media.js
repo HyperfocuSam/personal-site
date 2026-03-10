@@ -99,7 +99,7 @@ const EpisodeCard = ({ episode }) => (
 
         {episode.highlights.length > 0 && (
           <>
-            <strong style={{ fontSize: '0.9em' }}>Key Moments</strong>
+            <strong className="episode-highlights__label">Key Moments</strong>
             <ul className="episode-highlights">
               {episode.highlights.map((h) => (
                 <li key={h.time} className="episode-highlights__item">
@@ -271,14 +271,14 @@ const Media = () => (
       </section>
 
       {/* Contact CTA */}
-      <section className="section-dark section-padding" style={{ textAlign: 'center' }}>
+      <section className="section-dark section-dark--centered section-padding">
         <div className="content-standard">
           <h3>Interested in having Sam on your show?</h3>
           <p>
             Sam is available for podcast interviews, live streams, panel discussions,
             and conference talks on AI adoption, productivity, and practical technology use.
           </p>
-          <ul className="actions" style={{ justifyContent: 'center' }}>
+          <ul className="actions">
             <li>
               <Link to="/media/kit" className="button">
                 View Media Kit
@@ -293,7 +293,7 @@ const Media = () => (
         </div>
       </section>
 
-      <p style={{ fontSize: '0.85em', color: '#6b6d7a', marginTop: '2em' }}>
+      <p className="lang-toggle">
         <Link to="/zh/media">中文版本</Link>
       </p>
     </article>

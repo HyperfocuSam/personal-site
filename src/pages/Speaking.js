@@ -251,14 +251,14 @@ const Speaking = () => (
       </section>
 
       {/* Booking CTA */}
-      <section className="section-dark section-padding" style={{ textAlign: 'center' }}>
+      <section className="section-dark section-dark--centered section-padding">
         <div className="content-standard">
           <h3>Book Sam for Your Event</h3>
           <p>
             Available for keynotes, panel discussions, half-day workshops,
             and multi-session programs. In-person or virtual, English or Cantonese.
           </p>
-          <ul className="actions" style={{ justifyContent: 'center' }}>
+          <ul className="actions">
             <li>
               <Link to="/media/kit" className="button">
                 View Media Kit
