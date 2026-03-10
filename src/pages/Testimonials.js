@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import PropTypes from 'prop-types';
 
 import Main from '../layouts/Main';
@@ -82,10 +83,11 @@ const Testimonials = () => (
     twitterDescription="Real feedback from AI workshop participants and enterprise training clients."
     twitterImage={DEFAULT_OG_IMAGE}
   >
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify(schema)}
+      </script>
+    </Helmet>
     <article className="post" id="testimonials">
       {/* Dark hero */}
       <header className="page-hero">
