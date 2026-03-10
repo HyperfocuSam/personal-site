@@ -56,7 +56,7 @@ const Index = () => (
           <div className="help-grid">
             <Link to="/services#organizations" className="help-card">
               <div className="help-card__image">
-                <img src={`${process.env.PUBLIC_URL}/images/home/workshop-corporate.jpg`} alt="International AI workshop group session" />
+                <img src={`${process.env.PUBLIC_URL}/images/home/workshop-corporate.jpg`} alt="Corporate AI workshop at Arup" />
               </div>
               <h3>Workshops for Organizations</h3>
               <p>
@@ -67,7 +67,7 @@ const Index = () => (
             </Link>
             <Link to="/services#one-on-one" className="help-card">
               <div className="help-card__image">
-                <img src={`${process.env.PUBLIC_URL}/images/home/coaching-session.jpg`} alt="One-on-one AI coaching session" />
+                <img src={`${process.env.PUBLIC_URL}/images/home/coaching-session.jpg`} alt="Hands-on AI coaching with Adaptig platform" />
               </div>
               <h3>One-on-One Coaching</h3>
               <p>
