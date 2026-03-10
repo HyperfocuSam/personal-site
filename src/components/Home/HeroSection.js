@@ -32,6 +32,9 @@ const HeroSection = () => (
         <img
           src={`${PUBLIC_URL}/images/Sam.png`}
           alt="Sam Wong"
+          width={760}
+          height={880}
+          fetchPriority="high"
         />
       </div>
     </div>

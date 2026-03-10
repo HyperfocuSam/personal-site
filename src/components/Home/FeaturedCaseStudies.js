@@ -33,6 +33,9 @@ const FeaturedCaseStudies = ({ limit, tag }) => {
                     src={`${PUBLIC_URL}${post.image}`}
                     alt={post.title}
                     className="home-case-studies__image"
+                    width={1200}
+                    height={675}
+                    loading="lazy"
                   />
                 </div>
               </Link>

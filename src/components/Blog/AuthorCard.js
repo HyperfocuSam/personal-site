@@ -11,6 +11,9 @@ const AuthorCard = ({ compact }) => (
         src={`${PUBLIC_URL}/images/Sam.png`}
         alt="Sam Wong - AI Training Specialist"
         className="author-card__image"
+        width={760}
+        height={880}
+        loading="lazy"
       />
     </Link>
     <div className="author-card__info">

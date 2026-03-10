@@ -192,6 +192,8 @@ const Speaking = () => (
         <img
           src="/images/home/ypo-stage-wide.jpg"
           alt="Sam Wong on stage at the YPO Global Event, Skirball Center, New York"
+          width={1200}
+          height={675}
           loading="lazy"
         />
       </div>
