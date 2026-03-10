@@ -113,6 +113,15 @@ const Services = () => {
           </div>
         </header>
 
+        {/* Photo: Corporate workshop in action */}
+        <div className="full-bleed photo-band">
+          <img
+            src="/images/services/corporate-training.jpeg"
+            alt="AI workshop in progress at Arup University, Hong Kong"
+            loading="lazy"
+          />
+        </div>
+
         {/* Service groups in alternating section bands */}
         {groups.map((group) => (
           <section key={group.id} className={`${group.band} section-padding`}>
