@@ -60,143 +60,29 @@ const episodes = [
   },
 ];
 
-const mediaStyles = {
-  episodeCard: {
-    marginBottom: '2.5em',
-    paddingBottom: '2em',
-    borderBottom: '1px solid #e5e2db',
-  },
-  episodeHeader: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'baseline',
-    flexWrap: 'wrap',
-    gap: '0.5em',
-    marginBottom: '0.75em',
-  },
-  episodeTitle: {
-    margin: 0,
-    fontSize: '1.1em',
-    fontWeight: 700,
-  },
-  episodeMeta: {
-    fontSize: '0.85em',
-    color: '#6b6d7a',
-    whiteSpace: 'nowrap',
-  },
-  badge: {
-    display: 'inline-block',
-    fontSize: '0.7em',
-    fontWeight: 700,
-    textTransform: 'uppercase',
-    letterSpacing: '0.08em',
-    padding: '0.25em 0.6em',
-    borderRadius: '4px',
-    background: '#edeae4',
-    color: '#6b6d7a',
-    marginLeft: '0.75em',
-  },
-  videoWrapper: {
-    position: 'relative',
-    paddingBottom: '56.25%',
-    height: 0,
-    overflow: 'hidden',
-    maxWidth: '100%',
-    marginBottom: '1.25em',
-    borderRadius: '8px',
-  },
-  videoIframe: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    width: '100%',
-    height: '100%',
-    border: 0,
-  },
-  description: {
-    marginBottom: '1em',
-  },
-  descZh: {
-    fontSize: '0.95em',
-    marginBottom: '0.35em',
-  },
-  descEn: {
-    fontSize: '0.9em',
-    color: '#6b6d7a',
-  },
-  highlights: {
-    listStyle: 'none',
-    padding: 0,
-    margin: '0.75em 0 0 0',
-  },
-  highlightItem: {
-    display: 'flex',
-    gap: '0.75em',
-    padding: '0.3em 0',
-    fontSize: '0.9em',
-  },
-  highlightTime: {
-    fontWeight: 700,
-    color: '#1a1d2b',
-    minWidth: '3.5em',
-  },
-  sectionHeading: {
-    borderBottom: '1px solid #e5e2db',
-    paddingBottom: '0.5em',
-    marginBottom: '1.25em',
-  },
-  showIntro: {
-    display: 'flex',
-    alignItems: 'center',
-    gap: '1em',
-    marginBottom: '1.5em',
-    flexWrap: 'wrap',
-  },
-  showBadge: {
-    display: 'inline-block',
-    fontSize: '0.75em',
-    fontWeight: 800,
-    letterSpacing: '0.05em',
-    padding: '0.4em 0.8em',
-    borderRadius: '4px',
-    background: '#0f1729',
-    color: '#e8e6e1',
-    whiteSpace: 'nowrap',
-  },
-  statsRow: {
-    display: 'flex',
-    gap: '1.5em',
-    fontSize: '0.85em',
-    color: '#6b6d7a',
-    marginBottom: '0.5em',
-    flexWrap: 'wrap',
-  },
-};
-
 const EpisodeCard = ({ episode }) => (
-  <div style={mediaStyles.episodeCard} id={episode.id}>
-    <div style={mediaStyles.episodeHeader}>
-      <h4 style={mediaStyles.episodeTitle}>
+  <div className="episode-card" id={episode.id}>
+    <div className="episode-card__header">
+      <h4 className="episode-card__title">
         {`直播${episode.number}: ${episode.title}`}
       </h4>
-      <span style={mediaStyles.episodeMeta}>
+      <span className="episode-card__meta">
         {episode.date}
         {episode.membersOnly && (
-          <span style={mediaStyles.badge}>Members Only</span>
+          <span className="episode-card__badge">Members Only</span>
         )}
       </span>
     </div>
 
     {episode.views && (
-      <div style={mediaStyles.statsRow}>
+      <div className="episode-card__stats">
         <span>{`${episode.views} views`}</span>
-        <span>{`${episode.likes} likes`}</span>
+        {episode.likes && <span>{`${episode.likes} likes`}</span>}
       </div>
     )}
 
-    <div style={mediaStyles.videoWrapper}>
+    <div className="video-wrapper">
       <iframe
-        style={mediaStyles.videoIframe}
         src={episode.embedUrl}
         title={episode.title}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -204,18 +90,18 @@ const EpisodeCard = ({ episode }) => (
       />
     </div>
 
-    <div style={mediaStyles.description}>
-      <p style={mediaStyles.descZh}>{episode.description.zh}</p>
-      <p style={mediaStyles.descEn}>{episode.description.en}</p>
+    <div className="episode-card__description">
+      <p className="episode-card__desc-zh">{episode.description.zh}</p>
+      <p className="episode-card__desc-en">{episode.description.en}</p>
     </div>
 
     {episode.highlights.length > 0 && (
       <>
         <strong style={{ fontSize: '0.9em' }}>Key Moments</strong>
-        <ul style={mediaStyles.highlights}>
+        <ul className="episode-highlights">
           {episode.highlights.map((h) => (
-            <li key={h.time} style={mediaStyles.highlightItem}>
-              <span style={mediaStyles.highlightTime}>{h.time}</span>
+            <li key={h.time} className="episode-highlights__item">
+              <span className="episode-highlights__time">{h.time}</span>
               <span>{h.label}</span>
             </li>
           ))}
@@ -308,9 +194,9 @@ const Media = () => (
       {/* As Seen On */}
       <section className="section-base section-padding">
         <div className="content-standard">
-          <h3 style={mediaStyles.sectionHeading}>As Seen On</h3>
-          <div style={mediaStyles.showIntro}>
-            <span style={mediaStyles.showBadge}>Club 80 會八十</span>
+          <h3 className="media-section-heading">As Seen On</h3>
+          <div className="show-intro">
+            <span className="show-intro__badge">Club 80 會八十</span>
             <span>Popular Cantonese YouTube show</span>
           </div>
           <p>
@@ -329,7 +215,7 @@ const Media = () => (
       {/* Press & Mentions */}
       <section className="section-sunken section-padding">
         <div className="content-standard">
-          <h3 style={mediaStyles.sectionHeading}>
+          <h3 className="media-section-heading">
             Press &amp; Mentions
           </h3>
           <div className="card-grid cols-2">
@@ -373,7 +259,7 @@ const Media = () => (
       {/* Episodes */}
       <section className="section-base section-padding">
         <div className="content-standard">
-          <h3 style={mediaStyles.sectionHeading}>Episodes</h3>
+          <h3 className="media-section-heading">Episodes</h3>
           {episodes.map((ep) => (
             <EpisodeCard key={ep.id} episode={ep} />
           ))}

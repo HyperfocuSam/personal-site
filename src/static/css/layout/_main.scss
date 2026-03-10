@@ -9,7 +9,7 @@
   }
 
   // Default article content gets standard width
-  > article > *:not(.full-bleed):not(.section-sunken):not(.section-dark):not(.hero-gradient):not(.section-base) {
+  > article > *:not(.full-bleed):not(.section-sunken):not(.section-dark):not(.hero-gradient):not(.section-base):not(.section-warm):not(.section-alt):not(.email-capture):not(.home-hero):not(.page-hero) {
     max-width: _size(content-wide);
     margin-left: auto;
     margin-right: auto;

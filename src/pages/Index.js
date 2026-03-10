@@ -38,12 +38,6 @@ const Index = () => (
       {/* Stats */}
       <StatsBar />
 
-      {/* CTA — high on page */}
-      <EmailCapture
-        title="Want to talk?"
-        blurb="Whether it's team training, coaching, or just a question about AI adoption — reach out."
-      />
-
       {/* How Can I Help You? */}
       <section className="section-warm section-padding-xl full-bleed">
         <div className="content-wide">
@@ -152,10 +146,10 @@ const Index = () => (
         </div>
       </section>
 
-      {/* Bottom CTA */}
+      {/* CTA */}
       <EmailCapture
         title="Ready to bring AI to your team?"
-        blurb="Start with a conversation. No pitch, just honest guidance on what makes sense for your situation."
+        blurb="Whether it's team training, coaching, or just a question about AI adoption — start with a conversation."
       />
 
       <p style={{
