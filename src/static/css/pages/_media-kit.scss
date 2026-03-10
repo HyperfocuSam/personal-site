@@ -2,7 +2,7 @@
 
 // ─── Hero banner ─────────────────────────────
 .media-kit-hero {
-  background: linear-gradient(135deg, _palette(ink) 0%, #1e2a45 100%);
+  background: linear-gradient(135deg, _palette(ink) 0%, _palette(ink-mid) 100%);
   padding: 4em 2em;
   text-align: center;
   color: #fff;
@@ -58,11 +58,23 @@
     justify-content: center;
     gap: 2.5em;
     flex-wrap: wrap;
+
+    @include breakpoint(small) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5em;
+      max-width: 320px;
+      margin: 0 auto;
+    }
   }
 
   &__stat {
     text-align: center;
     min-width: 100px;
+
+    @include breakpoint(small) {
+      min-width: 0;
+    }
   }
 
   &__stat-number {
@@ -89,12 +101,20 @@
   margin: 0 auto;
   padding: 3.5em 2em;
 
+  // Full-bleed background variants: background stretches edge-to-edge,
+  // but content stays constrained to 900px using max() padding.
+  &--warm,
+  &--dark {
+    max-width: none;
+    padding: 3.5em max(2em, calc(50% - 450px));
+  }
+
   &--warm {
     background: _palette(surface-sunken);
   }
 
   &--dark {
-    background: linear-gradient(135deg, _palette(ink) 0%, #1e2a45 100%);
+    background: linear-gradient(135deg, _palette(ink) 0%, _palette(ink-mid) 100%);
     color: #fff;
 
     .media-kit-section__heading {

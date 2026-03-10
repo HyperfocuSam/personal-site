@@ -88,7 +88,7 @@
     }
 
     @include breakpoint(small) {
-      font-size: 2.75rem;
+      font-size: 2.35rem;
     }
   }
 
@@ -267,8 +267,7 @@
   > .email-capture,
   > .home-hero,
   > .client-logo-bar,
-  > .media-kit-hero,
-  > .media-kit-section {
+  > .media-kit-hero {
     max-width: 100%;
     padding-left: 0;
     padding-right: 0;
