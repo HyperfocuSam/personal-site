@@ -1,4 +1,4 @@
-/* Typography — DM Serif Display headings + Inter body */
+/* Typography — Inter-based system */
 
 body,
 input,
@@ -6,9 +6,9 @@ select,
 textarea {
   color: _palette(text-body);
   font-family: _font(family);
-  font-size: 18px;
+  font-size: 17px;
   font-weight: _font(weight);
-  line-height: 1.6;
+  line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -19,12 +19,13 @@ textarea {
 
 a {
   transition: color 0.25s ease, border-bottom-color 0.25s ease;
-  border-bottom: 0;
-  color: _palette(peach);
+  border-bottom: 1px solid transparent;
+  color: _palette(amber);
   text-decoration: none;
 
   &:hover {
-    color: _palette(peach-light) !important;
+    border-bottom-color: _palette(amber);
+    color: _palette(amber-light) !important;
   }
 }
 
@@ -43,67 +44,47 @@ p {
   margin: 0 0 _size(element-margin) 0;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
   color: _palette(text-primary);
   font-family: _font(family-heading);
-  font-weight: _font(weight-heading);
+  font-weight: _font(weight-heading-bold);
   letter-spacing: _font(kerning-heading);
-  line-height: 1.15;
+  line-height: 1.3;
   margin: 0 0 (_size(element-margin) * 0.5) 0;
-  text-transform: none;
+  text-transform: none; // Kill the all-caps
 
   a {
     color: inherit;
     border-bottom: 0;
 
     &:hover {
-      color: _palette(peach) !important;
-    }
-  }
-}
-
-// h4-h6 use Inter (sans-serif) for sub-labels
-h4, h5, h6 {
-  color: _palette(text-primary);
-  font-family: _font(family);
-  font-weight: _font(weight-bold);
-  letter-spacing: 0;
-  line-height: 1.4;
-  margin: 0 0 (_size(element-margin) * 0.5) 0;
-  text-transform: none;
-
-  a {
-    color: inherit;
-    border-bottom: 0;
-
-    &:hover {
-      color: _palette(peach) !important;
+      color: _palette(amber) !important;
     }
   }
 }
 
 h1 {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
 
   @include breakpoint(small) {
-    font-size: 2.25rem;
+    font-size: 1.85rem;
   }
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 1.75rem;
 
   @include breakpoint(small) {
-    font-size: 1.75rem;
+    font-size: 1.4rem;
   }
 }
 
 h3 {
-  font-size: 1.75rem;
+  font-size: 1.35rem;
 }
 
 h4 {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
 }
 
 h5 {
@@ -114,10 +95,10 @@ h6 {
   font-size: 0.9rem;
 }
 
-// Metadata / label style
+// Metadata / label style — the ONLY place we use uppercase
 .meta-label {
   font-size: 0.8125rem;
-  font-weight: _font(weight-bold);
+  font-weight: _font(weight-medium);
   letter-spacing: _font(kerning-meta);
   text-transform: uppercase;
   color: _palette(text-secondary);
@@ -136,7 +117,7 @@ sup {
 }
 
 blockquote {
-  border-left: 3px solid _palette(peach);
+  border-left: 3px solid _palette(amber);
   background: _palette(surface-sunken);
   font-style: italic;
   margin: 0 0 _size(element-margin) 0;
