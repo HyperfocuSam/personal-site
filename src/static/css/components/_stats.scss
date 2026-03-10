@@ -21,15 +21,15 @@
 
   &__number {
     display: block;
-    font-family: _font(family-heading);
-    font-weight: _font(weight-heading);
-    font-size: 3rem;
-    color: _palette(text-primary);
+    font-family: _font(family);
+    font-weight: _font(weight-heading-bold);
+    font-size: 2.25rem;
+    color: _palette(amber);
     line-height: 1.1;
     margin-bottom: 0.35rem;
 
     @include breakpoint(small) {
-      font-size: 2.25rem;
+      font-size: 1.75rem;
     }
   }
 
@@ -44,11 +44,11 @@
   }
 }
 
-// Stats floating card — cream bg, no border, warm shadow
+// Stats floating card
 .stats-floating {
   background: _palette(surface-raised);
-  border: 0;
-  border-radius: map-get($radius, xl);
+  border: 1px solid _palette(border-subtle);
+  border-radius: map-get($radius, lg);
   box-shadow: map-get($shadow, lg);
   padding: 2.5rem 3rem;
   margin: -2.5rem auto 0;

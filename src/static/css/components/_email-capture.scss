@@ -1,44 +1,44 @@
-/* Email Capture — oversized editorial newsletter (Ali Abdaal style) */
+/* Email Capture — dark ink band with amber subscribe button */
 
 .email-capture {
-  background-color: _palette(surface-sunken);
-  color: _palette(text-primary);
+  background-color: _palette(ink);
+  color: _palette(text-on-dark);
   margin: 0;
-  padding: 6rem 1.5rem;
+  padding: 4rem 1.5rem;
   width: 100%;
   text-align: center;
 
   @include breakpoint(small) {
-    padding: 4rem 1.5rem;
+    padding: 3rem 1.5rem;
   }
 
   h3 {
     text-transform: none;
     font-family: _font(family-heading);
-    font-size: 3.25rem;
-    font-weight: _font(weight-heading);
-    color: _palette(text-primary);
+    font-size: 2rem;
+    font-weight: _font(weight-heading-bold);
+    color: _palette(text-on-dark);
     margin-bottom: 0.5em;
     letter-spacing: _font(kerning-heading);
 
     @include breakpoint(small) {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
   }
 
   p {
-    color: _palette(text-body);
-    font-size: 1.15rem;
-    line-height: 1.6;
-    margin-bottom: 2.5em;
+    color: _palette(text-on-dark-muted);
+    font-size: 1rem;
+    line-height: 1.65;
+    margin-bottom: 2em;
     max-width: 520px;
     margin-left: auto;
     margin-right: auto;
   }
 
   a {
-    color: _palette(peach);
-    &:hover { color: _palette(peach-light) !important; }
+    color: _palette(amber);
+    &:hover { color: _palette(amber-light) !important; }
   }
 
   &__controls {
@@ -53,39 +53,39 @@
     margin: 0;
     text-decoration: none;
     display: inline-block;
-    border-radius: map-get($radius, pill);
+    border-radius: map-get($radius, md);
     font-weight: _font(weight-bold);
-    font-size: 1.05rem;
-    padding: 1.15em 2.5em;
+    font-size: 1rem;
+    padding: 0.85em 2em;
     min-width: 160px;
     text-align: center;
     cursor: pointer;
     transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
 
     // Primary (Email)
-    background-color: _palette(peach);
+    background-color: _palette(amber);
     color: _palette(ink) !important;
-    border: 2px solid _palette(peach);
+    border: 2px solid _palette(amber);
 
     &:hover {
-      background-color: _palette(peach-light);
-      border-color: _palette(peach-light);
+      background-color: _palette(amber-light);
+      border-color: _palette(amber-light);
       transform: translateY(-2px);
-      box-shadow: map-get($shadow, lg);
+      box-shadow: map-get($shadow, md);
       color: _palette(ink) !important;
     }
 
     // Outline variant (WhatsApp)
     &.button--outline {
       background-color: transparent;
-      border: 2px solid _palette(text-primary);
-      color: _palette(text-primary) !important;
+      border: 2px solid _palette(text-on-dark);
+      color: _palette(text-on-dark) !important;
 
       &:hover {
-        background-color: _palette(text-primary);
-        color: _palette(surface-base) !important;
+        background-color: _palette(text-on-dark);
+        color: _palette(ink) !important;
         transform: translateY(-2px);
-        box-shadow: map-get($shadow, lg);
+        box-shadow: map-get($shadow, md);
       }
     }
   }

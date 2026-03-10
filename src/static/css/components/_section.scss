@@ -81,7 +81,7 @@ header {
   display: inline-block;
   padding: 0.5em 1.25em;
   border: 1px solid rgba(232, 230, 225, 0.3);
-  border-radius: map-get($radius, pill);
+  border-radius: map-get($radius, md);
   color: _palette(text-on-dark-muted);
   font-size: 0.875rem;
   font-weight: _font(weight-medium);

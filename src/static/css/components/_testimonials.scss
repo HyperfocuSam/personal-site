@@ -1,4 +1,4 @@
-/* Testimonials — editorial quote cards (Ali Abdaal style) */
+/* Testimonials — editorial quote blocks */
 
 .testimonials {
   margin: 0;
@@ -40,11 +40,11 @@
 
 .testimonial-card {
   background: _palette(surface-raised);
-  border-radius: map-get($radius, xl);
-  padding: 3rem;
+  border-radius: map-get($radius, lg);
+  padding: 2rem;
   position: relative;
-  box-shadow: none;
-  border: 0;
+  box-shadow: map-get($shadow, sm);
+  border: 1px solid _palette(border-subtle);
 
   // Large decorative quote mark
   &::before {
@@ -54,7 +54,7 @@
     left: 1.75rem;
     font-size: 4rem;
     line-height: 1;
-    color: _palette(peach);
+    color: _palette(amber);
     font-family: _font(family-heading);
     opacity: 0.3;
   }
@@ -84,7 +84,7 @@
   }
 
   &--featured {
-    border-left: 4px solid _palette(peach);
+    border-left: 4px solid _palette(amber);
   }
 
   @include breakpoint(small) {
