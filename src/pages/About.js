@@ -89,11 +89,11 @@ const About = () => (
         </div>
       </section>
 
-      {/* Photo: Sam on stage */}
+      {/* Photo: Sam on stage — DSLR quality */}
       <div className="full-bleed photo-band">
         <img
-          src="/images/home/train-the-trainer.jpg"
-          alt="Sam Wong presenting The 45 Mins AI Show on stage at the Skirball Center"
+          src="/images/about/sam-stage-ypo.jpg"
+          alt="Sam Wong presenting The 45 Mins AI Show on stage at the Skirball Center, YPO event"
           loading="lazy"
         />
       </div>
@@ -186,7 +186,7 @@ const About = () => (
 
       {/* What I've Built */}
       <section className="section-sunken section-padding">
-        <div className="content-narrow">
+        <div className="content-standard">
           <h3>What I&apos;ve Built</h3>
           <ul>
             <li>
@@ -233,18 +233,18 @@ const About = () => (
           </p>
           <div className="photo-grid cols-3">
             <img
+              src="/images/about/workshop-audience-wide.jpg"
+              alt="Adaptig AI workshop with participants at YPO Skirball Center"
+              loading="lazy"
+            />
+            <img
               src="/images/blog/ctf-workshop-2026.jpeg"
               alt="DotAI x Chow Tai Fook Design Thinking Workshop group"
               loading="lazy"
             />
             <img
-              src="/images/blog/arup-ai-workshop.jpg"
-              alt="Sam presenting at Arup University AI workshop in Hong Kong"
-              loading="lazy"
-            />
-            <img
-              src="/images/blog/hkjc-mt-workshop.jpeg"
-              alt="Sam and colleague at the Hong Kong Jockey Club College"
+              src="/images/about/participant-adaptig.jpg"
+              alt="Workshop participant using the Adaptig platform during a hands-on exercise"
               loading="lazy"
             />
           </div>

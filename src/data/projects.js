@@ -24,6 +24,42 @@ const data = [
       + 'Founding member and corporate training lead.',
   },
   {
+    title: 'Ada | Creator',
+    subtitle: 'AI executive assistant built on Claude Code',
+    link: 'https://hyperfocusam.com/blog/ada-gersang-gamifying-claude-code',
+    image: '/images/projects/adaptig.jpg',
+    date: '2026-03',
+    desc:
+      'A persistent AI executive assistant managing multiple businesses. '
+      + '30+ custom skills, HTTP hooks server for policy enforcement, '
+      + 'automated memory system, and integrations with Craft, Google Workspace, '
+      + 'and WhatsApp. Handles client communications, document generation, '
+      + 'and operational dashboards.',
+  },
+  {
+    title: 'Ada Gersang | Creator',
+    subtitle: 'RTK-styled gamification layer for Claude Code',
+    link: 'https://hyperfocusam.com/blog/ada-gersang-gamifying-claude-code',
+    image: '/images/projects/adaptig.jpg',
+    date: '2026-03',
+    desc:
+      'Turns AI-assisted work into a persistent RPG inspired by '
+      + 'Resurrection of the Kingdom (RTK). Features mercenary squads, '
+      + 'card equipment with Wu Xing elements, rival warlords, procedural quests, '
+      + 'living economy, and era progression. FastAPI backend with macOS Swift HUD.',
+  },
+  {
+    title: 'hyperfocusam.com | Builder',
+    subtitle: 'Personal portfolio and blog',
+    link: 'https://hyperfocusam.com',
+    image: '/images/projects/adaptig.jpg',
+    date: '2025-01',
+    desc:
+      'Bilingual personal site built with React 18, react-snap pre-rendering, '
+      + 'and a custom SCSS design system. Blog with markdown-to-JSX, '
+      + 'structured data for SEO, and full Chinese localization.',
+  },
+  {
     title: 'Club 80 (\u6703\u516B\u5341) | Guest Expert',
     subtitle: 'Recurring AI expert on popular Cantonese YouTube show',
     link: 'https://hyperfocusam.com/media',
@@ -33,6 +69,17 @@ const data = [
       'Three guest appearances on Club 80, a popular Cantonese YouTube show. '
       + 'Episodes cover AI tools, productivity, and practical technology use. '
       + '98,000+ combined views across three episodes.',
+  },
+  {
+    title: 'Adaptig Public Classes | Builder',
+    subtitle: 'Workshop registration platform',
+    link: 'https://adaptig.ai',
+    image: '/images/projects/adaptig.jpg',
+    date: '2026-02',
+    desc:
+      'Full-stack registration platform for public AI workshops. '
+      + 'React + Vite frontend, Express backend, Resend email confirmations, '
+      + 'and Ro.am notification integration.',
   },
   {
     title: 'Project AICBO | Owner',
