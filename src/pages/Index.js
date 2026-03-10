@@ -6,6 +6,7 @@ import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 import testimonials from '../data/testimonials';
 import TestimonialSection from '../components/Testimonials/TestimonialSection';
 import HeroSection from '../components/Home/HeroSection';
+import OptimizedImage from '../components/Template/OptimizedImage';
 import StatsBar from '../components/Home/StatsBar';
 import ClientLogoBar from '../components/Home/ClientLogoBar';
 import FeaturedCaseStudies from '../components/Home/FeaturedCaseStudies';
@@ -53,7 +54,7 @@ const Index = () => (
           <div className="help-grid">
             <Link to="/services#organizations" className="help-card">
               <div className="help-card__image">
-                <img src={`${process.env.PUBLIC_URL}/images/home/workshop-corporate.jpg`} alt="Corporate AI workshop at Arup" width={800} height={600} loading="lazy" />
+                <OptimizedImage src={`${process.env.PUBLIC_URL}/images/home/workshop-corporate.jpg`} alt="Corporate AI workshop at Arup" width={800} height={600} loading="lazy" />
               </div>
               <h3>Workshops for Organizations</h3>
               <p>
@@ -64,7 +65,7 @@ const Index = () => (
             </Link>
             <Link to="/services#one-on-one" className="help-card">
               <div className="help-card__image">
-                <img src={`${process.env.PUBLIC_URL}/images/home/coaching-session.jpg`} alt="Hands-on AI coaching with Adaptig platform" width={800} height={600} loading="lazy" />
+                <OptimizedImage src={`${process.env.PUBLIC_URL}/images/home/coaching-session.jpg`} alt="Hands-on AI coaching with Adaptig platform" width={800} height={600} loading="lazy" />
               </div>
               <h3>One-on-One Coaching</h3>
               <p>
@@ -75,7 +76,7 @@ const Index = () => (
             </Link>
             <Link to="/services#train-the-trainer" className="help-card">
               <div className="help-card__image">
-                <img src={`${process.env.PUBLIC_URL}/images/home/train-the-trainer.jpg`} alt="Sam Wong presenting AI training on stage" width={800} height={600} loading="lazy" />
+                <OptimizedImage src={`${process.env.PUBLIC_URL}/images/home/train-the-trainer.jpg`} alt="Sam Wong presenting AI training on stage" width={800} height={600} loading="lazy" />
               </div>
               <h3>Train-the-Trainer</h3>
               <p>

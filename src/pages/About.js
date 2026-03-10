@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
 import Main from '../layouts/Main';
+import OptimizedImage from '../components/Template/OptimizedImage';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 import testimonials from '../data/testimonials';
 import TestimonialSection from '../components/Testimonials/TestimonialSection';
@@ -91,7 +92,7 @@ const About = () => (
 
       {/* Photo: Sam on stage — DSLR quality */}
       <div className="full-bleed photo-band">
-        <img
+        <OptimizedImage
           src="/images/about/sam-stage-ypo.jpg"
           alt="Sam Wong presenting The 45 Mins AI Show on stage at the Skirball Center, YPO event"
           loading="lazy"
@@ -232,17 +233,17 @@ const About = () => (
             .
           </p>
           <div className="photo-grid cols-3">
-            <img
+            <OptimizedImage
               src="/images/about/workshop-audience-wide.jpg"
               alt="Adaptig AI workshop with participants at YPO Skirball Center"
               loading="lazy"
             />
-            <img
+            <OptimizedImage
               src="/images/blog/ctf-workshop-2026.jpeg"
               alt="DotAI x Chow Tai Fook Design Thinking Workshop group"
               loading="lazy"
             />
-            <img
+            <OptimizedImage
               src="/images/about/participant-adaptig.jpg"
               alt="Workshop participant using the Adaptig platform during a hands-on exercise"
               loading="lazy"

@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
 import Main from '../layouts/Main';
+import OptimizedImage from '../components/Template/OptimizedImage';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 import services from '../data/services';
 import testimonials from '../data/testimonials';
@@ -118,7 +119,7 @@ const Services = () => {
 
         {/* Photo: Corporate workshop in action */}
         <div className="full-bleed photo-band">
-          <img
+          <OptimizedImage
             src="/images/services/corporate-training.jpeg"
             alt="AI workshop in progress at Arup University, Hong Kong"
             loading="lazy"

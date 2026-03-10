@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Main from '../layouts/Main';
+import OptimizedImage from '../components/Template/OptimizedImage';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 
 const stats = [
@@ -73,12 +74,13 @@ const MediaKit = () => (
       {/* Hero */}
       <div className="media-kit-hero">
         <div className="media-kit-hero__inner">
-          <img
+          <OptimizedImage
             src="/images/Sam.png"
             alt="Sam Wong"
             className="media-kit-hero__image"
             width={150}
             height={150}
+            loading="eager"
           />
           <h1 className="media-kit-hero__name">Sam Wong</h1>
           <p className="media-kit-hero__subtitle">AI Training Specialist | Hong Kong</p>

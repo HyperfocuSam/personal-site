@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import OptimizedImage from '../Template/OptimizedImage';
 
 const { PUBLIC_URL } = process.env;
 
@@ -29,12 +30,13 @@ const HeroSection = () => (
         </div>
       </div>
       <div className="home-hero__photo">
-        <img
+        <OptimizedImage
           src={`${PUBLIC_URL}/images/Sam.png`}
           alt="Sam Wong"
           width={760}
           height={880}
           fetchPriority="high"
+          loading="eager"
         />
       </div>
     </div>

@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet-async';
 
 import Main from '../layouts/Main';
+import OptimizedImage from '../components/Template/OptimizedImage';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 import posts from '../data/posts';
 import { AuthorCard } from '../components/Blog';
@@ -26,7 +27,7 @@ const BlogCard = ({ post }) => (
     <Link to={`/blog/${post.slug}`} className="blog-card__link">
       {post.image && (
         <div className="blog-card__image-wrapper">
-          <img
+          <OptimizedImage
             src={post.image}
             alt={post.title}
             className="blog-card__image"

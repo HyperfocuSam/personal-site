@@ -1,13 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import OptimizedImage from '../Template/OptimizedImage';
 
 const { PUBLIC_URL } = process.env;
 
 const AuthorCard = ({ compact }) => (
   <div className={`author-card ${compact ? 'author-card--compact' : ''}`}>
     <Link to="/about" className="author-card__image-link">
-      <img
+      <OptimizedImage
         src={`${PUBLIC_URL}/images/Sam.png`}
         alt="Sam Wong - AI Training Specialist"
         className="author-card__image"

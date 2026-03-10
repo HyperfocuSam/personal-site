@@ -1,17 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import dayjs from 'dayjs';
+import OptimizedImage from '../Template/OptimizedImage';
 
 const Cell = ({ data }) => (
   <div className="cell-container">
     <article className="mini-post">
       {data.link ? (
         <a href={data.link} className="image">
-          <img src={data.image} alt={data.title} />
+          <OptimizedImage src={data.image} alt={data.title} />
         </a>
       ) : (
         <span className="image">
-          <img src={data.image} alt={data.title} />
+          <OptimizedImage src={data.image} alt={data.title} />
         </span>
       )}
       <header>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 import ContactIcons from '../Contact/ContactIcons';
+import OptimizedImage from './OptimizedImage';
 
 const { PUBLIC_URL } = process.env;
 
@@ -21,7 +22,7 @@ const SideBar = () => {
     <section id="sidebar">
       <section id="intro">
         <Link to="/" className="logo">
-          <img src={`${PUBLIC_URL}/images/Sam.png`} alt="Sam Wong - AI Training Specialist in Hong Kong" />
+          <OptimizedImage src={`${PUBLIC_URL}/images/Sam.png`} alt="Sam Wong - AI Training Specialist in Hong Kong" />
         </Link>
         <header>
           <h2>SAM WONG</h2>

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import dayjs from 'dayjs';
 
 import posts from '../../data/posts';
+import OptimizedImage from '../Template/OptimizedImage';
 
 const { PUBLIC_URL } = process.env;
 
@@ -29,7 +30,7 @@ const FeaturedCaseStudies = ({ limit, tag }) => {
             {post.image && (
               <Link to={`/blog/${post.slug}`} className="home-case-studies__image-link">
                 <div className="home-case-studies__image-wrap">
-                  <img
+                  <OptimizedImage
                     src={`${PUBLIC_URL}${post.image}`}
                     alt={post.title}
                     className="home-case-studies__image"

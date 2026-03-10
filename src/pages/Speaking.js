@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
 import Main from '../layouts/Main';
+import OptimizedImage from '../components/Template/OptimizedImage';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 
 const topics = [
@@ -189,7 +190,7 @@ const Speaking = () => (
 
       {/* Photo band */}
       <div className="full-bleed photo-band">
-        <img
+        <OptimizedImage
           src="/images/home/ypo-stage-wide.jpg"
           alt="Sam Wong on stage at the YPO Global Event, Skirball Center, New York"
           width={1200}
