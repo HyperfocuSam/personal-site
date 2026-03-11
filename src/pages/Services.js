@@ -16,7 +16,7 @@ const groups = [
     title: 'For Organizations',
     subtitle: 'Workshops, training, and events that move teams from interest to real adoption.',
     socialProof:
-      'BOCHK (1,530 participants, 9.2/10), Chow Tai Fook (third repeat), Garden (6-session Pioneer Program), Playmates Toys, HSBC, CLP, Mattel, Toyota, YPO.',
+      'BOCHK, Chow Tai Fook, Garden, Playmates Toys, HSBC, CLP, YPO.',
     testimonial: testimonials[0],
     primaryCta: {
       cta: 'Get in Touch',
