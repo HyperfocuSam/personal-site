@@ -133,6 +133,20 @@ const testimonialData = {
       attribution: 'Participant — DotAI Executive Webinar, Apr 2025',
       category: 'corporate',
     },
+    {
+      quote:
+        'Our team was energized by learning the latest AI tools — the hands-on format '
+        + 'made it immediately relevant to our design process.',
+      attribution: 'Participant — Chow Tai Fook Design Workshop, Jan 2026',
+      category: 'corporate',
+    },
+    {
+      quote:
+        'The Pioneer Program didn\'t just teach us AI — it changed how our department '
+        + 'approaches new technology. We went from cautious observers to internal champions.',
+      attribution: 'HR Professional — 6-Session AI Pioneer Program, Feb 2026',
+      category: 'corporate',
+    },
   ],
 };
 

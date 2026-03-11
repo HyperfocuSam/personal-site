@@ -20,7 +20,7 @@ const data = [
     desc:
       'Hong Kong\'s practical AI training community. Corporate clients include '
       + 'HSBC, Bank of China (1,530 participants, 9.2/10 satisfaction), Chow Tai Fook, '
-      + 'Garden, Hong Kong Jockey Club, Arup, PolyU, and CLP. '
+      + 'Garden, Playmates Toys, Hong Kong Jockey Club, Arup, PolyU, and CLP. '
       + 'Founding member and corporate training lead.',
   },
   {
@@ -59,6 +59,17 @@ const data = [
       + 'Express backend with Claude API, better-sqlite3 for history, '
       + 'dark cinematic frontend with GSAP animations, PostHog analytics. '
       + 'Deployed on Railway. Built under Adaptig.',
+  },
+  {
+    title: 'ChillPo | Builder',
+    subtitle: 'AI lo-fi music auto-publishing pipeline',
+    link: 'https://chillpo.com',
+    image: '/images/projects/dotai-workshop.jpg',
+    date: '2026-03',
+    desc:
+      'Autonomous lo-fi music pipeline. MiniMax generates instrumentals, '
+      + 'Nano Banana Pro creates illustrated artwork, ffmpeg composites video, '
+      + 'and YouTube Data API auto-publishes. Runs twice daily via cron on Railway.',
   },
   {
     title: 'hyperfocusam.com | Builder',

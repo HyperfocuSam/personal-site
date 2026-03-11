@@ -11,6 +11,8 @@ const work = [
       'Built standardized workshop IP covering AI literacy, prompt engineering, workflow redesign, and design thinking with AI.',
       'Recruited and certified trainers across four continents through a structured Train-the-Trainer program.',
       'Enterprise clients include Mattel, Toyota, YPO, Bank of China, HSBC, and Hong Kong Jockey Club.',
+      'Designed the AI Pioneer Program — a 6-session change management model where 10-20 internal champions drive adoption across the wider organization.',
+      'Expanded into healthcare (College of Surgeons HK) and multi-regional delivery (Playmates Toys HK + US).',
     ],
   },
   {
@@ -26,6 +28,8 @@ const work = [
       'Three repeat engagements with Chow Tai Fook, including AI x Design Thinking hackathon workshops.',
       'Trained 400 educators at HKCT in a single 75-minute session, shifting perception from skepticism to experimentation.',
       'Clients include HSBC, Arup, PolyU, Hong Kong Jockey Club, CLP, and China Travel Service.',
+      'Third repeat engagement with Chow Tai Fook — AI x Design Thinking hackathon format with cross-functional teams.',
+      'Delivered AI Pioneer Program for Garden Group: 19 HR professionals over 6 sessions, now scaling to Batch 2.',
     ],
   },
   {
@@ -34,10 +38,10 @@ const work = [
     url: 'https://www.hoomantouch.com/',
     startDate: '2024-07-01',
     summary: `Free 1-on-1 AI tutorial sessions ("AI私補") for anyone exploring AI.
-    Started as a personal experiment after leaving RENPHO and grew into 150+ individual
+    Started as a personal experiment after leaving RENPHO and grew into 160+ individual
     coaching sessions across industries.`,
     highlights: [
-      'Delivered 150+ personalized coaching sessions helping professionals apply AI to their specific roles and workflows.',
+      'Delivered 160+ personalized coaching sessions helping professionals apply AI to their specific roles and workflows.',
       'Developed coaching methodology that starts from the individual\'s constraints, not a generic curriculum.',
     ],
   },

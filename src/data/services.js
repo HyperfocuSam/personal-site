@@ -12,7 +12,8 @@ const services = [
 - Human-first facilitation that lowers fear and builds confidence
 - Hands-on exercises tied to your real workflows
 - Practical use cases teams can apply immediately
-- Follow-through guidance to turn learning into habit`,
+- Follow-through guidance to turn learning into habit
+- Multi-session Pioneer Programs that build internal AI champions (5-8 hours saved per week per participant)`,
     cta: 'Explore Adaptig Workshops',
     ctaLink: 'https://adaptig.ai',
     external: true,
@@ -34,7 +35,8 @@ const services = [
 - Adoption in compliance-heavy or high-accountability environments
 - Better prompting and workflow design by role
 - Department-specific use cases people can use by next week
-- A practical rollout that leadership can evaluate`,
+- A practical rollout that leadership can evaluate
+- Multi-regional delivery (Hong Kong, North America, Asia-Pacific)`,
     cta: 'Discuss Corporate Training',
     ctaLink: '/contact',
     external: false,
@@ -71,7 +73,7 @@ const services = [
     anchor: 'one-on-one',
     title: '1-1 Coaching Paths',
     subtitle: 'Your goals, your pace, your real projects',
-    description: `Best for professionals who want direct support applying AI to real work.
+    description: `Best for professionals who want direct support applying AI to real work. Over 160 individuals coached across finance, marketing, education, and healthcare.
 
 No generic curriculum. We start from your current role, tools, and constraints.`,
     cta: 'Talk About Coaching Fit',

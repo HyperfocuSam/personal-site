@@ -2,9 +2,10 @@ import React from 'react';
 
 const stats = [
   { number: '10,000+', label: 'Professionals Trained' },
+  { number: '180+', label: 'Workshops Delivered' },
   { number: '70+', label: 'Organizations Served' },
   { number: '13', label: 'Countries Reached' },
-  { number: '9.2/10', label: 'Avg. Satisfaction (BOCHK)' },
+  { number: '9.2/10', label: 'Avg. Satisfaction' },
 ];
 
 const StatsBar = () => (

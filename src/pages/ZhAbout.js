@@ -121,7 +121,7 @@ const ZhAbout = () => (
             <li>
               <strong>AICBO</strong>
               {' '}
-              — 150+ 場跨行業專業人士嘅一對一輔導。
+              — 160+ 場跨行業專業人士嘅一對一輔導。
             </li>
             <li>
               <strong>RENPHO AI Division</strong>

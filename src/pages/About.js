@@ -79,7 +79,7 @@ const About = () => (
           <p>
             In 2024, I left that stable role to start AICBO &mdash; free, one-on-one
             AI tutoring sessions for anyone who wanted to learn. What began as a small
-            experiment became 150+ sessions and eventually led to co-founding Adaptig
+            experiment became 160+ sessions and eventually led to co-founding Adaptig
             and joining DotAI as a founding member.
           </p>
           <p>
@@ -208,7 +208,7 @@ const About = () => (
             <li>
               <strong>AICBO</strong>
               {' '}
-              - 150+ one-on-one coaching sessions with professionals across industries.
+              - 160+ one-on-one coaching sessions with professionals across industries.
             </li>
             <li>
               <strong>RENPHO AI Division</strong>
@@ -219,6 +219,12 @@ const About = () => (
               <strong>PromptBox</strong>
               {' '}
               - Built internal LLM workflows for daily operations.
+            </li>
+            <li>
+              <strong>AI Pioneer Program</strong>
+              {' '}
+              - A change management-driven model for building internal AI champions,
+              now in second batch deployment.
             </li>
             <li>
               <strong>Fooocus Traditional Chinese</strong>
@@ -307,7 +313,7 @@ const About = () => (
                 name: 'What is Sam Wong\'s background?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Sam Wong holds a Master of Arts in Public & Comparative History from the Chinese University of Hong Kong, specializing in records management and knowledge systems. His career moved from Executive Assistant to the President of ThreeSixty Group (Sharper Image / FAO Schwarz) to AI Product Manager at RENPHO, where he built an AI division from scratch. In 2024, he started AICBO — free 1-on-1 AI tutoring — which grew into 150+ coaching sessions and led to co-founding Adaptig and DotAI.',
+                  text: 'Sam Wong holds a Master of Arts in Public & Comparative History from the Chinese University of Hong Kong, specializing in records management and knowledge systems. His career moved from Executive Assistant to the President of ThreeSixty Group (Sharper Image / FAO Schwarz) to AI Product Manager at RENPHO, where he built an AI division from scratch. In 2024, he started AICBO — free 1-on-1 AI tutoring — which grew into 160+ coaching sessions and led to co-founding Adaptig and DotAI.',
                 },
               },
               {

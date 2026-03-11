@@ -16,7 +16,7 @@ const groups = [
     title: 'For Organizations',
     subtitle: 'Workshops, training, and events that move teams from interest to real adoption.',
     socialProof:
-      'BOCHK (1,530 participants, 9.2/10), Chow Tai Fook (third repeat), HSBC, Mattel, Toyota, YPO.',
+      'BOCHK (1,530 participants, 9.2/10), Chow Tai Fook (third repeat), Garden (6-session Pioneer Program), Playmates Toys, HSBC, CLP, Mattel, Toyota, YPO.',
     testimonial: testimonials[0],
     primaryCta: {
       cta: 'Get in Touch',
@@ -30,7 +30,7 @@ const groups = [
     category: 'individuals',
     title: 'For Individuals',
     subtitle: 'Personalized coaching for professionals building practical AI habits.',
-    socialProof: '150+ professionals coached across industries and roles.',
+    socialProof: '160+ professionals coached across finance, marketing, education, healthcare, and technology.',
     testimonial: testimonials[1],
     primaryCta: {
       cta: 'Book a Discovery Call',
@@ -199,7 +199,7 @@ const Services = () => {
                   name: 'How does Sam Wong\'s AI coaching work?',
                   acceptedAnswer: {
                     '@type': 'Answer',
-                    text: 'AI coaching is personalized 1-1 sessions starting from the individual\'s current role, tools, and constraints — no generic curriculum. There are three tiers: a free 30-minute discovery call, standard 60-90 minute sessions focused on active projects, and premium executive AI advisory for leaders navigating AI transformation decisions. Over 150 sessions have been delivered across industries.',
+                    text: 'AI coaching is personalized 1-1 sessions starting from the individual\'s current role, tools, and constraints — no generic curriculum. There are three tiers: a free 30-minute discovery call, standard 60-90 minute sessions focused on active projects, and premium executive AI advisory for leaders navigating AI transformation decisions. Over 160 individuals coached across industries.',
                   },
                 },
                 {

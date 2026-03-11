@@ -29,7 +29,7 @@ const groups = [
     category: 'individuals',
     title: '個人服務',
     subtitle: '為建立實用 AI 習慣嘅專業人士提供個人化輔導。',
-    socialProof: '150+ 位跨行業專業人士接受輔導。',
+    socialProof: '160+ 位跨行業專業人士接受輔導。',
     testimonial: testimonials[1],
     primaryCta: {
       cta: '預約免費諮詢',

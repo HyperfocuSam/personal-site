@@ -57,12 +57,12 @@ const data = [
   {
     key: '',
     label: 'Individuals coached (AICBO 1-1)',
-    value: 160,
+    value: '160+',
   },
   {
     key: '',
     label: '1-1 coaching sessions conducted',
-    value: 215,
+    value: '215+',
   },
   {
     key: '',
@@ -76,18 +76,38 @@ const data = [
   },
   {
     key: '',
-    label: 'Highest video views (Club 80 Ep 012)',
-    value: '64K+',
+    label: 'Highest video views (Club 80 combined)',
+    value: '98K+',
   },
   {
     key: '',
     label: 'Blog posts published',
-    value: '25+',
+    value: '27+',
   },
   {
     key: '',
     label: 'Invited as podcast guest',
     value: 1,
+  },
+  {
+    key: '',
+    label: 'Industries served',
+    value: '8+',
+  },
+  {
+    key: '',
+    label: 'Repeat engagement clients',
+    value: '4+',
+  },
+  {
+    key: '',
+    label: 'Workshops delivered (Adaptig network)',
+    value: '180+',
+  },
+  {
+    key: '',
+    label: 'Languages delivered in',
+    value: 3,
   },
 ];
 
