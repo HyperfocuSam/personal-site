@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import posts from '../posts/index';
 
 const Age = () => {
   const [age, setAge] = useState();
@@ -82,7 +83,7 @@ const data = [
   {
     key: '',
     label: 'Blog posts published',
-    value: '27+',
+    value: posts.length,
   },
   {
     key: '',
