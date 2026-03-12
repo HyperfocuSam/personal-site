@@ -5,6 +5,17 @@
 // linkedPost: slug of the corresponding post in another language (for hreflang)
 const posts = [
   {
+    slug: 'zh-chillpo-how-i-talk-to-ai',
+    title: '我點同 AI 傾偈：一個鐘由零到自動 YouTube 頻道',
+    date: '2026-03-11',
+    excerpt: '2,100 行終端紀錄，一個完整嘅 AI 協作 session。由 debug API 錯誤開始，到建成全自動嘅 lo-fi 音樂 YouTube 頻道。呢篇文唔係講技術——而係講點樣同 AI 溝通。',
+    tags: ['ai-adoption', 'developer-tools', 'personal-reflection', 'tools'],
+    type: 'reflection',
+    language: 'zh-Hant',
+    image: '/images/blog/chillpo-ai-conversation-cover.png',
+    featured: true,
+  },
+  {
     slug: 'ada-gersang-gamifying-claude-code',
     title: 'I Built an RTK-Style Strategy Game on Top of My AI Workflow',
     date: '2026-03-07',
@@ -22,7 +33,7 @@ const posts = [
     tags: ['ai-adoption', 'accessibility', 'developer-tools', 'open-source'],
     type: 'reflection',
     image: '/images/blog/claude-voice-cover.png',
-    featured: true,
+    featured: false,
   },
   {
     slug: 'what-my-ai-drew-when-i-asked',
