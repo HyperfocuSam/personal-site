@@ -5,6 +5,42 @@
 // linkedPost: slug of the corresponding post in another language (for hreflang)
 const posts = [
   {
+    slug: 'openclaw-ai-agents-talk',
+    title: 'What 1,400 People Taught Me About the Gap Between AI Demos and AI Adoption',
+    date: '2026-03-12',
+    excerpt: 'I gave a live talk on AI agents to 1,400 registrants. The audience reaction confirmed what I see in every training room — people want proof, not promises.',
+    tags: ['ai-adoption', 'agents', 'speaking', 'reflection'],
+    type: 'reflection',
+    featured: false,
+  },
+  {
+    slug: 'renpho-ecommerce-ai-shenzhen',
+    title: 'What 118 Minutes With an E-Commerce Team Revealed About AI Adoption Gaps',
+    date: '2026-03-11',
+    excerpt: 'A Shenzhen visit exposed a pattern I see everywhere: teams using AI at 50% efficiency because nobody taught them model selection.',
+    tags: ['case-study', 'e-commerce', 'ai-adoption'],
+    type: 'case-study',
+    featured: false,
+  },
+  {
+    slug: 'playmates-toys-ai-training',
+    title: 'What Happens When a Toy Company Takes AI Seriously',
+    date: '2026-02-09',
+    excerpt: 'Two sessions, 12 executives, and a gardening demo that secured buy-in. Inside the Playmates Toys HK AI training.',
+    tags: ['case-study', 'ai-adoption', 'enterprise'],
+    type: 'case-study',
+    featured: false,
+  },
+  {
+    slug: 'clp-ai-agent-automation',
+    title: 'Teaching a Utility Company the 7 Levels of AI Agents',
+    date: '2025-12-23',
+    excerpt: 'I taught CLP\'s team a 7-level AI agent framework, from basic chatbots to CLI-based systems. Here\'s what a utility company needs to know about AI agents.',
+    tags: ['ai-adoption', 'agents', 'case-study', 'enterprise'],
+    type: 'case-study',
+    featured: false,
+  },
+  {
     slug: 'traffic-light-protocol-ai-safety',
     title: 'The Traffic Light Protocol: How I Teach AI Safety in 15 Minutes',
     date: '2026-03-12',
