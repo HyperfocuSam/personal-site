@@ -5,6 +5,15 @@
 // linkedPost: slug of the corresponding post in another language (for hreflang)
 const posts = [
   {
+    slug: 'traffic-light-protocol-ai-safety',
+    title: 'The Traffic Light Protocol: How I Teach AI Safety in 15 Minutes',
+    date: '2026-03-12',
+    excerpt: 'A 3-color data classification system that makes AI safety intuitive. Used across banking, retail, and 500-person webinars.',
+    tags: ['ai-adoption', 'methodology', 'enterprise', 'safety'],
+    type: 'methodology',
+    featured: false,
+  },
+  {
     slug: 'zh-chillpo-how-i-talk-to-ai',
     title: '我點同 AI 傾偈：一個鐘由零到自動 YouTube 頻道',
     date: '2026-03-11',
