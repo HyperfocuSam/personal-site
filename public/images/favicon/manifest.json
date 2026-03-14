@@ -1,5 +1,10 @@
 {
-  "name": "mldangelo.com",
+  "name": "Sam Wong",
+  "short_name": "Sam Wong",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f1729",
+  "theme_color": "#0f1729",
   "icons": [
     {
       "src": "/images/favicon/android-icon-36x36.png",

@@ -9,6 +9,7 @@ const path = require('path');
 const SITE_URL = 'https://hyperfocusam.com';
 const POSTS_FILE = path.join(__dirname, '..', 'src', 'data', 'posts', 'index.js');
 const OUTPUT_FILE = path.join(__dirname, '..', 'public', 'sitemap.xml');
+const RSS_FILE = path.join(__dirname, '..', 'public', 'feed.xml');
 
 // Bilingual page pairs: English path -> Chinese path
 const BILINGUAL_PAIRS = {
@@ -57,12 +58,17 @@ function parsePosts() {
     const langMatch = block.match(/language:\s*'([^']+)'/);
     const linkedMatch = block.match(/linkedPost:\s*'([^']+)'/);
 
+    const titleMatch = block.match(/title:\s*'([^']+)'/);
+    const excerptMatch = block.match(/excerpt:\s*'((?:[^'\\]|\\.)+)'/);
+
     posts.push({
       slug: match[1],
       date: match[2],
       featured: match[3] === 'true',
       language: langMatch ? langMatch[1] : 'en',
       linkedPost: linkedMatch ? linkedMatch[1] : null,
+      title: titleMatch ? titleMatch[1] : match[1],
+      excerpt: excerptMatch ? excerptMatch[1] : '',
     });
   }
 
@@ -70,7 +76,7 @@ function parsePosts() {
   if (posts.length === 0) {
     const simpleRegex = /slug:\s*'([^']+)'[\s\S]*?date:\s*'([^']+)'/g;
     while ((match = simpleRegex.exec(content)) !== null) {
-      posts.push({ slug: match[1], date: match[2], featured: false, language: 'en', linkedPost: null });
+      posts.push({ slug: match[1], date: match[2], featured: false, language: 'en', linkedPost: null, title: match[1], excerpt: '' });
     }
   }
 
@@ -141,4 +147,43 @@ function generateSitemap() {
   console.log(`Sitemap generated: ${enCount} EN + ${zhCount} TC posts + ${STATIC_PAGES.length} static pages`);
 }
 
+function escapeXml(str) {
+  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+function generateRssFeed() {
+  const posts = parsePosts();
+  // Only include English posts in the RSS feed
+  const enPosts = posts.filter((p) => p.language === 'en');
+
+  let rss = '<?xml version="1.0" encoding="UTF-8"?>\n';
+  rss += '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n';
+  rss += '  <channel>\n';
+  rss += '    <title>Sam Wong | AI Training Specialist</title>\n';
+  rss += `    <link>${SITE_URL}/blog</link>\n`;
+  rss += '    <description>AI adoption insights, workshop reflections, and practical AI training tips from Sam Wong.</description>\n';
+  rss += '    <language>en</language>\n';
+  rss += `    <atom:link href="${SITE_URL}/feed.xml" rel="self" type="application/rss+xml" />\n`;
+  rss += `    <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>\n`;
+
+  for (const post of enPosts) {
+    rss += '    <item>\n';
+    rss += `      <title>${escapeXml(post.title)}</title>\n`;
+    rss += `      <link>${SITE_URL}/blog/${post.slug}</link>\n`;
+    rss += `      <guid isPermaLink="true">${SITE_URL}/blog/${post.slug}</guid>\n`;
+    if (post.excerpt) {
+      rss += `      <description>${escapeXml(post.excerpt)}</description>\n`;
+    }
+    rss += `      <pubDate>${new Date(post.date).toUTCString()}</pubDate>\n`;
+    rss += '    </item>\n';
+  }
+
+  rss += '  </channel>\n';
+  rss += '</rss>\n';
+
+  fs.writeFileSync(RSS_FILE, rss);
+  console.log(`RSS feed generated: ${enPosts.length} posts`);
+}
+
 generateSitemap();
+generateRssFeed();

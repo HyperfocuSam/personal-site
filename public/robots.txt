@@ -22,7 +22,7 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
-# Sitemap
+# Sitemap & Feed
 Sitemap: https://hyperfocusam.com/sitemap.xml
 
 # Disallow non-essential paths
