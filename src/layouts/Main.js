@@ -13,7 +13,7 @@ const Main = (props) => (
     <ScrollToTop />
     <Helmet
       titleTemplate="%s | Sam Wong"
-      defaultTitle="Sam Wong | AI Training Specialist"
+      defaultTitle="Sam Wong | AI Training Specialist - Hong Kong"
       defer={false}
     >
       {props.title && <title>{props.title}</title>}
