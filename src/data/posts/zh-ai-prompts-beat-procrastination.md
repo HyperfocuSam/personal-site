@@ -82,4 +82,4 @@ AI 可能會指出你避開呢個任務係因為你未有齊所有資料、或�
 
 ---
 
-*我喺 [Adaptig](https://adaptig.com) 做企業 AI 培訓，教團隊點樣真正將 AI 融入工作流程。想交流可以喺 [LinkedIn](https://www.linkedin.com/in/samwonghk/) 搵我。*
+*我喺 [Adaptig](https://adaptig.com) 做企業 AI 培訓，教團隊點樣真正將 AI 融入工作流程。想交流可以喺 [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/) 搵我。*

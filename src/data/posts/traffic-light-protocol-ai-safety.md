@@ -94,4 +94,4 @@ If you are designing AI training for your organization, start here. Not with pro
 
 ---
 
-*I write about what I learn from training thousands of professionals on AI adoption. Connect with me on [LinkedIn](https://www.linkedin.com/in/samwonghk/) for more.*
+*I write about what I learn from training thousands of professionals on AI adoption. Connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/) for more.*

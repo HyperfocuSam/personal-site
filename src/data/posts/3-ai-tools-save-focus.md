@@ -62,4 +62,4 @@ The 76% of people who aren't paying for AI tools aren't just missing features. T
 
 *This post is based on my appearance on [Club 80 Episode 049](https://www.youtube.com/watch?v=7Gswgk7Qd7Q). The full episode (in Cantonese) covers these tools in more detail with live demos. You can also check out all my media appearances on my [Media page](/media).*
 
-*Connect with me on [LinkedIn](https://www.linkedin.com/in/hyperfocusam/) for more practical insights on AI adoption.*
+*Connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/) for more practical insights on AI adoption.*

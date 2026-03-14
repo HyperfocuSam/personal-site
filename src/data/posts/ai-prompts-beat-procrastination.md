@@ -82,4 +82,4 @@ The five prompts work. The question is whether you'll use them tomorrow, or just
 
 ---
 
-*I train enterprise teams on AI adoption at [Adaptig](https://adaptig.com). If procrastination, productivity, or ADHD-friendly AI workflows are your thing, connect with me on [LinkedIn](https://www.linkedin.com/in/samwonghk/).*
+*I train enterprise teams on AI adoption at [Adaptig](https://adaptig.com). If procrastination, productivity, or ADHD-friendly AI workflows are your thing, connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*

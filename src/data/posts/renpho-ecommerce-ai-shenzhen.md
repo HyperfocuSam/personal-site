@@ -88,4 +88,4 @@ This team had the willingness and the tools. What they needed was the methodolog
 
 ---
 
-*I train corporate teams on practical AI adoption -- from initial awareness to embedded workflows. If your e-commerce or cross-border team is using AI but not seeing consistent results, I have probably seen your exact problem before. Connect with me on [LinkedIn](https://www.linkedin.com/in/samwonghk/).*
+*I train corporate teams on practical AI adoption -- from initial awareness to embedded workflows. If your e-commerce or cross-border team is using AI but not seeing consistent results, I have probably seen your exact problem before. Connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*

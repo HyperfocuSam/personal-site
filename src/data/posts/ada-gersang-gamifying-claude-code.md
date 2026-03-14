@@ -109,4 +109,4 @@ The repo is live on GitHub. Seven commits deep, 328KB total. No client data, no 
 
 ---
 
-*Building things at the intersection of AI tooling and actual work. More on [LinkedIn](https://linkedin.com/in/hyperfocusam).*
+*Building things at the intersection of AI tooling and actual work. More on [LinkedIn](https://linkedin.com/in/sam-ai-agent/).*

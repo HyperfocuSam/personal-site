@@ -76,4 +76,4 @@ The live session was a starting point. The real work is what happens when 1,400 
 
 ---
 
-If you are building with AI agents or thinking about how to bring agentic workflows into your team, I am always open to a conversation. You can find me on [LinkedIn](https://www.linkedin.com/in/samwonghk/).
+If you are building with AI agents or thinking about how to bring agentic workflows into your team, I am always open to a conversation. You can find me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).
