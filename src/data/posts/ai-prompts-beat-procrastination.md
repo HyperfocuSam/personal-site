@@ -1,92 +1,85 @@
-# AI Prompts for Beating Procrastination: What the Listicles Don't Tell You
+# 5 AI Prompts That Actually Help With Procrastination (From Someone Who Uses Them Daily)
 
-A viral post made the rounds on X last week -- "The 5 BEST Prompts to beat procrastination and boost productivity." The original content came from a Reddit post by reclaim_ai. Five ChatGPT prompts for breaking tasks down, prioritizing, gamifying work.
+A set of five AI prompts for beating procrastination went viral on X recently, originally from a Reddit post by reclaim_ai. I've seen these shared dozens of times -- and unlike most viral prompt lists, these ones are genuinely useful.
 
-I read through them and thought: I do all of this. Every day. Not occasionally, not when I remember -- every single day.
+I know because I use variations of all five. Every day.
 
-I have ADHD. Procrastination isn't laziness for me -- it's a broken prioritization system. I know I need to do the thing. I open the file, stare at it for two seconds, then find myself doing something else entirely. Not because I don't care. Because my brain won't engage.
+I have ADHD. Procrastination isn't a productivity problem for me -- it's a wiring problem. I know I need to do the thing. I open the file, stare at it for two seconds, and find myself doing something else entirely. Not because I don't want to. Because my brain won't engage.
 
-So I didn't just bookmark five prompts. I built an entire AI system -- Ada, my full-time AI executive assistant running on Claude Code -- to manage my attention. Here are the five original prompts, plus what actually happens when you live with an AI assistant instead of visiting one occasionally.
+Over the past year I've built these prompts into a daily AI workflow using Claude Code. Here are all five, why each one works, and how to get more out of them.
 
-## 1. Break It Down
+## 1. The Task Breaker
 
-**The prompt:**
 > "I'm avoiding [task]. Break it into 3-5 tiny, actionable steps and suggest an easy way to start the first one."
 
-This is the most fundamental one, and for ADHD brains, the most useful. We're not afraid of the task itself -- we're afraid of the task feeling too big. Seeing "write proposal" triggers a mental image of the entire document -- cover page, scope, pricing, timeline. Then we freeze.
+This is the single most useful prompt on the list. For ADHD brains especially, procrastination usually isn't about the task itself -- it's about the task feeling too big. "Write proposal" triggers a mental image of the entire document: cover page, scope, pricing, timeline. The brain shuts down before you start.
 
-But here's the thing: I don't type this prompt. I say "I need to write a proposal for Garden." Ada already knows who Garden is, what we've quoted before, which template we used. She pulls the reference, opens the file, asks me two questions, and drafts the first version.
+This prompt short-circuits that. Instead of one overwhelming task, you get five small ones -- and the first one is usually something you can do in under two minutes. Starting is the hard part. Once you're moving, momentum carries you.
 
-**The difference:** This prompt helps you break tasks down. A system that knows your context breaks them down AND starts the first step for you.
+**How to get more from it:** Be specific with your [task]. "I'm avoiding the Q2 marketing report for my manager" works better than "I'm avoiding work." The more context you give, the more relevant the steps. If you use ChatGPT or Claude with memory enabled, it gets even better over time because the AI learns your working patterns.
 
-## 2. Prioritize
+## 2. The Priority Sorter
 
-**The prompt:**
 > "Here's my to-do list: [tasks]. Which one should I tackle first to build momentum and why?"
 
-The concept is right, but the execution has a problem. You have to manually type out your entire to-do list. For someone with ADHD, organizing the to-do list is itself a task worth procrastinating on.
+When you have twelve things on your list and can't decide which to start, the default is to start none of them. This prompt breaks the deadlock by giving you a reasoned first move.
 
-My approach: Ada maintains a persistent `memory_todos.md` file. Every follow-up, deadline, and commitment gets logged automatically. Each morning, urgent items load into my session without me asking. I don't organize -- she already has.
+The "build momentum" framing is important. It doesn't ask for the most important task -- it asks for the one that gets you moving. Sometimes the right first task is a quick win, not the biggest item. That's counterintuitive, but it works. Completing one small thing generates the energy to tackle the next.
 
-More importantly, Ada doesn't just rank -- she classifies: OVERDUE, DUE SOON, WAITING, STALE. I see what's urgent at a glance. No need to ask "what should I do first" when the red OVERDUE items are already staring at me.
+**How to get more from it:** Paste your actual to-do list, not a cleaned-up version. Include the small annoying tasks alongside the big ones. Sometimes the AI will tell you to knock out three quick items first to clear mental space -- and it's right.
 
-**The difference:** A prompt answers you once. A system reminds you automatically, every day.
+**Power move:** If you use an AI tool with memory (ChatGPT with memory, Claude Projects, or a custom setup), your to-do list can persist between sessions. Instead of pasting it each time, just say "what should I do first today?" and the AI already has context.
 
-## 3. Gamify It
+## 3. The Gamifier
 
-**The prompt:**
 > "Gamify [task] by creating a challenge, a scoring system, and a reward for completing it."
 
-This one I have strong feelings about. Because I actually built a gamification system -- Ada Gersang. It turns every work session into a Romance of the Three Kingdoms-style strategy game. Every tool call logs to SQLite. Every skill has XP, levels, and cooldowns. Complete a task and you see experience points climb, skills level up, combo bonuses stack.
+This one sounds gimmicky, but it works because of brain chemistry. Procrastination is often a dopamine problem -- the task doesn't generate enough immediate reward to compete with whatever your brain would rather be doing (scrolling, snacking, reorganizing your desk). Gamification injects that reward artificially.
 
-It sounds ridiculous. But it works. ADHD brains need immediate feedback. Sending an email has zero dopamine hit on its own. But sending an email and watching "Comms Lv.12 to Lv.13" tick up -- that tiny progression is enough to push me toward the next one.
+The AI will typically give you a point system, milestones, and a reward structure. The trick is to actually follow through on the reward. Tell the AI what kind of rewards motivate you ("I like coffee breaks, not exercise") and it calibrates.
 
-The problem with the prompt version: the gamification it gives you is one-time. You use it once, the novelty wears off, and it stops working. Real gamification needs a persistent system with progress bars, history, and streaks.
+**How to get more from it:** Ask for a daily challenge, not a one-time game. "Gamify my workday: I need to complete these 5 tasks by 6pm" gives you something to play all day. Add a penalty for missed targets to raise the stakes.
 
-**The difference:** A prompt gives you a game. A system gives you a continuous feedback loop.
+I took this concept further and built an actual gamification system on top of my AI workflow -- every task completion earns XP, skills level up, combos stack. Sounds excessive, but for an ADHD brain that needs constant feedback, it genuinely changes behavior. The prompt version is a lighter take on the same principle, and it's a good place to start.
 
-## 4. The Pep Talk
+## 4. The Accountability Partner
 
-**The prompt:**
 > "Give me a quick pep talk: Why is completing [task] worth it, and what are the consequences if I keep delaying?"
 
-This is the weakest one. Not because pep talks don't work -- but because AI pep talks are too generic. The AI doesn't know your real situation, so you get empty encouragement about "a sense of accomplishment" and "reducing stress."
+Two things happen when you ask this. First, the AI articulates benefits you already know but haven't consciously connected to the task. "Finishing this report means your manager sees you as reliable" hits differently than the vague anxiety of "I should do this."
 
-I don't need a pep talk. I need accountability. Ada has a follow-up tracker. If I promised to reply to Kelly by Friday and didn't, the next session opens with: "Kelly's email is 3 days overdue."
+Second -- and this is the part most people skip -- it spells out consequences. Not hypothetical disaster scenarios, but real downstream effects. "If you delay this another week, it overlaps with the product launch prep and you'll be doing both under pressure." That's the kick most people need.
 
-That's not motivational speaking. It's a fact. And facts are more effective than pep talks.
+**How to get more from it:** Add personal stakes. "Give me a pep talk about finishing [task]. I tend to procrastinate when I'm anxious about the quality, and I have a deadline on Friday." The more the AI knows about your pattern, the more targeted the pep talk gets.
 
-**The difference:** A pep talk makes you feel good for five minutes. Accountability makes you actually do the thing.
+**What I do instead:** I've replaced the pep talk prompt with an automated accountability system. My AI assistant tracks commitments and deadlines. If I promised to email Kelly by Friday and haven't, the next session opens with: "Kelly's email is overdue by 3 days." No pep talk needed -- just facts. But the prompt version works well for people who don't have that kind of setup, and honestly, sometimes you just need someone (even an AI) to tell you it's worth doing.
 
-## 5. Root Cause Analysis
+## 5. The Root Cause Finder
 
-**The prompt:**
 > "I keep putting off [task]. What might be causing this, and how can I overcome it right now?"
 
-This prompt has the most depth, but it's aimed at the wrong target. AI isn't your therapist. It can give you a reasonable analysis, but it doesn't know your real reason. You might procrastinate on writing a report not because of "perfectionism" or "fear of failure" -- but because the Excel file takes 30 seconds to open, and those 30 seconds are enough for your brain to switch to something else.
+This is the deepest prompt on the list, and the one that surprises people most. We usually assume we know why we're procrastinating (lazy, tired, don't care), but the actual reason is often something we haven't articulated.
 
-For ADHD people, the root cause of procrastination is usually mundane: too much friction. Can't remember where the file is. Need to find the template. Email chain is too long to scroll through.
+The AI might surface that you're avoiding the task because you don't have all the information yet, or because you're afraid the result won't be good enough, or because the first step isn't clear. Once you name the blocker, the solution usually becomes obvious.
 
-So my AI system doesn't analyze causes -- it reduces friction. Ada remembers every file path, every client context, every previous communication. I say "reply to Kelly" and she finds the latest email, loads the client history, and drafts the reply. I just review and send.
+**How to get more from it:** Follow up. When the AI suggests a cause, interrogate it. "You said I might be avoiding this because I'm unsure about the format. That's actually true -- can you suggest three formats for this report and help me pick one?" Now you've gone from procrastination to action in two messages.
 
-**The difference:** Analyzing causes is useful. But reducing friction is what actually changes behavior.
+**ADHD-specific insight:** For people with ADHD, the root cause is often mundane friction -- not emotional resistance. You're not avoiding the task because you're scared. You're avoiding it because the file is buried three folders deep, the template is somewhere in your email, and the thought of gathering everything feels like a separate task. Reducing friction (organizing your workspace, pinning key files, saving templates) is often more effective than analyzing your feelings about the task.
 
-## What the Listicles Won't Tell You
+## Making These Stick
 
-All five prompts are useful. But they share a blind spot: they assume you'll remember to use them.
+The hardest part about any productivity technique isn't learning it. It's remembering to use it when you're actually procrastinating. You're not going to think "let me open ChatGPT and type prompt number three" when you're in the middle of avoiding something. That's the gap between knowing a technique and having a system.
 
-The core ADHD problem isn't not knowing the methods -- it's not remembering to use them. You use the "break it down" prompt today and it feels great. Tomorrow you're busy and forget. The day after? Back to square one.
+Three ways to bridge that gap:
 
-The real answer isn't better prompts. It's a system you don't have to remember to use -- because it comes to you.
+1. **Save these as quick-access templates.** Put them in your phone's notes app, a pinned ChatGPT conversation, or a text shortcut. The fewer steps between you and the prompt, the more likely you'll use it.
 
-I'm not saying everyone needs to build an Ada. But if you're serious about using AI for procrastination, don't stop at "occasionally asking ChatGPT." At minimum:
+2. **Start with just one.** Don't try to use all five. Pick the one that matches your most common procrastination pattern. For most people that's #1 (task feels too big) or #2 (can't decide where to start). Use it for a week before adding another.
 
-1. **Use an AI with memory** -- don't start from zero every session
-2. **Set up automatic reminders** -- don't rely on yourself to remember
-3. **Reduce friction** -- make "starting" easier than "continuing to delay"
+3. **Use an AI with memory.** If you use the same AI tool consistently and it remembers your context, the prompts get more powerful over time. Instead of explaining your situation each time, the AI already knows your work patterns, your deadlines, and what you tend to avoid.
 
-Prompts are a starting point. Systems are the answer.
+The five prompts work. The question is whether you'll use them tomorrow, or just save this post and forget about it.
 
 ---
 
-*I train enterprise teams on AI adoption at [Adaptig](https://adaptig.com). Connect with me on [LinkedIn](https://www.linkedin.com/in/samwonghk/).*
+*I train enterprise teams on AI adoption at [Adaptig](https://adaptig.com). If procrastination, productivity, or ADHD-friendly AI workflows are your thing, connect with me on [LinkedIn](https://www.linkedin.com/in/samwonghk/).*

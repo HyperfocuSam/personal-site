@@ -6,9 +6,9 @@
 const posts = [
   {
     slug: 'ai-prompts-beat-procrastination',
-    title: 'AI Prompts for Beating Procrastination: What the Listicles Don\'t Tell You',
+    title: '5 AI Prompts That Actually Help With Procrastination (From Someone Who Uses Them Daily)',
     date: '2026-03-14',
-    excerpt: 'A viral post shared 5 ChatGPT prompts for procrastination. As someone with ADHD who runs an AI executive assistant daily, here\'s what actually works -- and what the listicles miss.',
+    excerpt: 'Five viral AI prompts for procrastination -- why each one works, how to get more from them, and what changes when you have ADHD and use them every day.',
     tags: ['ai-adoption', 'productivity', 'personal-reflection', 'tools'],
     type: 'reflection',
     featured: false,
@@ -16,9 +16,9 @@ const posts = [
   },
   {
     slug: 'zh-ai-prompts-beat-procrastination',
-    title: '用 AI 打低拖延症：我每日用嘅 5 個 Prompt',
+    title: '5 條真係有用既 AI Prompt 打低拖延症（我每日用緊）',
     date: '2026-03-14',
-    excerpt: '網上好多「AI 打低拖延症」嘅 prompt 清單。但作為一個有 ADHD 嘅 AI 培訓師，我每日真係用 AI 管理自己——呢啲先係實戰版。',
+    excerpt: '5 條 viral AI prompt 打低拖延症——點解每條有效、點樣用得更好、加埋 ADHD 實戰 insight。',
     tags: ['ai-adoption', 'productivity', 'personal-reflection', 'tools'],
     type: 'reflection',
     language: 'zh-Hant',

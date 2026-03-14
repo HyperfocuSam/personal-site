@@ -1,93 +1,84 @@
-# 用 AI 打低拖延症：我每日用嘅 5 個 Prompt
+# 5 條真係有用既 AI Prompt 打低拖延症（我每日用緊）
 
-前幾日喺 X 見到一個 viral post，講「5 個最好嘅 prompt 打低拖延症」。原文係 Reddit 一個叫 reclaim_ai 嘅用戶寫嘅，內容本身冇乜特別——五條 ChatGPT prompt，教你拆解任務、排優先次序、gamify 工作。
+呢 5 條 prompt 之前喺 X 爆左，原文係 Reddit 一個叫 reclaim_ai 既用戶寫既。唔同一般果啲「AI 生產力 hack」，呢幾條我試過，真係有用。
 
-但我望住嗰五條 prompt 嘅時候，唔係覺得「幾有用」——而係「呢啲嘢我每日都做緊」。
+點知有用？因為我每日都用緊。
 
-我有 ADHD。拖延症唔係懶，係腦入面嘅 prioritization 系統壞咗。明知道要做，打開個 file 望兩秒就跳去做另一樣嘢。唔係唔想做，係個腦唔肯 engage。
+本人有 ADHD。拖延症對我嚟講唔係懶，係個腦既 wiring 問題。明知要做，打開個 file 望兩秒就跳左去做另一樣。唔係唔想做，係個腦唔肯 engage。
 
-所以我冇用 prompt 去「打低拖延症」。我直接起咗一個 AI 系統——Ada，我嘅全職 AI 助理——去幫我管理自己。每日用。唔係偶爾試下，係真係每日用。
+過去一年我將呢啲 prompt 既概念融入左我既 AI 工作流程入面。以下係呢 5 條 prompt、點解佢有效、同埋點樣用得更好。
 
-以下係嗰五條原版 prompt，加上我嘅實戰經驗。
+## 1. 拆細個任務
 
-## 1. 拆解任務
+> "I'm avoiding [任務]. Break it into 3-5 tiny, actionable steps and suggest an easy way to start the first one."
 
-**原版 prompt：**
-> "I'm avoiding [task]. Break it into 3-5 tiny, actionable steps and suggest an easy way to start the first one."
+呢條係成個 list 入面最有用既一條。拖延好多時唔係因為個任務難，而係因為佢「睇落好大」。一見到「寫份提案」，腦入面即刻彈出成個 document 既壓力——封面、範圍、定價、timeline。然後就做唔到。
 
-呢條 prompt 係最基本嘅，但對 ADHD 嚟講係最有用嘅。因為我哋唔係怕個任務本身，係怕個任務「太大」。一望到「寫提案」三個字，腦入面即刻出現成個 proposal 嘅壓力——封面、目錄、範圍、定價、timeline。然後就做唔到。
+呢條 prompt 將一個大任務切成 3-5 件好細既嘢，而且第一步通常兩分鐘之內做得完。開始做左先至係最難，一旦郁左，個 momentum 會推住你繼續。
 
-我同 Ada 嘅做法唔同。我唔會打呢條 prompt。我會話：「我要寫個 proposal 畀 Garden。」Ada 已經知道 Garden 係邊個 client、之前報過咩價、用過咩 template。佢會直接幫我開 file、拉舊 proposal 做 reference、問我一兩個必要嘅問題，然後出初稿。
+**點樣用得更好：** [任務] 要寫得具體。「I'm avoiding the Q2 marketing report for my manager」好過「I'm avoiding work」。你俾越多 context，AI 切出黎既步驟越實際。如果你用 ChatGPT 或者 Claude 有 memory 功能，佢會記得你之前點做，效果更加好。
 
-**實戰分別：** 呢條 prompt 幫你拆解任務。但如果你有一個記得你所有 context 嘅 AI 助理，佢唔只拆解——佢直接做咗第一步。
+## 2. 揀先做邊樣
 
-## 2. 排優先次序
+> "Here's my to-do list: [任務清單]. Which one should I tackle first to build momentum and why?"
 
-**原版 prompt：**
-> "Here's my to-do list: [tasks]. Which one should I tackle first to build momentum and why?"
+當你有十幾樣嘢要做但唔知做邊樣先，最常見既結果就係一樣都冇做。呢條 prompt 幫你打破僵局。
 
-呢個概念啱，但執行方法有問題。你要手動打曬成個 to-do list 入去。對 ADHD 人嚟講，整理 to-do list 本身已經係一個要拖延嘅任務。
+「build momentum」呢個 framing 好重要。佢唔係問邊樣最重要，而係問邊樣會令你開始郁。有時正確既第一步係一件小事——做完一件容易既嘢，個人就有動力去做第二件。
 
-我嘅做法：Ada 有一個 `memory_todos.md` file，所有 follow-up、deadline、承諾都自動記錄落去。每朝我開 session，佢會自動 load urgent items。我唔使整理——佢已經幫我整理好。
+**點樣用得更好：** 唔好淨係貼靚版 to-do list，將啲瑣碎既小事都一齊貼入去。有時 AI 會建議你先掃走三件小事清空個腦，然後再做大嘢——呢個建議通常都係啱既。
 
-更重要嘅係，Ada 唔只排次序，佢會分類：OVERDUE、DUE SOON、WAITING、STALE。我一望就知邊個最緊急。唔使問「邊個先做」，因為紅色嘅 OVERDUE 已經喺度喊緊。
+**進階玩法：** 如果你長期用同一隻 AI，有 memory 功能，你既 to-do list 可以自動 persist。唔使每次都重新打，直接問「今日做邊樣先？」佢已經有 context。
 
-**實戰分別：** 一條 prompt 答你一次。一個系統每日自動提你。
+## 3. 加個遊戲機制
 
-## 3. Gamification
+> "Gamify [任務] by creating a challenge, a scoring system, and a reward for completing it."
 
-**原版 prompt：**
-> "Gamify [task] by creating a challenge, a scoring system, and a reward for completing it."
+聽落好似好兒戲，但背後係 brain chemistry。拖延好多時係 dopamine 問題——個任務產生唔到足夠既即時回饋去同你個腦想做既其他嘢（碌手機、食零食、執枱）競爭。Gamification 係人工注入呢個回饋。
 
-呢個我特別有嘢講。因為我真係起咗一個 gamification 系統——Ada Gersang。佢將我同 Ada 嘅每個工作 session 變成一個三國策略遊戲。每個 tool call 都記錄到 SQLite，每個 skill 有 XP、level、cooldown。做完一個 task，你會見到經驗值升、技能升級、combo 加成。
+AI 通常會俾你一個分數系統、里程碑、同獎勵機制。重點係你要真係跟住做。同 AI 講你鍾意咩類型獎勵（「我鍾意飲杯咖啡，唔好叫我做運動」），佢會校準。
 
-聽落好癲。但佢真係 work。因為 ADHD 嘅腦需要即時回饋。寫完一封 email 本身冇任何 dopamine hit。但寫完一封 email 然後見到「Comms Lv.12 → Lv.13」——嗰個小小嘅升級動畫，就夠推我去寫下一封。
+**點樣用得更好：** 叫佢做一個全日挑戰，唔好淨係做一次。「Gamify my workday: I need to complete these 5 tasks by 6pm」 俾到你成日都有嘢 play。加埋罰則會更加有效。
 
-呢條 prompt 嘅問題係：佢畀你嘅 gamification 係一次性嘅。你用一次，新鮮感過咗就冇用。真正嘅 gamification 需要一個持續嘅系統，有進度條、有歷史、有 streak。
+我自己將呢個概念推到盡，喺我既 AI 工作流程上面起左一個真正既 gamification 系統——每個任務有 XP、技能會升 level、有 combo。聽落好癲，但對 ADHD 既腦嚟講，持續既 feedback 真係會改變行為。Prompt 版本係一個輕量版，作為起步已經好有用。
 
-**實戰分別：** Prompt 畀你一個遊戲。系統畀你一個持續嘅 feedback loop。
+## 4. 搵人踢你一腳
 
-## 4. Pep Talk
+> "Give me a quick pep talk: Why is completing [任務] worth it, and what are the consequences if I keep delaying?"
 
-**原版 prompt：**
-> "Give me a quick pep talk: Why is completing [task] worth it, and what are the consequences if I keep delaying?"
+呢條 prompt 做兩件事。第一，AI 會將你心底已經知但冇明確連結到呢個任務既好處講出黎。「做完呢份 report 你老細會覺得你靠得住」——呢句比起你腦入面嗰種「我應該做」既焦慮更加 hit。
 
-呢條我覺得係最弱嘅。唔係因為 pep talk 冇用——而係 AI 嘅 pep talk 太 generic。佢唔知你嘅真實情況，所以只能講啲「completing this task will give you a sense of accomplishment」之類嘅空話。
+第二——呢個係大部分人 skip 左既部分——佢會列出唔做既後果。唔係假設性既災難，而係實際既連鎖反應。「如果你再拖多一個禮拜，就會撞正 product launch 嗰陣你兩樣一齊趕」。呢個先係你需要既一腳。
 
-我需要嘅唔係 pep talk。我需要嘅係 accountability。Ada 有一個 follow-up tracker，如果我承諾咗禮拜五之前回覆 Kelly 但冇做到，佢會喺下個 session 話我知：「Kelly 嘅 email 已經 overdue 3 日。」
+**點樣用得更好：** 加埋你既個人模式。「Give me a pep talk about finishing [任務]. I tend to procrastinate when I'm anxious about the quality, and I have a deadline on Friday.」你俾越多關於自己既資訊，AI 既 pep talk 越準。
 
-呢個唔係 motivational speaking。係事實。而事實比 pep talk 有效得多。
+**我自己既做法：** 我用自動化既 accountability 取代 pep talk。我既 AI 助理會 track 所有承諾同 deadline，如果我話左禮拜五之前回覆 Kelly 但冇做到，下個 session 一開就會話我知「Kelly 封 email 遲左 3 日」。但 prompt 版本對大部份人嚟講已經好夠用——有時你真係只係需要有人（就算係 AI）同你講件事值得做。
 
-**實戰分別：** Pep talk 令你 feel good 五分鐘。Accountability 令你真係做嘢。
+## 5. 搵出真正原因
 
-## 5. Root Cause Analysis
+> "I keep putting off [任務]. What might be causing this, and how can I overcome it right now?"
 
-**原版 prompt：**
-> "I keep putting off [task]. What might be causing this, and how can I overcome it right now?"
+呢條係成個 list 入面最深既一條，亦都係最令人意外既。我哋通常以為自己知點解拖延（懶、攰、唔 care），但真正原因往往係你未 articulate 過既嘢。
 
-呢條 prompt 最有深度，但用錯對象。AI 唔係你嘅 therapist。佢可以畀你一個合理嘅分析，但佢唔知你嘅真實原因。你拖延寫 report 可能唔係因為「perfectionism」或者「fear of failure」——可能只係因為個 Excel file 太大，打開要等 30 秒，而嗰 30 秒已經夠你嘅腦跳去做另一樣嘢。
+AI 可能會指出你避開呢個任務係因為你未有齊所有資料、或者你怕做出黎唔夠好、或者第一步唔清楚。一旦你 name 到個 blocker，解決方法通常好明顯。
 
-對 ADHD 人嚟講，拖延嘅 root cause 通常好 mundane：friction 太大。File 喺邊唔記得。Template 要搵。Email chain 太長要 scroll。
+**點樣用得更好：** 跟進。當 AI 提出一個原因，追問落去。「You said I might be avoiding this because I'm unsure about the format. That's actually true — can you suggest three formats for this report and help me pick one?」兩句 message 由拖延變成行動。
 
-所以我嘅 AI 系統做嘅唔係分析原因——係減少 friction。Ada 記得所有 file path、所有 client context、所有之前嘅溝通記錄。我話「回覆 Kelly」，佢會搵到最近嗰封 email、load 咗 client history、draft 好回覆。我只需要 review 同 send。
+**ADHD 特別 insight：** ADHD 既人，拖延既 root cause 通常好 mundane——唔係情緒抗拒，而係 friction 太大。你唔係怕個任務，你只係唔記得個 file 喺邊、template 喺 email 某處、而諗到要先搵齊所有嘢就覺得好煩。減少 friction（整理 workspace、pin 住常用 file、save 好 template）好多時比分析你既感受更加有效。
 
-**實戰分別：** 分析原因係有用嘅。但減少 friction 先至改變行為。
+## 令呢啲 Prompt 真正 Work
 
-## 呢啲 Listicle 唔會話你知嘅嘢
+學識一個 productivity 技巧唔難。難係喺你真正拖延緊既時候記得用佢。你唔會喺避緊嘢做既時候忽然諗起「等我開 ChatGPT 打第三條 prompt」。呢個就係知道同做到之間既 gap。
 
-以上五條 prompt 都有用。但佢哋有一個共同嘅盲點：佢哋假設你每次都會記得去用。
+三個方法 bridge 呢個 gap：
 
-ADHD 嘅問題唔係唔知道方法——係唔記得用方法。你今日用咗「拆解任務」呢條 prompt，覺得好有用。聽日忙起嚟，你就忘記咗。後日？返回原形。
+1. **Save 做 quick-access template。** 放喺手機備忘錄、pin 住一個 ChatGPT 對話、或者設定 text shortcut。你同呢條 prompt 之間既步驟越少，你越大機會用。
 
-所以真正嘅答案唔係更好嘅 prompt。係一個你唔使記得去用嘅系統——因為佢會主動搵你。
+2. **揀一條先用。** 唔好五條一齊用。揀最 match 你拖延模式嗰條。大部分人係 #1（任務太大）或者 #2（唔知做邊樣先）。用一個禮拜先再加。
 
-我唔係話每個人都需要起一個 Ada。但如果你認真想用 AI 處理拖延症，唔好停留喺「偶爾問 ChatGPT 一條 prompt」。起碼：
+3. **用有 memory 既 AI。** 如果你長期用同一隻 AI 而佢記得你既 context，呢啲 prompt 會越用越強。唔使每次解釋你既情況，AI 已經知你既工作模式、deadline、同你慣性會避開咩類型既嘢。
 
-1. **用一個有記憶嘅 AI**——唔好每次由零開始
-2. **設定自動提醒**——唔好靠自己記得
-3. **減少 friction**——令「開始做」比「繼續拖」更容易
-
-Prompt 係起點。系統先至係答案。
+呢 5 條 prompt 係有用既。問題係你聽日會唔會真係用，定係 save 完呢篇文章然後拖埋佢。
 
 ---
 
