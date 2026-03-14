@@ -19,6 +19,7 @@ const HeroSection = () => (
         <p className="home-hero__subtitle">
           Workshops, coaching, and trainer development for organizations
           that want real behavior change &mdash; not just another AI demo.
+          Based in Hong Kong, working across Asia-Pacific.
         </p>
         <div className="home-hero__actions">
           <Link to="/services" className="button">

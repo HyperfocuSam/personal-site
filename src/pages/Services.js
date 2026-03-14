@@ -73,16 +73,16 @@ const Services = () => {
 
   return (
     <Main
-      title="Services"
-      description="AI Training Services by Sam Wong - Corporate workshops, Train-the-Trainer programs, and 1-1 coaching through DotAI and Adaptig."
+      title="AI Training Services - Hong Kong"
+      description="Corporate AI training and workshops in Hong Kong. Sam Wong delivers enterprise AI workshops, prompt engineering training, 1-1 coaching, and Train-the-Trainer certification through DotAI and Adaptig. Available in English and Cantonese."
       canonicalUrl={`${SITE_URL}/services`}
-      ogTitle="AI Training Services | Sam Wong"
-      ogDescription="Corporate workshops, Train-the-Trainer programs, and 1-1 coaching through DotAI and Adaptig."
+      ogTitle="Corporate AI Training & Workshops - Hong Kong | Sam Wong"
+      ogDescription="Enterprise AI workshops, prompt engineering training, coaching, and Train-the-Trainer programs in Hong Kong. Delivered through DotAI and Adaptig."
       ogImage={DEFAULT_OG_IMAGE}
       ogUrl={`${SITE_URL}/services`}
       ogType="website"
-      twitterTitle="AI Training Services | Sam Wong"
-      twitterDescription="Corporate workshops, Train-the-Trainer programs, and 1-1 coaching."
+      twitterTitle="Corporate AI Training & Workshops - Hong Kong | Sam Wong"
+      twitterDescription="Enterprise AI workshops, prompt engineering training, and coaching in Hong Kong."
       twitterImage={DEFAULT_OG_IMAGE}
       hreflangTags={[
         { lang: 'en', href: `${SITE_URL}/services` },
@@ -96,9 +96,9 @@ const Services = () => {
           <div className="content-standard">
             <div className="title">
               <h2>
-                <Link to="/services">Services</Link>
+                <Link to="/services">AI Training &amp; Workshop Services</Link>
               </h2>
-              <p>Choose the path that matches your goal</p>
+              <p>Corporate AI training in Hong Kong and across Asia-Pacific</p>
             </div>
             <div className="services-anchor-pills">
               <Link to="/services#organizations" className="anchor-pill">
@@ -216,6 +216,30 @@ const Services = () => {
                   acceptedAnswer: {
                     '@type': 'Answer',
                     text: 'Sam Wong is based in Hong Kong and available globally, with particular focus across the Asia-Pacific region. He delivers training in English and Cantonese. Workshops have been delivered to teams across 13 countries.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'How much does corporate AI training cost in Hong Kong?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Corporate AI training pricing varies based on format, duration, and team size. Sam Wong offers half-day and full-day workshops, multi-session Pioneer Programs (typically 6 sessions over 6 weeks), and executive advisory packages. Contact for a custom quote based on your team\'s needs. Some programs may be eligible for Hong Kong government funding schemes.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'Are AI training workshops available in Cantonese?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Yes. Sam Wong delivers AI training in both English and Cantonese, making workshops accessible to Hong Kong teams regardless of language preference. Materials can be provided in English, Traditional Chinese, or bilingual formats.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'What industries does Sam Wong provide AI training for in Hong Kong?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Sam Wong has delivered AI training across banking and finance (Bank of China Hong Kong, HSBC), retail and luxury (Chow Tai Fook, Playmates Toys), engineering (Arup, CLP), education (PolyU, HKCT), tourism (Hong Kong Jockey Club), and professional services. Workshop content is customized to each industry\'s workflows, compliance requirements, and use cases.',
                   },
                 },
               ],

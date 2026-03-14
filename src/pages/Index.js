@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { Helmet } from 'react-helmet-async';
 import Main from '../layouts/Main';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 import testimonials from '../data/testimonials';
@@ -15,17 +16,18 @@ import EmailCapture from '../components/EmailCapture/EmailCapture';
 const Index = () => (
   <Main
     description={
-      'Sam Wong helps teams and professionals adopt AI with confidence through workshops, '
-      + 'coaching, and trainer development. Human-first, practical, and outcome-focused.'
+      'Hong Kong-based AI training specialist. Sam Wong delivers corporate AI workshops, '
+      + '1-1 coaching, and Train-the-Trainer programs for enterprises across Asia-Pacific. '
+      + '10,000+ professionals trained, 9.2/10 satisfaction.'
     }
     canonicalUrl={`${SITE_URL}/`}
-    ogTitle="Sam Wong | AI Training Specialist"
-    ogDescription="Helping enterprises and individuals thrive with AI. Corporate workshops, 1-1 coaching, and Train-the-Trainer programs."
+    ogTitle="Sam Wong | AI Training Specialist - Hong Kong"
+    ogDescription="Corporate AI workshops, coaching, and Train-the-Trainer programs for Hong Kong enterprises. 10,000+ professionals trained through DotAI and Adaptig."
     ogImage={DEFAULT_OG_IMAGE}
     ogUrl={`${SITE_URL}/`}
     ogType="website"
-    twitterTitle="Sam Wong | AI Training Specialist"
-    twitterDescription="Helping enterprises and individuals thrive with AI."
+    twitterTitle="Sam Wong | AI Training Specialist - Hong Kong"
+    twitterDescription="Corporate AI workshops, coaching, and Train-the-Trainer programs for Hong Kong enterprises."
     twitterImage={DEFAULT_OG_IMAGE}
     hreflangTags={[
       { lang: 'en', href: `${SITE_URL}/` },
@@ -33,6 +35,36 @@ const Index = () => (
       { lang: 'x-default', href: `${SITE_URL}/` },
     ]}
   >
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'ProfessionalService',
+          name: 'Sam Wong - AI Training Specialist',
+          url: SITE_URL,
+          image: `${SITE_URL}/images/Sam.png`,
+          description: 'Hong Kong-based AI training specialist delivering corporate workshops, coaching, and Train-the-Trainer programs for enterprises across Asia-Pacific.',
+          areaServed: ['Hong Kong', 'Asia-Pacific', 'Global'],
+          serviceType: ['AI Training', 'Corporate AI Workshops', 'Prompt Engineering Training', 'Executive AI Coaching', 'Train-the-Trainer Certification'],
+          knowsLanguage: ['English', 'Cantonese', 'Mandarin'],
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Hong Kong',
+            addressCountry: 'HK',
+          },
+          provider: {
+            '@type': 'Person',
+            name: 'Sam Wong',
+            url: SITE_URL,
+            jobTitle: 'AI Training Specialist',
+            worksFor: [
+              { '@type': 'Organization', name: 'DotAI', url: 'https://dotai.hk' },
+              { '@type': 'Organization', name: 'Adaptig', url: 'https://adaptig.ai' },
+            ],
+          },
+        })}
+      </script>
+    </Helmet>
     <article className="post" id="index">
       {/* Hero — light, conversational, big serif */}
       <HeroSection />

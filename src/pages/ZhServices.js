@@ -96,9 +96,9 @@ const ZhServices = () => {
           <div className="content-standard">
             <div className="title">
               <h2>
-                <Link to="/zh/services">服務</Link>
+                <Link to="/zh/services">AI 培訓及工作坊服務</Link>
               </h2>
-              <p>選擇符合你目標嘅路徑</p>
+              <p>香港及亞太區企業 AI 培訓</p>
             </div>
             <div className="services-anchor-pills">
               <Link to="/zh/services#organizations" className="anchor-pill">
@@ -132,6 +132,76 @@ const ZhServices = () => {
             </div>
           </section>
         ))}
+
+        <Helmet>
+          <script type="application/ld+json">
+            {JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'ProfessionalService',
+              name: 'Sam Wong - AI 培訓服務',
+              url: `${SITE_URL}/zh/services`,
+              provider: {
+                '@type': 'Person', name: 'Sam Wong', url: SITE_URL,
+              },
+              areaServed: ['Hong Kong', 'Asia-Pacific'],
+              serviceType: ['AI 培訓', '企業工作坊', 'AI 輔導', '培訓師認證'],
+              knowsLanguage: ['English', 'Cantonese', 'Mandarin'],
+              address: {
+                '@type': 'PostalAddress',
+                addressLocality: 'Hong Kong',
+                addressCountry: 'HK',
+              },
+            })}
+          </script>
+          <script type="application/ld+json">
+            {JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: [
+                {
+                  '@type': 'Question',
+                  name: 'Sam Wong 提供咩類型嘅 AI 培訓？',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Sam Wong 透過 Adaptig 同 DotAI 提供企業 AI 工作坊、多節 AI Pioneer Program、一對一 AI 輔導、培訓師認證計劃、以及主題演講同活動。服務涵蓋企業、個人及有志成為 AI 培訓師嘅專業人士。',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: '香港企業 AI 培訓幾多錢？',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: '企業 AI 培訓費用取決於形式、時長同團隊規模。Sam Wong 提供半日及全日工作坊、多節 Pioneer Program（通常 6 節、歷時 6 星期）、以及高管顧問服務。歡迎聯絡索取報價。部分計劃可能符合香港政府資助計劃資格。',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'AI 培訓工作坊有冇廣東話版本？',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: '有。Sam Wong 以英語同廣東話提供 AI 培訓，確保香港團隊無論語言偏好都可以參與。教材可以提供英文、繁體中文或雙語版本。',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'Sam Wong 喺香港為邊啲行業提供 AI 培訓？',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Sam Wong 嘅 AI 培訓覆蓋銀行及金融業（中銀香港、匯豐）、零售及奢侈品（周大福、美泰）、工程（奧雅納、中電）、教育（理工大學、HKCT）、旅遊（香港賽馬會）及專業服務。工作坊內容根據每個行業嘅工作流程、合規要求及實際用途度身定制。',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: '企業 AI 工作坊可以預期咩效果？',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: '工作坊平均滿意度達 9.2/10。重點係行為改變而唔係工具認知——團隊學識將 AI 融入日常工作流程。多節 Pioneer Program 參加者平均每週透過 AI 輔助工作流程設計節省 5-8 小時。',
+                  },
+                },
+              ],
+            })}
+          </script>
+        </Helmet>
 
         <p className="lang-toggle">
           <Link to="/services">View in English</Link>
