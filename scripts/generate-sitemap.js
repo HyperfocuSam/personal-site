@@ -30,6 +30,7 @@ const STATIC_PAGES = [
   { path: '/media/kit', priority: '0.8', changefreq: 'monthly' },
   { path: '/clients', priority: '0.8', changefreq: 'monthly' },
   { path: '/contact', priority: '0.7', changefreq: 'monthly' },
+  { path: '/corporate-ai-training-hong-kong', priority: '0.9', changefreq: 'weekly' },
   { path: '/resume', priority: '0.6', changefreq: 'monthly' },
   { path: '/projects', priority: '0.6', changefreq: 'monthly' },
   { path: '/speaking', priority: '0.8', changefreq: 'monthly' },

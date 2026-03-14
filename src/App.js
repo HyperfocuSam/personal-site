@@ -7,6 +7,7 @@ const { PUBLIC_URL } = process.env;
 
 // Every route - we lazy load so that each page can be chunked
 const About = lazy(() => import('./pages/About'));
+const CorporateTraining = lazy(() => import('./pages/CorporateTraining'));
 const Blog = lazy(() => import('./pages/Blog'));
 const Clients = lazy(() => import('./pages/Clients'));
 const Contact = lazy(() => import('./pages/Contact'));
@@ -41,6 +42,7 @@ const App = () => (
         <Route path="/blog/:slug" element={<Post />} />
         <Route path="/clients" element={<Clients />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/corporate-ai-training-hong-kong" element={<CorporateTraining />} />
         <Route path="/media/kit" element={<MediaKit />} />
         <Route path="/media" element={<Media />} />
         <Route path="/zh" element={<ZhIndex />} />

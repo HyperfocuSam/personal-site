@@ -247,6 +247,15 @@ const Services = () => {
           </script>
         </Helmet>
 
+        <div style={{ textAlign: 'center', margin: '2rem 0' }}>
+          <Link
+            to="/corporate-ai-training-hong-kong"
+            className="button button--outline"
+          >
+            Corporate AI Training in Hong Kong — Full Guide
+          </Link>
+        </div>
+
         <p className="lang-toggle">
           <Link to="/zh/services">&#x4E2D;&#x6587;&#x7248;&#x672C;</Link>
         </p>
