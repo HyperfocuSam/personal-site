@@ -5,6 +5,27 @@
 // linkedPost: slug of the corresponding post in another language (for hreflang)
 const posts = [
   {
+    slug: 'ai-prompts-beat-procrastination',
+    title: 'AI Prompts for Beating Procrastination: What the Listicles Don\'t Tell You',
+    date: '2026-03-14',
+    excerpt: 'A viral post shared 5 ChatGPT prompts for procrastination. As someone with ADHD who runs an AI executive assistant daily, here\'s what actually works -- and what the listicles miss.',
+    tags: ['ai-adoption', 'productivity', 'personal-reflection', 'tools'],
+    type: 'reflection',
+    featured: false,
+    linkedPost: 'zh-ai-prompts-beat-procrastination',
+  },
+  {
+    slug: 'zh-ai-prompts-beat-procrastination',
+    title: '用 AI 打低拖延症：我每日用嘅 5 個 Prompt',
+    date: '2026-03-14',
+    excerpt: '網上好多「AI 打低拖延症」嘅 prompt 清單。但作為一個有 ADHD 嘅 AI 培訓師，我每日真係用 AI 管理自己——呢啲先係實戰版。',
+    tags: ['ai-adoption', 'productivity', 'personal-reflection', 'tools'],
+    type: 'reflection',
+    language: 'zh-Hant',
+    featured: false,
+    linkedPost: 'ai-prompts-beat-procrastination',
+  },
+  {
     slug: 'openclaw-ai-agents-talk',
     title: 'What 1,400 People Taught Me About the Gap Between AI Demos and AI Adoption',
     date: '2026-03-12',
