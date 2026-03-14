@@ -5,6 +5,15 @@
 // linkedPost: slug of the corresponding post in another language (for hreflang)
 const posts = [
   {
+    slug: 'hk-2026-budget-ai-training',
+    title: 'What the 2026 Budget\'s HK$50 Million AI Training Push Actually Means for Your Company',
+    date: '2026-03-14',
+    excerpt: 'Hong Kong earmarked HK$50 million for AI training in the 2026-27 Budget. Here\'s what it actually means for corporate training, what\'s missing, and what to do now.',
+    tags: ['ai-adoption', 'enterprise', 'personal-reflection'],
+    type: 'reflection',
+    featured: false,
+  },
+  {
     slug: 'ai-prompts-beat-procrastination',
     title: '5 AI Prompts That Actually Help With Procrastination (From Someone Who Uses Them Daily)',
     date: '2026-03-14',
