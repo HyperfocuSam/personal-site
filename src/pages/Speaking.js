@@ -155,7 +155,7 @@ const schema = {
 const Speaking = () => (
   <Main
     title="Speaking & Events"
-    description="Sam Wong delivers keynotes, panels, and workshops on practical AI adoption. Past events include YPO, Bank of China, Chow Tai Fook, and Arup."
+    description="Hong Kong AI keynote speaker and workshop facilitator. Sam Wong delivers talks on practical AI adoption for enterprises. Past events include YPO, Bank of China, Chow Tai Fook, and Arup."
     canonicalUrl={`${SITE_URL}/speaking`}
     ogTitle="Speaking & Events | Sam Wong"
     ogDescription="Keynotes, panels, and workshops that shift how teams think about AI. Past events include YPO, Bank of China, and Chow Tai Fook."

@@ -649,6 +649,22 @@
   margin: 2em 0;
 }
 
+.service-cta {
+  margin: 2em 0;
+  padding: 1.5em;
+  background: _palette(surface-raised);
+  border: 0;
+  border-left: 4px solid _palette(accent);
+  border-radius: 0 map-get($radius, xl) map-get($radius, xl) 0;
+  text-align: left;
+
+  &__text {
+    margin-bottom: 1em;
+    font-size: 0.95em;
+    line-height: 1.6;
+  }
+}
+
 .trainer-banner {
   margin: 2em 0;
   padding: 1.25em;

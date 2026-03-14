@@ -60,41 +60,66 @@ TestimonialSection.defaultProps = {
   subtitle: null,
 };
 
+const reviewedItem = {
+  '@type': 'LocalBusiness',
+  name: 'Sam Wong - AI Training Services',
+  image: `${SITE_URL}/images/Sam.png`,
+  address: { '@type': 'PostalAddress', addressLocality: 'Hong Kong', addressCountry: 'HK' },
+  url: `${SITE_URL}/services`,
+};
+
 const schema = [
   {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: 'Testimonials | Sam Wong',
     description:
-      'Real feedback from AI workshop participants and enterprise training clients.',
+      'Real feedback from AI workshop participants and enterprise training clients in Hong Kong.',
     url: `${SITE_URL}/testimonials`,
   },
   {
     '@context': 'https://schema.org',
-    '@type': 'EducationalOrganization',
-    name: 'Adaptig',
-    url: 'https://adaptig.ai',
-    description: 'Enterprise AI training and adoption consultancy. Corporate workshops, coaching, and Train-the-Trainer programs across Asia-Pacific, Europe, and the Americas.',
-    founder: { '@type': 'Person', name: 'Sam Wong' },
-    areaServed: ['Hong Kong', 'Asia-Pacific', 'Global'],
+    '@type': 'LocalBusiness',
+    name: 'Sam Wong - AI Training Services',
+    image: `${SITE_URL}/images/Sam.png`,
+    url: `${SITE_URL}/services`,
+    address: { '@type': 'PostalAddress', addressLocality: 'Hong Kong', addressCountry: 'HK' },
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '9.2',
       bestRating: '10',
       ratingCount: '1500',
-      itemReviewed: {
-        '@type': 'Course',
-        name: 'Adaptig AI Training Programs',
-        provider: { '@type': 'Organization', name: 'Adaptig', url: 'https://adaptig.ai' },
-      },
     },
+    review: [
+      {
+        '@type': 'Review',
+        reviewRating: { '@type': 'Rating', ratingValue: '10', bestRating: '10' },
+        author: { '@type': 'Person', name: 'Banking Professional' },
+        reviewBody: 'Finally, AI training that\'s actually useful!',
+        itemReviewed: reviewedItem,
+      },
+      {
+        '@type': 'Review',
+        reviewRating: { '@type': 'Rating', ratingValue: '10', bestRating: '10' },
+        author: { '@type': 'Person', name: 'Training Department, Fortune 500 Financial Institution' },
+        reviewBody: 'The workshop transformed how our teams think about AI — from abstract concept to practical tool they can use on Monday morning.',
+        itemReviewed: reviewedItem,
+      },
+      {
+        '@type': 'Review',
+        reviewRating: { '@type': 'Rating', ratingValue: '10', bestRating: '10' },
+        author: { '@type': 'Person', name: 'HR Professional' },
+        reviewBody: 'The Pioneer Program didn\'t just teach us AI — it changed how our department approaches new technology. We went from cautious observers to internal champions.',
+        itemReviewed: reviewedItem,
+      },
+    ],
   },
 ];
 
 const Testimonials = () => (
   <Main
     title="Testimonials"
-    description="Real feedback from AI workshop participants and enterprise training clients across banking, retail, and education."
+    description="Real feedback from 1,500+ AI workshop participants and enterprise training clients in Hong Kong. 9.2/10 satisfaction across banking, retail, and education."
     canonicalUrl={`${SITE_URL}/testimonials`}
     ogTitle="Testimonials | Sam Wong"
     ogDescription="Real feedback from 1,500+ AI workshop participants and enterprise training clients."
@@ -189,6 +214,28 @@ const Testimonials = () => (
             subtitle="Hong Kong&#39;s leading practical AI education platform"
             testimonials={testimonialData.academy}
           />
+        </div>
+      </section>
+
+      {/* CTA linking to services */}
+      <section className="section-warm section-padding">
+        <div className="content-standard" style={{ textAlign: 'center' }}>
+          <h3>Ready to experience this for your team?</h3>
+          <p>
+            Corporate AI workshops, 1-1 coaching, and Train-the-Trainer programs
+            — available in English and Cantonese across Hong Kong and Asia-Pacific.
+          </p>
+          <div style={{
+            display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginTop: '1.5rem',
+          }}
+          >
+            <Link to="/services" className="button">
+              See Training Services
+            </Link>
+            <Link to="/clients" className="button button--outline">
+              View Case Studies
+            </Link>
+          </div>
         </div>
       </section>
     </article>

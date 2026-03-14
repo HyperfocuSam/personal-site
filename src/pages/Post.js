@@ -14,6 +14,7 @@ import {
   calculateReadingTime,
 } from '../components/Blog';
 import TrainerRecruitmentBanner from '../components/Blog/TrainerRecruitmentBanner';
+import ServiceCta from '../components/Blog/ServiceCta';
 import EmailCapture from '../components/EmailCapture/EmailCapture';
 
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
@@ -210,6 +211,8 @@ const Post = () => {
               <h3>About the Author</h3>
               <AuthorCard />
             </section>
+
+            <ServiceCta tags={post.tags} />
 
             {shouldShowTrainerBanner && (
               <TrainerRecruitmentBanner ctaHref="/contact?interest=trainer" />

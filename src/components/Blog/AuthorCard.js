@@ -23,8 +23,10 @@ const AuthorCard = ({ compact }) => (
       </Link>
       {!compact && (
         <p className="author-card__bio">
-          AI Training Specialist helping enterprises and individuals adopt AI.
-          Co-founder of Adaptig. Founding member of DotAI.
+          AI Training Specialist helping enterprises adopt AI through
+          {' '}
+          <Link to="/services">corporate workshops, coaching, and trainer development</Link>
+          . Based in Hong Kong.
         </p>
       )}
       <div className="author-card__links">
