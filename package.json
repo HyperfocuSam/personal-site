@@ -16,7 +16,7 @@
     "build": "rimraf ./build && react-scripts build",
     "lint": "eslint \"**/*.js\"",
     "predeploy": "npm run build && react-snap",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build --dotfiles",
     "start": "react-scripts start",
     "test": "npx jest",
     "optimize-images": "node scripts/optimize-images.js"
