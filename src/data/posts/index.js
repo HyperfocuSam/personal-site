@@ -5,6 +5,15 @@
 // linkedPost: slug of the corresponding post in another language (for hreflang)
 const posts = [
   {
+    slug: 'microsoft-copilot-training-hong-kong',
+    title: 'Microsoft Copilot Training for Hong Kong Companies: What Actually Works',
+    date: '2026-03-15',
+    excerpt: 'Your company already pays for Copilot. Here\'s why adoption is low, what Copilot training should actually cover, and the program structure that produces lasting behavior change.',
+    tags: ['ai-adoption', 'enterprise', 'methodology', 'tools'],
+    type: 'methodology',
+    featured: false,
+  },
+  {
     slug: 'why-ai-training-doesnt-stick',
     title: 'Why AI Training Doesn\'t Stick (And What Actually Works)',
     date: '2026-03-15',
