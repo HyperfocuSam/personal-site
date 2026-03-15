@@ -208,4 +208,4 @@ Ada 即刻睇明：
 
 *最重要嘅技能唔係寫 code。係知道幾時講「yes please」，幾時貼個 error message，幾時乜都唔講。*
 
-*想了解更多 AI 協作技巧，可以喺 [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/) 搵我。我喺 [Adaptig](https://adaptig.com) 做企業 AI 培訓，教團隊點樣真正用 AI 做嘢。*
+*想了解更多 AI 協作技巧，可以喺 [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/) 搵我。我提供[企業 AI 培訓同工作坊](/zh/services)，教團隊點樣真正用 AI 做嘢。*

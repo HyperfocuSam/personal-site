@@ -56,4 +56,4 @@ AI 語音轉錄工具完全解決咗呢個問題。但真正嘅價值唔係個�
 
 *呢篇文章基於我喺[會八十第 049 集](https://www.youtube.com/watch?v=7Gswgk7Qd7Q)嘅分享。想睇我所有媒體出演，可以去[媒體頁面](/media)。*
 
-*歡迎喺 [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/) 搵我傾更多關於 AI 應用嘅話題。*
+*我提供[企業 AI 培訓服務](/zh/services)，幫團隊真正將 AI 融入日常工作。歡迎喺 [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/) 搵我傾。*

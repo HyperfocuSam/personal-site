@@ -81,4 +81,4 @@ AI 工具可以分為兩大類：
 <iframe src="https://www.youtube.com/embed/1cJ6dwOad6g" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allowfullscreen></iframe>
 </div>
 
-*多謝會八十邀請我上節目分享。如果你想了解更多關於 AI 培訓嘅資訊，歡迎喺 [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/) 搵我傾。*
+*多謝會八十邀請我上節目分享。我提供[企業 AI 培訓](/zh/services)同工作坊，幫團隊真正用好 AI。歡迎喺 [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/) 搵我傾。*
