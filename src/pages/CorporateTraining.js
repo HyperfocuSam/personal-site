@@ -70,36 +70,104 @@ const industries = [
     clients: 'Bank of China (Hong Kong), HSBC',
     example:
       '1,530 participants across 13 countries. 9.2/10 satisfaction.',
+    caseStudy: '/blog/bochk-banking-ai-training',
   },
   {
     name: 'Retail & Luxury',
     clients: 'Chow Tai Fook, Playmates Toys, FAO Schwarz',
     example:
       '3 repeat engagements with Chow Tai Fook. Design thinking + AI.',
+    caseStudy: '/blog/ctf-ai-design-thinking-workshop-2026',
   },
   {
     name: 'Engineering & Energy',
     clients: 'Arup, CLP',
     example:
       'AI lunch-and-learn format for engineering professionals.',
+    caseStudy: '/blog/clp-ai-agent-automation',
   },
   {
     name: 'Education',
     clients: 'PolyU, HKCT',
     example:
       'Faculty AI integration and student-facing workshops.',
+    caseStudy: '/blog/hkct-ai-education-workshop',
   },
   {
     name: 'Tourism & Hospitality',
     clients: 'Hong Kong Jockey Club, China Travel Service',
     example:
       'Management-level AI training for service transformation.',
+    caseStudy: '/blog/cts-tourism-ai-training',
   },
   {
     name: 'Professional Services',
     clients: 'Publicis Groupe, YPO',
     example:
       'Executive briefings and global leadership events.',
+    caseStudy: null,
+  },
+];
+
+const caseStudies = [
+  {
+    title: 'Bank of China (Hong Kong)',
+    metric: '1,530 participants across 13 countries',
+    insight: 'Developed the Traffic Light Protocol for data sensitivity.'
+      + ' Spending the first 20 minutes on safety accelerated adoption.',
+    link: '/blog/bochk-banking-ai-training',
+  },
+  {
+    title: 'Garden Group — AI Pioneer Program',
+    metric: '19 HR professionals, 6 sessions, 5-8 hours saved per week',
+    insight: 'Proved that multi-session cohorts outperform one-off workshops'
+      + ' for lasting behavior change.',
+    link: '/blog/how-to-design-ai-pioneer-program',
+  },
+  {
+    title: 'Chow Tai Fook — AI x Design Thinking',
+    metric: '3 repeat engagements with the world\'s largest jewelry retailer',
+    insight: 'Cross-functional teams competed to create Go-To-Market campaigns'
+      + ' using AI tools in a hackathon format.',
+    link: '/blog/ctf-ai-design-thinking-workshop-2026',
+  },
+  {
+    title: 'HKCT — 400 Educators',
+    metric: 'Skepticism to experimentation in 75 minutes',
+    insight: 'Introduced the AI Three-Part Framework to move an entire'
+      + ' faculty from resistance to experimentation in a single session.',
+    link: '/blog/hkct-ai-education-workshop',
+  },
+];
+
+const methodologies = [
+  {
+    name: 'Traffic Light Protocol',
+    description: 'A data sensitivity framework for regulated industries.'
+      + ' Green (public info), Yellow (internal, strip identifiers),'
+      + ' Red (PII, full stop). Designed for instant decision-making.',
+    link: '/blog/traffic-light-protocol-ai-safety',
+  },
+  {
+    name: 'AI Pioneer Model',
+    description: 'Train 10-20 curious, influential people deeply over weeks.'
+      + ' They become internal champions who pull the rest of the'
+      + ' organization forward. Scales faster than top-down mandates.',
+    link: '/blog/how-to-design-ai-pioneer-program',
+  },
+  {
+    name: '70/30 Human-AI Split',
+    description: 'Humans retain 70% ownership of thinking and decisions.'
+      + ' AI handles 30% — first drafts, data synthesis, formatting.'
+      + ' Prevents over-reliance while maximizing productivity gains.',
+    link: '/blog/bochk-banking-ai-training',
+  },
+  {
+    name: 'AI Maturity Model',
+    description: 'A 4-stage framework: Awareness, Experimentation,'
+      + ' Integration, Transformation. 80% of companies are stuck at'
+      + ' Stage 1. The Pioneer Model moves them to Stage 2.',
+    link: '/blog/ai-maturity-trap-stuck-stage-one',
   },
 ];
 
@@ -200,7 +268,10 @@ const CorporateTraining = () => (
             'AI Workshops',
             'Prompt Engineering Training',
             'ChatGPT Training for Companies',
+            'Microsoft Copilot Training',
             'Enterprise AI Adoption',
+            'AI Change Management Training',
+            'Train-the-Trainer AI Certification',
           ],
           knowsLanguage: ['English', 'Cantonese', 'Mandarin'],
           address: {
@@ -377,12 +448,24 @@ const CorporateTraining = () => (
                 <p style={{ fontSize: '0.85em', marginTop: '0.5rem' }}>
                   {ind.example}
                 </p>
+                {ind.caseStudy && (
+                  <Link
+                    to={ind.caseStudy}
+                    style={{
+                      fontSize: '0.8em',
+                      marginTop: '0.75rem',
+                      display: 'inline-block',
+                    }}
+                  >
+                    Read case study &rarr;
+                  </Link>
+                )}
               </div>
             ))}
           </div>
           <div style={{ textAlign: 'center', marginTop: '2rem' }}>
             <Link to="/clients" className="button button--outline">
-              View Case Studies
+              View All Clients
             </Link>
           </div>
         </div>
@@ -424,6 +507,39 @@ const CorporateTraining = () => (
         </div>
       </section>
 
+      {/* Named methodologies */}
+      <section className="section-sunken section-padding">
+        <div className="content-standard">
+          <h2>Signature Methodologies</h2>
+          <p>
+            Frameworks developed through real engagements, not
+            textbooks. Each one solves a specific adoption problem.
+          </p>
+          <div className="card-grid cols-2" style={{ marginTop: '2rem' }}>
+            {methodologies.map((m) => (
+              <div key={m.name} className="card" style={{ padding: '1.5rem' }}>
+                <h3 style={{ fontSize: '1.05rem', marginBottom: '0.5rem' }}>
+                  {m.name}
+                </h3>
+                <p style={{ fontSize: '0.9em', lineHeight: '1.7' }}>
+                  {m.description}
+                </p>
+                <Link
+                  to={m.link}
+                  style={{
+                    fontSize: '0.8em',
+                    marginTop: '0.75rem',
+                    display: 'inline-block',
+                  }}
+                >
+                  See it in action &rarr;
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Testimonial highlight */}
       <section className="section-base section-padding">
         <div className="content-narrow" style={{ textAlign: 'center' }}>
@@ -446,6 +562,128 @@ const CorporateTraining = () => (
             style={{ marginTop: '1.5rem' }}
           >
             Read More Testimonials
+          </Link>
+        </div>
+      </section>
+
+      {/* Featured case studies */}
+      <section className="section-sunken section-padding">
+        <div className="content-standard">
+          <h2>Featured Case Studies</h2>
+          <p>
+            Real engagements, real numbers, real lessons. Each case
+            study is a detailed writeup from a specific client
+            engagement.
+          </p>
+          <div className="card-grid cols-2" style={{ marginTop: '2rem' }}>
+            {caseStudies.map((cs) => (
+              <Link
+                key={cs.title}
+                to={cs.link}
+                className="card"
+                style={{
+                  padding: '1.5rem',
+                  textDecoration: 'none',
+                  color: 'inherit',
+                  display: 'block',
+                }}
+              >
+                <h3 style={{ fontSize: '1.05rem', marginBottom: '0.25rem' }}>
+                  {cs.title}
+                </h3>
+                <p style={{
+                  fontSize: '0.85em',
+                  opacity: 0.7,
+                  marginBottom: '0.75rem',
+                }}
+                >
+                  {cs.metric}
+                </p>
+                <p style={{ fontSize: '0.9em', lineHeight: '1.7' }}>
+                  {cs.insight}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Government funding */}
+      <section className="section-warm section-padding">
+        <div className="content-narrow">
+          <h2>Hong Kong Government AI Training Support</h2>
+          <p>
+            The 2026-27 Budget earmarked HK$50 million for AI
+            literacy and established a Committee on AI+ chaired by
+            the Financial Secretary. While most measures target
+            public awareness rather than corporate training, several
+            funding paths are available:
+          </p>
+          <ul style={{ marginTop: '1rem', lineHeight: '2' }}>
+            <li>
+              <strong>BUD Fund</strong> &mdash; Up to HK$150,000 per
+              company for technology adoption, including AI training
+              and implementation projects.
+            </li>
+            <li>
+              <strong>Upskill Hong Kong (ERB)</strong> &mdash; The
+              Employees Retraining Board is adding AI application
+              courses to its curriculum for employed workers.
+            </li>
+            <li>
+              <strong>RTTP</strong> &mdash; The Re-industrialisation
+              and Technology Training Programme subsidizes up to 2/3
+              of training costs for technology-related programs.
+            </li>
+          </ul>
+          <p style={{ marginTop: '1rem' }}>
+            Don&rsquo;t wait for government programs to be fully
+            rolled out. Companies that invest in structured AI
+            training now will have a 12-18 month head start.
+          </p>
+          <Link
+            to="/blog/hk-2026-budget-ai-training"
+            style={{ fontSize: '0.9em' }}
+          >
+            Read the full analysis: What the HK$50M AI Budget
+            Actually Means &rarr;
+          </Link>
+        </div>
+      </section>
+
+      {/* Why training fails — thought leadership */}
+      <section className="section-base section-padding">
+        <div className="content-narrow">
+          <h2>Why Most Corporate AI Training Fails</h2>
+          <p>
+            Most AI training teaches tools instead of workflows.
+            Your team attends a workshop, tries ChatGPT for a week,
+            then goes back to doing things the old way. The training
+            checked a box but didn&rsquo;t change behavior.
+          </p>
+          <p>
+            After 180+ workshops, the pattern is clear: one-off
+            sessions produce awareness, not adoption. People forget
+            70% of new information within 24 hours. The fix
+            isn&rsquo;t better content &mdash; it&rsquo;s a
+            different structure.
+          </p>
+          <p>
+            The{' '}
+            <Link to="/blog/how-to-design-ai-pioneer-program">
+              Pioneer Program model
+            </Link>
+            {' '}works because it&rsquo;s built around change
+            management principles: workflow-first exercises, weekly
+            accountability, and internal champions who sustain
+            adoption after the trainer leaves.
+          </p>
+          <Link
+            to="/blog/why-ai-training-doesnt-stick"
+            style={{ fontSize: '0.9em' }}
+          >
+            Read more: Why AI Training Doesn&rsquo;t Stick (And
+            What Actually Works) &rarr;
           </Link>
         </div>
       </section>
