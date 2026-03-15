@@ -11,7 +11,7 @@ import TestimonialSection from '../components/Testimonials/TestimonialSection';
 const About = () => (
   <Main
     title="About"
-    description="About Sam Wong, the AI private tutor in Hong Kong"
+    description="Sam Wong is a Hong Kong-based AI training specialist who has trained 10,000+ professionals across 70+ organizations. From ADHD diagnosis to building Adaptig and DotAI."
     canonicalUrl={`${SITE_URL}/about`}
     ogTitle="About Sam Wong | AI Training Specialist"
     ogDescription="From ADHD diagnosis to training 10,000+ professionals in AI adoption. The story behind Adaptig and DotAI."
