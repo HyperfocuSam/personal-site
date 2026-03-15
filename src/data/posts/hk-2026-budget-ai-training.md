@@ -54,4 +54,4 @@ The budget is a useful signal. But companies that wait for government programs t
 
 ---
 
-*I deliver corporate AI workshops and coaching for Hong Kong enterprises through [Adaptig](https://adaptig.ai) and [DotAI](https://dotai.hk). If your team is planning AI training, [let's talk](/contact).*
+*I deliver [corporate AI training](/corporate-ai-training-hong-kong) for Hong Kong enterprises through [Adaptig](https://adaptig.ai) and [DotAI](https://dotai.hk). See my full range of [training services](/services) or [get in touch](/contact).*

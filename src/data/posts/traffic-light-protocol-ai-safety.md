@@ -94,4 +94,4 @@ If you are designing AI training for your organization, start here. Not with pro
 
 ---
 
-*I write about what I learn from training thousands of professionals on AI adoption. Connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/) for more.*
+*I design and deliver [corporate AI training programs](/services) that start with safety and build toward lasting adoption. See my full range of [training services](/corporate-ai-training-hong-kong) or connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*
