@@ -122,7 +122,7 @@ Sam has appeared as a recurring guest expert on Club 80 (會八十), a popular C
 - 13 countries reached (through BOCHK engagement alone)
 - 6 sectors served: banking, retail, education, engineering, technology, tourism
 - 98,000+ YouTube views across media appearances
-- 35+ published articles on AI adoption
+- 40+ published articles on AI adoption
 
 ---
 
@@ -138,6 +138,10 @@ Sam publishes regularly on AI adoption, covering:
 - Prompt engineering research (35 strategies tested, "be creative" is least effective)
 - AI agents and the future of knowledge work
 - The AI tool stack used to train 3,000 professionals a year
+- Why most corporate AI training fails to produce lasting behavior change
+- How to evaluate and choose corporate AI training providers
+- Microsoft Copilot training and adoption strategies for enterprises
+- Hong Kong government AI funding and the 2026 Budget impact on corporate training
 
 All articles available at: https://hyperfocusam.com/blog
 
