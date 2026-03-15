@@ -5,6 +5,15 @@
 // linkedPost: slug of the corresponding post in another language (for hreflang)
 const posts = [
   {
+    slug: 'why-ai-training-doesnt-stick',
+    title: 'Why AI Training Doesn\'t Stick (And What Actually Works)',
+    date: '2026-03-15',
+    excerpt: 'Most corporate AI training produces zero lasting behavior change. After 180+ workshops and 10,000+ professionals trained, here\'s what actually makes AI adoption stick.',
+    tags: ['ai-adoption', 'enterprise', 'methodology', 'commentary'],
+    type: 'insight',
+    featured: true,
+  },
+  {
     slug: 'hk-2026-budget-ai-training',
     title: 'What the 2026 Budget\'s HK$50 Million AI Training Push Actually Means for Your Company',
     date: '2026-03-14',
