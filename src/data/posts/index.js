@@ -5,6 +5,15 @@
 // linkedPost: slug of the corresponding post in another language (for hreflang)
 const posts = [
   {
+    slug: 'how-to-choose-ai-training-hong-kong',
+    title: 'How to Choose Corporate AI Training in Hong Kong (2026 Guide)',
+    date: '2026-03-15',
+    excerpt: 'Universities, consulting firms, government programs, global platforms, or practitioner-led training -- an honest framework for evaluating AI training options in Hong Kong.',
+    tags: ['ai-adoption', 'enterprise', 'commentary'],
+    type: 'insight',
+    featured: false,
+  },
+  {
     slug: 'microsoft-copilot-training-hong-kong',
     title: 'Microsoft Copilot Training for Hong Kong Companies: What Actually Works',
     date: '2026-03-15',
