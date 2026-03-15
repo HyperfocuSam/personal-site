@@ -59,8 +59,11 @@ function parsePosts() {
     const langMatch = block.match(/language:\s*'([^']+)'/);
     const linkedMatch = block.match(/linkedPost:\s*'([^']+)'/);
 
-    const titleMatch = block.match(/title:\s*'([^']+)'/);
+    const titleMatch = block.match(/title:\s*'((?:[^'\\]|\\.)+)'/);
     const excerptMatch = block.match(/excerpt:\s*'((?:[^'\\]|\\.)+)'/);
+
+    // Unescape JS string escapes (e.g. \' -> ', \\ -> \)
+    const unescape = (s) => s.replace(/\\'/g, "'").replace(/\\\\/g, '\\');
 
     posts.push({
       slug: match[1],
@@ -68,8 +71,8 @@ function parsePosts() {
       featured: match[3] === 'true',
       language: langMatch ? langMatch[1] : 'en',
       linkedPost: linkedMatch ? linkedMatch[1] : null,
-      title: titleMatch ? titleMatch[1] : match[1],
-      excerpt: excerptMatch ? excerptMatch[1] : '',
+      title: titleMatch ? unescape(titleMatch[1]) : match[1],
+      excerpt: excerptMatch ? unescape(excerptMatch[1]) : '',
     });
   }
 

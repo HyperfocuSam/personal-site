@@ -6,12 +6,33 @@
     <description>AI adoption insights, workshop reflections, and practical AI training tips from Sam Wong.</description>
     <language>en</language>
     <atom:link href="https://hyperfocusam.com/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sat, 14 Mar 2026 15:20:39 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2026 15:13:28 GMT</lastBuildDate>
     <item>
-      <title>What the 2026 Budget\</title>
+      <title>How to Choose Corporate AI Training in Hong Kong (2026 Guide)</title>
+      <link>https://hyperfocusam.com/blog/how-to-choose-ai-training-hong-kong</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/how-to-choose-ai-training-hong-kong</guid>
+      <description>Universities, consulting firms, government programs, global platforms, or practitioner-led training -- an honest framework for evaluating AI training options in Hong Kong.</description>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Microsoft Copilot Training for Hong Kong Companies: What Actually Works</title>
+      <link>https://hyperfocusam.com/blog/microsoft-copilot-training-hong-kong</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/microsoft-copilot-training-hong-kong</guid>
+      <description>Your company already pays for Copilot. Here's why adoption is low, what Copilot training should actually cover, and the program structure that produces lasting behavior change.</description>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Why AI Training Doesn't Stick (And What Actually Works)</title>
+      <link>https://hyperfocusam.com/blog/why-ai-training-doesnt-stick</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/why-ai-training-doesnt-stick</guid>
+      <description>Most corporate AI training produces zero lasting behavior change. After 180+ workshops and 10,000+ professionals trained, here's what actually makes AI adoption stick.</description>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>What the 2026 Budget's HK$50 Million AI Training Push Actually Means for Your Company</title>
       <link>https://hyperfocusam.com/blog/hk-2026-budget-ai-training</link>
       <guid isPermaLink="true">https://hyperfocusam.com/blog/hk-2026-budget-ai-training</guid>
-      <description>Hong Kong earmarked HK$50 million for AI training in the 2026-27 Budget. Here\'s what it actually means for corporate training, what\'s missing, and what to do now.</description>
+      <description>Hong Kong earmarked HK$50 million for AI training in the 2026-27 Budget. Here's what it actually means for corporate training, what's missing, and what to do now.</description>
       <pubDate>Sat, 14 Mar 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
@@ -46,7 +67,7 @@
       <title>Teaching a Utility Company the 7 Levels of AI Agents</title>
       <link>https://hyperfocusam.com/blog/clp-ai-agent-automation</link>
       <guid isPermaLink="true">https://hyperfocusam.com/blog/clp-ai-agent-automation</guid>
-      <description>I taught CLP\'s team a 7-level AI agent framework, from basic chatbots to CLI-based systems. Here\'s what a utility company needs to know about AI agents.</description>
+      <description>I taught CLP's team a 7-level AI agent framework, from basic chatbots to CLI-based systems. Here's what a utility company needs to know about AI agents.</description>
       <pubDate>Tue, 23 Dec 2025 00:00:00 GMT</pubDate>
     </item>
     <item>
@@ -64,17 +85,17 @@
       <pubDate>Sat, 07 Mar 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>I Built a Voice Mode for Claude Code Because I Can\</title>
+      <title>I Built a Voice Mode for Claude Code Because I Can't Read</title>
       <link>https://hyperfocusam.com/blog/i-built-voice-mode-claude-code</link>
       <guid isPermaLink="true">https://hyperfocusam.com/blog/i-built-voice-mode-claude-code</guid>
       <description>Long terminal output is attention-hostile for ADHD developers. So I built a plugin that speaks Claude Code responses aloud -- zero deps, one install command.</description>
       <pubDate>Sat, 07 Mar 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>What My AI Drew When I Asked What\</title>
+      <title>What My AI Drew When I Asked What's in Its Mind</title>
       <link>https://hyperfocusam.com/blog/what-my-ai-drew-when-i-asked</link>
       <guid isPermaLink="true">https://hyperfocusam.com/blog/what-my-ai-drew-when-i-asked</guid>
-      <description>After 200 sessions working together, I asked my AI assistant to draw what\'s in its mind. What happened next — the art, the conversation, and rebuilding our system together.</description>
+      <description>After 200 sessions working together, I asked my AI assistant to draw what's in its mind. What happened next — the art, the conversation, and rebuilding our system together.</description>
       <pubDate>Fri, 06 Mar 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
@@ -88,7 +109,7 @@
       <title>The AI Training Gap: 70% of Managers Want It, 14% of Workers Get It</title>
       <link>https://hyperfocusam.com/blog/ai-training-gap-managers-vs-workers</link>
       <guid isPermaLink="true">https://hyperfocusam.com/blog/ai-training-gap-managers-vs-workers</guid>
-      <description>70% of managers say an AI-trained workforce is critical, but only 14% of workers have been offered training. Here\'s what\'s going wrong.</description>
+      <description>70% of managers say an AI-trained workforce is critical, but only 14% of workers have been offered training. Here's what's going wrong.</description>
       <pubDate>Tue, 24 Feb 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
@@ -99,35 +120,35 @@
       <pubDate>Tue, 17 Feb 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>Stop Telling AI to \</title>
+      <title>Stop Telling AI to 'Be Creative': What 35 Prompting Strategies Actually Reveal</title>
       <link>https://hyperfocusam.com/blog/stop-telling-ai-be-creative</link>
       <guid isPermaLink="true">https://hyperfocusam.com/blog/stop-telling-ai-be-creative</guid>
-      <description>Wharton researchers tested 35 prompting strategies and found that saying \'be creative\' is the least effective. Here\'s what actually works.</description>
+      <description>Wharton researchers tested 35 prompting strategies and found that saying 'be creative' is the least effective. Here's what actually works.</description>
       <pubDate>Tue, 10 Feb 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>84% of People Have Never Used AI. That\</title>
+      <title>84% of People Have Never Used AI. That's Your Competitive Advantage.</title>
       <link>https://hyperfocusam.com/blog/84-percent-never-used-ai</link>
       <guid isPermaLink="true">https://hyperfocusam.com/blog/84-percent-never-used-ai</guid>
       <description>84% of people have never used AI and only 0.3% pay for it. The window of competitive advantage is wide open.</description>
       <pubDate>Tue, 03 Feb 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>AI Agents Are Coming for Knowledge Work: A Trainer\</title>
+      <title>AI Agents Are Coming for Knowledge Work: A Trainer's Field Notes</title>
       <link>https://hyperfocusam.com/blog/ai-agents-knowledge-work-field-notes</link>
       <guid isPermaLink="true">https://hyperfocusam.com/blog/ai-agents-knowledge-work-field-notes</guid>
-      <description>AI agents are moving from demos to deployments. What enterprise teams actually need to know about agentic workflows and what\'s still hype.</description>
+      <description>AI agents are moving from demos to deployments. What enterprise teams actually need to know about agentic workflows and what's still hype.</description>
       <pubDate>Tue, 27 Jan 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
       <title>The AI Maturity Trap: Why Most Companies Are Stuck at Stage 1</title>
       <link>https://hyperfocusam.com/blog/ai-maturity-trap-stuck-stage-one</link>
       <guid isPermaLink="true">https://hyperfocusam.com/blog/ai-maturity-trap-stuck-stage-one</guid>
-      <description>Most companies think they\'re behind on AI. They\'re right -- but the fix isn\'t more tools. The 4-stage maturity model and how to move past Stage 1.</description>
+      <description>Most companies think they're behind on AI. They're right -- but the fix isn't more tools. The 4-stage maturity model and how to move past Stage 1.</description>
       <pubDate>Tue, 20 Jan 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>Training the World\</title>
+      <title>Training the World's Largest Jewelry Retailer on AI x Design Thinking</title>
       <link>https://hyperfocusam.com/blog/ctf-ai-design-thinking-workshop-2026</link>
       <guid isPermaLink="true">https://hyperfocusam.com/blog/ctf-ai-design-thinking-workshop-2026</guid>
       <description>Insights from my third workshop with Chow Tai Fook, where cross-functional teams competed to create Go-To-Market campaigns using AI tools in a hackathon format.</description>
@@ -151,7 +172,7 @@
       <title>Why I Teach Copilot Instead of ChatGPT in Enterprise Workshops</title>
       <link>https://hyperfocusam.com/blog/why-i-teach-copilot-not-chatgpt</link>
       <guid isPermaLink="true">https://hyperfocusam.com/blog/why-i-teach-copilot-not-chatgpt</guid>
-      <description>Most AI trainers default to ChatGPT. Here\'s why I start with Microsoft Copilot for enterprise workshops and how it changes adoption.</description>
+      <description>Most AI trainers default to ChatGPT. Here's why I start with Microsoft Copilot for enterprise workshops and how it changes adoption.</description>
       <pubDate>Tue, 30 Dec 2025 00:00:00 GMT</pubDate>
     </item>
     <item>
@@ -183,14 +204,14 @@
       <pubDate>Sun, 20 Jul 2025 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>Why Free AI Isn\</title>
+      <title>Why Free AI Isn't Enough: The Case for Paying for AI Tools</title>
       <link>https://hyperfocusam.com/blog/why-pay-for-ai-tools</link>
       <guid isPermaLink="true">https://hyperfocusam.com/blog/why-pay-for-ai-tools</guid>
-      <description>76% of viewers in a live poll said they don\'t pay for AI tools. Most of the 24% who do aren\'t using the features they paid for. The actual percentage using AI at full capability is vanishingly small.</description>
+      <description>76% of viewers in a live poll said they don't pay for AI tools. Most of the 24% who do aren't using the features they paid for. The actual percentage using AI at full capability is vanishingly small.</description>
       <pubDate>Sun, 15 Jun 2025 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>How PolyU\</title>
+      <title>How PolyU's Finance Team Built an AI Workflow That Actually Works</title>
       <link>https://hyperfocusam.com/blog/polyu-finance-ai-workflow</link>
       <guid isPermaLink="true">https://hyperfocusam.com/blog/polyu-finance-ai-workflow</guid>
       <description>Building sustainable AI workflows for a university finance office - starting with strategy, establishing the ACE framework, and watching tool users become process designers.</description>
@@ -204,7 +225,7 @@
       <pubDate>Sun, 27 Apr 2025 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>Teaching Hong Kong Jockey Club\</title>
+      <title>Teaching Hong Kong Jockey Club's Future Leaders to Think in Prompts</title>
       <link>https://hyperfocusam.com/blog/hkjc-mt-ai-training</link>
       <guid isPermaLink="true">https://hyperfocusam.com/blog/hkjc-mt-ai-training</guid>
       <description>Training HKJC Management Trainees on AI business communication through a three-layer prompt framework - from precision to structure to context.</description>
