@@ -40,3 +40,7 @@ Three things I've learned from closing this gap across different industries:
 **Measure time saved, not sessions attended.** Nobody cares how many training hours HR logged. They care that the weekly report now takes 15 minutes instead of 90. Track that.
 
 The 70/14 gap is an opportunity in disguise. The organizations that close it first won't just be more productive -- they'll be the ones setting the standard everyone else scrambles to catch up to.
+
+---
+
+*I help enterprise teams navigate AI adoption through [workshops, coaching, and pioneer programs](/services). If your organization is working through these challenges, I would welcome a conversation.*

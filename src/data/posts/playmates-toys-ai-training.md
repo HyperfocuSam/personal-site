@@ -78,4 +78,4 @@ The engagement also validated something I have been refining in my approach: the
 
 ---
 
-*I run AI adoption training for corporate teams across Hong Kong and Asia. If your organization is exploring AI training -- whether for 12 people or 1,200 -- I would be glad to talk through what a practical engagement looks like. Connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*
+*I run AI adoption training for corporate teams across Hong Kong and Asia. If your organization is exploring AI training -- whether for 12 people or 1,200 -- I would be glad to talk through what a practical engagement looks like. See my [corporate AI training services](/services) or see my [corporate AI training services](/services) or connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*

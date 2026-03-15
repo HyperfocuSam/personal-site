@@ -32,3 +32,7 @@ At [BOCHK, where I trained 1,500 bankers](/blog/bochk-banking-ai-training), the 
 The IT department isn't the enemy of AI adoption. They're the unaddressed dependency. Solve the security conversation first, and the training conversation becomes dramatically easier.
 
 Your IT department doesn't want to block AI forever. They just need someone to tell them what "safe" looks like. That's not a technology problem. It's a communication problem.
+
+---
+
+*I help enterprise teams navigate AI adoption through [workshops, coaching, and pioneer programs](/services). If your organization is working through these challenges, I would welcome a conversation.*

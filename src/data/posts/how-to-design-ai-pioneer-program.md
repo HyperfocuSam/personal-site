@@ -64,3 +64,7 @@ The format works, but I'd make two changes for the next iteration. First, I'd ad
 If you're planning corporate AI training for your organization, the most important decision isn't which tools to teach. It's whether you're building a program or booking a workshop. A single session can light the spark. But if you want behavior change that sticks, you need the Pioneer model: small group, real work, weekly rhythm, and enough time for habits to form.
 
 Garden Group proved that six weeks is enough. Not to make everyone an AI expert -- but to make AI a natural part of how they work.
+
+---
+
+*I design and deliver [corporate AI training programs](/services) for teams across Hong Kong and Asia-Pacific. See my full range of [training services](/corporate-ai-training-hong-kong).*

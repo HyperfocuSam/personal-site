@@ -57,3 +57,7 @@ The ACE framework was specific to PolyU's Finance Office, but the approach gener
 ---
 
 *If you're navigating AI adoption in a compliance-heavy environment and want to discuss approaches, feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*
+
+---
+
+*I design and deliver [corporate AI training programs](/services) for teams across Hong Kong and Asia-Pacific. See my full range of [training services](/corporate-ai-training-hong-kong).*

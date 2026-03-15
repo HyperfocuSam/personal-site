@@ -36,3 +36,7 @@ The mistake would be trying to jump from Level 1 to Level 4. Every company that'
 **Don't buy agent platforms yet.** The tooling is changing monthly. What's cutting-edge today will be a default feature in six months. Invest in your team's AI fluency now. The platform decision can wait.
 
 The agents are coming. But the organizations that benefit first won't be the ones who deployed agents earliest. They'll be the ones whose teams were already fluent enough to supervise them.
+
+---
+
+*I help enterprise teams navigate AI adoption through [workshops, coaching, and pioneer programs](/services). If your organization is working through these challenges, I would welcome a conversation.*

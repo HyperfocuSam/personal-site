@@ -38,3 +38,7 @@ Ethan Mollick says to "collect your hard problems and good ideas now, because th
 When I [trained tourism executives at CTS](/blog/cts-tourism-ai-training), the most valuable output wasn't the training itself. It was the list of 15 specific workflow pain points that emerged during the session. That list became the roadmap for everything that followed.
 
 Don't wait until you're at Stage 4 to start. Map your hard problems now. The AI maturity journey starts with knowing exactly where you're stuck.
+
+---
+
+*I help enterprise teams navigate AI adoption through [workshops, coaching, and pioneer programs](/services). If your organization is working through these challenges, I would welcome a conversation.*

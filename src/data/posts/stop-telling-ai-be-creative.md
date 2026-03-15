@@ -32,3 +32,7 @@ In my corporate prompt engineering workshops, I teach three principles:
 **3. Context beats cleverness.** Paste in your actual data, your actual constraints, your actual audience. A mediocre prompt with real context outperforms a brilliant prompt with no context every single time.
 
 The Wharton study validated what practitioners have known: the art of prompting isn't about finding magic words. It's about being precise about what you actually need. That's a trainable skill, and most organizations haven't started teaching it.
+
+---
+
+*I help enterprise teams navigate AI adoption through [workshops, coaching, and pioneer programs](/services). If your organization is working through these challenges, I would welcome a conversation.*

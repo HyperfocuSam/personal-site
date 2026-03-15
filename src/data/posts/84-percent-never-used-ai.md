@@ -32,3 +32,7 @@ The most common excuse I hear from executives: "We're waiting until the tools ar
 The companies that will dominate their industries in 2027 are not the ones with the best AI tools. They're the ones whose entire workforce knows how to use them. And right now, the bar to clear is astonishingly low: do anything at all.
 
 84% of people haven't started. If your team has, you're already winning.
+
+---
+
+*I help enterprise teams navigate AI adoption through [workshops, coaching, and pioneer programs](/services). If your organization is working through these challenges, I would welcome a conversation.*

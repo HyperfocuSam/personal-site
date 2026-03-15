@@ -78,4 +78,4 @@ If you use Claude Code and you've ever caught yourself skimming past an importan
 
 ---
 
-*Building accessible developer tools is something I think about a lot. If you want to talk about AI adoption, developer experience, or workshop design, find me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*
+*Building accessible developer tools is something I think about a lot. If you want to talk about AI adoption, developer experience, or workshop design, find me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/). I also run [corporate AI training](/corporate-ai-training-hong-kong) in Hong Kong.*

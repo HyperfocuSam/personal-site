@@ -30,3 +30,7 @@ The 70/30 isn't a permanent ratio. As you develop expertise, it might shift to 5
 Anthropic recently published their AI Fluency Index, tracking 11 behaviors across thousands of conversations. The finding that stood out: more fluent users don't use AI more. They use it differently. They prompt more precisely, evaluate more critically, and reject more outputs.
 
 That's the goal of responsible AI safety training. Not to make people dependent on AI, but to make them better collaborators with it. The skill formation problem is real, but it's a training design problem, not an AI problem.
+
+---
+
+*I help enterprise teams navigate AI adoption through [workshops, coaching, and pioneer programs](/services). If your organization is working through these challenges, I would welcome a conversation.*

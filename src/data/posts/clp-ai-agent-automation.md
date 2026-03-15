@@ -58,4 +58,4 @@ For CLP, the answer starts with report automation, data analysis, and document p
 
 ---
 
-*I run AI adoption workshops for enterprise teams across Hong Kong. If your organization is trying to figure out where AI agents fit in your operations, I'd welcome a conversation. Connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*
+*I run AI adoption workshops for enterprise teams across Hong Kong. If your organization is trying to figure out where AI agents fit in your operations, I'd welcome a conversation. See my [corporate AI training services](/services) or see my [corporate AI training services](/services) or connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*

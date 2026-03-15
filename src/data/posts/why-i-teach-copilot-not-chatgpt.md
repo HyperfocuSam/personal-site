@@ -30,3 +30,7 @@ The tool choice isn't really about the tool. It's about designing for adoption, 
 A workshop where everyone leaves saying "wow, ChatGPT is amazing" but nobody uses it next week has failed. A workshop where everyone leaves with Copilot integrated into their actual email workflow -- even if it's less flashy -- has succeeded.
 
 As an AI workshop facilitator, my job isn't to show people the most impressive AI demo. It's to make sure they're still using AI a month later. Starting with the tool that's already in their ecosystem is the single biggest predictor of long-term adoption.
+
+---
+
+*I help enterprise teams navigate AI adoption through [workshops, coaching, and pioneer programs](/services). If your organization is working through these challenges, I would welcome a conversation.*

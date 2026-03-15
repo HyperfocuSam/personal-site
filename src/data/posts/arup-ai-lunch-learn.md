@@ -61,3 +61,7 @@ The technology is moving fast. But the core principle stays constant: AI's value
 ---
 
 *If you're exploring AI training for technical teams and want to discuss what might work for your organization, connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*
+
+---
+
+*I design and deliver [corporate AI training programs](/services) for teams across Hong Kong and Asia-Pacific. See my full range of [training services](/corporate-ai-training-hong-kong).*

@@ -87,3 +87,7 @@ The technology will keep advancing. The strategic thinking required to deploy it
 ---
 
 *If you're planning AI strategy training for your management team and want to discuss approaches, connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*
+
+---
+
+*I design and deliver [corporate AI training programs](/services) for teams across Hong Kong and Asia-Pacific. See my full range of [training services](/corporate-ai-training-hong-kong).*

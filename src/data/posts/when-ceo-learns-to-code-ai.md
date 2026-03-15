@@ -38,3 +38,7 @@ If your CEO is already using AI tools on weekends, your training priority should
 If your leadership team hasn't started yet, that's actually where to begin. An executive who's personally experienced the productivity leap becomes the strongest internal champion for company-wide AI adoption.
 
 Either way, the era of "let the IT department handle AI" is over. AI fluency is becoming a leadership competency, not a technical skill.
+
+---
+
+*I help enterprise teams navigate AI adoption through [workshops, coaching, and pioneer programs](/services). If your organization is working through these challenges, I would welcome a conversation.*

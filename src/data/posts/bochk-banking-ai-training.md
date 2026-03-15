@@ -76,4 +76,4 @@ The technology keeps advancing. The human challenges remain remarkably consisten
 
 ---
 
-*If you're planning enterprise AI adoption and want to discuss what might work for your organization, feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*
+*If you're planning enterprise AI adoption and want to discuss what might work for your organization, feel free to see my [corporate AI training services](/services) or connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*

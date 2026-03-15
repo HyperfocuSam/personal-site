@@ -160,6 +160,48 @@ const Services = () => {
           <script type="application/ld+json">
             {JSON.stringify({
               '@context': 'https://schema.org',
+              '@graph': [
+                {
+                  '@type': 'Course',
+                  name: 'Corporate AI Workshop',
+                  description: 'Half-day to multi-day AI workshops for leadership teams and departments. Human-first facilitation with hands-on exercises tied to real workflows.',
+                  provider: { '@type': 'Organization', name: 'Adaptig', url: 'https://adaptig.ai' },
+                  educationalLevel: 'Professional',
+                  availableLanguage: ['English', 'Cantonese'],
+                  hasCourseInstance: {
+                    '@type': 'CourseInstance',
+                    courseMode: 'onsite',
+                    locationCreated: { '@type': 'Place', name: 'Hong Kong' },
+                    instructor: { '@type': 'Person', name: 'Sam Wong', url: SITE_URL },
+                  },
+                },
+                {
+                  '@type': 'Course',
+                  name: 'AI Pioneer Program',
+                  description: '6-session cohort program that builds lasting AI habits. Select 10-20 influential people, train them deeply, and they become internal champions who drive adoption organization-wide.',
+                  provider: { '@type': 'Person', name: 'Sam Wong', url: SITE_URL },
+                  educationalLevel: 'Professional',
+                  numberOfCredits: '6 sessions',
+                  hasCourseInstance: {
+                    '@type': 'CourseInstance',
+                    courseMode: 'blended',
+                    courseWorkload: 'PT12H',
+                  },
+                },
+                {
+                  '@type': 'Course',
+                  name: 'Train-the-Trainer AI Certification',
+                  description: 'Certification program for trainers, consultants, and educators who want to teach AI using the Adaptig methodology. Includes materials, community, and delivery opportunities across a global network.',
+                  provider: { '@type': 'Organization', name: 'Adaptig', url: 'https://adaptig.ai' },
+                  educationalLevel: 'Professional',
+                  educationalCredentialAwarded: 'Adaptig Certified AI Trainer',
+                },
+              ],
+            })}
+          </script>
+          <script type="application/ld+json">
+            {JSON.stringify({
+              '@context': 'https://schema.org',
               '@type': 'FAQPage',
               mainEntity: [
                 {
