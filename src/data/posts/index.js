@@ -5,6 +5,15 @@
 // linkedPost: slug of the corresponding post in another language (for hreflang)
 const posts = [
   {
+    slug: 'seo-rebuild-one-day-claude-code',
+    title: 'I Rebuilt My Entire SEO in One Day. Here\'s What Actually Moved the Needle.',
+    date: '2026-03-15',
+    excerpt: 'My website had 30+ posts and zero internal links, no schema markup, and a meta description that called me a private tutor. I fixed all of it in one night with Claude Code as co-pilot.',
+    tags: ['ai-adoption', 'productivity', 'tools', 'commentary'],
+    type: 'insight',
+    featured: false,
+  },
+  {
     slug: 'how-to-choose-ai-training-hong-kong',
     title: 'How to Choose Corporate AI Training in Hong Kong (2026 Guide)',
     date: '2026-03-15',
