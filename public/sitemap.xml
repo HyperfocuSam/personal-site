@@ -6,392 +6,392 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/" />
-    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/zh" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/zh/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/" />
   </url>
   <url>
-    <loc>https://hyperfocusam.com/services</loc>
+    <loc>https://hyperfocusam.com/services/</loc>
     <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/services" />
-    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/zh/services" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/services" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/services/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/zh/services/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/services/" />
   </url>
   <url>
-    <loc>https://hyperfocusam.com/about</loc>
+    <loc>https://hyperfocusam.com/about/</loc>
     <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/about" />
-    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/zh/about" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/about" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/about/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/zh/about/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/about/" />
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog</loc>
+    <loc>https://hyperfocusam.com/blog/</loc>
     <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/blog" />
-    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/zh/blog" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/blog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/blog/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/zh/blog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/blog/" />
   </url>
   <url>
-    <loc>https://hyperfocusam.com/media</loc>
+    <loc>https://hyperfocusam.com/media/</loc>
     <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/media" />
-    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/zh/media" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/media" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/media/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/zh/media/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/media/" />
   </url>
   <url>
-    <loc>https://hyperfocusam.com/media/kit</loc>
-    <lastmod>2026-03-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://hyperfocusam.com/clients</loc>
+    <loc>https://hyperfocusam.com/media/kit/</loc>
     <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hyperfocusam.com/contact</loc>
+    <loc>https://hyperfocusam.com/clients/</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hyperfocusam.com/contact/</loc>
     <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hyperfocusam.com/corporate-ai-training-hong-kong</loc>
+    <loc>https://hyperfocusam.com/corporate-ai-training-hong-kong/</loc>
     <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://hyperfocusam.com/resume</loc>
+    <loc>https://hyperfocusam.com/resume/</loc>
     <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hyperfocusam.com/projects</loc>
+    <loc>https://hyperfocusam.com/projects/</loc>
     <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hyperfocusam.com/speaking</loc>
+    <loc>https://hyperfocusam.com/speaking/</loc>
     <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hyperfocusam.com/testimonials</loc>
+    <loc>https://hyperfocusam.com/testimonials/</loc>
     <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hyperfocusam.com/zh</loc>
+    <loc>https://hyperfocusam.com/zh/</loc>
     <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/zh" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/zh/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/" />
   </url>
   <url>
-    <loc>https://hyperfocusam.com/zh/about</loc>
+    <loc>https://hyperfocusam.com/zh/about/</loc>
     <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/zh/about" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/about" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/about" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/zh/about/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/about/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/about/" />
   </url>
   <url>
-    <loc>https://hyperfocusam.com/zh/blog</loc>
+    <loc>https://hyperfocusam.com/zh/blog/</loc>
     <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/zh/blog" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/blog" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/blog" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/zh/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/blog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/blog/" />
   </url>
   <url>
-    <loc>https://hyperfocusam.com/zh/services</loc>
+    <loc>https://hyperfocusam.com/zh/services/</loc>
     <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/zh/services" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/services" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/services" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/zh/services/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/services/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/services/" />
   </url>
   <url>
-    <loc>https://hyperfocusam.com/zh/media</loc>
+    <loc>https://hyperfocusam.com/zh/media/</loc>
     <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/zh/media" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/media" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/media" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/zh/media/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/media/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/media/" />
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog/seo-rebuild-one-day-claude-code</loc>
+    <loc>https://hyperfocusam.com/blog/seo-rebuild-one-day-claude-code/</loc>
     <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog/how-to-choose-ai-training-hong-kong</loc>
+    <loc>https://hyperfocusam.com/blog/how-to-choose-ai-training-hong-kong/</loc>
     <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog/microsoft-copilot-training-hong-kong</loc>
+    <loc>https://hyperfocusam.com/blog/microsoft-copilot-training-hong-kong/</loc>
     <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog/why-ai-training-doesnt-stick</loc>
+    <loc>https://hyperfocusam.com/blog/why-ai-training-doesnt-stick/</loc>
     <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog/hk-2026-budget-ai-training</loc>
+    <loc>https://hyperfocusam.com/blog/hk-2026-budget-ai-training/</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog/ai-prompts-beat-procrastination</loc>
+    <loc>https://hyperfocusam.com/blog/ai-prompts-beat-procrastination/</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/blog/ai-prompts-beat-procrastination" />
-    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/blog/zh-ai-prompts-beat-procrastination" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/blog/ai-prompts-beat-procrastination" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/blog/ai-prompts-beat-procrastination/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/blog/zh-ai-prompts-beat-procrastination/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/blog/ai-prompts-beat-procrastination/" />
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog/zh-ai-prompts-beat-procrastination</loc>
+    <loc>https://hyperfocusam.com/blog/zh-ai-prompts-beat-procrastination/</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/blog/zh-ai-prompts-beat-procrastination" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/blog/ai-prompts-beat-procrastination" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/blog/ai-prompts-beat-procrastination" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/blog/zh-ai-prompts-beat-procrastination/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/blog/ai-prompts-beat-procrastination/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/blog/ai-prompts-beat-procrastination/" />
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog/openclaw-ai-agents-talk</loc>
+    <loc>https://hyperfocusam.com/blog/openclaw-ai-agents-talk/</loc>
     <lastmod>2026-03-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog/renpho-ecommerce-ai-shenzhen</loc>
+    <loc>https://hyperfocusam.com/blog/renpho-ecommerce-ai-shenzhen/</loc>
     <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog/playmates-toys-ai-training</loc>
+    <loc>https://hyperfocusam.com/blog/playmates-toys-ai-training/</loc>
     <lastmod>2026-02-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog/clp-ai-agent-automation</loc>
+    <loc>https://hyperfocusam.com/blog/clp-ai-agent-automation/</loc>
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog/traffic-light-protocol-ai-safety</loc>
+    <loc>https://hyperfocusam.com/blog/traffic-light-protocol-ai-safety/</loc>
     <lastmod>2026-03-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog/zh-chillpo-how-i-talk-to-ai</loc>
+    <loc>https://hyperfocusam.com/blog/zh-chillpo-how-i-talk-to-ai/</loc>
     <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog/ada-gersang-gamifying-claude-code</loc>
+    <loc>https://hyperfocusam.com/blog/ada-gersang-gamifying-claude-code/</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog/i-built-voice-mode-claude-code</loc>
+    <loc>https://hyperfocusam.com/blog/i-built-voice-mode-claude-code/</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog/what-my-ai-drew-when-i-asked</loc>
+    <loc>https://hyperfocusam.com/blog/what-my-ai-drew-when-i-asked/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog/how-to-design-ai-pioneer-program</loc>
+    <loc>https://hyperfocusam.com/blog/how-to-design-ai-pioneer-program/</loc>
     <lastmod>2026-03-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog/ai-training-gap-managers-vs-workers</loc>
+    <loc>https://hyperfocusam.com/blog/ai-training-gap-managers-vs-workers/</loc>
     <lastmod>2026-02-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog/it-department-ai-adoption-bottleneck</loc>
+    <loc>https://hyperfocusam.com/blog/it-department-ai-adoption-bottleneck/</loc>
     <lastmod>2026-02-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog/stop-telling-ai-be-creative</loc>
+    <loc>https://hyperfocusam.com/blog/stop-telling-ai-be-creative/</loc>
     <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog/84-percent-never-used-ai</loc>
+    <loc>https://hyperfocusam.com/blog/84-percent-never-used-ai/</loc>
     <lastmod>2026-02-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog/ai-agents-knowledge-work-field-notes</loc>
+    <loc>https://hyperfocusam.com/blog/ai-agents-knowledge-work-field-notes/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog/ai-maturity-trap-stuck-stage-one</loc>
+    <loc>https://hyperfocusam.com/blog/ai-maturity-trap-stuck-stage-one/</loc>
     <lastmod>2026-01-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog/ctf-ai-design-thinking-workshop-2026</loc>
+    <loc>https://hyperfocusam.com/blog/ctf-ai-design-thinking-workshop-2026/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog/when-ceo-learns-to-code-ai</loc>
+    <loc>https://hyperfocusam.com/blog/when-ceo-learns-to-code-ai/</loc>
     <lastmod>2026-01-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog/ai-skill-formation-problem</loc>
+    <loc>https://hyperfocusam.com/blog/ai-skill-formation-problem/</loc>
     <lastmod>2026-01-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog/why-i-teach-copilot-not-chatgpt</loc>
+    <loc>https://hyperfocusam.com/blog/why-i-teach-copilot-not-chatgpt/</loc>
     <lastmod>2025-12-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog/ai-tool-stack-3000-professionals</loc>
+    <loc>https://hyperfocusam.com/blog/ai-tool-stack-3000-professionals/</loc>
     <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog/bochk-banking-ai-training</loc>
+    <loc>https://hyperfocusam.com/blog/bochk-banking-ai-training/</loc>
     <lastmod>2025-11-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog/3-ai-tools-save-focus</loc>
+    <loc>https://hyperfocusam.com/blog/3-ai-tools-save-focus/</loc>
     <lastmod>2025-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/blog/3-ai-tools-save-focus" />
-    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/blog/zh-3-ai-tools-save-focus" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/blog/3-ai-tools-save-focus" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/blog/3-ai-tools-save-focus/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/blog/zh-3-ai-tools-save-focus/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/blog/3-ai-tools-save-focus/" />
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog/zh-3-ai-tools-save-focus</loc>
+    <loc>https://hyperfocusam.com/blog/zh-3-ai-tools-save-focus/</loc>
     <lastmod>2025-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/blog/zh-3-ai-tools-save-focus" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/blog/3-ai-tools-save-focus" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/blog/3-ai-tools-save-focus" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/blog/zh-3-ai-tools-save-focus/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/blog/3-ai-tools-save-focus/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/blog/3-ai-tools-save-focus/" />
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog/cts-tourism-ai-training</loc>
+    <loc>https://hyperfocusam.com/blog/cts-tourism-ai-training/</loc>
     <lastmod>2025-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog/why-pay-for-ai-tools</loc>
+    <loc>https://hyperfocusam.com/blog/why-pay-for-ai-tools/</loc>
     <lastmod>2025-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/blog/why-pay-for-ai-tools" />
-    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/blog/zh-why-pay-for-ai-tools" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/blog/why-pay-for-ai-tools" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/blog/why-pay-for-ai-tools/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/blog/zh-why-pay-for-ai-tools/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/blog/why-pay-for-ai-tools/" />
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog/zh-why-pay-for-ai-tools</loc>
+    <loc>https://hyperfocusam.com/blog/zh-why-pay-for-ai-tools/</loc>
     <lastmod>2025-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/blog/zh-why-pay-for-ai-tools" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/blog/why-pay-for-ai-tools" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/blog/why-pay-for-ai-tools" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/blog/zh-why-pay-for-ai-tools/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/blog/why-pay-for-ai-tools/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/blog/why-pay-for-ai-tools/" />
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog/polyu-finance-ai-workflow</loc>
+    <loc>https://hyperfocusam.com/blog/polyu-finance-ai-workflow/</loc>
     <lastmod>2025-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog/hkct-ai-education-workshop</loc>
+    <loc>https://hyperfocusam.com/blog/hkct-ai-education-workshop/</loc>
     <lastmod>2025-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog/hkjc-mt-ai-training</loc>
+    <loc>https://hyperfocusam.com/blog/hkjc-mt-ai-training/</loc>
     <lastmod>2025-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog/dorich-ai-efficiency-workshop</loc>
+    <loc>https://hyperfocusam.com/blog/dorich-ai-efficiency-workshop/</loc>
     <lastmod>2025-04-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog/arup-ai-lunch-learn</loc>
+    <loc>https://hyperfocusam.com/blog/arup-ai-lunch-learn/</loc>
     <lastmod>2025-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hyperfocusam.com/blog/welcome-to-my-blog</loc>
+    <loc>https://hyperfocusam.com/blog/welcome-to-my-blog/</loc>
     <lastmod>2024-05-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

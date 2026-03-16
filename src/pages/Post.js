@@ -72,7 +72,7 @@ const Post = () => {
     return <Navigate to="/blog" replace />;
   }
 
-  const postUrl = `${SITE_URL}/blog/${slug}`;
+  const postUrl = `${SITE_URL}/blog/${slug}/`;
   const imageUrl = post.image ? `${SITE_URL}${post.image}` : DEFAULT_OG_IMAGE;
 
   // Find linked post for hreflang (bilingual SEO)

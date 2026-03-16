@@ -95,24 +95,25 @@ function generateSitemap() {
   xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"';
   xml += ' xmlns:xhtml="http://www.w3.org/1999/xhtml">\n';
 
-  // Static pages
+  // Static pages (add trailing slash to match GitHub Pages serving)
   for (const page of STATIC_PAGES) {
+    const loc = page.path === '/' ? SITE_URL + '/' : `${SITE_URL}${page.path}/`;
     xml += '  <url>\n';
-    xml += `    <loc>${SITE_URL}${page.path}</loc>\n`;
+    xml += `    <loc>${loc}</loc>\n`;
     xml += `    <lastmod>${today}</lastmod>\n`;
     xml += `    <changefreq>${page.changefreq}</changefreq>\n`;
     xml += `    <priority>${page.priority}</priority>\n`;
-    // Bidirectional hreflang for bilingual page pairs
+    // Bidirectional hreflang for bilingual page pairs (with trailing slashes)
     if (page.lang && page.alternate) {
-      // Chinese page: point to self (zh-Hant), English alternate, and x-default
-      xml += `    <xhtml:link rel="alternate" hreflang="${page.lang}" href="${SITE_URL}${page.path}" />\n`;
-      xml += `    <xhtml:link rel="alternate" hreflang="en" href="${SITE_URL}${page.alternate}" />\n`;
-      xml += `    <xhtml:link rel="alternate" hreflang="x-default" href="${SITE_URL}${page.alternate}" />\n`;
+      const altLoc = page.alternate === '/' ? SITE_URL + '/' : `${SITE_URL}${page.alternate}/`;
+      xml += `    <xhtml:link rel="alternate" hreflang="${page.lang}" href="${loc}" />\n`;
+      xml += `    <xhtml:link rel="alternate" hreflang="en" href="${altLoc}" />\n`;
+      xml += `    <xhtml:link rel="alternate" hreflang="x-default" href="${altLoc}" />\n`;
     } else if (BILINGUAL_PAIRS[page.path]) {
-      // English page with a Chinese counterpart: point to self (en), Chinese alternate, and x-default
-      xml += `    <xhtml:link rel="alternate" hreflang="en" href="${SITE_URL}${page.path}" />\n`;
-      xml += `    <xhtml:link rel="alternate" hreflang="zh-Hant" href="${SITE_URL}${BILINGUAL_PAIRS[page.path]}" />\n`;
-      xml += `    <xhtml:link rel="alternate" hreflang="x-default" href="${SITE_URL}${page.path}" />\n`;
+      const zhLoc = `${SITE_URL}${BILINGUAL_PAIRS[page.path]}/`;
+      xml += `    <xhtml:link rel="alternate" hreflang="en" href="${loc}" />\n`;
+      xml += `    <xhtml:link rel="alternate" hreflang="zh-Hant" href="${zhLoc}" />\n`;
+      xml += `    <xhtml:link rel="alternate" hreflang="x-default" href="${loc}" />\n`;
     }
     xml += '  </url>\n';
   }
@@ -122,7 +123,7 @@ function generateSitemap() {
     const priority = post.featured ? '0.8' : '0.7';
     const lang = post.language === 'zh-Hant' ? 'zh-Hant' : 'en';
     xml += '  <url>\n';
-    xml += `    <loc>${SITE_URL}/blog/${post.slug}</loc>\n`;
+    xml += `    <loc>${SITE_URL}/blog/${post.slug}/</loc>\n`;
     xml += `    <lastmod>${post.date}</lastmod>\n`;
     xml += '    <changefreq>monthly</changefreq>\n';
     xml += `    <priority>${priority}</priority>\n`;
@@ -132,11 +133,11 @@ function generateSitemap() {
       const linked = posts.find((p) => p.slug === post.linkedPost);
       if (linked) {
         const linkedLang = linked.language === 'zh-Hant' ? 'zh-Hant' : 'en';
-        xml += `    <xhtml:link rel="alternate" hreflang="${lang}" href="${SITE_URL}/blog/${post.slug}" />\n`;
-        xml += `    <xhtml:link rel="alternate" hreflang="${linkedLang}" href="${SITE_URL}/blog/${linked.slug}" />\n`;
+        xml += `    <xhtml:link rel="alternate" hreflang="${lang}" href="${SITE_URL}/blog/${post.slug}/" />\n`;
+        xml += `    <xhtml:link rel="alternate" hreflang="${linkedLang}" href="${SITE_URL}/blog/${linked.slug}/" />\n`;
         // x-default points to the English version
         const enSlug = lang === 'en' ? post.slug : linked.slug;
-        xml += `    <xhtml:link rel="alternate" hreflang="x-default" href="${SITE_URL}/blog/${enSlug}" />\n`;
+        xml += `    <xhtml:link rel="alternate" hreflang="x-default" href="${SITE_URL}/blog/${enSlug}/" />\n`;
       }
     }
 
@@ -173,8 +174,8 @@ function generateRssFeed() {
   for (const post of enPosts) {
     rss += '    <item>\n';
     rss += `      <title>${escapeXml(post.title)}</title>\n`;
-    rss += `      <link>${SITE_URL}/blog/${post.slug}</link>\n`;
-    rss += `      <guid isPermaLink="true">${SITE_URL}/blog/${post.slug}</guid>\n`;
+    rss += `      <link>${SITE_URL}/blog/${post.slug}/</link>\n`;
+    rss += `      <guid isPermaLink="true">${SITE_URL}/blog/${post.slug}/</guid>\n`;
     if (post.excerpt) {
       rss += `      <description>${escapeXml(post.excerpt)}</description>\n`;
     }
