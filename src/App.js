@@ -28,6 +28,7 @@ const ZhAbout = lazy(() => import('./pages/ZhAbout'));
 const ZhBlog = lazy(() => import('./pages/ZhBlog'));
 const ZhMedia = lazy(() => import('./pages/ZhMedia'));
 const ZhServices = lazy(() => import('./pages/ZhServices'));
+const ZhCorporateTraining = lazy(() => import('./pages/ZhCorporateTraining'));
 
 // Media Kit (designed HTML version)
 const MediaKit = lazy(() => import('./pages/MediaKit'));
@@ -50,6 +51,7 @@ const App = () => (
         <Route path="/zh/blog" element={<ZhBlog />} />
         <Route path="/zh/media" element={<ZhMedia />} />
         <Route path="/zh/services" element={<ZhServices />} />
+        <Route path="/zh/corporate-ai-training-hong-kong" element={<ZhCorporateTraining />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/resume" element={<Resume />} />
         <Route path="/services" element={<Services />} />

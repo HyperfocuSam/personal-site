@@ -6,7 +6,7 @@
     <description>AI adoption insights, workshop reflections, and practical AI training tips from Sam Wong.</description>
     <language>en</language>
     <atom:link href="https://hyperfocusam.com/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon, 16 Mar 2026 18:56:48 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 16 Mar 2026 19:12:35 GMT</lastBuildDate>
     <item>
       <title>I Rebuilt My Entire SEO in One Day. Here's What Actually Moved the Needle.</title>
       <link>https://hyperfocusam.com/blog/seo-rebuild-one-day-claude-code/</link>
@@ -50,6 +50,13 @@
       <pubDate>Sat, 14 Mar 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
+      <title>5 條真係有用既 AI Prompt 打低拖延症（我每日用緊）</title>
+      <link>https://hyperfocusam.com/blog/zh-ai-prompts-beat-procrastination/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/zh-ai-prompts-beat-procrastination/</guid>
+      <description>5 條 viral AI prompt 打低拖延症——點解每條有效、點樣用得更好、加埋 ADHD 實戰 insight。</description>
+      <pubDate>Sat, 14 Mar 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
       <title>What 1,400 People Taught Me About the Gap Between AI Demos and AI Adoption</title>
       <link>https://hyperfocusam.com/blog/openclaw-ai-agents-talk/</link>
       <guid isPermaLink="true">https://hyperfocusam.com/blog/openclaw-ai-agents-talk/</guid>
@@ -83,6 +90,13 @@
       <guid isPermaLink="true">https://hyperfocusam.com/blog/traffic-light-protocol-ai-safety/</guid>
       <description>A 3-color data classification system that makes AI safety intuitive. Used across banking, retail, and 500-person webinars.</description>
       <pubDate>Thu, 12 Mar 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>我點同 AI 傾偈：一個鐘由零到自動 YouTube 頻道</title>
+      <link>https://hyperfocusam.com/blog/zh-chillpo-how-i-talk-to-ai/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/zh-chillpo-how-i-talk-to-ai/</guid>
+      <description>2,100 行終端紀錄，一個完整嘅 AI 協作 session。由 debug API 錯誤開始，到建成全自動嘅 lo-fi 音樂 YouTube 頻道。呢篇文唔係講技術——而係講點樣同 AI 溝通。</description>
+      <pubDate>Wed, 11 Mar 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
       <title>I Built an RTK-Style Strategy Game on Top of My AI Workflow</title>
@@ -204,6 +218,13 @@
       <pubDate>Sun, 10 Aug 2025 00:00:00 GMT</pubDate>
     </item>
     <item>
+      <title>三個拯救專注力嘅 AI 工具：我喺會八十嘅分享</title>
+      <link>https://hyperfocusam.com/blog/zh-3-ai-tools-save-focus/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/zh-3-ai-tools-save-focus/</guid>
+      <description>三個真正幫到手嘅 AI 工具：資訊分類、會議筆記、結構化思考。基於我喺會八十第二次做嘉賓嘅分享。</description>
+      <pubDate>Sun, 10 Aug 2025 00:00:00 GMT</pubDate>
+    </item>
+    <item>
       <title>Teaching Tourism Executives to Think Like AI Strategists</title>
       <link>https://hyperfocusam.com/blog/cts-tourism-ai-training/</link>
       <guid isPermaLink="true">https://hyperfocusam.com/blog/cts-tourism-ai-training/</guid>
@@ -215,6 +236,13 @@
       <link>https://hyperfocusam.com/blog/why-pay-for-ai-tools/</link>
       <guid isPermaLink="true">https://hyperfocusam.com/blog/why-pay-for-ai-tools/</guid>
       <description>76% of viewers in a live poll said they don't pay for AI tools. Most of the 24% who do aren't using the features they paid for. The actual percentage using AI at full capability is vanishingly small.</description>
+      <pubDate>Sun, 15 Jun 2025 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>點解免費AI唔夠用：我喺會八十分享嘅課金實戰經驗</title>
+      <link>https://hyperfocusam.com/blog/zh-why-pay-for-ai-tools/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/zh-why-pay-for-ai-tools/</guid>
+      <description>在會八十直播的投票中，76% 觀眾沒有付費使用 AI 工具。大部分付了費的人也沒有使用他們付費解鎖的功能。真正充分利用 AI 的人少之又少。</description>
       <pubDate>Sun, 15 Jun 2025 00:00:00 GMT</pubDate>
     </item>
     <item>

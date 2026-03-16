@@ -18,6 +18,7 @@ const BILINGUAL_PAIRS = {
   '/services': '/zh/services',
   '/blog': '/zh/blog',
   '/media': '/zh/media',
+  '/corporate-ai-training-hong-kong': '/zh/corporate-ai-training-hong-kong',
 };
 
 const STATIC_PAGES = [
@@ -41,6 +42,7 @@ const STATIC_PAGES = [
   { path: '/zh/blog', priority: '0.8', changefreq: 'weekly', lang: 'zh-Hant', alternate: '/blog' },
   { path: '/zh/services', priority: '0.9', changefreq: 'weekly', lang: 'zh-Hant', alternate: '/services' },
   { path: '/zh/media', priority: '0.8', changefreq: 'monthly', lang: 'zh-Hant', alternate: '/media' },
+  { path: '/zh/corporate-ai-training-hong-kong', priority: '0.9', changefreq: 'weekly', lang: 'zh-Hant', alternate: '/corporate-ai-training-hong-kong' },
 ];
 
 function parsePosts() {
@@ -158,9 +160,6 @@ function escapeXml(str) {
 
 function generateRssFeed() {
   const posts = parsePosts();
-  // Only include English posts in the RSS feed
-  const enPosts = posts.filter((p) => p.language === 'en');
-
   let rss = '<?xml version="1.0" encoding="UTF-8"?>\n';
   rss += '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n';
   rss += '  <channel>\n';
@@ -171,7 +170,7 @@ function generateRssFeed() {
   rss += `    <atom:link href="${SITE_URL}/feed.xml" rel="self" type="application/rss+xml" />\n`;
   rss += `    <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>\n`;
 
-  for (const post of enPosts) {
+  for (const post of posts) {
     rss += '    <item>\n';
     rss += `      <title>${escapeXml(post.title)}</title>\n`;
     rss += `      <link>${SITE_URL}/blog/${post.slug}/</link>\n`;
@@ -187,7 +186,7 @@ function generateRssFeed() {
   rss += '</rss>\n';
 
   fs.writeFileSync(RSS_FILE, rss);
-  console.log(`RSS feed generated: ${enPosts.length} posts`);
+  console.log(`RSS feed generated: ${posts.length} posts`);
 }
 
 generateSitemap();

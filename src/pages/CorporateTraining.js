@@ -249,6 +249,11 @@ const CorporateTraining = () => (
       + ' 10,000+ professionals trained across 70+ organizations.'
     }
     twitterImage={DEFAULT_OG_IMAGE}
+    hreflangTags={[
+      { lang: 'en', href: `${SITE_URL}/corporate-ai-training-hong-kong` },
+      { lang: 'zh-Hant', href: `${SITE_URL}/zh/corporate-ai-training-hong-kong` },
+      { lang: 'x-default', href: `${SITE_URL}/corporate-ai-training-hong-kong` },
+    ]}
   >
     <Helmet>
       <script type="application/ld+json">
@@ -742,6 +747,11 @@ const CorporateTraining = () => (
           </div>
         </div>
       </section>
+      <p className="lang-toggle">
+        <Link to="/zh/corporate-ai-training-hong-kong">
+          &#x4E2D;&#x6587;&#x7248;&#x672C;
+        </Link>
+      </p>
     </article>
   </Main>
 );
