@@ -1,14 +1,14 @@
 # I Rebuilt My Entire SEO in One Day. Here's What Actually Moved the Needle.
 
-My website had been live for months. It had 30+ blog posts, case studies across banking, retail, education, and engineering. Decent traffic. Good content.
+My website had been live for months. It had 30+ blog posts, case studies across [banking](/blog/bochk-banking-ai-training), [retail](/blog/playmates-toys-ai-training), [education](/blog/hkct-ai-education-workshop), and [engineering](/blog/arup-ai-lunch-learn). Decent traffic. Good content.
 
 It also had zero internal links. No structured data. No schema markup. A meta description that called me a "private tutor." And a sitemap that mangled apostrophes in every title.
 
-I'm an AI adoption trainer who tells companies to audit their workflows before buying tools. My own website was the cobbler's shoes.
+I'm an AI adoption trainer who tells companies to [audit their workflows before buying tools](/blog/why-ai-training-doesnt-stick). My own website was the cobbler's shoes.
 
 ## The Audit That Started Everything
 
-I ran a full SEO and GEO audit on hyperfocusam.com. Not just traditional SEO -- I looked at GEO: Generative Engine Optimization. That's the practice of structuring your content so AI search engines (Perplexity, ChatGPT search, Google AI Overviews) can find, understand, and cite your work.
+I ran a full SEO and GEO audit on hyperfocusam.com. Not just traditional SEO -- I looked at GEO: Generative Engine Optimization. That's the practice of structuring your content so AI search engines (Perplexity, ChatGPT search, Google AI Overviews) can find, understand, and cite your work. If you're only optimizing for Google in 2026, you're optimizing for [half the discovery surface](/blog/ai-tool-stack-3000-professionals).
 
 The results were grim. Google had indexed most of my pages, but without structured data, my content was invisible to rich snippets. Without internal links, Google couldn't see the topical relationships between 30+ articles. Without hreflang tags, my bilingual content (English and Traditional Chinese) was competing against itself. And without schema markup, AI engines had no structured way to reference my training programs, methodologies, or case studies.
 
@@ -30,7 +30,7 @@ The dynamic was clear: I directed, Claude Code executed. Strategy stayed human. 
 
 Before: zero schema markup across the entire site.
 
-After: Course schema on 26 blog posts covering three training programs (Workshop, Pioneer Program, Train-the-Trainer). Service schema on both pillar pages. Organization schema with proper geographic targeting.
+After: Course schema on 26 blog posts covering three training programs (Workshop, [Pioneer Program](/blog/how-to-design-ai-pioneer-program), Train-the-Trainer). Service schema on both pillar pages. Organization schema with proper geographic targeting.
 
 Why this matters beyond Google: AI search engines rely heavily on structured data to generate accurate citations. When Perplexity or ChatGPT search encounters a page with Course schema, it can reference specific program names, durations, and descriptions rather than guessing from paragraph text. Structured data is the difference between being cited accurately and being paraphrased badly.
 
@@ -54,7 +54,7 @@ For GEO, bilingual optimization has an additional benefit: AI engines serving mu
 
 ## The Pillar Page Rebuild
 
-The corporate training page went from a basic service description to a comprehensive resource. I added four featured case studies with specific metrics and internal links. Four proprietary methodology sections (Traffic Light Protocol, AI Pioneer Model, the 70/30 Split, AI Maturity Model). A government funding section covering BUD Fund, Upskill HK, and RTTP -- directly relevant to Hong Kong companies evaluating AI training.
+The corporate training page went from a basic service description to a comprehensive resource. I added four featured case studies with specific metrics and internal links. Four proprietary methodology sections ([Traffic Light Protocol](/blog/traffic-light-protocol-ai-safety), AI Pioneer Model, the [70/30 Split](/blog/ai-skill-formation-problem), AI Maturity Model). A government funding section covering [BUD Fund, Upskill HK, and RTTP](/blog/hk-2026-budget-ai-training) -- directly relevant to Hong Kong companies evaluating AI training.
 
 This is content depth as an SEO signal. A thin page says "I offer AI training." A deep page with named methodologies, specific client outcomes, and government funding pathways says "I'm the person you should talk to about AI training in Hong Kong."
 
@@ -68,7 +68,7 @@ All in about seven hours.
 
 The technical work wasn't hard. Schema markup, hreflang tags, internal linking -- these are well-documented practices. What was hard was doing all of it at once across 30+ files without introducing errors. That's where AI-assisted execution changes the equation.
 
-I didn't use Claude Code because I couldn't do this work manually. I used it because the gap between knowing what to do and actually doing it across an entire site is where most solo practitioners get stuck. You know you should add internal links. You know you should have structured data. But touching 26 files for a "should" task always loses to client work and deadlines.
+I didn't use Claude Code because I couldn't do this work manually. I used it because [the gap between knowing what to do and actually doing it](/blog/84-percent-never-used-ai) across an entire site is where most solo practitioners get stuck. You know you should add internal links. You know you should have structured data. But touching 26 files for a "should" task always loses to client work and deadlines.
 
 AI didn't do this for me. It made the "should" tasks take hours instead of weeks. That's the difference.
 

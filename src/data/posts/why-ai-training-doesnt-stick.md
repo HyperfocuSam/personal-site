@@ -82,7 +82,7 @@ Select participants who are curious, influential, and willing to experiment. Giv
 
 If budget is truly limited, at minimum do this: run the workshop, then schedule three 30-minute follow-up sessions over the next six weeks. Just three touchpoints. Ask "what did you try?" and "what's blocking you?" That alone will double your adoption rate compared to a standalone workshop.
 
-The companies that win the AI adoption race won't be the ones that trained the most people. They'll be the ones whose training actually changed how people work.
+The companies that win the AI adoption race won't be the ones that trained the most people. They'll be the ones whose training actually changed how people work. (The same principle applies to everything -- even [rebuilding your own website's SEO](/blog/seo-rebuild-one-day-claude-code). Knowing what to do is easy. Actually doing it is where AI co-pilots change the equation.)
 
 ---
 

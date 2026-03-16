@@ -48,7 +48,7 @@ The most important thing I teach isn't any specific tool. It's the framework for
 2. Is it enterprise-safe for my organization's data?
 3. Will I use it daily, or is it a novelty?
 
-If a tool doesn't clear all three, it's a distraction. The AI landscape changes weekly. The skill of evaluating tools is more durable than knowledge of any specific tool.
+If a tool doesn't clear all three, it's a distraction. The AI landscape changes weekly. The skill of evaluating tools is more durable than knowledge of any specific tool. (For a concrete example of what this looks like in practice, here's how I used Claude Code to [rebuild my entire site's SEO infrastructure in one session](/blog/seo-rebuild-one-day-claude-code).)
 
 As an AI trainer in Hong Kong, my job is to send people back to their desks with tools they'll actually use tomorrow -- not a list of 50 apps they'll forget by Friday.
 

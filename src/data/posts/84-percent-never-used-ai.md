@@ -31,7 +31,7 @@ The most common excuse I hear from executives: "We're waiting until the tools ar
 
 The companies that will dominate their industries in 2027 are not the ones with the best AI tools. They're the ones whose entire workforce knows how to use them. And right now, the bar to clear is astonishingly low: do anything at all.
 
-84% of people haven't started. If your team has, you're already winning.
+84% of people haven't started. If your team has, you're already winning. And if you want to see what "actually doing it" looks like for a solo practitioner, here's how I [rebuilt my entire website's SEO in one night](/blog/seo-rebuild-one-day-claude-code) using the same AI tools I teach.
 
 ---
 

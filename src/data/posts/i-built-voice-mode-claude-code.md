@@ -4,7 +4,7 @@ I can read. Obviously. But staring at a wall of terminal output after 10 hours o
 
 I have ADHD. Long text output from AI coding assistants is genuinely hard for me. Not the content -- the format. A 400-word response with code blocks, bullet points, and markdown headers is information-dense but attention-hostile. My brain wants to skim. Claude Code deserves better than skimming.
 
-So I built a voice mode.
+So I built a voice mode. (I've also used Claude Code to [rebuild my entire site's SEO in a single session](/blog/seo-rebuild-one-day-claude-code) -- the same co-pilot dynamic, different problem.)
 
 ## What It Does
 
