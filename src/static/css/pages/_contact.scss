@@ -28,6 +28,35 @@
       padding: 0 1.5em;
     }
 
+    &__success {
+      padding: 2em 0;
+      text-align: center;
+
+      h3 {
+        color: _palette(tag-green);
+        margin-bottom: 0.5em;
+      }
+
+      p {
+        color: _palette(text-primary);
+        font-size: 1.1em;
+      }
+    }
+
+    &__error {
+      background-color: rgba(220, 53, 69, 0.1);
+      border: 1px solid rgba(220, 53, 69, 0.3);
+      border-radius: map-get($radius, sm);
+      padding: 0.75em 1em;
+      margin-top: 1em;
+
+      p {
+        color: #dc3545;
+        margin: 0;
+        font-size: 0.9em;
+      }
+    }
+
     .actions {
       margin-top: 1.4em;
       margin-bottom: 0;

@@ -9,11 +9,16 @@ const interestOptions = [
   'Other',
 ];
 
+const FORMSPREE_URL = 'https://formspree.io/f/mwvrrwbe';
+
 const ContactForm = ({ initialInterest }) => {
   const [interest, setInterest] = useState(initialInterest);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     if (interestOptions.includes(initialInterest)) {
@@ -23,20 +28,51 @@ const ContactForm = ({ initialInterest }) => {
     }
   }, [initialInterest]);
 
-  const handleSubmit = useCallback((e) => {
+  const handleSubmit = useCallback(async (e) => {
     e.preventDefault();
-    const subject = encodeURIComponent(
-      `[${interest}] Inquiry from ${name}`,
-    );
-    const body = encodeURIComponent(
-      `Hi Sam,\n\n${message}\n\n---\n`
-      + `Name: ${name}\nEmail: ${email}\n`
-      + `Interest: ${interest}`,
-    );
-    window.location.href = (
-      `mailto:sam@adaptig.com?subject=${subject}&body=${body}`
-    );
+    setSubmitting(true);
+    setError(null);
+
+    try {
+      const res = await fetch(FORMSPREE_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          name, email, interest, message,
+        }),
+      });
+
+      if (res.ok) {
+        setSubmitted(true);
+        if (window.posthog) {
+          window.posthog.capture('contact_form_submitted', { interest });
+        }
+      } else {
+        const data = await res.json().catch(() => ({}));
+        setError(data.error || 'Something went wrong. Please try again.');
+      }
+    } catch {
+      setError('Network error. Please check your connection and try again.');
+    } finally {
+      setSubmitting(false);
+    }
   }, [interest, name, email, message]);
+
+  if (submitted) {
+    return (
+      <section className="contact-form-section">
+        <div className="contact-form__success">
+          <h3>Message sent</h3>
+          <p>
+            Thanks, {name}. I&apos;ll reply within 24 hours.
+          </p>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="contact-form-section">
@@ -114,13 +150,20 @@ const ContactForm = ({ initialInterest }) => {
           />
         </label>
 
+        {error && (
+          <div className="contact-form__error">
+            <p>{error}</p>
+          </div>
+        )}
+
         <ul className="actions">
           <li>
             <button
               type="submit"
               className="button contact-form__submit"
+              disabled={submitting}
             >
-              Send Message
+              {submitting ? 'Sending...' : 'Send Message'}
             </button>
           </li>
         </ul>
