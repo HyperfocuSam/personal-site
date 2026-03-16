@@ -25,9 +25,14 @@ const HeroSection = () => (
           <Link to="/services" className="button">
             How I Can Help
           </Link>
-          <Link to="/contact" className="button button--outline">
+          <a
+            href="https://ro.am/samwong/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="button button--outline"
+          >
             Book a Conversation
-          </Link>
+          </a>
         </div>
       </div>
       <div className="home-hero__photo">

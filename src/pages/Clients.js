@@ -111,6 +111,32 @@ const Clients = () => (
           </div>
         </div>
       </section>
+
+      {/* CTA */}
+      <section className="section-sunken section-padding">
+        <div className="content-narrow" style={{ textAlign: 'center' }}>
+          <h2>Want results like these for your team?</h2>
+          <p>
+            Every engagement starts with a 30-minute discovery call
+            to understand your team&apos;s workflows, goals, and constraints.
+          </p>
+          <div style={{
+            display: 'flex',
+            gap: '1rem',
+            justifyContent: 'center',
+            flexWrap: 'wrap',
+            marginTop: '1.5rem',
+          }}
+          >
+            <Link to="/contact" className="button">
+              Book a Discovery Call
+            </Link>
+            <Link to="/services" className="button button--outline">
+              View Training Services
+            </Link>
+          </div>
+        </div>
+      </section>
     </article>
   </Main>
 );

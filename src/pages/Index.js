@@ -12,6 +12,7 @@ import StatsBar from '../components/Home/StatsBar';
 import ClientLogoBar from '../components/Home/ClientLogoBar';
 import FeaturedCaseStudies from '../components/Home/FeaturedCaseStudies';
 import EmailCapture from '../components/EmailCapture/EmailCapture';
+import RevenuePathCTA from '../components/Home/RevenuePathCTA';
 
 const Index = () => (
   <Main
@@ -144,6 +145,13 @@ const Index = () => (
         </div>
       </section>
 
+      {/* Revenue Path CTA */}
+      <section className="section-warm section-padding-xl full-bleed">
+        <div className="content-wide">
+          <RevenuePathCTA />
+        </div>
+      </section>
+
       {/* Where I Work */}
       <section className="section-base section-padding-xl full-bleed">
         <div className="content-wide">
@@ -185,8 +193,8 @@ const Index = () => (
 
       {/* CTA */}
       <EmailCapture
-        title="Ready to bring AI to your team?"
-        blurb="Whether it's team training, coaching, or just a question about AI adoption — start with a conversation."
+        title="Get practical AI insights — no fluff"
+        blurb="One email when I publish: workshop frameworks, adoption case studies, and tools I actually use with clients."
       />
 
       <p className="lang-toggle" style={{ textAlign: 'center' }}>

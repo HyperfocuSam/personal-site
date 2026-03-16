@@ -220,8 +220,8 @@ const Blog = () => {
         </section>
 
         <EmailCapture
-          title="Want to discuss AI adoption?"
-          blurb="Reach out for a conversation about training, coaching, or anything AI."
+          title="Get the next post in your inbox"
+          blurb="Workshop frameworks, client case studies, and AI tools I actually use — delivered when I publish."
         />
       </article>
     </Main>

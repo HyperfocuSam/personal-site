@@ -221,8 +221,8 @@ const Post = () => {
         </section>
 
         <EmailCapture
-          title="Want to discuss this topic?"
-          blurb="Reach out for a conversation about AI training, coaching, or team adoption."
+          title="Liked this? Get the next one."
+          blurb="I write about AI adoption that actually works — frameworks, case studies, and lessons from 180+ workshops."
         />
 
         {/* Related Posts + Navigation */}

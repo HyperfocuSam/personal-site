@@ -9,6 +9,7 @@ import OptimizedImage from '../components/Template/OptimizedImage';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 import posts from '../data/posts';
 import { AuthorCard } from '../components/Blog';
+import EmailCapture from '../components/EmailCapture/EmailCapture';
 
 const typeLabels = {
   'case-study': '案例分析',
@@ -113,6 +114,11 @@ const ZhBlog = () => (
           <AuthorCard />
         </div>
       </section>
+
+      <EmailCapture
+        title="訂閱 AI 實用資訊"
+        blurb="工作坊框架、採用案例、同我實際用嘅工具 — 有新文章先會寄，冇垃圾郵件。"
+      />
 
       <p className="lang-toggle">
         <Link to="/blog">View in English</Link>

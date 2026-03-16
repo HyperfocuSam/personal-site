@@ -42,7 +42,19 @@ const ServiceCta = ({ tags }) => {
   const match = ['workshop', 'case-study', 'enterprise', 'ai-adoption', 'tools', 'productivity']
     .find((tag) => tags.includes(tag));
 
-  if (!match) return null;
+  if (!match) {
+    return (
+      <div className="service-cta">
+        <p className="service-cta__text">
+          Sam Wong helps teams adopt AI through workshops, coaching,
+          and trainer development across Hong Kong and Asia-Pacific.
+        </p>
+        <Link to="/services" className="button">
+          View Training Services
+        </Link>
+      </div>
+    );
+  }
 
   const cta = TAG_TO_SERVICE[match];
 
