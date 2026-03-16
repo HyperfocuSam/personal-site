@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 
 import Main from '../layouts/Main';
 import OptimizedImage from '../components/Template/OptimizedImage';
+import EmailCapture from '../components/EmailCapture/EmailCapture';
 import ClientLogoBar from '../components/Home/ClientLogoBar';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 
@@ -712,6 +713,16 @@ const CorporateTraining = () => (
           ))}
         </div>
       </section>
+
+      {/* Lead Magnet */}
+      <EmailCapture
+        title="Free: AI Pioneer Program Playbook"
+        blurb="The 6-session structure, champion selection checklist, 3-3-3 Habit Framework, and measurement template. Enter your email to download."
+        leadMagnet={{
+          title: 'AI Pioneer Program Playbook (PDF)',
+          url: '/downloads/ai-pioneer-program-playbook.pdf',
+        }}
+      />
 
       {/* CTA */}
       <section className="section-base section-padding">

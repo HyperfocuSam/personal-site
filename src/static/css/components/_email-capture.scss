@@ -130,6 +130,17 @@
     margin-top: 0.75em;
   }
 
+  &__download {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    padding: 0.85em 2em;
+  }
+
+  &--magnet &__submit {
+    min-width: 170px;
+  }
+
   &__whatsapp {
     display: inline-block;
     margin-top: 1.5rem;

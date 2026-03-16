@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 
 import Main from '../layouts/Main';
 import OptimizedImage from '../components/Template/OptimizedImage';
+import EmailCapture from '../components/EmailCapture/EmailCapture';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 import services from '../data/services';
 import testimonials from '../data/testimonials';
@@ -288,6 +289,15 @@ const Services = () => {
             })}
           </script>
         </Helmet>
+
+        <EmailCapture
+          title="Free: AI Pioneer Program Playbook"
+          blurb="The 6-session structure I use with enterprise clients — champion selection, habit framework, and measurement template."
+          leadMagnet={{
+            title: 'AI Pioneer Program Playbook (PDF)',
+            url: '/downloads/ai-pioneer-program-playbook.pdf',
+          }}
+        />
 
         <div style={{ textAlign: 'center', margin: '2rem 0' }}>
           <Link

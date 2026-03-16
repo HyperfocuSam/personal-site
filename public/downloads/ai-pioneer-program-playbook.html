@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>AI Pioneer Program Playbook | Sam Wong</title>
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #1a1a2e;
+    line-height: 1.6;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 20mm 22mm;
+    page-break-after: always;
+    position: relative;
+  }
+  .page:last-child { page-break-after: auto; }
+
+  /* Cover page */
+  .cover {
+    background: linear-gradient(160deg, #0f1729 0%, #1a1a2e 100%);
+    color: #f5f0e8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30mm 28mm;
+  }
+  .cover-badge {
+    display: inline-block;
+    background: rgba(232, 167, 89, 0.15);
+    color: #e8a759;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 4px;
+    margin-bottom: 24px;
+  }
+  .cover h1 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  .cover h1 em {
+    color: #e8a759;
+    font-style: normal;
+  }
+  .cover .subtitle {
+    font-size: 16px;
+    opacity: 0.85;
+    line-height: 1.7;
+    max-width: 440px;
+    margin-bottom: 40px;
+  }
+  .cover-stats {
+    display: flex;
+    gap: 32px;
+    margin-top: 20px;
+  }
+  .cover-stat {
+    text-align: left;
+  }
+  .cover-stat .num {
+    font-size: 28px;
+    font-weight: 700;
+    color: #e8a759;
+    display: block;
+  }
+  .cover-stat .label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.7;
+  }
+  .cover-footer {
+    position: absolute;
+    bottom: 28mm;
+    left: 28mm;
+    font-size: 12px;
+    opacity: 0.5;
+  }
+  .cover-footer a { color: #e8a759; text-decoration: none; }
+
+  /* Content pages */
+  .content-page { background: #fff; }
+  .page-header {
+    border-bottom: 2px solid #0f1729;
+    padding-bottom: 8px;
+    margin-bottom: 24px;
+  }
+  .page-header h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #0f1729;
+  }
+  .page-header .page-num {
+    font-size: 11px;
+    color: #999;
+    float: right;
+    margin-top: 6px;
+  }
+
+  h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0f1729;
+    margin: 20px 0 8px;
+  }
+  p { font-size: 13px; margin-bottom: 10px; color: #333; }
+  ul { padding-left: 18px; margin-bottom: 12px; }
+  li { font-size: 13px; margin-bottom: 5px; color: #333; }
+
+  /* Session table */
+  .session-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 12px;
+  }
+  .session-table th {
+    background: #0f1729;
+    color: #f5f0e8;
+    padding: 10px 12px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .session-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #e8e4dc;
+    vertical-align: top;
+  }
+  .session-table tr:nth-child(even) td { background: #faf8f4; }
+  .session-table .session-num {
+    font-weight: 700;
+    color: #e8a759;
+    white-space: nowrap;
+  }
+
+  /* Checklist */
+  .checklist {
+    list-style: none;
+    padding: 0;
+  }
+  .checklist li {
+    padding: 6px 0 6px 26px;
+    position: relative;
+    font-size: 13px;
+    border-bottom: 1px solid #f0ece4;
+  }
+  .checklist li::before {
+    content: '\2610';
+    position: absolute;
+    left: 0;
+    font-size: 16px;
+    color: #e8a759;
+  }
+
+  /* Callout box */
+  .callout {
+    background: #faf8f4;
+    border-left: 4px solid #e8a759;
+    padding: 14px 16px;
+    margin: 16px 0;
+    border-radius: 0 6px 6px 0;
+  }
+  .callout p { margin: 0; font-size: 13px; }
+  .callout strong { color: #0f1729; }
+
+  /* Framework box */
+  .framework-box {
+    background: #0f1729;
+    color: #f5f0e8;
+    border-radius: 8px;
+    padding: 20px 22px;
+    margin: 16px 0;
+  }
+  .framework-box h3 { color: #e8a759; margin-top: 0; font-size: 16px; }
+  .framework-box p { color: #ccc; }
+  .framework-cols {
+    display: flex;
+    gap: 16px;
+    margin-top: 12px;
+  }
+  .framework-col {
+    flex: 1;
+    background: rgba(255,255,255,0.06);
+    border-radius: 6px;
+    padding: 14px;
+  }
+  .framework-col .num {
+    font-size: 24px;
+    font-weight: 700;
+    color: #e8a759;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .framework-col .heading {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+    display: block;
+  }
+  .framework-col p { font-size: 12px; margin: 0; color: #aaa; }
+
+  /* CTA page */
+  .cta-page {
+    background: linear-gradient(160deg, #0f1729 0%, #1a1a2e 100%);
+    color: #f5f0e8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40mm 30mm;
+  }
+  .cta-page h2 {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+  .cta-page h2 em { color: #e8a759; font-style: normal; }
+  .cta-page p {
+    font-size: 14px;
+    opacity: 0.8;
+    max-width: 400px;
+    margin-bottom: 32px;
+    color: #ccc;
+  }
+  .cta-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .cta-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .cta-btn--primary { background: #e8a759; color: #0f1729; }
+  .cta-btn--outline { border: 2px solid #e8a759; color: #e8a759; }
+  .cta-contact {
+    margin-top: 40px;
+    font-size: 12px;
+    opacity: 0.5;
+  }
+  .cta-contact a { color: #e8a759; text-decoration: none; }
+
+  /* Two-col layout */
+  .two-col {
+    display: flex;
+    gap: 24px;
+  }
+  .two-col > div { flex: 1; }
+
+  .footer-line {
+    position: absolute;
+    bottom: 18mm;
+    left: 22mm;
+    right: 22mm;
+    font-size: 10px;
+    color: #bbb;
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer-line a { color: #e8a759; text-decoration: none; }
+</style>
+</head>
+<body>
+
+<!-- PAGE 1: COVER -->
+<div class="page cover">
+  <span class="cover-badge">Free Playbook</span>
+  <h1>The AI Pioneer<br />Program <em>Playbook</em></h1>
+  <p class="subtitle">
+    How to design a multi-session AI training program that builds
+    lasting habits, creates internal champions, and drives adoption
+    across your entire organization.
+  </p>
+  <div class="cover-stats">
+    <div class="cover-stat">
+      <span class="num">6</span>
+      <span class="label">Sessions</span>
+    </div>
+    <div class="cover-stat">
+      <span class="num">10-20</span>
+      <span class="label">Pioneers</span>
+    </div>
+    <div class="cover-stat">
+      <span class="num">5-8 hrs</span>
+      <span class="label">Saved / Week</span>
+    </div>
+    <div class="cover-stat">
+      <span class="num">9.2/10</span>
+      <span class="label">Satisfaction</span>
+    </div>
+  </div>
+  <div class="cover-footer">
+    Sam Wong &middot; <a href="https://hyperfocusam.com">hyperfocusam.com</a> &middot; <a href="https://adaptig.ai">adaptig.ai</a>
+  </div>
+</div>
+
+<!-- PAGE 2: THE MODEL + SESSION STRUCTURE -->
+<div class="page content-page">
+  <div class="page-header">
+    <span class="page-num">02</span>
+    <h2>The Pioneer Model</h2>
+  </div>
+
+  <p>
+    Most corporate AI training fails because it treats adoption like an event.
+    Your team attends a workshop, tries ChatGPT for a week, then goes back to the old way.
+    The Pioneer Model fixes this by borrowing from change management:
+    train a small group deeply, and let them pull the rest of the organization forward.
+  </p>
+
+  <div class="callout">
+    <p><strong>The core insight:</strong> 10-20 curious, influential people trained over 6 weeks
+    will change more behavior than a one-day workshop for 200.</p>
+  </div>
+
+  <h3>The 6-Session Structure</h3>
+
+  <table class="session-table">
+    <thead>
+      <tr>
+        <th>Session</th>
+        <th>Theme</th>
+        <th>Key Activities</th>
+        <th>Outcome</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="session-num">1</td>
+        <td>Foundations &amp; Safety</td>
+        <td>AI literacy, data sensitivity (Traffic Light Protocol), security boundaries</td>
+        <td>Everyone knows what's safe to use and what isn't</td>
+      </tr>
+      <tr>
+        <td class="session-num">2</td>
+        <td>First Workflows</td>
+        <td>Tier 1-2-3 framework, hands-on with approved tools, real tasks from participants</td>
+        <td>Each person has 2-3 AI-assisted workflows running</td>
+      </tr>
+      <tr>
+        <td class="session-num">3</td>
+        <td>Deep Application</td>
+        <td>Bring your own workflow, rebuild with AI, peer review</td>
+        <td>Specific time savings measured per participant</td>
+      </tr>
+      <tr>
+        <td class="session-num">4</td>
+        <td>Advanced Patterns</td>
+        <td>Chaining prompts, multi-tool workflows, department-specific use cases</td>
+        <td>Participants designing processes, not just using tools</td>
+      </tr>
+      <tr>
+        <td class="session-num">5</td>
+        <td>Habit Formation</td>
+        <td>3-3-3 Framework introduction, sustainability planning, peer accountability</td>
+        <td>Structured plan to maintain habits after program ends</td>
+      </tr>
+      <tr>
+        <td class="session-num">6</td>
+        <td>Showcase &amp; Scale</td>
+        <td>Before/After presentations, AI Maturity assessment, internal champion planning</td>
+        <td>Business case for enterprise rollout built by participants</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p style="font-size: 11px; color: #999; margin-top: 4px;">
+    Each session is 2-3 hours, held weekly at the same time for consistency and accountability.
+  </p>
+
+  <div class="footer-line">
+    <span>AI Pioneer Program Playbook</span>
+    <span><a href="https://hyperfocusam.com">hyperfocusam.com</a></span>
+  </div>
+</div>
+
+<!-- PAGE 3: SELECTION + FRAMEWORKS -->
+<div class="page content-page">
+  <div class="page-header">
+    <span class="page-num">03</span>
+    <h2>Setting Up for Success</h2>
+  </div>
+
+  <div class="two-col">
+    <div>
+      <h3>Who to Select as Pioneers</h3>
+      <p>The program's success depends on picking the right 10-20 people. Not the most senior. Not the most technical. The most <em>influential and curious</em>.</p>
+      <ul class="checklist">
+        <li>Naturally curious about new tools and approaches</li>
+        <li>Respected by peers across departments</li>
+        <li>Willing to experiment and share openly</li>
+        <li>Have repetitive, high-volume workflows to redesign</li>
+        <li>Include a mix of roles and seniority levels</li>
+        <li>Avoid forcing participation &mdash; volunteers only</li>
+        <li>Include at least one skeptic (they become the strongest advocates)</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Pre-Program Checklist</h3>
+      <ul class="checklist">
+        <li>IT sign-off on approved AI tools and boundaries</li>
+        <li>Weekly 2-3 hour time slot confirmed for 6 weeks</li>
+        <li>Manager buy-in for each participant</li>
+        <li>Data sensitivity policy documented (or use Traffic Light Protocol)</li>
+        <li>Baseline assessment: current AI usage and comfort level</li>
+        <li>Shared channel for async questions (Teams/Slack)</li>
+        <li>Success metrics agreed with sponsor</li>
+      </ul>
+
+      <div class="callout">
+        <p><strong>Common mistake:</strong> Selecting people by job title.
+        A curious coordinator will spread AI adoption faster than a reluctant VP.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="framework-box">
+    <h3>The 3-3-3 AI Habit Framework</h3>
+    <p>Introduced in Session 5 to ensure habits outlast the program.</p>
+    <div class="framework-cols">
+      <div class="framework-col">
+        <span class="num">3</span>
+        <span class="heading">Tasks</span>
+        <p>Pick exactly 3 recurring tasks from your real work to redesign with AI.</p>
+      </div>
+      <div class="framework-col">
+        <span class="num">3</span>
+        <span class="heading">Weeks</span>
+        <p>Commit to using AI for those tasks every day for 3 consecutive weeks.</p>
+      </div>
+      <div class="framework-col">
+        <span class="num">3</span>
+        <span class="heading">Outcomes</span>
+        <p>Measure 3 specific outcomes: time saved, quality change, and confidence level.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-line">
+    <span>AI Pioneer Program Playbook</span>
+    <span><a href="https://hyperfocusam.com">hyperfocusam.com</a></span>
+  </div>
+</div>
+
+<!-- PAGE 4: MEASUREMENT + CTA -->
+<div class="page content-page">
+  <div class="page-header">
+    <span class="page-num">04</span>
+    <h2>Measuring Success</h2>
+  </div>
+
+  <p>
+    The Pioneer Model produces measurable outcomes at three levels.
+    Track all three to build the business case for enterprise rollout.
+  </p>
+
+  <table class="session-table">
+    <thead>
+      <tr>
+        <th>Level</th>
+        <th>Metric</th>
+        <th>How to Measure</th>
+        <th>Benchmark</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="session-num">Individual</td>
+        <td>Hours saved per week</td>
+        <td>Self-reported time log, before/after comparison</td>
+        <td>5-8 hours / week</td>
+      </tr>
+      <tr>
+        <td class="session-num">Individual</td>
+        <td>AI confidence score</td>
+        <td>Pre/post survey (1-10 scale)</td>
+        <td>+3 to +5 points</td>
+      </tr>
+      <tr>
+        <td class="session-num">Team</td>
+        <td>Adoption spillover</td>
+        <td>Count of non-Pioneer colleagues actively using AI</td>
+        <td>2-3x multiplier</td>
+      </tr>
+      <tr>
+        <td class="session-num">Team</td>
+        <td>Workflows redesigned</td>
+        <td>Documented in Session 6 showcase presentations</td>
+        <td>1-3 per Pioneer</td>
+      </tr>
+      <tr>
+        <td class="session-num">Org</td>
+        <td>AI Maturity stage</td>
+        <td>4-stage assessment (Awareness, Experimentation, Integration, Transformation)</td>
+        <td>+1 stage in 6 weeks</td>
+      </tr>
+      <tr>
+        <td class="session-num">Org</td>
+        <td>Security incidents</td>
+        <td>IT monitoring of approved vs. unapproved tool usage</td>
+        <td>Zero (if boundaries are set upfront)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>AI Maturity Model</h3>
+  <p>Where most organizations sit, and where the Pioneer Program takes them:</p>
+
+  <div style="display: flex; gap: 8px; margin: 16px 0;">
+    <div style="flex: 1; background: #f0ece4; border-radius: 6px; padding: 12px; text-align: center;">
+      <div style="font-size: 11px; color: #999; text-transform: uppercase; letter-spacing: 0.5px;">Stage 1</div>
+      <div style="font-weight: 700; font-size: 14px; margin: 4px 0;">Awareness</div>
+      <div style="font-size: 11px; color: #666;">80% of orgs</div>
+    </div>
+    <div style="flex: 1; background: #e8a759; border-radius: 6px; padding: 12px; text-align: center; color: #0f1729;">
+      <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px;">Stage 2</div>
+      <div style="font-weight: 700; font-size: 14px; margin: 4px 0;">Experimentation</div>
+      <div style="font-size: 11px;">Start here</div>
+    </div>
+    <div style="flex: 1; background: #0f1729; border-radius: 6px; padding: 12px; text-align: center; color: #e8a759;">
+      <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: #999;">Stage 3</div>
+      <div style="font-weight: 700; font-size: 14px; margin: 4px 0; color: #f5f0e8;">Integration</div>
+      <div style="font-size: 11px; color: #999;">Target</div>
+    </div>
+    <div style="flex: 1; background: #0f1729; border-radius: 6px; padding: 12px; text-align: center;">
+      <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: #666;">Stage 4</div>
+      <div style="font-weight: 700; font-size: 14px; margin: 4px 0; color: #666;">Transformation</div>
+      <div style="font-size: 11px; color: #555;">Long-term</div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <p><strong>The ROI case:</strong> 19 Pioneers saving 5 hours/week = 95 hours of recovered productivity every week.
+    That's nearly 5,000 hours per year. The program pays for itself in the first month.</p>
+  </div>
+
+  <h3>What Happens After Session 6</h3>
+  <ul>
+    <li>Pioneers become internal champions &mdash; they train their own teams</li>
+    <li>The 3-3-3 Framework sustains individual habits without external support</li>
+    <li>Batch 2 launches with a new cohort, guided by Batch 1 alumni</li>
+    <li>Organization moves from isolated experimentation to systematic integration</li>
+  </ul>
+
+  <div class="footer-line">
+    <span>AI Pioneer Program Playbook</span>
+    <span><a href="https://hyperfocusam.com">hyperfocusam.com</a></span>
+  </div>
+</div>
+
+<!-- PAGE 5: CTA -->
+<div class="page cta-page">
+  <h2>Ready to run this<br />for <em>your team?</em></h2>
+  <p>
+    I design and deliver Pioneer Programs for enterprises
+    across Hong Kong and Asia-Pacific. Every program is
+    customized to your team's tools, workflows, and industry.
+  </p>
+  <div class="cta-buttons">
+    <a href="mailto:sam@adaptig.com" class="cta-btn cta-btn--primary">Email Sam</a>
+    <a href="https://wa.me/85264315177" class="cta-btn cta-btn--outline">WhatsApp</a>
+  </div>
+  <div class="cta-contact">
+    Sam Wong &middot; sam@adaptig.com &middot;
+    <a href="https://hyperfocusam.com/services">hyperfocusam.com/services</a>
+  </div>
+</div>
+
+</body>
+</html>

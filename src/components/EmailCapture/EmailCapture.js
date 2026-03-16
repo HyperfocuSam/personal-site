@@ -6,6 +6,7 @@ const SUBSTACK_URL = 'https://wongsam.substack.com/api/v1/free?noRedirect=true';
 const EmailCapture = ({
   title,
   blurb,
+  leadMagnet,
 }) => {
   const [email, setEmail] = useState('');
   const [submitting, setSubmitting] = useState(false);
@@ -30,8 +31,12 @@ const EmailCapture = ({
 
       if (res.ok) {
         setSubmitted(true);
+        const event = leadMagnet ? 'lead_magnet_downloaded' : 'newsletter_subscribed';
         if (window.posthog) {
-          window.posthog.capture('newsletter_subscribed', { source: window.location.pathname });
+          window.posthog.capture(event, {
+            source: window.location.pathname,
+            ...(leadMagnet && { magnet: leadMagnet.title }),
+          });
         }
       } else {
         setError('Could not subscribe. Please try again.');
@@ -41,16 +46,33 @@ const EmailCapture = ({
     } finally {
       setSubmitting(false);
     }
-  }, [email]);
+  }, [email, leadMagnet]);
+
+  const buttonLabel = leadMagnet ? 'Get the Playbook' : 'Subscribe';
+  const buttonLabelBusy = leadMagnet ? 'Sending...' : 'Subscribing...';
 
   return (
-    <section className="email-capture">
+    <section className={`email-capture${leadMagnet ? ' email-capture--magnet' : ''}`}>
       <h3>{title}</h3>
       <p>{blurb}</p>
 
       {submitted ? (
         <div className="email-capture__success">
-          <p>Check your email to confirm your subscription.</p>
+          {leadMagnet ? (
+            <>
+              <a
+                href={leadMagnet.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="button email-capture__download"
+              >
+                Download: {leadMagnet.title}
+              </a>
+              <p>Also check your email to confirm your subscription.</p>
+            </>
+          ) : (
+            <p>Check your email to confirm your subscription.</p>
+          )}
         </div>
       ) : (
         <>
@@ -68,7 +90,7 @@ const EmailCapture = ({
               className="button email-capture__submit"
               disabled={submitting}
             >
-              {submitting ? 'Subscribing...' : 'Subscribe'}
+              {submitting ? buttonLabelBusy : buttonLabel}
             </button>
           </form>
           {error && (
@@ -91,11 +113,16 @@ const EmailCapture = ({
 EmailCapture.propTypes = {
   title: PropTypes.string,
   blurb: PropTypes.string,
+  leadMagnet: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
+  }),
 };
 
 EmailCapture.defaultProps = {
   title: 'Stay in the loop',
   blurb: 'Occasional insights on AI adoption. No spam, no hype.',
+  leadMagnet: null,
 };
 
 export default EmailCapture;

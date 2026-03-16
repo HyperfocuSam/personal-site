@@ -220,10 +220,21 @@ const Post = () => {
           </div>
         </section>
 
-        <EmailCapture
-          title="Liked this? Get the next one."
-          blurb="I write about AI adoption that actually works — frameworks, case studies, and lessons from 180+ workshops."
-        />
+        {slug === 'how-to-design-ai-pioneer-program' ? (
+          <EmailCapture
+            title="Get the full Pioneer Program Playbook"
+            blurb="The 6-session structure, champion selection checklist, 3-3-3 Habit Framework, and measurement template — in a ready-to-use PDF."
+            leadMagnet={{
+              title: 'AI Pioneer Program Playbook (PDF)',
+              url: '/downloads/ai-pioneer-program-playbook.pdf',
+            }}
+          />
+        ) : (
+          <EmailCapture
+            title="Liked this? Get the next one."
+            blurb="I write about AI adoption that actually works — frameworks, case studies, and lessons from 180+ workshops."
+          />
+        )}
 
         {/* Related Posts + Navigation */}
         <section className="section-base section-padding">
