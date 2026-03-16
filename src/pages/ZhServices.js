@@ -73,10 +73,10 @@ const ZhServices = () => {
   return (
     <Main
       title="服務"
-      description="Sam Wong AI 培訓服務 — 企業工作坊、培訓師培訓計劃、一對一輔導。透過 DotAI 同 Adaptig 提供。AI顧問 香港、企業AI培訓。"
+      description="Sam Wong AI 培訓服務 — 企業工作坊、培訓師培訓計劃、一對一輔導。透過 Adaptig 提供。AI顧問 香港、企業AI培訓。"
       canonicalUrl={`${SITE_URL}/zh/services`}
       ogTitle="AI 培訓服務 | Sam Wong"
-      ogDescription="企業工作坊、培訓師培訓計劃、一對一輔導。透過 DotAI 同 Adaptig 提供。"
+      ogDescription="企業工作坊、培訓師培訓計劃、一對一輔導。透過 Adaptig 提供。"
       ogImage={DEFAULT_OG_IMAGE}
       ogUrl={`${SITE_URL}/zh/services`}
       ogType="website"
@@ -163,7 +163,7 @@ const ZhServices = () => {
                   name: 'Sam Wong 提供咩類型嘅 AI 培訓？',
                   acceptedAnswer: {
                     '@type': 'Answer',
-                    text: 'Sam Wong 透過 Adaptig 同 DotAI 提供企業 AI 工作坊、多節 AI Pioneer Program、一對一 AI 輔導、培訓師認證計劃、以及主題演講同活動。服務涵蓋企業、個人及有志成為 AI 培訓師嘅專業人士。',
+                    text: 'Sam Wong 透過 Adaptig 提供企業 AI 工作坊、多節 AI Pioneer Program、一對一 AI 輔導、培訓師認證計劃、以及主題演講同活動。服務涵蓋企業、個人及有志成為 AI 培訓師嘅專業人士。',
                   },
                 },
                 {

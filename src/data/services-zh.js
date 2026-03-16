@@ -22,28 +22,6 @@ const servicesZh = [
     ],
   },
   {
-    id: 'corporate-training',
-    category: 'organizations',
-    anchor: 'organizations',
-    title: '企業 AI 培訓 (DotAI)',
-    subtitle: '圍繞你嘅團隊、你嘅場景、你嘅限制而設計',
-    provider: 'DotAI',
-    description: `最適合需要按角色定制培訓同可衡量成果嘅機構。
-
-**適合你需要：**
-- 喺合規嚴格或高問責環境中推動應用
-- 按角色提升提示詞同工作流程設計能力
-- 下星期就可以用嘅部門專屬案例
-- 管理層可以評估嘅實用部署方案`,
-    cta: '討論企業培訓',
-    ctaLink: '/contact',
-    external: false,
-    relatedPosts: [
-      'hkct-ai-education-workshop',
-      'arup-ai-lunch-learn',
-    ],
-  },
-  {
     id: 'keynotes-events',
     category: 'organizations',
     anchor: 'organizations',

@@ -74,10 +74,10 @@ const Services = () => {
   return (
     <Main
       title="AI Training Services - Hong Kong"
-      description="Corporate AI training and workshops in Hong Kong. Sam Wong delivers enterprise AI workshops, prompt engineering training, 1-1 coaching, and Train-the-Trainer certification through DotAI and Adaptig. Available in English and Cantonese."
+      description="Corporate AI training and workshops in Hong Kong. Sam Wong delivers enterprise AI workshops, prompt engineering training, 1-1 coaching, and Train-the-Trainer certification through Adaptig. Available in English and Cantonese."
       canonicalUrl={`${SITE_URL}/services`}
       ogTitle="Corporate AI Training & Workshops - Hong Kong | Sam Wong"
-      ogDescription="Enterprise AI workshops, prompt engineering training, coaching, and Train-the-Trainer programs in Hong Kong. Delivered through DotAI and Adaptig."
+      ogDescription="Enterprise AI workshops, prompt engineering training, coaching, and Train-the-Trainer programs in Hong Kong. Delivered through Adaptig."
       ogImage={DEFAULT_OG_IMAGE}
       ogUrl={`${SITE_URL}/services`}
       ogType="website"
@@ -209,7 +209,7 @@ const Services = () => {
                   name: 'What types of AI training does Sam Wong offer?',
                   acceptedAnswer: {
                     '@type': 'Answer',
-                    text: 'Sam Wong offers corporate AI workshops through Adaptig and DotAI, multi-session AI Pioneer Programs for cohort-based learning, 1-1 AI coaching for professionals, Train-the-Trainer certification programs, and keynotes and event sessions. Services are available for organizations, individuals, and aspiring AI trainers.',
+                    text: 'Sam Wong offers corporate AI workshops through Adaptig, multi-session AI Pioneer Programs for cohort-based learning, 1-1 AI coaching for professionals, Train-the-Trainer certification programs, and keynotes and event sessions. Services are available for organizations, individuals, and aspiring AI trainers.',
                   },
                 },
                 {

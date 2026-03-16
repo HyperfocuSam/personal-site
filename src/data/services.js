@@ -23,29 +23,6 @@ const services = [
     ],
   },
   {
-    id: 'corporate-training',
-    category: 'organizations',
-    anchor: 'organizations',
-    title: 'Corporate AI Training (DotAI)',
-    subtitle: 'Designed around your team, your context, your constraints',
-    provider: 'DotAI',
-    description: `Best for organizations that need role-specific training and measurable outcomes.
-
-**Ideal when you need:**
-- Adoption in compliance-heavy or high-accountability environments
-- Better prompting and workflow design by role
-- Department-specific use cases people can use by next week
-- A practical rollout that leadership can evaluate
-- Multi-regional delivery (Hong Kong, North America, Asia-Pacific)`,
-    cta: 'Discuss Corporate Training',
-    ctaLink: '/contact',
-    external: false,
-    relatedPosts: [
-      'hkct-ai-education-workshop',
-      'arup-ai-lunch-learn',
-    ],
-  },
-  {
     id: 'keynotes-events',
     category: 'organizations',
     anchor: 'organizations',
