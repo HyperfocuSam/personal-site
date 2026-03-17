@@ -7,6 +7,15 @@ import Navigation from '../components/Template/Navigation';
 import ScrollToTop from '../components/Template/ScrollToTop';
 import Footer from '../components/Template/Footer';
 
+// GitHub Pages serves trailing-slash URLs (react-snap creates dir/index.html).
+// Canonical + OG URLs must match sitemap.xml to avoid Google indexing errors.
+const ensureTrailingSlash = (url) => {
+  if (!url) return url;
+  const [path, query] = url.split('?');
+  const slashed = path.endsWith('/') ? path : `${path}/`;
+  return query ? `${slashed}?${query}` : slashed;
+};
+
 const Main = (props) => (
   <HelmetProvider>
     <Analytics />
@@ -18,12 +27,12 @@ const Main = (props) => (
     >
       {props.title && <title>{props.title}</title>}
       <meta name="description" content={props.description} />
-      {props.canonicalUrl && <link rel="canonical" href={props.canonicalUrl} />}
+      {props.canonicalUrl && <link rel="canonical" href={ensureTrailingSlash(props.canonicalUrl)} />}
       {/* Open Graph */}
       {props.ogTitle && <meta property="og:title" content={props.ogTitle} />}
       {props.ogDescription && <meta property="og:description" content={props.ogDescription} />}
       {props.ogImage && <meta property="og:image" content={props.ogImage} />}
-      {props.ogUrl && <meta property="og:url" content={props.ogUrl} />}
+      {props.ogUrl && <meta property="og:url" content={ensureTrailingSlash(props.ogUrl)} />}
       {props.ogType && <meta property="og:type" content={props.ogType} />}
       {/* Twitter Card */}
       <meta name="twitter:card" content={props.twitterCard || 'summary_large_image'} />
@@ -38,7 +47,7 @@ const Main = (props) => (
       ))}
       {/* hreflang tags */}
       {props.hreflangTags && props.hreflangTags.map((tag) => (
-        <link key={tag.lang} rel="alternate" hrefLang={tag.lang} href={tag.href} />
+        <link key={tag.lang} rel="alternate" hrefLang={tag.lang} href={ensureTrailingSlash(tag.href)} />
       ))}
     </Helmet>
     <div id="wrapper">

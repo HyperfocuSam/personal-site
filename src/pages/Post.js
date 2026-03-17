@@ -142,7 +142,7 @@ const Post = () => {
           <link
             rel="alternate"
             hrefLang={linkedPost.language === 'zh-Hant' ? 'zh-Hant' : 'en'}
-            href={`${SITE_URL}/blog/${linkedPost.slug}`}
+            href={`${SITE_URL}/blog/${linkedPost.slug}/`}
           />
         )}
         {/* x-default hreflang — points to English version or self if English */}
@@ -150,7 +150,7 @@ const Post = () => {
           <link
             rel="alternate"
             hrefLang="x-default"
-            href={postLang === 'en' ? postUrl : `${SITE_URL}/blog/${linkedPost.slug}`}
+            href={postLang === 'en' ? postUrl : `${SITE_URL}/blog/${linkedPost.slug}/`}
           />
         )}
       </Helmet>
