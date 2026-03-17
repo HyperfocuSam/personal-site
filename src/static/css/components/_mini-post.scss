@@ -30,7 +30,7 @@
     width: 100%;
 
     img {
-      transition: transform #{_duration(transition)} ease-out;
+      transition: transform #{_duration(transition)} $ease-out;
       width: 100%;
     }
 

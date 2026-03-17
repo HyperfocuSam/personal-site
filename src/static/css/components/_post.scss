@@ -40,7 +40,7 @@
     border-radius: map-get($radius, xl);
 
     img {
-      transition: transform 0.25s ease-out;
+      transition: transform 0.25s $ease-out;
     }
 
     &:hover {

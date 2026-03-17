@@ -6,7 +6,7 @@
   border-radius: map-get($radius, lg);
   box-shadow: map-get($shadow, sm);
   padding: 1.5rem;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transition: box-shadow 0.3s $ease-out, transform 0.3s $ease-out;
 
   &:hover {
     box-shadow: map-get($shadow, md);

@@ -85,7 +85,7 @@
     display: block;
     border: 0;
     text-decoration: none;
-    transition: transform 0.2s ease;
+    transition: transform 0.2s $ease-out-snappy;
     overflow: hidden;
     border-radius: map-get($radius, xl);
     border: 0;
@@ -111,7 +111,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s $ease-out;
   }
 
   &__content {
@@ -160,7 +160,7 @@
   overflow: hidden;
   border: 0;
   background: _palette(surface-raised);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s $ease-out-snappy, box-shadow 0.2s $ease-out-snappy;
 
   &:hover {
     transform: translateY(-3px);
@@ -215,7 +215,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s $ease-out;
   }
 
   &__content {
@@ -285,7 +285,7 @@
   cursor: pointer;
   font-size: 0.85rem;
   font-weight: _font(weight);
-  transition: all 0.2s ease;
+  transition: all 0.2s $ease-out-snappy;
 
   &:hover {
     border-color: _palette(amber);
@@ -504,7 +504,7 @@
     background: _palette(surface-raised);
     color: _palette(text-primary);
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.2s $ease-out-snappy;
     text-decoration: none;
     line-height: 1.4;
     height: auto;
@@ -680,5 +680,27 @@
 
   p {
     margin-bottom: 1em;
+  }
+}
+
+// ── Scroll Progress Bar ──────────────────────────
+.scroll-progress {
+  position: fixed;
+  top: _size(nav-height);
+  left: 0;
+  width: 100%;
+  height: 3px;
+  z-index: _misc(z-index-base);
+  pointer-events: none;
+
+  @include breakpoint(small) {
+    top: _size(nav-height-small);
+  }
+
+  &__bar {
+    height: 100%;
+    background: _palette(amber);
+    transform-origin: left;
+    will-change: transform;
   }
 }

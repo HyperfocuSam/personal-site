@@ -27,7 +27,7 @@
   background: _palette(surface-sunken);
   height: 35px;
   border-radius: map-get($radius, md);
-  transition: width 0.4s ease, background-color 0.4s ease;
+  transition: width 0.4s $ease-out, background-color 0.4s $ease-out;
   transition-property: width, background-color;
 }
 

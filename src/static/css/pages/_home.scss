@@ -155,6 +155,32 @@
       height: 280px;
     }
   }
+
+  // ── Entrance animation — staggered fade + slide ──
+  &__greeting,
+  h1,
+  &__subtitle,
+  &__actions,
+  &__photo {
+    animation: hero-enter 0.6s $ease-out both;
+  }
+
+  &__greeting   { animation-delay: 0s; }
+  h1            { animation-delay: 0.1s; }
+  &__subtitle   { animation-delay: 0.2s; }
+  &__actions    { animation-delay: 0.3s; }
+  &__photo      { animation-delay: 0.15s; }
+}
+
+@keyframes hero-enter {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 // ─── Help grid — clean text cards, no emoji ────────────────
@@ -177,7 +203,7 @@
   padding: 0;
   text-decoration: none;
   box-shadow: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s $ease-out, box-shadow 0.3s $ease-out;
   border: 0;
   overflow: hidden;
 
@@ -200,7 +226,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.4s ease;
+      transition: transform 0.4s $ease-out;
       display: block;
     }
   }
@@ -227,7 +253,7 @@
     color: _palette(amber-text);
     font-size: 1.5rem;
     font-weight: _font(weight-bold);
-    transition: transform 0.2s ease;
+    transition: transform 0.2s $ease-out-snappy;
     align-self: flex-start;
     padding: 0 2rem 1.75rem;
   }
@@ -317,7 +343,7 @@
     border-radius: map-get($radius, xl);
     box-shadow: none;
     padding: 0;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    transition: box-shadow 0.3s $ease-out, transform 0.3s $ease-out;
     border: 0;
     overflow: hidden;
 
@@ -359,7 +385,7 @@
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: transform 0.4s ease;
+    transition: transform 0.4s $ease-out;
   }
 
   &__content {
@@ -521,7 +547,7 @@
   flex-direction: column;
   text-decoration: none;
   border: 0;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s $ease-out, box-shadow 0.3s $ease-out;
 
   &:hover {
     transform: translateY(-4px);
@@ -588,7 +614,7 @@
       font-size: 0.95rem;
       white-space: nowrap;
       opacity: 0.5;
-      transition: opacity 0.3s ease;
+      transition: opacity 0.3s $ease-out;
 
       &:hover {
         opacity: 0.8;
@@ -603,7 +629,7 @@
     object-fit: contain;
     filter: grayscale(1);
     opacity: 0.45;
-    transition: filter 0.3s ease, opacity 0.3s ease;
+    transition: filter 0.3s $ease-out, opacity 0.3s $ease-out;
 
     &:hover {
       filter: grayscale(0);

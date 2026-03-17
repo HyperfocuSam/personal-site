@@ -85,7 +85,7 @@ header {
   color: _palette(text-on-dark-muted);
   font-size: 0.875rem;
   font-weight: _font(weight-medium);
-  transition: all 0.25s ease;
+  transition: all 0.25s $ease-out;
 
   &:hover {
     color: _palette(amber);

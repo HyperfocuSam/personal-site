@@ -44,7 +44,7 @@ textarea {
 }
 
 a {
-  transition: color 0.25s ease, border-bottom-color 0.25s ease;
+  transition: color 0.25s $ease-out, border-bottom-color 0.25s $ease-out;
   border-bottom: 1px solid transparent;
   color: _palette(amber-text);
   text-decoration: none;

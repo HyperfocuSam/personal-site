@@ -13,6 +13,7 @@ import {
   RelatedPosts,
   calculateReadingTime,
 } from '../components/Blog';
+import ScrollProgress from '../components/Blog/ScrollProgress';
 import TrainerRecruitmentBanner from '../components/Blog/TrainerRecruitmentBanner';
 import ServiceCta from '../components/Blog/ServiceCta';
 import EmailCapture from '../components/EmailCapture/EmailCapture';
@@ -154,6 +155,7 @@ const Post = () => {
           />
         )}
       </Helmet>
+      <ScrollProgress />
       <article className="post post--article" id="blog-post">
         {/* Dark hero with post title */}
         <header className="page-hero">

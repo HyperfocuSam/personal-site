@@ -81,7 +81,7 @@
       a {
         font-size: 0.9rem;
         color: _palette(text-on-dark-muted);
-        transition: color 0.25s ease;
+        transition: color 0.25s $ease-out;
 
         &:hover {
           color: _palette(amber);
@@ -104,7 +104,7 @@
       a {
         color: _palette(text-on-dark-muted);
         font-size: 1.1rem;
-        transition: color 0.25s ease;
+        transition: color 0.25s $ease-out;
 
         &:hover {
           color: _palette(amber);

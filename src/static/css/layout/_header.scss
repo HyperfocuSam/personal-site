@@ -20,7 +20,7 @@ body {
   top: 0;
   width: 100%;
   z-index: _misc(z-index-base);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s $ease-out, box-shadow 0.3s $ease-out;
 
   // Scrolled state — glass effect
   &.scrolled {
@@ -108,16 +108,39 @@ body {
           color: _palette(text-on-dark-muted);
           padding: 0.5rem 0.75rem;
           border-radius: map-get($radius, md);
-          transition: color 0.25s ease, background-color 0.25s ease;
+          position: relative;
+          transition: color 0.25s $ease-out;
+
+          // Animated underline
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0.75rem;
+            right: 0.75rem;
+            bottom: 0.25rem;
+            height: 2px;
+            background: _palette(amber);
+            border-radius: 1px;
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform 0.25s $ease-out;
+          }
 
           &:hover {
             color: _palette(text-on-dark);
-            background-color: rgba(255, 255, 255, 0.06);
+
+            &::after {
+              transform: scaleX(1);
+            }
           }
 
-          // Active state — subtle pill highlight
+          // Active state
           &.active {
             color: _palette(amber);
+
+            &::after {
+              transform: scaleX(1);
+            }
 
             &:hover {
               color: _palette(amber-light);
@@ -141,7 +164,7 @@ body {
       font-weight: _font(weight-bold);
       padding: 0.6em 1.5em;
       border-radius: map-get($radius, md);
-      transition: background-color 0.25s ease;
+      transition: background-color 0.25s $ease-out;
 
       &:hover {
         background-color: _palette(amber-light);

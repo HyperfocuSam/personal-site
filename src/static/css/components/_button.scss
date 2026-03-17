@@ -7,7 +7,7 @@ input[type="button"],
 button,
 .button {
   appearance: none;
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s $ease-out, color 0.3s $ease-out, border-color 0.3s $ease-out, box-shadow 0.3s $ease-out, transform 0.2s $ease-out-snappy;
   cursor: pointer;
   display: inline-block;
   font-family: _font(family);

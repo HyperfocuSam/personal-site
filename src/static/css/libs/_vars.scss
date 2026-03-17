@@ -15,6 +15,10 @@ $misc: (
   z-index-base: 10000,
 );
 
+// Easing — natural deceleration curves.
+$ease-out: cubic-bezier(0.25, 1, 0.5, 1);       // default — smooth deceleration
+$ease-out-snappy: cubic-bezier(0.22, 1, 0.36, 1); // quicker settle for small UI
+
 // Duration.
 $duration: (
   fast: 0.2s,
