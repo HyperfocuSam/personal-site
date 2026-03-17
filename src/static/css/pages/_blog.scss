@@ -54,13 +54,13 @@
 
   &--methodology {
     background: _palette(tag-green);
-    color: #ffffff;
+    color: _palette(surface-overlay);
     border-color: _palette(tag-green);
   }
 
   &--framework {
     background: _palette(tag-purple);
-    color: #ffffff;
+    color: _palette(surface-overlay);
     border-color: _palette(tag-purple);
   }
 
@@ -370,7 +370,7 @@
 
 // ── Pull Quote Styling ────────────────────────────
 .pull-quote {
-  border-left: 4px solid _palette(peach);
+  border-left: 4px solid _palette(amber);
   padding: 1em 0 1em 1.5em;
   margin: 2em 0;
   font-size: 1.15em;
@@ -515,15 +515,15 @@
     }
 
     &--linkedin:hover {
-      background: #0077b5;
-      color: #ffffff;
-      border-color: #0077b5;
+      background: _palette(social-linkedin);
+      color: _palette(surface-overlay);
+      border-color: _palette(social-linkedin);
     }
 
     &--twitter:hover {
-      background: #1da1f2;
-      color: #ffffff;
-      border-color: #1da1f2;
+      background: _palette(social-twitter);
+      color: _palette(surface-overlay);
+      border-color: _palette(social-twitter);
     }
   }
 
@@ -654,7 +654,7 @@
   padding: 1.5em;
   background: _palette(surface-raised);
   border: 0;
-  border-left: 4px solid _palette(accent);
+  border-left: 4px solid _palette(amber);
   border-radius: 0 map-get($radius, xl) map-get($radius, xl) 0;
   text-align: left;
 
@@ -670,7 +670,7 @@
   padding: 1.25em;
   background: _palette(surface-raised);
   border: 0;
-  border-left: 4px solid _palette(peach);
+  border-left: 4px solid _palette(amber);
   border-radius: 0 map-get($radius, xl) map-get($radius, xl) 0;
 
   h3 {

@@ -13,7 +13,7 @@
 
 // ─── Warm cream section (Ali's yellow wash) ────────────────
 .section-warm {
-  background-color: #FDF6E8;
+  background-color: _palette(surface-warm);
 }
 
 // ─── Homepage section titles — huge editorial serif ────────
@@ -28,7 +28,7 @@
 
   em {
     font-style: italic;
-    color: _palette(peach);
+    color: _palette(amber);
   }
 
   @include breakpoint(small) {
@@ -64,7 +64,7 @@
   &__greeting {
     font-family: _font(family-heading);
     font-size: 1.5rem;
-    color: _palette(peach);
+    color: _palette(amber);
     margin-bottom: 0.75rem;
     font-weight: _font(weight-heading);
     font-style: italic;
@@ -80,7 +80,7 @@
 
     em {
       font-style: italic;
-      color: _palette(peach);
+      color: _palette(amber);
     }
 
     @include breakpoint(medium) {
@@ -117,11 +117,11 @@
     .button--outline {
       background-color: transparent;
       border: 2px solid _palette(text-primary);
-      color: _palette(text-primary) !important;
+      color: _palette(text-primary);
 
       &:hover {
         background-color: _palette(text-primary);
-        color: _palette(surface-base) !important;
+        color: _palette(surface-base);
       }
     }
   }
@@ -132,7 +132,7 @@
     width: 380px;
     height: 440px;
     position: relative;
-    background: _palette(yellow);
+    background: _palette(amber);
     border-radius: map-get($radius, xl);
     overflow: hidden;
 
@@ -184,7 +184,7 @@
   &:hover {
     transform: translateY(-4px);
     box-shadow: map-get($shadow, md);
-    color: inherit !important;
+    color: inherit;
 
     .help-card__image img {
       transform: scale(1.05);
@@ -224,7 +224,7 @@
   }
 
   &__arrow {
-    color: _palette(peach);
+    color: _palette(amber);
     font-size: 1.5rem;
     font-weight: _font(weight-bold);
     transition: transform 0.2s ease;
@@ -400,7 +400,7 @@
 
   &__card {
     background: _palette(surface-raised);
-    border-top: 3px solid _palette(peach);
+    border-top: 3px solid _palette(amber);
     border-radius: map-get($radius, xl);
     box-shadow: none;
     padding: 3rem;
@@ -449,7 +449,7 @@
       left: 1.25rem;
       font-size: 2.5rem;
       line-height: 1;
-      color: _palette(peach);
+      color: _palette(amber);
       font-family: _font(family-heading);
       opacity: 0.4;
     }
@@ -504,7 +504,7 @@
     h5 { font-size: 1rem; margin-bottom: 0.4em; }
     p { color: _palette(text-body); line-height: 1.6; margin-bottom: 0.9em; }
 
-    &--premium { border-top: 3px solid _palette(peach); }
+    &--premium { border-top: 3px solid _palette(amber); }
 
     @include breakpoint(small) {
       padding: 2.25rem;
@@ -529,7 +529,7 @@
   &:hover {
     transform: translateY(-4px);
     box-shadow: map-get($shadow, md);
-    color: inherit !important;
+    color: inherit;
   }
 
   &__logo {

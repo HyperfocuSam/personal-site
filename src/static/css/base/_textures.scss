@@ -16,7 +16,7 @@ body::before {
 
 // Hero gradient
 .hero-gradient {
-  background: linear-gradient(135deg, _palette(ink) 0%, _palette(ink-mid) 50%, #172038 100%);
+  background: linear-gradient(135deg, _palette(ink) 0%, _palette(ink-mid) 50%, _palette(ink-deep) 100%);
 }
 
 // Section band backgrounds
@@ -48,7 +48,7 @@ body::before {
     color: _palette(amber);
 
     &:hover {
-      color: _palette(amber-light) !important;
+      color: _palette(amber-light);
     }
   }
 }

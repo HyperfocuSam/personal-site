@@ -44,14 +44,14 @@
     }
 
     &__error {
-      background-color: rgba(220, 53, 69, 0.1);
-      border: 1px solid rgba(220, 53, 69, 0.3);
+      background-color: rgba(_palette(error), 0.1);
+      border: 1px solid rgba(_palette(error), 0.3);
       border-radius: map-get($radius, sm);
       padding: 0.75em 1em;
       margin-top: 1em;
 
       p {
-        color: #dc3545;
+        color: _palette(error);
         margin: 0;
         font-size: 0.9em;
       }

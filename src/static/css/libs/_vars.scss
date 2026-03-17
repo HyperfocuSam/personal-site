@@ -67,6 +67,7 @@ $palette: (
   ink: #0f1729,
   ink-mid: #1e2a45,
   ink-light: #2d3b5e,
+  ink-deep: #172038,
 
   // Amber (warm accent)
   amber: #c8965a,
@@ -111,6 +112,15 @@ $palette: (
   yellow: #FDD46B,
   yellow-subtle: rgba(253, 212, 107, 0.15),
   surface-deep: #edeae4,
+
+  // Semantic colors
+  error: #dc3545,
+  success: #2a7d4f,
+  surface-warm: #FDF6E8,
+
+  // Social brand colors
+  social-linkedin: #0077b5,
+  social-twitter: #1da1f2,
 
   // Tag colors
   tag-green: #2a7d4f,

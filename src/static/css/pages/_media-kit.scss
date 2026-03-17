@@ -5,7 +5,7 @@
   background: linear-gradient(135deg, _palette(ink) 0%, _palette(ink-mid) 100%);
   padding: 4em 2em;
   text-align: center;
-  color: #fff;
+  color: _palette(text-on-dark);
   position: relative;
   overflow: hidden;
 
@@ -31,7 +31,7 @@
     margin: 0;
     letter-spacing: -0.02em;
     line-height: 1.1;
-    color: #fff;
+    color: _palette(text-on-dark);
   }
 
   &__subtitle {
@@ -115,10 +115,10 @@
 
   &--dark {
     background: linear-gradient(135deg, _palette(ink) 0%, _palette(ink-mid) 100%);
-    color: #fff;
+    color: _palette(text-on-dark);
 
     .media-kit-section__heading {
-      color: #fff;
+      color: _palette(text-on-dark);
     }
   }
 }
@@ -314,7 +314,7 @@
 
 .media-kit-contact__value {
   font-size: 0.95em;
-  color: #fff;
+  color: _palette(text-on-dark);
   margin-bottom: 1.25em;
 }
 
@@ -336,7 +336,7 @@
   li {
     padding: 0.3em 0;
     font-size: 0.95em;
-    color: #fff;
+    color: _palette(text-on-dark);
   }
 }
 

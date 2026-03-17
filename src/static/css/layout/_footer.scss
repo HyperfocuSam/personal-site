@@ -11,7 +11,7 @@
     border-bottom: 0;
 
     &:hover {
-      color: _palette(amber-light) !important;
+      color: _palette(amber-light);
     }
   }
 
@@ -84,7 +84,7 @@
         transition: color 0.25s ease;
 
         &:hover {
-          color: _palette(amber) !important;
+          color: _palette(amber);
         }
       }
     }
@@ -107,7 +107,7 @@
         transition: color 0.25s ease;
 
         &:hover {
-          color: _palette(amber) !important;
+          color: _palette(amber);
         }
       }
     }

@@ -176,7 +176,7 @@
     &:hover {
       box-shadow: map-get($shadow, md);
       transform: translateY(-3px);
-      color: inherit !important;
+      color: inherit;
     }
   }
 

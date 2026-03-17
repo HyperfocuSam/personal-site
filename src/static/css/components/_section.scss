@@ -47,7 +47,7 @@ header {
 
     a {
       color: _palette(text-on-dark);
-      &:hover { color: _palette(amber) !important; }
+      &:hover { color: _palette(amber); }
     }
   }
 
@@ -88,7 +88,7 @@ header {
   transition: all 0.25s ease;
 
   &:hover {
-    color: _palette(amber) !important;
+    color: _palette(amber);
     border-color: _palette(amber);
     background: _palette(amber-subtle);
   }
