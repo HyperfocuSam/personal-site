@@ -46,12 +46,12 @@ textarea {
 a {
   transition: color 0.25s ease, border-bottom-color 0.25s ease;
   border-bottom: 1px solid transparent;
-  color: _palette(amber);
+  color: _palette(amber-text);
   text-decoration: none;
 
   &:hover {
     border-bottom-color: _palette(amber);
-    color: _palette(amber-light);
+    color: _palette(amber);
   }
 }
 
@@ -90,19 +90,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2.5rem;
-
-  @include breakpoint(small) {
-    font-size: 1.85rem;
-  }
+  font-size: clamp(1.85rem, 1.55rem + 1.2vw, 2.5rem);
+  line-height: 1.2;
 }
 
 h2 {
-  font-size: 1.75rem;
-
-  @include breakpoint(small) {
-    font-size: 1.4rem;
-  }
+  font-size: clamp(1.4rem, 1.2rem + 0.7vw, 1.75rem);
 }
 
 h3 {

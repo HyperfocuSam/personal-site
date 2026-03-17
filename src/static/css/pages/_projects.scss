@@ -69,7 +69,7 @@
   }
 
   &__role {
-    color: _palette(amber);
+    color: _palette(amber-text);
     font-size: 0.9rem;
     font-weight: _font(weight-medium);
     margin-bottom: 0.75rem;
@@ -103,7 +103,7 @@
   &__url {
     display: inline-flex;
     align-items: center;
-    color: _palette(amber);
+    color: _palette(amber-text);
     font-size: 0.9rem;
     font-weight: _font(weight-medium);
     text-decoration: none;
@@ -217,7 +217,7 @@
   }
 
   &__url {
-    color: _palette(amber);
+    color: _palette(amber-text);
     font-size: 0.85rem;
     font-weight: _font(weight-medium);
   }

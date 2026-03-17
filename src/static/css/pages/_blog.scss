@@ -333,6 +333,7 @@
 .post-content {
   font-size: 1.05em;
   line-height: 1.8;
+  max-width: 65ch;
   color: _palette(text-body);
 
   p {
@@ -439,7 +440,7 @@
   }
 
   &__social {
-    color: _palette(amber);
+    color: _palette(amber-text);
     border: 0;
 
     &:hover {

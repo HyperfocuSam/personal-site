@@ -76,6 +76,7 @@ $palette: (
 
   // Amber (warm accent)
   amber: #c8965a,
+  amber-text: #8a6530,   // WCAG AA on surface-base (4.8:1)
   amber-light: #d4a96e,
   amber-subtle: rgba(200, 150, 90, 0.12),
 
@@ -119,7 +120,7 @@ $palette: (
   surface-deep: #edeae4,
 
   // Semantic colors
-  error: #dc3545,
+  error: #c9303d,   // WCAG AA on surface-base (4.8:1)
   success: #2a7d4f,
   surface-warm: #FDF6E8,
 

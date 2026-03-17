@@ -174,7 +174,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: _palette(amber);
+  color: _palette(amber-text);
   margin-bottom: 0.75em;
   border-bottom: 2px solid _palette(amber);
   padding-bottom: 0.25em;
@@ -202,7 +202,7 @@
     display: inline-block;
     font-size: 0.7em;
     font-weight: 800;
-    color: _palette(amber);
+    color: _palette(amber-text);
     background: _palette(amber-subtle);
     border-radius: map-get($radius, sm);
     padding: 0.3em 0.6em;

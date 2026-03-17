@@ -30,7 +30,7 @@
   &__year {
     font-size: 0.8rem;
     font-weight: _font(weight-bold);
-    color: _palette(amber);
+    color: _palette(amber-text);
     text-transform: uppercase;
     letter-spacing: _font(kerning-meta);
   }
@@ -65,7 +65,7 @@
     display: inline-block;
     font-size: 0.8rem;
     font-weight: _font(weight-medium);
-    color: _palette(amber);
+    color: _palette(amber-text);
     background: _palette(amber-subtle);
     padding: 0.3em 0.75em;
     border-radius: map-get($radius, md);
