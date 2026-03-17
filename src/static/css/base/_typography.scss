@@ -32,14 +32,14 @@ select,
 textarea {
   color: _palette(text-body);
   font-family: _font(family);
-  font-size: 17px;
+  font-size: 1.0625rem;
   font-weight: _font(weight);
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
   @include breakpoint(small) {
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 

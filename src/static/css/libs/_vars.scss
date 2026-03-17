@@ -8,8 +8,12 @@ $misc: (
 
 // Duration.
 $duration: (
+  fast: 0.2s,
+  base: 0.25s,
+  moderate: 0.3s,
   menu: 0.35s,
-  transition: 0.25s,
+  slow: 0.4s,
+  transition: 0.25s, // legacy alias — use 'base' in new code
 );
 
 // Size.
@@ -19,6 +23,7 @@ $size: (
   section-spacing: 6rem,
   section-spacing-small: 3rem,
   menu: 20em,
+  content-form: 480px,
   content-narrow: 720px,
   content-standard: 960px,
   content-wide: 1200px,

@@ -21,8 +21,8 @@ const Navigation = () => {
   };
 
   return (
-    <header id="header" className={scrolled ? 'scrolled' : ''}>
-      <h1 className="index-link">
+    <header id="header" className={scrolled ? 'scrolled' : ''} role="banner">
+      <div className="index-link">
         {routes
           .filter((l) => l.index)
           .map((l) => (
@@ -30,7 +30,7 @@ const Navigation = () => {
               {l.label}
             </Link>
           ))}
-      </h1>
+      </div>
       <nav className="links">
         <ul>
           {routes

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import ContactIcons from '../Contact/ContactIcons';
 
 const Footer = () => (
-  <footer id="site-footer">
+  <footer id="site-footer" role="contentinfo">
     <div className="footer-inner">
       <div className="footer-col footer-brand">
         <h3>Sam Wong</h3>

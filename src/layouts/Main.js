@@ -50,9 +50,10 @@ const Main = (props) => (
         <link key={tag.lang} rel="alternate" hrefLang={tag.lang} href={ensureTrailingSlash(tag.href)} />
       ))}
     </Helmet>
+    <a className="skip-to-content" href="#main">Skip to content</a>
     <div id="wrapper">
       <Navigation />
-      <div id="main">{props.children}</div>
+      <main id="main" role="main">{props.children}</main>
       <Footer />
     </div>
   </HelmetProvider>

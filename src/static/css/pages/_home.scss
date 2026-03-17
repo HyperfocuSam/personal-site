@@ -97,7 +97,7 @@
     font-size: 1.25rem;
     line-height: 1.6;
     margin-bottom: 2.5rem;
-    max-width: 480px;
+    max-width: _size(content-form);
 
     @include breakpoint(medium) {
       margin-left: auto;
