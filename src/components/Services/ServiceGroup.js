@@ -94,8 +94,17 @@ const ServiceGroup = ({
             <div className="service-group__tiers">
               <p><strong>Choose your level of support:</strong></p>
               {service.tiers.map((tier) => (
-                <div key={tier.id} className="service-group__tier">
+                <div
+                  key={tier.id}
+                  className={`service-group__tier service-group__tier--${tier.level || 'standard'}`}
+                >
+                  {tier.badge && (
+                    <span className="service-group__tier-badge">{tier.badge}</span>
+                  )}
                   <h5>{tier.title}</h5>
+                  {tier.label && (
+                    <span className="service-group__tier-label">{tier.label}</span>
+                  )}
                   <p>{tier.description}</p>
                   <CtaButton
                     cta={tier.cta}
@@ -151,7 +160,10 @@ ServiceGroup.propTypes = {
       tiers: PropTypes.arrayOf(
         PropTypes.shape({
           id: PropTypes.string.isRequired,
+          level: PropTypes.string,
+          badge: PropTypes.string,
           title: PropTypes.string.isRequired,
+          label: PropTypes.string,
           description: PropTypes.string.isRequired,
           cta: PropTypes.string.isRequired,
           ctaLink: PropTypes.string.isRequired,

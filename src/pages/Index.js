@@ -123,8 +123,15 @@ const Index = () => (
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Revenue Path CTA — moved up, right after service options */}
       <section className="section-base section-padding-xl full-bleed">
+        <div className="content-wide">
+          <RevenuePathCTA />
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="section-sunken section-padding-xl full-bleed">
         <div className="content-wide">
           <h2 className="home-section-title">
             Trusted by
@@ -140,28 +147,14 @@ const Index = () => (
       </section>
 
       {/* Case Studies */}
-      <section className="section-sunken section-padding-xl full-bleed">
+      <section className="section-base section-padding-xl full-bleed">
         <div className="content-wide">
           <FeaturedCaseStudies limit={3} tag="case-study" />
         </div>
       </section>
 
-      {/* What I've Built */}
-      <section className="section-base section-padding-xl full-bleed">
-        <div className="content-wide">
-          <FeaturedProjects />
-        </div>
-      </section>
-
-      {/* Revenue Path CTA */}
-      <section className="section-warm section-padding-xl full-bleed">
-        <div className="content-wide">
-          <RevenuePathCTA />
-        </div>
-      </section>
-
-      {/* Where I Work */}
-      <section className="section-base section-padding-xl full-bleed">
+      {/* Where I Work + Projects (combined social proof) */}
+      <section className="section-sunken section-padding-xl full-bleed">
         <div className="content-wide">
           <h2 className="home-section-title">Where I Work</h2>
           <div className="card-grid cols-2">
@@ -196,6 +189,7 @@ const Index = () => (
               <span className="help-card__arrow">&rarr;</span>
             </a>
           </div>
+          <FeaturedProjects />
         </div>
       </section>
 

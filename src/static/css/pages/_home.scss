@@ -419,28 +419,34 @@
   &__grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 2rem;
+    gap: 1.5rem;
 
     @include breakpoint(medium) {
       grid-template-columns: 1fr;
+      max-width: 480px;
     }
   }
 
   &__card {
     background: _palette(surface-raised);
     border-radius: map-get($radius, xl);
-    box-shadow: map-get($shadow, sm);
-    padding: 3rem;
+    border: 1px solid _palette(border-subtle);
+    padding: 2rem;
     display: flex;
     flex-direction: column;
-    border: 0;
+    transition: box-shadow 0.3s $ease-out, transform 0.3s $ease-out;
 
-    h4 { font-size: 1.15rem; margin-bottom: 0.5em; }
+    &:hover {
+      box-shadow: map-get($shadow, md);
+      transform: translateY(-3px);
+    }
+
+    h4 { font-size: 1.1rem; margin-bottom: 0.4em; }
     p { color: _palette(text-body); line-height: 1.6; margin-bottom: 1.25em; flex: 1; }
     .button { align-self: flex-start; font-size: 0.85rem; }
 
     @include breakpoint(small) {
-      padding: 2.25rem;
+      padding: 1.5rem;
     }
   }
 }
@@ -509,30 +515,110 @@
   &__tiers {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 2rem;
+    gap: 1.5rem;
     margin: 1.5em 0;
+    align-items: start;
 
     > p { grid-column: 1 / -1; margin-bottom: 0; }
 
     @include breakpoint(medium) {
       grid-template-columns: 1fr;
+      max-width: 420px;
     }
   }
 
   &__tier {
-    padding: 3rem;
-    background: _palette(surface-raised);
+    position: relative;
+    padding: 1.75rem;
     border-radius: map-get($radius, xl);
-    box-shadow: none;
-    border: 0;
+    display: flex;
+    flex-direction: column;
 
-    h5 { font-size: 1rem; margin-bottom: 0.4em; }
-    p { color: _palette(text-body); line-height: 1.6; margin-bottom: 0.9em; }
+    h5 {
+      font-size: 1.05rem;
+      font-weight: _font(weight-heading-bold);
+      margin-bottom: 0.25em;
+    }
 
-    &--premium { border-left: 3px solid _palette(amber); }
+    p {
+      color: _palette(text-body);
+      line-height: 1.6;
+      margin-bottom: 1.25em;
+      flex: 1;
+    }
 
-    @include breakpoint(small) {
-      padding: 2.25rem;
+    // ── Free tier: lightweight, outlined ──
+    &--free {
+      background: transparent;
+      border: 1px solid _palette(border-strong);
+
+      h5 { color: _palette(text-primary); }
+
+      .button {
+        background: transparent;
+        border: 2px solid _palette(ink);
+        color: _palette(ink);
+
+        &:hover {
+          background: _palette(ink);
+          color: _palette(text-on-dark);
+        }
+      }
+    }
+
+    // ── Standard tier: dominant, recommended ──
+    &--standard {
+      background: _palette(ink);
+      color: _palette(text-on-dark);
+      box-shadow: map-get($shadow, lg);
+
+      h5 { color: _palette(text-on-dark); }
+      p { color: _palette(text-on-dark-muted); }
+
+      .button {
+        background: _palette(amber);
+        color: _palette(ink);
+        border: 0;
+
+        &:hover {
+          background: _palette(amber-light);
+        }
+      }
+    }
+
+    // ── Premium tier: refined, amber accent ──
+    &--premium {
+      background: _palette(surface-overlay);
+      border: 1px solid _palette(border-subtle);
+      box-shadow: map-get($shadow, sm);
+
+      h5 { color: _palette(text-primary); }
+    }
+  }
+
+  &__tier-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: _font(weight-bold);
+    text-transform: uppercase;
+    letter-spacing: _font(kerning-meta);
+    background: _palette(amber);
+    color: _palette(ink);
+    padding: 0.3em 0.75em;
+    border-radius: map-get($radius, pill);
+    margin-bottom: 0.75em;
+    align-self: flex-start;
+  }
+
+  &__tier-label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: _font(weight-medium);
+    color: _palette(text-secondary);
+    margin-bottom: 0.75em;
+
+    .service-group__tier--standard & {
+      color: _palette(text-on-dark-muted);
     }
   }
 
