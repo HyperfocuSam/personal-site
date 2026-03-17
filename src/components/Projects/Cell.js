@@ -1,45 +1,49 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import dayjs from 'dayjs';
-import OptimizedImage from '../Template/OptimizedImage';
 
 const Cell = ({ data }) => (
-  <div className="cell-container">
-    <article className="mini-post">
-      {data.link ? (
-        <a href={data.link} className="image">
-          <OptimizedImage src={data.image} alt={data.title} />
-        </a>
-      ) : (
-        <span className="image">
-          <OptimizedImage src={data.image} alt={data.title} />
-        </span>
-      )}
-      <header>
-        <h3>
-          {data.link ? (
-            <a href={data.link}>{data.title}</a>
-          ) : (
-            <span>{data.title}</span>
-          )}
-        </h3>
-        <time className="published">
-          {dayjs(data.date).format('MMMM, YYYY')}
-        </time>
-      </header>
-      <div className="description">
-        <p>{data.desc}</p>
+  <article className="project-card">
+    <div className="project-card__content">
+      <div className="project-card__header">
+        <h3>{data.title}</h3>
+        {data.status === 'live' && (
+          <span className="project-card__status">
+            <span className="project-card__status-dot" />
+            LIVE
+          </span>
+        )}
       </div>
-    </article>
-  </div>
+      <p className="project-card__role">{data.role}</p>
+      <p className="project-card__desc">{data.desc}</p>
+      {data.tech && data.tech.length > 0 && (
+        <div className="project-card__tech">
+          {data.tech.map((tag) => (
+            <span key={tag} className="project-card__tech-tag">{tag}</span>
+          ))}
+        </div>
+      )}
+      <a
+        href={data.link}
+        className="project-card__url"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {data.url}
+        <span>&nbsp;&rarr;</span>
+      </a>
+    </div>
+  </article>
 );
 
 Cell.propTypes = {
   data: PropTypes.shape({
     title: PropTypes.string.isRequired,
-    link: PropTypes.string,
-    image: PropTypes.string.isRequired,
+    role: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
+    status: PropTypes.string.isRequired,
+    tech: PropTypes.arrayOf(PropTypes.string),
     desc: PropTypes.string.isRequired,
   }).isRequired,
 };

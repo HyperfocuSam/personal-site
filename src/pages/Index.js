@@ -13,6 +13,7 @@ import ClientLogoBar from '../components/Home/ClientLogoBar';
 import FeaturedCaseStudies from '../components/Home/FeaturedCaseStudies';
 import EmailCapture from '../components/EmailCapture/EmailCapture';
 import RevenuePathCTA from '../components/Home/RevenuePathCTA';
+import FeaturedProjects from '../components/Home/FeaturedProjects';
 
 const Index = () => (
   <Main
@@ -142,6 +143,13 @@ const Index = () => (
       <section className="section-sunken section-padding-xl full-bleed">
         <div className="content-wide">
           <FeaturedCaseStudies limit={3} tag="case-study" />
+        </div>
+      </section>
+
+      {/* What I've Built */}
+      <section className="section-base section-padding-xl full-bleed">
+        <div className="content-wide">
+          <FeaturedProjects />
         </div>
       </section>
 

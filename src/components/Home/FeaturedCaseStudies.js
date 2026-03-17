@@ -4,9 +4,6 @@ import { Link } from 'react-router-dom';
 import dayjs from 'dayjs';
 
 import posts from '../../data/posts';
-import OptimizedImage from '../Template/OptimizedImage';
-
-const { PUBLIC_URL } = process.env;
 
 const FeaturedCaseStudies = ({ limit, tag }) => {
   const caseStudies = posts
@@ -27,20 +24,6 @@ const FeaturedCaseStudies = ({ limit, tag }) => {
       <div className="home-case-studies__grid">
         {caseStudies.map((post) => (
           <article key={post.slug} className="home-case-studies__card">
-            {post.image && (
-              <Link to={`/blog/${post.slug}`} className="home-case-studies__image-link">
-                <div className="home-case-studies__image-wrap">
-                  <OptimizedImage
-                    src={`${PUBLIC_URL}${post.image}`}
-                    alt={post.title}
-                    className="home-case-studies__image"
-                    width={1200}
-                    height={675}
-                    loading="lazy"
-                  />
-                </div>
-              </Link>
-            )}
             <div className="home-case-studies__content">
               <h4>
                 <Link to={`/blog/${post.slug}`}>{post.title}</Link>

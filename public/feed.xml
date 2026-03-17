@@ -6,7 +6,21 @@
     <description>AI adoption insights, workshop reflections, and practical AI training tips from Sam Wong.</description>
     <language>en</language>
     <atom:link href="https://hyperfocusam.com/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon, 16 Mar 2026 19:46:04 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 17 Mar 2026 02:20:18 GMT</lastBuildDate>
+    <item>
+      <title>What Nobody Tells You About Building Agentic AI</title>
+      <link>https://hyperfocusam.com/blog/what-nobody-tells-you-building-agentic-ai/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/what-nobody-tells-you-building-agentic-ai/</guid>
+      <description>I built a multi-agent AI system from scratch -- four specialists, a team router, persistent memory, and streaming UX. Here are five things the framework docs don't cover.</description>
+      <pubDate>Mon, 16 Mar 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>起一個 Agentic AI 系統學到既五件事</title>
+      <link>https://hyperfocusam.com/blog/zh-agentic-ai-five-lessons/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/zh-agentic-ai-five-lessons/</guid>
+      <description>由零起一個 multi-agent AI 系統到 production deploy，五個最深刻既體會：orchestration、memory、agentic UX、文化偏見、同 80/20 法則。</description>
+      <pubDate>Mon, 16 Mar 2026 00:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>I Rebuilt My Entire SEO in One Day. Here's What Actually Moved the Needle.</title>
       <link>https://hyperfocusam.com/blog/seo-rebuild-one-day-claude-code/</link>
