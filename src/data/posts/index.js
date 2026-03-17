@@ -5,6 +5,27 @@
 // linkedPost: slug of the corresponding post in another language (for hreflang)
 const posts = [
   {
+    slug: 'what-nobody-tells-you-building-agentic-ai',
+    title: 'What Nobody Tells You About Building Agentic AI',
+    date: '2026-03-16',
+    excerpt: 'I built a multi-agent AI system from scratch -- four specialists, a team router, persistent memory, and streaming UX. Here are five things the framework docs don\'t cover.',
+    tags: ['ai-adoption', 'agents', 'developer-tools', 'methodology'],
+    type: 'insight',
+    featured: false,
+    linkedPost: 'zh-agentic-ai-five-lessons',
+  },
+  {
+    slug: 'zh-agentic-ai-five-lessons',
+    title: '起一個 Agentic AI 系統學到既五件事',
+    date: '2026-03-16',
+    excerpt: '由零起一個 multi-agent AI 系統到 production deploy，五個最深刻既體會：orchestration、memory、agentic UX、文化偏見、同 80/20 法則。',
+    tags: ['ai-adoption', 'agents', 'developer-tools', 'methodology'],
+    type: 'insight',
+    language: 'zh-Hant',
+    featured: false,
+    linkedPost: 'what-nobody-tells-you-building-agentic-ai',
+  },
+  {
     slug: 'seo-rebuild-one-day-claude-code',
     title: 'I Rebuilt My Entire SEO in One Day. Here\'s What Actually Moved the Needle.',
     date: '2026-03-15',
