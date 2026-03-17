@@ -5,6 +5,15 @@
 // linkedPost: slug of the corresponding post in another language (for hreflang)
 const posts = [
   {
+    slug: 'agent-adoption-ladder',
+    title: 'The Agent Adoption Ladder: What Most People Get Wrong About AI Agents',
+    date: '2026-03-17',
+    excerpt: 'I taught my non-technical co-founder about AI agents. What came out is a four-tier framework for matching the right agent tool to how you actually work — from chatbots to multi-agent orchestration.',
+    tags: ['ai-adoption', 'agents', 'framework', 'enterprise'],
+    type: 'framework',
+    featured: true,
+  },
+  {
     slug: 'what-nobody-tells-you-building-agentic-ai',
     title: 'What Nobody Tells You About Building Agentic AI',
     date: '2026-03-16',
