@@ -1,7 +1,9 @@
 /* Page base */
 
-@-ms-viewport {
-  width: device-width;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {

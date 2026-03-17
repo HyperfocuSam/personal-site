@@ -400,15 +400,12 @@
 
   &__card {
     background: _palette(surface-raised);
-    border-top: 3px solid _palette(amber);
     border-radius: map-get($radius, xl);
-    box-shadow: none;
+    box-shadow: map-get($shadow, sm);
     padding: 3rem;
     display: flex;
     flex-direction: column;
-    border-left: 0;
-    border-right: 0;
-    border-bottom: 0;
+    border: 0;
 
     h4 { font-size: 1.15rem; margin-bottom: 0.5em; }
     p { color: _palette(text-body); line-height: 1.6; margin-bottom: 1.25em; flex: 1; }
@@ -504,7 +501,7 @@
     h5 { font-size: 1rem; margin-bottom: 0.4em; }
     p { color: _palette(text-body); line-height: 1.6; margin-bottom: 0.9em; }
 
-    &--premium { border-top: 3px solid _palette(amber); }
+    &--premium { border-left: 3px solid _palette(amber); }
 
     @include breakpoint(small) {
       padding: 2.25rem;

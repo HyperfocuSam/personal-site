@@ -1,6 +1,15 @@
 // Design System: hyperfocusam.com Visual Redesign
 // Atmosphere: "Warm study at dusk"
 
+// Breakpoints.
+$breakpoints: (
+  xlarge: "(max-width: 1680px)",
+  large: "(max-width: 1280px)",
+  medium: "(max-width: 980px)",
+  small: "(max-width: 736px)",
+  xsmall: "(max-width: 480px)",
+);
+
 // Misc.
 $misc: (
   z-index-base: 10000,
@@ -99,25 +108,6 @@ $palette: (
 
   // Shadows (navy-tinted)
   shadow-color: rgba(15, 23, 41, 0.08),
-
-  // Legacy mappings (for Skel compatibility — avoids breaking functions that use old keys)
-  bg: #f6f4f0,
-  bg-alt: #f6f4f0,
-  fg: #3d3f4e,
-  fg-bold: #1a1d2b,
-  fg-light: #6b6d7a,
-  border: #e5e2db,
-  border-bg: #edeae4,
-  border-alt: #d0cdc5,
-  accent: #c8965a,
-
-  // Deprecated aliases (map old names to new values — remove as files are rewritten)
-  peach: #c8965a,
-  peach-light: #d4a96e,
-  peach-subtle: rgba(200, 150, 90, 0.12),
-  yellow: #FDD46B,
-  yellow-subtle: rgba(253, 212, 107, 0.15),
-  surface-deep: #edeae4,
 
   // Semantic colors
   error: #c9303d,   // WCAG AA on surface-base (4.8:1)
