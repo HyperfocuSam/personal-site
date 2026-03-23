@@ -6,7 +6,14 @@
     <description>AI adoption insights, workshop reflections, and practical AI training tips from Sam Wong.</description>
     <language>en</language>
     <atom:link href="https://hyperfocusam.com/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 17 Mar 2026 08:33:08 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 17 Mar 2026 18:22:41 GMT</lastBuildDate>
+    <item>
+      <title>The Agent Adoption Ladder: What Most People Get Wrong About AI Agents</title>
+      <link>https://hyperfocusam.com/blog/agent-adoption-ladder/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/agent-adoption-ladder/</guid>
+      <description>I taught my non-technical co-founder about AI agents. What came out is a four-tier framework for matching the right agent tool to how you actually work — from chatbots to multi-agent orchestration.</description>
+      <pubDate>Tue, 17 Mar 2026 00:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>What Nobody Tells You About Building Agentic AI</title>
       <link>https://hyperfocusam.com/blog/what-nobody-tells-you-building-agentic-ai/</link>

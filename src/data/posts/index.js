@@ -5,6 +5,15 @@
 // linkedPost: slug of the corresponding post in another language (for hreflang)
 const posts = [
   {
+    slug: 'ai-change-management-what-actually-works',
+    title: 'AI Change Management: What Actually Works (A Field Report From 70+ Organizations)',
+    date: '2026-03-23',
+    excerpt: 'Most companies approach AI adoption like a software rollout. After training 3,000+ professionals across 70+ organizations, here is what actually drives lasting behavior change.',
+    tags: ['ai-adoption', 'change-management', 'enterprise', 'methodology'],
+    type: 'methodology',
+    featured: false,
+  },
+  {
     slug: 'agent-adoption-ladder',
     title: 'The Agent Adoption Ladder: What Most People Get Wrong About AI Agents',
     date: '2026-03-17',
