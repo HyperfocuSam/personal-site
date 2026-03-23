@@ -1,160 +1,124 @@
-# Sam Wong — Full Profile
+# Sam Wong — AI Training Specialist
 
-> AI Training Specialist based in Hong Kong. Co-founder of Adaptig. Founding member of DotAI. 10,000+ professionals trained across 70+ organizations.
+> AI adoption training for enterprise teams. 10,000+ professionals trained across 70+ organizations. Based in Hong Kong, available globally.
 
----
-
-## Biography
-
-Sam Wong is an AI training specialist who helps enterprises and individuals adopt AI in practical, human-first ways. His focus is behavior change, not tool hype.
-
-Sam grew up with ADHD but did not know it until his mid-20s. As a history graduate from the Chinese University of Hong Kong working as an executive assistant, he spent years feeling like he was constantly fighting his own brain. When he found AI and automation, what started as tools to manage his own challenges became a mission to help others discover what is possible when the right support meets the right tools.
-
-His career moved from Executive Assistant roles at FAO Schwarz and Sharper Image to AI Product Manager and AI Team Lead at RENPHO, where he built an AI division from scratch. He learned a simple truth: adoption is rarely a tool problem — it is a people problem. Skills matter, but psychological safety is what gets people to start.
-
-Sam co-founded Adaptig (Animo Technology Limited), a global AI trainer network spanning North America, Latin America, Europe, and Asia-Pacific. He is also a founding member of DotAI, Hong Kong's practical AI training community, serving enterprise clients including HSBC, Bank of China (Hong Kong), and Chow Tai Fook.
-
-### Core Beliefs
-
-- **Humans are the point.** AI is a tool. The goal is meaningful work.
-- **Start with the smallest step.** Small wins compound into real change.
-- **Psychological safety comes first.** People do not adopt what they fear.
-- **Frameworks beat features.** Tools change. Thinking patterns endure.
+Website: https://hyperfocusam.com
+Services: https://hyperfocusam.com/services
+Contact: sam@adaptig.com
 
 ---
+
+## About
+
+Sam Wong is an AI training specialist who has trained over 10,000 professionals across 70+ organizations in banking, retail, education, engineering, and technology. He co-founded Adaptig (Animo Technology Limited), a global AI trainer network, and is a founding member of DotAI, Hong Kong's practical AI training community. His approach focuses on behavior change over tool awareness, emphasizing psychological safety and practical workflow integration. He holds a Master of Arts from the Chinese University of Hong Kong.
 
 ## Services
 
-### For Organizations
+- **Corporate AI Workshops** (via Adaptig): Half-day to multi-day workshops for leadership teams and departments. Clients include Bank of China, Chow Tai Fook, Hong Kong Jockey Club, HSBC, Arup, and PolyU.
+- **AI Pioneer Programs**: 6-session cohort programs that build lasting AI habits through weekly guided practice on real work tasks.
+- **1-1 AI Coaching**: 160+ sessions delivered. Discovery calls, standard coaching, and executive advisory tiers.
+- **Train-the-Trainer** (via Adaptig): Certification for trainers spanning North America, Latin America, Europe, and Asia-Pacific.
+- **Keynotes and Events**: Executive briefings, panel discussions, conference workshops.
 
-**Adaptig Workshops**
-Best for leadership teams and departments that need AI adoption, not just awareness. Human-first facilitation that lowers fear and builds confidence, hands-on exercises tied to real workflows, practical use cases teams can apply immediately, and follow-through guidance to turn learning into habit.
+## Named Frameworks
 
-**Corporate AI Training (DotAI)**
-Best for organizations that need role-specific training and measurable outcomes. Designed for compliance-heavy or high-accountability environments. Department-specific use cases people can use by the next week.
+- **Traffic Light Protocol**: Green/Yellow/Red data sensitivity framework for AI safety in regulated industries (developed with Bank of China HK)
+- **AI Pioneer Model**: Multi-session cohort approach using change management principles — select 10-20 influential people, train them deeply, they become internal champions
+- **70/30 Human-AI Split**: 70% human judgment, 30% AI assistance — the ratio that produces sustainable adoption
+- **AI Maturity Model**: 4-stage progression from Awareness to Integration to Optimization to Transformation
+- **IPA Framework**: Strategy, structure, and execution model for building AI workflows
+- **C-How Thinking**: Bridges left-brain logic and right-brain creativity through AI tools (developed with Arup)
 
-**Keynotes and Events**
-Available in 30-60 minute keynotes, executive briefings, panel conversations and Q&A, and hands-on conference workshops. Best for events where you need clear signal, practical examples, and audience engagement.
-
-**AI Pioneer Programs**
-Multi-session cohort programs (typically 6 sessions over 6 weeks) designed around change management principles. Instead of teaching everyone at once, a small group of 10-20 curious, influential people are trained deeply. They become internal champions who pull everyone else forward. Proven to save participants 5-8 hours per week.
-
-### For Individuals
-
-**1-1 AI Coaching**
-Personalized sessions for professionals who want direct support applying AI to real work. No generic curriculum — sessions start from the individual's current role, tools, and constraints. Three tiers: free 30-minute discovery call, standard 60-90 minute coaching sessions focused on active projects, and premium executive AI advisory for leaders navigating transformation decisions. 150+ sessions delivered across industries and roles.
-
-### For Trainers
-
-**Train-the-Trainer Program (Adaptig)**
-Certification and recruitment path for trainers, consultants, HR leaders, and educators who want to teach AI with confidence. Includes the Adaptig facilitation methodology, complete workshop materials and delivery structure, trainer community and delivery support, certification, and ongoing delivery opportunities. Global network across four continents.
-
----
-
-## Named Frameworks and Methodologies
-
-### ACE Framework
-Developed with PolyU's finance team. A three-layer model for building sustainable AI workflows: Assess (identify tasks worth automating), Create (build the AI-assisted workflow), Execute (deploy and iterate). Transforms tool users into process designers.
-
-### C-How Thinking
-Developed during a lunch-and-learn with 50 Arup engineers. Bridges left-brain analytical logic and right-brain creativity through AI tools like Microsoft Copilot and Canva. Named as a play on "know-how" — the C represents Creativity, Curiosity, and Collaboration.
-
-### AI Three-Part Framework
-A simple mental model introduced to 400 HKCT educators that moves people from skepticism to experimentation in 75 minutes. Three parts: (1) What AI actually is (demystification), (2) What it can do for your role (relevance), (3) How to start safely (action).
-
-### Traffic Light Protocol
-A data sensitivity framework developed for regulated industries during the Bank of China (Hong Kong) engagement. Green = public information, go ahead. Yellow = internal documents, proceed with caution, strip identifiers. Red = customer PII, financial records, strategic data, full stop. Designed for instant decision-making without checking documentation.
-
-### AI Pioneer Model
-A change management approach to AI adoption. Instead of one-off workshops, select 10-20 "Pioneers" — curious, influential people willing to experiment. Train them deeply over weeks, not hours. They become internal champions. Used successfully with Garden Group HR (19 participants, 6 sessions, Copilot-only tooling, real work tasks only).
-
-### 70/30 Human-AI Split
-A collaboration principle: humans retain 70% ownership of the thinking and decision-making, while AI handles 30% (repetitive tasks, first drafts, information triage). Prevents over-reliance while maximizing productivity gains.
-
----
-
-## Case Studies (Selected)
-
-### Bank of China (Hong Kong) — 1,530 Participants Across 13 Countries
-Delivered a series of AI training workshops for BOCHK staff spanning 13 countries. The first session alone had 617 people simultaneously online. Developed the Traffic Light Protocol for data sensitivity. Key insight: spending the first 20 minutes on safety didn't slow things down — it accelerated adoption because participants stopped second-guessing themselves. Satisfaction rating: 9.2/10.
-
-### Chow Tai Fook — Three Repeat Engagements
-Trained the world's largest jewelry retailer on AI x Design Thinking. Cross-functional teams competed to create Go-To-Market campaigns using AI tools in a hackathon format. The third engagement (January 2026) combined AI tools with design thinking methodology.
-
-### Garden Group HR — 6-Session AI Pioneer Program
-Designed and delivered a 6-session AI Pioneer Program for 19 HR professionals. Copilot-only tooling within existing Microsoft 365 security boundary. Real work tasks every session (recruitment policies, weekly reports, meeting summaries). Participants saved 5-8 hours per week. The program proved that multi-session cohorts outperform one-off workshops for behavior change.
-
-### HKCT — 400 Educators in 75 Minutes
-Introduced the AI Three-Part Framework to 400 educators at Hong Kong College of Technology. Moved the audience from skepticism to experimentation in a single keynote-format session.
-
-### Arup — 50 Engineers, 45 Minutes
-Introduced C-How Thinking at a lunch-and-learn for 50 Arup engineers, bridging analytical logic with creative AI use through Copilot and Canva.
-
-### PolyU Finance Team — Building Sustainable AI Workflows
-Built the ACE Framework with PolyU's finance office. Transformed tool users into process designers who could build their own AI-assisted workflows.
-
-### Hong Kong Jockey Club — Management Trainees
-Trained HKJC Management Trainees on AI business communication through a three-layer prompt framework — from precision to structure to context.
-
-### China Travel Service — Tourism Executives
-Designed management-level AI training focusing on China-native tools (Doubao, Kimi) and the 80/20 human-AI collaboration principle.
-
----
-
-## Media Appearances
-
-### Club 80 (YouTube)
-Sam has appeared as a recurring guest expert on Club 80 (會八十), a popular Cantonese YouTube show hosted by 阿Bu, 陳強, and Greg. Three episodes, 98,000+ combined views.
-
-- **Episode 012** (May 2025): "How Can AI Save You?" — 64,000+ views. Sam shared three core principles for using AI and demonstrated live how to use AI to decline a friend's loan request.
-- **Episode 024** (June 2025): "Why Pay for AI Tools?" — 34,000+ views, 944+ likes. Discussed three myths about AI tools, explained o3 vs 4o, and revealed hidden features most paid users miss.
-- **Episode 049** (August 2025): "3 AI Tools for Focus and Productivity" — Shared three AI tools for saving focus and boosting productivity.
-
----
-
-## Statistics
+## Key Results
 
 - 10,000+ professionals trained
-- 70+ organizations supported
-- 160+ one-on-one coaching sessions delivered
 - 180+ workshops delivered
-- 9.2/10 average workshop satisfaction rating
-- 13 countries reached (through BOCHK engagement alone)
-- 6 sectors served: banking, retail, education, engineering, technology, tourism
-- 98,000+ YouTube views across media appearances
-- 40+ published articles on AI adoption
+- 70+ organizations served
+- 13 countries reached
+- 9.2/10 average satisfaction rating
+- Bank of China (Hong Kong): 1,530 participants across 13 countries
+- Chow Tai Fook: 3 repeat engagements
+- 160+ one-on-one coaching sessions
 
 ---
 
-## Blog Topics and Thought Leadership
+## Blog Articles
 
-Sam publishes regularly on AI adoption, covering:
+### Case Studies
 
-- Enterprise AI adoption strategy and maturity models
-- The gap between manager expectations and worker training (70% of managers want AI training, only 14% of workers get it)
-- Why IT departments are the biggest AI adoption bottleneck
-- The skill formation problem — whether AI makes people worse at their jobs
-- Why teaching Microsoft Copilot instead of ChatGPT works better for enterprises
-- Prompt engineering research (35 strategies tested, "be creative" is least effective)
-- AI agents and the future of knowledge work
-- The AI tool stack used to train 3,000 professionals a year
-- Why most corporate AI training fails to produce lasting behavior change
-- How to evaluate and choose corporate AI training providers
-- Microsoft Copilot training and adoption strategies for enterprises
-- Hong Kong government AI funding and the 2026 Budget impact on corporate training
+- [What 1,500 Banking Professionals Taught Me About AI Adoption](https://hyperfocusam.com/blog/bochk-banking-ai-training/) (2025-11-15) — Training Bank of China (Hong Kong) across 13 countries. Safety frameworks, workflow integration, 70/30 split.
+- [Training the World's Largest Jewelry Retailer on AI x Design Thinking](https://hyperfocusam.com/blog/ctf-ai-design-thinking-workshop-2026/) (2026-01-17) — Third workshop with Chow Tai Fook. Cross-functional hackathon format.
+- [How 400 Educators Changed Their Minds About AI in 75 Minutes](https://hyperfocusam.com/blog/hkct-ai-education-workshop/) (2025-04-27) — AI Three-Part Framework at HKCT.
+- [Teaching Hong Kong Jockey Club's Future Leaders to Think in Prompts](https://hyperfocusam.com/blog/hkjc-mt-ai-training/) (2025-04-26) — Three-layer prompt framework for Management Trainees.
+- [How to Design a 6-Session AI Pioneer Program That Actually Changes Behavior](https://hyperfocusam.com/blog/how-to-design-ai-pioneer-program/) (2026-03-04) — 19 HR professionals, Copilot-only, 5-8 hours/week saved.
+- [Teaching Tourism Executives to Think Like AI Strategists](https://hyperfocusam.com/blog/cts-tourism-ai-training/) (2025-07-20) — China Travel Service management-level training.
+- [How PolyU's Finance Team Built an AI Workflow That Actually Works](https://hyperfocusam.com/blog/polyu-finance-ai-workflow/) (2025-05-15) — ACE framework for university finance.
+- [What Happens When 50 Engineers Get 45 Minutes with AI](https://hyperfocusam.com/blog/arup-ai-lunch-learn/) (2025-03-28) — C-How Thinking at Arup.
+- [What Happens When a Toy Company Takes AI Seriously](https://hyperfocusam.com/blog/playmates-toys-ai-training/) (2026-02-09) — Playmates Toys HK executive AI training.
+- [Teaching a Utility Company the 7 Levels of AI Agents](https://hyperfocusam.com/blog/clp-ai-agent-automation/) (2025-12-23) — CLP agent framework training.
+- [Building AI Habits That Stick: A 4-Module Experiment](https://hyperfocusam.com/blog/dorich-ai-efficiency-workshop/) (2025-04-02) — 4-module workshop design.
+- [What 118 Minutes With an E-Commerce Team Revealed About AI Adoption Gaps](https://hyperfocusam.com/blog/renpho-ecommerce-ai-shenzhen/) (2026-03-11) — Shenzhen visit, model selection gap.
 
-All articles available at: https://hyperfocusam.com/blog
+### Methodologies & Frameworks
+
+- [AI Change Management: What Actually Works](https://hyperfocusam.com/blog/ai-change-management-what-actually-works/) (2026-03-23) — Field report from 70+ organizations on lasting behavior change.
+- [Why AI Training Doesn't Stick (And What Actually Works)](https://hyperfocusam.com/blog/why-ai-training-doesnt-stick/) (2026-03-15) — Three patterns that kill AI training effectiveness.
+- [The Traffic Light Protocol: How I Teach AI Safety in 15 Minutes](https://hyperfocusam.com/blog/traffic-light-protocol-ai-safety/) (2026-03-12) — 3-color data classification for regulated industries.
+- [Microsoft Copilot Training for Hong Kong Companies: What Actually Works](https://hyperfocusam.com/blog/microsoft-copilot-training-hong-kong/) (2026-03-15) — Why adoption is low and how to fix it.
+- [Why I Teach Copilot Instead of ChatGPT in Enterprise Workshops](https://hyperfocusam.com/blog/why-i-teach-copilot-not-chatgpt/) (2025-12-30) — Enterprise tool selection rationale.
+- [The AI Tool Stack I Use to Train 3,000 Professionals a Year](https://hyperfocusam.com/blog/ai-tool-stack-3000-professionals/) (2025-12-22) — Complete tool stack across industries.
+
+### Insights & Commentary
+
+- [The Agent Adoption Ladder: What Most People Get Wrong About AI Agents](https://hyperfocusam.com/blog/agent-adoption-ladder/) (2026-03-17) — Four-tier framework from chatbots to multi-agent orchestration.
+- [What Nobody Tells You About Building Agentic AI](https://hyperfocusam.com/blog/what-nobody-tells-you-building-agentic-ai/) (2026-03-16) — Five lessons from building a multi-agent system.
+- [How to Choose Corporate AI Training in Hong Kong (2026 Guide)](https://hyperfocusam.com/blog/how-to-choose-ai-training-hong-kong/) (2026-03-15) — Honest comparison framework.
+- [What the 2026 Budget's HK$50 Million AI Training Push Actually Means](https://hyperfocusam.com/blog/hk-2026-budget-ai-training/) (2026-03-14) — Policy analysis for corporate training.
+- [What 1,400 People Taught Me About the Gap Between AI Demos and AI Adoption](https://hyperfocusam.com/blog/openclaw-ai-agents-talk/) (2026-03-12) — Live talk insights.
+- [The AI Maturity Trap: Why Most Companies Are Stuck at Stage 1](https://hyperfocusam.com/blog/ai-maturity-trap-stuck-stage-one/) (2026-01-20) — 4-stage maturity model.
+- [AI Agents Are Coming for Knowledge Work: A Trainer's Field Notes](https://hyperfocusam.com/blog/ai-agents-knowledge-work-field-notes/) (2026-01-27) — Enterprise agentic workflow reality check.
+- [84% of People Have Never Used AI. That's Your Competitive Advantage.](https://hyperfocusam.com/blog/84-percent-never-used-ai/) (2026-02-03) — Market opportunity analysis.
+- [Stop Telling AI to 'Be Creative': What 35 Prompting Strategies Actually Reveal](https://hyperfocusam.com/blog/stop-telling-ai-be-creative/) (2026-02-10) — Wharton research on prompting.
+- [Why Your IT Department Is Your Biggest AI Adoption Bottleneck](https://hyperfocusam.com/blog/it-department-ai-adoption-bottleneck/) (2026-02-17) — IT as gatekeeper vs enabler.
+- [The AI Training Gap: 70% of Managers Want It, 14% of Workers Get It](https://hyperfocusam.com/blog/ai-training-gap-managers-vs-workers/) (2026-02-24) — Workforce training gap analysis.
+- [When the CEO Learns to Code: What AI Means for Leadership](https://hyperfocusam.com/blog/when-ceo-learns-to-code-ai/) (2026-01-13) — Leadership and AI coding tools.
+- [The Skill Formation Problem: Is AI Making Us Worse at Our Jobs?](https://hyperfocusam.com/blog/ai-skill-formation-problem/) (2026-01-06) — Research on AI and skill development.
+- [Why Free AI Isn't Enough: The Case for Paying for AI Tools](https://hyperfocusam.com/blog/why-pay-for-ai-tools/) (2025-06-15) — Paid vs free tool analysis.
+- [I Rebuilt My Entire SEO in One Day. Here's What Actually Moved the Needle.](https://hyperfocusam.com/blog/seo-rebuild-one-day-claude-code/) (2026-03-15) — Claude Code for SEO/GEO.
+
+### Personal & Productivity
+
+- [5 AI Prompts That Actually Help With Procrastination](https://hyperfocusam.com/blog/ai-prompts-beat-procrastination/) (2026-03-14) — Viral prompts with ADHD insight.
+- [3 AI Tools That Saved My Focus (And Can Save Yours)](https://hyperfocusam.com/blog/3-ai-tools-save-focus/) (2025-08-10) — Information triage, meeting recovery, structured thinking.
+- [I Built a Voice Mode for Claude Code Because I Can't Read](https://hyperfocusam.com/blog/i-built-voice-mode-claude-code/) (2026-03-07) — ADHD accessibility plugin.
+- [I Built an RTK-Style Strategy Game on Top of My AI Workflow](https://hyperfocusam.com/blog/ada-gersang-gamifying-claude-code/) (2026-03-07) — Gamification of AI tool usage.
+- [What My AI Drew When I Asked What's in Its Mind](https://hyperfocusam.com/blog/what-my-ai-drew-when-i-asked/) (2026-03-06) — AI art experiment after 200 sessions.
+
+### Chinese (Traditional) Articles
+
+- [起一個 Agentic AI 系統學到既五件事](https://hyperfocusam.com/blog/zh-agentic-ai-five-lessons/) (2026-03-16) — Multi-agent AI 系統實戰體會
+- [5 條真係有用既 AI Prompt 打低拖延症](https://hyperfocusam.com/blog/zh-ai-prompts-beat-procrastination/) (2026-03-14) — AI prompt 打低拖延症
+- [我點同 AI 傾偈：一個鐘由零到自動 YouTube 頻道](https://hyperfocusam.com/blog/zh-chillpo-how-i-talk-to-ai/) (2026-03-11) — AI 協作 session 全紀錄
+- [三個拯救專注力嘅 AI 工具](https://hyperfocusam.com/blog/zh-3-ai-tools-save-focus/) (2025-08-10) — AI 工具幫助專注力
+- [點解免費AI唔夠用](https://hyperfocusam.com/blog/zh-why-pay-for-ai-tools/) (2025-06-15) — 課金實戰經驗
 
 ---
 
-## Contact
+## Key Pages
 
-- **Email:** sam@adaptig.com
-- **Website:** https://hyperfocusam.com
-- **LinkedIn:** https://linkedin.com/in/sam-ai-agent/
-- **X/Twitter:** https://x.com/HyperfocuSam
-- **Threads:** https://threads.net/@sam_ai_cbo
-- **GitHub:** https://github.com/HyperfocuSam
-- **Location:** Hong Kong (available globally and across Asia-Pacific)
-- **Languages:** English, Cantonese
-- **Booking:** https://ro.am/samwong/
+- [Corporate AI Training Hong Kong](https://hyperfocusam.com/corporate-ai-training-hong-kong/) — Pillar page with methodologies, case studies, FAQ, and government funding info
+- [Services](https://hyperfocusam.com/services/) — Full service catalog with coaching tiers and Train-the-Trainer
+- [About](https://hyperfocusam.com/about/) — Biography, career path, frameworks, and credentials
+- [Clients](https://hyperfocusam.com/clients/) — Enterprise client list with industry breakdown
+- [Testimonials](https://hyperfocusam.com/testimonials/) — Client feedback and satisfaction data
+- [Speaking](https://hyperfocusam.com/speaking/) — Keynotes and event appearances
+- [Contact](https://hyperfocusam.com/contact/) — Booking and inquiry
+
+## Links
+
+- Adaptig: https://adaptig.ai
+- DotAI: https://dotai.hk
+- LinkedIn: https://linkedin.com/in/sam-ai-agent/
+- Substack: https://wongsam.substack.com
+- GitHub: https://github.com/HyperfocuSam
+- X/Twitter: https://x.com/HyperfocuSam

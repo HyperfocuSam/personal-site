@@ -6,7 +6,14 @@
     <description>AI adoption insights, workshop reflections, and practical AI training tips from Sam Wong.</description>
     <language>en</language>
     <atom:link href="https://hyperfocusam.com/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 17 Mar 2026 18:22:41 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 23 Mar 2026 14:40:17 GMT</lastBuildDate>
+    <item>
+      <title>AI Change Management: What Actually Works (A Field Report From 70+ Organizations)</title>
+      <link>https://hyperfocusam.com/blog/ai-change-management-what-actually-works/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/ai-change-management-what-actually-works/</guid>
+      <description>Most companies approach AI adoption like a software rollout. After training 3,000+ professionals across 70+ organizations, here is what actually drives lasting behavior change.</description>
+      <pubDate>Mon, 23 Mar 2026 00:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>The Agent Adoption Ladder: What Most People Get Wrong About AI Agents</title>
       <link>https://hyperfocusam.com/blog/agent-adoption-ladder/</link>
