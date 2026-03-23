@@ -11,6 +11,7 @@ const posts = [
     excerpt: 'Most companies approach AI adoption like a software rollout. After training 3,000+ professionals across 70+ organizations, here is what actually drives lasting behavior change.',
     tags: ['ai-adoption', 'change-management', 'enterprise', 'methodology'],
     type: 'methodology',
+    image: '/images/blog/ai-change-management-cover.png',
     featured: false,
   },
   {
@@ -20,6 +21,7 @@ const posts = [
     excerpt: 'I taught my non-technical co-founder about AI agents. What came out is a four-tier framework for matching the right agent tool to how you actually work — from chatbots to multi-agent orchestration.',
     tags: ['ai-adoption', 'agents', 'framework', 'enterprise'],
     type: 'framework',
+    image: '/images/blog/agent-adoption-ladder-cover.png',
     featured: true,
   },
   {
@@ -29,6 +31,7 @@ const posts = [
     excerpt: 'I built a multi-agent AI system from scratch -- four specialists, a team router, persistent memory, and streaming UX. Here are five things the framework docs don\'t cover.',
     tags: ['ai-adoption', 'agents', 'developer-tools', 'methodology'],
     type: 'insight',
+    image: '/images/blog/agentic-ai-lessons-cover.png',
     featured: false,
     linkedPost: 'zh-agentic-ai-five-lessons',
   },
@@ -40,6 +43,7 @@ const posts = [
     tags: ['ai-adoption', 'agents', 'developer-tools', 'methodology'],
     type: 'insight',
     language: 'zh-Hant',
+    image: '/images/blog/agentic-ai-lessons-cover.png',
     featured: false,
     linkedPost: 'what-nobody-tells-you-building-agentic-ai',
   },
@@ -50,6 +54,7 @@ const posts = [
     excerpt: 'How I used Claude Code to rebuild my entire SEO and GEO strategy in one session -- structured data, internal linking, hreflang, and pillar pages across 30+ blog posts in 7 hours.',
     tags: ['ai-adoption', 'productivity', 'tools', 'commentary', 'methodology'],
     type: 'insight',
+    image: '/images/blog/seo-rebuild-cover.png',
     featured: false,
   },
   {
@@ -59,6 +64,7 @@ const posts = [
     excerpt: 'Universities, consulting firms, government programs, global platforms, or practitioner-led training -- an honest framework for evaluating AI training options in Hong Kong.',
     tags: ['ai-adoption', 'enterprise', 'commentary'],
     type: 'insight',
+    image: '/images/blog/how-to-choose-ai-training-hk-cover.png',
     featured: false,
   },
   {
@@ -68,6 +74,7 @@ const posts = [
     excerpt: 'Your company already pays for Copilot. Here\'s why adoption is low, what Copilot training should actually cover, and the program structure that produces lasting behavior change.',
     tags: ['ai-adoption', 'enterprise', 'methodology', 'tools'],
     type: 'methodology',
+    image: '/images/blog/microsoft-copilot-training-hk-cover.png',
     featured: false,
   },
   {
@@ -77,6 +84,7 @@ const posts = [
     excerpt: 'Most corporate AI training produces zero lasting behavior change. After 180+ workshops and 10,000+ professionals trained, here\'s what actually makes AI adoption stick.',
     tags: ['ai-adoption', 'enterprise', 'methodology', 'commentary'],
     type: 'insight',
+    image: '/images/blog/why-ai-training-doesnt-stick-cover.png',
     featured: true,
   },
   {
@@ -86,6 +94,7 @@ const posts = [
     excerpt: 'Hong Kong earmarked HK$50 million for AI training in the 2026-27 Budget. Here\'s what it actually means for corporate training, what\'s missing, and what to do now.',
     tags: ['ai-adoption', 'enterprise', 'personal-reflection'],
     type: 'reflection',
+    image: '/images/blog/hk-budget-ai-training-cover.png',
     featured: false,
   },
   {
@@ -95,6 +104,7 @@ const posts = [
     excerpt: 'Five viral AI prompts for procrastination -- why each one works, how to get more from them, and what changes when you have ADHD and use them every day.',
     tags: ['ai-adoption', 'productivity', 'personal-reflection', 'tools'],
     type: 'reflection',
+    image: '/images/blog/ai-prompts-procrastination-cover.png',
     featured: false,
     linkedPost: 'zh-ai-prompts-beat-procrastination',
   },
@@ -106,6 +116,7 @@ const posts = [
     tags: ['ai-adoption', 'productivity', 'personal-reflection', 'tools'],
     type: 'reflection',
     language: 'zh-Hant',
+    image: '/images/blog/ai-prompts-procrastination-cover.png',
     featured: false,
     linkedPost: 'ai-prompts-beat-procrastination',
   },
@@ -116,6 +127,7 @@ const posts = [
     excerpt: 'I gave a live talk on AI agents to 1,400 registrants. The audience reaction confirmed what I see in every training room — people want proof, not promises.',
     tags: ['ai-adoption', 'agents', 'speaking', 'reflection'],
     type: 'reflection',
+    image: '/images/blog/openclaw-talk-cover.png',
     featured: false,
   },
   {
@@ -125,6 +137,7 @@ const posts = [
     excerpt: 'A Shenzhen visit exposed a pattern I see everywhere: teams using AI at 50% efficiency because nobody taught them model selection.',
     tags: ['case-study', 'e-commerce', 'ai-adoption'],
     type: 'case-study',
+    image: '/images/blog/renpho-ecommerce-cover.png',
     featured: false,
   },
   {
@@ -134,6 +147,7 @@ const posts = [
     excerpt: 'Two sessions, 12 executives, and a gardening demo that secured buy-in. Inside the Playmates Toys HK AI training.',
     tags: ['case-study', 'ai-adoption', 'enterprise'],
     type: 'case-study',
+    image: '/images/blog/playmates-toys-cover.png',
     featured: false,
   },
   {
@@ -143,6 +157,7 @@ const posts = [
     excerpt: 'I taught CLP\'s team a 7-level AI agent framework, from basic chatbots to CLI-based systems. Here\'s what a utility company needs to know about AI agents.',
     tags: ['ai-adoption', 'agents', 'case-study', 'enterprise'],
     type: 'case-study',
+    image: '/images/blog/clp-agents-cover.png',
     featured: false,
   },
   {
@@ -152,6 +167,7 @@ const posts = [
     excerpt: 'A 3-color data classification system that makes AI safety intuitive. Used across banking, retail, and 500-person webinars.',
     tags: ['ai-adoption', 'methodology', 'enterprise', 'safety'],
     type: 'methodology',
+    image: '/images/blog/traffic-light-protocol-cover.png',
     featured: false,
   },
   {
@@ -332,6 +348,7 @@ const posts = [
     excerpt: 'Three specific AI tools that solve real attention problems: information triage, meeting recovery, and structured thinking. Based on my second appearance on Club 80.',
     tags: ['ai-adoption', 'tools', 'productivity', 'media-appearance'],
     type: 'insight',
+    image: '/images/blog/3-ai-tools-focus-cover.png',
     featured: false,
     linkedPost: 'zh-3-ai-tools-save-focus',
   },
@@ -343,6 +360,7 @@ const posts = [
     tags: ['ai-adoption', 'tools', 'productivity', 'media-appearance'],
     type: 'insight',
     language: 'zh-Hant',
+    image: '/images/blog/3-ai-tools-focus-cover.png',
     featured: false,
     linkedPost: '3-ai-tools-save-focus',
   },
@@ -363,6 +381,7 @@ const posts = [
     excerpt: '76% of viewers in a live poll said they don\'t pay for AI tools. Most of the 24% who do aren\'t using the features they paid for. The actual percentage using AI at full capability is vanishingly small.',
     tags: ['ai-adoption', 'commentary', 'tools', 'media-appearance'],
     type: 'insight',
+    image: '/images/blog/why-pay-ai-tools-cover.png',
     featured: false,
     linkedPost: 'zh-why-pay-for-ai-tools',
   },
@@ -374,6 +393,7 @@ const posts = [
     tags: ['ai-adoption', 'commentary', 'tools', 'media-appearance'],
     type: 'insight',
     language: 'zh-Hant',
+    image: '/images/blog/why-pay-ai-tools-cover.png',
     featured: false,
     linkedPost: 'why-pay-for-ai-tools',
   },
