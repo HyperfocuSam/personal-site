@@ -5,6 +5,27 @@
 // linkedPost: slug of the corresponding post in another language (for hreflang)
 const posts = [
   {
+    slug: 'claude-code-mastery-part-1-getting-started',
+    title: 'Claude Code Mastery: From Zero to Your First Agent',
+    date: '2026-03-24',
+    excerpt: 'Three months ago I opened Claude Code and thought it was just another terminal. Today it runs my entire business. Part 1 of a series on how I actually use it — installation, mental model, CLAUDE.md, and your first real task.',
+    tags: ['claude-code', 'ai-tools', 'getting-started', 'developer-productivity'],
+    type: 'methodology',
+    featured: true,
+    linkedPost: 'claude-code-mastery-part-1-getting-started-tc',
+  },
+  {
+    slug: 'claude-code-mastery-part-1-getting-started-tc',
+    title: 'Claude Code 完全攻略：由零開始到你第一個 Agent',
+    date: '2026-03-24',
+    excerpt: '三個月前我第一次打開 Claude Code，以為係又一個 terminal chatbox。三個月後佢幫我管緊四間公司嘅日常運作。呢個係完全攻略系列嘅第一篇。',
+    tags: ['claude-code', 'ai-tools', 'getting-started', 'developer-productivity'],
+    type: 'methodology',
+    language: 'zh-Hant',
+    featured: false,
+    linkedPost: 'claude-code-mastery-part-1-getting-started',
+  },
+  {
     slug: 'ai-change-management-what-actually-works',
     title: 'AI Change Management: What Actually Works (A Field Report From 70+ Organizations)',
     date: '2026-03-23',
