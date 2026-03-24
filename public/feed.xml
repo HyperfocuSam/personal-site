@@ -6,7 +6,77 @@
     <description>AI adoption insights, workshop reflections, and practical AI training tips from Sam Wong.</description>
     <language>en</language>
     <atom:link href="https://hyperfocusam.com/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon, 23 Mar 2026 14:40:17 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 24 Mar 2026 05:56:15 GMT</lastBuildDate>
+    <item>
+      <title>Claude Code Mastery: The Full Blueprint — My Actual System</title>
+      <link>https://hyperfocusam.com/blog/claude-code-mastery-part-5-full-blueprint/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/claude-code-mastery-part-5-full-blueprint/</guid>
+      <description>I open-sourced my entire Claude Code architecture. Every file, every connection, every lesson learned. 9 agents, 40 skills, 7 cron jobs, 4-tier memory — built because I have ADHD and needed external structure.</description>
+      <pubDate>Thu, 02 Apr 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Claude Code 完全攻略：完整藍圖 — 我真正嘅系統</title>
+      <link>https://hyperfocusam.com/blog/claude-code-mastery-part-5-full-blueprint-tc/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/claude-code-mastery-part-5-full-blueprint-tc/</guid>
+      <description>我將成個 Claude Code 系統公開晒。CLAUDE.md、skills、agents、hooks、cron、memory — 每一層點接駁，每一個決定背後嘅原因。</description>
+      <pubDate>Thu, 02 Apr 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Claude Code Mastery: Agent Teams &amp; Automation — Your AI Workforce</title>
+      <link>https://hyperfocusam.com/blog/claude-code-mastery-part-4-agent-teams/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/claude-code-mastery-part-4-agent-teams/</guid>
+      <description>I have 9 AI agents running 7 cron jobs. My blog publishes itself every Monday. Here is the full agent team architecture — delegation rules, parallel execution, and cost-aware model selection.</description>
+      <pubDate>Tue, 31 Mar 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Claude Code 完全攻略：Agent 團隊同自動化 — 你嘅 AI 工作團隊</title>
+      <link>https://hyperfocusam.com/blog/claude-code-mastery-part-4-agent-teams-tc/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/claude-code-mastery-part-4-agent-teams-tc/</guid>
+      <description>我有 9 個 AI agent 跑緊 7 個 cron job。每個禮拜一 blog 自己出文。呢篇講成個 agent team architecture。</description>
+      <pubDate>Tue, 31 Mar 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Claude Code Mastery: Hooks &amp; Guardrails — Making AI Safe</title>
+      <link>https://hyperfocusam.com/blog/claude-code-mastery-part-3-hooks-guardrails/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/claude-code-mastery-part-3-hooks-guardrails/</guid>
+      <description>My AI agent nearly sent an email to the wrong person. That one near-miss changed everything. Here is the hooks system I built — PreToolUse validation, prompt injection scanning, and a policy engine.</description>
+      <pubDate>Sat, 28 Mar 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Claude Code 完全攻略：Hooks 同安全機制 — 點樣令 AI 安全做嘢</title>
+      <link>https://hyperfocusam.com/blog/claude-code-mastery-part-3-hooks-guardrails-tc/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/claude-code-mastery-part-3-hooks-guardrails-tc/</guid>
+      <description>有一次 Claude Code 差啲 send 錯 email 俾錯嘅人。嗰日之後我起咗一套 hooks 系統。PreToolUse、PostToolUse、Stop hook — 全部跑喺 FastAPI server。</description>
+      <pubDate>Sat, 28 Mar 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Claude Code Mastery: Skills &amp; Memory — Teaching AI to Remember</title>
+      <link>https://hyperfocusam.com/blog/claude-code-mastery-part-2-skills-memory/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/claude-code-mastery-part-2-skills-memory/</guid>
+      <description>AI forgets everything between sessions. I solved this with a 4-tier memory system and 40 active skills that load in 100 tokens each. Here is exactly how persistent knowledge works in Claude Code.</description>
+      <pubDate>Thu, 26 Mar 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Claude Code 完全攻略：Skills 同 Memory — 教 AI 識記嘢</title>
+      <link>https://hyperfocusam.com/blog/claude-code-mastery-part-2-skills-memory-tc/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/claude-code-mastery-part-2-skills-memory-tc/</guid>
+      <description>AI 最大嘅問題係佢唔記得。我喺 Claude Code 入面起咗四層 memory，加 40 個 skills 用 progressive disclosure。呢篇講晒成個架構。</description>
+      <pubDate>Thu, 26 Mar 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Claude Code Mastery: From Zero to Your First Agent</title>
+      <link>https://hyperfocusam.com/blog/claude-code-mastery-part-1-getting-started/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/claude-code-mastery-part-1-getting-started/</guid>
+      <description>Three months ago I opened Claude Code and thought it was just another terminal. Today it runs my entire business. Part 1 of a series on how I actually use it — installation, mental model, CLAUDE.md, and your first real task.</description>
+      <pubDate>Tue, 24 Mar 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Claude Code 完全攻略：由零開始到你第一個 Agent</title>
+      <link>https://hyperfocusam.com/blog/claude-code-mastery-part-1-getting-started-tc/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/claude-code-mastery-part-1-getting-started-tc/</guid>
+      <description>三個月前我第一次打開 Claude Code，以為係又一個 terminal chatbox。三個月後佢幫我管緊四間公司嘅日常運作。呢個係完全攻略系列嘅第一篇。</description>
+      <pubDate>Tue, 24 Mar 2026 00:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>AI Change Management: What Actually Works (A Field Report From 70+ Organizations)</title>
       <link>https://hyperfocusam.com/blog/ai-change-management-what-actually-works/</link>
