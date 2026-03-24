@@ -50,6 +50,13 @@ const ContactForm = ({ initialInterest }) => {
         if (window.posthog) {
           window.posthog.capture('contact_form_submitted', { interest });
         }
+        if (window.gtag) {
+          window.gtag('event', 'generate_lead', {
+            event_category: 'contact',
+            event_label: interest,
+            value: 1,
+          });
+        }
       } else {
         const data = await res.json().catch(() => ({}));
         setError(data.error || 'Something went wrong. Please try again.');

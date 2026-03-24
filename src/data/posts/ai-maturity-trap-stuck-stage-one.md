@@ -39,6 +39,12 @@ When I [trained tourism executives at CTS](/blog/cts-tourism-ai-training), the m
 
 Don't wait until you're at Stage 4 to start. Map your hard problems now. The AI maturity journey starts with knowing exactly where you're stuck.
 
+## Sources & Further Reading
+
+- McKinsey, "[The State of AI in 2025](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai)" (Nov 2025) -- Only 1% of companies scored above 50 on McKinsey's 100-point AI maturity scale. Average scores declined 9 points year-over-year.
+- McKinsey, "[Technology Trends Outlook 2025](https://www.mckinsey.com/~/media/mckinsey/business%20functions/mckinsey%20digital/our%20insights/the%20top%20trends%20in%20tech%202025/mckinsey-technology-trends-outlook-2025.pdf)" (2025) -- 88% of organizations use AI, but fewer than one-third have scaled it enterprise-wide.
+- IBM Institute for Business Value, "[2024 Banking & Financial Markets Outlook](https://www.ibm.com/thought-leadership/institute-business-value/en-us/report/2024-banking-financial-markets-outlook)" (Jan 2024) -- 78% of financial institutions tactically implement gen AI, but strategic enterprise-wide scaling remains elusive.
+
 ---
 
 *I help enterprise teams navigate AI adoption through [workshops, coaching, and pioneer programs](/services). If your organization is working through these challenges, I would welcome a conversation.*

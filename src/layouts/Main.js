@@ -52,9 +52,9 @@ const Main = (props) => (
     </Helmet>
     <a className="skip-to-content" href="#main">Skip to content</a>
     <div id="wrapper">
-      <Navigation />
+      {!props.hideNav && <Navigation />}
       <main id="main" role="main">{props.children}</main>
-      <Footer />
+      {!props.hideNav && <Footer />}
     </div>
   </HelmetProvider>
 );
@@ -83,6 +83,7 @@ Main.propTypes = {
     lang: PropTypes.string.isRequired,
     href: PropTypes.string.isRequired,
   })),
+  hideNav: PropTypes.bool,
 };
 
 Main.defaultProps = {
@@ -104,6 +105,7 @@ Main.defaultProps = {
   articleModifiedTime: null,
   articleTags: null,
   hreflangTags: null,
+  hideNav: false,
 };
 
 export default Main;

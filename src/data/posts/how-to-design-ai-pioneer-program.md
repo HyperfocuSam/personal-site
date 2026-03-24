@@ -65,6 +65,12 @@ If you're planning corporate AI training for your organization, the most importa
 
 Garden Group proved that six weeks is enough. Not to make everyone an AI expert -- but to make AI a natural part of how they work.
 
+## Sources & Further Reading
+
+- Microsoft & LinkedIn, "[2024 Work Trend Index](https://www.microsoft.com/en-us/worklab/work-trend-index/ai-at-work-is-here-now-comes-the-hard-part)" (May 2024) -- AI power users are 37% more likely to have a virtual learning program and 61% more likely to hear from their CEO about generative AI.
+- Harvard Business Review, "[Evaluating ROI on Your Company's Learning and Development Initiatives](https://hbr.org/2023/10/evaluating-roi-on-your-companys-learning-and-development-initiatives)" (Oct 2023) -- Programs that start with needs analysis produce significantly higher retention and application of skills.
+- Deloitte, "[State of AI in the Enterprise](https://www.deloitte.com/uk/en/services/consulting/blogs/2024/ai-powered-employee-experience.html)" (2024) -- 94% of business leaders agree AI is critical for success, yet organizations struggle with proving business value and insufficient enablement.
+
 ---
 
 *I design and deliver [corporate AI training programs](/services) for teams across Hong Kong and Asia-Pacific. See my full range of [training services](/corporate-ai-training-hong-kong).*

@@ -33,6 +33,9 @@ const ZhCorporateTraining = lazy(() => import('./pages/ZhCorporateTraining'));
 // Media Kit (designed HTML version)
 const MediaKit = lazy(() => import('./pages/MediaKit'));
 
+// Landing page for paid traffic (no nav)
+const GetStarted = lazy(() => import('./pages/GetStarted'));
+
 const App = () => (
   <BrowserRouter basename={PUBLIC_URL}>
     <Suspense fallback={<Main />}>
@@ -44,6 +47,7 @@ const App = () => (
         <Route path="/clients" element={<Clients />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/corporate-ai-training-hong-kong" element={<CorporateTraining />} />
+        <Route path="/get-started" element={<GetStarted />} />
         <Route path="/media/kit" element={<MediaKit />} />
         <Route path="/media" element={<Media />} />
         <Route path="/zh" element={<ZhIndex />} />

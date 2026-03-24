@@ -31,6 +31,12 @@ A workshop where everyone leaves saying "wow, ChatGPT is amazing" but nobody use
 
 As an AI workshop facilitator, my job isn't to show people the most impressive AI demo. It's to make sure they're still using AI a month later. Starting with the tool that's already in their ecosystem is the single biggest predictor of long-term adoption.
 
+## Sources & Further Reading
+
+- Gartner, "The State of Microsoft 365 Copilot: Survey Results" (Oct 2024, G00820869) -- 80% of organizations are piloting Copilot, but only 16% have transitioned to production. Organizations without change management planning saw up to 60% decline in user engagement.
+- Microsoft & LinkedIn, "[2024 Work Trend Index](https://www.microsoft.com/en-us/worklab/work-trend-index/ai-at-work-is-here-now-comes-the-hard-part)" (May 2024) -- 78% of AI users bring their own AI tools to work (BYOAI). Leaders' top concern: cybersecurity and data privacy.
+- Forrester Consulting, "[The Total Economic Impact of Microsoft 365 Copilot](https://marketingassets.microsoft.com/gdc/gdc70WbNv/original)" (Mar 2025) -- Documents measurable enterprise ROI from Copilot when deployed with proper governance and change management.
+
 ---
 
 *I help enterprise teams navigate AI adoption through [workshops, coaching, and pioneer programs](/services). If your organization is working through these challenges, I would welcome a conversation.*

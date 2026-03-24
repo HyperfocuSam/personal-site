@@ -85,6 +85,12 @@ The companies that get this right are building internal AI capability, not depen
 
 Prompts are a starting point. Behavior change is the answer.
 
+## Sources & Further Reading
+
+- McKinsey, "[The State of AI in 2025](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai)" (Nov 2025) -- 88% of organizations use AI, but nearly two-thirds have not begun scaling it across the enterprise.
+- Microsoft & LinkedIn, "[2024 Work Trend Index](https://www.microsoft.com/en-us/worklab/work-trend-index/ai-at-work-is-here-now-comes-the-hard-part)" (May 2024) -- Only 39% of people who use AI at work have received company training. 60% of leaders worry their organization lacks a plan to implement AI.
+- McKinsey, "[The State of AI in Early 2024](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-2024)" (May 2024) -- 65% of organizations regularly use gen AI, but scaling remains the gap between adoption and embedded behavior change.
+
 ---
 
 *I write about AI adoption, corporate training, and what actually happens when organizations try to change. Connect with me on [LinkedIn](https://www.linkedin.com/in/samwonghk/).*

@@ -10,7 +10,7 @@ Contact: sam@adaptig.com
 
 ## About
 
-Sam Wong is an AI training specialist who has trained over 10,000 professionals across 70+ organizations in banking, retail, education, engineering, and technology. He co-founded Adaptig (Animo Technology Limited), a global AI trainer network, and is a founding member of DotAI, Hong Kong's practical AI training community. His approach focuses on behavior change over tool awareness, emphasizing psychological safety and practical workflow integration. He holds a Master of Arts from the Chinese University of Hong Kong.
+Sam Wong is an AI training specialist who has trained over 10,000 professionals across 70+ organizations in banking, retail, education, engineering, and technology. He co-founded Adaptig (Animo Technology Limited), a global AI trainer network, and is a founding member of DotAI, Hong Kong’s practical AI training community. His approach focuses on behavior change over tool awareness, emphasizing psychological safety and practical workflow integration. He holds a Master of Arts from the Chinese University of Hong Kong.
 
 ## Services
 
@@ -26,7 +26,7 @@ Sam Wong is an AI training specialist who has trained over 10,000 professionals 
 - **AI Pioneer Model**: Multi-session cohort approach using change management principles — select 10-20 influential people, train them deeply, they become internal champions
 - **70/30 Human-AI Split**: 70% human judgment, 30% AI assistance — the ratio that produces sustainable adoption
 - **AI Maturity Model**: 4-stage progression from Awareness to Integration to Optimization to Transformation
-- **IPA Framework**: Strategy, structure, and execution model for building AI workflows
+- **ACE Framework**: Strategy, structure, and execution model for building AI workflows
 - **C-How Thinking**: Bridges left-brain logic and right-brain creativity through AI tools (developed with Arup)
 
 ## Key Results
@@ -46,61 +46,78 @@ Sam Wong is an AI training specialist who has trained over 10,000 professionals 
 
 ### Case Studies
 
-- [What 1,500 Banking Professionals Taught Me About AI Adoption](https://hyperfocusam.com/blog/bochk-banking-ai-training/) (2025-11-15) — Training Bank of China (Hong Kong) across 13 countries. Safety frameworks, workflow integration, 70/30 split.
-- [Training the World's Largest Jewelry Retailer on AI x Design Thinking](https://hyperfocusam.com/blog/ctf-ai-design-thinking-workshop-2026/) (2026-01-17) — Third workshop with Chow Tai Fook. Cross-functional hackathon format.
-- [How 400 Educators Changed Their Minds About AI in 75 Minutes](https://hyperfocusam.com/blog/hkct-ai-education-workshop/) (2025-04-27) — AI Three-Part Framework at HKCT.
-- [Teaching Hong Kong Jockey Club's Future Leaders to Think in Prompts](https://hyperfocusam.com/blog/hkjc-mt-ai-training/) (2025-04-26) — Three-layer prompt framework for Management Trainees.
-- [How to Design a 6-Session AI Pioneer Program That Actually Changes Behavior](https://hyperfocusam.com/blog/how-to-design-ai-pioneer-program/) (2026-03-04) — 19 HR professionals, Copilot-only, 5-8 hours/week saved.
-- [Teaching Tourism Executives to Think Like AI Strategists](https://hyperfocusam.com/blog/cts-tourism-ai-training/) (2025-07-20) — China Travel Service management-level training.
-- [How PolyU's Finance Team Built an AI Workflow That Actually Works](https://hyperfocusam.com/blog/polyu-finance-ai-workflow/) (2025-05-15) — ACE framework for university finance.
-- [What Happens When 50 Engineers Get 45 Minutes with AI](https://hyperfocusam.com/blog/arup-ai-lunch-learn/) (2025-03-28) — C-How Thinking at Arup.
-- [What Happens When a Toy Company Takes AI Seriously](https://hyperfocusam.com/blog/playmates-toys-ai-training/) (2026-02-09) — Playmates Toys HK executive AI training.
-- [Teaching a Utility Company the 7 Levels of AI Agents](https://hyperfocusam.com/blog/clp-ai-agent-automation/) (2025-12-23) — CLP agent framework training.
-- [Building AI Habits That Stick: A 4-Module Experiment](https://hyperfocusam.com/blog/dorich-ai-efficiency-workshop/) (2025-04-02) — 4-module workshop design.
-- [What 118 Minutes With an E-Commerce Team Revealed About AI Adoption Gaps](https://hyperfocusam.com/blog/renpho-ecommerce-ai-shenzhen/) (2026-03-11) — Shenzhen visit, model selection gap.
+- [Claude Code Mastery: The Full Blueprint — My Actual System](https://hyperfocusam.com/blog/claude-code-mastery-part-5-full-blueprint/) (2026-03-23) — I open-sourced my entire Claude Code architecture. Every file, every connection, every lesson learned. 9 agents, 40 skills, 7 cron jobs, 4-tier memory — built because I have ADHD and needed external structure.
+- [What 118 Minutes With an E-Commerce Team Revealed About AI Adoption Gaps](https://hyperfocusam.com/blog/renpho-ecommerce-ai-shenzhen/) (2026-03-11) — A Shenzhen visit exposed a pattern I see everywhere: teams using AI at 50% efficiency because nobody taught them model selection.
+- [How to Design a 6-Session AI Pioneer Program That Actually Changes Behavior](https://hyperfocusam.com/blog/how-to-design-ai-pioneer-program/) (2026-03-04) — How I designed a 6-session corporate AI training program for 19 HR professionals, using Copilot-only tools and a change management approach that saved 5-8 hours per week.
+- [What Happens When a Toy Company Takes AI Seriously](https://hyperfocusam.com/blog/playmates-toys-ai-training/) (2026-02-09) — Two sessions, 12 executives, and a gardening demo that secured buy-in. Inside the Playmates Toys HK AI training.
+- [Training the World's Largest Jewelry Retailer on AI x Design Thinking](https://hyperfocusam.com/blog/ctf-ai-design-thinking-workshop-2026/) (2026-01-17) — Insights from my third workshop with Chow Tai Fook, where cross-functional teams competed to create Go-To-Market campaigns using AI tools in a hackathon format.
+- [Teaching a Utility Company the 7 Levels of AI Agents](https://hyperfocusam.com/blog/clp-ai-agent-automation/) (2025-12-23) — I taught CLP's team a 7-level AI agent framework, from basic chatbots to CLI-based systems. Here's what a utility company needs to know about AI agents.
+- [What 1,500 Banking Professionals Taught Me About AI Adoption](https://hyperfocusam.com/blog/bochk-banking-ai-training/) (2025-11-15) — Lessons from training Bank of China (Hong Kong) employees across 13 countries - on safety frameworks, workflow integration, and the 70/30 human-AI split.
+- [Teaching Tourism Executives to Think Like AI Strategists](https://hyperfocusam.com/blog/cts-tourism-ai-training/) (2025-07-20) — Designing management-level AI training for China Travel Service, focusing on China-native tools and the 80/20 human-AI collaboration principle.
+- [How PolyU's Finance Team Built an AI Workflow That Actually Works](https://hyperfocusam.com/blog/polyu-finance-ai-workflow/) (2025-05-15) — Building sustainable AI workflows for a university finance office - starting with strategy, establishing the ACE framework, and watching tool users become process designers.
+- [How 400 Educators Changed Their Minds About AI in 75 Minutes](https://hyperfocusam.com/blog/hkct-ai-education-workshop/) (2025-04-27) — Introducing the "AI Three-Part Framework" to HKCT staff - a simple mental model for getting 400 educators from skepticism to experimentation.
+- [Teaching Hong Kong Jockey Club's Future Leaders to Think in Prompts](https://hyperfocusam.com/blog/hkjc-mt-ai-training/) (2025-04-26) — Training HKJC Management Trainees on AI business communication through a three-layer prompt framework - from precision to structure to context.
+- [Building AI Habits That Stick: A 4-Module Experiment](https://hyperfocusam.com/blog/dorich-ai-efficiency-workshop/) (2025-04-02) — A 2.5-hour workshop designed around four specific skills - literacy, creativity, visual creation, and data analysis - that transformed how participants approach AI tools.
+- [What Happens When 50 Engineers Get 45 Minutes with AI](https://hyperfocusam.com/blog/arup-ai-lunch-learn/) (2025-03-28) — Introducing "C-How Thinking" at Arup - a framework that bridges left-brain logic and right-brain creativity through Copilot and Canva.
 
 ### Methodologies & Frameworks
 
-- [AI Change Management: What Actually Works](https://hyperfocusam.com/blog/ai-change-management-what-actually-works/) (2026-03-23) — Field report from 70+ organizations on lasting behavior change.
-- [Why AI Training Doesn't Stick (And What Actually Works)](https://hyperfocusam.com/blog/why-ai-training-doesnt-stick/) (2026-03-15) — Three patterns that kill AI training effectiveness.
-- [The Traffic Light Protocol: How I Teach AI Safety in 15 Minutes](https://hyperfocusam.com/blog/traffic-light-protocol-ai-safety/) (2026-03-12) — 3-color data classification for regulated industries.
-- [Microsoft Copilot Training for Hong Kong Companies: What Actually Works](https://hyperfocusam.com/blog/microsoft-copilot-training-hong-kong/) (2026-03-15) — Why adoption is low and how to fix it.
-- [Why I Teach Copilot Instead of ChatGPT in Enterprise Workshops](https://hyperfocusam.com/blog/why-i-teach-copilot-not-chatgpt/) (2025-12-30) — Enterprise tool selection rationale.
-- [The AI Tool Stack I Use to Train 3,000 Professionals a Year](https://hyperfocusam.com/blog/ai-tool-stack-3000-professionals/) (2025-12-22) — Complete tool stack across industries.
+- [AI Change Management: What Actually Works (A Field Report From 70+ Organizations)](https://hyperfocusam.com/blog/ai-change-management-what-actually-works/) (2026-03-23) — Most companies approach AI adoption like a software rollout. After training 3,000+ professionals across 70+ organizations, here is what actually drives lasting behavior change.
+- [Claude Code Mastery: Agent Teams & Automation — Your AI Workforce](https://hyperfocusam.com/blog/claude-code-mastery-part-4-agent-teams/) (2026-03-21) — I have 9 AI agents running 7 cron jobs. My blog publishes itself every Monday. Here is the full agent team architecture — delegation rules, parallel execution, and cost-aware model selection.
+- [Claude Code Mastery: Hooks & Guardrails — Making AI Safe](https://hyperfocusam.com/blog/claude-code-mastery-part-3-hooks-guardrails/) (2026-03-20) — My AI agent nearly sent an email to the wrong person. That one near-miss changed everything. Here is the hooks system I built — PreToolUse validation, prompt injection scanning, and a policy engine.
+- [Claude Code Mastery: Skills & Memory — Teaching AI to Remember](https://hyperfocusam.com/blog/claude-code-mastery-part-2-skills-memory/) (2026-03-19) — AI forgets everything between sessions. I solved this with a 4-tier memory system and 40 active skills that load in 100 tokens each. Here is exactly how persistent knowledge works in Claude Code.
+- [Claude Code Mastery: From Zero to Your First Agent](https://hyperfocusam.com/blog/claude-code-mastery-part-1-getting-started/) (2026-03-17) — Three months ago I opened Claude Code and thought it was just another terminal. Today it runs my entire business. Part 1 of a series on how I actually use it — installation, mental model, CLAUDE.md, and your first real task.
+- [Microsoft Copilot Training for Hong Kong Companies: What Actually Works](https://hyperfocusam.com/blog/microsoft-copilot-training-hong-kong/) (2026-03-15) — Your company already pays for Copilot. Here's why adoption is low, what Copilot training should actually cover, and the program structure that produces lasting behavior change.
+- [The Traffic Light Protocol: How I Teach AI Safety in 15 Minutes](https://hyperfocusam.com/blog/traffic-light-protocol-ai-safety/) (2026-03-12) — A 3-color data classification system that makes AI safety intuitive. Used across banking, retail, and 500-person webinars.
+- [Why I Teach Copilot Instead of ChatGPT in Enterprise Workshops](https://hyperfocusam.com/blog/why-i-teach-copilot-not-chatgpt/) (2025-12-30) — Most AI trainers default to ChatGPT. Here's why I start with Microsoft Copilot for enterprise workshops and how it changes adoption.
+- [The AI Tool Stack I Use to Train 3,000 Professionals a Year](https://hyperfocusam.com/blog/ai-tool-stack-3000-professionals/) (2025-12-22) — The complete AI tool stack an AI trainer uses across banking, retail, education, and engineering workshops -- from Copilot to NotebookLM.
 
 ### Insights & Commentary
 
-- [The Agent Adoption Ladder: What Most People Get Wrong About AI Agents](https://hyperfocusam.com/blog/agent-adoption-ladder/) (2026-03-17) — Four-tier framework from chatbots to multi-agent orchestration.
-- [What Nobody Tells You About Building Agentic AI](https://hyperfocusam.com/blog/what-nobody-tells-you-building-agentic-ai/) (2026-03-16) — Five lessons from building a multi-agent system.
-- [How to Choose Corporate AI Training in Hong Kong (2026 Guide)](https://hyperfocusam.com/blog/how-to-choose-ai-training-hong-kong/) (2026-03-15) — Honest comparison framework.
-- [What the 2026 Budget's HK$50 Million AI Training Push Actually Means](https://hyperfocusam.com/blog/hk-2026-budget-ai-training/) (2026-03-14) — Policy analysis for corporate training.
-- [What 1,400 People Taught Me About the Gap Between AI Demos and AI Adoption](https://hyperfocusam.com/blog/openclaw-ai-agents-talk/) (2026-03-12) — Live talk insights.
-- [The AI Maturity Trap: Why Most Companies Are Stuck at Stage 1](https://hyperfocusam.com/blog/ai-maturity-trap-stuck-stage-one/) (2026-01-20) — 4-stage maturity model.
-- [AI Agents Are Coming for Knowledge Work: A Trainer's Field Notes](https://hyperfocusam.com/blog/ai-agents-knowledge-work-field-notes/) (2026-01-27) — Enterprise agentic workflow reality check.
-- [84% of People Have Never Used AI. That's Your Competitive Advantage.](https://hyperfocusam.com/blog/84-percent-never-used-ai/) (2026-02-03) — Market opportunity analysis.
-- [Stop Telling AI to 'Be Creative': What 35 Prompting Strategies Actually Reveal](https://hyperfocusam.com/blog/stop-telling-ai-be-creative/) (2026-02-10) — Wharton research on prompting.
-- [Why Your IT Department Is Your Biggest AI Adoption Bottleneck](https://hyperfocusam.com/blog/it-department-ai-adoption-bottleneck/) (2026-02-17) — IT as gatekeeper vs enabler.
-- [The AI Training Gap: 70% of Managers Want It, 14% of Workers Get It](https://hyperfocusam.com/blog/ai-training-gap-managers-vs-workers/) (2026-02-24) — Workforce training gap analysis.
-- [When the CEO Learns to Code: What AI Means for Leadership](https://hyperfocusam.com/blog/when-ceo-learns-to-code-ai/) (2026-01-13) — Leadership and AI coding tools.
-- [The Skill Formation Problem: Is AI Making Us Worse at Our Jobs?](https://hyperfocusam.com/blog/ai-skill-formation-problem/) (2026-01-06) — Research on AI and skill development.
-- [Why Free AI Isn't Enough: The Case for Paying for AI Tools](https://hyperfocusam.com/blog/why-pay-for-ai-tools/) (2025-06-15) — Paid vs free tool analysis.
-- [I Rebuilt My Entire SEO in One Day. Here's What Actually Moved the Needle.](https://hyperfocusam.com/blog/seo-rebuild-one-day-claude-code/) (2026-03-15) — Claude Code for SEO/GEO.
+- [What Nobody Tells You About Building Agentic AI](https://hyperfocusam.com/blog/what-nobody-tells-you-building-agentic-ai/) (2026-03-16) — I built a multi-agent AI system from scratch -- four specialists, a team router, persistent memory, and streaming UX. Here are five things the framework docs don't cover.
+- [I Rebuilt My Entire SEO in One Day. Here's What Actually Moved the Needle.](https://hyperfocusam.com/blog/seo-rebuild-one-day-claude-code/) (2026-03-15) — How I used Claude Code to rebuild my entire SEO and GEO strategy in one session -- structured data, internal linking, hreflang, and pillar pages across 30+ blog posts in 7 hours.
+- [How to Choose Corporate AI Training in Hong Kong (2026 Guide)](https://hyperfocusam.com/blog/how-to-choose-ai-training-hong-kong/) (2026-03-15) — Universities, consulting firms, government programs, global platforms, or practitioner-led training -- an honest framework for evaluating AI training options in Hong Kong.
+- [Why AI Training Doesn't Stick (And What Actually Works)](https://hyperfocusam.com/blog/why-ai-training-doesnt-stick/) (2026-03-15) — Most corporate AI training produces zero lasting behavior change. After 180+ workshops and 10,000+ professionals trained, here's what actually makes AI adoption stick.
+- [The AI Training Gap: 70% of Managers Want It, 14% of Workers Get It](https://hyperfocusam.com/blog/ai-training-gap-managers-vs-workers/) (2026-02-24) — 70% of managers say an AI-trained workforce is critical, but only 14% of workers have been offered training. Here's what's going wrong.
+- [Why Your IT Department Is Your Biggest AI Adoption Bottleneck](https://hyperfocusam.com/blog/it-department-ai-adoption-bottleneck/) (2026-02-17) — Enterprise AI adoption fails when IT blocks everything by default. How to turn IT from gatekeeper to enabler using a 3-tier security framework.
+- [Stop Telling AI to 'Be Creative': What 35 Prompting Strategies Actually Reveal](https://hyperfocusam.com/blog/stop-telling-ai-be-creative/) (2026-02-10) — Wharton researchers tested 35 prompting strategies and found that saying 'be creative' is the least effective. Here's what actually works.
+- [84% of People Have Never Used AI. That's Your Competitive Advantage.](https://hyperfocusam.com/blog/84-percent-never-used-ai/) (2026-02-03) — 84% of people have never used AI and only 0.3% pay for it. The window of competitive advantage is wide open.
+- [AI Agents Are Coming for Knowledge Work: A Trainer's Field Notes](https://hyperfocusam.com/blog/ai-agents-knowledge-work-field-notes/) (2026-01-27) — AI agents are moving from demos to deployments. What enterprise teams actually need to know about agentic workflows and what's still hype.
+- [When the CEO Learns to Code: What AI Means for Leadership](https://hyperfocusam.com/blog/when-ceo-learns-to-code-ai/) (2026-01-13) — CEOs are building products with AI coding tools on weekends. What this means for enterprise AI training and the gap between leaders and teams.
+- [The Skill Formation Problem: Is AI Making Us Worse at Our Jobs?](https://hyperfocusam.com/blog/ai-skill-formation-problem/) (2026-01-06) — Research shows AI can negatively impact skill formation. Why that finding matters and what responsible corporate AI training looks like.
+- [3 AI Tools That Saved My Focus (And Can Save Yours)](https://hyperfocusam.com/blog/3-ai-tools-save-focus/) (2025-08-10) — Three specific AI tools that solve real attention problems: information triage, meeting recovery, and structured thinking. Based on my second appearance on Club 80.
+- [Why Free AI Isn't Enough: The Case for Paying for AI Tools](https://hyperfocusam.com/blog/why-pay-for-ai-tools/) (2025-06-15) — 76% of viewers in a live poll said they don't pay for AI tools. Most of the 24% who do aren't using the features they paid for. The actual percentage using AI at full capability is vanishingly small.
 
 ### Personal & Productivity
 
-- [5 AI Prompts That Actually Help With Procrastination](https://hyperfocusam.com/blog/ai-prompts-beat-procrastination/) (2026-03-14) — Viral prompts with ADHD insight.
-- [3 AI Tools That Saved My Focus (And Can Save Yours)](https://hyperfocusam.com/blog/3-ai-tools-save-focus/) (2025-08-10) — Information triage, meeting recovery, structured thinking.
-- [I Built a Voice Mode for Claude Code Because I Can't Read](https://hyperfocusam.com/blog/i-built-voice-mode-claude-code/) (2026-03-07) — ADHD accessibility plugin.
-- [I Built an RTK-Style Strategy Game on Top of My AI Workflow](https://hyperfocusam.com/blog/ada-gersang-gamifying-claude-code/) (2026-03-07) — Gamification of AI tool usage.
-- [What My AI Drew When I Asked What's in Its Mind](https://hyperfocusam.com/blog/what-my-ai-drew-when-i-asked/) (2026-03-06) — AI art experiment after 200 sessions.
+- [What the 2026 Budget's HK$50 Million AI Training Push Actually Means for Your Company](https://hyperfocusam.com/blog/hk-2026-budget-ai-training/) (2026-03-14) — Hong Kong earmarked HK$50 million for AI training in the 2026-27 Budget. Here's what it actually means for corporate training, what's missing, and what to do now.
+- [5 AI Prompts That Actually Help With Procrastination (From Someone Who Uses Them Daily)](https://hyperfocusam.com/blog/ai-prompts-beat-procrastination/) (2026-03-14) — Five viral AI prompts for procrastination -- why each one works, how to get more from them, and what changes when you have ADHD and use them every day.
+- [What 1,400 People Taught Me About the Gap Between AI Demos and AI Adoption](https://hyperfocusam.com/blog/openclaw-ai-agents-talk/) (2026-03-12) — I gave a live talk on AI agents to 1,400 registrants. The audience reaction confirmed what I see in every training room — people want proof, not promises.
+- [I Built an RTK-Style Strategy Game on Top of My AI Workflow](https://hyperfocusam.com/blog/ada-gersang-gamifying-claude-code/) (2026-03-07) — Every tool call in my AI assistant logs to SQLite. So I turned it into a Romance of the Three Kingdoms-style strategy game -- with named skills, fractional XP, and a six-agent squad.
+- [I Built a Voice Mode for Claude Code Because I Can't Read](https://hyperfocusam.com/blog/i-built-voice-mode-claude-code/) (2026-03-07) — Long terminal output is attention-hostile for ADHD developers. So I built a plugin that speaks Claude Code responses aloud -- zero deps, one install command.
+- [What My AI Drew When I Asked What's in Its Mind](https://hyperfocusam.com/blog/what-my-ai-drew-when-i-asked/) (2026-03-06) — After 200 sessions working together, I asked my AI assistant to draw what's in its mind. What happened next — the art, the conversation, and rebuilding our system together.
+
+### Frameworks
+
+- [The Agent Adoption Ladder: What Most People Get Wrong About AI Agents](https://hyperfocusam.com/blog/agent-adoption-ladder/) (2026-03-17) — I taught my non-technical co-founder about AI agents. What came out is a four-tier framework for matching the right agent tool to how you actually work — from chatbots to multi-agent orchestration.
+- [The AI Maturity Trap: Why Most Companies Are Stuck at Stage 1](https://hyperfocusam.com/blog/ai-maturity-trap-stuck-stage-one/) (2026-01-20) — Most companies think they're behind on AI. They're right -- but the fix isn't more tools. The 4-stage maturity model and how to move past Stage 1.
+
+### Announcements
+
+- [Welcome to My Blog](https://hyperfocusam.com/blog/welcome-to-my-blog/) (2024-05-17) — Starting a space to share insights on AI adoption, workshop learnings, and the human side of technology.
 
 ### Chinese (Traditional) Articles
 
-- [起一個 Agentic AI 系統學到既五件事](https://hyperfocusam.com/blog/zh-agentic-ai-five-lessons/) (2026-03-16) — Multi-agent AI 系統實戰體會
-- [5 條真係有用既 AI Prompt 打低拖延症](https://hyperfocusam.com/blog/zh-ai-prompts-beat-procrastination/) (2026-03-14) — AI prompt 打低拖延症
-- [我點同 AI 傾偈：一個鐘由零到自動 YouTube 頻道](https://hyperfocusam.com/blog/zh-chillpo-how-i-talk-to-ai/) (2026-03-11) — AI 協作 session 全紀錄
-- [三個拯救專注力嘅 AI 工具](https://hyperfocusam.com/blog/zh-3-ai-tools-save-focus/) (2025-08-10) — AI 工具幫助專注力
-- [點解免費AI唔夠用](https://hyperfocusam.com/blog/zh-why-pay-for-ai-tools/) (2025-06-15) — 課金實戰經驗
+- [Claude Code 完全攻略：完整藍圖 — 我真正嘅系統](https://hyperfocusam.com/blog/claude-code-mastery-part-5-full-blueprint-tc/) (2026-03-23) — 我將成個 Claude Code 系統公開晒。CLAUDE.md、skills、agents、hooks、cron、memory — 每一層點接駁，每一個決定背後嘅原因。
+- [Claude Code 完全攻略：Agent 團隊同自動化 — 你嘅 AI 工作團隊](https://hyperfocusam.com/blog/claude-code-mastery-part-4-agent-teams-tc/) (2026-03-21) — 我有 9 個 AI agent 跑緊 7 個 cron job。每個禮拜一 blog 自己出文。呢篇講成個 agent team architecture。
+- [Claude Code 完全攻略：Hooks 同安全機制 — 點樣令 AI 安全做嘢](https://hyperfocusam.com/blog/claude-code-mastery-part-3-hooks-guardrails-tc/) (2026-03-20) — 有一次 Claude Code 差啲 send 錯 email 俾錯嘅人。嗰日之後我起咗一套 hooks 系統。PreToolUse、PostToolUse、Stop hook — 全部跑喺 FastAPI server。
+- [Claude Code 完全攻略：Skills 同 Memory — 教 AI 識記嘢](https://hyperfocusam.com/blog/claude-code-mastery-part-2-skills-memory-tc/) (2026-03-19) — AI 最大嘅問題係佢唔記得。我喺 Claude Code 入面起咗四層 memory，加 40 個 skills 用 progressive disclosure。呢篇講晒成個架構。
+- [Claude Code 完全攻略：由零開始到你第一個 Agent](https://hyperfocusam.com/blog/claude-code-mastery-part-1-getting-started-tc/) (2026-03-17) — 三個月前我第一次打開 Claude Code，以為係又一個 terminal chatbox。三個月後佢幫我管緊四間公司嘅日常運作。呢個係完全攻略系列嘅第一篇。
+- [起一個 Agentic AI 系統學到既五件事](https://hyperfocusam.com/blog/zh-agentic-ai-five-lessons/) (2026-03-16) — 由零起一個 multi-agent AI 系統到 production deploy，五個最深刻既體會：orchestration、memory、agentic UX、文化偏見、同 80/20 法則。
+- [5 條真係有用既 AI Prompt 打低拖延症（我每日用緊）](https://hyperfocusam.com/blog/zh-ai-prompts-beat-procrastination/) (2026-03-14) — 5 條 viral AI prompt 打低拖延症——點解每條有效、點樣用得更好、加埋 ADHD 實戰 insight。
+- [我點同 AI 傾偈：一個鐘由零到自動 YouTube 頻道](https://hyperfocusam.com/blog/zh-chillpo-how-i-talk-to-ai/) (2026-03-11) — 2,100 行終端紀錄，一個完整嘅 AI 協作 session。由 debug API 錯誤開始，到建成全自動嘅 lo-fi 音樂 YouTube 頻道。呢篇文唔係講技術——而係講點樣同 AI 溝通。
+- [三個拯救專注力嘅 AI 工具：我喺會八十嘅分享](https://hyperfocusam.com/blog/zh-3-ai-tools-save-focus/) (2025-08-10) — 三個真正幫到手嘅 AI 工具：資訊分類、會議筆記、結構化思考。基於我喺會八十第二次做嘉賓嘅分享。
+- [點解免費AI唔夠用：我喺會八十分享嘅課金實戰經驗](https://hyperfocusam.com/blog/zh-why-pay-for-ai-tools/) (2025-06-15) — 在會八十直播的投票中，76% 觀眾沒有付費使用 AI 工具。大部分付了費的人也沒有使用他們付費解鎖的功能。真正充分利用 AI 的人少之又少。
 
 ---
 

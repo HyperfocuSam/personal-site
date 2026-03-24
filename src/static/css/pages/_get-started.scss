@@ -1,0 +1,215 @@
+// Get Started — conversion-optimized landing page for paid traffic
+// No nav bar, no footer, single CTA path
+
+.get-started {
+  background: _palette(surface-base);
+
+  // Minimal header with logo only
+  &__header {
+    padding: 1.5rem 0;
+    text-align: center;
+  }
+
+  &__logo {
+    font-family: _font(family-heading);
+    font-size: 1.25rem;
+    font-weight: _font(weight-heading-bold);
+    color: _palette(ink);
+    text-decoration: none;
+    letter-spacing: _font(kerning-heading);
+  }
+
+  // Hero — side-by-side on desktop, stacked on mobile
+  &__hero {
+    background: _palette(ink);
+    color: _palette(text-on-dark);
+    padding: 3rem 0;
+  }
+
+  &__hero h1 {
+    font-family: _font(family-heading);
+    font-size: 2.2rem;
+    font-weight: _font(weight-heading-bold);
+    line-height: 1.15;
+    color: #fff;
+    letter-spacing: _font(kerning-heading);
+    margin-bottom: 1rem;
+    text-align: center;
+
+    em {
+      color: _palette(amber);
+      font-style: normal;
+    }
+
+    @media #{map-get($breakpoints, small)} {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__hero p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: _palette(text-on-dark-muted);
+    max-width: 580px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  // Stats
+  &__stats {
+    margin-top: -1.5rem;
+    position: relative;
+    z-index: 1;
+
+    .stats-bar {
+      background: _palette(surface-overlay);
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+
+      @media #{map-get($breakpoints, small)} {
+        gap: 1.5rem;
+        padding: 1rem;
+      }
+    }
+  }
+
+  // Client logos
+  &__logos {
+    padding: 2rem 0 1rem;
+    text-align: center;
+  }
+
+  &__logos-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: _palette(text-secondary);
+    margin-bottom: 1rem;
+  }
+
+  &__logos-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__client-logo {
+    height: 28px;
+    width: auto;
+    filter: grayscale(1);
+    opacity: 0.5;
+    transition: opacity _duration(base) $ease-out;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    @media #{map-get($breakpoints, small)} {
+      height: 22px;
+    }
+  }
+
+  // Form section
+  &__form-section {
+    padding: 2rem 0 3rem;
+
+    .contact-form-section {
+      h3 {
+        text-align: center;
+      }
+
+      p {
+        text-align: center;
+      }
+    }
+  }
+
+  // Testimonial
+  &__testimonial {
+    background: _palette(surface-sunken);
+    padding: 2.5rem 0;
+    text-align: center;
+
+    blockquote {
+      margin: 0;
+      padding: 0;
+      border: none;
+
+      p {
+        font-family: _font(family-heading);
+        font-size: 1.4rem;
+        font-style: italic;
+        color: _palette(ink);
+        line-height: 1.4;
+        margin-bottom: 0.75rem;
+
+        @media #{map-get($breakpoints, small)} {
+          font-size: 1.15rem;
+        }
+      }
+
+      footer {
+        font-size: 0.85rem;
+        color: _palette(text-secondary);
+      }
+    }
+  }
+
+  // FAQ
+  &__faq {
+    padding: 2rem 0 3rem;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__faq-item {
+    margin-bottom: 1.5rem;
+
+    h3 {
+      font-size: 1rem;
+      font-weight: _font(weight-bold);
+      margin-bottom: 0.4rem;
+      color: _palette(ink);
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: _palette(text-body);
+      line-height: 1.6;
+    }
+  }
+
+  // Minimal footer
+  &__footer {
+    padding: 1.5rem 0;
+    text-align: center;
+    border-top: 1px solid _palette(border-subtle);
+
+    p {
+      font-size: 0.8rem;
+      color: _palette(text-secondary);
+      margin: 0;
+    }
+
+    a {
+      color: _palette(text-secondary);
+      text-decoration: none;
+
+      &:hover {
+        color: _palette(ink);
+      }
+    }
+  }
+}

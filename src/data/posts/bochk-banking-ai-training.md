@@ -74,6 +74,12 @@ People don't resist AI because they don't understand it. They resist because the
 
 The technology keeps advancing. The human challenges remain remarkably consistent.
 
+## Sources & Further Reading
+
+- IBM Institute for Business Value, "[2024 Global Outlook for Banking and Financial Markets](https://www.ibm.com/thought-leadership/institute-business-value/en-us/report/2024-banking-financial-markets-outlook)" (Jan 2024) -- 78% of financial institutions are tactically implementing generative AI for at least one use case.
+- McKinsey, "[Extracting Value from AI in Banking: Rewiring the Enterprise](https://www.mckinsey.com/industries/financial-services/our-insights/extracting-value-from-ai-in-banking-rewiring-the-enterprise)" (Dec 2024) -- Banks must move beyond experimentation to transform critical business areas by reimagining complex workflows.
+- Gartner, 2025 Finance AI Adoption Survey -- 59% of finance leaders now use AI in their operations, up from 37% in 2023.
+
 ---
 
 *If you're planning enterprise AI adoption and want to discuss what might work for your organization, feel free to see my [corporate AI training services](/services) or connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*

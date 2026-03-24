@@ -30,6 +30,15 @@ const HeroSection = () => (
             target="_blank"
             rel="noopener noreferrer"
             className="button button--outline"
+            onClick={() => {
+              if (window.gtag) {
+                window.gtag('event', 'click', {
+                  event_category: 'outbound',
+                  event_label: 'roam_booking',
+                  transport_type: 'beacon',
+                });
+              }
+            }}
           >
             Book a Conversation
           </a>

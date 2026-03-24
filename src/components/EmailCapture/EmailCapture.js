@@ -38,6 +38,12 @@ const EmailCapture = ({
             ...(leadMagnet && { magnet: leadMagnet.title }),
           });
         }
+        if (window.gtag) {
+          window.gtag('event', 'sign_up', {
+            event_category: 'newsletter',
+            method: leadMagnet ? 'lead_magnet' : 'substack',
+          });
+        }
       } else {
         setError('Could not subscribe. Please try again.');
       }
@@ -101,6 +107,15 @@ const EmailCapture = ({
             target="_blank"
             rel="noopener noreferrer"
             className="email-capture__whatsapp"
+            onClick={() => {
+              if (window.gtag) {
+                window.gtag('event', 'click', {
+                  event_category: 'outbound',
+                  event_label: 'whatsapp',
+                  transport_type: 'beacon',
+                });
+              }
+            }}
           >
             Or message me on WhatsApp
           </a>

@@ -20,6 +20,40 @@ import EmailCapture from '../components/EmailCapture/EmailCapture';
 
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 
+// HowTo schema for framework posts — improves AI search citability
+const HOWTO_SCHEMAS = {
+  'traffic-light-protocol-ai-safety': {
+    name: 'How to Implement the Traffic Light Protocol for AI Safety',
+    description: 'A three-color classification system that teaches employees to quickly assess whether workplace data is safe to use with external AI tools.',
+    steps: [
+      { name: 'Identify Red Data (Never Share)', text: 'Classify data that must never enter external AI tools: names, account numbers, PII, transaction records, customer histories, salary data, or internal system screenshots.' },
+      { name: 'Identify Yellow Data (Anonymize First)', text: 'Mark internal non-public data that can be used with AI after anonymization: remove names, project codes, and identifying details before sharing.' },
+      { name: 'Identify Green Data (Safe to Use)', text: 'Recognize publicly available information safe for unrestricted AI experimentation: published reports, market data, regulatory documents, and general knowledge.' },
+      { name: 'Run the 3-Second Check', text: 'Before each AI interaction, ask: Does it contain PII (Red)? Is it internal but anonymizable (Yellow)? Is it public or fictional (Green)? Then proceed accordingly.' },
+    ],
+  },
+  'how-to-design-ai-pioneer-program': {
+    name: 'How to Design a 6-Session AI Pioneer Program for Behavior Change',
+    description: 'A structured weekly program that trains internal champions over six weeks, using real work and measurable outcomes to embed AI adoption into daily workflows.',
+    steps: [
+      { name: 'Sessions 1-2: Establish Security Foundations', text: 'Teach AI literacy, security protocols, and data tiers. Establish what is safe to use before experimentation begins.' },
+      { name: 'Sessions 3-4: Apply AI to Real Workflows', text: 'Have participants bring actual work tasks and rebuild them with AI assistance. Focus on specific time savings, not generic tool skills.' },
+      { name: 'Session 5: Introduce the 3-3-3 Habit Framework', text: 'Pick 3 repetitive tasks, use AI for 3 weeks, measure 3 specific outcomes. Creates structured habits that persist after the program ends.' },
+      { name: 'Session 6: Showcase Results and Map Next Stage', text: 'Each participant presents a before/after workflow with quantified time savings. Introduce the AI Maturity Model for the path forward.' },
+    ],
+  },
+  'ai-maturity-trap-stuck-stage-one': {
+    name: 'How to Move Your Organization Through the 4 AI Maturity Stages',
+    description: 'A maturity assessment framework showing where companies stand in AI adoption and the concrete steps needed to progress from awareness to transformation.',
+    steps: [
+      { name: 'Stage 1: Awareness', text: 'Company knows AI exists but has no formal policy, training, or strategy. Employees experiment secretly. Leadership says "we need to do something" without concrete plans.' },
+      { name: 'Stage 2: Experimentation', text: 'Launch a structured pilot with 10-20 trained pioneers. Define basic AI usage policies and security boundaries. Requires permission, structure, and one accountable owner.' },
+      { name: 'Stage 3: Integration', text: 'AI becomes part of normal workflows. Teams measure time savings, document best practices, develop internal champions. Processes are redesigned around human-AI collaboration.' },
+      { name: 'Stage 4: Transformation', text: 'AI changes your operating model. New roles emerge, decision-making improves through AI insights, and workflows are fundamentally redesigned for human-AI partnership at scale.' },
+    ],
+  },
+};
+
 // Custom blockquote component for pull quotes
 const PullQuote = ({ children }) => (
   <blockquote className="pull-quote">{children}</blockquote>
@@ -137,6 +171,24 @@ const Post = () => {
             ],
           })}
         </script>
+        {/* HowTo schema for framework posts */}
+        {HOWTO_SCHEMAS[slug] && (
+          <script type="application/ld+json">
+            {JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'HowTo',
+              name: HOWTO_SCHEMAS[slug].name,
+              description: HOWTO_SCHEMAS[slug].description,
+              step: HOWTO_SCHEMAS[slug].steps.map((s, i) => ({
+                '@type': 'HowToStep',
+                position: i + 1,
+                name: s.name,
+                text: s.text,
+              })),
+              author: { '@type': 'Person', name: 'Sam Wong', url: SITE_URL },
+            })}
+          </script>
+        )}
         {/* hreflang tags for bilingual posts */}
         <link rel="alternate" hrefLang={postLang === 'zh-Hant' ? 'zh-Hant' : 'en'} href={postUrl} />
         {linkedPost && (
