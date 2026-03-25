@@ -12,8 +12,6 @@ import StatsBar from '../components/Home/StatsBar';
 import ClientLogoBar from '../components/Home/ClientLogoBar';
 import FeaturedCaseStudies from '../components/Home/FeaturedCaseStudies';
 import EmailCapture from '../components/EmailCapture/EmailCapture';
-import RevenuePathCTA from '../components/Home/RevenuePathCTA';
-import FeaturedProjects from '../components/Home/FeaturedProjects';
 
 const Index = () => (
   <Main
@@ -24,7 +22,7 @@ const Index = () => (
     }
     canonicalUrl={`${SITE_URL}/`}
     ogTitle="Sam Wong | AI Training Specialist - Hong Kong"
-    ogDescription="Corporate AI workshops, coaching, and Train-the-Trainer programs for Hong Kong enterprises. 10,000+ professionals trained through DotAI and Adaptig."
+    ogDescription="Corporate AI workshops, coaching, and Train-the-Trainer programs for Hong Kong enterprises. 10,000+ professionals trained through Adaptig."
     ogImage={DEFAULT_OG_IMAGE}
     ogUrl={`${SITE_URL}/`}
     ogType="website"
@@ -60,7 +58,6 @@ const Index = () => (
             url: SITE_URL,
             jobTitle: 'AI Training Specialist',
             worksFor: [
-              { '@type': 'Organization', name: 'DotAI', url: 'https://dotai.hk' },
               { '@type': 'Organization', name: 'Adaptig', url: 'https://adaptig.ai' },
             ],
           },
@@ -78,7 +75,7 @@ const Index = () => (
       <ClientLogoBar />
 
       {/* How Can I Help You? */}
-      <section className="section-warm section-padding-xl full-bleed">
+      <section className="section-warm section-padding-major full-bleed">
         <div className="content-wide">
           <h2 className="home-section-title">
             How Can I
@@ -123,15 +120,8 @@ const Index = () => (
         </div>
       </section>
 
-      {/* Revenue Path CTA — moved up, right after service options */}
-      <section className="section-base section-padding-xl full-bleed">
-        <div className="content-wide">
-          <RevenuePathCTA />
-        </div>
-      </section>
-
       {/* Testimonials */}
-      <section className="section-sunken section-padding-xl full-bleed">
+      <section className="section-sunken section-padding-std full-bleed">
         <div className="content-wide">
           <h2 className="home-section-title">
             Trusted by
@@ -147,49 +137,9 @@ const Index = () => (
       </section>
 
       {/* Case Studies */}
-      <section className="section-base section-padding-xl full-bleed">
+      <section className="section-base section-padding-std full-bleed">
         <div className="content-wide">
           <FeaturedCaseStudies limit={3} tag="case-study" />
-        </div>
-      </section>
-
-      {/* Where I Work + Projects (combined social proof) */}
-      <section className="section-sunken section-padding-xl full-bleed">
-        <div className="content-wide">
-          <h2 className="home-section-title">Where I Work</h2>
-          <div className="card-grid cols-2">
-            <a href="https://adaptig.ai" target="_blank" rel="noopener noreferrer" className="card work-card">
-              <img
-                src={`${process.env.PUBLIC_URL}/images/home/adaptig-logo.png`}
-                alt="Adaptig"
-                className="work-card__logo"
-                width={400}
-                height={192}
-                loading="lazy"
-              />
-              <p>
-                Global trainer network and workshops for enterprise AI adoption.
-                Spanning North America, Latin America, Europe, and Asia-Pacific.
-              </p>
-              <span className="help-card__arrow">&rarr;</span>
-            </a>
-            <a href="https://dotai.hk" target="_blank" rel="noopener noreferrer" className="card work-card">
-              <img
-                src={`${process.env.PUBLIC_URL}/images/home/dotai-logo.png`}
-                alt="DotAI"
-                className="work-card__logo"
-                width={400}
-                height={182}
-                loading="lazy"
-              />
-              <p>
-                Hong Kong AI training community serving clients including HSBC,
-                Bank of China, and Chow Tai Fook.
-              </p>
-              <span className="help-card__arrow">&rarr;</span>
-            </a>
-          </div>
-          <FeaturedProjects />
         </div>
       </section>
 

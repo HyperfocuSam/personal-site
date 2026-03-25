@@ -24,6 +24,20 @@ const FeaturedCaseStudies = ({ limit, tag }) => {
       <div className="home-case-studies__grid">
         {caseStudies.map((post) => (
           <article key={post.slug} className="home-case-studies__card">
+            {post.image && (
+              <Link to={`/blog/${post.slug}`} className="home-case-studies__image-link">
+                <div className="home-case-studies__image-wrap">
+                  <img
+                    src={`${process.env.PUBLIC_URL}${post.image}`}
+                    alt={post.title}
+                    className="home-case-studies__image"
+                    width={800}
+                    height={450}
+                    loading="lazy"
+                  />
+                </div>
+              </Link>
+            )}
             <div className="home-case-studies__content">
               <h4>
                 <Link to={`/blog/${post.slug}`}>{post.title}</Link>

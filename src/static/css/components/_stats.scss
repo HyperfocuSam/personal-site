@@ -18,6 +18,48 @@
 
 .stat-item {
   text-align: center;
+  position: relative;
+
+  // Primary stat — visually dominant
+  &--primary {
+    .stat-item__number {
+      font-size: 3rem;
+
+      @include breakpoint(small) {
+        font-size: 2.25rem;
+      }
+    }
+
+    .stat-item__label {
+      font-weight: _font(weight-bold);
+      color: _palette(text-body);
+    }
+  }
+
+  // Subtle vertical divider between stats
+  &:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 15%;
+    height: 70%;
+    width: 1px;
+    background: _palette(border-subtle);
+  }
+
+  @include breakpoint(medium) {
+    // Hide divider after 3rd item (wraps to new row)
+    &:nth-child(3)::after {
+      display: none;
+    }
+  }
+
+  @include breakpoint(small) {
+    // Hide divider on even items (2-col layout)
+    &:nth-child(even)::after {
+      display: none;
+    }
+  }
 
   &__number {
     display: block;

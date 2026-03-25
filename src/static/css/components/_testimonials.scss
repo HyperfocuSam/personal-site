@@ -65,7 +65,7 @@
 .testimonial-card {
   background: _palette(surface-raised);
   border-radius: map-get($radius, lg);
-  padding: 2rem;
+  padding: 2.25rem 2.5rem;
   position: relative;
   box-shadow: map-get($shadow, sm);
   border: 1px solid _palette(border-subtle);
@@ -85,10 +85,10 @@
 
   &__quote {
     color: _palette(text-body);
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     font-style: italic;
-    line-height: 1.6;
-    margin: 2rem 0 1.5rem;
+    line-height: 1.7;
+    margin: 1.75rem 0 1.25rem;
     padding: 0;
   }
 

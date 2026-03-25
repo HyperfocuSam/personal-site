@@ -3,21 +3,21 @@ import { Link } from 'react-router-dom';
 
 const paths = [
   {
-    title: 'I lead a team or organization',
-    description: 'Get workshops, training, or keynotes that turn AI interest into real adoption.',
-    cta: 'Explore Organization Options',
+    title: 'For Organizations',
+    description: 'Workshops, training, or keynotes that turn AI interest into real adoption.',
+    cta: 'Get Started',
     link: '/contact',
   },
   {
-    title: 'I want personal coaching',
-    description: 'Work one-on-one on your own projects, workflows, and career goals.',
-    cta: 'View Coaching Tiers',
+    title: 'For Individuals',
+    description: 'One-on-one coaching on your own projects, workflows, and career goals.',
+    cta: 'View Tiers',
     link: '/services#one-on-one',
   },
   {
-    title: 'I want to become a trainer',
+    title: 'For Trainers',
     description: 'Join the Adaptig network to teach practical, human-first AI workshops.',
-    cta: 'Apply as an Adaptig Trainer',
+    cta: 'Apply Now',
     link: '/services#train-the-trainer',
   },
 ];
