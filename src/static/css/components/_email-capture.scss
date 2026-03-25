@@ -37,8 +37,8 @@
   }
 
   a {
-    color: _palette(amber);
-    &:hover { color: _palette(amber-light); }
+    color: _palette(text-on-dark);
+    &:hover { color: #ffffff; }
   }
 
   &__form {
@@ -73,7 +73,7 @@
     }
 
     &:focus {
-      border-color: _palette(amber);
+      border-color: _palette(text-on-dark);
     }
 
     @include breakpoint(small) {
@@ -92,7 +92,7 @@
     min-width: 140px;
     text-align: center;
     cursor: pointer;
-    transition: background-color 0.25s $ease-out, transform 0.2s $ease-out-snappy, box-shadow 0.2s $ease-out-snappy, color 0.2s $ease-out-snappy;
+    transition: background-color 0.25s $ease-out, box-shadow 0.2s $ease-out-snappy, color 0.2s $ease-out-snappy;
     background-color: _palette(amber);
     color: _palette(ink);
     border: 2px solid _palette(amber);
@@ -100,7 +100,6 @@
     &:hover {
       background-color: _palette(amber-light);
       border-color: _palette(amber-light);
-      transform: translateY(-2px);
       box-shadow: map-get($shadow, md);
       color: _palette(ink);
     }
