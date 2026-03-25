@@ -45,11 +45,6 @@
   }
 }
 
-// ─── Warm cream section (Ali's yellow wash) ────────────────
-.section-warm {
-  background-color: _palette(surface-warm);
-}
-
 // ─── Homepage section titles — huge editorial serif ────────
 // Compact variant for secondary/transitional sections
 .home-section-title--compact {
@@ -69,7 +64,7 @@
 
 .home-section-title {
   font-family: _font(family-heading);
-  font-size: 3.5rem;
+  font-size: clamp(2.75rem, 2rem + 3.5vw, 5rem);
   font-weight: _font(weight-heading);
   color: _palette(text-primary);
   line-height: 1.1;
@@ -78,11 +73,10 @@
 
   em {
     font-style: italic;
-    color: _palette(amber-text);
+    color: _palette(text-secondary);
   }
 
   @include breakpoint(small) {
-    font-size: 2.25rem;
     margin-bottom: 2rem;
   }
 }
@@ -115,32 +109,28 @@
   &__greeting {
     font-family: _font(family-heading);
     font-size: 1.5rem;
-    color: _palette(amber-text);
+    color: _palette(text-secondary);
     margin-bottom: 0.75rem;
     font-weight: _font(weight-heading);
-    font-style: italic;
+    font-style: normal;
   }
 
   h1 {
     color: _palette(text-primary);
-    font-size: 5.25rem;
+    font-size: clamp(3rem, 2rem + 5vw, 6rem);
     font-weight: _font(weight-heading);
-    letter-spacing: -0.03em;
+    letter-spacing: -0.035em;
     line-height: 1.05;
     margin-bottom: 1.75rem;
     overflow-wrap: break-word;
 
     em {
       font-style: italic;
-      color: _palette(amber-text);
-    }
-
-    @include breakpoint(medium) {
-      font-size: 3.5rem;
-    }
-
-    @include breakpoint(small) {
-      font-size: 2.35rem;
+      color: _palette(text-secondary);
+      display: block;
+      font-size: 0.45em;
+      line-height: 1.3;
+      margin-top: 0.3em;
     }
   }
 
@@ -166,14 +156,25 @@
       justify-content: center;
     }
 
-    .button--outline {
-      background-color: transparent;
-      border: 2px solid _palette(text-primary);
-      color: _palette(text-primary);
+    // The two amber CTAs — the only place amber appears in the entire design
+    .button {
+      background-color: _palette(amber);
+      color: _palette(ink);
 
       &:hover {
-        background-color: _palette(text-primary);
-        color: _palette(surface-base);
+        background-color: _palette(amber-light);
+        color: _palette(ink);
+      }
+    }
+
+    .button--outline {
+      background-color: transparent;
+      border: 2px solid _palette(amber);
+      color: _palette(amber);
+
+      &:hover {
+        background-color: _palette(amber);
+        color: _palette(ink);
       }
     }
   }
@@ -184,7 +185,7 @@
     width: 380px;
     height: 440px;
     position: relative;
-    background: _palette(amber);
+    background: _palette(ink);
     border-radius: map-get($radius, xl);
     overflow: hidden;
 
@@ -260,7 +261,7 @@
   overflow: hidden;
 
   &:hover {
-    transform: translateY(-4px);
+    transform: translateY(-1px);
     box-shadow: map-get($shadow, md);
     color: inherit;
 
@@ -302,7 +303,7 @@
   }
 
   &__arrow {
-    color: _palette(amber-text);
+    color: _palette(text-primary);
     font-size: 1.5rem;
     font-weight: _font(weight-bold);
     transition: transform 0.2s $ease-out-snappy;
@@ -338,8 +339,6 @@
   > .section-base,
   > .section-sunken,
   > .section-dark,
-  > .section-warm,
-  > .section-yellow,
   > .hero-gradient,
   > .page-hero,
   > .email-capture,
@@ -407,7 +406,7 @@
 
     &:hover {
       box-shadow: map-get($shadow, sm);
-      transform: translateY(-3px);
+      transform: translateY(-1px);
 
       .home-case-studies__image {
         transform: scale(1.05);
@@ -508,7 +507,7 @@
 
     &:hover {
       box-shadow: map-get($shadow, md);
-      transform: translateY(-2px);
+      transform: translateY(-1px);
     }
 
     h4 { font-size: 1.1rem; margin-bottom: 0; white-space: nowrap; flex-shrink: 0; }
@@ -555,7 +554,7 @@
       left: 1.25rem;
       font-size: 2.5rem;
       line-height: 1;
-      color: _palette(amber);
+      color: _palette(text-primary);
       font-family: _font(family-heading);
       opacity: 0.4;
     }
@@ -651,12 +650,12 @@
       p { color: _palette(text-on-dark-muted); }
 
       .button {
-        background: _palette(amber);
+        background: _palette(text-on-dark);
         color: _palette(ink);
         border: 0;
 
         &:hover {
-          background: _palette(amber-light);
+          background: #ffffff;
         }
       }
     }
@@ -677,8 +676,8 @@
     font-weight: _font(weight-bold);
     text-transform: uppercase;
     letter-spacing: _font(kerning-meta);
-    background: _palette(amber);
-    color: _palette(ink);
+    background: _palette(ink);
+    color: _palette(text-on-dark);
     padding: 0.3em 0.75em;
     border-radius: map-get($radius, pill);
     margin-bottom: 0.75em;
@@ -732,7 +731,7 @@
   transition: transform 0.3s $ease-out, box-shadow 0.3s $ease-out;
 
   &:hover {
-    transform: translateY(-4px);
+    transform: translateY(-1px);
     box-shadow: map-get($shadow, md);
     color: inherit;
   }
