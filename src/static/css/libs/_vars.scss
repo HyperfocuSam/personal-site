@@ -1,5 +1,5 @@
-// Design System: hyperfocusam.com Visual Redesign
-// Atmosphere: "Warm study at dusk"
+// Design System: hyperfocusam.com
+// Atmosphere: "Editorial monochrome — confident restraint"
 
 // Breakpoints.
 $breakpoints: (
@@ -33,8 +33,8 @@ $duration: (
 $size: (
   element-height: 2.75em,
   element-margin: 2em,
-  section-spacing: 6rem,
-  section-spacing-small: 3rem,
+  section-spacing: 6.5rem,
+  section-spacing-small: 3.5rem,
   menu: 20em,
   content-form: 480px,
   content-narrow: 720px,
@@ -75,48 +75,47 @@ $font: (
   weight-heading: 600,
   weight-heading-bold: 700,
   weight-heading-extrabold: 700,
-  kerning-heading: -0.02em,
+  kerning-heading: -0.03em,
   kerning-meta: 0.08em,
 );
 
-// Palette — "Warm study at dusk"
+// Palette — monochromatic with amber CTA accent
 $palette: (
-  // Ink (primary dark)
-  ink: #0f1729,
-  ink-mid: #1e2a45,
-  ink-light: #2d3b5e,
-  ink-deep: #172038,
+  // Ink (near-black)
+  ink: #0c0c0c,
+  ink-mid: #1a1a1a,
+  ink-light: #2a2a2a,
+  ink-deep: #050505,
 
-  // Amber (warm accent)
+  // Amber (used ONLY on 2 CTA buttons)
   amber: #c8965a,
-  amber-text: #8a6530,   // WCAG AA on surface-base (4.8:1)
+  amber-text: #c8965a,
   amber-light: #d4a96e,
   amber-subtle: rgba(200, 150, 90, 0.12),
 
-  // Surfaces (layered depth)
-  surface-base: #f6f4f0,
-  surface-raised: #faf8f5,
-  surface-overlay: #ffffff,
-  surface-sunken: #edeae4,
+  // Surfaces (clean neutrals)
+  surface-base: #fafaf9,
+  surface-raised: #ffffff,
+  surface-overlay: rgba(255, 255, 255, 0.97),
+  surface-sunken: #f0f0f0,
 
   // Text
-  text-primary: #1a1d2b,
-  text-body: #3d3f4e,
-  text-secondary: #6b6d7a,
+  text-primary: #0c0c0c,
+  text-body: #4a4a4a,
+  text-secondary: #8a8a8a,
   text-on-dark: #e8e6e1,
   text-on-dark-muted: #9a9ba8,
 
   // Borders
-  border-subtle: #e5e2db,
-  border-strong: #d0cdc5,
+  border-subtle: #e5e5e5,
+  border-strong: #d0d0d0,
 
-  // Shadows (navy-tinted)
-  shadow-color: rgba(15, 23, 41, 0.08),
+  // Shadows
+  shadow-color: rgba(0, 0, 0, 0.06),
 
   // Semantic colors
-  error: #c9303d,   // WCAG AA on surface-base (4.8:1)
+  error: #c9303d,
   success: #2a7d4f,
-  surface-warm: #FDF6E8,
 
   // Social brand colors
   social-linkedin: #0077b5,
@@ -129,17 +128,17 @@ $palette: (
 
 // Shadows
 $shadow: (
-  sm: 0 1px 2px rgba(15, 23, 41, 0.05),
-  md: 0 4px 12px rgba(15, 23, 41, 0.08),
-  lg: 0 8px 24px rgba(15, 23, 41, 0.12),
+  sm: 0 1px 2px rgba(0, 0, 0, 0.03),
+  md: 0 2px 8px rgba(0, 0, 0, 0.05),
+  lg: 0 4px 16px rgba(0, 0, 0, 0.07),
 );
 
 // Border radius
 $radius: (
-  sm: 4px,
-  md: 6px,
-  lg: 8px,
-  xl: 12px,
+  sm: 2px,
+  md: 3px,
+  lg: 4px,
+  xl: 6px,
   full: 50%,
-  pill: 100px, // deprecated alias — remove as files are rewritten
+  pill: 100px,
 );
