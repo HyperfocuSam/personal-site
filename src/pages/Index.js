@@ -12,6 +12,7 @@ import StatsBar from '../components/Home/StatsBar';
 import ClientLogoBar from '../components/Home/ClientLogoBar';
 import FeaturedCaseStudies from '../components/Home/FeaturedCaseStudies';
 import EmailCapture from '../components/EmailCapture/EmailCapture';
+import ScrollReveal from '../components/ScrollReveal';
 
 const Index = () => (
   <Main
@@ -65,24 +66,30 @@ const Index = () => (
       </script>
     </Helmet>
     <article className="post" id="index">
-      {/* Hero — light, conversational, big serif */}
+      {/* Hero — light, conversational, big serif (has its own entrance animation) */}
       <HeroSection />
 
-      {/* Stats */}
-      <StatsBar />
+      {/* Stats — numbers count up on scroll */}
+      <ScrollReveal variant="fade-up">
+        <StatsBar />
+      </ScrollReveal>
 
       {/* Client Logo Bar */}
-      <ClientLogoBar />
+      <ScrollReveal variant="fade-in" delay={100}>
+        <ClientLogoBar />
+      </ScrollReveal>
 
-      {/* How Can I Help You? */}
+      {/* How Can I Help You? — title reveals, then cards stagger in */}
       <section className="section-warm section-padding-major full-bleed">
         <div className="content-wide">
-          <h2 className="home-section-title">
-            How Can I
-            <br />
-            <em>Help You?</em>
-          </h2>
-          <div className="help-grid">
+          <ScrollReveal variant="fade-up">
+            <h2 className="home-section-title">
+              How Can I
+              <br />
+              <em>Help You?</em>
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal variant="fade-up" stagger={120} className="help-grid">
             <Link to="/services#organizations" className="help-card">
               <div className="help-card__image">
                 <OptimizedImage src={`${process.env.PUBLIC_URL}/images/home/workshop-corporate.jpg`} alt="Corporate AI workshop at Arup" width={800} height={600} loading="lazy" />
@@ -116,38 +123,46 @@ const Index = () => (
               </p>
               <span className="help-card__arrow">&rarr;</span>
             </Link>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* Testimonials */}
       <section className="section-sunken section-padding-std full-bleed">
         <div className="content-wide">
-          <h2 className="home-section-title">
-            Trusted by
-            {' '}
-            <em>Leaders</em>
-          </h2>
-          <TestimonialSection
-            testimonials={testimonials}
-            limit={2}
-            featured
-          />
+          <ScrollReveal variant="fade-up">
+            <h2 className="home-section-title">
+              Trusted by
+              {' '}
+              <em>Leaders</em>
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal variant="fade-up" delay={150}>
+            <TestimonialSection
+              testimonials={testimonials}
+              limit={2}
+              featured
+            />
+          </ScrollReveal>
         </div>
       </section>
 
       {/* Case Studies */}
       <section className="section-base section-padding-std full-bleed">
         <div className="content-wide">
-          <FeaturedCaseStudies limit={3} tag="case-study" />
+          <ScrollReveal variant="fade-up">
+            <FeaturedCaseStudies limit={3} tag="case-study" />
+          </ScrollReveal>
         </div>
       </section>
 
       {/* CTA */}
-      <EmailCapture
-        title="Get practical AI insights — no fluff"
-        blurb="One email when I publish: workshop frameworks, adoption case studies, and tools I actually use with clients."
-      />
+      <ScrollReveal variant="fade-up">
+        <EmailCapture
+          title="Get practical AI insights — no fluff"
+          blurb="One email when I publish: workshop frameworks, adoption case studies, and tools I actually use with clients."
+        />
+      </ScrollReveal>
 
       <p className="lang-toggle" style={{ textAlign: 'center' }}>
         <Link to="/zh">&#x4E2D;&#x6587;&#x7248;&#x672C;</Link>

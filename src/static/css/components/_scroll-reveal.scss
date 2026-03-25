@@ -1,0 +1,110 @@
+/* Scroll Reveal — entrance animations triggered by Intersection Observer */
+
+// ─── Base state (hidden, waiting to animate) ───────────────
+.sr {
+  will-change: transform, opacity;
+}
+
+// Fade up (default)
+.sr-fade-up {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s $ease-out, transform 0.7s $ease-out;
+
+  &.sr-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Fade in (no movement)
+.sr-fade-in {
+  opacity: 0;
+  transition: opacity 0.6s $ease-out;
+
+  &.sr-visible {
+    opacity: 1;
+  }
+}
+
+// Slide from left
+.sr-slide-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.7s $ease-out, transform 0.7s $ease-out;
+
+  &.sr-visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Slide from right
+.sr-slide-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.7s $ease-out, transform 0.7s $ease-out;
+
+  &.sr-visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// ─── Staggered children ────────────────────────────────────
+.sr-child {
+  will-change: transform, opacity;
+
+  &.sr-fade-up {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.5s $ease-out, transform 0.5s $ease-out;
+
+    &.sr-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &.sr-fade-in {
+    opacity: 0;
+    transition: opacity 0.5s $ease-out;
+
+    &.sr-visible {
+      opacity: 1;
+    }
+  }
+
+  &.sr-slide-left {
+    opacity: 0;
+    transform: translateX(-24px);
+    transition: opacity 0.5s $ease-out, transform 0.5s $ease-out;
+
+    &.sr-visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  &.sr-slide-right {
+    opacity: 0;
+    transform: translateX(24px);
+    transition: opacity 0.5s $ease-out, transform 0.5s $ease-out;
+
+    &.sr-visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+// ─── Reduced motion — instant, no animation ────────────────
+@media (prefers-reduced-motion: reduce) {
+  .sr,
+  .sr-child {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    will-change: auto;
+  }
+}
