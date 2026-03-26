@@ -1,36 +1,680 @@
-/* Homepage — editorial warm style (Ali Abdaal proportions) */
+/* Homepage — ampcode-inspired dark editorial redesign */
+
+// ═══════════════════════════════════════════════════════════════
+// NEW: Dark homepage styles (2026 redesign)
+// ═══════════════════════════════════════════════════════════════
+
+// ─── Light foundation — warm editorial ───────────────────────
+.homepage-dark {
+  background: _palette(surface-base);
+  color: _palette(text-primary);
+
+  a:not(.button):not(.button-secondary):not(.button-ghost):not([class*="cta"]):not([class*="__link"]):not([class*="__more"]) {
+    color: _palette(text-primary);
+    border-bottom-color: transparent;
+  }
+}
+
+// Override _main.scss content constraint — dark homepage sections
+// handle their own max-width via content-narrow/content-wide internally.
+// The ScrollReveal wrapper divs are direct children of article and must
+// be unconstrained so full-bleed sections work correctly.
+#main > article.homepage-dark > * {
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+// ─── Hero — massive centered serif on warm cream ─────────────
+.dark-hero {
+  background: _palette(surface-base);
+  padding: 16rem 1.5rem 12rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  &__inner {
+    max-width: _size(content-standard);
+    margin: 0 auto;
+    position: relative;
+  }
+
+  &__headline {
+    font-family: _font(family-heading);
+    font-size: clamp(3.5rem, 2.5rem + 6vw, 8rem);
+    font-weight: _font(weight-heading);
+    color: _palette(ink);
+    line-height: 1.0;
+    letter-spacing: -0.04em;
+    margin-bottom: 2.5rem;
+
+    em {
+      font-style: italic;
+      color: _palette(text-secondary);
+      display: block;
+    }
+  }
+
+  &__subtitle {
+    color: _palette(text-body);
+    font-size: clamp(1.05rem, 0.95rem + 0.5vw, 1.3rem);
+    line-height: 1.7;
+    max-width: 520px;
+    margin: 0 auto 3.5rem;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: _palette(ink);
+    color: _palette(text-on-dark);
+    padding: 1.1rem 2.75rem;
+    border-radius: map-get($radius, xl);
+    font-size: 1.05rem;
+    font-weight: _font(weight-bold);
+    text-decoration: none;
+    border: 0;
+    letter-spacing: 0.01em;
+    transition: background 0.25s $ease-out;
+
+    &:hover {
+      background: _palette(ink-light);
+      color: _palette(text-on-dark);
+    }
+  }
+
+  &__arrow {
+    transition: transform 0.25s $ease-out-snappy;
+    font-size: 1.1em;
+  }
+
+  &__cta:hover &__arrow {
+    transform: translateX(4px);
+  }
+
+  // Staggered entrance animation
+  &__headline,
+  &__subtitle,
+  &__actions {
+    animation: hero-reveal 1s $ease-out-smooth both;
+  }
+
+  &__headline   { animation-delay: 0.1s; }
+  &__subtitle   { animation-delay: 0.35s; }
+  &__actions    { animation-delay: 0.55s; }
+
+  @include breakpoint(medium) {
+    padding: 12rem 1.5rem 8rem;
+  }
+
+  @include breakpoint(small) {
+    padding: 8rem 1.25rem 5rem;
+
+    &__subtitle {
+      margin-bottom: 2.5rem;
+    }
+  }
+}
+
+@keyframes hero-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// ─── Stats strip — understated horizontal metrics ────────────
+.stats-strip {
+  background: _palette(surface-base);
+  border-top: 1px solid _palette(border-subtle);
+  border-bottom: 1px solid _palette(border-subtle);
+  padding: 4rem 1.5rem;
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    min-width: 0;
+
+    &--primary {
+      .stats-strip__number {
+        color: _palette(amber);
+      }
+    }
+  }
+
+  &__number {
+    font-family: _font(family-heading);
+    font-size: clamp(1.75rem, 1.5rem + 1.25vw, 2.5rem);
+    font-weight: _font(weight-heading-bold);
+    color: _palette(ink);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  &__label {
+    font-size: 0.8125rem;
+    color: _palette(text-secondary);
+    letter-spacing: _font(kerning-meta);
+    text-transform: uppercase;
+    font-weight: _font(weight-medium);
+    white-space: nowrap;
+  }
+
+  @include breakpoint(small) {
+    padding: 2.5rem 1rem;
+
+    &__inner {
+      gap: 2rem 2.5rem;
+    }
+  }
+
+  @include breakpoint(xsmall) {
+    &__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      justify-items: center;
+    }
+
+    &__item:last-child {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+// ─── Logo marquee — infinite horizontal scroll ───────────────
+.logo-marquee {
+  padding: 4rem 0;
+  overflow: hidden;
+  background: _palette(surface-sunken);
+  border-bottom: 1px solid _palette(border-subtle);
+
+  &__label {
+    font-size: 0.8125rem;
+    font-weight: _font(weight-medium);
+    letter-spacing: _font(kerning-meta);
+    text-transform: uppercase;
+    color: _palette(text-secondary);
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  &__track {
+    display: flex;
+    width: max-content;
+  }
+
+  &__scroll {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding-right: 3rem;
+    animation: marquee 45s linear infinite;
+  }
+
+  &__track:hover &__scroll {
+    animation-play-state: paused;
+  }
+
+  &__logo {
+    height: 30px;
+    width: auto;
+    max-width: 130px;
+    object-fit: contain;
+    filter: grayscale(1);
+    opacity: 0.45;
+    transition: filter 0.4s $ease-out-smooth, opacity 0.4s $ease-out-smooth;
+    flex-shrink: 0;
+
+    &:hover {
+      filter: grayscale(0);
+      opacity: 0.85;
+    }
+  }
+
+  &__text {
+    color: _palette(text-secondary);
+    font-weight: _font(weight-bold);
+    font-size: 0.9rem;
+    white-space: nowrap;
+    opacity: 0.5;
+    flex-shrink: 0;
+    transition: opacity 0.3s $ease-out;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  @include breakpoint(small) {
+    padding: 2rem 0;
+
+    &__logo {
+      height: 22px;
+      max-width: 100px;
+    }
+
+    &__scroll {
+      gap: 2rem;
+      padding-right: 2rem;
+      animation-duration: 35s;
+    }
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-marquee__scroll {
+    animation: none;
+  }
+}
+
+// ─── Services editorial — single-column blocks ───────────────
+.services-editorial {
+  padding: 8rem 1.5rem;
+  background: _palette(surface-base);
+
+  &__title {
+    font-family: _font(family-heading);
+    font-size: map-get($type, section-title);
+    font-weight: _font(weight-heading);
+    color: _palette(text-primary);
+    line-height: 1.1;
+    letter-spacing: _font(kerning-heading);
+    margin-bottom: 4rem;
+
+    em {
+      font-style: italic;
+      color: _palette(text-secondary);
+    }
+  }
+
+  &__item {
+    display: block;
+    padding: 2.5rem 0;
+    border-bottom: 1px solid _palette(border-subtle);
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.15s ease;
+    position: relative;
+
+    &:first-of-type {
+      border-top: 1px solid _palette(border-subtle);
+    }
+
+    &:hover .services-editorial__heading {
+      color: _palette(text-secondary);
+    }
+
+    &:hover .services-editorial__arrow {
+      transform: translateX(6px);
+      color: _palette(ink);
+    }
+  }
+
+  &__label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: _font(weight-bold);
+    letter-spacing: _font(kerning-meta);
+    text-transform: uppercase;
+    color: _palette(amber);
+    margin-bottom: 0.5rem;
+  }
+
+  &__heading {
+    font-family: _font(family-heading);
+    font-size: clamp(1.75rem, 1.5rem + 1.5vw, 2.75rem);
+    font-weight: _font(weight-heading);
+    color: _palette(text-primary);
+    line-height: 1.1;
+    margin-bottom: 0.65rem;
+    letter-spacing: _font(kerning-heading);
+  }
+
+  &__desc {
+    color: _palette(text-body);
+    font-size: map-get($type, body-large);
+    line-height: 1.6;
+    max-width: 600px;
+    margin-bottom: 0;
+  }
+
+  &__arrow {
+    display: block;
+    font-size: 1.5rem;
+    color: _palette(text-secondary);
+    margin-top: 1rem;
+    transition: transform 0.2s ease, color 0.15s ease;
+  }
+
+  @include breakpoint(small) {
+    padding: 5rem 1.25rem;
+
+    &__item {
+      padding: 2rem 0;
+    }
+
+    &__title {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+// ─── Testimonial pull quotes — large serif italic ────────────
+.testimonial-pullquote {
+  padding: 9rem 1.5rem;
+  background: _palette(ink);
+
+  &__item {
+    max-width: _size(content-narrow);
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+    background: none;
+    text-align: center;
+
+    &:last-child .testimonial-pullquote__divider {
+      display: none;
+    }
+  }
+
+  &__quote {
+    font-family: _font(family-heading);
+    font-size: clamp(1.5rem, 1.2rem + 1.5vw, 2.5rem);
+    font-style: italic;
+    font-weight: _font(weight-heading);
+    color: _palette(text-on-dark);
+    line-height: 1.35;
+    margin: 0 0 1.75rem;
+    letter-spacing: -0.015em;
+  }
+
+  &__attribution {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    margin-bottom: 0;
+  }
+
+  &__name {
+    font-size: 0.9rem;
+    font-weight: _font(weight-bold);
+    color: _palette(amber);
+  }
+
+  &__role {
+    font-size: 0.85rem;
+    color: _palette(text-on-dark-muted);
+  }
+
+  &__divider {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 4rem auto;
+    max-width: 60px;
+  }
+
+  @include breakpoint(small) {
+    padding: 6rem 1.25rem;
+
+    &__divider {
+      margin: 3rem auto;
+    }
+  }
+}
+
+// ─── Latest writing — date + title list ──────────────────────
+.latest-writing {
+  padding: 8rem 1.5rem;
+  background: _palette(surface-base);
+
+  &__title {
+    font-family: _font(family-heading);
+    font-size: map-get($type, section-title);
+    font-weight: _font(weight-heading);
+    color: _palette(text-primary);
+    line-height: 1.1;
+    letter-spacing: _font(kerning-heading);
+    margin-bottom: 3rem;
+  }
+
+  &__list {
+    max-width: _size(content-narrow);
+  }
+
+  &__item {
+    display: flex;
+    gap: 2rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid _palette(border-subtle);
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.15s ease;
+
+    &:first-child {
+      border-top: 1px solid _palette(border-subtle);
+    }
+
+    &:hover {
+      .latest-writing__heading {
+        color: _palette(amber);
+      }
+    }
+  }
+
+  &__date {
+    font-size: 0.85rem;
+    color: _palette(text-secondary);
+    white-space: nowrap;
+    padding-top: 0.2rem;
+    min-width: 100px;
+  }
+
+  &__content {
+    min-width: 0;
+  }
+
+  &__heading {
+    font-family: _font(family-heading);
+    font-size: clamp(1.15rem, 1rem + 0.5vw, 1.4rem);
+    font-weight: _font(weight-heading);
+    color: _palette(text-primary);
+    line-height: 1.3;
+    margin-bottom: 0.35rem;
+    transition: color 0.15s ease;
+    letter-spacing: _font(kerning-heading);
+  }
+
+  &__excerpt {
+    font-size: 0.9rem;
+    color: _palette(text-body);
+    line-height: 1.5;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__more {
+    display: inline-block;
+    margin-top: 2rem;
+    font-size: 0.95rem;
+    font-weight: _font(weight-bold);
+    color: _palette(amber) !important;
+    text-decoration: none;
+    border: 0;
+    border-bottom: 1.5px solid transparent;
+    transition: color 0.25s $ease-out, border-bottom-color 0.25s $ease-out;
+
+    &:hover {
+      color: _palette(amber-light) !important;
+      border-bottom-color: _palette(amber-light);
+    }
+  }
+
+  @include breakpoint(small) {
+    padding: 5rem 1.25rem;
+
+    &__item {
+      flex-direction: column;
+      gap: 0.25rem;
+      padding: 1.25rem 0;
+    }
+
+    &__date {
+      min-width: 0;
+    }
+
+    &__title {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+// ─── About callout — photo + bio ─────────────────────────────
+.about-callout {
+  padding: 8rem 1.5rem;
+  text-align: center;
+  background: _palette(surface-sunken);
+  border-top: 1px solid _palette(border-subtle);
+
+  &__inner {
+    max-width: _size(content-narrow);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top center;
+    margin-bottom: 2rem;
+    border: 3px solid _palette(border-subtle);
+  }
+
+  &__name {
+    font-family: _font(family-heading);
+    font-size: clamp(1.75rem, 1.5rem + 1vw, 2.5rem);
+    font-weight: _font(weight-heading);
+    color: _palette(text-primary);
+    margin-bottom: 0.75rem;
+    letter-spacing: _font(kerning-heading);
+  }
+
+  &__bio {
+    color: _palette(text-body);
+    font-size: map-get($type, body-large);
+    line-height: 1.65;
+    max-width: 480px;
+    margin: 0 auto 2rem;
+  }
+
+  &__link {
+    font-size: 0.95rem;
+    font-weight: _font(weight-bold);
+    color: _palette(amber) !important;
+    text-decoration: none;
+    border: 0;
+    transition: color 0.2s $ease-out;
+
+    &:hover {
+      color: _palette(amber-light) !important;
+    }
+  }
+
+  @include breakpoint(small) {
+    padding: 5rem 1.25rem;
+
+    &__photo {
+      width: 140px;
+      height: 140px;
+    }
+  }
+}
+
+// ─── Language toggle ─────────────────────────────────────────
+.lang-toggle--dark {
+  text-align: center;
+  padding: 2rem 0 3rem;
+
+  a {
+    color: _palette(text-secondary);
+    font-size: 0.9rem;
+    border: 0;
+    transition: color 0.2s $ease-out;
+
+    &:hover {
+      color: _palette(text-primary);
+    }
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════
+// LEGACY: Original light homepage styles (kept for ZhIndex.js
+// and other pages still using these components)
+// ═══════════════════════════════════════════════════════════════
 
 // ─── Section padding tiers — creates visual rhythm ──────────
 // Major: hero-weight sections that anchor the page
 .section-padding-major {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
 
   @include breakpoint(small) {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
   }
 }
 
 // Standard: primary content sections (asymmetric pulls reader forward)
 .section-padding-std {
-  padding-top: 5rem;
-  padding-bottom: 4rem;
+  padding-top: 6rem;
+  padding-bottom: 5rem;
 
   @include breakpoint(small) {
-    padding-top: 3.5rem;
-    padding-bottom: 3rem;
+    padding-top: 4rem;
+    padding-bottom: 3.5rem;
   }
 }
 
 // Compact: transitional/secondary sections
 .section-padding-compact {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 
   @include breakpoint(small) {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
   }
 }
 
@@ -256,17 +900,16 @@
   padding: 0;
   text-decoration: none;
   box-shadow: none;
-  transition: transform 0.3s $ease-out, box-shadow 0.3s $ease-out;
-  border: 0;
+  transition: border-color 0.25s $ease-out;
+  border: 1px solid _palette(border-subtle);
   overflow: hidden;
 
   &:hover {
-    transform: translateY(-1px);
-    box-shadow: map-get($shadow, md);
+    border-color: _palette(border-strong);
     color: inherit;
 
     .help-card__image img {
-      transform: scale(1.05);
+      transform: scale(1.03);
     }
   }
 
@@ -395,8 +1038,8 @@
     border-radius: map-get($radius, xl);
     box-shadow: none;
     padding: 0;
-    transition: box-shadow 0.3s $ease-out, transform 0.3s $ease-out;
-    border: 0;
+    transition: border-color 0.25s $ease-out;
+    border: 1px solid _palette(border-subtle);
     overflow: hidden;
 
     // Featured card spans both rows on left column
@@ -405,11 +1048,10 @@
     }
 
     &:hover {
-      box-shadow: map-get($shadow, sm);
-      transform: translateY(-1px);
+      border-color: _palette(border-strong);
 
       .home-case-studies__image {
-        transform: scale(1.05);
+        transform: scale(1.03);
       }
     }
 

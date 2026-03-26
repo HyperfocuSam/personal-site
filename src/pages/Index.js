@@ -7,10 +7,11 @@ import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 import testimonials from '../data/testimonials';
 import TestimonialSection from '../components/Testimonials/TestimonialSection';
 import HeroSection from '../components/Home/HeroSection';
-import OptimizedImage from '../components/Template/OptimizedImage';
 import StatsBar from '../components/Home/StatsBar';
 import ClientLogoBar from '../components/Home/ClientLogoBar';
-import FeaturedCaseStudies from '../components/Home/FeaturedCaseStudies';
+import ServicesEditorial from '../components/Home/ServicesEditorial';
+import LatestWriting from '../components/Home/LatestWriting';
+import AboutCallout from '../components/Home/AboutCallout';
 import EmailCapture from '../components/EmailCapture/EmailCapture';
 import ScrollReveal from '../components/ScrollReveal';
 
@@ -65,98 +66,44 @@ const Index = () => (
         })}
       </script>
     </Helmet>
-    <article className="post" id="index">
-      {/* Hero — light, conversational, big serif (has its own entrance animation) */}
+    <article className="homepage-dark" id="index">
+      {/* 1. Dark Hero — massive centered serif, single CTA */}
       <HeroSection />
 
-      {/* Stats — numbers count up on scroll */}
-      <ScrollReveal variant="fade-up">
+      {/* 2. Stats — understated horizontal strip */}
+      <ScrollReveal variant="fade-up-long">
         <StatsBar />
       </ScrollReveal>
 
-      {/* Client Logo Bar */}
-      <ScrollReveal variant="fade-in" delay={100}>
+      {/* 3. Client Logos — infinite marquee */}
+      <ScrollReveal variant="fade-in">
         <ClientLogoBar />
       </ScrollReveal>
 
-      {/* How Can I Help You? — title reveals, then cards stagger in */}
-      <section className="section-warm section-padding-major full-bleed">
-        <div className="content-wide">
-          <ScrollReveal variant="fade-up">
-            <h2 className="home-section-title">
-              How Can I
-              <br />
-              <em>Help You?</em>
-            </h2>
-          </ScrollReveal>
-          <ScrollReveal variant="fade-up" stagger={120} className="help-grid">
-            <Link to="/services#organizations" className="help-card">
-              <div className="help-card__image">
-                <OptimizedImage src={`${process.env.PUBLIC_URL}/images/home/workshop-corporate.jpg`} alt="Corporate AI workshop at Arup" width={800} height={600} loading="lazy" />
-              </div>
-              <h3>Workshops for Organizations</h3>
-              <p>
-                Align your team, lower the fear, and build practical AI skills
-                tied to daily workflows.
-              </p>
-              <span className="help-card__arrow">&rarr;</span>
-            </Link>
-            <Link to="/services#one-on-one" className="help-card">
-              <div className="help-card__image">
-                <OptimizedImage src={`${process.env.PUBLIC_URL}/images/home/coaching-session.jpg`} alt="Hands-on AI coaching with Adaptig platform" width={800} height={600} loading="lazy" />
-              </div>
-              <h3>One-on-One Coaching</h3>
-              <p>
-                Personalized sessions focused on your projects, your role,
-                and your goals.
-              </p>
-              <span className="help-card__arrow">&rarr;</span>
-            </Link>
-            <Link to="/services#train-the-trainer" className="help-card">
-              <div className="help-card__image">
-                <OptimizedImage src={`${process.env.PUBLIC_URL}/images/home/train-the-trainer.jpg`} alt="Sam Wong presenting AI training on stage" width={800} height={600} loading="lazy" />
-              </div>
-              <h3>Train-the-Trainer</h3>
-              <p>
-                Become a certified AI trainer with the Adaptig methodology.
-                Teach with confidence.
-              </p>
-              <span className="help-card__arrow">&rarr;</span>
-            </Link>
-          </ScrollReveal>
-        </div>
-      </section>
+      {/* 4. Services — single-column editorial */}
+      <ScrollReveal variant="fade-up-long">
+        <ServicesEditorial />
+      </ScrollReveal>
 
-      {/* Testimonials */}
-      <section className="section-sunken section-padding-std full-bleed">
-        <div className="content-wide">
-          <ScrollReveal variant="fade-up">
-            <h2 className="home-section-title">
-              Trusted by
-              {' '}
-              <em>Leaders</em>
-            </h2>
-          </ScrollReveal>
-          <ScrollReveal variant="fade-up" delay={150}>
-            <TestimonialSection
-              testimonials={testimonials}
-              limit={2}
-              featured
-            />
-          </ScrollReveal>
-        </div>
-      </section>
+      {/* 5. Testimonials — full-width pull quotes */}
+      <ScrollReveal variant="scale-in">
+        <TestimonialSection
+          testimonials={testimonials}
+          variant="dark-pullquote"
+        />
+      </ScrollReveal>
 
-      {/* Case Studies */}
-      <section className="section-base section-padding-std full-bleed">
-        <div className="content-wide">
-          <ScrollReveal variant="fade-up">
-            <FeaturedCaseStudies limit={3} tag="case-study" />
-          </ScrollReveal>
-        </div>
-      </section>
+      {/* 6. Latest Writing — date + title list */}
+      <ScrollReveal variant="fade-up-long">
+        <LatestWriting />
+      </ScrollReveal>
 
-      {/* CTA */}
+      {/* 7. About — photo + bio callout */}
+      <ScrollReveal variant="blur-in">
+        <AboutCallout />
+      </ScrollReveal>
+
+      {/* 8. Email Capture — ink band for contrast */}
       <ScrollReveal variant="fade-up">
         <EmailCapture
           title="Get practical AI insights — no fluff"
@@ -164,7 +111,7 @@ const Index = () => (
         />
       </ScrollReveal>
 
-      <p className="lang-toggle" style={{ textAlign: 'center' }}>
+      <p className="lang-toggle lang-toggle--dark">
         <Link to="/zh">&#x4E2D;&#x6587;&#x7248;&#x672C;</Link>
       </p>
     </article>

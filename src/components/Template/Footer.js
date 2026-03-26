@@ -11,8 +11,6 @@ const Footer = () => (
         <p className="footer-tagline">AI adoption that sticks.</p>
         <p className="footer-bio">
           AI Training Specialist helping enterprises and individuals adopt AI.
-          {' '}Founding member of{' '}
-          <a href="https://dotai.hk" target="_blank" rel="noopener noreferrer">DotAI</a>.
           {' '}Co-founder of{' '}
           <a href="https://adaptig.ai" target="_blank" rel="noopener noreferrer">Adaptig</a>.
         </p>

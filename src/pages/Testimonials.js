@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import Main from '../layouts/Main';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 import testimonialData from '../data/testimonialData';
+import ScrollReveal from '../components/ScrollReveal';
 
 const TestimonialCard = ({
   quote, attribution, featured, stat,
@@ -187,55 +188,63 @@ const Testimonials = () => (
       {/* About Sam section */}
       <section className="section-base section-padding">
         <div className="content-standard testimonials">
-          <TestimonialSection
-            title="What participants say about Sam"
-            subtitle="Direct feedback from anonymous post-workshop surveys"
-            testimonials={testimonialData.aboutSam}
-          />
+          <ScrollReveal variant="scale-in">
+            <TestimonialSection
+              title="What participants say about Sam"
+              subtitle="Direct feedback from anonymous post-workshop surveys"
+              testimonials={testimonialData.aboutSam}
+            />
+          </ScrollReveal>
         </div>
       </section>
 
       {/* Corporate section */}
       <section className="section-base section-alt section-padding">
         <div className="content-standard testimonials">
-          <TestimonialSection
-            title="Enterprise clients"
-            subtitle="Feedback from corporate AI training engagements"
-            testimonials={testimonialData.corporate}
-          />
+          <ScrollReveal variant="scale-in">
+            <TestimonialSection
+              title="Enterprise clients"
+              subtitle="Feedback from corporate AI training engagements"
+              testimonials={testimonialData.corporate}
+            />
+          </ScrollReveal>
         </div>
       </section>
 
       {/* Academy section */}
       <section className="section-base section-padding">
         <div className="content-standard testimonials">
-          <TestimonialSection
-            title="DotAI Academy"
-            subtitle="Hong Kong&#39;s leading practical AI education platform"
-            testimonials={testimonialData.academy}
-          />
+          <ScrollReveal variant="scale-in">
+            <TestimonialSection
+              title="DotAI Academy"
+              subtitle="Hong Kong&#39;s leading practical AI education platform"
+              testimonials={testimonialData.academy}
+            />
+          </ScrollReveal>
         </div>
       </section>
 
       {/* CTA linking to services */}
       <section className="section-warm section-padding">
         <div className="content-standard" style={{ textAlign: 'center' }}>
-          <h3>Ready to experience this for your team?</h3>
-          <p>
-            Corporate AI workshops, 1-1 coaching, and Train-the-Trainer programs
-            — available in English and Cantonese across Hong Kong and Asia-Pacific.
-          </p>
-          <div style={{
-            display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginTop: '1.5rem',
-          }}
-          >
-            <Link to="/services" className="button">
-              See Training Services
-            </Link>
-            <Link to="/clients" className="button button--outline">
-              View Case Studies
-            </Link>
-          </div>
+          <ScrollReveal variant="fade-up">
+            <h3>Ready to experience this for your team?</h3>
+            <p>
+              Corporate AI workshops, 1-1 coaching, and Train-the-Trainer programs
+              — available in English and Cantonese across Hong Kong and Asia-Pacific.
+            </p>
+            <div style={{
+              display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginTop: '1.5rem',
+            }}
+            >
+              <Link to="/services" className="button">
+                See Training Services
+              </Link>
+              <Link to="/clients" className="button button--outline">
+                View Case Studies
+              </Link>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
     </article>

@@ -19,6 +19,7 @@ import ServiceCta from '../components/Blog/ServiceCta';
 import EmailCapture from '../components/EmailCapture/EmailCapture';
 
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
+import ScrollReveal from '../components/ScrollReveal';
 
 // HowTo schema for framework posts — improves AI search citability
 const HOWTO_SCHEMAS = {
@@ -210,7 +211,7 @@ const Post = () => {
       <ScrollProgress />
       <article className="post post--article" id="blog-post">
         {/* Dark hero with post title */}
-        <header className="page-hero">
+        <header className="page-hero page-hero--dark">
           <div className="content-narrow">
             <div className="title">
               <h2>
@@ -261,39 +262,49 @@ const Post = () => {
         {/* Author + Trainer Banner */}
         <section className="section-sunken section-padding">
           <div className="content-narrow">
-            <section className="post-author-section">
-              <h3>About the Author</h3>
-              <AuthorCard />
-            </section>
+            <ScrollReveal variant="fade-up">
+              <section className="post-author-section">
+                <h3>About the Author</h3>
+                <AuthorCard />
+              </section>
+            </ScrollReveal>
 
-            <ServiceCta tags={post.tags} />
+            <ScrollReveal variant="fade-up">
+              <ServiceCta tags={post.tags} />
+            </ScrollReveal>
 
             {shouldShowTrainerBanner && (
-              <TrainerRecruitmentBanner ctaHref="/contact?interest=trainer" />
+              <ScrollReveal variant="fade-up">
+                <TrainerRecruitmentBanner ctaHref="/contact?interest=trainer" />
+              </ScrollReveal>
             )}
           </div>
         </section>
 
-        {slug === 'how-to-design-ai-pioneer-program' ? (
-          <EmailCapture
-            title="Get the full Pioneer Program Playbook"
-            blurb="The 6-session structure, champion selection checklist, 3-3-3 Habit Framework, and measurement template — in a ready-to-use PDF."
-            leadMagnet={{
-              title: 'AI Pioneer Program Playbook (PDF)',
-              url: '/downloads/ai-pioneer-program-playbook.pdf',
-            }}
-          />
-        ) : (
-          <EmailCapture
-            title="Liked this? Get the next one."
-            blurb="I write about AI adoption that actually works — frameworks, case studies, and lessons from 180+ workshops."
-          />
-        )}
+        <ScrollReveal variant="fade-up">
+          {slug === 'how-to-design-ai-pioneer-program' ? (
+            <EmailCapture
+              title="Get the full Pioneer Program Playbook"
+              blurb="The 6-session structure, champion selection checklist, 3-3-3 Habit Framework, and measurement template — in a ready-to-use PDF."
+              leadMagnet={{
+                title: 'AI Pioneer Program Playbook (PDF)',
+                url: '/downloads/ai-pioneer-program-playbook.pdf',
+              }}
+            />
+          ) : (
+            <EmailCapture
+              title="Liked this? Get the next one."
+              blurb="I write about AI adoption that actually works — frameworks, case studies, and lessons from 180+ workshops."
+            />
+          )}
+        </ScrollReveal>
 
         {/* Related Posts + Navigation */}
         <section className="section-base section-padding">
           <div className="content-standard">
-            <RelatedPosts currentSlug={slug} currentTags={post.tags} />
+            <ScrollReveal variant="fade-up-long" stagger={120}>
+              <RelatedPosts currentSlug={slug} currentTags={post.tags} />
+            </ScrollReveal>
 
             <nav className="post-navigation">
               <div className="post-navigation__prev">

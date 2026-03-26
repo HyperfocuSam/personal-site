@@ -37,7 +37,7 @@
   }
 
   &:hover .hamburger-bar {
-    background-color: _palette(amber);
+    background-color: _palette(text-on-dark);
   }
 }
 
@@ -70,7 +70,7 @@
   }
 
   li a h3:hover {
-    color: _palette(amber);
+    color: _palette(text-on-dark);
   }
 
   li {
@@ -79,6 +79,6 @@
 
   .index-li {
     border-top: none;
-    color: _palette(amber);
+    color: _palette(text-on-dark);
   }
 }

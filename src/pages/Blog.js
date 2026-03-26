@@ -11,6 +11,7 @@ import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 import posts from '../data/posts';
 import { AuthorCard } from '../components/Blog';
 import EmailCapture from '../components/EmailCapture/EmailCapture';
+import ScrollReveal from '../components/ScrollReveal';
 
 // Type display config
 const typeLabels = {
@@ -163,46 +164,52 @@ const Blog = () => {
               <>
                 {/* Featured Post Hero */}
                 {featuredPost && (
-                  <section className="blog-featured">
-                    <Link to={`/blog/${featuredPost.slug}`} className="blog-featured__link">
-                      {featuredPost.image && (
-                        <div className="blog-featured__image-wrapper">
-                          <OptimizedImage
-                            src={featuredPost.image}
-                            alt={featuredPost.title}
-                            className="blog-featured__image"
-                            loading="lazy"
-                          />
+                  <ScrollReveal variant="fade-up-long">
+                    <section className="blog-featured">
+                      <Link to={`/blog/${featuredPost.slug}`} className="blog-featured__link">
+                        {featuredPost.image && (
+                          <div className="blog-featured__image-wrapper">
+                            <OptimizedImage
+                              src={featuredPost.image}
+                              alt={featuredPost.title}
+                              className="blog-featured__image"
+                              loading="lazy"
+                            />
+                          </div>
+                        )}
+                        <div className="blog-featured__content">
+                          <span className={`blog-type-pill blog-type-pill--${featuredPost.type}`}>
+                            {typeLabels[featuredPost.type] || featuredPost.type}
+                          </span>
+                          <h3 className="blog-featured__title">{featuredPost.title}</h3>
+                          <p className="blog-featured__meta">
+                            {dayjs(featuredPost.date).format('MMMM D, YYYY')}
+                          </p>
+                          <p className="blog-featured__excerpt">{featuredPost.excerpt}</p>
                         </div>
-                      )}
-                      <div className="blog-featured__content">
-                        <span className={`blog-type-pill blog-type-pill--${featuredPost.type}`}>
-                          {typeLabels[featuredPost.type] || featuredPost.type}
-                        </span>
-                        <h3 className="blog-featured__title">{featuredPost.title}</h3>
-                        <p className="blog-featured__meta">
-                          {dayjs(featuredPost.date).format('MMMM D, YYYY')}
-                        </p>
-                        <p className="blog-featured__excerpt">{featuredPost.excerpt}</p>
-                      </div>
-                    </Link>
-                  </section>
+                      </Link>
+                    </section>
+                  </ScrollReveal>
                 )}
 
                 {/* Blog Posts Section */}
                 {blogPosts.length > 0 && (
                   <section className="blog-section">
-                    <div className="blog-section__header">
-                      <h3 className="blog-section__title">Blog</h3>
-                      <p className="blog-section__subtitle">
-                        Commentary on AI adoption trends, tools, and methodology.
-                      </p>
-                    </div>
-                    <div className="blog-grid">
-                      {blogPosts.map((post) => (
-                        <BlogCard key={post.slug} post={post} />
-                      ))}
-                    </div>
+                    <ScrollReveal variant="fade-up-long">
+                      <div className="blog-section__header">
+                        <h3 className="blog-section__title">Blog</h3>
+                        <p className="blog-section__subtitle">
+                          Commentary on AI adoption trends, tools, and methodology.
+                        </p>
+                      </div>
+                    </ScrollReveal>
+                    <ScrollReveal variant="fade-up-long" stagger={120}>
+                      <div className="blog-grid">
+                        {blogPosts.map((post) => (
+                          <BlogCard key={post.slug} post={post} />
+                        ))}
+                      </div>
+                    </ScrollReveal>
                   </section>
                 )}
 

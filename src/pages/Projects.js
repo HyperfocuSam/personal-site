@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
 import Main from '../layouts/Main';
+import ScrollReveal from '../components/ScrollReveal';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 
 import Cell from '../components/Projects/Cell';
@@ -53,11 +54,13 @@ const Projects = () => (
       </header>
       <section className="section-base section-padding">
         <div className="content-wide">
-          <div className="project-grid">
-            {data.map((project) => (
-              <Cell data={project} key={project.title} />
-            ))}
-          </div>
+          <ScrollReveal variant="fade-up-long" stagger={120}>
+            <div className="project-grid">
+              {data.map((project) => (
+                <Cell data={project} key={project.title} />
+              ))}
+            </div>
+          </ScrollReveal>
         </div>
       </section>
     </article>

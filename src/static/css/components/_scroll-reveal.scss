@@ -51,6 +51,42 @@
   }
 }
 
+// Slow rise — longer travel, breathing feel (dark homepage sections)
+.sr-fade-up-long {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s $ease-out-smooth, transform 0.8s $ease-out-smooth;
+
+  &.sr-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Scale from 97% → 100% with fade — pull quotes, cards
+.sr-scale-in {
+  opacity: 0;
+  transform: scale(0.97);
+  transition: opacity 0.7s $ease-out-smooth, transform 0.7s $ease-out-smooth;
+
+  &.sr-visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+// Subtle blur entrance — premium feel (about callout)
+.sr-blur-in {
+  opacity: 0;
+  filter: blur(8px);
+  transition: opacity 0.8s $ease-out-smooth, filter 0.8s $ease-out-smooth;
+
+  &.sr-visible {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
 // ─── Staggered children ────────────────────────────────────
 .sr-child {
   will-change: transform, opacity;
@@ -96,6 +132,28 @@
       transform: translateX(0);
     }
   }
+
+  &.sr-fade-up-long {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.6s $ease-out-smooth, transform 0.6s $ease-out-smooth;
+
+    &.sr-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &.sr-scale-in {
+    opacity: 0;
+    transform: scale(0.97);
+    transition: opacity 0.5s $ease-out-smooth, transform 0.5s $ease-out-smooth;
+
+    &.sr-visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
 }
 
 // ─── Reduced motion — instant, no animation ────────────────
@@ -104,6 +162,7 @@
   .sr-child {
     opacity: 1 !important;
     transform: none !important;
+    filter: none !important;
     transition: none !important;
     will-change: auto;
   }

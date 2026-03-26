@@ -47,9 +47,9 @@
   }
 
   &--insight {
-    background: _palette(amber);
-    color: _palette(ink);
-    border-color: _palette(amber);
+    background: _palette(ink);
+    color: _palette(text-on-dark);
+    border-color: _palette(ink);
   }
 
   &--methodology {
@@ -85,14 +85,13 @@
     display: block;
     border: 0;
     text-decoration: none;
-    transition: transform 0.2s $ease-out-snappy;
+    transition: border-color 0.25s $ease-out;
     overflow: hidden;
     border-radius: map-get($radius, xl);
-    border: 0;
+    border: 1px solid _palette(border-subtle);
 
     &:hover {
-      transform: translateY(-3px);
-      box-shadow: map-get($shadow, sm);
+      border-color: _palette(border-strong);
 
       .blog-featured__image {
         transform: scale(1.03);
@@ -144,29 +143,28 @@
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5em;
+  gap: 2rem;
 
   @include breakpoint(medium) {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.25em;
+    gap: 1.5em;
   }
 
   @include breakpoint(small) {
     grid-template-columns: 1fr;
-    gap: 1.25em;
+    gap: 1.5em;
   }
 }
 
 .blog-card {
   border-radius: map-get($radius, xl);
   overflow: hidden;
-  border: 0;
+  border: 1px solid _palette(border-subtle);
   background: _palette(surface-raised);
-  transition: transform 0.2s $ease-out-snappy, box-shadow 0.2s $ease-out-snappy;
+  transition: border-color 0.15s ease;
 
   &:hover {
-    transform: translateY(-3px);
-    box-shadow: map-get($shadow, sm);
+    border-color: _palette(border-strong);
 
     .blog-card__image {
       transform: scale(1.03);
@@ -179,7 +177,7 @@
   }
 
   &--insight {
-    border-left: 3px solid _palette(amber);
+    border-left: 3px solid _palette(border-strong);
   }
 
   &--methodology {
@@ -296,14 +294,14 @@
   transition: all 0.2s $ease-out-snappy;
 
   &:hover {
-    border-color: _palette(amber);
-    color: _palette(amber);
+    border-color: _palette(text-primary);
+    color: _palette(text-primary);
   }
 
   &--active {
-    border: 2px solid _palette(amber);
-    background: _palette(amber);
-    color: _palette(ink);
+    border: 2px solid _palette(ink);
+    background: _palette(ink);
+    color: _palette(text-on-dark);
     font-weight: _font(weight-heading);
   }
 }
@@ -379,7 +377,7 @@
 
 // ── Pull Quote Styling ────────────────────────────
 .pull-quote {
-  border-left: 4px solid _palette(amber);
+  border-left: 4px solid _palette(border-strong);
   padding: 1em 0 1em 1.5em;
   margin: 2em 0;
   font-size: 1.15em;
@@ -432,7 +430,7 @@
     border: 0;
 
     &:hover {
-      color: _palette(amber);
+      color: _palette(text-primary);
     }
   }
 
@@ -448,7 +446,7 @@
   }
 
   &__social {
-    color: _palette(amber-text);
+    color: _palette(text-primary);
     border: 0;
 
     &:hover {
@@ -518,9 +516,9 @@
     height: auto;
 
     &:hover {
-      background: _palette(amber);
-      color: _palette(ink);
-      border-color: _palette(amber);
+      background: _palette(ink);
+      color: _palette(text-on-dark);
+      border-color: _palette(ink);
     }
 
     &--linkedin:hover {
@@ -598,7 +596,7 @@
       border: 0;
 
       &:hover {
-        color: _palette(amber);
+        color: _palette(text-primary);
       }
     }
   }
@@ -645,7 +643,7 @@
     border: 0;
 
     &:hover {
-      color: _palette(amber);
+      color: _palette(text-primary);
     }
   }
 
@@ -671,7 +669,7 @@
   padding: 1.5em;
   background: _palette(surface-raised);
   border: 0;
-  border-left: 4px solid _palette(amber);
+  border-left: 4px solid _palette(border-strong);
   border-radius: 0 map-get($radius, xl) map-get($radius, xl) 0;
   text-align: left;
 
@@ -687,7 +685,7 @@
   padding: 1.25em;
   background: _palette(surface-raised);
   border: 0;
-  border-left: 4px solid _palette(amber);
+  border-left: 4px solid _palette(border-strong);
   border-radius: 0 map-get($radius, xl) map-get($radius, xl) 0;
 
   h3 {
@@ -715,7 +713,7 @@
 
   &__bar {
     height: 100%;
-    background: _palette(amber);
+    background: _palette(ink);
     transform-origin: left;
     will-change: transform;
   }

@@ -8,6 +8,7 @@ import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 import EmailLink from '../components/Contact/EmailLink';
 import ContactIcons from '../components/Contact/ContactIcons';
 import ContactForm from '../components/Contact/ContactForm';
+import ScrollReveal from '../components/ScrollReveal';
 
 const interestByQuery = {
   corporate: 'Corporate Training',
@@ -84,12 +85,16 @@ const Contact = () => {
         {/* Contact form */}
         <section className="section-base section-padding">
           <div className="content-narrow">
-            <p>
-              Whether you need team training, one-on-one coaching, speaking support, or trainer
-              recruitment details, share your situation and I&apos;ll guide you to the best option.
-            </p>
+            <ScrollReveal variant="fade-up">
+              <p>
+                Whether you need team training, one-on-one coaching,
+                speaking support, or trainer recruitment details,
+                share your situation and I&apos;ll guide you to
+                the best option.
+              </p>
 
-            <ContactForm initialInterest={initialInterest} />
+              <ContactForm initialInterest={initialInterest} />
+            </ScrollReveal>
           </div>
         </section>
 
@@ -128,25 +133,29 @@ const Contact = () => {
         {/* What I help with + social */}
         <section className="section-base section-padding">
           <div className="content-narrow">
-            <h3>What I Can Help With</h3>
-            <div className="card-grid cols-2">
-              <div className="card">
-                <h4>Corporate Training</h4>
-                <p>Team workshops and adoption programs</p>
+            <ScrollReveal variant="fade-up-long">
+              <h3>What I Can Help With</h3>
+            </ScrollReveal>
+            <ScrollReveal variant="fade-up-long" stagger={120}>
+              <div className="card-grid cols-2">
+                <div className="card">
+                  <h4>Corporate Training</h4>
+                  <p>Team workshops and adoption programs</p>
+                </div>
+                <div className="card">
+                  <h4>1-1 Coaching</h4>
+                  <p>Personalized support for your own workflow</p>
+                </div>
+                <div className="card">
+                  <h4>Speaking</h4>
+                  <p>Keynotes, briefings, and event sessions</p>
+                </div>
+                <div className="card">
+                  <h4>Trainer Recruitment</h4>
+                  <p>Joining the Adaptig trainer network</p>
+                </div>
               </div>
-              <div className="card">
-                <h4>1-1 Coaching</h4>
-                <p>Personalized support for your own workflow</p>
-              </div>
-              <div className="card">
-                <h4>Speaking</h4>
-                <p>Keynotes, briefings, and event sessions</p>
-              </div>
-              <div className="card">
-                <h4>Trainer Recruitment</h4>
-                <p>Joining the Adaptig trainer network</p>
-              </div>
-            </div>
+            </ScrollReveal>
 
             <h3>Connect on Social</h3>
             <ContactIcons />

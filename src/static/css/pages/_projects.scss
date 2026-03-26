@@ -71,7 +71,7 @@
   }
 
   &__role {
-    color: _palette(amber-text);
+    color: _palette(text-primary);
     font-size: 0.9rem;
     font-weight: _font(weight-medium);
     margin-bottom: 0.75rem;
@@ -105,7 +105,7 @@
   &__url {
     display: inline-flex;
     align-items: center;
-    color: _palette(amber-text);
+    color: _palette(text-primary);
     font-size: 0.9rem;
     font-weight: _font(weight-medium);
     text-decoration: none;
@@ -117,7 +117,7 @@
     }
 
     &:hover {
-      color: _palette(amber-light);
+      color: _palette(text-secondary);
 
       span {
         transform: translateX(3px);
@@ -219,7 +219,7 @@
   }
 
   &__url {
-    color: _palette(amber-text);
+    color: _palette(text-primary);
     font-size: 0.85rem;
     font-weight: _font(weight-medium);
   }

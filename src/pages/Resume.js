@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
 import Main from '../layouts/Main';
+import ScrollReveal from '../components/ScrollReveal';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 
 import Education from '../components/Resume/Education';
@@ -56,7 +57,6 @@ const Resume = () => (
             name: 'Sam Wong',
             jobTitle: 'AI Training Specialist',
             worksFor: [
-              { '@type': 'Organization', name: 'DotAI', url: 'https://dotai.hk' },
               { '@type': 'Organization', name: 'Adaptig', url: 'https://adaptig.ai' },
             ],
             alumniOf: { '@type': 'CollegeOrUniversity', name: 'Chinese University of Hong Kong' },
@@ -86,7 +86,9 @@ const Resume = () => (
       <section className="section-base section-padding">
         <div className="content-standard">
           {Object.entries(sections).map(([name, Section]) => (
-            <Section key={name} />
+            <ScrollReveal key={name} variant="fade-up" stagger={100}>
+              <Section />
+            </ScrollReveal>
           ))}
         </div>
       </section>

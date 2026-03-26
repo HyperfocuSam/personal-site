@@ -63,8 +63,8 @@ textarea {
   }
 
   &:focus {
-    border-color: _palette(amber);
-    box-shadow: inset 0 0 0 1px _palette(amber);
+    border-color: _palette(ink);
+    box-shadow: inset 0 0 0 1px _palette(ink);
   }
 }
 
@@ -151,8 +151,8 @@ input[type="radio"] {
 
   &:focus + label {
     &:before {
-      border-color: _palette(amber);
-      box-shadow: 0 0 0 1px _palette(amber);
+      border-color: _palette(ink);
+      box-shadow: 0 0 0 1px _palette(ink);
     }
   }
 }

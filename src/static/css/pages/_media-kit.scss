@@ -21,7 +21,7 @@
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid _palette(amber);
+    border: 4px solid _palette(ink);
     margin-bottom: 1.5em;
   }
 
@@ -48,7 +48,7 @@
     font-size: 1.4em;
     font-weight: 300;
     font-style: italic;
-    color: _palette(amber);
+    color: _palette(text-on-dark);
     margin-top: 0.25em;
     margin-bottom: 2em;
   }
@@ -81,7 +81,7 @@
     display: block;
     font-size: 2.2em;
     font-weight: 800;
-    color: _palette(amber);
+    color: _palette(text-on-dark);
     line-height: 1;
   }
 
@@ -145,7 +145,7 @@
 .media-kit-section__rule {
   width: 50px;
   height: 3px;
-  background: _palette(amber);
+  background: _palette(ink);
   border: none;
   margin: 0.5em 0 2em;
 }
@@ -174,9 +174,9 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: _palette(amber-text);
+  color: _palette(text-primary);
   margin-bottom: 0.75em;
-  border-bottom: 2px solid _palette(amber);
+  border-bottom: 2px solid _palette(ink);
   padding-bottom: 0.25em;
 }
 
@@ -202,8 +202,8 @@
     display: inline-block;
     font-size: 0.7em;
     font-weight: 800;
-    color: _palette(amber-text);
-    background: _palette(amber-subtle);
+    color: _palette(text-primary);
+    background: _palette(surface-sunken);
     border-radius: map-get($radius, sm);
     padding: 0.3em 0.6em;
     margin-bottom: 0.75em;
@@ -228,7 +228,7 @@
 
 // ─── Pull quote ──────────────────────────────
 .media-kit-quote {
-  border-left: 4px solid _palette(amber);
+  border-left: 4px solid _palette(ink);
   padding: 1em 1.5em;
   margin: 2em 0;
   background: _palette(surface-raised);
@@ -319,12 +319,12 @@
 }
 
 .media-kit-contact__link {
-  color: _palette(amber);
+  color: _palette(text-on-dark);
   text-decoration: none;
   border: 0;
 
   &:hover {
-    color: _palette(amber-light);
+    color: #ffffff;
   }
 }
 

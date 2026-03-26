@@ -42,7 +42,7 @@ In 2024, I left the corporate path to focus fully on helping others navigate the
 
 **Adaptig** — Co-founded with partners who share the belief that AI training should transform people, not just inform them. Our trainer network spans four continents, helping organizations like Mattel, Toyota, and YPO go from unsure to unstoppable.
 
-**DotAI** — Founding member of Hong Kong's practical AI training community. We've worked with HSBC, Bank of China, Chow Tai Fook, and 70+ other organizations. The approach: less hype, more adoption.
+I also helped build **DotAI**, Hong Kong's practical AI training community, contributing to corporate training across 70+ organizations.
 
 **Loopem** — An experiment in bringing practical AI to mainland China.
 

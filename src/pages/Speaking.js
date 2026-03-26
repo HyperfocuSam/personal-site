@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 
 import Main from '../layouts/Main';
 import OptimizedImage from '../components/Template/OptimizedImage';
+import ScrollReveal from '../components/ScrollReveal';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 
 const topics = [
@@ -101,7 +102,7 @@ const engagements = [
     org: 'JoJo Ventures',
     title: 'Featured Speaker',
     description:
-      'Spoke as Head of Corporate Training at DotAI and Co-Founder of Adaptig on practical AI adoption.',
+      'Spoke as Co-Founder of Adaptig on practical AI adoption.',
     stat: null,
   },
 ];
@@ -202,77 +203,91 @@ const Speaking = () => (
       {/* Speaking topics */}
       <section className="section-base section-padding">
         <div className="content-standard">
-          <h3>What I Speak About</h3>
-          <div className="card-grid cols-3">
-            {topics.map((topic) => (
-              <div key={topic.title} className="card card-accent">
-                <h4>{topic.title}</h4>
-                <p>{topic.description}</p>
-              </div>
-            ))}
-          </div>
+          <ScrollReveal variant="fade-up-long">
+            <h3>What I Speak About</h3>
+          </ScrollReveal>
+          <ScrollReveal variant="fade-up-long" stagger={120}>
+            <div className="card-grid cols-3">
+              {topics.map((topic) => (
+                <div key={topic.title} className="card card-accent">
+                  <h4>{topic.title}</h4>
+                  <p>{topic.description}</p>
+                </div>
+              ))}
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* Selected engagements */}
       <section className="section-sunken section-padding">
         <div className="content-standard">
-          <h3>Selected Engagements</h3>
-          <div className="engagement-list">
-            {engagements.map((e) => (
-              <div key={`${e.org}-${e.title}`} className="engagement-item">
-                <div className="engagement-item__left">
-                  <span className="engagement-item__year">{e.year}</span>
+          <ScrollReveal variant="fade-up-long">
+            <h3>Selected Engagements</h3>
+          </ScrollReveal>
+          <ScrollReveal variant="fade-up" stagger={100}>
+            <div className="engagement-list">
+              {engagements.map((e) => (
+                <div key={`${e.org}-${e.title}`} className="engagement-item">
+                  <div className="engagement-item__left">
+                    <span className="engagement-item__year">{e.year}</span>
+                  </div>
+                  <div className="engagement-item__right">
+                    <h4 className="engagement-item__org">{e.org}</h4>
+                    <p className="engagement-item__title">{e.title}</p>
+                    <p className="engagement-item__desc">{e.description}</p>
+                    {e.stat && (
+                      <span className="engagement-item__stat">{e.stat}</span>
+                    )}
+                  </div>
                 </div>
-                <div className="engagement-item__right">
-                  <h4 className="engagement-item__org">{e.org}</h4>
-                  <p className="engagement-item__title">{e.title}</p>
-                  <p className="engagement-item__desc">{e.description}</p>
-                  {e.stat && (
-                    <span className="engagement-item__stat">{e.stat}</span>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* What organizers get */}
       <section className="section-base section-padding">
         <div className="content-standard">
-          <h3>What You Get</h3>
-          <div className="card-grid cols-2">
-            {whatYouGet.map((item) => (
-              <div key={item.title} className="card">
-                <h4>{item.title}</h4>
-                <p>{item.description}</p>
-              </div>
-            ))}
-          </div>
+          <ScrollReveal variant="fade-up-long">
+            <h3>What You Get</h3>
+          </ScrollReveal>
+          <ScrollReveal variant="fade-up-long" stagger={120}>
+            <div className="card-grid cols-2">
+              {whatYouGet.map((item) => (
+                <div key={item.title} className="card">
+                  <h4>{item.title}</h4>
+                  <p>{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* Booking CTA */}
       <section className="section-dark section-dark--centered section-padding">
         <div className="content-standard">
-          <h3>Book Sam for Your Event</h3>
-          <p>
-            Available for keynotes, panel discussions, half-day workshops,
-            and multi-session programs. In-person or virtual, English or Cantonese.
-          </p>
-          <ul className="actions">
-            <li>
-              <Link to="/media/kit" className="button">
-                View Media Kit
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact?interest=speaking" className="button-secondary">
-                Get in Touch
-              </Link>
-            </li>
-          </ul>
+          <ScrollReveal variant="fade-up">
+            <h3>Book Sam for Your Event</h3>
+            <p>
+              Available for keynotes, panel discussions, half-day workshops,
+              and multi-session programs. In-person or virtual, English or Cantonese.
+            </p>
+            <ul className="actions">
+              <li>
+                <Link to="/media/kit" className="button">
+                  View Media Kit
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact?interest=speaking" className="button-secondary">
+                  Get in Touch
+                </Link>
+              </li>
+            </ul>
+          </ScrollReveal>
         </div>
       </section>
     </article>

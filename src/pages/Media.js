@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet-async';
 
 import Main from '../layouts/Main';
+import ScrollReveal from '../components/ScrollReveal';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 
 const episodes = [
@@ -219,77 +220,87 @@ const Media = () => (
       {/* Press & Mentions */}
       <section className="section-sunken section-padding">
         <div className="content-standard">
-          <h3 className="media-section-heading">
-            Press &amp; Mentions
-          </h3>
-          <div className="card-grid cols-2">
-            <div className="card">
-              <h4>HKEJ Master Class</h4>
-              <p>
-                DotAI invited to co-create a Master Class
-                with Hong Kong Economic Journal on Vibe
-                Marketing and AI employee mindset.
-              </p>
+          <ScrollReveal variant="fade-up-long">
+            <h3 className="media-section-heading">
+              Press &amp; Mentions
+            </h3>
+          </ScrollReveal>
+          <ScrollReveal variant="fade-up-long" stagger={120}>
+            <div className="card-grid cols-2">
+              <div className="card">
+                <h4>HKEJ Master Class</h4>
+                <p>
+                  DotAI invited to co-create a Master Class
+                  with Hong Kong Economic Journal on Vibe
+                  Marketing and AI employee mindset.
+                </p>
+              </div>
+              <div className="card">
+                <h4>Ming Pao Partnership</h4>
+                <p>
+                  Ming Pao partners with DotAI for an AI
+                  journalism application course covering
+                  translation, fact-checking, and automated
+                  news planning.
+                </p>
+              </div>
+              <div className="card">
+                <h4>CTgoodjobs Future Leader Awards</h4>
+                <p>
+                  DotAI invited as judges and mentors for
+                  the CTgoodjobs Future Leader Awards 2025,
+                  sharing AI entrepreneurship methods.
+                </p>
+              </div>
+              <div className="card">
+                <h4>JoJo Ventures Speaker Spotlight</h4>
+                <p>
+                  Featured as Head of Corporate Training
+                  at DotAI and Co-Founder of Adaptig at
+                  JoJo Ventures event.
+                </p>
+              </div>
             </div>
-            <div className="card">
-              <h4>Ming Pao Partnership</h4>
-              <p>
-                Ming Pao partners with DotAI for an AI
-                journalism application course covering
-                translation, fact-checking, and automated
-                news planning.
-              </p>
-            </div>
-            <div className="card">
-              <h4>CTgoodjobs Future Leader Awards</h4>
-              <p>
-                DotAI invited as judges and mentors for
-                the CTgoodjobs Future Leader Awards 2025,
-                sharing AI entrepreneurship methods.
-              </p>
-            </div>
-            <div className="card">
-              <h4>JoJo Ventures Speaker Spotlight</h4>
-              <p>
-                Featured as Head of Corporate Training
-                at DotAI and Co-Founder of Adaptig at
-                JoJo Ventures event.
-              </p>
-            </div>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* Episodes */}
       <section className="section-base section-padding">
         <div className="content-standard">
-          <h3 className="media-section-heading">Episodes</h3>
-          {episodes.map((ep) => (
-            <EpisodeCard key={ep.id} episode={ep} />
-          ))}
+          <ScrollReveal variant="fade-up-long">
+            <h3 className="media-section-heading">Episodes</h3>
+          </ScrollReveal>
+          <ScrollReveal variant="fade-up" stagger={100}>
+            {episodes.map((ep) => (
+              <EpisodeCard key={ep.id} episode={ep} />
+            ))}
+          </ScrollReveal>
         </div>
       </section>
 
       {/* Contact CTA */}
       <section className="section-dark section-dark--centered section-padding">
         <div className="content-standard">
-          <h3>Interested in having Sam on your show?</h3>
-          <p>
-            Sam is available for podcast interviews, live streams, panel discussions,
-            and conference talks on AI adoption, productivity, and practical technology use.
-          </p>
-          <ul className="actions">
-            <li>
-              <Link to="/media/kit" className="button">
-                View Media Kit
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact" className="button-secondary">
-                Get in Touch
-              </Link>
-            </li>
-          </ul>
+          <ScrollReveal variant="fade-up">
+            <h3>Interested in having Sam on your show?</h3>
+            <p>
+              Sam is available for podcast interviews, live streams, panel discussions,
+              and conference talks on AI adoption, productivity, and practical technology use.
+            </p>
+            <ul className="actions">
+              <li>
+                <Link to="/media/kit" className="button">
+                  View Media Kit
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="button-secondary">
+                  Get in Touch
+                </Link>
+              </li>
+            </ul>
+          </ScrollReveal>
         </div>
       </section>
 

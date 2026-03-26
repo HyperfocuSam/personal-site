@@ -67,11 +67,11 @@ For full context including case studies, frameworks, and blog posts, see: ${SITE
 
 ## About
 
-Sam Wong is an AI training specialist who has trained over 10,000 professionals across 70+ organizations in banking, retail, education, engineering, and technology. He co-founded Adaptig (Animo Technology Limited), a global AI trainer network spanning North America, Latin America, Europe, and Asia-Pacific, and is a founding member of DotAI, Hong Kong\u2019s practical AI training community. His approach focuses on behavior change over tool awareness, emphasizing psychological safety and practical workflow integration.
+Sam Wong is an AI training specialist who has trained over 10,000 professionals across 70+ organizations in banking, retail, education, engineering, and technology. He co-founded Adaptig (Animo Technology Limited), a global AI trainer network spanning North America, Latin America, Europe, and Asia-Pacific. His approach focuses on behavior change over tool awareness, emphasizing psychological safety and practical workflow integration.
 
 ## Services
 
-- **Corporate AI Workshops** (via Adaptig and DotAI): Half-day to multi-day workshops for leadership teams and departments. Human-first facilitation, hands-on exercises tied to real workflows. Clients include Bank of China (Hong Kong), Chow Tai Fook, Hong Kong Jockey Club, HSBC, Mattel, Toyota, Arup, and PolyU.
+- **Corporate AI Workshops** (via Adaptig): Half-day to multi-day workshops for leadership teams and departments. Human-first facilitation, hands-on exercises tied to real workflows. Clients include Bank of China (Hong Kong), Chow Tai Fook, Hong Kong Jockey Club, HSBC, Mattel, Toyota, Arup, and PolyU.
 - **AI Pioneer Programs**: Multi-session cohort programs (typically 6 sessions) that build lasting AI habits through weekly guided practice on real work tasks. Designed for change management, not just training.
 - **1-1 AI Coaching**: Personalized sessions for professionals. 160+ sessions delivered across industries. Includes discovery calls, standard coaching, and executive advisory tiers.
 - **Train-the-Trainer** (via Adaptig): Certification program for trainers, consultants, and educators who want to teach AI using the Adaptig methodology.
@@ -106,7 +106,6 @@ Sam Wong is an AI training specialist who has trained over 10,000 professionals 
 - Media Appearances: ${SITE_URL}/media
 - Contact: ${SITE_URL}/contact
 - Adaptig: https://adaptig.ai
-- DotAI: https://dotai.hk
 - LinkedIn: https://linkedin.com/in/sam-ai-agent/
 - X/Twitter: https://x.com/HyperfocuSam
 
@@ -138,7 +137,7 @@ Contact: sam@adaptig.com
 
 ## About
 
-Sam Wong is an AI training specialist who has trained over 10,000 professionals across 70+ organizations in banking, retail, education, engineering, and technology. He co-founded Adaptig (Animo Technology Limited), a global AI trainer network, and is a founding member of DotAI, Hong Kong\u2019s practical AI training community. His approach focuses on behavior change over tool awareness, emphasizing psychological safety and practical workflow integration. He holds a Master of Arts from the Chinese University of Hong Kong.
+Sam Wong is an AI training specialist who has trained over 10,000 professionals across 70+ organizations in banking, retail, education, engineering, and technology. He co-founded Adaptig (Animo Technology Limited), a global AI trainer network spanning four continents. His approach focuses on behavior change over tool awareness, emphasizing psychological safety and practical workflow integration. He holds a Master of Arts from the Chinese University of Hong Kong.
 
 ## Services
 
@@ -225,7 +224,6 @@ Sam Wong is an AI training specialist who has trained over 10,000 professionals 
 ## Links
 
 - Adaptig: https://adaptig.ai
-- DotAI: https://dotai.hk
 - LinkedIn: https://linkedin.com/in/sam-ai-agent/
 - Substack: https://wongsam.substack.com
 - GitHub: https://github.com/HyperfocuSam

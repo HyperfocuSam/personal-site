@@ -33,39 +33,59 @@ header {
   }
 }
 
-// Page hero sections — warmer gradient, rounder elements
+// Page hero sections — light editorial with massive serif
 .page-hero {
-  background: linear-gradient(135deg, _palette(ink) 0%, _palette(ink-mid) 100%);
-  color: _palette(text-on-dark);
-  padding: 3.5rem 1.5rem 3rem;
+  background: _palette(surface-base);
+  color: _palette(text-primary);
+  padding: 8rem 1.5rem 5rem;
   width: 100%;
+  text-align: center;
 
   h2 {
-    color: _palette(text-on-dark);
-    font-size: 2.25rem;
-    margin-bottom: 0.35rem;
+    color: _palette(text-primary);
+    font-size: clamp(2.5rem, 2rem + 3vw, 4.5rem);
+    font-weight: _font(weight-heading);
+    line-height: 1.1;
+    margin-bottom: 0.75rem;
 
     a {
-      color: _palette(text-on-dark);
-      &:hover { color: _palette(amber); }
+      color: _palette(text-primary);
+      &:hover { color: _palette(text-secondary); }
     }
   }
 
   p {
-    color: _palette(text-on-dark-muted);
-    margin: 0;
+    color: _palette(text-body);
+    font-size: clamp(1rem, 0.95rem + 0.25vw, 1.15rem);
+    max-width: 540px;
+    margin: 0 auto;
+    line-height: 1.65;
   }
 
   .title p {
-    color: _palette(text-on-dark-muted);
+    color: _palette(text-body);
   }
 
   @include breakpoint(small) {
-    padding: 2.5rem 1.25rem 2rem;
+    padding: 6rem 1.25rem 3.5rem;
+  }
+
+  // Dark variant — for blog posts and accent pages
+  &--dark {
+    background: linear-gradient(135deg, _palette(ink) 0%, _palette(ink-mid) 100%);
+    color: _palette(text-on-dark);
 
     h2 {
-      font-size: 1.65rem;
+      color: _palette(text-on-dark);
+
+      a {
+        color: _palette(text-on-dark);
+        &:hover { color: _palette(text-primary); }
+      }
     }
+
+    p { color: _palette(text-on-dark-muted); }
+    .title p { color: _palette(text-on-dark-muted); }
   }
 }
 
@@ -80,17 +100,17 @@ header {
 .anchor-pill {
   display: inline-block;
   padding: 0.5em 1.25em;
-  border: 1px solid rgba(232, 230, 225, 0.3);
+  border: 1px solid _palette(border-subtle);
   border-radius: map-get($radius, md);
-  color: _palette(text-on-dark-muted);
+  color: _palette(text-secondary);
   font-size: 0.875rem;
   font-weight: _font(weight-medium);
   transition: all 0.25s $ease-out;
 
   &:hover {
-    color: _palette(amber);
-    border-color: _palette(amber);
-    background: _palette(amber-subtle);
+    color: _palette(text-primary);
+    border-color: _palette(border-strong);
+    background: _palette(surface-sunken);
   }
 }
 

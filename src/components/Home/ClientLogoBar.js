@@ -22,26 +22,38 @@ const logoClients = [
 const textClients = ['Arup', 'ThreeSixty'];
 
 const ClientLogoBar = () => (
-  <section className="client-logo-bar full-bleed">
-    <div className="content-wide">
-      <p className="client-logo-bar__label">Trusted by leading organizations</p>
-      <ul className="client-logo-bar__list">
+  <section className="logo-marquee full-bleed">
+    <p className="logo-marquee__label">Trusted by leading organizations</p>
+    <div className="logo-marquee__track">
+      <div className="logo-marquee__scroll" aria-hidden="false">
         {logoClients.map(({ name, file }) => (
-          <li key={name} className="client-logo-bar__item client-logo-bar__item--logo">
-            <img
-              src={`/images/clients/${file}`}
-              alt={name}
-              loading="lazy"
-              className="client-logo-bar__logo"
-            />
-          </li>
+          <img
+            key={name}
+            src={`/images/clients/${file}`}
+            alt={name}
+            loading="lazy"
+            className="logo-marquee__logo"
+          />
         ))}
         {textClients.map((name) => (
-          <li key={name} className="client-logo-bar__item client-logo-bar__item--text">
-            {name}
-          </li>
+          <span key={name} className="logo-marquee__text">{name}</span>
         ))}
-      </ul>
+      </div>
+      {/* Duplicate for seamless infinite scroll */}
+      <div className="logo-marquee__scroll" aria-hidden="true">
+        {logoClients.map(({ name, file }) => (
+          <img
+            key={`dup-${name}`}
+            src={`/images/clients/${file}`}
+            alt=""
+            loading="lazy"
+            className="logo-marquee__logo"
+          />
+        ))}
+        {textClients.map((name) => (
+          <span key={`dup-${name}`} className="logo-marquee__text">{name}</span>
+        ))}
+      </div>
     </div>
   </section>
 );

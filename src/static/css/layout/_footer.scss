@@ -1,4 +1,4 @@
-/* Footer — warm dark footer */
+/* Footer — dark footer */
 
 #site-footer {
   background-color: _palette(ink);
@@ -7,11 +7,11 @@
   width: 100%;
 
   a {
-    color: _palette(amber);
+    color: _palette(text-on-dark);
     border-bottom: 0;
 
     &:hover {
-      color: _palette(amber-light);
+      color: #ffffff;
     }
   }
 
@@ -56,7 +56,7 @@
 }
 
 .footer-tagline {
-  color: _palette(amber);
+  color: _palette(text-on-dark);
   font-weight: _font(weight-medium);
   font-size: 0.95rem;
   margin-bottom: 1rem;
@@ -84,7 +84,7 @@
         transition: color 0.25s $ease-out;
 
         &:hover {
-          color: _palette(amber);
+          color: _palette(text-on-dark);
         }
       }
     }
@@ -107,7 +107,7 @@
         transition: color 0.25s $ease-out;
 
         &:hover {
-          color: _palette(amber);
+          color: _palette(text-on-dark);
         }
       }
     }

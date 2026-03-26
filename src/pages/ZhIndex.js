@@ -88,7 +88,7 @@ const ZhIndex = () => (
       <section className="section-base section-padding">
         <div className="content-wide">
           <h3>我嘅平台</h3>
-          <div className="card-grid cols-2">
+          <div className="card-grid cols-1">
             <div className="card">
               <h4>
                 <a href="https://adaptig.ai" target="_blank" rel="noopener noreferrer">
@@ -97,15 +97,12 @@ const ZhIndex = () => (
               </h4>
               <p>全球培訓師網絡，為企業提供 AI 應用工作坊。</p>
             </div>
-            <div className="card">
-              <h4>
-                <a href="https://dotai.hk" target="_blank" rel="noopener noreferrer">
-                  DotAI
-                </a>
-              </h4>
-              <p>香港 AI 培訓社群，服務客戶包括匯豐銀行、中國銀行同周大福。</p>
-            </div>
           </div>
+          <p style={{ textAlign: 'center', marginTop: '1rem', opacity: 0.7 }}>
+            同時係{' '}
+            <a href="https://dotai.hk" target="_blank" rel="noopener noreferrer">DotAI</a>
+            {' '}嘅創始成員——香港 AI 培訓社群。
+          </p>
         </div>
       </section>
 

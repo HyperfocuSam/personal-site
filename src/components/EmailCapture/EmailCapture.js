@@ -7,6 +7,7 @@ const EmailCapture = ({
   title,
   blurb,
   leadMagnet,
+  variant,
 }) => {
   const [email, setEmail] = useState('');
   const [submitting, setSubmitting] = useState(false);
@@ -58,7 +59,7 @@ const EmailCapture = ({
   const buttonLabelBusy = leadMagnet ? 'Sending...' : 'Subscribing...';
 
   return (
-    <section className={`email-capture${leadMagnet ? ' email-capture--magnet' : ''}`}>
+    <section className={`email-capture${leadMagnet ? ' email-capture--magnet' : ''}${variant === 'dark' ? ' email-capture--dark' : ''}`}>
       <h3>{title}</h3>
       <p>{blurb}</p>
 
@@ -132,12 +133,14 @@ EmailCapture.propTypes = {
     title: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
   }),
+  variant: PropTypes.string,
 };
 
 EmailCapture.defaultProps = {
   title: 'Stay in the loop',
   blurb: 'Occasional insights on AI adoption. No spam, no hype.',
   leadMagnet: null,
+  variant: 'default',
 };
 
 export default EmailCapture;

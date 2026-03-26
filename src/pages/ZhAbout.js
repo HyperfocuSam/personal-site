@@ -110,15 +110,6 @@ const ZhAbout = () => (
               — 共同創辦橫跨北美、拉丁美洲、歐洲同亞太嘅全球培訓師網絡。
             </li>
             <li>
-              <strong>
-                <a href="https://dotai.hk" target="_blank" rel="noopener noreferrer">
-                  DotAI
-                </a>
-              </strong>
-              {' '}
-              — 香港實用 AI 培訓社群嘅創始成員。
-            </li>
-            <li>
               <strong>AICBO</strong>
               {' '}
               — 160+ 場跨行業專業人士嘅一對一輔導。

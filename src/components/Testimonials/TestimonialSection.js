@@ -9,6 +9,7 @@ const TestimonialSection = ({
   testimonials,
   limit,
   featured,
+  variant,
 }) => {
   const limitedTestimonials = typeof limit === 'number'
     ? testimonials.slice(0, limit)
@@ -18,6 +19,39 @@ const TestimonialSection = ({
     return null;
   }
 
+  // Dark pull-quote variant for homepage
+  if (variant === 'dark-pullquote') {
+    return (
+      <section className="testimonial-pullquote">
+        {limitedTestimonials.map((testimonial, index) => (
+          <blockquote
+            key={`${testimonial.name}-${testimonial.company || testimonial.title}`}
+            className="testimonial-pullquote__item"
+          >
+            <p className="testimonial-pullquote__quote">
+              &ldquo;
+              {testimonial.quote}
+              &rdquo;
+            </p>
+            <footer className="testimonial-pullquote__attribution">
+              <span className="testimonial-pullquote__name">{testimonial.name}</span>
+              {testimonial.title && (
+                <span className="testimonial-pullquote__role">
+                  {testimonial.title}
+                  {testimonial.company ? `, ${testimonial.company}` : ''}
+                </span>
+              )}
+            </footer>
+            {index < limitedTestimonials.length - 1 && (
+              <hr className="testimonial-pullquote__divider" />
+            )}
+          </blockquote>
+        ))}
+      </section>
+    );
+  }
+
+  // Default card-grid variant (used by About, Services, Testimonials pages)
   return (
     <section className="testimonials">
       {(title || subtitle) && (
@@ -55,6 +89,7 @@ TestimonialSection.propTypes = {
   ),
   limit: PropTypes.number,
   featured: PropTypes.bool,
+  variant: PropTypes.string,
 };
 
 TestimonialSection.defaultProps = {
@@ -63,6 +98,7 @@ TestimonialSection.defaultProps = {
   testimonials: [],
   limit: undefined,
   featured: false,
+  variant: 'default',
 };
 
 export default TestimonialSection;

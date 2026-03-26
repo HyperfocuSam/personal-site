@@ -15,8 +15,8 @@
 }
 
 .skillbutton-active {
-  box-shadow: inset 0 0 0 1px _palette(amber);
-  color: _palette(amber-text);
+  box-shadow: inset 0 0 0 1px _palette(ink);
+  color: _palette(text-primary);
 }
 
 .skillbar {
@@ -38,7 +38,7 @@
   font-weight: _font(weight-bold);
   font-size: 0.8125rem;
   color: _palette(text-on-dark);
-  background: _palette(amber);
+  background: _palette(ink);
   border-top-left-radius: map-get($radius, md);
   border-bottom-left-radius: map-get($radius, md);
 }
@@ -56,7 +56,7 @@
 .skillbar-bar {
   height: 35px;
   width: 0px;
-  background: _palette(amber);
+  background: _palette(ink);
   border-radius: map-get($radius, md);
 }
 

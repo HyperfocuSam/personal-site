@@ -9,6 +9,7 @@ import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 import services from '../data/services';
 import testimonials from '../data/testimonials';
 import ServiceGroup from '../components/Services/ServiceGroup';
+import ScrollReveal from '../components/ScrollReveal';
 
 const groups = [
   {
@@ -119,27 +120,31 @@ const Services = () => {
         </header>
 
         {/* Photo: Corporate workshop in action */}
-        <div className="full-bleed photo-band">
-          <OptimizedImage
-            src="/images/services/corporate-training.jpeg"
-            alt="AI workshop in progress at Arup University, Hong Kong"
-            loading="lazy"
-          />
-        </div>
+        <ScrollReveal variant="blur-in">
+          <div className="full-bleed photo-band">
+            <OptimizedImage
+              src="/images/services/corporate-training.jpeg"
+              alt="AI workshop in progress at Arup University, Hong Kong"
+              loading="lazy"
+            />
+          </div>
+        </ScrollReveal>
 
         {/* Service groups in alternating section bands */}
         {groups.map((group) => (
           <section key={group.id} className={`${group.band} section-padding`}>
             <div className="content-standard">
-              <ServiceGroup
-                id={group.id}
-                title={group.title}
-                subtitle={group.subtitle}
-                services={services.filter((s) => s.category === group.category)}
-                socialProof={group.socialProof}
-                testimonial={group.testimonial}
-                primaryCta={group.primaryCta}
-              />
+              <ScrollReveal variant="fade-up-long">
+                <ServiceGroup
+                  id={group.id}
+                  title={group.title}
+                  subtitle={group.subtitle}
+                  services={services.filter((s) => s.category === group.category)}
+                  socialProof={group.socialProof}
+                  testimonial={group.testimonial}
+                  primaryCta={group.primaryCta}
+                />
+              </ScrollReveal>
             </div>
           </section>
         ))}

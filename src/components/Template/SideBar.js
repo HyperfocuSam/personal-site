@@ -36,7 +36,6 @@ const SideBar = () => {
         <h2>About</h2>
         <p>
           AI Training Specialist helping enterprises and individuals adopt AI.{' '}
-          Founding member of <a href="https://dotai.hk" target="_blank" rel="noopener noreferrer">DotAI</a>.{' '}
           Co-founder of <a href="https://adaptig.ai" target="_blank" rel="noopener noreferrer">Adaptig</a>.
           <br /><br />
           70+ enterprise clients. 10,000+ professionals trained.

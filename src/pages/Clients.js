@@ -7,6 +7,7 @@ import { Helmet } from 'react-helmet-async';
 
 import Main from '../layouts/Main';
 import OptimizedImage from '../components/Template/OptimizedImage';
+import ScrollReveal from '../components/ScrollReveal';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 import posts from '../data/posts';
 
@@ -99,42 +100,48 @@ const Clients = () => (
 
       <section className="section-base section-padding">
         <div className="content-standard">
-          <p>
-            Real examples from workshops and coaching engagements across banking,
-            retail, education, and engineering.
-          </p>
+          <ScrollReveal variant="fade-up-long">
+            <p>
+              Real examples from workshops and coaching engagements across banking,
+              retail, education, and engineering.
+            </p>
+          </ScrollReveal>
 
-          <div className="blog-grid">
-            {clientPosts.map((post) => (
-              <ClientCard key={post.slug} post={post} />
-            ))}
-          </div>
+          <ScrollReveal variant="fade-up-long" stagger={120}>
+            <div className="blog-grid">
+              {clientPosts.map((post) => (
+                <ClientCard key={post.slug} post={post} />
+              ))}
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* CTA */}
       <section className="section-sunken section-padding">
         <div className="content-narrow" style={{ textAlign: 'center' }}>
-          <h2>Want results like these for your team?</h2>
-          <p>
-            Every engagement starts with a 30-minute discovery call
-            to understand your team&apos;s workflows, goals, and constraints.
-          </p>
-          <div style={{
-            display: 'flex',
-            gap: '1rem',
-            justifyContent: 'center',
-            flexWrap: 'wrap',
-            marginTop: '1.5rem',
-          }}
-          >
-            <Link to="/contact" className="button">
-              Book a Discovery Call
-            </Link>
-            <Link to="/services" className="button button--outline">
-              View Training Services
-            </Link>
-          </div>
+          <ScrollReveal variant="fade-up">
+            <h2>Want results like these for your team?</h2>
+            <p>
+              Every engagement starts with a 30-minute discovery call
+              to understand your team&apos;s workflows, goals, and constraints.
+            </p>
+            <div style={{
+              display: 'flex',
+              gap: '1rem',
+              justifyContent: 'center',
+              flexWrap: 'wrap',
+              marginTop: '1.5rem',
+            }}
+            >
+              <Link to="/contact" className="button">
+                Book a Discovery Call
+              </Link>
+              <Link to="/services" className="button button--outline">
+                View Training Services
+              </Link>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
     </article>

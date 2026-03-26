@@ -24,7 +24,7 @@ const data = [
     date: '2024-10',
     status: 'live',
     tech: ['Training Platform'],
-    featured: true,
+    featured: false,
     desc:
       'Hong Kong\'s largest AI learning community. '
       + 'Founding member helping build the platform, curriculum, and community '

@@ -35,7 +35,6 @@ const AnimatedNumber = ({
     const tick = (now) => {
       const elapsed = now - start;
       const progress = Math.min(elapsed / duration, 1);
-      // Ease-out quart for natural deceleration
       const eased = 1 - ((1 - progress) ** 4);
       const current = eased * value;
 
@@ -59,7 +58,6 @@ const AnimatedNumber = ({
     const el = ref.current;
     if (!el) return undefined;
 
-    // Skip animation if reduced motion
     const prefersReduced = window.matchMedia(
       '(prefers-reduced-motion: reduce)',
     ).matches;
@@ -110,14 +108,14 @@ AnimatedNumber.defaultProps = {
 };
 
 const StatsBar = () => (
-  <div className="stats-floating content-standard">
-    <div className="stats-bar">
+  <section className="stats-strip full-bleed">
+    <div className="stats-strip__inner content-wide">
       {stats.map((stat) => (
         <div
           key={stat.label}
-          className={`stat-item${stat.primary ? ' stat-item--primary' : ''}`}
+          className={`stats-strip__item${stat.primary ? ' stats-strip__item--primary' : ''}`}
         >
-          <span className="stat-item__number">
+          <span className="stats-strip__number">
             <AnimatedNumber
               value={stat.value}
               suffix={stat.suffix}
@@ -125,11 +123,11 @@ const StatsBar = () => (
               decimal={stat.decimal}
             />
           </span>
-          <span className="stat-item__label">{stat.label}</span>
+          <span className="stats-strip__label">{stat.label}</span>
         </div>
       ))}
     </div>
-  </div>
+  </section>
 );
 
 export default StatsBar;

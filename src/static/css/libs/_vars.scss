@@ -18,6 +18,7 @@ $misc: (
 // Easing — natural deceleration curves.
 $ease-out: cubic-bezier(0.25, 1, 0.5, 1);       // default — smooth deceleration
 $ease-out-snappy: cubic-bezier(0.22, 1, 0.36, 1); // quicker settle for small UI
+$ease-out-smooth: cubic-bezier(0.16, 1, 0.3, 1);  // longer decel, "breathing" feel
 
 // Duration.
 $duration: (
@@ -103,12 +104,21 @@ $palette: (
   text-primary: #0c0c0c,
   text-body: #4a4a4a,
   text-secondary: #8a8a8a,
-  text-on-dark: #e8e6e1,
-  text-on-dark-muted: #9a9ba8,
+  text-on-dark: #f0ece8,
+  text-on-dark-muted: #a39a90,
 
   // Borders
   border-subtle: #e5e5e5,
   border-strong: #d0d0d0,
+
+  // Dark surfaces — warm study (homepage dark mode)
+  // "Leather, lamplight, whiskey" — warm brown tint at low saturation
+  surface-dark-deep: #1a1816,
+  surface-dark: #211e1b,
+  surface-dark-raised: #2a2622,
+  surface-dark-subtle: #342f2a,
+  surface-dark-border: rgba(255, 255, 255, 0.07),
+  surface-dark-border-strong: rgba(255, 255, 255, 0.13),
 
   // Shadows
   shadow-color: rgba(0, 0, 0, 0.06),
@@ -131,6 +141,14 @@ $shadow: (
   sm: 0 1px 2px rgba(0, 0, 0, 0.03),
   md: 0 2px 8px rgba(0, 0, 0, 0.05),
   lg: 0 4px 16px rgba(0, 0, 0, 0.07),
+);
+
+// Fluid type scale (homepage dark mode)
+$type: (
+  hero: clamp(3.5rem, 3rem + 5vw, 7rem),
+  section-title: clamp(2.5rem, 2rem + 3vw, 4.5rem),
+  subtitle: clamp(1.125rem, 1rem + 0.5vw, 1.375rem),
+  body-large: clamp(1rem, 0.95rem + 0.25vw, 1.125rem),
 );
 
 // Border radius

@@ -1,28 +1,39 @@
-/* Card — surface-raised with subtle border and shadow */
+/* Card — flat, fast interactions (ampcode-matched) */
 
 .card {
   background-color: _palette(surface-raised);
   border: 1px solid _palette(border-subtle);
-  border-radius: map-get($radius, lg);
-  box-shadow: map-get($shadow, sm);
-  padding: 1.5rem;
-  transition: box-shadow 0.3s $ease-out, transform 0.3s $ease-out;
+  border-radius: map-get($radius, xl);
+  box-shadow: none;
+  padding: 2rem;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
 
   &:hover {
-    box-shadow: map-get($shadow, md);
-    transform: translateY(-2px);
+    border-color: _palette(border-strong);
+    background-color: _palette(surface-base);
   }
 
   h3, h4 {
     margin-bottom: 0.5rem;
   }
 
+  p {
+    color: _palette(text-body);
+    transition: color 0.15s ease;
+  }
+
   p:last-child {
     margin-bottom: 0;
   }
 
+  // Group-hover: heading gets more prominent on card hover
+  &:hover h3,
+  &:hover h4 {
+    color: _palette(ink);
+  }
+
   @include breakpoint(small) {
-    padding: 1.25rem;
+    padding: 1.5rem;
   }
 }
 
@@ -65,5 +76,5 @@
 }
 
 .card-accent {
-  border-left: 3px solid _palette(amber);
+  border-left: 2px solid _palette(border-strong);
 }
