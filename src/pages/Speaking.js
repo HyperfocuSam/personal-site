@@ -46,7 +46,7 @@ const engagements = [
     org: 'YPO Global Event',
     title: 'The 45 Minutes AI Show',
     description:
-      'Interactive, demo-heavy keynote for YPO members and families at the Skirball Center, New York.',
+      'Interactive, demo-heavy keynote for YPO members and families in Los Angeles.',
     stat: null,
   },
   {
@@ -59,11 +59,59 @@ const engagements = [
   },
   {
     year: '2025',
+    org: 'MIIT (China)',
+    title: 'AI Trainers Camp',
+    description:
+      'Keynote at the Ministry of Industry and Information Technology AI Trainers Camp in Chongqing.',
+    stat: null,
+  },
+  {
+    year: '2025',
+    org: 'HP',
+    title: 'AI Workplace Experience Day',
+    description:
+      'Featured speaker at HP\'s workplace AI experience event in Hong Kong.',
+    stat: null,
+  },
+  {
+    year: '2025',
     org: 'Chow Tai Fook',
     title: 'AI x Design Thinking Hackathon',
     description:
       'Three repeat engagements combining creative problem-solving with hands-on AI prototyping.',
     stat: '3 repeat engagements',
+  },
+  {
+    year: '2025',
+    org: 'HK Polytechnic University',
+    title: 'Finance Office Annual Event',
+    description:
+      'Invited keynote for the university\'s finance division annual event.',
+    stat: null,
+  },
+  {
+    year: '2025',
+    org: 'HK Baptist University',
+    title: 'History Faculty Learning Day',
+    description:
+      'AI adoption keynote for the History Faculty\'s annual learning day.',
+    stat: null,
+  },
+  {
+    year: '2025-26',
+    org: 'HK College of Technology',
+    title: 'Teaching Staff L&D Day',
+    description:
+      'Keynote for teaching staff professional development. Invited back for a second year.',
+    stat: '2 consecutive years',
+  },
+  {
+    year: '2025',
+    org: 'HKFYG',
+    title: 'Teachers Development Day',
+    description:
+      'Keynote for the Hong Kong Federation of Youth Groups on AI integration for educators.',
+    stat: null,
   },
   {
     year: '2025',
@@ -82,6 +130,22 @@ const engagements = [
     stat: null,
   },
   {
+    year: '2025-26',
+    org: 'DotAI',
+    title: 'Everyone.ai Day Keynote',
+    description:
+      'Opening keynote at DotAI\'s flagship community event. Invited back for 2026.',
+    stat: '2 consecutive years',
+  },
+  {
+    year: '2025',
+    org: 'JoJo Ventures',
+    title: 'GENAI Summit',
+    description:
+      'Featured speaker at the JoJo Ventures Generative AI Summit in Hong Kong.',
+    stat: null,
+  },
+  {
     year: '2025',
     org: 'CTgoodjobs Future Leader Awards',
     title: 'Judge & Mentor',
@@ -95,14 +159,6 @@ const engagements = [
     title: 'AI Lunch & Learn Series',
     description:
       'Recurring sessions for engineering professionals on integrating AI into technical workflows.',
-    stat: null,
-  },
-  {
-    year: '2025',
-    org: 'JoJo Ventures',
-    title: 'Featured Speaker',
-    description:
-      'Spoke as Co-Founder of Adaptig on practical AI adoption.',
     stat: null,
   },
 ];
@@ -156,10 +212,10 @@ const schema = {
 const Speaking = () => (
   <Main
     title="Speaking & Events"
-    description="Hong Kong AI keynote speaker and workshop facilitator. Sam Wong delivers talks on practical AI adoption for enterprises. Past events include YPO, Bank of China, Chow Tai Fook, and Arup."
+    description="Hong Kong AI keynote speaker and workshop facilitator. Sam Wong delivers talks on practical AI adoption for enterprises. Past events include YPO, Bank of China, HP, MIIT, Chow Tai Fook, and Arup."
     canonicalUrl={`${SITE_URL}/speaking`}
     ogTitle="Speaking & Events | Sam Wong"
-    ogDescription="Keynotes, panels, and workshops that shift how teams think about AI. Past events include YPO, Bank of China, and Chow Tai Fook."
+    ogDescription="Keynotes, panels, and workshops that shift how teams think about AI. Past events include YPO, Bank of China, HP, and MIIT."
     ogImage={DEFAULT_OG_IMAGE}
     ogUrl={`${SITE_URL}/speaking`}
     ogType="website"
