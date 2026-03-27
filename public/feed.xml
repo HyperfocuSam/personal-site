@@ -6,7 +6,33 @@
     <description>AI adoption insights, workshop reflections, and practical AI training tips from Sam Wong.</description>
     <language>en</language>
     <atom:link href="https://hyperfocusam.com/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Wed, 25 Mar 2026 17:34:04 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 27 Mar 2026 16:36:31 GMT</lastBuildDate>
+    <item>
+      <title>9-percent-copilot-licenses</title>
+      <link>https://hyperfocusam.com/blog/9-percent-copilot-licenses/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/9-percent-copilot-licenses/</guid>
+      <pubDate>Fri, 27 Mar 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>9% 的 Copilot 授權有人使用。我一點也不意外。</title>
+      <link>https://hyperfocusam.com/blog/9-percent-copilot-licenses-tc/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/9-percent-copilot-licenses-tc/</guid>
+      <description>企業花費數百萬採購 AI 授權，培訓預算為零。應用落差不是工具問題——而是培訓問題穿上了工具的外衣。</description>
+      <pubDate>Fri, 27 Mar 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>ai-chatbot-2-weeks-what-broke</title>
+      <link>https://hyperfocusam.com/blog/ai-chatbot-2-weeks-what-broke/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/ai-chatbot-2-weeks-what-broke/</guid>
+      <pubDate>Fri, 27 Mar 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>兩星期建了一個 AI Chatbot。第三句就崩潰了。</title>
+      <link>https://hyperfocusam.com/blog/ai-chatbot-2-weeks-what-broke-tc/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/ai-chatbot-2-weeks-what-broke-tc/</guid>
+      <description>由「十分鐘建聊天機器人」到真正上線，中間是崩潰、安全漏洞、以及反覆改寫的規格說明。</description>
+      <pubDate>Fri, 27 Mar 2026 00:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>Claude Code Mastery: The Full Blueprint — My Actual System</title>
       <link>https://hyperfocusam.com/blog/claude-code-mastery-part-5-full-blueprint/</link>

@@ -46,6 +46,7 @@ Sam Wong is an AI training specialist who has trained over 10,000 professionals 
 
 ### Case Studies
 
+- [ai-chatbot-2-weeks-what-broke](https://hyperfocusam.com/blog/ai-chatbot-2-weeks-what-broke/) (2026-03-27)
 - [Claude Code Mastery: The Full Blueprint — My Actual System](https://hyperfocusam.com/blog/claude-code-mastery-part-5-full-blueprint/) (2026-03-23) — I open-sourced my entire Claude Code architecture. Every file, every connection, every lesson learned. 9 agents, 40 skills, 7 cron jobs, 4-tier memory — built because I have ADHD and needed external structure.
 - [What 118 Minutes With an E-Commerce Team Revealed About AI Adoption Gaps](https://hyperfocusam.com/blog/renpho-ecommerce-ai-shenzhen/) (2026-03-11) — A Shenzhen visit exposed a pattern I see everywhere: teams using AI at 50% efficiency because nobody taught them model selection.
 - [How to Design a 6-Session AI Pioneer Program That Actually Changes Behavior](https://hyperfocusam.com/blog/how-to-design-ai-pioneer-program/) (2026-03-04) — How I designed a 6-session corporate AI training program for 19 HR professionals, using Copilot-only tools and a change management approach that saved 5-8 hours per week.
@@ -106,8 +107,14 @@ Sam Wong is an AI training specialist who has trained over 10,000 professionals 
 
 - [Welcome to My Blog](https://hyperfocusam.com/blog/welcome-to-my-blog/) (2024-05-17) — Starting a space to share insights on AI adoption, workshop learnings, and the human side of technology.
 
+### Other
+
+- [9-percent-copilot-licenses](https://hyperfocusam.com/blog/9-percent-copilot-licenses/) (2026-03-27)
+
 ### Chinese (Traditional) Articles
 
+- [9% 的 Copilot 授權有人使用。我一點也不意外。](https://hyperfocusam.com/blog/9-percent-copilot-licenses-tc/) (2026-03-27) — 企業花費數百萬採購 AI 授權，培訓預算為零。應用落差不是工具問題——而是培訓問題穿上了工具的外衣。
+- [兩星期建了一個 AI Chatbot。第三句就崩潰了。](https://hyperfocusam.com/blog/ai-chatbot-2-weeks-what-broke-tc/) (2026-03-27) — 由「十分鐘建聊天機器人」到真正上線，中間是崩潰、安全漏洞、以及反覆改寫的規格說明。
 - [Claude Code 完全攻略：完整藍圖 — 我真正嘅系統](https://hyperfocusam.com/blog/claude-code-mastery-part-5-full-blueprint-tc/) (2026-03-23) — 我將成個 Claude Code 系統公開晒。CLAUDE.md、skills、agents、hooks、cron、memory — 每一層點接駁，每一個決定背後嘅原因。
 - [Claude Code 完全攻略：Agent 團隊同自動化 — 你嘅 AI 工作團隊](https://hyperfocusam.com/blog/claude-code-mastery-part-4-agent-teams-tc/) (2026-03-21) — 我有 9 個 AI agent 跑緊 7 個 cron job。每個禮拜一 blog 自己出文。呢篇講成個 agent team architecture。
 - [Claude Code 完全攻略：Hooks 同安全機制 — 點樣令 AI 安全做嘢](https://hyperfocusam.com/blog/claude-code-mastery-part-3-hooks-guardrails-tc/) (2026-03-20) — 有一次 Claude Code 差啲 send 錯 email 俾錯嘅人。嗰日之後我起咗一套 hooks 系統。PreToolUse、PostToolUse、Stop hook — 全部跑喺 FastAPI server。
