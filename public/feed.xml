@@ -6,7 +6,7 @@
     <description>AI adoption insights, workshop reflections, and practical AI training tips from Sam Wong.</description>
     <language>en</language>
     <atom:link href="https://hyperfocusam.com/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Fri, 27 Mar 2026 16:36:31 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 28 Mar 2026 08:34:29 GMT</lastBuildDate>
     <item>
       <title>9-percent-copilot-licenses</title>
       <link>https://hyperfocusam.com/blog/9-percent-copilot-licenses/</link>
@@ -41,10 +41,10 @@
       <pubDate>Mon, 23 Mar 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>Claude Code 完全攻略：完整藍圖 — 我真正嘅系統</title>
+      <title>Claude Code 完全攻略：完整藍圖 — 我真正的系統</title>
       <link>https://hyperfocusam.com/blog/claude-code-mastery-part-5-full-blueprint-tc/</link>
       <guid isPermaLink="true">https://hyperfocusam.com/blog/claude-code-mastery-part-5-full-blueprint-tc/</guid>
-      <description>我將成個 Claude Code 系統公開晒。CLAUDE.md、skills、agents、hooks、cron、memory — 每一層點接駁，每一個決定背後嘅原因。</description>
+      <description>我將整個 Claude Code 系統完整公開。CLAUDE.md、skills、agents、hooks、cron、memory — 每一層如何連接，每一個決定背後的原因。</description>
       <pubDate>Mon, 23 Mar 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
@@ -55,10 +55,10 @@
       <pubDate>Sat, 21 Mar 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>Claude Code 完全攻略：Agent 團隊同自動化 — 你嘅 AI 工作團隊</title>
+      <title>Claude Code 完全攻略：Agent 團隊與自動化 — 你的 AI 工作團隊</title>
       <link>https://hyperfocusam.com/blog/claude-code-mastery-part-4-agent-teams-tc/</link>
       <guid isPermaLink="true">https://hyperfocusam.com/blog/claude-code-mastery-part-4-agent-teams-tc/</guid>
-      <description>我有 9 個 AI agent 跑緊 7 個 cron job。每個禮拜一 blog 自己出文。呢篇講成個 agent team architecture。</description>
+      <description>我有 9 個 AI agent 運行 7 個 cron job。每週一部落格自動發文。本篇詳述整個 agent team architecture。</description>
       <pubDate>Sat, 21 Mar 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
@@ -69,10 +69,10 @@
       <pubDate>Fri, 20 Mar 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>Claude Code 完全攻略：Hooks 同安全機制 — 點樣令 AI 安全做嘢</title>
+      <title>Claude Code 完全攻略：Hooks 與安全機制 — 如何讓 AI 安全工作</title>
       <link>https://hyperfocusam.com/blog/claude-code-mastery-part-3-hooks-guardrails-tc/</link>
       <guid isPermaLink="true">https://hyperfocusam.com/blog/claude-code-mastery-part-3-hooks-guardrails-tc/</guid>
-      <description>有一次 Claude Code 差啲 send 錯 email 俾錯嘅人。嗰日之後我起咗一套 hooks 系統。PreToolUse、PostToolUse、Stop hook — 全部跑喺 FastAPI server。</description>
+      <description>有一次 Claude Code 差點將電郵發送給錯誤的人。那天之後我建立了一套 hooks 系統。PreToolUse、PostToolUse、Stop hook — 全部運行在 FastAPI server 上。</description>
       <pubDate>Fri, 20 Mar 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
@@ -83,10 +83,10 @@
       <pubDate>Thu, 19 Mar 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>Claude Code 完全攻略：Skills 同 Memory — 教 AI 識記嘢</title>
+      <title>Claude Code 完全攻略：Skills 與 Memory — 教 AI 學會記憶</title>
       <link>https://hyperfocusam.com/blog/claude-code-mastery-part-2-skills-memory-tc/</link>
       <guid isPermaLink="true">https://hyperfocusam.com/blog/claude-code-mastery-part-2-skills-memory-tc/</guid>
-      <description>AI 最大嘅問題係佢唔記得。我喺 Claude Code 入面起咗四層 memory，加 40 個 skills 用 progressive disclosure。呢篇講晒成個架構。</description>
+      <description>AI 最大的問題是遺忘。我在 Claude Code 中建立了四層 memory 系統，加上 40 個 skills 採用 progressive disclosure。本篇詳述整個架構。</description>
       <pubDate>Thu, 19 Mar 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
@@ -97,10 +97,10 @@
       <pubDate>Tue, 17 Mar 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>Claude Code 完全攻略：由零開始到你第一個 Agent</title>
+      <title>Claude Code 完全攻略：從零開始到你的第一個 Agent</title>
       <link>https://hyperfocusam.com/blog/claude-code-mastery-part-1-getting-started-tc/</link>
       <guid isPermaLink="true">https://hyperfocusam.com/blog/claude-code-mastery-part-1-getting-started-tc/</guid>
-      <description>三個月前我第一次打開 Claude Code，以為係又一個 terminal chatbox。三個月後佢幫我管緊四間公司嘅日常運作。呢個係完全攻略系列嘅第一篇。</description>
+      <description>三個月前我第一次打開 Claude Code，以為只是另一個 terminal chatbox。三個月後它協助管理四間公司的日常運作。這是完全攻略系列的第一篇。</description>
       <pubDate>Tue, 17 Mar 2026 00:00:00 GMT</pubDate>
     </item>
     <item>

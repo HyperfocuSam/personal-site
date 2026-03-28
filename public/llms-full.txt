@@ -115,11 +115,11 @@ Sam Wong is an AI training specialist who has trained over 10,000 professionals 
 
 - [9% 的 Copilot 授權有人使用。我一點也不意外。](https://hyperfocusam.com/blog/9-percent-copilot-licenses-tc/) (2026-03-27) — 企業花費數百萬採購 AI 授權，培訓預算為零。應用落差不是工具問題——而是培訓問題穿上了工具的外衣。
 - [兩星期建了一個 AI Chatbot。第三句就崩潰了。](https://hyperfocusam.com/blog/ai-chatbot-2-weeks-what-broke-tc/) (2026-03-27) — 由「十分鐘建聊天機器人」到真正上線，中間是崩潰、安全漏洞、以及反覆改寫的規格說明。
-- [Claude Code 完全攻略：完整藍圖 — 我真正嘅系統](https://hyperfocusam.com/blog/claude-code-mastery-part-5-full-blueprint-tc/) (2026-03-23) — 我將成個 Claude Code 系統公開晒。CLAUDE.md、skills、agents、hooks、cron、memory — 每一層點接駁，每一個決定背後嘅原因。
-- [Claude Code 完全攻略：Agent 團隊同自動化 — 你嘅 AI 工作團隊](https://hyperfocusam.com/blog/claude-code-mastery-part-4-agent-teams-tc/) (2026-03-21) — 我有 9 個 AI agent 跑緊 7 個 cron job。每個禮拜一 blog 自己出文。呢篇講成個 agent team architecture。
-- [Claude Code 完全攻略：Hooks 同安全機制 — 點樣令 AI 安全做嘢](https://hyperfocusam.com/blog/claude-code-mastery-part-3-hooks-guardrails-tc/) (2026-03-20) — 有一次 Claude Code 差啲 send 錯 email 俾錯嘅人。嗰日之後我起咗一套 hooks 系統。PreToolUse、PostToolUse、Stop hook — 全部跑喺 FastAPI server。
-- [Claude Code 完全攻略：Skills 同 Memory — 教 AI 識記嘢](https://hyperfocusam.com/blog/claude-code-mastery-part-2-skills-memory-tc/) (2026-03-19) — AI 最大嘅問題係佢唔記得。我喺 Claude Code 入面起咗四層 memory，加 40 個 skills 用 progressive disclosure。呢篇講晒成個架構。
-- [Claude Code 完全攻略：由零開始到你第一個 Agent](https://hyperfocusam.com/blog/claude-code-mastery-part-1-getting-started-tc/) (2026-03-17) — 三個月前我第一次打開 Claude Code，以為係又一個 terminal chatbox。三個月後佢幫我管緊四間公司嘅日常運作。呢個係完全攻略系列嘅第一篇。
+- [Claude Code 完全攻略：完整藍圖 — 我真正的系統](https://hyperfocusam.com/blog/claude-code-mastery-part-5-full-blueprint-tc/) (2026-03-23) — 我將整個 Claude Code 系統完整公開。CLAUDE.md、skills、agents、hooks、cron、memory — 每一層如何連接，每一個決定背後的原因。
+- [Claude Code 完全攻略：Agent 團隊與自動化 — 你的 AI 工作團隊](https://hyperfocusam.com/blog/claude-code-mastery-part-4-agent-teams-tc/) (2026-03-21) — 我有 9 個 AI agent 運行 7 個 cron job。每週一部落格自動發文。本篇詳述整個 agent team architecture。
+- [Claude Code 完全攻略：Hooks 與安全機制 — 如何讓 AI 安全工作](https://hyperfocusam.com/blog/claude-code-mastery-part-3-hooks-guardrails-tc/) (2026-03-20) — 有一次 Claude Code 差點將電郵發送給錯誤的人。那天之後我建立了一套 hooks 系統。PreToolUse、PostToolUse、Stop hook — 全部運行在 FastAPI server 上。
+- [Claude Code 完全攻略：Skills 與 Memory — 教 AI 學會記憶](https://hyperfocusam.com/blog/claude-code-mastery-part-2-skills-memory-tc/) (2026-03-19) — AI 最大的問題是遺忘。我在 Claude Code 中建立了四層 memory 系統，加上 40 個 skills 採用 progressive disclosure。本篇詳述整個架構。
+- [Claude Code 完全攻略：從零開始到你的第一個 Agent](https://hyperfocusam.com/blog/claude-code-mastery-part-1-getting-started-tc/) (2026-03-17) — 三個月前我第一次打開 Claude Code，以為只是另一個 terminal chatbox。三個月後它協助管理四間公司的日常運作。這是完全攻略系列的第一篇。
 - [起一個 Agentic AI 系統學到既五件事](https://hyperfocusam.com/blog/zh-agentic-ai-five-lessons/) (2026-03-16) — 由零起一個 multi-agent AI 系統到 production deploy，五個最深刻既體會：orchestration、memory、agentic UX、文化偏見、同 80/20 法則。
 - [5 條真係有用既 AI Prompt 打低拖延症（我每日用緊）](https://hyperfocusam.com/blog/zh-ai-prompts-beat-procrastination/) (2026-03-14) — 5 條 viral AI prompt 打低拖延症——點解每條有效、點樣用得更好、加埋 ADHD 實戰 insight。
 - [我點同 AI 傾偈：一個鐘由零到自動 YouTube 頻道](https://hyperfocusam.com/blog/zh-chillpo-how-i-talk-to-ai/) (2026-03-11) — 2,100 行終端紀錄，一個完整嘅 AI 協作 session。由 debug API 錯誤開始，到建成全自動嘅 lo-fi 音樂 YouTube 頻道。呢篇文唔係講技術——而係講點樣同 AI 溝通。

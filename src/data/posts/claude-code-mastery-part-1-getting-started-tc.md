@@ -1,66 +1,65 @@
+# Claude Code 完全攻略：從零開始到你的第一個 Agent
 
-# Claude Code 完全攻略：由零開始到你第一個 Agent
+三個月前我首次打開 Claude Code，以為不過是另一個 terminal chatbox。輸入了一句話，它回答了，我心想：這就是 ChatGPT 穿了件黑色外衣而已。
 
-三個月前我第一次打開 Claude Code，以為係又一個 terminal chatbox。打咗句嘢，佢答咗，我心諗：啊，即係 ChatGPT 著咗件黑色衫。
+三個月後的今天，我四間公司的日常運作全部在 Claude Code 上運行。Email、invoice、客戶跟進、meeting transcript、寫 blog、甚至一隻三國志 RPG -- 全部在同一個 terminal window 內完成。438 小時的 session，200 多次對話。而這一切都始於一個我差點就關掉的 terminal。
 
-三個月後嘅今日，我四間公司嘅日常運作全部行緊 Claude Code。Email、invoice、客戶跟進、meeting transcript、寫 blog、甚至一隻三國志 RPG -- 全部喺同一個 terminal window 搞掂。438 個鐘頭嘅 session，200 幾次對話。而呢一切都係由一個我差啲就關咗嘅 terminal 開始。
+這是「Claude Code 完全攻略」系列的第一篇。不是那種「十個 prompt 提升生產力」的文章 -- 而是我真正在用的系統，從零開始說起。
 
-呢個係「Claude Code 完全攻略」系列嘅第一篇。唔係嗰啲「十個 prompt 提升生產力」嘅文章 -- 係我真正用緊嘅系統，由零開始講起。
+## Claude Code 不是 ChatGPT
 
-## Claude Code 唔係 ChatGPT
+這是最重要的 reframe。
 
-呢句係最重要嘅 reframe。
+ChatGPT 是一個你提問、它回答的 chatbox。Cursor 是一個協助你寫 code 的 autocomplete。Claude Code 是一個有手有腳的 agent -- 它能讀取你的 file、寫入新 file、搜尋整個 codebase、執行 shell command、連接外部服務。
 
-ChatGPT 係一個你問嘢佢答嘢嘅 chatbox。Cursor 係一個幫你寫 code 嘅 autocomplete。Claude Code 係一個有手有腳嘅 agent -- 佢可以讀你嘅 file、寫新 file、搜尋你成個 codebase、行 shell command、連接外部服務。
+你告訴它「fix 這個 bug」，它不會丟一段 code 讓你自行貼上。它會自己找到對應的 file，讀取並理解內容，修改後測試，然後向你匯報它做了什麼。
 
-你話佢「fix 呢個 bug」，佢唔會俾段 code 你叫你自己貼。佢會自己搵到個 file，讀完理解完，改完 test 完，然後同你講佢做咗咩。
+差別在於：ChatGPT 給你建議。Claude Code 替你執行。
 
-個分別係：ChatGPT 俾你建議。Claude Code 幫你做嘢。
+這個 mental model shift 是一切的起點。你不是在「跟 AI 聊天」，你是在指揮一個具備真正能力的 agent。
 
-呢個 mental model shift 係所有嘢嘅起點。你唔係喺度「同 AI 傾計」，你係喺度指揮一個有真正能力嘅 agent。
-
-## 裝機：五分鐘搞掂
+## 安裝：五分鐘搞定
 
 ```bash
 npm install -g @anthropic-ai/claude-code
 ```
 
-一條 command。要 Node.js 18+ 同一條 Anthropic API key。裝完打 `claude`，authenticate，搞掂。
+一條 command。需要 Node.js 18+ 和一組 Anthropic API key。安裝完畢輸入 `claude`，完成認證，即可使用。
 
-第一次開嗰個 interface 好 minimal -- 一個 prompt、一段對話歷史、tool call 嘅 output。冇 sidebar，冇 file tree，冇 button。就係你同一個好叻嘅 agent 對住。
+第一次打開的 interface 非常 minimal -- 一個 prompt、一段對話歷史、tool call 的 output。沒有 sidebar，沒有 file tree，沒有 button。就是你與一個極其能幹的 agent 面對面。
 
-如果你覺得驚，呢個係正常嘅。因為你啱啱見到嘅嘢係真嘅。
+如果你感到震撼，這是正常的。因為你剛才看到的是真的。
 
-## 六個工具：呢個就係「有手有腳」嘅意思
+## 六個工具：這就是「有手有腳」的含義
 
-Claude Code 唔係用 prompt magic 做嘢，係用工具：
+Claude Code 不是靠 prompt magic 運作，而是使用工具：
 
-- **Read** -- 讀你機上面任何 file
-- **Write** -- 開新 file 或者覆寫
-- **Edit** -- 改特定嘅行數
-- **Bash** -- 行 shell command
-- **Glob** -- 用 pattern 搵 file
+- **Read** -- 讀取你機器上的任何 file
+- **Write** -- 建立新 file 或覆寫現有 file
+- **Edit** -- 修改特定的行數
+- **Bash** -- 執行 shell command
+- **Glob** -- 以 pattern 搜尋 file
 - **Grep** -- 搜尋 file 內容
 
-你話「fix 我個 login page 嘅 bug」，佢會 call Glob 搵 file、call Read 理解 code、call Grep 搵相關 pattern、call Edit 改 code、call Bash 跑 test。一氣呵成。
+你說「fix 我 login page 的 bug」，它會 call Glob 搜尋 file、call Read 理解 code、call Grep 尋找相關 pattern、call Edit 修改 code、call Bash 執行 test。一氣呵成。
 
-你唔係喺度寫 prompt 求佢答得好啲。你係喺度形容一件要做嘅工作，然後佢去做。呢個分別好大。
+你不是在撰寫 prompt 祈求它回答得更好。你是在描述一件需要完成的工作，然後它去執行。這個差別非常大。
 
-## Plan Mode：諗完先做
+## Plan Mode：先想後做
 
-好多人唔知 Claude Code 有兩個模式。Normal mode 係即時行動 -- 讀、寫、執行。Plan mode 用 `shift+tab` 觸發 -- 佢會先想好成個 approach，等你 review 完先動手。
+很多人不知道 Claude Code 有兩個模式。Normal mode 是即時行動 -- 讀、寫、執行。Plan mode 用 `shift+tab` 觸發 -- 它會先構思整個 approach，等你審核完畢才動手。
 
-我做任何非 trivial 嘅嘢都用 plan mode。「Plan 吓你會點 refactor 呢個 auth flow。」「Plan 吓由 SQLite 轉 Postgres 嘅 migration。」
+我處理任何非 trivial 的任務都使用 plan mode。「Plan 一下你會如何 refactor 這個 auth flow。」「Plan 一下從 SQLite 遷移到 Postgres 的 migration。」
 
-對我嘅工作嚟講 -- 改錯一個 invoice template 可能會 send 錯數俾真客 -- plan mode 唔係 optional，係 default。
+就我的工作而言 -- 改錯一個 invoice template 可能導致向真實客戶發送錯誤金額 -- plan mode 不是 optional，而是 default。
 
-## CLAUDE.md：你個 Project 嘅大腦
+## CLAUDE.md：你的 Project 的大腦
 
-呢樣嘢係 Claude Code 由「工具」變成「系統」嘅關鍵。
+這是 Claude Code 從「工具」蛻變為「系統」的關鍵。
 
-每個 project 可以喺 root 放一個 `CLAUDE.md` file。Claude Code 每次開 session 都會讀呢個 file。佢唔係 README -- 係你個 AI agent 嘅操作手冊。
+每個 project 可以在 root 放置一個 `CLAUDE.md` file。Claude Code 每次開啟 session 都會讀取這個 file。它不是 README -- 而是你的 AI agent 的操作手冊。
 
-我嘅 CLAUDE.md 喺 production 入面有 200 幾行。Business context、client database、溝通規則、error handling policy、integration config -- 全部寫晒喺度。
+我的 CLAUDE.md 在 production 環境中有 200 多行。Business context、client database、溝通規則、error handling policy、integration config -- 全部記載其中。
 
 簡化版本：
 
@@ -81,49 +80,49 @@ Ada is an executive-assistant agent for Sam Wong across DotAI, Adaptig, Loopem, 
 Every meaningful action: log to worklogs BEFORE responding.
 ```
 
-冇 CLAUDE.md 嘅 Claude Code 係一個有失憶嘅聰明助手。有咗 CLAUDE.md 嘅 Claude Code 係一個記得規則嘅 team member。
+沒有 CLAUDE.md 的 Claude Code 是一個患有失憶症的聰明助手。有了 CLAUDE.md 的 Claude Code 是一個記得規則的 team member。
 
-呢個就係真正嘅 unlock。
+這就是真正的 unlock。
 
-## 第一個真正嘅任務
+## 第一個真正的任務
 
-唔好做 hello world。揀一個你真實 project 入面嘅真實 file -- 有 bug 嘅、要 refactor 嘅。喺嗰個 directory 開 Claude Code，打：
+不要做 hello world。選一個你真實 project 中的真實 file -- 有 bug 的、需要 refactor 的。在那個 directory 開啟 Claude Code，輸入：
 
 ```
 Look at src/components/LoginForm.tsx. There's a bug where the error
 message doesn't clear after a successful retry. Fix it.
 ```
 
-然後睇住佢做。Read file、理解結構、搵到問題、Edit 修正、解釋改咗咩。
+然後看着它運作。Read file、理解結構、找到問題、Edit 修正、解釋修改了什麼。
 
-冇 copy-paste。冇切 tab。冇「呢度係 code，你自己放返入去」。
+沒有 copy-paste。沒有切換 tab。沒有「這裏是 code，請你自行放回去」。
 
-嗰個 moment -- 睇住 AI 真正修咗你 codebase 入面嘅 bug，改啱嘅 file，改啱嘅 line -- 係大部分人唔再當佢係玩具嘅一刻。
+那個 moment -- 看着 AI 真正修復了你 codebase 中的 bug，改對了 file，改對了 line -- 是大部分人不再把它當作玩具的一刻。
 
-## MCP：可以有幾癲
+## MCP：能力可以走多遠
 
-MCP 即係 Model Context Protocol -- 一個標準，等 Claude Code 連接外部服務。Google Calendar、Gmail、WhatsApp、database、browser automation -- 乜都得。
+MCP 即 Model Context Protocol -- 一個標準，讓 Claude Code 連接外部服務。Google Calendar、Gmail、WhatsApp、database、browser automation -- 無所不包。
 
-我而家行緊 15 個以上嘅 MCP integration。Claude Code 可以幫我讀 email、check calendar、send WhatsApp、建 document、search web -- 全部喺同一個 terminal。
+我目前運行着 15 個以上的 MCP integration。Claude Code 可以替我讀 email、查 calendar、發 WhatsApp、建立 document、搜尋 web -- 全部在同一個 terminal 內完成。
 
-MCP 嘅 deep dive 會喺系列第三篇講。但我喺第一篇就提，因為知道 MCP 存在會改變你一開始點理解 Claude Code。呢個唔係一個有 AI 嘅 code editor。係一個 AI agent 嘅 operating system。
+MCP 的 deep dive 會在系列第三篇詳述。但我在第一篇就提及，因為知道 MCP 的存在會改變你從一開始如何理解 Claude Code。這不是一個附帶 AI 的 code editor。而是一個 AI agent 的 operating system。
 
 ## 下一篇預告
 
-呢個係「Claude Code 完全攻略」系列嘅 Part 1。之後仲有：
+這是「Claude Code 完全攻略」系列的 Part 1。後續還有：
 
-- **Part 2：Skills 同 Memory** -- 點樣俾 Claude Code 持久記憶、可重用嘅技能、同從過去 session 學習嘅能力
-- **Part 3：MCP Integration** -- 連接你真正嘅工具，建立真實嘅 workflow
-- **Part 4：Hooks 同 Automation** -- event-driven 行為、policy enforcement、建立自己行嘅系統
+- **Part 2：Skills 與 Memory** -- 如何賦予 Claude Code 持久記憶、可重用的技能、以及從過往 session 學習的能力
+- **Part 3：MCP Integration** -- 連接你真正的工具，建立真實的 workflow
+- **Part 4：Hooks 與 Automation** -- event-driven 行為、policy enforcement、建構自主運行的系統
 
-如果你睇過我之前寫嘅[幫 Claude Code 砌 voice mode](/blog/i-built-voice-mode-claude-code) 同[將佢變成三國志 RPG](/blog/ada-gersang-gamifying-claude-code)，你已經見過終點嘅樣。呢個系列係由零行到嗰度嘅路。
+如果你讀過我之前寫的[替 Claude Code 構建 voice mode](/blog/i-built-voice-mode-claude-code) 和[將它變成三國志 RPG](/blog/ada-gersang-gamifying-claude-code)，你已經見過終點的樣貌。這個系列是從零走到那裏的路。
 
-「識裝 Claude Code」同「Claude Code 幫我行成盤生意」之間嘅距離，唔係天份，唔係技術 -- 係一個 mental model 嘅轉變。工具，唔係 chat。系統，唔係 prompt。同一個寫得好嘅 CLAUDE.md。
+「懂得安裝 Claude Code」與「Claude Code 替我經營整盤生意」之間的距離，不是天份，不是技術 -- 而是一個 mental model 的轉變。工具，不是 chat。系統，不是 prompt。以及一份寫得好的 CLAUDE.md。
 
-如果佢唔喺 CLAUDE.md 入面，佢咩都記唔到。
+如果它不在 CLAUDE.md 裏面，它什麼都記不住。
 
 ---
 
-*完整英文版喺 hyperfocusam.com/blog/claude-code-mastery-part-1-getting-started 睇全文。*
+*完整英文版請至 hyperfocusam.com/blog/claude-code-mastery-part-1-getting-started 閱讀。*
 
-*歡迎喺 [LinkedIn](https://www.linkedin.com/in/samwonghk/) 搵我傾。*
+*歡迎在 [LinkedIn](https://www.linkedin.com/in/samwonghk/) 交流。*
