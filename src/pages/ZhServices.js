@@ -33,8 +33,8 @@ const groups = [
     testimonial: testimonials[1],
     primaryCta: {
       cta: '預約免費諮詢',
-      ctaLink: 'https://ro.am/samwong/',
-      external: true,
+      ctaLink: '/book',
+      external: false,
     },
     band: 'section-sunken',
   },

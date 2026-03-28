@@ -36,8 +36,8 @@ const groups = [
     testimonial: testimonials[1],
     primaryCta: {
       cta: 'Book a Discovery Call',
-      ctaLink: 'https://ro.am/samwong/',
-      external: true,
+      ctaLink: '/book',
+      external: false,
     },
     band: 'section-sunken',
   },

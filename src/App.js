@@ -33,6 +33,9 @@ const ZhCorporateTraining = lazy(() => import('./pages/ZhCorporateTraining'));
 // Media Kit (designed HTML version)
 const MediaKit = lazy(() => import('./pages/MediaKit'));
 
+// Booking page (Ro.am lobby embed)
+const Book = lazy(() => import('./pages/Book'));
+
 // Landing page for paid traffic (no nav)
 const GetStarted = lazy(() => import('./pages/GetStarted'));
 
@@ -45,6 +48,7 @@ const App = () => (
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<Post />} />
         <Route path="/clients" element={<Clients />} />
+        <Route path="/book" element={<Book />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/corporate-ai-training-hong-kong" element={<CorporateTraining />} />
         <Route path="/get-started" element={<GetStarted />} />

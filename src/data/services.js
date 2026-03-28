@@ -65,8 +65,8 @@ No generic curriculum. We start from your current role, tools, and constraints.`
         label: 'Free, 30 min',
         description: 'A no-pressure call to define goals and see if coaching is a fit.',
         cta: 'Book Free Call',
-        ctaLink: 'https://ro.am/samwong/',
-        external: true,
+        ctaLink: '/book',
+        external: false,
       },
       {
         id: 'standard-coaching',
@@ -76,8 +76,8 @@ No generic curriculum. We start from your current role, tools, and constraints.`
         label: 'Per session',
         description: '60-90 minute sessions focused on your active projects and workflows.',
         cta: 'Book Coaching Session',
-        ctaLink: 'https://ro.am/samwong/',
-        external: true,
+        ctaLink: '/book',
+        external: false,
       },
       {
         id: 'executive-advisory',

@@ -1,0 +1,99 @@
+/* Book page — Ro.am lobby embed integration */
+
+.book-page {
+  // Full-bleed sections need unconstrained children
+  &.post > * {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+// ─── Embed section — light background, embed blends in ─
+.book-page__embed-section {
+  background: _palette(surface-base);
+  padding: 0 1.5rem 4rem;
+
+  @include breakpoint(small) {
+    padding: 0 1rem 2.5rem;
+  }
+}
+
+.book-page__embed-wrap {
+  max-width: _size(content-standard);
+  margin: 0 auto;
+}
+
+.roam-embed-container {
+  min-width: 320px;
+  min-height: 600px;
+  transition: height 0.3s $ease-out;
+  border-radius: map-get($radius, xl);
+  overflow: hidden;
+  box-shadow: map-get($shadow, lg);
+  background: _palette(surface-raised);
+
+  iframe {
+    border: none;
+  }
+}
+
+// ─── Context cards below the embed ─────────────────────
+.book-page__context {
+  background: _palette(surface-sunken);
+  padding: map-get($size, section-spacing) 1.5rem;
+  border-top: 1px solid _palette(border-subtle);
+
+  @include breakpoint(small) {
+    padding: map-get($size, section-spacing-small) 1.25rem;
+  }
+}
+
+.book-page__options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  max-width: _size(content-standard);
+  margin: 0 auto;
+
+  @include breakpoint(medium) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.book-page__option {
+  h4 {
+    font-size: 1.1rem;
+    font-weight: _font(weight-bold);
+    color: _palette(text-primary);
+    margin-bottom: 0.25rem;
+  }
+
+  p {
+    color: _palette(text-body);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+
+    a {
+      color: _palette(text-primary);
+      border-bottom: 1px solid _palette(border-subtle);
+      transition: border-color 0.2s $ease-out;
+
+      &:hover {
+        border-color: _palette(text-primary);
+      }
+    }
+  }
+}
+
+.book-page__label {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: _font(weight-medium);
+  color: _palette(text-secondary);
+  letter-spacing: map-get($font, kerning-meta);
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}

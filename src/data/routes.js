@@ -33,6 +33,10 @@ const routes = [
     path: '/testimonials',
   },
   {
+    label: 'Book',
+    path: '/book',
+  },
+  {
     label: 'Contact',
     path: '/contact',
   },
