@@ -35,7 +35,6 @@ const AnimatedNumber = ({
     if (hasAnimated.current) return;
     hasAnimated.current = true;
 
-    setDisplay('0');
     const duration = 1200;
     const start = performance.now();
 
