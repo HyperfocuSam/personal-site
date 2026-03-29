@@ -18,10 +18,16 @@ const stats = [
   },
 ];
 
+const formatValue = (value, format, decimal) => {
+  if (decimal) return value.toFixed(1);
+  if (format) return value.toLocaleString();
+  return String(value);
+};
+
 const AnimatedNumber = ({
   value, suffix, format, decimal,
 }) => {
-  const [display, setDisplay] = useState('0');
+  const [display, setDisplay] = useState(() => formatValue(value, format, decimal));
   const ref = useRef(null);
   const hasAnimated = useRef(false);
 
@@ -29,6 +35,7 @@ const AnimatedNumber = ({
     if (hasAnimated.current) return;
     hasAnimated.current = true;
 
+    setDisplay('0');
     const duration = 1200;
     const start = performance.now();
 

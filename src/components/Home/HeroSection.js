@@ -22,6 +22,9 @@ const HeroSection = () => (
           {' '}
           <span className="dark-hero__arrow">&rarr;</span>
         </Link>
+        <Link to="/book" className="dark-hero__cta dark-hero__cta--secondary">
+          Book a Free Call
+        </Link>
       </div>
     </div>
   </section>

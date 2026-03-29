@@ -66,6 +66,8 @@
   &__actions {
     display: flex;
     justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
   }
 
   &__cta {
@@ -92,6 +94,17 @@
   &__arrow {
     transition: transform 0.25s $ease-out-snappy;
     font-size: 1.1em;
+  }
+
+  &__cta--secondary {
+    background: transparent;
+    border: 2px solid _palette(ink);
+    color: _palette(ink);
+
+    &:hover {
+      background: _palette(ink);
+      color: _palette(text-on-dark);
+    }
   }
 
   &__cta:hover &__arrow {

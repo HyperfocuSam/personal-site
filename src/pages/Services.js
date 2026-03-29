@@ -130,8 +130,37 @@ const Services = () => {
           </div>
         </ScrollReveal>
 
-        {/* Service groups in alternating section bands */}
-        {groups.map((group) => (
+        {/* First service group — Organizations */}
+        {groups.slice(0, 1).map((group) => (
+          <section key={group.id} className={`${group.band} section-padding`}>
+            <div className="content-standard">
+              <ScrollReveal variant="fade-up-long">
+                <ServiceGroup
+                  id={group.id}
+                  title={group.title}
+                  subtitle={group.subtitle}
+                  services={services.filter((s) => s.category === group.category)}
+                  socialProof={group.socialProof}
+                  testimonial={group.testimonial}
+                  primaryCta={group.primaryCta}
+                />
+              </ScrollReveal>
+            </div>
+          </section>
+        ))}
+
+        {/* Lead magnet — positioned after Organizations for maximum visibility */}
+        <EmailCapture
+          title="Free: AI Pioneer Program Playbook"
+          blurb="The 6-session structure I use with enterprise clients — champion selection, habit framework, and measurement template."
+          leadMagnet={{
+            title: 'AI Pioneer Program Playbook (PDF)',
+            url: '/downloads/ai-pioneer-program-playbook.pdf',
+          }}
+        />
+
+        {/* Remaining service groups */}
+        {groups.slice(1).map((group) => (
           <section key={group.id} className={`${group.band} section-padding`}>
             <div className="content-standard">
               <ScrollReveal variant="fade-up-long">
@@ -294,15 +323,6 @@ const Services = () => {
             })}
           </script>
         </Helmet>
-
-        <EmailCapture
-          title="Free: AI Pioneer Program Playbook"
-          blurb="The 6-session structure I use with enterprise clients — champion selection, habit framework, and measurement template."
-          leadMagnet={{
-            title: 'AI Pioneer Program Playbook (PDF)',
-            url: '/downloads/ai-pioneer-program-playbook.pdf',
-          }}
-        />
 
         <div style={{ textAlign: 'center', margin: '2rem 0' }}>
           <Link
