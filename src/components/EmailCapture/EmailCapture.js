@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 
-const SUBSTACK_URL = 'https://wongsam.substack.com/api/v1/free?noRedirect=true';
+const SUBSTACK_SUBSCRIBE_URL = 'https://wongsam.substack.com/subscribe';
 
 const EmailCapture = ({
   title,
@@ -10,53 +10,34 @@ const EmailCapture = ({
   variant,
 }) => {
   const [email, setEmail] = useState('');
-  const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState(null);
 
-  const handleSubmit = useCallback(async (e) => {
+  const handleSubmit = useCallback((e) => {
     e.preventDefault();
-    setSubmitting(true);
-    setError(null);
 
-    try {
-      const res = await fetch(SUBSTACK_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          email,
-          first_url: window.location.href,
-          first_referrer: document.referrer,
-        }),
+    const event = leadMagnet ? 'lead_magnet_downloaded' : 'newsletter_subscribed';
+    if (window.posthog) {
+      window.posthog.capture(event, {
+        source: window.location.pathname,
+        ...(leadMagnet && { magnet: leadMagnet.title }),
       });
-
-      if (res.ok) {
-        setSubmitted(true);
-        const event = leadMagnet ? 'lead_magnet_downloaded' : 'newsletter_subscribed';
-        if (window.posthog) {
-          window.posthog.capture(event, {
-            source: window.location.pathname,
-            ...(leadMagnet && { magnet: leadMagnet.title }),
-          });
-        }
-        if (window.gtag) {
-          window.gtag('event', 'sign_up', {
-            event_category: 'newsletter',
-            method: leadMagnet ? 'lead_magnet' : 'substack',
-          });
-        }
-      } else {
-        setError('Could not subscribe. Please try again.');
-      }
-    } catch {
-      setError('Network error. Please check your connection and try again.');
-    } finally {
-      setSubmitting(false);
     }
+    if (window.gtag) {
+      window.gtag('event', 'sign_up', {
+        event_category: 'newsletter',
+        method: leadMagnet ? 'lead_magnet' : 'substack',
+      });
+    }
+
+    window.open(
+      `${SUBSTACK_SUBSCRIBE_URL}?email=${encodeURIComponent(email)}`,
+      '_blank',
+      'noopener,noreferrer',
+    );
+    setSubmitted(true);
   }, [email, leadMagnet]);
 
   const buttonLabel = leadMagnet ? 'Get the Playbook' : 'Subscribe';
-  const buttonLabelBusy = leadMagnet ? 'Sending...' : 'Subscribing...';
 
   return (
     <section className={`email-capture${leadMagnet ? ' email-capture--magnet' : ''}${variant === 'dark' ? ' email-capture--dark' : ''}`}>
@@ -65,21 +46,17 @@ const EmailCapture = ({
 
       {submitted ? (
         <div className="email-capture__success">
-          {leadMagnet ? (
-            <>
-              <a
-                href={leadMagnet.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="button email-capture__download"
-              >
-                Download: {leadMagnet.title}
-              </a>
-              <p>Also check your email to confirm your subscription.</p>
-            </>
-          ) : (
-            <p>Check your email to confirm your subscription.</p>
+          {leadMagnet && (
+            <a
+              href={leadMagnet.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button email-capture__download"
+            >
+              Download: {leadMagnet.title}
+            </a>
           )}
+          <p>Complete your subscription in the Substack tab that just opened.</p>
         </div>
       ) : (
         <>
@@ -95,14 +72,10 @@ const EmailCapture = ({
             <button
               type="submit"
               className="button email-capture__submit"
-              disabled={submitting}
             >
-              {submitting ? buttonLabelBusy : buttonLabel}
+              {buttonLabel}
             </button>
           </form>
-          {error && (
-            <p className="email-capture__error">{error}</p>
-          )}
           <a
             href="https://wa.me/85264315177"
             target="_blank"

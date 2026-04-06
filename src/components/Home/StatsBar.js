@@ -27,7 +27,7 @@ const formatValue = (value, format, decimal) => {
 const AnimatedNumber = ({
   value, suffix, format, decimal,
 }) => {
-  const [display, setDisplay] = useState(() => formatValue(value, format, decimal));
+  const [display, setDisplay] = useState(() => (decimal ? '0.0' : '0'));
   const ref = useRef(null);
   const hasAnimated = useRef(false);
 
@@ -68,13 +68,7 @@ const AnimatedNumber = ({
       '(prefers-reduced-motion: reduce)',
     ).matches;
     if (prefersReduced) {
-      if (decimal) {
-        setDisplay(value.toFixed(1));
-      } else if (format) {
-        setDisplay(value.toLocaleString());
-      } else {
-        setDisplay(String(value));
-      }
+      setDisplay(formatValue(value, format, decimal));
       return undefined;
     }
 
