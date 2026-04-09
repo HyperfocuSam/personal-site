@@ -21,6 +21,14 @@ const BILINGUAL_PAIRS = {
   '/corporate-ai-training-hong-kong': '/zh/corporate-ai-training-hong-kong',
 };
 
+// AI discoverability assets — plain .txt files at root, no trailing slash.
+// llms.txt is the emerging standard; llms-full.txt is the extended context file
+// referenced by Perplexity, Claude, ChatGPT web crawlers.
+const AI_ASSETS = [
+  { path: '/llms.txt', priority: '0.9', changefreq: 'weekly' },
+  { path: '/llms-full.txt', priority: '0.8', changefreq: 'weekly' },
+];
+
 const STATIC_PAGES = [
   // English pages
   { path: '/', priority: '1.0', changefreq: 'weekly' },
@@ -143,6 +151,17 @@ function generateSitemap() {
       }
     }
 
+    xml += '  </url>\n';
+  }
+
+  // AI discoverability assets (llms.txt, llms-full.txt) — emitted without
+  // trailing slash since they are flat files, not routable pages.
+  for (const asset of AI_ASSETS) {
+    xml += '  <url>\n';
+    xml += `    <loc>${SITE_URL}${asset.path}</loc>\n`;
+    xml += `    <lastmod>${today}</lastmod>\n`;
+    xml += `    <changefreq>${asset.changefreq}</changefreq>\n`;
+    xml += `    <priority>${asset.priority}</priority>\n`;
     xml += '  </url>\n';
   }
 

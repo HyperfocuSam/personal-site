@@ -40,6 +40,12 @@ Allow: /
 # Sitemap & Feed
 Sitemap: https://hyperfocusam.com/sitemap.xml
 
+# AI discoverability — llms.txt spec (https://llmstxt.org/)
+# llms.txt = concise site map + metadata for LLMs
+# llms-full.txt = extended context (bio, frameworks, full article excerpts)
+Allow: /llms.txt
+Allow: /llms-full.txt
+
 # Disallow non-essential paths
 Disallow: /api
 Disallow: /static/js/*.map
