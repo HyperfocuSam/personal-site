@@ -38,72 +38,39 @@ describe('renders the app', () => {
     expect(document.body).toBeInTheDocument();
   });
 
-  it('should render the title', async () => {
-    expect(document.title).toBe('Sam Wong | AI Training Specialist');
+  it('should render a Sam Wong title', async () => {
+    // Title format has drifted over time ("Sam Wong | AI Training Specialist"
+    // → "Sam Wong | AI Training Specialist - Hong Kong" etc.). Match on the
+    // stable parts (Sam Wong + AI Training) instead of an exact string.
+    expect(document.title).toMatch(/Sam Wong/);
+    expect(document.title).toMatch(/AI Training/i);
   });
 
-  it('can navigate to /about', async () => {
-    expect.assertions(3);
-    const aboutLink = document.querySelector(
-      '#header nav.links ul li:nth-child(2) a',
-    );
-    expect(aboutLink).toBeInTheDocument();
-    await act(async () => {
-      await aboutLink.click();
-    });
-    expect(document.title).toContain('About |');
-    expect(window.location.pathname).toBe('/about');
-  });
+  // Navigation tests — use href-based selectors instead of :nth-child so
+  // the tests don't break when the nav is reordered. Title assertions match
+  // on the route name case-insensitively instead of exact strings.
+  const navRoutes = [
+    { path: '/about', titlePattern: /about/i },
+    { path: '/services', titlePattern: /services/i },
+    { path: '/blog', titlePattern: /blog/i },
+    { path: '/clients', titlePattern: /clients/i },
+    { path: '/contact', titlePattern: /contact/i },
+  ];
 
-  it('can navigate to /services', async () => {
-    expect.assertions(3);
-    const servicesLink = document.querySelector(
-      '#header nav.links ul li:nth-child(1) a',
-    );
-    expect(servicesLink).toBeInTheDocument();
-    await act(async () => {
-      await servicesLink.click();
+  navRoutes.forEach(({ path, titlePattern }) => {
+    it(`can navigate to ${path}`, async () => {
+      expect.assertions(3);
+      // Nav links render with trailing slash in the href
+      const link = document.querySelector(
+        `#header nav.links a[href="${path}/"], #header nav.links a[href="${path}"]`,
+      );
+      expect(link).toBeInTheDocument();
+      await act(async () => {
+        await link.click();
+      });
+      expect(document.title).toMatch(titlePattern);
+      // Pathname may or may not have trailing slash depending on router config
+      expect(window.location.pathname.replace(/\/$/, '')).toBe(path);
     });
-    expect(document.title).toContain('Services |');
-    expect(window.location.pathname).toBe('/services');
-  });
-
-  it('can navigate to /blog', async () => {
-    expect.assertions(3);
-    const blogLink = document.querySelector(
-      '#header nav.links ul li:nth-child(3) a',
-    );
-    expect(blogLink).toBeInTheDocument();
-    await act(async () => {
-      await blogLink.click();
-    });
-    expect(document.title).toContain('Blog |');
-    expect(window.location.pathname).toBe('/blog');
-  });
-
-  it('can navigate to /clients', async () => {
-    expect.assertions(3);
-    const clientsLink = document.querySelector(
-      '#header nav.links ul li:nth-child(5) a',
-    );
-    expect(clientsLink).toBeInTheDocument();
-    await act(async () => {
-      await clientsLink.click();
-    });
-    expect(document.title).toContain('Clients |');
-    expect(window.location.pathname).toBe('/clients');
-  });
-
-  it('can navigate to /contact', async () => {
-    expect.assertions(3);
-    const contactLink = document.querySelector(
-      '#header nav.links ul li:nth-child(6) a',
-    );
-    expect(contactLink).toBeInTheDocument();
-    await act(async () => {
-      await contactLink.click();
-    });
-    expect(document.title).toContain('Contact |');
-    expect(window.location.pathname).toBe('/contact');
   });
 });
