@@ -1,0 +1,11 @@
+# Build-time Node.js utilities — not part of the shipped React app.
+# These scripts use Node patterns (console.log, while loops, CommonJS) that
+# don't belong under the strict React ESLint config. Running them through
+# the React linter was causing 54 errors in Node.js CI since 2026-04-06.
+scripts/
+
+# Prerendered build output
+build/
+
+# Static generated assets checked into public/ should not be linted
+public/
