@@ -203,13 +203,11 @@ const Blog = () => {
                         </p>
                       </div>
                     </ScrollReveal>
-                    <ScrollReveal variant="fade-up-long" stagger={120}>
-                      <div className="blog-grid">
-                        {blogPosts.map((post) => (
-                          <BlogCard key={post.slug} post={post} />
-                        ))}
-                      </div>
-                    </ScrollReveal>
+                    <div className="blog-grid">
+                      {blogPosts.map((post) => (
+                        <BlogCard key={post.slug} post={post} />
+                      ))}
+                    </div>
                   </section>
                 )}
 
