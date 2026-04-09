@@ -31,7 +31,13 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
+    <!-- Security: referrer policy (meta tag form — works on all browsers).
+         GitHub Pages does not support custom HTTP headers, so the other
+         security headers (HSTS, CSP, X-Frame-Options) require Cloudflare
+         proxy in front of the custom domain. Tracked as a follow-up. -->
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
     <!-- Primary Meta Tags (title + description managed per-page by react-helmet-async) -->
     <meta name="keywords" content="AI training Hong Kong, corporate AI workshops, AI adoption specialist, AI coaching, Train-the-Trainer AI, DotAI, Adaptig, Sam Wong, 企業AI培訓, AI工作坊, prompt engineering, ChatGPT training" />
     <meta name="author" content="Sam Wong" />
