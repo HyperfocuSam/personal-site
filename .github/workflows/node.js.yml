@@ -12,6 +12,8 @@ on:
 
 jobs:
   lint:
+    # Cross-platform lint keeps a cheap signal for platform-specific eslint
+    # plugin issues. Fast enough (<1min each) to justify 3 OSes.
     runs-on: ${{ matrix.os }}
     timeout-minutes: 5
     strategy:
@@ -19,7 +21,7 @@ jobs:
         os: [ubuntu-latest, windows-latest, macos-latest]
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version-file: ".nvmrc"
           cache: "npm"
@@ -28,25 +30,21 @@ jobs:
         run: npm run lint
 
   build:
-    runs-on: ${{ matrix.os }}
-    timeout-minutes: 10
+    # Deploy-to-Pages ships from ubuntu-latest, so that is the only platform
+    # that actually matters for catching deploy-breaking bugs. Dropped
+    # ubuntu-20.04 (runner deprecated and no longer allocated), dropped
+    # Node 16.x + 18.x (both EOL), dropped windows-latest and macos-latest
+    # from build (slow, prone to 10-min timeouts on react-snap, and
+    # duplicates what deploy-to-pages already verifies).
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
     strategy:
       matrix:
-        node-version: [16.x, 18.x, 20.x]
-        os: [ubuntu-20.04, windows-latest, macos-latest]
-        exclude:
-          - os: windows-latest
-            node-version: 16.x
-          - os: windows-latest
-            node-version: 18.x
-          - os: macos-latest
-            node-version: 16.x
-          - os: macos-latest
-            node-version: 18.x
+        node-version: [20.x]
     steps:
       - uses: actions/checkout@v4
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
