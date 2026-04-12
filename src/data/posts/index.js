@@ -5,6 +5,29 @@
 // linkedPost: slug of the corresponding post in another language (for hreflang)
 const posts = [
   {
+    slug: 'my-blog-publishes-itself-silent-death',
+    title: 'My Blog Publishes Itself. It Died Silent for 3 Weeks.',
+    date: '2026-04-12',
+    excerpt: 'I built an autonomous AI blog pipeline. It ran for months, published 47 posts, then silently stopped for three weeks. Exit code 0. No alerts. Here is what went wrong and the three principles I now follow.',
+    tags: ['claude-code', 'automation', 'devops', 'personal-productivity'],
+    type: 'reflection',
+    image: '/images/blog/my-blog-publishes-itself-silent-death-cover.png',
+    featured: false,
+    linkedPost: 'my-blog-publishes-itself-silent-death-tc',
+  },
+  {
+    slug: 'my-blog-publishes-itself-silent-death-tc',
+    title: '我的部落格自動發佈文章。然後悄無聲息地停擺了三星期。',
+    date: '2026-04-12',
+    excerpt: '我建立了一條自動化 AI 內容管線。運行數月，發佈了 47 篇文章，然後悄然停擺三週。退出碼 0。無警報。以下是出了什麼問題，以及我現在遵循的三個原則。',
+    tags: ['claude-code', 'automation', 'devops', 'personal-productivity'],
+    type: 'reflection',
+    image: '/images/blog/my-blog-publishes-itself-silent-death-cover.png',
+    language: 'zh-Hant',
+    featured: false,
+    linkedPost: 'my-blog-publishes-itself-silent-death',
+  },
+  {
     slug: '9-percent-copilot-licenses',
     title: "9% of Copilot Licenses Are Actually Used. I'm Not Surprised.",
     date: '2026-03-27',
