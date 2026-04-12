@@ -35,4 +35,12 @@ The companies that will dominate their industries in 2027 are not the ones with 
 
 ---
 
+## Sources & Further Reading
+
+- Reuters Institute, "[Digital News Report 2024](https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2024)" (Jun 2024) -- Cross-country survey data on public AI tool usage, showing significant adoption gaps across demographics and regions.
+- McKinsey, "[The State of AI in 2025](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai)" (Nov 2025) -- 88% of organizations report using AI, yet scaling remains the gap between experimentation and embedded behavior change.
+- Microsoft & LinkedIn, "[2024 Work Trend Index](https://www.microsoft.com/en-us/worklab/work-trend-index/ai-at-work-is-here-now-comes-the-hard-part)" (May 2024) -- 75% of knowledge workers use AI at work, but 60% of leaders worry their organization lacks a plan to implement it.
+
+---
+
 *I help enterprise teams navigate AI adoption through [workshops, coaching, and pioneer programs](/services). If your organization is working through these challenges, I would welcome a conversation.*

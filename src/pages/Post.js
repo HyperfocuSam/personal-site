@@ -53,6 +53,24 @@ const HOWTO_SCHEMAS = {
       { name: 'Stage 4: Transformation', text: 'AI changes your operating model. New roles emerge, decision-making improves through AI insights, and workflows are fundamentally redesigned for human-AI partnership at scale.' },
     ],
   },
+  'bochk-banking-ai-training': {
+    name: 'How to Use the IPA Framework for Safe AI Decision-Making',
+    description: 'A three-step mental model — Input, Process, Action — that reframes AI from a standalone tool into a thinking partner for strategic work, with built-in data governance.',
+    steps: [
+      { name: 'Input: Define What Data Goes In', text: 'Classify data sensitivity using the traffic light protocol (Green: public information, Yellow: internal data with identifiers stripped, Red: confidential data that never enters AI tools). Prepare clean, structured input appropriate to the task.' },
+      { name: 'Process: Let AI Analyze and Transform', text: 'Use AI to analyze, synthesize, or transform the input — whether drafting documents, summarizing meetings, or compiling research. Review outputs for accuracy against your domain expertise.' },
+      { name: 'Action: Make Decisions Based on Results', text: 'Apply human judgment to the AI output. Make strategic decisions, archive results for reference, and integrate findings into your existing workflows. The 30% that stays human — context, relationships, strategic framing — is where your value lives.' },
+    ],
+  },
+  'arup-ai-lunch-learn': {
+    name: 'How to Apply C-How Thinking: Bridging Left-Brain Logic and Right-Brain Creativity with AI',
+    description: 'A framework that integrates two AI workflows — structured text generation and visual execution — so professionals can move from idea to polished deliverable in minutes instead of hours.',
+    steps: [
+      { name: 'Left Brain: Strategic Thinking with AI Text Tools', text: 'Use AI (e.g., Microsoft Copilot) for structured prompt design. Generate first drafts aligned with your brand voice using the iteration loop: prompt, review, refine, repeat. Focus on logical structure and content quality.' },
+      { name: 'Right Brain: Visual Execution with AI Design Tools', text: 'Take the AI-generated text and transform it into presentation-ready visuals using AI design capabilities. Use automated layout suggestions, background removal, and AI-generated imagery to produce professional deliverables without design expertise.' },
+      { name: 'Integration: Combine Both for Complete Workflows', text: 'Chain the two AI workflows together — brief to draft to visual in a single sitting. AI handles both logical structuring and visual execution, freeing you to focus on judgment, domain expertise, and strategic decisions.' },
+    ],
+  },
 };
 
 // Custom blockquote component for pull quotes

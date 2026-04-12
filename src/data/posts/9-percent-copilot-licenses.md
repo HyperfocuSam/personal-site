@@ -12,7 +12,7 @@ The 9% activation rate and my 4% adoption rate are measuring different things, b
 
 Here's what the typical AI rollout looks like:
 
-1. Executive reads a McKinsey report about AI productivity gains.
+1. Executive reads a [McKinsey report](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai) about AI productivity gains.
 2. IT department procures enterprise licenses. Six figures. Sometimes seven.
 3. An email goes out: "Your new AI tools are available."
 4. A one-page PDF or a 30-minute webinar follows, maybe.
@@ -79,6 +79,13 @@ If you're planning an AI rollout, here's what your budget should look like:
 Most organizations run 95/5 or worse. Then they blame the tool.
 
 The tool isn't the training. The training isn't the adoption. The adoption isn't the transformation. We keep buying the first one and expecting the last.
+
+---
+
+## Sources & Further Reading
+
+- McKinsey, "[The State of AI in 2025](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai)" (Nov 2025) -- 88% of organizations use AI, but nearly two-thirds have not begun scaling it across the enterprise.
+- Microsoft & LinkedIn, "[2024 Work Trend Index](https://www.microsoft.com/en-us/worklab/work-trend-index/ai-at-work-is-here-now-comes-the-hard-part)" (May 2024) -- AI power users are 37% more likely to have a virtual learning program and 61% more likely to hear from their CEO about generative AI.
 
 ---
 

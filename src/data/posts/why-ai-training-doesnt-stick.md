@@ -10,7 +10,7 @@ I know this because I've been that trainer. And after 180+ workshops across bank
 
 ## The Forgetting Problem
 
-There's a well-known principle in learning science: the Ebbinghaus forgetting curve. People forget roughly 70% of new information within 24 hours. After a week, retention drops to about 10%.
+There's a well-known principle in learning science: the [Ebbinghaus forgetting curve](https://en.wikipedia.org/wiki/Forgetting_curve). People forget roughly 70% of new information within 24 hours. After a week, retention drops to about 10%.
 
 Now apply that to a one-off AI workshop. An employee learns 15 prompts, three frameworks, and two tools in a single session. By Friday, they remember maybe two prompts and zero frameworks. By the following Monday, it's as if the training never happened.
 
@@ -83,6 +83,14 @@ Select participants who are curious, influential, and willing to experiment. Giv
 If budget is truly limited, at minimum do this: run the workshop, then schedule three 30-minute follow-up sessions over the next six weeks. Just three touchpoints. Ask "what did you try?" and "what's blocking you?" That alone will double your adoption rate compared to a standalone workshop.
 
 The companies that win the AI adoption race won't be the ones that trained the most people. They'll be the ones whose training actually changed how people work. (The same principle applies to everything -- even [rebuilding your own website's SEO](/blog/seo-rebuild-one-day-claude-code). Knowing what to do is easy. Actually doing it is where AI co-pilots change the equation.)
+
+---
+
+## Sources & Further Reading
+
+- Ebbinghaus, H., "[Memory: A Contribution to Experimental Psychology](https://en.wikipedia.org/wiki/Forgetting_curve)" (1885) -- The foundational research showing roughly 70% of new information is lost within 24 hours without reinforcement.
+- McKinsey, "[The State of AI in 2025](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai)" (Nov 2025) -- 88% of organizations use AI, but nearly two-thirds have not begun scaling it across the enterprise.
+- Microsoft & LinkedIn, "[2024 Work Trend Index](https://www.microsoft.com/en-us/worklab/work-trend-index/ai-at-work-is-here-now-comes-the-hard-part)" (May 2024) -- Only 39% of people who use AI at work have received company training.
 
 ---
 
