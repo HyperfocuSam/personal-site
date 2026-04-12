@@ -108,6 +108,7 @@ const Index = () => (
         <EmailCapture
           title="Get practical AI insights — no fluff"
           blurb="One email when I publish: workshop frameworks, adoption case studies, and tools I actually use with clients."
+          variant="dark"
         />
       </ScrollReveal>
 
