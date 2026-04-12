@@ -1,38 +1,36 @@
 
 # Stop Telling AI to 'Be Creative': What 35 Prompting Strategies Actually Reveal
 
-A Wharton research team tested 35 different prompting strategies and confirmed something I've been teaching in every workshop for two years: telling an AI to "be creative" is the least effective thing you can do.
+A Wharton research team tested 35 different prompting strategies and confirmed something I've been teaching in workshops for two years: telling an AI to "be creative" is the least effective thing you can do.
 
-This matters because I see it constantly. In prompt engineering training sessions, the first thing most participants type is some variation of "be creative" or "think outside the box." It's the workplace equivalent of a manager telling their team to "just innovate." It sounds productive. It produces nothing.
+I see it constantly. In prompt engineering sessions, the first thing most participants type is "be creative" or "think outside the box." It's the workplace equivalent of a manager telling their team to "just innovate." It feels productive. It produces the statistical average of everything the model has ever seen — which is, by definition, the opposite of creative.
 
-## Why Vague Instructions Fail
+## What Actually Happens When You Remove Constraints
 
-Large language models don't have inspiration. They have probability distributions. When you say "be creative," you're giving the model zero constraints, which paradoxically produces the most generic output. The model defaults to the statistical average of everything it's seen -- which is, by definition, the opposite of creative.
+Large language models don't have inspiration. They have probability distributions. "Be creative" gives the model zero constraints, so it defaults to the most average possible output. I learned this the hard way when I was building [Ada's voice mode](/blog/i-built-voice-mode-claude-code) — I kept asking for "natural-sounding speech" and getting robotic outputs. The breakthrough was specifying exact parameters: cadence, pause length, emphasis patterns. Constraints produced the natural sound that freedom couldn't.
 
-When I [trained HKJC's management trainees on prompt engineering](/blog/hkjc-mt-ai-training), we used a three-layer framework: precision, structure, then context. Not once did we tell the AI to "be creative." Instead, we gave it specific constraints that forced interesting outputs.
+The Wharton findings match this perfectly. The strategies that work all add structure, not freedom.
 
-## What the Research Actually Shows
+## The Session That Changed How I Teach Prompting
 
-The strategies that work share a common pattern: they add structure, not freedom. The most effective approaches include:
+At [Chow Tai Fook's design thinking workshop](/blog/ctf-ai-design-thinking-workshop-2026), I watched a jewelry designer struggle with open-ended image generation for twenty minutes. She kept typing variations of "create a beautiful ring design" and getting generic results she'd never show a client.
 
-**Role assignment.** "You are a luxury brand strategist analyzing the Gen Z jewelry market" outperforms "analyze the jewelry market" every time. At [Chow Tai Fook's workshop](/blog/ctf-ai-design-thinking-workshop-2026), we took this further with JSON prompt templates -- structured objects where designers fill in parameters like style, material, lighting angle, and mood. Beginners who struggled with open-ended prompting produced consistent, high-quality outputs within minutes.
+Then we switched to JSON prompt templates — structured objects with specific fields: style era (Art Deco), metal (rose gold), stone arrangement (channel-set), lighting (studio overhead, 45 degrees), mood (editorial). The same designer who'd been stuck produced four usable concepts in under ten minutes. She told me afterward: "I thought creativity meant less structure. It's actually more."
 
-**Constraint-based prompting.** "Generate 5 taglines under 6 words each, using alliteration, for a retirement savings app" beats "write creative taglines." Constraints are the scaffolding that enables creativity, not the cage that limits it.
+That's the whole insight. Constraints aren't cages. They're scaffolding.
 
-**Iterative refinement.** The best prompters don't write one prompt. They write a first draft, evaluate the output, and adjust. This is the skill that separates someone who's "tried ChatGPT" from someone who's integrated AI into their workflow.
+## What I Actually Teach
 
-## What I Teach Instead of "Be Creative"
+I've stopped using the word "prompting" in my workshops when I can avoid it. I call it "structured input design" because it shifts the mental model from writing a request (which invites vagueness) to building a specification (which demands precision).
 
-In my corporate prompt engineering workshops, I teach three principles:
+Specificity beats inspiration. "Write a 500-word report with 3 sections, each containing one data point and one recommendation" outperforms "write a detailed report" every single time. Not because the AI is smarter with better prompts. Because precision eliminates the guesswork.
 
-**1. Specificity beats inspiration.** Replace adjectives with numbers. Instead of "write a detailed report," say "write a 500-word report with 3 sections, each containing one data point and one recommendation."
+Context beats cleverness. Pasting in your actual data, your actual constraints, your actual audience description produces better results than any prompt template you found on Twitter. A mediocre prompt with real context outperforms a brilliant prompt with no context.
 
-**2. Structure beats freedom.** Give the model a format. A table. A JSON object. A template with blanks to fill. The output quality jumps immediately because the model knows exactly what shape the answer should take.
+And iteration matters more than either. The best prompters I've trained don't write one prompt. They write a first draft, evaluate the output against what they actually need, and adjust. That evaluation skill — knowing what's wrong with the output and being able to articulate why — is the part that can't be templated. It's judgment. And it takes practice.
 
-**3. Context beats cleverness.** Paste in your actual data, your actual constraints, your actual audience. A mediocre prompt with real context outperforms a brilliant prompt with no context every single time.
-
-The Wharton study validated what practitioners have known: the art of prompting isn't about finding magic words. It's about being precise about what you actually need. That's a trainable skill, and most organizations haven't started teaching it.
+The Wharton study validated what practitioners already know. The art of prompting isn't about magic words. It's about being precise about what you actually need. That's a skill most organizations haven't started teaching, and every week they wait, their teams default to "be creative" and wonder why the outputs are mediocre.
 
 ---
 
-*I help enterprise teams navigate AI adoption through [workshops, coaching, and pioneer programs](/services). If your organization is working through these challenges, I would welcome a conversation.*
+*I teach prompt engineering as structured input design in [corporate workshops](/services). If your team is stuck at "be creative," that's a solvable problem.*

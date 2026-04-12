@@ -1,44 +1,32 @@
 
 # When the CEO Learns to Code: What AI Means for Leadership
 
-Y Combinator's Garry Tan recently posted: "This is the age of CEOs crushing 10 people's work with Claude Code in nights and weekends." Naval Ravikant says "the cost of code is coming down, so we will consume more of it." And someone quipped that "the entire Accenture workforce is about to be outperformed by a 24-year-old who learned Claude Code last Tuesday."
+Last Friday, my co-founder Jan-Eric built a working prototype of a client proposal generator. Not by hiring a developer. Not by filing a product request. He sat down with Claude Code for two hours on a Friday afternoon and shipped something that would have taken a sprint planning meeting, a Jira board, and three weeks of back-and-forth a year ago.
 
-These are hyperbolic. But the underlying shift is real, and I see it playing out in my AI for business training every week.
+He's not a developer. He runs an AI training company. But that's exactly the point.
 
-## The Leadership Layer Is Changing
+## The Shift I'm Seeing in Real Time
 
-The executives I train are different from the ones I trained a year ago. A year ago, they wanted to understand AI conceptually -- "what can it do for my team?" Now they want to use it personally. They're asking for hands-on sessions where they build something, not just watch someone else demo it.
+The executives I train are different from the ones I trained a year ago. A year ago, they wanted to understand AI conceptually — "what can it do for my team?" Now they want to use it personally. They're not asking for slides about AI strategy. They're asking me to sit with them while they build something.
 
-When I [trained tourism executives at CTS](/blog/cts-tourism-ai-training), the focus was on strategic thinking -- the 80/20 principle of human-AI collaboration. That was appropriate for mid-2025. But the sessions I'm running now increasingly feature executives who want to prototype their own workflows.
+When I [trained tourism executives at CTS](/blog/cts-tourism-ai-training), the focus was on strategic thinking — the 80/20 principle of human-AI collaboration. That was mid-2025. The sessions I run now increasingly feature executives who want to prototype their own workflows, not just hear about someone else's.
 
-This is the "CEO learns to code" moment, and it changes three things:
+This changes the training dynamic completely. I used to teach from the front. Now I pair-program with C-suite executives who are debugging their own automations. It's the most interesting my work has been in two years.
 
-## 1. Decision Speed Increases
+## The Uncomfortable Part
 
-When a CEO can prototype an idea in an afternoon using AI coding tools, they no longer need to wait for a two-week sprint to see if something works. I've watched executives go from "I think we should build X" to "I built a version of X over the weekend, here's what I learned" in under 48 hours.
+When the CEO is more AI-fluent than the team, it creates a new kind of friction. I've watched it happen: an executive builds a prototype over the weekend, walks into Monday's meeting, and says "why can't the team do what I did in two hours?" The answer is usually that the team hasn't had the same learning runway. The CEO had permission to experiment. The team has a queue.
 
-This compresses the feedback loop from weeks to hours. The implications for organizational speed are enormous.
+This gap is temporary. But it's real and it's frustrating for both sides. When I [taught HKJC's management trainees to think in prompts](/blog/hkjc-mt-ai-training), part of the value was creating a shared language — the same vocabulary for how to talk about AI work, so that a weekend prototype could become a Monday conversation instead of a Monday accusation.
 
-## 2. The Gap Between Leaders and Teams Widens (Temporarily)
+I don't have a clean framework for this yet. The usual advice is "train the team up to the leader's level." That's right but unhelpful. What I'm actually doing in practice is running parallel tracks — a leadership session where the CEO builds, and a team session where the team builds the same thing with more scaffolding. When they compare notes, the CEO gains appreciation for the constraints. The team gains confidence that they can do it too.
 
-Here's the uncomfortable part. When the CEO is more AI-fluent than the team, it creates a new kind of friction. The executive can see what's possible. The team is still struggling with basic prompting. This is exactly why corporate AI training matters more now, not less.
+## What This Means for My Industry
 
-When I [taught HKJC's management trainees to think in prompts](/blog/hkjc-mt-ai-training), the goal was to create a shared language between leaders and their teams. Without that shared fluency, the CEO's weekend prototype becomes a frustration ("why can't the team build what I built in two hours?") instead of an inspiration.
+The AI training market is splitting into two tracks, and I don't think most training companies have noticed. There's workforce training — productivity, workflow integration, prompt basics. And there's leadership training — prototyping, decision-making with AI, capability expansion. These need different formats, different depths, different outcomes.
 
-## 3. "AI Training" Splits Into Two Tracks
-
-The market is bifurcating. There's AI training for the workforce (productivity, workflow integration, prompt basics) and AI training for leadership (strategy, prototyping, decision-making with AI). These require different formats, different depths, and different outcomes.
-
-Workforce training is about efficiency: do what you already do, but faster and better. Leadership training is about capability expansion: do things you couldn't do before.
-
-## What This Means for Your Organization
-
-If your CEO is already using AI tools on weekends, your training priority should be bringing the team up to that level. The strategic advantage of an AI-fluent leader is multiplied when the team can execute at the same speed.
-
-If your leadership team hasn't started yet, that's actually where to begin. An executive who's personally experienced the productivity leap becomes the strongest internal champion for company-wide AI adoption.
-
-Either way, the era of "let the IT department handle AI" is over. AI fluency is becoming a leadership competency, not a technical skill.
+I'm building both simultaneously. Some weeks that feels strategic. Other weeks it feels like I'm spread across too many surfaces. The honest answer is I don't know which track will be more valuable in 18 months. I know which one is more interesting to me right now — watching a non-technical founder build something real in two hours. That moment when they look up from the screen and say "wait, it actually works?" — that's the shift. Everything else is commentary.
 
 ---
 
-*I help enterprise teams navigate AI adoption through [workshops, coaching, and pioneer programs](/services). If your organization is working through these challenges, I would welcome a conversation.*
+*I work with leadership teams and organizations on [practical AI adoption](/services). The best starting point is usually a conversation about what you've already tried.*

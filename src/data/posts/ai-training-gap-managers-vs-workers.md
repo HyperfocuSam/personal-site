@@ -1,46 +1,36 @@
 
 # The AI Training Gap: 70% of Managers Want It, 14% of Workers Get It
 
-Google recently published a stat that stopped me mid-scroll: 70% of managers believe an AI-trained workforce is critical for success, but only 14% of workers have actually been offered AI training. That's not a gap. That's a canyon.
+Google published a stat that stopped me mid-scroll: 70% of managers believe an AI-trained workforce is critical for success, but only 14% of workers have actually been offered AI training.
 
-I've spent the last two years inside that canyon. As a corporate AI trainer who's worked with over 3,000 professionals across banking, jewelry, education, and tourism, I see both sides -- the executives who desperately want AI adoption and the employees who've never been shown what to do with it.
+I've spent two years inside that gap. Not studying it. Living in it. I walk into rooms where the CEO has read three McKinsey reports and the team has never opened an AI tool. The disconnect isn't subtle.
 
-## The Demand Is Real. The Supply Isn't.
+## Who Actually Owns This?
 
-Every company I talk to has the same story. The CEO read something about AI productivity. The board asked about an "AI strategy." Someone in HR got tasked with "making it happen." And then... nothing. Or worse, a one-off webinar that checks a box and changes no behavior.
+The structural problem I see in almost every engagement: nobody owns AI training. HR thinks it's IT's job. IT calls it a "user behavior issue." L&D doesn't have budget. The workforce is left figuring things out from YouTube.
 
-When I [trained 400 educators at HKCT](/blog/hkct-ai-education-workshop), the energy shift was immediate -- people went from skeptical to experimenting in 75 minutes. But that only happened because someone decided to actually invest in structured training, not just circulate a memo about "AI best practices."
+At one company, the IT director told me his team flags any AI tool as a security risk by default. The employees then used personal phones to access ChatGPT anyway — creating the exact data leakage problem IT was trying to prevent. I've seen this pattern at least a dozen times. The blocking doesn't stop AI usage. It just pushes it underground where nobody can govern it.
 
-## Why the Gap Exists
+## The Difference Between Tool Training and Behavior Change
 
-From what I've seen across dozens of engagements, three things consistently block the pipeline:
+This is the part companies keep getting wrong. "AI training" in most organizations means someone shows Copilot features for 90 minutes, gets a 9/10 satisfaction score, and leaves. Three weeks later, nothing has changed.
 
-**1. IT and Legal departments are gatekeeping.** I've seen entire organizations where ChatGPT is blocked on work computers. One IT director told me his team flags any AI tool as a "security risk" by default. The irony is that employees then use personal phones to access AI anyway -- creating the exact data leakage problem IT was trying to prevent.
+When I [ran a 6-session program for Garden Group's HR team](/blog/how-to-design-ai-pioneer-program), the breakthrough wasn't in session two when they learned Copilot. It was in session five when a participant said "I can figure out what to ask" instead of asking me for a prompt list. That shift — from "give me the 100 prompts" to "I can think through this myself" — is what actual training produces. A webinar can't do that.
 
-**2. Nobody owns "AI training."** HR thinks it's IT's job. IT thinks it's a "user behavior" issue. Learning & Development doesn't have budget for it. Meanwhile, the actual workforce is left to figure things out from YouTube tutorials.
+But here's what I don't know yet: whether that shift sticks after month six. Garden is into Batch 3 now. I'm watching. The early signals are good — participants from Batch 1 are teaching colleagues without being asked. But I don't have a year of data. I'm going on pattern recognition, not proof.
 
-**3. Companies conflate "AI training" with "tool training."** Teaching someone which buttons to click in Copilot is not AI training. Real AI training is about changing how people approach work -- how they think about repetitive tasks, how they structure problems, how they evaluate AI output. When I ran a [6-session program for 19 HR professionals at Garden Group](/blog/how-to-design-ai-pioneer-program), the breakthrough wasn't mastering a tool. It was shifting from "tell me the 100 prompts I need" to "I can figure out what to ask."
+## The 84% Number and What It Actually Means
 
-## The 84% Number
+Another stat making rounds: [84% of people have never used AI](/blog/84-percent-never-used-ai). If you're reading this blog, you're almost certainly in the minority. But your colleagues aren't.
 
-Another stat circulating on X: 84% of people have never used AI, and only 0.3% pay for premium AI services. If you're reading this, you're probably in the minority who already uses AI daily. But your colleagues aren't.
+When I [trained 1,500 banking professionals at BOCHK](/blog/bochk-banking-ai-training), most of them had never touched an AI tool before walking in. By the end, they were applying the 70/30 split to their daily work. The gap between "never used" and "productive" is smaller than executives think. But someone has to actually bridge it. A memo from HR doesn't count.
 
-This means there's almost no competition right now. Companies that invest in structured AI training today aren't competing against other AI-fluent organizations. They're competing against organizations that haven't started.
+## What I Keep Coming Back To
 
-When I [trained 1,500 banking professionals at BOCHK](/blog/bochk-banking-ai-training), most of them had never touched an AI tool before walking into the room. By the end, they were applying the 70/30 human-AI split to their daily work. The gap between "never used AI" and "productive with AI" is smaller than most executives think. It just requires someone to actually bridge it.
+Start with 15 willing people, not 200 reluctant ones. Solve the security question before the first session — tier 1, tier 2, tier 3, what's safe and what's off-limits. And stop measuring sessions attended. Measure whether the weekly report takes 15 minutes now instead of 90.
 
-## What Actually Works
-
-Three things I've learned from closing this gap across different industries:
-
-**Start with the willing.** Don't try to train everyone at once. Pick 15-20 early adopters, train them deeply, and let them pull others forward. This is the Pioneer model, and it works in every organization I've tried it in.
-
-**Solve the security question first.** Before you teach a single prompt, get IT to define what's safe. Tier 1 (public info), Tier 2 (internal non-sensitive), Tier 3 (confidential, off-limits to AI). Once people know the boundaries, the fear evaporates.
-
-**Measure time saved, not sessions attended.** Nobody cares how many training hours HR logged. They care that the weekly report now takes 15 minutes instead of 90. Track that.
-
-The 70/14 gap is an opportunity in disguise. The organizations that close it first won't just be more productive -- they'll be the ones setting the standard everyone else scrambles to catch up to.
+The uncomfortable truth about the 70/14 gap is that it's not a resource problem. Most organizations have the budget. They have the tools — Copilot is already bundled with their Microsoft licenses. What they don't have is someone who wakes up in the morning thinking "AI adoption is my job." Until that person exists, the gap holds.
 
 ---
 
-*I help enterprise teams navigate AI adoption through [workshops, coaching, and pioneer programs](/services). If your organization is working through these challenges, I would welcome a conversation.*
+*I run [corporate AI training](/services) focused on behavior change, not demos. If your organization is sitting in this gap, I'd like to hear what's blocking you — [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*
