@@ -1,36 +1,36 @@
 
 # The Skill Formation Problem: Is AI Making Us Worse at Our Jobs?
 
-A research paper circulated on X recently with a finding that should concern every company rushing into AI adoption: AI can negatively impact skill formation. The author argued that every "AI-first" company should make this research available to employees.
+A research paper went around X recently with a finding that should bother every company rushing into AI adoption: AI can negatively impact skill formation. Not skill replacement — that's the headline everyone fears. Skill formation. The quiet version. People never developing the competence in the first place because AI did it for them from day one.
 
-As someone who runs AI safety training and corporate workshops, my first reaction wasn't "AI is dangerous." It was "of course it does -- if you implement it wrong."
+My first reaction wasn't alarm. It was recognition. I see this happening in my own workshops.
 
-## The Real Risk: Outsourcing Thinking
+## What It Looks Like in the Room
 
-The skill formation problem isn't about AI replacing skills. It's about AI preventing people from developing them in the first place. When a junior analyst uses AI to write every report from day one, they never learn the underlying reasoning that makes the report valuable. When a designer uses AI to generate every concept, they never develop the visual intuition that lets them evaluate what's good.
+There's a pattern I've started noticing around session three of a multi-week program. The participants who jumped straight to AI-generated outputs in session one — letting Copilot draft the entire email, accepting the first summary without editing — are less capable by session three than the participants who started slower.
 
-I see this in workshops. Participants who over-rely on AI output without understanding it are less capable than participants who learn to evaluate, edit, and iterate. The AI becomes a crutch instead of a tool.
+The slower group learned what a good summary looks like by writing bad ones first. They developed an eye for when AI output is wrong because they'd done the work manually and knew what "right" felt like. The fast group skipped that calibration entirely. They can generate output. They can't evaluate it.
 
-## The 70/30 Framework
+I don't have a clean study to cite for this — it's pattern recognition from running 180+ sessions. But the researchers are catching up. Anthropic's AI Fluency Index tracked 11 behaviors across thousands of conversations and found that more fluent users don't use AI more. They use it differently. They prompt more precisely, evaluate more critically, and reject more outputs. Fluency isn't about speed. It's about judgment.
 
-This is why I teach the 70/30 human-AI split in every enterprise engagement. When I [trained 1,500 bankers at BOCHK](/blog/bochk-banking-ai-training), we didn't teach people to hand everything to AI. We taught them to use AI for 30% of the task (the repetitive, structural, drafting parts) and keep 70% human (the judgment, context, quality evaluation).
+## Where I Got the Ratio Wrong
 
-The 70/30 isn't a permanent ratio. As you develop expertise, it might shift to 50/50 or even 40/60. But for learners -- people still building core skills -- keeping the human percentage high is essential.
+I've been teaching the [70/30 human-AI split](/blog/bochk-banking-ai-training) for over a year now. The idea: use AI for the repetitive structural parts (30%) and keep human judgment for the rest (70%). For experienced professionals, this works. It accelerates without undermining.
 
-## What Responsible AI Training Looks Like
+But I've been applying the same ratio to learners, and I think that's a mistake. A junior analyst who uses AI to draft 30% of their first-ever report is skipping the part where they learn what makes a report coherent. A design intern who generates concepts with AI never develops the visual intuition to evaluate what's actually good.
 
-**1. Teach evaluation before generation.** Before showing anyone how to prompt, teach them how to spot when AI output is wrong. Critical evaluation is the meta-skill that prevents the deskilling problem.
+For learners, the ratio should probably be closer to 90/10 — maybe even 95/5. AI as a checker, not a creator. Build the foundation first, then gradually shift the ratio as competence develops. I haven't formalized this into a framework yet. I'm still working out where the breakpoints are. But the principle feels right: the less experience you have, the more you need to do manually before AI becomes helpful rather than harmful.
 
-**2. Require manual work first.** At [HKCT, where I trained 400 educators](/blog/hkct-ai-education-workshop), many were worried AI would make students stop learning. The answer isn't banning AI. It's requiring students to understand the fundamentals before they're allowed to accelerate with AI. The same principle applies in corporate settings.
+## The Part Nobody Wants to Hear
 
-**3. AI as a pair, not a replacement.** Frame AI as a collaborator that challenges your thinking, not a machine that does your thinking. When you ask AI to draft a report, don't accept the first output. Push back. Ask it to defend its recommendations. Treat the interaction as a conversation, not a transaction.
+The skill formation problem isn't going to be solved by better AI tools or smarter prompts. It's a training design problem. And most organizations aren't designing for it at all.
 
-## The Anthropic Fluency Index
+When I [trained 400 educators at HKCT](/blog/hkct-ai-education-workshop), the fear in the room was that AI would make students stop learning. The teachers weren't wrong to worry. They were wrong about the solution — banning AI doesn't work any better than banning calculators did. What works is requiring the manual work first, then introducing AI as acceleration.
 
-Anthropic recently published their AI Fluency Index, tracking 11 behaviors across thousands of conversations. The finding that stood out: more fluent users don't use AI more. They use it differently. They prompt more precisely, evaluate more critically, and reject more outputs.
+The same applies in corporate settings. Teach evaluation before generation. Make people write the first draft themselves before asking AI to improve it. Frame AI as something that challenges your thinking, not something that replaces it.
 
-That's the goal of responsible AI safety training. Not to make people dependent on AI, but to make them better collaborators with it. The skill formation problem is real, but it's a training design problem, not an AI problem.
+The irony is that making people better at working with AI requires making them do more work without AI first. That's a harder sell than "AI will make you 10x faster." But it's the version that actually holds up six months later.
 
 ---
 
-*I help enterprise teams navigate AI adoption through [workshops, coaching, and pioneer programs](/services). If your organization is working through these challenges, I would welcome a conversation.*
+*If your team is navigating this tension — wanting AI speed without losing the skills underneath — that's exactly what my [training programs](/services) are designed for.*

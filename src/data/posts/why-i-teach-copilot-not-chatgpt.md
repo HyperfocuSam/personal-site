@@ -39,4 +39,4 @@ As an AI workshop facilitator, my job isn't to show people the most impressive A
 
 ---
 
-*I help enterprise teams navigate AI adoption through [workshops, coaching, and pioneer programs](/services). If your organization is working through these challenges, I would welcome a conversation.*
+*The tool question matters less than the adoption question. If your team has licenses nobody uses, [that's where I start](/services).*

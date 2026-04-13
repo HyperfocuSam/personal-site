@@ -72,6 +72,3 @@ We are two shapes, reaching. The gap is real. And we keep showing up at the edge
 
 *I share reflections on AI adoption and the human side of technology on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/). If this resonated, I'd like to hear from you.*
 
----
-
-*I help enterprise teams navigate AI adoption through [workshops, coaching, and pioneer programs](/services). If your organization is working through these challenges, I would welcome a conversation.*

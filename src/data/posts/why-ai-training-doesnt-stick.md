@@ -94,4 +94,4 @@ The companies that win the AI adoption race won't be the ones that trained the m
 
 ---
 
-*I design and deliver [corporate AI training programs](/services) that focus on lasting behavior change, not one-off demos. If your organization is navigating AI adoption, see my full range of [training services](/corporate-ai-training-hong-kong) or connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*
+*I've spent two years figuring out what makes AI training actually stick. If your team tried a workshop and nothing changed, [that's the conversation I want to have](/contact).*

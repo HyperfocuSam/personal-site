@@ -47,4 +47,4 @@ Don't wait until you're at Stage 4 to start. Map your hard problems now. The AI 
 
 ---
 
-*I help enterprise teams navigate AI adoption through [workshops, coaching, and pioneer programs](/services). If your organization is working through these challenges, I would welcome a conversation.*
+*Most companies I work with are at Stage 1. The ones that move are the ones that [appoint someone to own it](/services).*

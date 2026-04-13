@@ -54,4 +54,4 @@ As an AI trainer in Hong Kong, my job is to send people back to their desks with
 
 ---
 
-*I help enterprise teams navigate AI adoption through [workshops, coaching, and pioneer programs](/services). If your organization is working through these challenges, I would welcome a conversation.*
+*This stack changes every quarter. The frameworks for choosing don't. That's what I [teach in workshops](/services).*

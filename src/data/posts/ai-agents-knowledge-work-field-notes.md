@@ -39,4 +39,4 @@ The agents are coming. But the organizations that benefit first won't be the one
 
 ---
 
-*I help enterprise teams navigate AI adoption through [workshops, coaching, and pioneer programs](/services). If your organization is working through these challenges, I would welcome a conversation.*
+*I built a [multi-agent system that runs my business](/blog/claude-code-mastery-part-5-full-blueprint). I also train enterprises on AI adoption. The gap between those two worlds is what I write about.*
