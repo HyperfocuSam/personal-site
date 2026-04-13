@@ -5,6 +5,16 @@
 // linkedPost: slug of the corresponding post in another language (for hreflang)
 const posts = [
   {
+    slug: 'i-audited-my-ai-blog-it-was-slop',
+    title: 'I Audited My AI-Managed Blog. Half the Posts Were Slop.',
+    date: '2026-04-13',
+    excerpt: 'I teach people to evaluate AI output critically. Then I read my own blog and found five posts with the same three-point structure, the same filler transitions, and the same closing. Here is what I changed.',
+    tags: ['claude-code', 'automation', 'content-strategy', 'personal-productivity'],
+    type: 'reflection',
+    image: '/images/blog/my-blog-publishes-itself-silent-death-cover.png',
+    featured: true,
+  },
+  {
     slug: 'my-blog-publishes-itself-silent-death',
     title: 'My Blog Publishes Itself. It Died Silent for 3 Weeks.',
     date: '2026-04-12',
