@@ -5,6 +5,16 @@
 // linkedPost: slug of the corresponding post in another language (for hreflang)
 const posts = [
   {
+    slug: 'when-a-school-commits-to-24-months-of-ai',
+    title: 'What Happens When a School Commits to 24 Months of AI Training',
+    date: '2026-04-13',
+    excerpt: 'Last April I trained 400 educators in 75 minutes. Then HKCT came back for a 24-month AI Learning Community — and mandated NotebookLM for all students and staff by September.',
+    tags: ['workshop', 'case-study', 'education', 'ai-adoption'],
+    type: 'case-study',
+    image: '/images/blog/hkct-ai-workshop.webp',
+    featured: true,
+  },
+  {
     slug: 'i-audited-my-ai-blog-it-was-slop',
     title: 'I Audited My AI-Managed Blog. Half the Posts Were Slop.',
     date: '2026-04-13',
