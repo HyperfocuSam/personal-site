@@ -5,6 +5,16 @@
 // linkedPost: slug of the corresponding post in another language (for hreflang)
 const posts = [
   {
+    slug: 'hong-kong-ai-disadvantage-is-advantage',
+    title: 'Why Hong Kong\'s AI Disadvantage Is Actually an Advantage',
+    date: '2026-04-13',
+    excerpt: 'I trained 120 CEOs in LA who couldn\'t copy and paste. Hong Kong\'s tech literacy is higher than people think. The real gap isn\'t VPNs — it\'s information lag and the Cantonese blind spot.',
+    tags: ['ai-adoption', 'hong-kong', 'insight', 'personal-branding'],
+    type: 'insight',
+    image: '/images/blog/hkct-ai-workshop.webp',
+    featured: true,
+  },
+  {
     slug: 'when-a-school-commits-to-24-months-of-ai',
     title: 'What Happens When a School Commits to 24 Months of AI Training',
     date: '2026-04-13',
