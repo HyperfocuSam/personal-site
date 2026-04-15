@@ -6,7 +6,28 @@
     <description>AI adoption insights, workshop reflections, and practical AI training tips from Sam Wong.</description>
     <language>en</language>
     <atom:link href="https://hyperfocusam.com/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sun, 12 Apr 2026 14:29:08 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 13 Apr 2026 01:59:20 GMT</lastBuildDate>
+    <item>
+      <title>Why Hong Kong's AI Disadvantage Is Actually an Advantage</title>
+      <link>https://hyperfocusam.com/blog/hong-kong-ai-disadvantage-is-advantage/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/hong-kong-ai-disadvantage-is-advantage/</guid>
+      <description>I trained 120 CEOs in LA who couldn't copy and paste. Hong Kong's tech literacy is higher than people think. The real gap isn't VPNs — it's information lag and the Cantonese blind spot.</description>
+      <pubDate>Mon, 13 Apr 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>What Happens When a School Commits to 24 Months of AI Training</title>
+      <link>https://hyperfocusam.com/blog/when-a-school-commits-to-24-months-of-ai/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/when-a-school-commits-to-24-months-of-ai/</guid>
+      <description>Last April I trained 400 educators in 75 minutes. Then HKCT came back for a 24-month AI Learning Community — and mandated NotebookLM for all students and staff by September.</description>
+      <pubDate>Mon, 13 Apr 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>I Audited My AI-Managed Blog. Half the Posts Were Slop.</title>
+      <link>https://hyperfocusam.com/blog/i-audited-my-ai-blog-it-was-slop/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/i-audited-my-ai-blog-it-was-slop/</guid>
+      <description>I teach people to evaluate AI output critically. Then I read my own blog and found five posts with the same three-point structure, the same filler transitions, and the same closing. Here is what I changed.</description>
+      <pubDate>Mon, 13 Apr 2026 00:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>My Blog Publishes Itself. It Died Silent for 3 Weeks.</title>
       <link>https://hyperfocusam.com/blog/my-blog-publishes-itself-silent-death/</link>

@@ -5,6 +5,27 @@
 // linkedPost: slug of the corresponding post in another language (for hreflang)
 const posts = [
   {
+    slug: 'garden-ai-training-three-batches',
+    title: 'I\'ve Now Run AI Workshops for the Same Company Three Times. The Third Batch Is Nothing Like the First.',
+    date: '2026-04-13',
+    excerpt: 'I\'ve been training at Garden since January: HR, then Sales & Marketing, now Operations. The third batch required a 120-row fake production dataset and 26 new prompts. Nothing from Batch 1 transferred.',
+    tags: ['corporate-training', 'ai-adoption', 'workshop-design', 'case-study'],
+    type: 'case-study',
+    featured: false,
+    linkedPost: 'garden-ai-training-three-batches-tc',
+  },
+  {
+    slug: 'garden-ai-training-three-batches-tc',
+    title: '在同一家公司辦了三輪 AI 工作坊之後',
+    date: '2026-04-13',
+    excerpt: '自一月起，我在 Garden 持續提供培訓：HR、市場銷售部，現在是運營部。第三輪要求我從零建立 120 行虛構生產數據集和 26 個全新提示詞。第一輪的內容一張也沒有重用。',
+    tags: ['corporate-training', 'ai-adoption', 'workshop-design', 'case-study'],
+    type: 'case-study',
+    language: 'zh-Hant',
+    featured: false,
+    linkedPost: 'garden-ai-training-three-batches',
+  },
+  {
     slug: 'hong-kong-ai-disadvantage-is-advantage',
     title: 'Why Hong Kong\'s AI Disadvantage Is Actually an Advantage',
     date: '2026-04-13',
