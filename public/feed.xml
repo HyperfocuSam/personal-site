@@ -6,7 +6,35 @@
     <description>AI adoption insights, workshop reflections, and practical AI training tips from Sam Wong.</description>
     <language>en</language>
     <atom:link href="https://hyperfocusam.com/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon, 13 Apr 2026 01:59:20 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 08 May 2026 01:21:13 GMT</lastBuildDate>
+    <item>
+      <title>How to Prep for a Job Interview Using AI in 30 Minutes</title>
+      <link>https://hyperfocusam.com/blog/prep-job-interview-ai-30-minutes/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/prep-job-interview-ai-30-minutes/</guid>
+      <description>A 30-minute AI loop for prepping a job interview — NotebookLM podcasts of your CV, then the company, then a recorded ChatGPT voice-mode mock interview.</description>
+      <pubDate>Mon, 04 May 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>用 AI 三十分鐘準備求職面試</title>
+      <link>https://hyperfocusam.com/blog/prep-job-interview-ai-30-minutes-tc/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/prep-job-interview-ai-30-minutes-tc/</guid>
+      <description>三十分鐘的 AI 循環流程：以 NotebookLM 生成履歷 Podcast，加入招聘廣告重新生成，再以 ChatGPT 語音模式做模擬面試並錄音回傳。</description>
+      <pubDate>Mon, 04 May 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>I've Now Run AI Workshops for the Same Company Three Times. The Third Batch Is Nothing Like the First.</title>
+      <link>https://hyperfocusam.com/blog/garden-ai-training-three-batches/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/garden-ai-training-three-batches/</guid>
+      <description>I've been training at Garden since January: HR, then Sales &amp; Marketing, now Operations. The third batch required a 120-row fake production dataset and 26 new prompts. Nothing from Batch 1 transferred.</description>
+      <pubDate>Mon, 13 Apr 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>在同一家公司辦了三輪 AI 工作坊之後</title>
+      <link>https://hyperfocusam.com/blog/garden-ai-training-three-batches-tc/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/garden-ai-training-three-batches-tc/</guid>
+      <description>自一月起，我在 Garden 持續提供培訓：HR、市場銷售部，現在是運營部。第三輪要求我從零建立 120 行虛構生產數據集和 26 個全新提示詞。第一輪的內容一張也沒有重用。</description>
+      <pubDate>Mon, 13 Apr 2026 00:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>Why Hong Kong's AI Disadvantage Is Actually an Advantage</title>
       <link>https://hyperfocusam.com/blog/hong-kong-ai-disadvantage-is-advantage/</link>

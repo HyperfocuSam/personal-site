@@ -5,6 +5,27 @@
 // linkedPost: slug of the corresponding post in another language (for hreflang)
 const posts = [
   {
+    slug: 'prep-job-interview-ai-30-minutes',
+    title: 'How to Prep for a Job Interview Using AI in 30 Minutes',
+    date: '2026-05-04',
+    excerpt: 'A 30-minute AI loop for prepping a job interview — NotebookLM podcasts of your CV, then the company, then a recorded ChatGPT voice-mode mock interview.',
+    tags: ['ai-adoption', 'personal-productivity', 'job-interview', 'notebooklm'],
+    type: 'methodology',
+    featured: false,
+    linkedPost: 'prep-job-interview-ai-30-minutes-tc',
+  },
+  {
+    slug: 'prep-job-interview-ai-30-minutes-tc',
+    title: '用 AI 三十分鐘準備求職面試',
+    date: '2026-05-04',
+    excerpt: '三十分鐘的 AI 循環流程：以 NotebookLM 生成履歷 Podcast，加入招聘廣告重新生成，再以 ChatGPT 語音模式做模擬面試並錄音回傳。',
+    tags: ['ai-adoption', 'personal-productivity', 'job-interview', 'notebooklm'],
+    type: 'methodology',
+    language: 'zh-Hant',
+    featured: false,
+    linkedPost: 'prep-job-interview-ai-30-minutes',
+  },
+  {
     slug: 'garden-ai-training-three-batches',
     title: 'I\'ve Now Run AI Workshops for the Same Company Three Times. The Third Batch Is Nothing Like the First.',
     date: '2026-04-13',
