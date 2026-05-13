@@ -17,22 +17,6 @@ const routes = [
     path: '/blog',
   },
   {
-    label: 'Projects',
-    path: '/projects',
-  },
-  {
-    label: 'Media',
-    path: '/media',
-  },
-  {
-    label: 'Clients',
-    path: '/clients',
-  },
-  {
-    label: 'Testimonials',
-    path: '/testimonials',
-  },
-  {
     label: 'Book',
     path: '/book',
   },
