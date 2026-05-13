@@ -307,6 +307,56 @@ const About = () => (
         <script type="application/ld+json">
           {JSON.stringify({
             '@context': 'https://schema.org',
+            '@type': 'Person',
+            name: 'Sam Wong',
+            alternateName: ['Samuel Wong', 'HyperfocuSam'],
+            url: 'https://hyperfocusam.com/about',
+            image: 'https://hyperfocusam.com/images/Sam.png',
+            jobTitle: 'AI Training Specialist',
+            worksFor: [
+              { '@type': 'Organization', name: 'Adaptig', url: 'https://adaptig.ai' },
+              { '@type': 'Organization', name: 'DotAI', url: 'https://dotai.hk' },
+            ],
+            alumniOf: {
+              '@type': 'CollegeOrUniversity',
+              name: 'The Chinese University of Hong Kong',
+            },
+            hasCredential: [{
+              '@type': 'EducationalOccupationalCredential',
+              credentialCategory: 'degree',
+              educationalLevel: 'Master of Arts',
+              about: 'Public & Comparative History (records management and knowledge systems)',
+              recognizedBy: {
+                '@type': 'CollegeOrUniversity',
+                name: 'The Chinese University of Hong Kong',
+              },
+            }],
+            hasOccupation: {
+              '@type': 'Occupation',
+              name: 'Corporate AI Training Specialist',
+              occupationLocation: { '@type': 'City', name: 'Hong Kong' },
+              skills: 'Generative AI adoption, Microsoft Copilot training, ChatGPT for enterprise, AI workshop facilitation, change management, Train-the-Trainer programs, prompt engineering, behavior change',
+            },
+            knowsAbout: [
+              'Generative AI', 'ChatGPT', 'Microsoft Copilot', 'AI adoption',
+              'Corporate training', 'Change management', 'Workshop facilitation',
+              'Train-the-Trainer', 'Prompt engineering', 'Behavior change',
+              'Traffic Light Protocol', 'AI Pioneer Model', 'AI Maturity Model',
+              'ACE Framework', 'C-How Thinking', '70/30 Human-AI Split',
+            ],
+            knowsLanguage: ['English', 'Cantonese', 'Mandarin'],
+            sameAs: [
+              'https://www.linkedin.com/in/sam-ai-agent/',
+              'https://x.com/HyperfocuSam',
+              'https://github.com/HyperfocuSam',
+              'https://www.threads.net/@sam_ai_cbo',
+            ],
+            description: 'Hong Kong-based AI training specialist. 9,462+ professionals trained across 66+ organizations in 12 countries on practical AI adoption that changes behavior, not just builds awareness.',
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
             '@type': 'FAQPage',
             mainEntity: [
               {
@@ -314,7 +364,7 @@ const About = () => (
                 name: 'Who is Sam Wong?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Sam Wong is an AI training specialist based in Hong Kong who has trained over 10,000 professionals across 70+ organizations. He co-founded Adaptig, a global AI trainer network spanning four continents. He focuses on practical, human-first AI adoption that changes behavior, not just builds awareness.',
+                  text: 'Sam Wong is an AI training specialist based in Hong Kong who has trained 9,462+ professionals across 66+ organizations. He co-founded Adaptig, a global AI trainer network spanning four continents. He focuses on practical, human-first AI adoption that changes behavior, not just builds awareness.',
                 },
               },
               {
