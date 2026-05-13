@@ -6,7 +6,21 @@
     <description>AI adoption insights, workshop reflections, and practical AI training tips from Sam Wong.</description>
     <language>en</language>
     <atom:link href="https://hyperfocusam.com/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Fri, 08 May 2026 01:21:13 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 13 May 2026 07:58:52 GMT</lastBuildDate>
+    <item>
+      <title>Plus, Minus, Multiply, Divide: A Cheat Sheet for Teaching Copilot</title>
+      <link>https://hyperfocusam.com/blog/plus-minus-multiply-divide-copilot-framework/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/plus-minus-multiply-divide-copilot-framework/</guid>
+      <description>I rewrote a finance Copilot workshop at 1am and reorganised it around four arithmetic moves. The framework outlasted the panic.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>加、減、乘、除：教 Copilot 的速查表</title>
+      <link>https://hyperfocusam.com/blog/plus-minus-multiply-divide-copilot-framework-tc/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/plus-minus-multiply-divide-copilot-framework-tc/</guid>
+      <description>工作坊前一晚凌晨一點，我把剛做完的簡報扔了，按加、減、乘、除四則運算重新組合。框架撐過了那次恐慌，通常這代表它有點承重能力。</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>How to Prep for a Job Interview Using AI in 30 Minutes</title>
       <link>https://hyperfocusam.com/blog/prep-job-interview-ai-30-minutes/</link>

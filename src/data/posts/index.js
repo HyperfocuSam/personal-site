@@ -5,6 +5,27 @@
 // linkedPost: slug of the corresponding post in another language (for hreflang)
 const posts = [
   {
+    slug: 'plus-minus-multiply-divide-copilot-framework',
+    title: 'Plus, Minus, Multiply, Divide: A Cheat Sheet for Teaching Copilot',
+    date: '2026-05-11',
+    excerpt: 'I rewrote a finance Copilot workshop at 1am and reorganised it around four arithmetic moves. The framework outlasted the panic.',
+    tags: ['copilot', 'ai-training', 'framework', 'corporate-training', 'methodology'],
+    type: 'methodology',
+    featured: false,
+    linkedPost: 'plus-minus-multiply-divide-copilot-framework-tc',
+  },
+  {
+    slug: 'plus-minus-multiply-divide-copilot-framework-tc',
+    title: '加、減、乘、除：教 Copilot 的速查表',
+    date: '2026-05-11',
+    excerpt: '工作坊前一晚凌晨一點，我把剛做完的簡報扔了，按加、減、乘、除四則運算重新組合。框架撐過了那次恐慌，通常這代表它有點承重能力。',
+    tags: ['copilot', 'ai-培訓', '框架', '企業培訓', '方法論'],
+    type: 'methodology',
+    language: 'zh-Hant',
+    featured: false,
+    linkedPost: 'plus-minus-multiply-divide-copilot-framework',
+  },
+  {
     slug: 'prep-job-interview-ai-30-minutes',
     title: 'How to Prep for a Job Interview Using AI in 30 Minutes',
     date: '2026-05-04',

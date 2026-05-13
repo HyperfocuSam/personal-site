@@ -65,6 +65,7 @@ Sam Wong is an AI training specialist who has trained over 10,000 professionals 
 
 ### Methodologies & Frameworks
 
+- [Plus, Minus, Multiply, Divide: A Cheat Sheet for Teaching Copilot](https://hyperfocusam.com/blog/plus-minus-multiply-divide-copilot-framework/) (2026-05-11) — I rewrote a finance Copilot workshop at 1am and reorganised it around four arithmetic moves. The framework outlasted the panic.
 - [How to Prep for a Job Interview Using AI in 30 Minutes](https://hyperfocusam.com/blog/prep-job-interview-ai-30-minutes/) (2026-05-04) — A 30-minute AI loop for prepping a job interview — NotebookLM podcasts of your CV, then the company, then a recorded ChatGPT voice-mode mock interview.
 - [AI Change Management: What Actually Works (A Field Report From 70+ Organizations)](https://hyperfocusam.com/blog/ai-change-management-what-actually-works/) (2026-03-23) — Most companies approach AI adoption like a software rollout. After training 3,000+ professionals across 70+ organizations, here is what actually drives lasting behavior change.
 - [Claude Code Mastery: Agent Teams & Automation — Your AI Workforce](https://hyperfocusam.com/blog/claude-code-mastery-part-4-agent-teams/) (2026-03-21) — I have 9 AI agents running 7 cron jobs. My blog publishes itself every Monday. Here is the full agent team architecture — delegation rules, parallel execution, and cost-aware model selection.
@@ -119,6 +120,7 @@ Sam Wong is an AI training specialist who has trained over 10,000 professionals 
 
 ### Chinese (Traditional) Articles
 
+- [加、減、乘、除：教 Copilot 的速查表](https://hyperfocusam.com/blog/plus-minus-multiply-divide-copilot-framework-tc/) (2026-05-11) — 工作坊前一晚凌晨一點，我把剛做完的簡報扔了，按加、減、乘、除四則運算重新組合。框架撐過了那次恐慌，通常這代表它有點承重能力。
 - [用 AI 三十分鐘準備求職面試](https://hyperfocusam.com/blog/prep-job-interview-ai-30-minutes-tc/) (2026-05-04) — 三十分鐘的 AI 循環流程：以 NotebookLM 生成履歷 Podcast，加入招聘廣告重新生成，再以 ChatGPT 語音模式做模擬面試並錄音回傳。
 - [在同一家公司辦了三輪 AI 工作坊之後](https://hyperfocusam.com/blog/garden-ai-training-three-batches-tc/) (2026-04-13) — 自一月起，我在 Garden 持續提供培訓：HR、市場銷售部，現在是運營部。第三輪要求我從零建立 120 行虛構生產數據集和 26 個全新提示詞。第一輪的內容一張也沒有重用。
 - [我的部落格自動發佈文章。然後悄無聲息地停擺了三星期。](https://hyperfocusam.com/blog/my-blog-publishes-itself-silent-death-tc/) (2026-04-12) — 我建立了一條自動化 AI 內容管線。運行數月，發佈了 47 篇文章，然後悄然停擺三週。退出碼 0。無警報。以下是出了什麼問題，以及我現在遵循的三個原則。
