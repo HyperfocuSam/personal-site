@@ -49,11 +49,13 @@ describe('renders the app', () => {
   // Navigation tests — use href-based selectors instead of :nth-child so
   // the tests don't break when the nav is reordered. Title assertions match
   // on the route name case-insensitively instead of exact strings.
+  // Mirrors src/data/routes.js (non-index entries that render inside
+  // `nav.links`). `/book` lives in its own `.nav-cta` block, not `nav.links`,
+  // so it's covered by the CTA's own test surface rather than here.
   const navRoutes = [
     { path: '/about', titlePattern: /about/i },
     { path: '/services', titlePattern: /services/i },
     { path: '/blog', titlePattern: /blog/i },
-    { path: '/clients', titlePattern: /clients/i },
     { path: '/contact', titlePattern: /contact/i },
   ];
 
