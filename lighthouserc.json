@@ -3,8 +3,8 @@
     "collect": {
       "staticDistDir": "./build",
       "url": [
-        "http://localhost/index.html",
-        "http://localhost/blog/index.html"
+        "http://localhost/",
+        "http://localhost/blog/"
       ],
       "numberOfRuns": 1,
       "settings": {

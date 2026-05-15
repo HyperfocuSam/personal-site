@@ -16,7 +16,10 @@
   }
 
   p {
-    color: _palette(text-secondary);
+    // Was _palette(text-secondary) = #8a8a8a — fails WCAG AA contrast (3.3:1)
+    // against the #fafaf9 background. Local override to #595959 lifts contrast
+    // to ~7:1. Fix landed 2026-05-15 after the first Lighthouse baseline run.
+    color: #595959;
     font-size: 1.1rem;
   }
 
