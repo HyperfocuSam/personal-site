@@ -32,10 +32,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Security: referrer policy (meta tag form — works on all browsers).
-         GitHub Pages does not support custom HTTP headers, so the other
-         security headers (HSTS, CSP, X-Frame-Options) require Cloudflare
-         proxy in front of the custom domain. Tracked as a follow-up. -->
+    <!-- Security headers — meta-tag form (gh-pages doesn't support custom HTTP
+         headers). Only `Content-Security-Policy` and `referrer` are honoured
+         in meta; HSTS, X-Frame-Options, Permissions-Policy are HTTP-only and
+         still need a Cloudflare proxy (see output/HYPERFOCUSAM-Header-Strategy-Memo).
+         `frame-ancestors` is ignored when CSP is meta-served — kept for parity
+         with the eventual HTTP-header rollout.
+         Allow-list: GA (googletagmanager + google-analytics) + PostHog +
+         Google Fonts (CSS at fonts.googleapis.com, files at fonts.gstatic.com).
+         `unsafe-inline` is required because the inline analytics bootstrap
+         above creates <script> nodes at runtime; tightening would require
+         nonces threaded through the CRA build. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://*.googletagmanager.com https://us-assets.i.posthog.com https://*.posthog.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://us.i.posthog.com https://us-assets.i.posthog.com https://*.posthog.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
 
     <!-- Primary Meta Tags (title + description managed per-page by react-helmet-async) -->
