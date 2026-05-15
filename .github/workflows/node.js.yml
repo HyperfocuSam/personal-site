@@ -79,10 +79,13 @@ jobs:
 
       - name: Lighthouse CI
         # Baseline performance + a11y + SEO budget. Asserts in lighthouserc.json.
-        # Uploads HTML reports to temporary-public-storage (7-day retention).
-        # warn-only on perf so a slow runner doesn't block deploys; error on
-        # a11y + CLS + SEO (those are deterministic).
+        # Uploads HTML reports to temporary-public-storage (7-day retention) so
+        # the run summary links to a viewable report. warn-only on perf so a
+        # slow runner doesn't block deploys; error on a11y + CLS + SEO (those
+        # are deterministic). treosh's `temporaryPublicStorage` action input is
+        # separate from the `upload.target` field inside lighthouserc.json.
         uses: treosh/lighthouse-ci-action@v12
         with:
           configPath: ./lighthouserc.json
+          temporaryPublicStorage: true
         continue-on-error: true
