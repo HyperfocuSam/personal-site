@@ -137,7 +137,7 @@ const Post = () => {
 
   const articleJsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
+    '@type': 'BlogPosting',
     headline: post.title,
     description: post.excerpt,
     author: { '@type': 'Person', name: 'Sam Wong', url: SITE_URL },
