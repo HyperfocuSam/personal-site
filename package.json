@@ -69,6 +69,7 @@
     ]
   },
   "reactSnap": {
+    "include": ["/", "/resume"],
     "skipThirdPartyRequests": true,
     "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"],
     "minifyHtml": {

@@ -5,6 +5,27 @@
 // linkedPost: slug of the corresponding post in another language (for hreflang)
 const posts = [
   {
+    slug: 'three-gemini-tools-collapsed-into-one-prompt-today',
+    title: 'Three Gemini Tools Collapsed Into One Prompt Today',
+    date: '2026-05-20',
+    excerpt: 'Google shipped Gemini Omni at I/O 2026 — Veo, Nano Banana, and Genie folded into one multimodal prompt surface. Three of my daily Gemini calls collapse into one. Day one read, API still weeks out, the consolidation thesis lands.',
+    tags: ['gemini', 'multimodal-ai', 'ai-tools', 'corporate-training', 'hot-take'],
+    type: 'insight',
+    featured: false,
+    linkedPost: 'three-gemini-tools-collapsed-into-one-prompt-today-tc',
+  },
+  {
+    slug: 'three-gemini-tools-collapsed-into-one-prompt-today-tc',
+    title: '今日,我三個 Gemini tab 收埋成一個 prompt',
+    date: '2026-05-20',
+    excerpt: 'Google 今早在 I/O 2026 發布 Gemini Omni —— 將 Veo、Nano Banana 與 Genie 折疊進單一個 multimodal prompt surface。我日常使用的三個 Gemini call 收歸為一個。Day one read,API 還需數週才開放,但整合論述終於落地。',
+    tags: ['gemini', '多模態-ai', 'ai-工具', '企業培訓', '即時觀察'],
+    type: 'insight',
+    language: 'zh-Hant',
+    featured: false,
+    linkedPost: 'three-gemini-tools-collapsed-into-one-prompt-today',
+  },
+  {
     slug: 'plus-minus-multiply-divide-copilot-framework',
     title: 'Plus, Minus, Multiply, Divide: A Cheat Sheet for Teaching Copilot',
     date: '2026-05-11',

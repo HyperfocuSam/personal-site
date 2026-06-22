@@ -79,10 +79,16 @@ const Blog = () => {
     ? posts
     : posts.filter((p) => (p.language || 'en') === langFilter);
 
-  const featuredPost = filteredPosts.find((post) => post.featured);
-  const blogPosts = filteredPosts.filter(
-    (p) => !p.featured && p.type !== 'case-study',
+  // Always sort newest-first so the listing reflects recency, not array order
+  const sortedPosts = [...filteredPosts].sort(
+    (a, b) => dayjs(b.date).valueOf() - dayjs(a.date).valueOf(),
   );
+
+  // Feature the most recent post so the hero never looks stale
+  const featuredPost = sortedPosts[0];
+  const blogPosts = sortedPosts
+    .slice(1)
+    .filter((p) => p.type !== 'case-study');
 
   return (
     <Main
