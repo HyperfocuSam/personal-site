@@ -83,7 +83,6 @@ Sam Wong is an AI training specialist who has trained 9,462+ professionals acros
 - 170+ workshops delivered
 - 66+ organizations served
 - 12 countries reached
-- 7.9/10 average satisfaction rating
 - Bank of China (Hong Kong): 1,530 participants across 13 countries
 - Chow Tai Fook: Three repeat engagements
 - 160+ one-on-one coaching sessions delivered
@@ -162,7 +161,6 @@ Sam Wong is an AI training specialist who has trained 9,462+ professionals acros
 - 170+ workshops delivered
 - 66+ organizations served
 - 12 countries reached
-- 7.9/10 average satisfaction rating
 - Bank of China (Hong Kong): 1,530 participants across 13 countries
 - Chow Tai Fook: 3 repeat engagements
 - 160+ one-on-one coaching sessions
