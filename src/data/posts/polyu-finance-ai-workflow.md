@@ -44,7 +44,7 @@ By the later sessions, the questions had changed: "Could we apply this to our qu
 
 The team had shifted from thinking about AI as a tool they were using to thinking about their workflows as systems they could optimize. They weren't just adopting AI - they were becoming process designers.
 
-One team member started documenting prompt templates for common finance tasks. Another began mapping which processes could benefit from automation. This self-directed exploration is what sustainable adoption looks like.
+One team member started documenting prompt templates for common finance tasks. Another began mapping which processes could benefit from automation. This self-directed exploration is what [sustainable adoption](/blog/how-to-design-ai-pioneer-program) looks like.
 
 ## The Takeaway
 
@@ -52,7 +52,7 @@ AI adoption in regulated environments requires a different playbook than generic
 
 Start with strategy, not tools. Establish clear principles that respect institutional constraints. Then design workflows that meet those principles - rather than retrofitting compliance onto exciting demos.
 
-The ACE framework was specific to PolyU's Finance Office, but the approach generalizes: understand your non-negotiables first, then find where AI can operate within them. That's how you build something that lasts beyond the training session.
+The ACE framework was specific to PolyU's Finance Office, but the approach generalizes: understand your non-negotiables first, then find where AI can operate within them. That's how you [build something that lasts beyond the training session](/blog/why-ai-training-doesnt-stick).
 
 ---
 

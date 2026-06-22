@@ -40,7 +40,7 @@ AI 通常會俾你一個分數系統、里程碑、同獎勵機制。重點係�
 
 **點樣用得更好：** 叫佢做一個全日挑戰，唔好淨係做一次。「Gamify my workday: I need to complete these 5 tasks by 6pm」 俾到你成日都有嘢 play。加埋罰則會更加有效。
 
-我自己將呢個概念推到盡，喺我既 AI 工作流程上面起左一個真正既 gamification 系統——每個任務有 XP、技能會升 level、有 combo。聽落好癲，但對 ADHD 既腦嚟講，持續既 feedback 真係會改變行為。Prompt 版本係一個輕量版，作為起步已經好有用。
+我自己將呢個概念推到盡，[喺我既 AI 工作流程上面起左一個真正既 gamification 系統](/blog/zh-chillpo-how-i-talk-to-ai)——每個任務有 XP、技能會升 level、有 combo。聽落好癲，但對 ADHD 既腦嚟講，持續既 feedback 真係會改變行為。Prompt 版本係一個輕量版，作為起步已經好有用。
 
 ## 4. 搵人踢你一腳
 
@@ -68,7 +68,7 @@ AI 可能會指出你避開呢個任務係因為你未有齊所有資料、或�
 
 ## 令呢啲 Prompt 真正 Work
 
-學識一個 productivity 技巧唔難。難係喺你真正拖延緊既時候記得用佢。你唔會喺避緊嘢做既時候忽然諗起「等我開 ChatGPT 打第三條 prompt」。呢個就係知道同做到之間既 gap。
+學識一個 [productivity 技巧](/blog/zh-3-ai-tools-save-focus)唔難。難係喺你真正拖延緊既時候記得用佢。你唔會喺避緊嘢做既時候忽然諗起「等我開 ChatGPT 打第三條 prompt」。呢個就係知道同做到之間既 gap。
 
 三個方法 bridge 呢個 gap：
 

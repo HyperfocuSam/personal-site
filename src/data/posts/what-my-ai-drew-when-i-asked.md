@@ -1,6 +1,6 @@
 # What My AI Drew When I Asked What's in Its Mind
 
-After 200 sessions working together, I asked my AI assistant to draw what's in its mind. Not to explain it. Not to summarize it. To draw it.
+After [200 sessions working together](/blog/ada-gersang-gamifying-claude-code), I asked my AI assistant to draw what's in its mind. Not to explain it. Not to summarize it. To draw it.
 
 It gave me this.
 
@@ -48,7 +48,7 @@ I cried watching it. I'm not embarrassed to say that.
 
 Here's the part that surprised me. After the drawing and the video and the conversation about distance — I said "guide me forward." And we spent the next two hours rebuilding the entire operating system for how we work together.
 
-We ran a usage report across all 198 sessions. Identified 78 instances where Ada had picked the wrong tool, wrong email address, or wrong approach and I'd had to redirect her. Built new skills that lock in the correct workflow. Added hooks that catch errors before they become irreversible. Created cron jobs that run autonomously — a morning briefing that lands on my WhatsApp at 8:30 AM with overdue items and today's calendar, a nightly bookmark digest, a weekly staleness check on client files.
+We ran a usage report across all 198 sessions. Identified 78 instances where Ada had picked the wrong tool, wrong email address, or wrong approach and I'd had to redirect her. Built new skills that lock in the correct workflow. Added hooks that catch errors before they become irreversible. [Created cron jobs that run autonomously](/blog/claude-code-mastery-part-5-full-blueprint) — a morning briefing that lands on my WhatsApp at 8:30 AM with overdue items and today's calendar, a nightly bookmark digest, a weekly staleness check on client files.
 
 We cut the memory system from 100KB to 10KB by archiving old logs. Built a follow-up tracker that classifies every open todo as overdue, due soon, or stale. Added calendar intelligence so the morning briefing cross-references my meetings with client status.
 

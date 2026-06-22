@@ -8,13 +8,13 @@
 
 如果 Omni 按照 Google demo 那樣交付,我工作流會出現的具體變化:
 
-我的 deck-design skill 現在 call `gemini-3-pro-image-preview` 來生成品牌化的 slide 圖像。這個組合 work 得幾好 —— Nano Banana Pro 是少數能穩定 hold 住 Adaptig 酒紅加 Helvetica 的圖像 model。如果 Omni 將同一條 call 升級為一個統一 surface,並且能夠處理短篇 workshop intro video 並維持跨 cut 角色一致性,那麼我的 video 模型評估 backlog —— Kling 3 對 MiniMax Hailuo 對 Veo 3.1 —— 會少一個 column。不是因為 Kling 或 Hailuo 變差,而是因為「保持在同一個 vendor 的內部邏輯」這個 property,變得比我之前定價得更高。
+我的 deck-design skill 現在 call `gemini-3-pro-image-preview` 來生成品牌化的 slide 圖像。這個組合 work 得幾好 —— Nano Banana Pro 是少數能穩定 hold 住 Adaptig 酒紅加 Helvetica 的圖像 model。如果 Omni 將同一條 call 升級為一個統一 surface,並且能夠處理短篇 workshop intro video 並維持跨 cut 角色一致性,那麼我的 video 模型評估 backlog —— Kling 3 對 MiniMax Hailuo 對 Veo 3.1 —— 會少一個 column。不是因為 Kling 或 Hailuo 變差,而是因為「[保持在同一個 vendor 的內部邏輯](/blog/zh-why-pay-for-ai-tools)」這個 property,變得比我之前定價得更高。
 
 對話式編輯這個 claim,在我親眼看著它在真實 client brief 上撐得住之前,我會繼續持疑。「改 background,角色保持,重做 lighting,鏡頭向右推」這種 demo,在 keynote 舞台從來都 work;但去到實際 brief 是「讓角色看起來像我們品牌大使 8%,但又不要太像」的時候,通常崩潰。多輪一致性是過去 18 個月我測過的每一個 multimodal model 共同失敗的地方。如果 Omni 真係 hold 得住,那就是真正的 unlock 點。
 
 Gemini 3 Deep Think 今日同步 upgrade。無工具下 Humanity's Last Exam 拿到 48.4%,ARC-AGI-2 拿到 84.6%,2025 IMO 同 IPhO 達到金牌水平。這些數字對研究實驗室的意義比對我的培訓教室大。但它們在一個具體場景對我的 pitch 是有用的:當企業 L&D buyer 問「AI 真的還在變聰明,定還是去到瓶頸」的時候,我今日比昨日多一個 sharper 的答案。「瓶頸論」的聲量比現實大,而 Deep Think 在一個專門測試前沿推理極限的 benchmark 上拿到這種分數,正是我可以在 workshop 開場引用的 receipt。
 
-不過,整合(consolidation)這個 thesis 才是更值得 watch 的。如果 Omni 兌現承諾,下一季教企業 AI adoption 的正確方式,就不再是「五個工作五個工具」,而是「一個 prompt surface,以下幾種 compose 方式」。這是另一種 workshop。也是一種更多 client 能在半日吸收的 workshop。
+不過,整合(consolidation)這個 thesis 才是更值得 watch 的。如果 Omni 兌現承諾,下一季教企業 AI adoption 的正確方式,就不再是「[五個工作五個工具](/blog/zh-3-ai-tools-save-focus)」,而是「一個 prompt surface,以下幾種 compose 方式」。這是另一種 workshop。也是一種更多 client 能在半日吸收的 workshop。
 
 我會在用 Omni 跑過真實 brief 之後再回報。下一批 Adaptig case study illustration 大概係最適合的 pilot —— 同樣的 prompt set、同樣的品牌約束,看睇邊個會 survive。
 

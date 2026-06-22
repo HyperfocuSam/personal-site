@@ -4,9 +4,9 @@
 
 我稱之為「金魚問題」。這個問題是大多數人使用一週後便放棄 AI assistant 的最大原因。
 
-我整間公司都靠 Claude Code 運作 — invoice、workshop 準備、blog 發布、二十多個 client 的 follow-up。若 Claude 每次開新 session 都什麼都不記得，我花在重新解釋 context 的時間比實際做事的時間更多。那就不是 productivity tool，而是一個昂貴的 autocomplete。
+我整間公司都靠 [Claude Code](/blog/claude-code-mastery-part-1-getting-started-tc) 運作 — invoice、workshop 準備、blog 發布、二十多個 client 的 follow-up。若 Claude 每次開新 session 都什麼都不記得，我花在重新解釋 context 的時間比實際做事的時間更多。那就不是 productivity tool，而是一個昂貴的 autocomplete。
 
-因此我建立了一套 memory system。四層架構，四十多個 skills，啟動僅需不到 5,000 tokens。以下逐一說明。
+因此我建立了一套 [memory system](/blog/claude-code-mastery-part-5-full-blueprint-tc)。四層架構，四十多個 skills，啟動僅需不到 5,000 tokens。以下逐一說明。
 
 ## 四層 Memory 架構
 
@@ -131,7 +131,7 @@ Claude 不會問 Joanne 是誰。不會問 HKCT 是什麼。不會問哪場 trai
 
 ## 下一篇：Part 3 — Hooks
 
-Part 3 將討論 Claude Code 的 hooks system — event-driven 的 automation layer。Session lifecycle hooks 如何自動載入 context。Pre-tool-use hooks 如何 enforce safety policies。如何建立一個 audit trail 來 catch 每一個 external action。
+[Part 3](/blog/claude-code-mastery-part-3-hooks-guardrails-tc) 將討論 Claude Code 的 hooks system — event-driven 的 automation layer。Session lifecycle hooks 如何自動載入 context。Pre-tool-use hooks 如何 enforce safety policies。如何建立一個 audit trail 來 catch 每一個 external action。
 
 Memory 告訴 Claude 它知道什麼。Skills 告訴它怎麼做。Hooks 告訴它何時做 — 以及何時該停。
 

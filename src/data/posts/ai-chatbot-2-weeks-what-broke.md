@@ -1,6 +1,6 @@
 # I Built an AI Chatbot in 2 Weeks. Here's What Broke on Turn 3.
 
-A client needed an AI-powered advisory chatbot. Not a wrapper around ChatGPT -- a multi-agent system with crisis detection, personalized routing, and a knowledge base of 137 Hong Kong schools. They needed it fast.
+A client needed an AI-powered advisory chatbot. Not a wrapper around ChatGPT -- a [multi-agent system](/blog/what-nobody-tells-you-building-agentic-ai) with crisis detection, personalized routing, and a knowledge base of 137 Hong Kong schools. They needed it fast.
 
 I built it in two weeks. With zero employees. My team was me and a stack of AI agents.
 
@@ -24,7 +24,7 @@ This is the gap that no "build a chatbot in 10 minutes" tutorial prepares you fo
 
 Here's how you ship a multi-agent chatbot with no engineering team.
 
-**Phase 0 is manual.** I spent two days learning the framework (Agno Agent OS) deeply enough to make architecture decisions. Which agents handle which conversation modes. How routing works. Where guardrails sit in the pipeline. AI agents can execute code, but they cannot make foundational architecture decisions. If you skip this, you get a fast-built system that collapses under its own weight.
+**Phase 0 is manual.** I spent two days learning the framework (Agno Agent OS) deeply enough to make architecture decisions. Which agents handle which conversation modes. How routing works. Where [guardrails](/blog/claude-code-mastery-part-3-hooks-guardrails) sit in the pipeline. AI agents can execute code, but they cannot make foundational architecture decisions. If you skip this, you get a fast-built system that collapses under its own weight.
 
 **Each phase gets a self-contained brief.** I write a spec that includes scope, existing code patterns, file paths, and a verification checklist. The coding agent reads the spec, reads the codebase, executes, and verifies. I review the output. Then the next phase begins.
 

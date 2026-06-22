@@ -26,13 +26,13 @@ Instead of teaching prompts as recipes to copy, I structured the training around
 
 ![Prompt training structure demonstration](/images/blog/hkjc-prompt-training.jpeg)
 
-The tools we used - Microsoft Copilot for stability, ChatGPT for depth, Perplexity for research integration - were secondary to this underlying structure. Tools change. The thinking framework doesn't.
+The tools we used - [Microsoft Copilot for stability](/blog/why-i-teach-copilot-not-chatgpt), ChatGPT for depth, Perplexity for research integration - were secondary to this underlying structure. Tools change. The thinking framework doesn't.
 
 ## What Worked: Design Thinking Over Features
 
 The breakthrough moment came when I stopped calling it "AI training" and started framing it as "communication design."
 
-Once participants understood that every prompt is essentially a design decision - what to include, what to omit, what format best serves the reader - engagement shifted. They weren't learning a new tool. They were refining a skill they already had.
+Once participants understood that [every prompt is essentially a design decision](/blog/stop-telling-ai-be-creative) - what to include, what to omit, what format best serves the reader - engagement shifted. They weren't learning a new tool. They were refining a skill they already had.
 
 I used interactive whiteboards and step-by-step prompt exercises to keep the technical barrier low. The focus stayed on decision-making: Why this format? Why this level of detail? What does your reader actually need?
 

@@ -1,10 +1,10 @@
 # Three Gemini tools collapsed into one prompt today
 
-I have three Gemini surfaces in my daily stack right now. Pro for meeting transcription. 3 Pro Preview for English-to-German translation when I am preparing Adaptig keynote material. Nano Banana Pro for slide images and case-study illustrations through my deck-design skill. Three different model IDs. Three different API calls. Three different mental models for "which one do I reach for."
+I have three Gemini surfaces in my [daily stack](/blog/ai-tool-stack-3000-professionals) right now. Pro for meeting transcription. 3 Pro Preview for English-to-German translation when I am preparing Adaptig keynote material. Nano Banana Pro for slide images and case-study illustrations through my deck-design skill. Three different model IDs. Three different API calls. Three different mental models for "which one do I reach for."
 
 This morning at I/O 2026 Google shipped Gemini Omni, and the pitch is: stop reaching for three things. One model, one prompt, multimodal in and out, with Veo for video, Nano Banana for images, and Genie's world-simulation work folded into a single surface that holds character, physics, and prior edits consistent across turns.
 
-I have not run Omni in production yet. Omni Flash rolled to AI Plus/Pro/Ultra subscribers in the Gemini app and Google Flow today, with YouTube Shorts integration this week and API access "in a few weeks." So this is a directional read, not a battle-tested one. But the directional read is significant enough to write down on day one, because the consolidation argument lands.
+I have not run Omni in production yet. Omni Flash rolled to [AI Plus/Pro/Ultra subscribers](/blog/why-pay-for-ai-tools) in the Gemini app and Google Flow today, with YouTube Shorts integration this week and API access "in a few weeks." So this is a directional read, not a battle-tested one. But the directional read is significant enough to write down on day one, because the consolidation argument lands.
 
 Here is what changes, concretely, in my workflow if Omni delivers what Google demoed:
 

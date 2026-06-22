@@ -16,7 +16,7 @@ This is the single most useful prompt on the list. For ADHD brains especially, p
 
 This prompt short-circuits that. Instead of one overwhelming task, you get five small ones -- and the first one is usually something you can do in under two minutes. Starting is the hard part. Once you're moving, momentum carries you.
 
-**How to get more from it:** Be specific with your [task]. "I'm avoiding the Q2 marketing report for my manager" works better than "I'm avoiding work." The more context you give, the more relevant the steps. If you use ChatGPT or Claude with memory enabled, it gets even better over time because the AI learns your working patterns.
+**How to get more from it:** [Be specific](/blog/stop-telling-ai-be-creative) with your [task]. "I'm avoiding the Q2 marketing report for my manager" works better than "I'm avoiding work." The more context you give, the more relevant the steps. If you use ChatGPT or Claude with memory enabled, it gets even better over time because the AI learns your working patterns.
 
 ## 2. The Priority Sorter
 
@@ -64,7 +64,7 @@ The AI might surface that you're avoiding the task because you don't have all th
 
 **How to get more from it:** Follow up. When the AI suggests a cause, interrogate it. "You said I might be avoiding this because I'm unsure about the format. That's actually true -- can you suggest three formats for this report and help me pick one?" Now you've gone from procrastination to action in two messages.
 
-**ADHD-specific insight:** For people with ADHD, the root cause is often mundane friction -- not emotional resistance. You're not avoiding the task because you're scared. You're avoiding it because the file is buried three folders deep, the template is somewhere in your email, and the thought of gathering everything feels like a separate task. Reducing friction (organizing your workspace, pinning key files, saving templates) is often more effective than analyzing your feelings about the task.
+**ADHD-specific insight:** For people with ADHD, the root cause is often mundane friction -- not emotional resistance. You're not avoiding the task because you're scared. You're avoiding it because the file is buried three folders deep, the template is somewhere in your email, and the thought of gathering everything feels like a separate task. [Reducing friction](/blog/3-ai-tools-save-focus) (organizing your workspace, pinning key files, saving templates) is often more effective than analyzing your feelings about the task.
 
 ## Making These Stick
 
@@ -76,7 +76,7 @@ Three ways to bridge that gap:
 
 2. **Start with just one.** Don't try to use all five. Pick the one that matches your most common procrastination pattern. For most people that's #1 (task feels too big) or #2 (can't decide where to start). Use it for a week before adding another.
 
-3. **Use an AI with memory.** If you use the same AI tool consistently and it remembers your context, the prompts get more powerful over time. Instead of explaining your situation each time, the AI already knows your work patterns, your deadlines, and what you tend to avoid.
+3. **[Use an AI with memory.](/blog/why-pay-for-ai-tools)** If you use the same AI tool consistently and it remembers your context, the prompts get more powerful over time. Instead of explaining your situation each time, the AI already knows your work patterns, your deadlines, and what you tend to avoid.
 
 The five prompts work. The question is whether you'll use them tomorrow, or just save this post and forget about it.
 

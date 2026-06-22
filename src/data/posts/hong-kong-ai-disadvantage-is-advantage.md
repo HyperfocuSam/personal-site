@@ -1,7 +1,7 @@
 
 # Why Hong Kong's AI Disadvantage Is Actually an Advantage
 
-Every time a Hong Kong policy announcement touches AI, the comments section fills with the same refrain: "Hong Kong can't even use ChatGPT properly. Why are we pretending to play in the AI space?"
+Every time a [Hong Kong policy announcement touches AI](/blog/hk-2026-budget-ai-training), the comments section fills with the same refrain: "Hong Kong can't even use ChatGPT properly. Why are we pretending to play in the AI space?"
 
 I've spent the last two years doing corporate AI training from Yuen Long to Los Angeles. I can tell you with some confidence: Hong Kong's overall tech literacy, compared to what I've seen internationally, is not embarrassing. It's actually better than most people assume.
 
@@ -13,7 +13,7 @@ In Hong Kong, especially among the post-80s and post-90s generation, computer fl
 
 The VPN issue is real. Google's AI tools, Gemini, NotebookLM — you need a VPN to access them from Hong Kong. That's friction. But it's solvable friction. Twenty dollars a month, and you have the same access as someone in San Francisco. Meanwhile, Grok, Manus, Perplexity — no VPN needed. And Microsoft Copilot, which is what most enterprises use anyway, works fine.
 
-Here's something most people in Hong Kong don't know: Copilot has a model selector in the top right corner where you can switch to GPT-5.2. Nine out of ten users have never clicked it. Even Microsoft's own sales team in Hong Kong doesn't mention it. The tool gap is smaller than the knowledge gap about the tools people already have.
+Here's something most people in Hong Kong don't know: Copilot has a model selector in the top right corner where you can switch to GPT-5.2. [Nine out of ten users have never clicked it](/blog/9-percent-copilot-licenses). Even Microsoft's own sales team in Hong Kong doesn't mention it. The tool gap is smaller than the knowledge gap about the tools people already have.
 
 ## The Real Disadvantage Nobody Talks About
 

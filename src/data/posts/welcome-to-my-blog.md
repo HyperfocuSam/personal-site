@@ -12,9 +12,9 @@ This blog is my way of sharing those insights more broadly.
 
 You'll find posts covering:
 
-- **Workshop Learnings** - Patterns I observe when training teams on AI
+- **Workshop Learnings** - [Patterns I observe when training teams on AI](/blog/why-ai-training-doesnt-stick)
 - **AI Insights** - Practical tips and perspectives on using AI effectively
-- **Case Studies** - Stories from real implementations (anonymized, of course)
+- **Case Studies** - [Stories from real implementations](/blog/claude-code-mastery-part-5-full-blueprint) (anonymized, of course)
 - **Industry Trends** - My take on where AI is heading
 - **Personal Reflections** - The human side of this technological revolution
 

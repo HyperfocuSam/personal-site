@@ -42,11 +42,11 @@ Cowork handles about 70% of what Claude Code can do. For most professionals — 
 
 Claude Code is where I live. It's a terminal-based agent with no guardrails on what it can do. But the real power isn't the single agent — it's that you can run many of them simultaneously.
 
-Right now, on any given day, I have four Claude Code instances running in parallel: one managing my email and calendar, one building my personal website, one processing workshop materials, and one handling client deliverables. Each has its own context, its own memory, its own set of connected tools through MCP — Model Context Protocol — which lets each agent access Gmail, Google Drive, Slack, databases, whatever the task requires.
+Right now, on any given day, I have [four Claude Code instances running in parallel](/blog/ai-agents-knowledge-work-field-notes): one managing my email and calendar, one building my personal website, one processing workshop materials, and one handling client deliverables. Each has its own context, its own memory, its own set of connected tools through MCP — Model Context Protocol — which lets each agent access Gmail, Google Drive, Slack, databases, whatever the task requires.
 
 Anthropic formalized this with Agent Teams in February, and then shipped multi-agent Code Review in March. One engineer at Anthropic stress-tested the system by having 16 agents write a C compiler from scratch — 100,000 lines of Rust, capable of compiling the Linux kernel.
 
-That's Tier 3. It's not for everyone. It shouldn't be.
+That's Tier 3. It's not for everyone. It shouldn't be. [What nobody tells you about building agentic AI](/blog/what-nobody-tells-you-building-agentic-ai) is that this rung takes far more orchestration than the demos suggest.
 
 ## The Insight Most People Miss
 
@@ -64,7 +64,7 @@ The competitive landscape is accelerating. Manus just launched local computer ac
 
 But the pattern is clear: every major AI company is converging on the same insight — agents that live on your computer, working with your files, operating your tools. The question for most people isn't which agent is most powerful. It's which one matches how they actually work.
 
-I train companies on this for a living. The ones that succeed aren't the ones with the fanciest tools. They're the ones that figured out the right rung for each team.
+I train companies on this for a living — including [mapping out the levels of AI agents with a utility like CLP](/blog/clp-ai-agent-automation). The ones that succeed aren't the ones with the fanciest tools. They're the ones that figured out the right rung for each team.
 
 ---
 

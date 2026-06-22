@@ -14,13 +14,13 @@ Most corporate AI training follows a predictable pattern: demonstrate tools, pra
 
 Management teams face different questions. Which processes should be automated first? What skills do we need to build versus buy? How do we measure ROI on AI initiatives? What are the risks, and how do we mitigate them?
 
-For CTS, these questions had an additional layer of complexity. Their business spans Hong Kong and mainland China, serving customers in both markets. The AI tools that work best in one context may not work at all in the other.
+For CTS, these questions had an additional layer of complexity. Their business spans Hong Kong and mainland China, serving customers in both markets. The [AI tools that work best](/blog/ai-tool-stack-3000-professionals) in one context may not work at all in the other.
 
 ## The Tool Choice That Changed Everything
 
-Most AI training in Hong Kong defaults to Western tools - ChatGPT, Copilot, Midjourney. For CTS, this would have been a mistake.
+Most AI training in Hong Kong [defaults to Western tools](/blog/why-i-teach-copilot-not-chatgpt) - ChatGPT, Copilot, Midjourney. For CTS, this would have been a mistake.
 
-Their operations span the mainland China market, where these tools are either inaccessible or impractical. Instead, we focused on China's AI ecosystem: Doubao (ByteDance's AI assistant) and Dreamina (their image generation platform). These tools don't require VPNs, work seamlessly on mobile, and are designed for Chinese language interactions.
+Their operations span the mainland China market, where these tools are either inaccessible or impractical. Instead, we focused on [China's AI ecosystem](/blog/renpho-ecommerce-ai-shenzhen): Doubao (ByteDance's AI assistant) and Dreamina (their image generation platform). These tools don't require VPNs, work seamlessly on mobile, and are designed for Chinese language interactions.
 
 This wasn't just a practical choice - it was a strategic one. Executives who only know Western AI tools can't effectively guide China-focused operations. By training on China-native platforms, we equipped the management team to make informed decisions about AI deployment across their entire business.
 

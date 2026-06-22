@@ -8,7 +8,7 @@ What emerged was a framework I now call "C-How Thinking" - and it changed how I 
 
 ## The Problem With Tool-Centric Training
 
-Most AI training sessions follow a predictable pattern: open ChatGPT, demonstrate some prompts, show off some outputs, end with Q&A. The audience leaves impressed but unchanged. Two weeks later, they're back to their old workflows.
+Most AI training sessions follow a predictable pattern: open ChatGPT, demonstrate some prompts, show off some outputs, end with Q&A. The audience leaves impressed but unchanged. [Two weeks later, they're back to their old workflows.](/blog/why-ai-training-doesnt-stick)
 
 Arup's challenge was different. As a multidisciplinary engineering firm, their teams juggle complex project documentation, cross-departmental communication, and client presentations that require both technical precision and visual clarity. The time cost of producing high-quality deliverables was becoming a competitive disadvantage.
 
@@ -40,7 +40,7 @@ I deliberately avoided showing every tool capability. Instead, we focused on one
 
 Before touching any tool, we spent ten minutes on data governance. What can you input? What should you never input? For engineers handling sensitive project data, this wasn't a compliance checkbox - it was the permission they needed to actually use these tools without anxiety.
 
-I introduced a simple "traffic light" mental model: green data (public, general knowledge), yellow data (internal, strip identifiers), red data (client confidential, full stop). The framework is intentionally simple because complexity kills adoption.
+I introduced a [simple "traffic light" mental model](/blog/traffic-light-protocol-ai-safety): green data (public, general knowledge), yellow data (internal, strip identifiers), red data (client confidential, full stop). The framework is intentionally simple because complexity kills adoption.
 
 **Lesson 3: Lunch Breaks Are Underrated**
 

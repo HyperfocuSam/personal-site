@@ -10,7 +10,7 @@ I opened by asking the room: what was the number one AI-related question Hong Ko
 
 ## The 7-Level Classification System
 
-The core of the workshop was a classification system I've been refining through multiple corporate training engagements. It maps the full spectrum of what people mean when they say "AI agent," from the simplest chatbot to systems that most enterprise teams won't touch for years.
+The core of the workshop was a classification system I've been refining through multiple corporate training engagements. It maps the full spectrum of what people mean when they say "AI agent," from the simplest chatbot to systems that most enterprise teams won't touch for years. It's a close cousin of the [agent adoption ladder](/blog/agent-adoption-ladder) I use to help teams figure out where to start.
 
 **Level 0 -- Chatbot.** A basic conversational interface. You type, it responds. No memory, no tools, no context. This is what most people picture when they think of AI. I used a Chinese poetry analogy to show how these models simply predict the next character in a sequence -- sophisticated pattern matching, not understanding.
 
@@ -52,7 +52,7 @@ I also addressed the question every enterprise audience asks: data privacy. The 
 
 ## The Bigger Pattern
 
-This was Module 3 in a series, and the progression across modules mirrors what I see across the market. Module 1 covered AI fundamentals. Module 2 addressed practical tool usage. Module 3 -- agents and automation -- is where things get strategic. You stop asking "what can AI do?" and start asking "which of our processes should AI own?"
+This was Module 3 in a series, and the progression across modules mirrors what I see across the market. Module 1 covered AI fundamentals. Module 2 addressed practical tool usage. Module 3 -- agents and automation -- is where things get strategic. You stop asking "what can AI do?" and start asking ["which of our processes should AI own?"](/blog/ai-agents-knowledge-work-field-notes)
 
 For CLP, the answer starts with report automation, data analysis, and document processing. Not glamorous. Not the kind of thing that makes viral demos. But for a company that keeps the lights on for millions of Hong Kong residents, reliable process improvement beats flashy demos every time.
 

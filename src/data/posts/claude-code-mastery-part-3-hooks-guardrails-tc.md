@@ -8,7 +8,7 @@
 
 做生意的人一定明白：一封寄錯的 email 足以令你與 client 的關係即刻出問題。尤其在香港，你的 client 可能就坐在你另一個 client 的隔壁。這個 hook 救了我一次，整套 system 便已值回票價。
 
-這是 Claude Code 完全攻略的第三篇。[第一篇](/blog/claude-code-mastery-part-1-claude-md-tc)講 CLAUDE.md，[第二篇](/blog/claude-code-mastery-part-2-memory-systems-tc)講 memory 架構。本篇討論的內容，大多數人完全忽略：如何令一個自主 AI agent 安全到你敢讓它處理真正的業務。
+這是 Claude Code 完全攻略的第三篇。[第一篇](/blog/claude-code-mastery-part-1-getting-started-tc)講 CLAUDE.md，[第二篇](/blog/claude-code-mastery-part-2-skills-memory-tc)講 memory 架構。本篇討論的內容，大多數人完全忽略：如何令一個自主 AI agent 安全到你敢讓它處理真正的業務。
 
 ## 自主 AI 的信任問題
 

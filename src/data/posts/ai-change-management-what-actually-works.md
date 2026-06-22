@@ -13,7 +13,7 @@ When a large hospitality group in Hong Kong approached me about AI training, the
 
 I understand why this is the instinct. It feels concrete. Measurable. Manageable. Give people a list, check the training box, move on.
 
-The problem is that a list of prompts doesn't change behavior. It gives people something to forget. Within two weeks, the list lives in a drawer or a shared folder nobody opens.
+The problem is that [a list of prompts doesn't change behavior](/blog/why-ai-training-doesnt-stick). It gives people something to forget. Within two weeks, the list lives in a drawer or a shared folder nobody opens.
 
 What this client actually needed — what they came to understand over the course of our engagement — was a change management program, not a training event.
 
@@ -27,7 +27,7 @@ That instinct doesn't come from a workshop. It comes from repetition in a low-st
 
 **1. Starting with fear, not features.** In every first session I run, before I show a single interface, I ask the room: "What worries you about AI at work?" In a 19-person HR team at the hospitality group I mentioned, fear of job replacement came up in the first four minutes. Shadow IT — staff using personal phones and free AI accounts because nobody had given them a safer alternative — came up shortly after. If you don't address these in the first session, they sit in the room for the entire program, silently throttling engagement.
 
-**2. Selecting pioneers, not mass-training everyone.** The most effective AI adoption programs I've run share one structural feature: they don't start with the whole organization. They identify 10–15 high-potential employees — people with enough credibility and curiosity to become internal champions — and train them intensively before anyone else. These are the people who will answer their colleagues' questions, catch the errors, and build the informal use cases that make AI feel relevant to the specific industry and company.
+**2. Selecting pioneers, not mass-training everyone.** The most effective AI adoption programs I've run share one structural feature: they don't start with the whole organization. They identify 10–15 high-potential employees — people with enough credibility and curiosity to become internal champions — and [train them intensively before anyone else](/blog/how-to-design-ai-pioneer-program). These are the people who will answer their colleagues' questions, catch the errors, and build the informal use cases that make AI feel relevant to the specific industry and company.
 
 With the hospitality group, we ran a 6-session program over six weeks with a cross-functional cohort of 19 HR staff. By Session 4, participants were bringing their own prompts. By Session 6, they were presenting "Before vs. After" workflows to their own management — a 4,320+ annual hours saved estimate built from the specific tasks they'd actually measured. Management, which had started skeptical, left that session asking about Batch 2.
 
@@ -35,7 +35,7 @@ With the hospitality group, we ran a 6-session program over six weeks with a cro
 
 ## The IT Director Problem
 
-Here's a pattern I didn't anticipate when I started doing this work: the biggest blockers to AI adoption are often not the skeptical frontline staff. They're the IT directors.
+Here's a pattern I didn't anticipate when I started doing this work: the [biggest blockers to AI adoption](/blog/it-department-ai-adoption-bottleneck) are often not the skeptical frontline staff. They're the IT directors.
 
 At the hospitality group, the IT lead came into the engagement with legitimate concerns. Staff were already using free, unvetted AI tools on personal devices. Company data was at risk. He'd seen a failed AI implementation years earlier — a computer vision project for manufacturing that never shipped — and his trust in "AI projects" was low.
 

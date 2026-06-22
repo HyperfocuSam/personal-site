@@ -36,9 +36,9 @@ Several industry groups have noted that HK$50 million is "far from adequate" for
 
 **Don't wait for government programs.** The Upskill Hong Kong courses will take time to develop and will be general-purpose, not tailored to your industry or workflows. Companies that move now will have a 12-18 month head start on those waiting for subsidized programs.
 
-**The real ROI case is already clear.** In my Pioneer Programs -- six sessions over six weeks with 10-20 selected staff -- participants consistently report saving 5-8 hours per week through AI-assisted workflow redesign. At an average Hong Kong professional salary, that's a payback period measured in weeks, not years.
+**The real ROI case is already clear.** In my [Pioneer Programs -- six sessions over six weeks with 10-20 selected staff](/blog/how-to-design-ai-pioneer-program) -- participants consistently report saving 5-8 hours per week through AI-assisted workflow redesign. At an average Hong Kong professional salary, that's a payback period measured in weeks, not years.
 
-**Start with behavior change, not tool awareness.** The government's HK$50 million is focused on awareness -- helping people understand what AI is. Most corporate teams are past that point. They've seen the demos. What they need is workflow integration: taking the tasks they do every day and redesigning them with AI. That requires hands-on training with their actual work, not public seminars.
+**Start with behavior change, not tool awareness.** The government's HK$50 million is focused on awareness -- helping people understand what AI is. Most corporate teams are past that point. They've seen the demos. What they need is workflow integration: taking the tasks they do every day and redesigning them with AI. That requires [hands-on training with their actual work, not public seminars](/blog/why-ai-training-doesnt-stick).
 
 **Use the policy signal internally.** Even if the budget doesn't fund your training directly, it gives you political cover. "The government is investing HK$50 million in AI training and establishing a committee chaired by the Financial Secretary" is a useful line in your next L&D budget proposal.
 

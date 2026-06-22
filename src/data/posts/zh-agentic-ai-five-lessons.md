@@ -1,6 +1,6 @@
 # 起一個 Agentic AI 系統學到既五件事
 
-我最近起咗個 multi-agent AI 系統。唔係 chatbot，係真正既 agent architecture：四個 specialist agent，一個 team router 自動分配任務，persistent memory 跨 session 記住用戶，streaming UI 即時顯示成個 agentic process。
+我最近起咗個 multi-agent AI 系統。唔係 chatbot，係真正既 agent architecture：四個 specialist agent，一個 [team router 自動分配任務](/blog/claude-code-mastery-part-4-agent-teams-tc)，persistent memory 跨 session 記住用戶，streaming UI 即時顯示成個 agentic process。
 
 由零到 production deploy，以下係五個最深刻既體會。
 
@@ -22,7 +22,7 @@ Agent 識用 tool、識 search、識 reason — 呢啲用戶未必感受到。�
 
 重點係：memory 一定要 shared。如果你有四個 agent，每個各自有獨立既 memory store，用戶同 finance agent 講過既野，wellness agent 完全唔知。對用戶嚟講佢哋同緊一個 AI 傾，但背後係四個獨立既腦。
 
-一個 shared database，所有 agent 讀寫同一個地方。呢個 architectural decision 決定咗成個產品既 coherence。
+一個 [shared database，所有 agent 讀寫同一個地方](/blog/claude-code-mastery-part-2-skills-memory-tc)。呢個 architectural decision 決定咗成個產品既 coherence。
 
 ## 三、Agentic UX 唔係關個答案事
 

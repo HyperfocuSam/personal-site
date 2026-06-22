@@ -12,13 +12,13 @@ Before this engagement, I assumed enterprise AI training was about teaching tool
 
 I was wrong.
 
-Tool proficiency is table stakes. The real challenge at scale isn't "can they use the tool?" - it's "will they change their behavior?" That's a fundamentally different problem. And solving it required rethinking my entire approach.
+Tool proficiency is table stakes. The real challenge at scale isn't "can they use the tool?" - it's ["will they change their behavior?"](/blog/why-ai-training-doesnt-stick) That's a fundamentally different problem. And solving it required rethinking my entire approach.
 
 ## Lesson 1: Safety Is the Foundation, Not a Feature
 
 Every AI conversation in banking eventually hits the same wall: data security. "Can I paste this customer data into ChatGPT?" "Is this compliant?" "What if I accidentally leak something?"
 
-I developed what I call the "traffic light protocol" - a simple mental model that categorizes data sensitivity:
+I developed what I call the ["traffic light protocol"](/blog/traffic-light-protocol-ai-safety) - a simple mental model that categorizes data sensitivity:
 
 - **Green**: Public information, general knowledge queries. Go ahead.
 - **Yellow**: Internal documents, general business data. Proceed with caution, strip identifiers.
@@ -38,7 +38,7 @@ For the BOCHK team, this meant different approaches for different groups. The tr
 
 **Layer 1: Office Efficiency** - How does Copilot integrate with the Excel models you already use? How do you summarize the meeting notes you already take? This isn't flashy, but it's where daily time savings accumulate.
 
-**Layer 2: Creative Workflows** - For marketing and communications teams, tools like Gamma for presentations and image generation for campaign visuals. Still integrated with existing deliverables, just produced faster.
+**Layer 2: Creative Workflows** - For marketing and communications teams, [tools like Gamma](/blog/ai-tool-stack-3000-professionals) for presentations and image generation for campaign visuals. Still integrated with existing deliverables, just produced faster.
 
 **Layer 3: Decision Support** - For senior staff, I introduced an IPA framework: Input (what data goes in), Process (how AI analyzes it), Action (what decisions result). This reframed AI from "tool" to "thinking partner" for strategic work.
 

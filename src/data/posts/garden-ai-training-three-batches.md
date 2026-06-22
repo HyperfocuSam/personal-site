@@ -10,7 +10,7 @@ Four separate engagements. One company. My assumption when I started was that th
 
 HR teams bring a specific kind of fear to AI training. They worry about confidentiality — employee records, performance data, anything that names a specific person. They are also usually the department most aware that AI might affect hiring in ways that touch their own jobs. The two concerns pull in opposite directions: use AI cautiously, but don't stick your head in the sand about where this is heading.
 
-Garden's HR cohort started at Stage 2 on the AI Maturity model — people had heard of AI tools and tried a few, but nobody had a consistent workflow. Six sessions to build foundations: what Copilot can actually do, what the security tiers mean in practice, how to save two hours a week on tasks you already dislike doing.
+Garden's HR cohort started at Stage 2 on the [AI Maturity model](/blog/ai-maturity-trap-stuck-stage-one) — people had heard of AI tools and tried a few, but nobody had a consistent workflow. Six sessions to build foundations: what Copilot can actually do, what the security tiers mean in practice, how to save two hours a week on tasks you already dislike doing.
 
 The security architecture was fixed before I arrived. Nigel, the IT lead, had set the boundaries. Copilot as the primary tool. Tier 1 work — research, summarization — is fine. Tier 2 — formatting, drafting — is fine. Tier 3, anything touching internal customer data, P&L figures, or employee records, stays offline. I agreed with that call. I still do. Working within an institution's actual risk appetite is the job, not a constraint on the job.
 
@@ -22,7 +22,7 @@ The security boundary that the HR team had understood almost instinctively had t
 
 Three sessions instead of six. A completely different pace. The HR team needed time to get comfortable with the tools before they trusted them. The Sales team disengaged if they didn't see a practical application in session one. I moved the hands-on exercises earlier, shortened the conceptual framing, rewrote the prompts for commercial contexts.
 
-What I kept from Batch 1: the AI Maturity framework, the traffic light protocol for data safety. Everything else was rebuilt.
+What I kept from Batch 1: the AI Maturity framework, the [traffic light protocol for data safety](/blog/traffic-light-protocol-ai-safety). Everything else was rebuilt.
 
 ## The Operations Batch Is the One I Am Most Uncertain About
 

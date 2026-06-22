@@ -1,6 +1,6 @@
 # I Built an RTK-Style Strategy Game on Top of My AI Workflow
 
-I spend most of my working hours inside Claude Code. My AI assistant Ada handles emails, invoices, client tracking, document generation — the full operational stack across four businesses. Over 200 sessions, 438 hours logged. At some point I started wondering: what if all that work was also a game?
+I spend most of my working hours inside Claude Code. My AI assistant Ada handles emails, invoices, client tracking, document generation — [the full operational stack across four businesses](/blog/claude-code-mastery-part-5-full-blueprint). [Over 200 sessions, 438 hours logged](/blog/what-my-ai-drew-when-i-asked). At some point I started wondering: what if all that work was also a game?
 
 Not a productivity gamification app. Not a points system. A proper Romance of the Three Kingdoms-style strategy game where my real work generates real stats.
 

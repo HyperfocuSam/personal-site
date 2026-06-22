@@ -10,7 +10,7 @@ After training over 10,000 professionals across industries, I have landed on a f
 
 Most organizations handle AI safety with a document. A 30-page acceptable use policy that nobody reads. Or worse, a blanket ban that pushes usage underground.
 
-I have seen both approaches fail at scale. At a 1,530-person banking program, the compliance team had produced detailed AI guidelines. Well-written, legally sound, completely ignored. Participants told me they did not read it because they assumed it would just say "don't use AI."
+I have seen both approaches fail at scale. At a [1,530-person banking program](/blog/bochk-banking-ai-training), the compliance team had produced detailed AI guidelines. Well-written, legally sound, completely ignored. Participants told me they did not read it because they assumed it would just say "don't use AI."
 
 The problem is not the content. The problem is the format. People do not internalize policy documents. They internalize mental models.
 
@@ -76,7 +76,7 @@ At a 500-person webinar, I ran a live poll asking participants to classify five 
 
 ## Why It Works
 
-The Traffic Light Protocol works because it replaces anxiety with a decision framework. Most AI safety training tells people what they cannot do. This tells people what they can do, with clear boundaries.
+The Traffic Light Protocol works because it replaces anxiety with a decision framework. Most AI safety training tells people what they cannot do. This tells people what they can do, with clear boundaries. It is one of the reasons [most AI training doesn't stick](/blog/why-ai-training-doesnt-stick) — it starts with restriction instead of permission.
 
 Three specific design choices make it effective:
 

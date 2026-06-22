@@ -6,11 +6,11 @@ The difference is not marketing. It is architectural. A chatbot takes input, ret
 
 I recently built one from scratch. Four specialist agents. A team router that analyzes every message and delegates to the right expert. Persistent memory that extracts facts about each user and carries them forward. Streaming UI that shows routing decisions, tool calls, and durations in real time.
 
-Here is what I learned that the agent framework docs do not cover.
+Here is [what I learned](/blog/ai-agents-knowledge-work-field-notes) that the agent framework docs do not cover.
 
 ## Agents are easy. Agent teams are hard.
 
-A single agent with tools and memory works out of the box. Give it instructions, connect a model, done. The moment you introduce a team -- a router that delegates to specialists -- everything changes.
+A single agent with tools and memory works out of the box. Give it instructions, connect a model, done. The moment you introduce [a team -- a router that delegates to specialists](/blog/claude-code-mastery-part-4-agent-teams) -- everything changes.
 
 The router has its own personality. It wants to answer questions itself instead of delegating. It needs to be told, repeatedly, in multiple phrasings, that its only job is to route. "ALWAYS delegate. NEVER answer directly. Even for greetings." Three variations of the same instruction. LLMs need redundancy to follow routing constraints reliably.
 

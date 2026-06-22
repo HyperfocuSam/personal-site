@@ -11,7 +11,7 @@ So I built a memory system. Four tiers, 40+ skills, and the whole thing loads in
 
 ## Part 1 Recap: CLAUDE.md Is Just the Beginning
 
-In [Part 1](/blog/claude-code-mastery-part-1-claude-md) of this series, I covered how CLAUDE.md acts as your AI's instruction manual — the persistent configuration file that survives every session restart. If you haven't read it, start there.
+In [Part 1](/blog/claude-code-mastery-part-1-getting-started) of this series, I covered how CLAUDE.md acts as your AI's instruction manual — the persistent configuration file that survives every session restart. If you haven't read it, start there.
 
 But CLAUDE.md is tier zero. It tells Claude *who it is* and *what rules to follow*. It doesn't tell Claude what happened yesterday, which client is overdue on an invoice, or how to publish a blog post to your specific site. For that, you need memory and skills.
 

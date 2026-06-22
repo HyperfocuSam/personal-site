@@ -2,7 +2,7 @@
 
 When HKCT (Hong Kong College of Technology) invited me to introduce AI to their entire staff - 400 people, from teachers to administrators to support services - the first question I asked was: what's the real goal here?
 
-The answer wasn't "teach them ChatGPT." It was something more fundamental. Many staff had tried AI tools already. Some were enthusiastic, most were skeptical, and nearly all had abandoned them after initial experiments. The tools weren't sticking because people were treating AI as software to learn, not as a new way of working.
+The answer wasn't "teach them ChatGPT." It was something more fundamental. Many staff had tried AI tools already. Some were enthusiastic, most were skeptical, and nearly all had abandoned them after initial experiments. The tools [weren't sticking](/blog/why-ai-training-doesnt-stick) because people were treating AI as software to learn, not as a new way of working.
 
 ![AI workshop for HKCT's 400 staff members](/images/blog/hkct-ai-workshop.jpg)
 
@@ -54,7 +54,7 @@ The session included live demonstrations but also emphasized something crucial: 
 
 Training educators on AI requires addressing questions that other industries can defer: data privacy, academic integrity, content accuracy. We spent time on each.
 
-Data input: What information is safe to share with AI tools? Student data, internal discussions, unpublished materials - all require careful handling. We introduced a simple framework for categorizing sensitivity.
+Data input: What information is safe to share with AI tools? Student data, internal discussions, unpublished materials - all require careful handling. We introduced a [simple framework for categorizing sensitivity](/blog/traffic-light-protocol-ai-safety).
 
 Originality: When does AI-assisted work become AI-generated work? The answer matters differently for student assignments versus administrative tasks. We discussed where the lines are and why they exist.
 
@@ -72,7 +72,7 @@ The most encouraging feedback came from skeptics - people who had written off AI
 
 ## The Takeaway
 
-Large-scale AI adoption in education won't happen through mandates or curriculum changes. It will happen when individual educators find that AI helps them do their existing jobs better - not differently, just better. Faster document processing, easier planning, quicker content creation.
+Large-scale AI adoption in education won't happen through mandates or curriculum changes. It will happen when individual educators find that AI helps them do their existing jobs better - not differently, just better. (HKCT later [committed to a 24-month AI Learning Community](/blog/when-a-school-commits-to-24-months-of-ai) on the strength of this first session.) Faster document processing, easier planning, quicker content creation.
 
 The framework doesn't matter as much as the mindset. AI isn't a new subject to learn. It's a new way to do the work you're already doing. Once that clicks, adoption becomes self-sustaining.
 

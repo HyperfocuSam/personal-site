@@ -10,7 +10,7 @@ We designed something different - a 2.5-hour session structured around four spec
 
 ## Why Most AI Training Fails
 
-Here's the pattern I see repeatedly: Someone attends an AI workshop. They learn that ChatGPT can write emails and summarize documents. They go back to work, try it once or twice, find the output doesn't quite match their needs, and conclude that AI "isn't ready" for their work.
+Here's the pattern I see repeatedly: Someone attends an AI workshop. They learn that ChatGPT can write emails and summarize documents. They go back to work, try it once or twice, find the output doesn't quite match their needs, and conclude that AI "isn't ready" for their work. This is the core reason [most AI training doesn't stick](/blog/why-ai-training-doesnt-stick).
 
 The problem isn't the tools. It's the gap between generic demonstrations and specific workflows. Showing someone that AI can summarize text is useless if they don't know how to integrate summarization into their actual daily routine.
 
@@ -22,7 +22,7 @@ For Dorich's audience - professionals focused on career development and personal
 
 The first pain point we addressed: information overload. Professionals spend hours reading reports, meeting notes, and research documents. The cognitive load is exhausting.
 
-We demonstrated how tools like ChatGPT, Google's NotebookLM, and Perplexity can transform this process. Upload a document. Ask for a summary. Request the key action items. Get a translation if needed. The workflow takes minutes instead of hours.
+We demonstrated how [tools like ChatGPT, Google's NotebookLM, and Perplexity](/blog/ai-tool-stack-3000-professionals) can transform this process. Upload a document. Ask for a summary. Request the key action items. Get a translation if needed. The workflow takes minutes instead of hours.
 
 But the real lesson wasn't the tool - it was the prompt structure. We taught participants to specify exactly what they needed: "Summarize this in three bullet points" produces different results than "What are the main arguments?" Precision in prompting is a skill that transfers across every AI application.
 

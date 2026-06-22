@@ -9,7 +9,7 @@ My PreToolUse hook caught it. The policy engine compared the outbound email agai
 
 That one save justified the entire hooks system I had spent a weekend building.
 
-This is Part 3 of the Claude Code Mastery series. [Part 1](/blog/claude-code-mastery-part-1-claude-md) covered CLAUDE.md as your AI's operating system. [Part 2](/blog/claude-code-mastery-part-2-memory-systems) covered memory architecture. This one is about the part most people skip entirely: making autonomous AI safe enough to trust with real business operations.
+This is Part 3 of the Claude Code Mastery series. [Part 1](/blog/claude-code-mastery-part-1-getting-started) covered CLAUDE.md as your AI's operating system. [Part 2](/blog/claude-code-mastery-part-2-skills-memory) covered memory architecture. This one is about the part most people skip entirely: making autonomous AI safe enough to trust with real business operations.
 
 ## The Trust Problem
 

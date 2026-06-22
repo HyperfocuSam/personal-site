@@ -42,11 +42,11 @@ That's not a trick. That's just how exposure works. Athletes call it visualizati
 
 ## What I'd skip
 
-I've tried the version where you ask an LLM to "write me 20 interview questions for X role." It's fine, and it's fragile — you end up memorizing specific answers instead of internalizing the space. I've tried outsourcing the whole thing to a single mega-prompt in ChatGPT. That produces slop. You need the notebook structure so sources compound.
+I've tried the version where you ask an LLM to "write me 20 interview questions for X role." It's fine, and it's fragile — you end up memorizing specific answers instead of internalizing the space. I've tried outsourcing the whole thing to a [single mega-prompt in ChatGPT](/blog/ai-prompts-beat-procrastination). That produces slop. You need the notebook structure so sources compound.
 
 I've also seen people use AI to generate a "personal brand statement" and then read it aloud in front of a mirror. Don't. The mirror adds nothing that the NotebookLM audio doesn't already deliver, without the awkwardness.
 
-The workflow costs nothing beyond tools most people in this market already have: a NotebookLM account (free) and a ChatGPT Plus subscription (USD 20/month). If you're between jobs, both are worth the trial.
+The workflow costs nothing beyond tools most people in this market already have: a NotebookLM account (free) and a [ChatGPT Plus subscription (USD 20/month)](/blog/why-pay-for-ai-tools). If you're between jobs, both are worth the trial.
 
 Play smart is always cheaper than cram harder.
 

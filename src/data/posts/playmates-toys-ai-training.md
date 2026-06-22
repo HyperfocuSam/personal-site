@@ -46,7 +46,7 @@ The second session shifted to practical application. By this point, management h
 
 **Follow-Up Iteration.** The first draft is never the final product. I showed how to refine within a conversation: "Make it more urgent," "Add a line about scheduling a call," "Give me both English and Traditional Chinese versions." This is where participants had their real breakthrough moment -- realizing that AI is a conversation, not a one-shot query.
 
-Every example used toy industry context. Supplier delay emails referenced order numbers that looked real. Research queries asked about EU packaging regulations for toy manufacturers exporting from Hong Kong. Meeting prep scenarios involved cross-departmental product launch reviews. When the content mirrors someone's actual Tuesday afternoon, adoption follows naturally.
+Every example used toy industry context. Supplier delay emails referenced order numbers that looked real. Research queries asked about EU packaging regulations for toy manufacturers exporting from Hong Kong. Meeting prep scenarios involved cross-departmental product launch reviews. When the content mirrors someone's actual Tuesday afternoon, [adoption follows naturally](/blog/why-ai-training-doesnt-stick).
 
 ## Data Safety as an Accelerator
 
@@ -58,7 +58,7 @@ This was not a throwaway compliance slide. Playmates had raised data security as
 
 ## Why Small Groups Work
 
-Most of my engagements are larger. Bank of China was 1,530 participants. Chow Tai Fook fills conference rooms. The Playmates sessions had 10 to 12 people in each.
+Most of my engagements are larger. Bank of China was 1,530 participants. [Chow Tai Fook fills conference rooms](/blog/ctf-ai-design-thinking-workshop-2026). The Playmates sessions had 10 to 12 people in each.
 
 The small format changed the dynamic in ways I want to be honest about:
 

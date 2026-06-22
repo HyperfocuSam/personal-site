@@ -10,7 +10,7 @@ During the Club 80 livestream, we ran a poll. 498 viewers voted. The question wa
 
 76% said no.
 
-That number didn't surprise me, but it should concern anyone who cares about staying competitive. If three quarters of the population is using free-tier AI — which means rate-limited, older models, fewer features — then the 24% who do pay have an asymmetric advantage. And as I'll explain, most of that 24% aren't even using what they paid for properly. The actual percentage of people using AI at full capability is vanishingly small.
+That number didn't surprise me, but it should concern anyone who cares about staying competitive. If three quarters of the population is using free-tier AI — which means rate-limited, older models, fewer features — then [the 24% who do pay have an asymmetric advantage](/blog/84-percent-never-used-ai). And as I'll explain, most of that 24% aren't even using what they paid for properly. The actual percentage of people using AI at full capability is vanishingly small.
 
 That's not a problem. That's a window.
 
@@ -72,7 +72,7 @@ Let's do the math. 76% of people don't pay for AI tools at all. Of the 24% who d
 
 The percentage of people actually using AI at its full capability is probably in the low single digits. Maybe lower.
 
-This is the competitive landscape right now. Not in five years. Right now. If you invest the time to learn your tools properly — not just subscribe, but actually learn — you're operating at a level that the vast majority of your peers and competitors haven't reached.
+This is the competitive landscape right now. Not in five years. Right now. If you invest the time to [learn your tools properly](/blog/ai-tool-stack-3000-professionals) — not just subscribe, but actually learn — you're operating at a level that the vast majority of your peers and competitors haven't reached.
 
 The taxi driver wasn't wrong that AI costs money. He was wrong that it's a scam. The real scam is paying for a tool and never learning to use it.
 

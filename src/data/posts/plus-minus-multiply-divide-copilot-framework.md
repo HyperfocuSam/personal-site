@@ -2,7 +2,7 @@
 
 At 1am the night before a Finance and Purchasing workshop, I scrapped the pack I'd just finished. The team had spent the evening building a Demo 1 to Demo 4 invoice-and-PO arc. Solid material. Technically correct. I couldn't sleep on it because I knew the room.
 
-Finance people don't need a Copilot demo. They've seen the feature tour. What they need is permission to use it without feeling like they're guessing every prompt. The Demo 1 to Demo 4 arc gave them workflows. It didn't give them a way to think.
+Finance people don't need a Copilot demo. They've seen the feature tour. What they need is permission to use it without feeling like they're guessing every prompt. This is part of [why I teach Copilot, not ChatGPT](/blog/why-i-teach-copilot-not-chatgpt) — the tool is already in their workflow. The Demo 1 to Demo 4 arc gave them workflows. It didn't give them a way to think.
 
 So I rewrote it around four arithmetic operations. Plus, minus, multiply, divide. By 6am the deck was different, the datasets were regenerated, the prompts were re-cut. The workshop ran at 10. I don't know yet if I would do this again the same way, but the framework survived the panic, which is usually a sign it's load-bearing.
 
@@ -58,6 +58,6 @@ The Magic Moment beat in the middle — a Copilot-makes-a-chart moment between M
 
 The arithmetic framework survives because it's not pretending to be more than it is. Four moves. Two prompt-layer (Plus, Minus) and two configuration-layer (Multiply, Divide). You can hold all four in your head during a real workflow, three weeks after the workshop, on a Tuesday when no one is watching.
 
-That's the test I care about. Did the framework outlast the room? I'll know in three weeks when I'm back for Session 2 and the participants either talk about their actual work in these terms, or they don't. If they don't, the operators were the wrong ones, and I'll find out what should have replaced them.
+That's the test I care about. Did the framework outlast the room? It is the same question behind [why most AI training doesn't stick](/blog/why-ai-training-doesnt-stick). I'll know in three weeks when I'm back for Session 2 and the participants either talk about their actual work in these terms, or they don't. If they don't, the operators were the wrong ones, and I'll find out what should have replaced them.
 
 The 1am rewrite was probably right. But "probably right" is all I can give you until the people who sat in the room use it without me there.
