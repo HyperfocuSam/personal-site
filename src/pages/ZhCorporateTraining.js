@@ -271,12 +271,6 @@ const ZhCorporateTraining = () => (
             addressLocality: 'Hong Kong',
             addressCountry: 'HK',
           },
-          aggregateRating: {
-            '@type': 'AggregateRating',
-            ratingValue: '9.2',
-            bestRating: '10',
-            ratingCount: '1500',
-          },
           provider: {
             '@type': 'Person',
             name: 'Sam Wong',

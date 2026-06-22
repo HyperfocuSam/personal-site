@@ -351,7 +351,7 @@ const About = () => (
               'https://github.com/HyperfocuSam',
               'https://www.threads.net/@sam_ai_cbo',
             ],
-            description: 'Hong Kong-based AI training specialist. 9,462+ professionals trained across 66+ organizations in 12 countries on practical AI adoption that changes behavior, not just builds awareness.',
+            description: 'Hong Kong-based AI training specialist. 10,000+ professionals trained across 70+ organizations in 13 countries on practical AI adoption that changes behavior, not just builds awareness.',
           })}
         </script>
         <script type="application/ld+json">
@@ -364,7 +364,7 @@ const About = () => (
                 name: 'Who is Sam Wong?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Sam Wong is an AI training specialist based in Hong Kong who has trained 9,462+ professionals across 66+ organizations. He co-founded Adaptig, a global AI trainer network spanning four continents. He focuses on practical, human-first AI adoption that changes behavior, not just builds awareness.',
+                  text: 'Sam Wong is an AI training specialist based in Hong Kong who has trained 10,000+ professionals across 70+ organizations. He co-founded Adaptig, a global AI trainer network spanning four continents. He focuses on practical, human-first AI adoption that changes behavior, not just builds awareness.',
                 },
               },
               {

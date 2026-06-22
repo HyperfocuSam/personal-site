@@ -85,12 +85,6 @@ const schema = [
     image: `${SITE_URL}/images/Sam.png`,
     url: `${SITE_URL}/services`,
     address: { '@type': 'PostalAddress', addressLocality: 'Hong Kong', addressCountry: 'HK' },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '9.2',
-      bestRating: '10',
-      ratingCount: '1500',
-    },
     review: [
       {
         '@type': 'Review',

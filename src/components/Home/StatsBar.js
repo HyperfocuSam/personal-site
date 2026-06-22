@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 
 const stats = [
   {
-    value: 9462, suffix: '+', label: 'Professionals Trained', primary: true, format: true,
+    value: 10000, suffix: '+', label: 'Professionals Trained', primary: true, format: true,
   },
   { value: 170, suffix: '+', label: 'Workshops Delivered' },
-  { value: 66, suffix: '+', label: 'Organizations Served' },
-  { value: 12, suffix: '', label: 'Countries Reached' },
+  { value: 70, suffix: '+', label: 'Organizations Served' },
+  { value: 13, suffix: '', label: 'Countries Reached' },
 ];
 
 const formatValue = (value, format, decimal) => {
