@@ -22,4 +22,4 @@ Day one read。未係完成的 pattern。只係 toolbox 變細嘅一日。
 
 ---
 
-*在 [LinkedIn](https://www.linkedin.com/in/samwonghk/) 上聯絡我。*
+*在 [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/) 上聯絡我。*

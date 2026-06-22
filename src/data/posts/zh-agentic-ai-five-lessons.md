@@ -64,4 +64,4 @@ Framework 降低咗門檻。但 craft 仲係喺你手上。
 
 ---
 
-*Sam Wong 喺 6 個國家做 AI adoption training，訓練超過 10,000 位專業人士。[LinkedIn](https://www.linkedin.com/in/samwong-ai/) | [Adaptig](https://adaptig.com)*
+*Sam Wong 喺 6 個國家做 AI adoption training，訓練超過 10,000 位專業人士。[LinkedIn](https://www.linkedin.com/in/sam-ai-agent/) | [Adaptig](https://adaptig.com)*

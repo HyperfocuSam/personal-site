@@ -64,4 +64,4 @@ And that is where the craft is.
 
 ---
 
-*Sam Wong builds agentic AI systems and trains companies on AI adoption across 6 countries. Connect on [LinkedIn](https://www.linkedin.com/in/samwong-ai/).*
+*Sam Wong builds agentic AI systems and trains companies on AI adoption across 6 countries. Connect on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*

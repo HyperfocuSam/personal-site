@@ -48,4 +48,4 @@ HR 團隊幾乎本能地理解的安全邊界，在 Sales 這裡需要從頭重�
 
 ---
 
-*我記錄自己在香港及各地培訓室的真實觀察。如果這些內容對你有用，歡迎[在 LinkedIn 聯繫](https://www.linkedin.com/in/hyperfocusam/)。*
+*我記錄自己在香港及各地培訓室的真實觀察。如果這些內容對你有用，歡迎[在 LinkedIn 聯繫](https://www.linkedin.com/in/sam-ai-agent/)。*

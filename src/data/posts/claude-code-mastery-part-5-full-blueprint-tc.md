@@ -182,4 +182,4 @@ ADHD 意味著我的 working memory 不可靠。我會忘記兩天前對 client 
 
 ---
 
-*本篇是 Claude Code 完全攻略系列的最後一篇。[第一篇](/blog/claude-code-mastery-part-1-getting-started-tc)、[第二篇](/blog/claude-code-mastery-part-2-skills-memory-tc)、[第三篇](/blog/claude-code-mastery-part-3-hooks-guardrails-tc)、[第四篇](/blog/claude-code-mastery-part-4-agent-teams-tc)有每個 component 的詳細講解。如果你也正在搭建自己的系統，歡迎到 [LinkedIn](https://www.linkedin.com/in/samwonghk/) connect -- 我確實想看看其他人會建造出什麼。*
+*本篇是 Claude Code 完全攻略系列的最後一篇。[第一篇](/blog/claude-code-mastery-part-1-getting-started-tc)、[第二篇](/blog/claude-code-mastery-part-2-skills-memory-tc)、[第三篇](/blog/claude-code-mastery-part-3-hooks-guardrails-tc)、[第四篇](/blog/claude-code-mastery-part-4-agent-teams-tc)有每個 component 的詳細講解。如果你也正在搭建自己的系統，歡迎到 [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/) connect -- 我確實想看看其他人會建造出什麼。*

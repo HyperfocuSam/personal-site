@@ -166,4 +166,4 @@ Next in the series: [Part 4 -- Agent Teams](/blog/claude-code-mastery-part-4-age
 
 ---
 
-*I train companies across six countries on AI adoption that actually sticks. If you are building with Claude Code and want to compare notes, connect with me on [LinkedIn](https://www.linkedin.com/in/samwong-ai/).*
+*I train companies across six countries on AI adoption that actually sticks. If you are building with Claude Code and want to compare notes, connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*

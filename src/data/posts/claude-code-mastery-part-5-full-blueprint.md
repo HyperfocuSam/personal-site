@@ -183,4 +183,4 @@ If it is not in the system, it does not exist. And that is exactly why the syste
 
 ---
 
-*This is the final post in the Claude Code Mastery series. Parts [1](/blog/claude-code-mastery-part-1-getting-started), [2](/blog/claude-code-mastery-part-2-skills-memory), [3](/blog/claude-code-mastery-part-3-hooks-guardrails), and [4](/blog/claude-code-mastery-part-4-agent-teams) cover each component in detail. Connect with me on [LinkedIn](https://www.linkedin.com/in/samwonghk/) if you are building your own system -- I genuinely want to see what other people come up with.*
+*This is the final post in the Claude Code Mastery series. Parts [1](/blog/claude-code-mastery-part-1-getting-started), [2](/blog/claude-code-mastery-part-2-skills-memory), [3](/blog/claude-code-mastery-part-3-hooks-guardrails), and [4](/blog/claude-code-mastery-part-4-agent-teams) cover each component in detail. Connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/) if you are building your own system -- I genuinely want to see what other people come up with.*

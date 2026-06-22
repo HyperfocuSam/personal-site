@@ -128,4 +128,4 @@ If it's not in CLAUDE.md, it remembers nothing.
 
 ---
 
-*I train organizations on AI adoption and build agent systems for my own business. Connect with me on [LinkedIn](https://www.linkedin.com/in/samwonghk/).*
+*I train organizations on AI adoption and build agent systems for my own business. Connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*

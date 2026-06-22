@@ -145,4 +145,4 @@ Blog pipeline 是最激進的設計。Auto-publish mode。每週一，script sca
 
 ---
 
-*我在六個國家為企業提供 AI adoption 培訓。如果你也在用 Claude Code 構建系統，歡迎到 [LinkedIn](https://www.linkedin.com/in/samwong-ai/) connect 交流。*
+*我在六個國家為企業提供 AI adoption 培訓。如果你也在用 Claude Code 構建系統，歡迎到 [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/) connect 交流。*

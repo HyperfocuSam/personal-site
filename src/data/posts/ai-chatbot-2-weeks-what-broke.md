@@ -90,4 +90,4 @@ The chatbot crashed on turn three. Not because the AI failed. Because the guardr
 
 ---
 
-*I write about building AI products and training enterprises to adopt them. If this landed, I'm on [LinkedIn](https://linkedin.com/in/hyperfocusam).*
+*I write about building AI products and training enterprises to adopt them. If this landed, I'm on [LinkedIn](https://linkedin.com/in/sam-ai-agent).*

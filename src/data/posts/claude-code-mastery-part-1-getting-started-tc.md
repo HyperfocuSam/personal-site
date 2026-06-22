@@ -125,4 +125,4 @@ MCP 的 deep dive 會在系列第三篇詳述。但我在第一篇就提及，�
 
 *完整英文版請至 hyperfocusam.com/blog/claude-code-mastery-part-1-getting-started 閱讀。*
 
-*歡迎在 [LinkedIn](https://www.linkedin.com/in/samwonghk/) 交流。*
+*歡迎在 [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/) 交流。*

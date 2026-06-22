@@ -75,4 +75,4 @@ KPMG 北歐的做法不同。他們做了什麼：
 
 ---
 
-*我撰寫關於企業 AI 落地的實戰經驗——不是投影片上好聽的故事。如果這篇引起共鳴，歡迎在 [LinkedIn](https://linkedin.com/in/hyperfocusam) 交流。*
+*我撰寫關於企業 AI 落地的實戰經驗——不是投影片上好聽的故事。如果這篇引起共鳴，歡迎在 [LinkedIn](https://linkedin.com/in/sam-ai-agent) 交流。*

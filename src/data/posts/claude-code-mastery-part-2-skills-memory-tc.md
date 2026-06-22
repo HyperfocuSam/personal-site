@@ -139,4 +139,4 @@ Memory 告訴 Claude 它知道什麼。Skills 告訴它怎麼做。Hooks 告訴�
 
 ---
 
-*[在 LinkedIn 找我](https://www.linkedin.com/in/hyperfocusam/)，聊聊如何建立真正能運作的 AI system。*
+*[在 LinkedIn 找我](https://www.linkedin.com/in/sam-ai-agent/)，聊聊如何建立真正能運作的 AI system。*

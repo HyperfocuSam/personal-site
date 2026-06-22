@@ -54,4 +54,4 @@ NotebookLM 的 Podcast 模式有一個特別之處。兩位合成主持人會輪
 
 ---
 
-*在 [LinkedIn](https://www.linkedin.com/in/hyperfocusam/) 與我聯繫。*
+*在 [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/) 與我聯繫。*

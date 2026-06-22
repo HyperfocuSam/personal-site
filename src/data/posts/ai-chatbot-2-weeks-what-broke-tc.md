@@ -80,4 +80,4 @@
 
 ---
 
-*我撰寫關於 AI 產品開發與企業 AI 落地的文章。如果這篇對你有幫助，歡迎在 [LinkedIn](https://linkedin.com/in/hyperfocusam) 交流。*
+*我撰寫關於 AI 產品開發與企業 AI 落地的文章。如果這篇對你有幫助，歡迎在 [LinkedIn](https://linkedin.com/in/sam-ai-agent) 交流。*

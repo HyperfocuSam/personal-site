@@ -93,4 +93,4 @@ Prompts are a starting point. Behavior change is the answer.
 
 ---
 
-*I write about AI adoption, corporate training, and what actually happens when organizations try to change. Connect with me on [LinkedIn](https://www.linkedin.com/in/samwonghk/).*
+*I write about AI adoption, corporate training, and what actually happens when organizations try to change. Connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*

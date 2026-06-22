@@ -48,4 +48,4 @@ I'll know more after April 29.
 
 ---
 
-*I write about what I actually observe in training rooms across Hong Kong and beyond. If that's useful to you, [connect with me on LinkedIn](https://www.linkedin.com/in/hyperfocusam/).*
+*I write about what I actually observe in training rooms across Hong Kong and beyond. If that's useful to you, [connect with me on LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*

@@ -22,4 +22,4 @@ Day one read. Not a finished pattern. Just the day the toolbox got smaller.
 
 ---
 
-*Connect with me on [LinkedIn](https://www.linkedin.com/in/samwonghk/).*
+*Connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*

@@ -151,4 +151,4 @@ If it's not in memory.md, it remembered nothing.
 
 ---
 
-*[Connect with me on LinkedIn](https://www.linkedin.com/in/hyperfocusam/) for more on building AI systems that actually work.*
+*[Connect with me on LinkedIn](https://www.linkedin.com/in/sam-ai-agent/) for more on building AI systems that actually work.*

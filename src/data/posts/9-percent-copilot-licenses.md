@@ -89,4 +89,4 @@ The tool isn't the training. The training isn't the adoption. The adoption isn't
 
 ---
 
-*I write about what actually works in enterprise AI adoption -- not what sounds good in a slide deck. If this resonated, I'm on [LinkedIn](https://linkedin.com/in/hyperfocusam).*
+*I write about what actually works in enterprise AI adoption -- not what sounds good in a slide deck. If this resonated, I'm on [LinkedIn](https://linkedin.com/in/sam-ai-agent).*

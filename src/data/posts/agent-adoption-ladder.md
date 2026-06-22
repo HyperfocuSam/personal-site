@@ -68,4 +68,4 @@ I train companies on this for a living. The ones that succeed aren't the ones wi
 
 ---
 
-*Connect with me on [LinkedIn](https://www.linkedin.com/in/hyperfocusam/) to follow how I use these tools in practice.*
+*Connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/) to follow how I use these tools in practice.*

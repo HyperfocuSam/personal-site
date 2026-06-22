@@ -125,4 +125,4 @@ InstructionsLoaded hook 在 session start 時觸發。我的做法：
 
 ---
 
-*我在六個國家培訓企業進行 AI adoption。如果你也在用 Claude Code 構建系統，歡迎到 [LinkedIn](https://www.linkedin.com/in/samwong-ai/) connect 交流。*
+*我在六個國家培訓企業進行 AI adoption。如果你也在用 Claude Code 構建系統，歡迎到 [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/) connect 交流。*
