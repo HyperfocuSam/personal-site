@@ -140,15 +140,22 @@ const Post = () => {
     '@type': 'BlogPosting',
     headline: post.title,
     description: post.excerpt,
-    author: { '@type': 'Person', name: 'Sam Wong', url: SITE_URL },
+    author: {
+      '@type': 'Person',
+      '@id': 'https://hyperfocusam.com/#person',
+      name: 'Sam Wong',
+      url: `${SITE_URL}/about`,
+    },
     datePublished: post.date,
+    dateModified: post.dateModified || post.date,
     image: imageUrl,
     url: postUrl,
+    mainEntityOfPage: postUrl,
     inLanguage: postLang === 'zh-Hant' ? 'zh-Hant' : 'en',
     publisher: {
       '@type': 'Organization',
       name: 'Adaptig',
-      url: 'https://adaptig.com',
+      url: 'https://adaptig.ai',
     },
   };
 

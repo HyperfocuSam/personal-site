@@ -308,6 +308,7 @@ const About = () => (
           {JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Person',
+            '@id': 'https://hyperfocusam.com/#person',
             name: 'Sam Wong',
             alternateName: ['Samuel Wong', 'HyperfocuSam'],
             url: 'https://hyperfocusam.com/about',
