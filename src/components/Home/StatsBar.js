@@ -8,9 +8,6 @@ const stats = [
   { value: 170, suffix: '+', label: 'Workshops Delivered' },
   { value: 66, suffix: '+', label: 'Organizations Served' },
   { value: 12, suffix: '', label: 'Countries Reached' },
-  {
-    value: 7.9, suffix: '/10', label: 'Avg. Satisfaction', decimal: true,
-  },
 ];
 
 const formatValue = (value, format, decimal) => {

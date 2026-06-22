@@ -20,7 +20,7 @@ const Index = () => (
     description={
       'Hong Kong-based AI training specialist. Sam Wong delivers corporate AI workshops, '
       + '1-1 coaching, and Train-the-Trainer programs for enterprises across Asia-Pacific. '
-      + '9,462+ professionals trained, 7.9/10 satisfaction.'
+      + '9,462+ professionals trained.'
     }
     canonicalUrl={`${SITE_URL}/`}
     ogTitle="Sam Wong | AI Training Specialist - Hong Kong"
