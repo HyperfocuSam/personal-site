@@ -1,0 +1,43 @@
+{
+  "_source": "Figma file 'Sam Wong — Brand System' (key t8UgKr1GrFadEwZNSGOx1d)",
+  "_note": "Snapshot of the Figma brand variables. This is the INPUT to scripts/sync-figma-tokens.mjs. To refresh it, re-extract the variables from Figma (via Ada/the Figma MCP, or the Tokens Studio plugin), then re-run the script.",
+  "_capturedFromFigma": "2026-06-25",
+  "tokens": [
+    { "collection": "Sam/Primitives", "name": "color/amber",        "type": "COLOR", "value": "#c8965a" },
+    { "collection": "Sam/Primitives", "name": "color/amberLight",   "type": "COLOR", "value": "#d4a96e" },
+    { "collection": "Sam/Primitives", "name": "color/ink",          "type": "COLOR", "value": "#0c0c0c" },
+    { "collection": "Sam/Primitives", "name": "color/inkMid",       "type": "COLOR", "value": "#1a1a1a" },
+    { "collection": "Sam/Primitives", "name": "color/bg",           "type": "COLOR", "value": "#fafaf9" },
+    { "collection": "Sam/Primitives", "name": "color/raised",       "type": "COLOR", "value": "#ffffff" },
+    { "collection": "Sam/Primitives", "name": "color/sunken",       "type": "COLOR", "value": "#f0f0f0" },
+    { "collection": "Sam/Primitives", "name": "color/textBody",     "type": "COLOR", "value": "#4a4a4a" },
+    { "collection": "Sam/Primitives", "name": "color/textMuted",    "type": "COLOR", "value": "#8a8a8a" },
+    { "collection": "Sam/Primitives", "name": "color/borderSubtle", "type": "COLOR", "value": "#e5e5e5" },
+    { "collection": "Sam/Primitives", "name": "color/darkDeep",     "type": "COLOR", "value": "#1a1816" },
+    { "collection": "Sam/Primitives", "name": "color/onDark",       "type": "COLOR", "value": "#f0ece8" },
+
+    { "collection": "Sam/Scale", "name": "space/0",  "type": "FLOAT", "value": 0 },
+    { "collection": "Sam/Scale", "name": "space/4",  "type": "FLOAT", "value": 4 },
+    { "collection": "Sam/Scale", "name": "space/8",  "type": "FLOAT", "value": 8 },
+    { "collection": "Sam/Scale", "name": "space/12", "type": "FLOAT", "value": 12 },
+    { "collection": "Sam/Scale", "name": "space/16", "type": "FLOAT", "value": 16 },
+    { "collection": "Sam/Scale", "name": "space/24", "type": "FLOAT", "value": 24 },
+    { "collection": "Sam/Scale", "name": "space/32", "type": "FLOAT", "value": 32 },
+    { "collection": "Sam/Scale", "name": "space/48", "type": "FLOAT", "value": 48 },
+    { "collection": "Sam/Scale", "name": "space/64", "type": "FLOAT", "value": 64 },
+    { "collection": "Sam/Scale", "name": "radius/none", "type": "FLOAT", "value": 0 },
+    { "collection": "Sam/Scale", "name": "radius/sm",   "type": "FLOAT", "value": 4 },
+    { "collection": "Sam/Scale", "name": "radius/md",   "type": "FLOAT", "value": 8 },
+    { "collection": "Sam/Scale", "name": "radius/lg",   "type": "FLOAT", "value": 12 },
+    { "collection": "Sam/Scale", "name": "radius/pill", "type": "FLOAT", "value": 1000 },
+
+    { "collection": "Sam/Semantic", "name": "bg/default",     "type": "COLOR", "value": "#fafaf9", "aliasedTo": "color/bg" },
+    { "collection": "Sam/Semantic", "name": "bg/raised",      "type": "COLOR", "value": "#ffffff", "aliasedTo": "color/raised" },
+    { "collection": "Sam/Semantic", "name": "bg/dark",        "type": "COLOR", "value": "#1a1816", "aliasedTo": "color/darkDeep" },
+    { "collection": "Sam/Semantic", "name": "text/heading",   "type": "COLOR", "value": "#0c0c0c", "aliasedTo": "color/ink" },
+    { "collection": "Sam/Semantic", "name": "text/body",      "type": "COLOR", "value": "#4a4a4a", "aliasedTo": "color/textBody" },
+    { "collection": "Sam/Semantic", "name": "text/muted",     "type": "COLOR", "value": "#8a8a8a", "aliasedTo": "color/textMuted" },
+    { "collection": "Sam/Semantic", "name": "accent/primary", "type": "COLOR", "value": "#c8965a", "aliasedTo": "color/amber" },
+    { "collection": "Sam/Semantic", "name": "text/on-dark",   "type": "COLOR", "value": "#f0ece8", "aliasedTo": "color/onDark" }
+  ]
+}
