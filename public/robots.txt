@@ -37,6 +37,18 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
 # Sitemap & Feed
 Sitemap: https://hyperfocusam.com/sitemap.xml
 

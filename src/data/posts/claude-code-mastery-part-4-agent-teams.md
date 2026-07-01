@@ -150,4 +150,4 @@ Next in the series: Part 5, where I pull everything together into a complete blu
 
 ---
 
-*I train companies across six countries on AI adoption that actually sticks. If you are building with Claude Code and want to compare notes, connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*
+*I train companies across 13 countries on AI adoption that actually sticks. If you are building with Claude Code and want to compare notes, connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*

@@ -6,6 +6,7 @@ const PageNotFound = () => (
   <HelmetProvider>
     <div className="not-found">
       <Helmet title="404 Not Found">
+        <meta name="robots" content="noindex" />
         <meta
           name="description"
           content="The content you are looking for cannot be found."

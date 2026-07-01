@@ -39,7 +39,7 @@ const Index = () => (
   >
     <Helmet>
       <script type="application/ld+json">
-        {JSON.stringify({
+        {JSON.stringify([{
           '@context': 'https://schema.org',
           '@type': 'ProfessionalService',
           name: 'Sam Wong - AI Training Specialist',
@@ -63,7 +63,16 @@ const Index = () => (
               { '@type': 'Organization', name: 'Adaptig', url: 'https://adaptig.ai' },
             ],
           },
-        })}
+        }, {
+          '@context': 'https://schema.org',
+          '@type': 'WebPage',
+          '@id': `${SITE_URL}/#webpage`,
+          url: `${SITE_URL}/`,
+          speakable: {
+            '@type': 'SpeakableSpecification',
+            cssSelector: ['.hero-stats', "meta[name='description']"],
+          },
+        }])}
       </script>
     </Helmet>
     <article className="homepage-dark" id="index">

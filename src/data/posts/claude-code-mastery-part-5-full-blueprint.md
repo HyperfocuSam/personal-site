@@ -3,7 +3,7 @@
 
 I have ADHD. Not the "I get distracted sometimes" kind. The diagnosed, medicated, still-forgetting-what-I-promised-a-client-yesterday kind. Executive function challenges -- what to do next, what did I commit to, where did I leave off -- are not occasional inconveniences. They are the operating conditions of my professional life.
 
-I manage eight active client engagements across four business entities. I train over 10,000 professionals in six countries. I publish a bilingual blog, maintain a content pipeline, and run an AI voice agent. I do all of this from a single terminal window, through a system I built over five months on top of Claude Code.
+I manage eight active client engagements across four business entities. I train over 10,000 professionals in 13 countries. I publish a bilingual blog, maintain a content pipeline, and run an AI voice agent. I do all of this from a single terminal window, through a system I built over five months on top of Claude Code.
 
 This is Part 5 -- the finale of the Claude Code Mastery series. In [Part 1](/blog/claude-code-mastery-part-1-getting-started) I showed you CLAUDE.md. In [Part 2](/blog/claude-code-mastery-part-2-skills-memory) I showed you memory and skills. In [Part 3](/blog/claude-code-mastery-part-3-hooks-guardrails) I showed you hooks and guardrails. In [Part 4](/blog/claude-code-mastery-part-4-agent-teams) I showed you agent teams and automation.
 
