@@ -98,10 +98,11 @@ const ZhIndex = () => (
               <p>全球培訓師網絡，為企業提供 AI 應用工作坊。</p>
             </div>
           </div>
+          {/* Single-expression text: adjacent text nodes break react-snap hydration (#418) */}
           <p style={{ textAlign: 'center', marginTop: '1rem', opacity: 0.7 }}>
-            同時係{' '}
+            {'同時係 '}
             <a href="https://dotai.hk" target="_blank" rel="noopener noreferrer">DotAI</a>
-            {' '}嘅創始成員——香港 AI 培訓社群。
+            {' 嘅創始成員——香港 AI 培訓社群。'}
           </p>
         </div>
       </section>

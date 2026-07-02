@@ -45,9 +45,13 @@ const ScrollReveal = ({
 
   const style = delay > 0 ? { transitionDelay: `${delay}ms` } : undefined;
 
-  // If stagger is set, wrap each child with incremental delays
+  // If stagger is set, wrap each child with incremental delays. The wrappers
+  // must exist on EVERY render (visibility only toggles a class): they used to
+  // be added only when isVisible, so react-snap baked the wrapped structure
+  // while hydration's first render produced unwrapped children — a structural
+  // mismatch that failed hydration sitewide (React #418/#423).
   let content = children;
-  if (stagger > 0 && isVisible) {
+  if (stagger > 0) {
     let idx = 0;
     content = Children.map(children, (child) => {
       if (!child || typeof child !== 'object') return child;
@@ -56,7 +60,7 @@ const ScrollReveal = ({
       return (
         <div
           key={child.key || idx}
-          className={`sr-child sr-${variant} sr-visible`}
+          className={`sr-child sr-${variant}${isVisible ? ' sr-visible' : ''}`}
           style={{ transitionDelay: `${childDelay}ms` }}
         >
           {child}

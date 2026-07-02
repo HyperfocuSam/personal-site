@@ -408,11 +408,8 @@ const CorporateTraining = () => (
                   marginBottom: '1rem',
                 }}
                 >
-                  {w.duration}
-                  {' '}
-                  &middot;
-                  {' '}
-                  {w.audience}
+                  {/* Single expression: adjacent text nodes break react-snap hydration (#418) */}
+                  {`${w.duration} · ${w.audience}`}
                 </p>
                 <p>{w.description}</p>
                 <ul style={{ marginTop: '0.75rem', paddingLeft: '1.2rem' }}>
@@ -668,15 +665,15 @@ const CorporateTraining = () => (
             isn&rsquo;t better content &mdash; it&rsquo;s a
             different structure.
           </p>
+          {/* Single-expression text: adjacent text nodes break react-snap hydration (#418) */}
           <p>
-            The{' '}
+            {'The '}
             <Link to="/blog/how-to-design-ai-pioneer-program">
               Pioneer Program model
             </Link>
-            {' '}works because it&rsquo;s built around change
-            management principles: workflow-first exercises, weekly
-            accountability, and internal champions who sustain
-            adoption after the trainer leaves.
+            {' works because it’s built around change management principles:'
+              + ' workflow-first exercises, weekly accountability, and internal'
+              + ' champions who sustain adoption after the trainer leaves.'}
           </p>
           <Link
             to="/blog/why-ai-training-doesnt-stick"

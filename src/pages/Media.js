@@ -204,9 +204,9 @@ const Media = () => (
             <span className="show-intro__badge">Club 80 會八十</span>
             <span>Popular Cantonese YouTube show</span>
           </div>
+          {/* Single-expression text: adjacent text nodes break react-snap hydration (#418) */}
           <p>
-            Sam has appeared as a recurring guest expert on
-            {' '}
+            {'Sam has appeared as a recurring guest expert on '}
             <strong>Club 80 (會八十)</strong>
             , a popular Cantonese YouTube show hosted by
             阿Bu, 陳強, and Greg.

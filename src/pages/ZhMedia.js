@@ -263,9 +263,9 @@ const ZhMedia = () => (
             <span style={styles.showBadge}>Club 80 會八十</span>
             <span>熱門廣東話 YouTube 節目</span>
           </div>
+          {/* Single-expression text: adjacent text nodes break react-snap hydration (#418) */}
           <p>
-            Sam 曾以嘉賓專家身份三度出演
-            {' '}
+            {'Sam 曾以嘉賓專家身份三度出演 '}
             <strong>會八十</strong>
             ，一個由阿Bu、陳強同 Greg 主持嘅熱門廣東話 YouTube 節目。
             節目涵蓋科技、AI 工具同實用數碼技能，面向香港觀眾。

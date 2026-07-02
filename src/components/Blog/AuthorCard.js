@@ -21,10 +21,10 @@ const AuthorCard = ({ compact }) => (
       <Link to="/about" className="author-card__name">
         Sam Wong
       </Link>
+      {/* Single-expression text: adjacent text nodes break react-snap hydration (#418) */}
       {!compact && (
         <p className="author-card__bio">
-          AI Training Specialist helping enterprises adopt AI through
-          {' '}
+          {'AI Training Specialist helping enterprises adopt AI through '}
           <Link to="/services">corporate workshops, coaching, and trainer development</Link>
           . Based in Hong Kong.
         </p>

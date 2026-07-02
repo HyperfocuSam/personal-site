@@ -5,39 +5,96 @@ import './static/css/main.scss'; // All of our styles
 
 const { PUBLIC_URL } = process.env;
 
+// lazyRoute: React.lazy plus a .preload() used before hydration (src/index.js).
+// Without it, the first render of a not-yet-loaded chunk suspends, React swaps
+// in the Suspense fallback, and hydration of the react-snap HTML fails on every
+// route (React #418/#423 → full client re-render). Once preloaded, the page
+// renders synchronously so the baked HTML hydrates cleanly. Client-side
+// navigation still uses the normal lazy/Suspense path.
+const lazyRoute = (importFn) => {
+  let Loaded = null;
+  const LazyInner = lazy(importFn);
+  const Wrapper = (props) => (
+    Loaded
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      ? <Loaded {...props} />
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      : <LazyInner {...props} />
+  );
+  Wrapper.displayName = 'LazyRoute';
+  Wrapper.preload = () => importFn().then((m) => { Loaded = m.default; });
+  return Wrapper;
+};
+
 // Every route - we lazy load so that each page can be chunked
-const About = lazy(() => import('./pages/About'));
-const CorporateTraining = lazy(() => import('./pages/CorporateTraining'));
-const Blog = lazy(() => import('./pages/Blog'));
-const Clients = lazy(() => import('./pages/Clients'));
-const Contact = lazy(() => import('./pages/Contact'));
-const Index = lazy(() => import('./pages/Index'));
-const Media = lazy(() => import('./pages/Media'));
-const NotFound = lazy(() => import('./pages/NotFound'));
-const Post = lazy(() => import('./pages/Post'));
-const Projects = lazy(() => import('./pages/Projects'));
-const Resume = lazy(() => import('./pages/Resume'));
-const Services = lazy(() => import('./pages/Services'));
-const Stats = lazy(() => import('./pages/Stats'));
-const Speaking = lazy(() => import('./pages/Speaking'));
-const Testimonials = lazy(() => import('./pages/Testimonials'));
+const About = lazyRoute(() => import('./pages/About'));
+const CorporateTraining = lazyRoute(() => import('./pages/CorporateTraining'));
+const Blog = lazyRoute(() => import('./pages/Blog'));
+const Clients = lazyRoute(() => import('./pages/Clients'));
+const Contact = lazyRoute(() => import('./pages/Contact'));
+const Index = lazyRoute(() => import('./pages/Index'));
+const Media = lazyRoute(() => import('./pages/Media'));
+const NotFound = lazyRoute(() => import('./pages/NotFound'));
+const Post = lazyRoute(() => import('./pages/Post'));
+const Projects = lazyRoute(() => import('./pages/Projects'));
+const Resume = lazyRoute(() => import('./pages/Resume'));
+const Services = lazyRoute(() => import('./pages/Services'));
+const Stats = lazyRoute(() => import('./pages/Stats'));
+const Speaking = lazyRoute(() => import('./pages/Speaking'));
+const Testimonials = lazyRoute(() => import('./pages/Testimonials'));
 
 // Chinese (Traditional) pages
-const ZhIndex = lazy(() => import('./pages/ZhIndex'));
-const ZhAbout = lazy(() => import('./pages/ZhAbout'));
-const ZhBlog = lazy(() => import('./pages/ZhBlog'));
-const ZhMedia = lazy(() => import('./pages/ZhMedia'));
-const ZhServices = lazy(() => import('./pages/ZhServices'));
-const ZhCorporateTraining = lazy(() => import('./pages/ZhCorporateTraining'));
+const ZhIndex = lazyRoute(() => import('./pages/ZhIndex'));
+const ZhAbout = lazyRoute(() => import('./pages/ZhAbout'));
+const ZhBlog = lazyRoute(() => import('./pages/ZhBlog'));
+const ZhMedia = lazyRoute(() => import('./pages/ZhMedia'));
+const ZhServices = lazyRoute(() => import('./pages/ZhServices'));
+const ZhCorporateTraining = lazyRoute(() => import('./pages/ZhCorporateTraining'));
 
 // Media Kit (designed HTML version)
-const MediaKit = lazy(() => import('./pages/MediaKit'));
+const MediaKit = lazyRoute(() => import('./pages/MediaKit'));
 
 // Booking page (Ro.am lobby embed)
-const Book = lazy(() => import('./pages/Book'));
+const Book = lazyRoute(() => import('./pages/Book'));
 
 // Landing page for paid traffic (no nav)
-const GetStarted = lazy(() => import('./pages/GetStarted'));
+const GetStarted = lazyRoute(() => import('./pages/GetStarted'));
+
+// Path → route component, mirroring the <Routes> table below. Used only for
+// pre-hydration chunk preloading; keep in sync when adding routes.
+const exactRoutes = {
+  '/': Index,
+  '/about': About,
+  '/blog': Blog,
+  '/clients': Clients,
+  '/book': Book,
+  '/contact': Contact,
+  '/corporate-ai-training-hong-kong': CorporateTraining,
+  '/get-started': GetStarted,
+  '/media/kit': MediaKit,
+  '/media': Media,
+  '/zh': ZhIndex,
+  '/zh/about': ZhAbout,
+  '/zh/blog': ZhBlog,
+  '/zh/media': ZhMedia,
+  '/zh/services': ZhServices,
+  '/zh/corporate-ai-training-hong-kong': ZhCorporateTraining,
+  '/projects': Projects,
+  '/resume': Resume,
+  '/services': Services,
+  '/speaking': Speaking,
+  '/stats': Stats,
+  '/testimonials': Testimonials,
+};
+
+export const preloadRouteChunk = (rawPathname) => {
+  let path = rawPathname || '/';
+  if (PUBLIC_URL && path.startsWith(PUBLIC_URL)) path = path.slice(PUBLIC_URL.length) || '/';
+  if (path.length > 1 && path.endsWith('/')) path = path.slice(0, -1);
+  let component = exactRoutes[path];
+  if (!component) component = path.startsWith('/blog/') ? Post : NotFound;
+  return component.preload();
+};
 
 const App = () => (
   <BrowserRouter basename={PUBLIC_URL}>

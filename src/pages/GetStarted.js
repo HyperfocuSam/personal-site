@@ -70,9 +70,9 @@ const GetStarted = () => (
       {/* Hero */}
       <section className="get-started__hero">
         <div className="content-narrow">
+          {/* Single-expression text: adjacent text nodes break react-snap hydration (#418) */}
           <h1>
-            AI Training That Actually Changes
-            {' '}
+            {'AI Training That Actually Changes '}
             <em>How Your Team Works</em>
           </h1>
           <p>

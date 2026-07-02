@@ -56,17 +56,12 @@ const ServiceGroup = ({
         </p>
       )}
       {testimonial && (
+        /* Quote and attribution are single expressions: adjacent text nodes
+           break react-snap hydration (React #418). */
         <blockquote className="service-group__testimonial">
-          &ldquo;
-          {testimonial.quote}
-          &rdquo;
+          {`“${testimonial.quote}”`}
           <footer>
-            {testimonial.name}
-            {' '}
-            |
-            {' '}
-            {testimonial.title}
-            {testimonial.company ? `, ${testimonial.company}` : ''}
+            {`${testimonial.name} | ${testimonial.title}${testimonial.company ? `, ${testimonial.company}` : ''}`}
           </footer>
         </blockquote>
       )}
@@ -78,8 +73,7 @@ const ServiceGroup = ({
           <h4>{service.title}</h4>
           {service.provider && (
             <p className="service-group__item-subtitle">
-              Delivered via
-              {' '}
+              {'Delivered via '}
               <strong>{service.provider}</strong>
             </p>
           )}

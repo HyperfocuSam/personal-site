@@ -17,9 +17,9 @@ const HeroSection = () => (
         Based in Hong Kong, working across Asia-Pacific.
       </p>
       <div className="dark-hero__actions">
+        {/* Single-expression text: adjacent text nodes break react-snap hydration (#418) */}
         <Link to="/services" className="dark-hero__cta">
-          How I Can Help
-          {' '}
+          {'How I Can Help '}
           <span className="dark-hero__arrow">&rarr;</span>
         </Link>
         <Link to="/book" className="dark-hero__cta dark-hero__cta--secondary">

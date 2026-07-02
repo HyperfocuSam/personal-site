@@ -108,8 +108,9 @@ const Contact = () => {
             </div>
 
             <h3>Quick Response via WhatsApp</h3>
+            {/* Single-expression text: adjacent text nodes break react-snap hydration (#418) */}
             <p>
-              For faster responses, reach me on{' '}
+              {'For faster responses, reach me on '}
               <a
                 href="https://wa.me/85264315177"
                 target="_blank"

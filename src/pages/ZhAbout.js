@@ -106,26 +106,23 @@ const ZhAbout = () => (
                   Adaptig
                 </a>
               </strong>
-              {' '}
-              — 共同創辦橫跨北美、拉丁美洲、歐洲同亞太嘅全球培訓師網絡。
+              {/* Single-expression text here and below: adjacent text nodes
+                  break react-snap hydration (React #418) */}
+              {' — 共同創辦橫跨北美、拉丁美洲、歐洲同亞太嘅全球培訓師網絡。'}
             </li>
             <li>
               <strong>AICBO</strong>
-              {' '}
-              — 160+ 場跨行業專業人士嘅一對一輔導。
+              {' — 160+ 場跨行業專業人士嘅一對一輔導。'}
             </li>
             <li>
               <strong>RENPHO AI Division</strong>
-              {' '}
-              — 帶領策略性 AI 轉型同團隊能力建設。
+              {' — 帶領策略性 AI 轉型同團隊能力建設。'}
             </li>
           </ul>
           <p>
-            你可以喺
-            {' '}
+            {'你可以喺 '}
             <Link to="/projects">Projects</Link>
-            {' '}
-            睇到完整時間線。
+            {' 睇到完整時間線。'}
           </p>
         </div>
       </section>

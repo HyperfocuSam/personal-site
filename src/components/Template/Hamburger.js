@@ -1,9 +1,14 @@
-import React, { Suspense, lazy, useState } from 'react';
+import React, { useState } from 'react';
 
 import { Link } from 'react-router-dom';
+import Menu from 'react-burger-menu/lib/menus/slide';
 import routes from '../../data/routes';
 
-const Menu = lazy(() => import('react-burger-menu/lib/menus/slide'));
+// Menu is imported EAGERLY on purpose. It used to be React.lazy-loaded, but
+// the nav renders on every page: during hydration the pending chunk swapped
+// in the Suspense fallback, mismatched the react-snap HTML, and forced every
+// route into client re-rendering (React #418/#423). The chunk was ~12KB —
+// not worth a sitewide hydration failure.
 
 const Hamburger = () => {
   const [open, setOpen] = useState(false);
@@ -28,30 +33,28 @@ const Hamburger = () => {
           </li>
         </ul>
       </nav>
-      <Suspense fallback={<></>}>
-        <Menu right isOpen={open}>
-          <ul className="hamburger-ul">
-            {routes.map((l) => (
-              <li key={l.label}>
-                {l.path.startsWith('http') ? (
-                  <a
-                    href={l.path}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => setOpen(false)}
-                  >
-                    <h3 className={l.index ? 'index-li' : undefined}>{l.label}</h3>
-                  </a>
-                ) : (
-                  <Link to={l.path} onClick={() => setOpen(false)}>
-                    <h3 className={l.index ? 'index-li' : undefined}>{l.label}</h3>
-                  </Link>
-                )}
-              </li>
-            ))}
-          </ul>
-        </Menu>
-      </Suspense>
+      <Menu right isOpen={open}>
+        <ul className="hamburger-ul">
+          {routes.map((l) => (
+            <li key={l.label}>
+              {l.path.startsWith('http') ? (
+                <a
+                  href={l.path}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setOpen(false)}
+                >
+                  <h3 className={l.index ? 'index-li' : undefined}>{l.label}</h3>
+                </a>
+              ) : (
+                <Link to={l.path} onClick={() => setOpen(false)}>
+                  <h3 className={l.index ? 'index-li' : undefined}>{l.label}</h3>
+                </Link>
+              )}
+            </li>
+          ))}
+        </ul>
+      </Menu>
     </div>
   );
 };

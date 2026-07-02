@@ -22,7 +22,8 @@ const SkillBar = ({ data, categories }) => {
         <span>{title}</span>
       </div>
       <div className="skillbar-bar" style={barStyle} />
-      <div className="skill-bar-percent">{competency} / 5</div>
+      {/* Single expression: adjacent text nodes break react-snap hydration (#418) */}
+      <div className="skill-bar-percent">{`${competency} / 5`}</div>
     </div>
   );
 };

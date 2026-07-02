@@ -15,7 +15,7 @@
     "prebuild": "node scripts/generate-sitemap.js && node scripts/generate-llms-txt.js",
     "build": "rimraf ./build && react-scripts build",
     "lint": "eslint \"**/*.js\"",
-    "predeploy": "npm run build && react-snap",
+    "predeploy": "npm run build && react-snap && node scripts/inject-suspense-markers.js",
     "deploy": "gh-pages -d build --dotfiles",
     "start": "react-scripts start",
     "test": "npx jest",
@@ -69,12 +69,12 @@
     ]
   },
   "reactSnap": {
-    "include": ["/", "/resume", "/zh/blog"],
+    "include": ["/", "/resume", "/zh/blog", "/get-started"],
     "skipThirdPartyRequests": true,
     "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"],
     "minifyHtml": {
-      "collapseWhitespace": true,
-      "removeComments": true
+      "collapseWhitespace": false,
+      "removeComments": false
     }
   }
 }

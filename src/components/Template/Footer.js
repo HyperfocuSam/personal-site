@@ -9,10 +9,13 @@ const Footer = () => (
       <div className="footer-col footer-brand">
         <h3>Sam Wong</h3>
         <p className="footer-tagline">AI adoption that sticks.</p>
+        {/* Contiguous text lives in single JSX expressions here (and in the
+            copyright line): adjacent text nodes break react-snap hydration
+            (React #418) because the baked HTML merges them into one node. */}
         <p className="footer-bio">
-          AI Training Specialist helping enterprises and individuals adopt AI.
-          {' '}Co-founder of{' '}
-          <a href="https://adaptig.ai" target="_blank" rel="noopener noreferrer">Adaptig</a>.
+          {'AI Training Specialist helping enterprises and individuals adopt AI. Co-founder of '}
+          <a href="https://adaptig.ai" target="_blank" rel="noopener noreferrer">Adaptig</a>
+          .
         </p>
       </div>
 
@@ -40,7 +43,7 @@ const Footer = () => (
     </div>
 
     <div className="footer-bottom">
-      <p>&copy; {new Date().getFullYear()} Sam Wong. Built in Hong Kong.</p>
+      <p>{`© ${new Date().getFullYear()} Sam Wong. Built in Hong Kong.`}</p>
     </div>
   </footer>
 );

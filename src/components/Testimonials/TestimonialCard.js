@@ -9,16 +9,14 @@ const TestimonialCard = ({
   featured,
 }) => (
   <article className={`testimonial-card${featured ? ' testimonial-card--featured' : ''}`}>
+    {/* Quote and author text are single expressions: adjacent text nodes
+        break react-snap hydration (React #418). */}
     <blockquote className="testimonial-card__quote">
-      &ldquo;
-      {quote}
-      &rdquo;
+      {`“${quote}”`}
     </blockquote>
     <p className="testimonial-card__author">
       <strong>{name}</strong>
-      {' '}
-      {title}
-      {company ? `, ${company}` : ''}
+      {` ${title}${company ? `, ${company}` : ''}`}
     </p>
   </article>
 );

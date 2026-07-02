@@ -16,12 +16,13 @@ const formatValue = (value, format, decimal) => {
   return String(value);
 };
 
+// Value and suffix are joined into ONE string: sibling expressions render as
+// adjacent text nodes, which breaks react-snap hydration (React #418).
 const StatNumber = ({
   value, suffix, format, decimal,
 }) => (
   <span>
-    {formatValue(value, format, decimal)}
-    {suffix}
+    {`${formatValue(value, format, decimal)}${suffix}`}
   </span>
 );
 

@@ -248,7 +248,7 @@ const Post = () => {
                 </span>
                 <span className="post-header__separator">|</span>
                 <span className="post-header__reading-time">
-                  {readingTime} min read
+                  {`${readingTime} min read`}
                 </span>
               </div>
             </div>
@@ -336,8 +336,9 @@ const Post = () => {
                 {prevPost && (
                   <>
                     <span className="post-navigation__label">Previous</span>
+                    {/* Single expressions: adjacent text nodes break hydration (#418) */}
                     <Link to={`/blog/${prevPost.slug}`} className="post-navigation__link">
-                      &larr; {prevPost.title}
+                      {`← ${prevPost.title}`}
                     </Link>
                   </>
                 )}
@@ -347,7 +348,7 @@ const Post = () => {
                   <>
                     <span className="post-navigation__label">Next</span>
                     <Link to={`/blog/${nextPost.slug}`} className="post-navigation__link">
-                      {nextPost.title} &rarr;
+                      {`${nextPost.title} →`}
                     </Link>
                   </>
                 )}

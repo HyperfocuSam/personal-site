@@ -64,9 +64,9 @@ const HomeFAQ = () => (
       <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
     </Helmet>
     <div className="content-narrow">
+      {/* Single-expression text: adjacent text nodes break react-snap hydration (#418) */}
       <h2 className="home-faq__title">
-        Common
-        {' '}
+        {'Common '}
         <em>Questions</em>
       </h2>
       <div className="home-faq__list">

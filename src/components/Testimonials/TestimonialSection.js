@@ -28,17 +28,16 @@ const TestimonialSection = ({
             key={`${testimonial.name}-${testimonial.company || testimonial.title}`}
             className="testimonial-pullquote__item"
           >
+            {/* Quote and role are single expressions: adjacent text nodes
+                break react-snap hydration (React #418). */}
             <p className="testimonial-pullquote__quote">
-              &ldquo;
-              {testimonial.quote}
-              &rdquo;
+              {`“${testimonial.quote}”`}
             </p>
             <footer className="testimonial-pullquote__attribution">
               <span className="testimonial-pullquote__name">{testimonial.name}</span>
               {testimonial.title && (
                 <span className="testimonial-pullquote__role">
-                  {testimonial.title}
-                  {testimonial.company ? `, ${testimonial.company}` : ''}
+                  {[testimonial.title, testimonial.company].filter(Boolean).join(', ')}
                 </span>
               )}
             </footer>

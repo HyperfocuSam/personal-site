@@ -100,9 +100,11 @@ const Book = () => {
               <div className="book-page__option">
                 <h4>Something Else?</h4>
                 <span className="book-page__label">Let&apos;s talk</span>
+                {/* Single-expression text: adjacent nodes break hydration (#418) */}
                 <p>
-                  For executive advisory, team training, or speaking,{' '}
-                  <Link to="/contact">reach out directly</Link>.
+                  {'For executive advisory, team training, or speaking, '}
+                  <Link to="/contact">reach out directly</Link>
+                  .
                 </p>
               </div>
             </div>

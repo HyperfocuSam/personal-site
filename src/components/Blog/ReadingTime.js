@@ -21,7 +21,8 @@ const ReadingTime = ({ text, className }) => {
 
   return (
     <span className={`reading-time ${className || ''}`}>
-      {minutes} min read
+      {/* Single expression: adjacent text nodes break react-snap hydration (#418) */}
+      {`${minutes} min read`}
     </span>
   );
 };

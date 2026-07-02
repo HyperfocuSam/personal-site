@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 const Course = ({ data, last }) => (
   <li className="course-container">
     <a href={data.link}>
-      <h4 className="course-number">{data.number}:</h4>
+      {/* Single expression: adjacent text nodes break react-snap hydration (#418) */}
+      <h4 className="course-number">{`${data.number}:`}</h4>
       <p className="course-name">{data.title}</p>
     </a>
     {!last && (

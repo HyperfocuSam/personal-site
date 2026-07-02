@@ -390,11 +390,8 @@ const ZhCorporateTraining = () => (
                   marginBottom: '1rem',
                 }}
                 >
-                  {w.duration}
-                  {' '}
-                  &middot;
-                  {' '}
-                  {w.audience}
+                  {/* Single expression: adjacent text nodes break react-snap hydration (#418) */}
+                  {`${w.duration} · ${w.audience}`}
                 </p>
                 <p>{w.description}</p>
                 <ul style={{ marginTop: '0.75rem', paddingLeft: '1.2rem' }}>
@@ -637,13 +634,14 @@ const ZhCorporateTraining = () => (
             人喺 24 小時內會忘記 70% 嘅新資訊。
             解決方法唔係更好嘅內容 — 而係唔同嘅結構。
           </p>
+          {/* Single-expression text: adjacent text nodes break react-snap hydration (#418) */}
           <p>
             <Link to="/blog/how-to-design-ai-pioneer-program">
               Pioneer Program 模式
             </Link>
-            {' '}之所以有效，因為佢建基於變革管理原則：
-            以工作流程為本嘅練習、每週問責、
-            同埋喺培訓師離開後仍能持續推動採用嘅內部推動者。
+            {' 之所以有效，因為佢建基於變革管理原則：'
+              + '以工作流程為本嘅練習、每週問責、'
+              + '同埋喺培訓師離開後仍能持續推動採用嘅內部推動者。'}
           </p>
           <Link
             to="/blog/why-ai-training-doesnt-stick"

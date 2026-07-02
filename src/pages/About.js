@@ -204,40 +204,33 @@ const About = () => (
               <strong>
                 <a href="https://adaptig.ai" target="_blank" rel="noopener noreferrer">Adaptig</a>
               </strong>
-              {' '}
-              - Co-founded a global trainer network spanning North America,
-              Latin America, Europe, and Asia-Pacific.
+              {/* Single-expression text here and below: adjacent text nodes
+                  break react-snap hydration (React #418) */}
+              {' - Co-founded a global trainer network spanning North America, Latin America, Europe, and Asia-Pacific.'}
             </li>
             <li>
               <strong>AICBO</strong>
-              {' '}
-              - 160+ one-on-one coaching sessions with professionals across industries.
+              {' - 160+ one-on-one coaching sessions with professionals across industries.'}
             </li>
             <li>
               <strong>RENPHO AI Division</strong>
-              {' '}
-              - Led strategic AI transformation and team capability building.
+              {' - Led strategic AI transformation and team capability building.'}
             </li>
             <li>
               <strong>PromptBox</strong>
-              {' '}
-              - Built internal LLM workflows for daily operations.
+              {' - Built internal LLM workflows for daily operations.'}
             </li>
             <li>
               <strong>AI Pioneer Program</strong>
-              {' '}
-              - A change management-driven model for building internal AI champions,
-              now in second batch deployment.
+              {' - A change management-driven model for building internal AI champions, now in second batch deployment.'}
             </li>
             <li>
               <strong>Fooocus Traditional Chinese</strong>
-              {' '}
-              - Contributed translation for wider AI accessibility.
+              {' - Contributed translation for wider AI accessibility.'}
             </li>
           </ul>
           <p>
-            You can still browse the full timeline in
-            {' '}
+            {'You can still browse the full timeline in '}
             <Link to="/projects">Projects</Link>
             .
           </p>

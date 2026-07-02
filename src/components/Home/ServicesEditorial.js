@@ -25,9 +25,9 @@ const services = [
 const ServicesEditorial = () => (
   <section className="services-editorial full-bleed">
     <div className="content-narrow">
+      {/* Single-expression text: adjacent text nodes break react-snap hydration (#418) */}
       <h2 className="services-editorial__title">
-        How I Can
-        {' '}
+        {'How I Can '}
         <em>Help</em>
       </h2>
       {services.map((service) => (

@@ -10,13 +10,13 @@ const Job = ({
 }) => (
   <article className="jobs-container">
     <header>
+      {/* Single-expression text: adjacent text nodes break react-snap hydration (#418) */}
       <h4>
-        <a href={url}>{name}</a> - {position}
+        <a href={url}>{name}</a>
+        {` - ${position}`}
       </h4>
       <p className="daterange">
-        {' '}
-        {dayjs(startDate).format('MMMM YYYY')} -{' '}
-        {endDate ? dayjs(endDate).format('MMMM YYYY') : 'PRESENT'}
+        {`${dayjs(startDate).format('MMMM YYYY')} - ${endDate ? dayjs(endDate).format('MMMM YYYY') : 'PRESENT'}`}
       </p>
     </header>
     {summary ? (
