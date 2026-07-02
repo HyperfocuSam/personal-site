@@ -5,6 +5,15 @@
 // linkedPost: slug of the corresponding post in another language (for hreflang)
 const posts = [
   {
+    slug: 'ai-manager-not-maker',
+    title: 'AI made me a manager, not a better maker',
+    date: '2026-07-02',
+    excerpt: 'AI raised my output and quietly changed the job — from making the thing to deciding what is worth making. Five practitioners circling the same shift, and why taste is the part that did not get automated.',
+    tags: ['ai-agents', 'reflection', 'ai-adoption', 'taste'],
+    type: 'reflection',
+    featured: false,
+  },
+  {
     slug: 'three-gemini-tools-collapsed-into-one-prompt-today',
     title: 'Three Gemini Tools Collapsed Into One Prompt Today',
     date: '2026-05-20',
