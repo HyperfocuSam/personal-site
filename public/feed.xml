@@ -6,7 +6,14 @@
     <description>AI adoption insights, workshop reflections, and practical AI training tips from Sam Wong.</description>
     <language>en</language>
     <atom:link href="https://hyperfocusam.com/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Wed, 01 Jul 2026 17:58:54 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2026 02:39:01 GMT</lastBuildDate>
+    <item>
+      <title>AI made me a manager, not a better maker</title>
+      <link>https://hyperfocusam.com/blog/ai-manager-not-maker/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/ai-manager-not-maker/</guid>
+      <description>AI raised my output and quietly changed the job — from making the thing to deciding what is worth making. Five practitioners circling the same shift, and why taste is the part that did not get automated.</description>
+      <pubDate>Thu, 02 Jul 2026 00:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>Three Gemini Tools Collapsed Into One Prompt Today</title>
       <link>https://hyperfocusam.com/blog/three-gemini-tools-collapsed-into-one-prompt-today/</link>

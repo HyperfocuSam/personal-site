@@ -96,6 +96,7 @@ Sam Wong is an AI training specialist who has trained 10,000+ professionals acro
 
 ### Personal & Productivity
 
+- [AI made me a manager, not a better maker](https://hyperfocusam.com/blog/ai-manager-not-maker/) (2026-07-02) — AI raised my output and quietly changed the job — from making the thing to deciding what is worth making. Five practitioners circling the same shift, and why taste is the part that did not get automated.
 - [I Audited My AI-Managed Blog. Half the Posts Were Slop.](https://hyperfocusam.com/blog/i-audited-my-ai-blog-it-was-slop/) (2026-04-13) — I teach people to evaluate AI output critically. Then I read my own blog and found five posts with the same three-point structure, the same filler transitions, and the same closing. Here is what I changed.
 - [My Blog Publishes Itself. It Died Silent for 3 Weeks.](https://hyperfocusam.com/blog/my-blog-publishes-itself-silent-death/) (2026-04-12) — I built an autonomous AI blog pipeline. It ran for months, published 47 posts, then silently stopped for three weeks. Exit code 0. No alerts. Here is what went wrong and the three principles I now follow.
 - [What the 2026 Budget's HK$50 Million AI Training Push Actually Means for Your Company](https://hyperfocusam.com/blog/hk-2026-budget-ai-training/) (2026-03-14) — Hong Kong earmarked HK$50 million for AI training in the 2026-27 Budget. Here's what it actually means for corporate training, what's missing, and what to do now.
