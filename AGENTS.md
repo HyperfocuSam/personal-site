@@ -2,13 +2,13 @@
 
 ## Project Overview
 
-React personal website for Sam Wong (hyperfocusam.com). Deployed on Vercel. No TypeScript — JavaScript only. Uses react-snap for static pre-rendering.
+React personal website for Sam Wong (hyperfocusam.com). Deployed to GitHub Pages from the `main` branch via GitHub Actions (`.github/workflows/github-pages.yml`). No TypeScript — JavaScript only. Uses react-snap for static pre-rendering.
 
 ## Commands
 
 - **Dev server:** `npm start`
 - **Build:** `npm run build` (runs `prebuild` scripts for sitemap + llms.txt, then `react-scripts build`)
-- **Deploy:** `npm run predeploy` (build + react-snap) then `npm run deploy` (gh-pages)
+- **Deploy:** push to `main` → GitHub Actions runs `npm run predeploy` (build + react-snap, wrapped in a 5x retry for react-snap flakiness) and publishes to GitHub Pages. (The local `npm run deploy` gh-pages script is legacy, not the live path.)
 - **Lint:** `npm run lint`
 - **Test:** `npm test`
 - **Optimize images:** `npm run optimize-images`
@@ -59,9 +59,10 @@ public/                 # CRA public directory
 
 ## Deployment
 
-- **Platform:** Vercel
-- **Config:** `vercel.json` sets cache headers and security headers
-- **Pre-rendering:** react-snap generates static HTML at build time (configured in package.json under `reactSnap`)
+- **Platform:** GitHub Pages, deployed from `main` via GitHub Actions (`.github/workflows/github-pages.yml`)
+- **Trigger:** every push to `main` (or manual `workflow_dispatch`) runs `retry npm run predeploy` (5x retry) then `actions/deploy-pages`
+- **Config:** `vercel.json` is NOT honored on GitHub Pages — it only applies if the site moves to Vercel. GitHub Pages serves no custom HTTP headers, so security headers (HSTS/X-Frame-Options/Permissions-Policy) would require fronting the site with Cloudflare.
+- **Pre-rendering:** react-snap generates static HTML at build time (configured in package.json under `reactSnap`; any route not reachable by link-crawl must be added to `reactSnap.include` or it 404s)
 - **Node:** >=16.x required
 
 ## Testing

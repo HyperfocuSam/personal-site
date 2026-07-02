@@ -12,6 +12,7 @@ import ClientLogoBar from '../components/Home/ClientLogoBar';
 import ServicesEditorial from '../components/Home/ServicesEditorial';
 import LatestWriting from '../components/Home/LatestWriting';
 import AboutCallout from '../components/Home/AboutCallout';
+import HomeFAQ from '../components/Home/HomeFAQ';
 import EmailCapture from '../components/EmailCapture/EmailCapture';
 import ScrollReveal from '../components/ScrollReveal';
 
@@ -112,7 +113,12 @@ const Index = () => (
         <AboutCallout />
       </ScrollReveal>
 
-      {/* 8. Email Capture — ink band for contrast */}
+      {/* 8. FAQ — question-shaped answer targets for AI discovery queries */}
+      <ScrollReveal variant="fade-up-long">
+        <HomeFAQ />
+      </ScrollReveal>
+
+      {/* 9. Email Capture — ink band for contrast */}
       <ScrollReveal variant="fade-up">
         <EmailCapture
           title="Get practical AI insights — no fluff"
