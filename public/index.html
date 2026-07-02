@@ -39,11 +39,13 @@
          `frame-ancestors` is ignored when CSP is meta-served — kept for parity
          with the eventual HTTP-header rollout.
          Allow-list: GA (googletagmanager + google-analytics) + PostHog +
-         Google Fonts (CSS at fonts.googleapis.com, files at fonts.gstatic.com).
+         Google Fonts (CSS at fonts.googleapis.com, files at fonts.gstatic.com)
+         + YouTube embeds via frame-src (/media episode players — without it
+         default-src 'self' blocks the iframes entirely).
          `unsafe-inline` is required because the inline analytics bootstrap
          above creates <script> nodes at runtime; tightening would require
          nonces threaded through the CRA build. -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://*.googletagmanager.com https://us-assets.i.posthog.com https://*.posthog.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://us.i.posthog.com https://us-assets.i.posthog.com https://*.posthog.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://*.googletagmanager.com https://us-assets.i.posthog.com https://*.posthog.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://us.i.posthog.com https://us-assets.i.posthog.com https://*.posthog.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
 
     <!-- Primary Meta Tags (title + description managed per-page by react-helmet-async) -->
@@ -102,13 +104,13 @@
       "@type": "Organization",
       "name": "DotAI",
       "url": "https://dotai.hk",
-      "logo": "https://dotai.hk/favicon.ico",
+      "logo": "https://hyperfocusam.com/images/dotai-logo.png",
       "founder": {
         "@id": "https://hyperfocusam.com/#person",
         "@type": "Person",
         "name": "Sam Wong"
       },
-      "description": "Hong Kong's leading practical AI education platform. Corporate training, public courses, and AI community serving 50,000+ people and 70+ enterprise clients.",
+      "description": "Practical AI education platform in Hong Kong — corporate training, public courses, and an AI community.",
       "areaServed": "Hong Kong",
       "sameAs": [
         "https://www.instagram.com/dotai.hk/"
