@@ -7,7 +7,7 @@ input[type="button"],
 button,
 .button {
   appearance: none;
-  transition: background-color 0.15s ease, color 0.15s ease;
+  transition: background-color 0.15s $ease-out-snappy, color 0.15s $ease-out-snappy;
   cursor: pointer;
   display: inline-block;
   font-family: _font(family);
@@ -66,7 +66,7 @@ button,
   background-color: transparent;
   border: 1px solid _palette(border-subtle);
   color: _palette(text-secondary);
-  transition: border-color 0.15s ease, color 0.15s ease, background-color 0.15s ease;
+  transition: border-color 0.15s $ease-out-snappy, color 0.15s $ease-out-snappy, background-color 0.15s $ease-out-snappy;
 
   &:hover {
     border-color: _palette(border-strong);
@@ -84,14 +84,14 @@ button,
   border-radius: 0;
   font-weight: _font(weight-bold);
   font-size: 0.95rem;
-  transition: color 0.15s ease;
+  transition: color 0.15s $ease-out-snappy;
   letter-spacing: _font(kerning-meta);
   text-transform: uppercase;
 
   &::after {
     content: ' \2192';
     display: inline-block;
-    transition: transform 0.2s ease;
+    transition: transform 0.2s $ease-out-snappy;
   }
 
   &:hover {

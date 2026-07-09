@@ -766,4 +766,6 @@ const posts = [
   },
 ];
 
-export default posts;
+// Guarantee reverse-chronological order at import time (newest first).
+// ISO date strings (YYYY-MM-DD) sort lexicographically.
+export default posts.slice().sort((a, b) => b.date.localeCompare(a.date));

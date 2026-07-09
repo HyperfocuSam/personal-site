@@ -39,7 +39,6 @@ const Post = lazyRoute(() => import('./pages/Post'));
 const Projects = lazyRoute(() => import('./pages/Projects'));
 const Resume = lazyRoute(() => import('./pages/Resume'));
 const Services = lazyRoute(() => import('./pages/Services'));
-const Stats = lazyRoute(() => import('./pages/Stats'));
 const Speaking = lazyRoute(() => import('./pages/Speaking'));
 const Testimonials = lazyRoute(() => import('./pages/Testimonials'));
 
@@ -83,7 +82,6 @@ const exactRoutes = {
   '/resume': Resume,
   '/services': Services,
   '/speaking': Speaking,
-  '/stats': Stats,
   '/testimonials': Testimonials,
 };
 
@@ -121,7 +119,6 @@ const App = () => (
         <Route path="/resume" element={<Resume />} />
         <Route path="/services" element={<Services />} />
         <Route path="/speaking" element={<Speaking />} />
-        <Route path="/stats" element={<Stats />} />
         <Route path="/testimonials" element={<Testimonials />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

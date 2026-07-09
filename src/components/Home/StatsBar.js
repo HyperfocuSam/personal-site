@@ -1,13 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { stats } from '../../data/stats';
 
-const stats = [
-  {
-    value: 10000, suffix: '+', label: 'Professionals Trained', primary: true, format: true,
-  },
-  { value: 170, suffix: '+', label: 'Workshops Delivered' },
-  { value: 70, suffix: '+', label: 'Organizations Served' },
-  { value: 13, suffix: '', label: 'Countries Reached' },
+const statsBarItems = [
+  stats.professionalsTrained,
+  stats.workshops,
+  stats.organizations,
+  stats.countries,
 ];
 
 const formatValue = (value, format, decimal) => {
@@ -42,7 +41,7 @@ StatNumber.defaultProps = {
 const StatsBar = () => (
   <section className="stats-strip full-bleed">
     <div className="stats-strip__inner content-wide">
-      {stats.map((stat) => (
+      {statsBarItems.map((stat) => (
         <div
           key={stat.label}
           className={`stats-strip__item${stat.primary ? ' stats-strip__item--primary' : ''}`}

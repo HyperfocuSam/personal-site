@@ -86,9 +86,9 @@ const ZhBlog = () => (
       <header className="page-hero">
         <div className="content-standard">
           <div className="title">
-            <h2>
+            <h1>
               <Link to="/zh/blog">網誌</Link>
-            </h2>
+            </h1>
             <p>關於 AI 應用趨勢、工具同幫助人自信地使用 AI 嘅實用經驗。</p>
           </div>
         </div>

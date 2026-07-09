@@ -74,9 +74,9 @@ const Contact = () => {
         <header className="page-hero">
           <div className="content-narrow">
             <div className="title">
-              <h2>
+              <h1>
                 <Link to="/contact">Contact</Link>
-              </h2>
+              </h1>
               <p>Let&apos;s find the right next step</p>
             </div>
           </div>

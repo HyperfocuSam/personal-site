@@ -70,9 +70,9 @@ const Resume = () => (
       <header className="page-hero">
         <div className="content-standard">
           <div className="title">
-            <h2>
+            <h1>
               <Link to="/resume">Resume</Link>
-            </h2>
+            </h1>
           </div>
           <div className="services-anchor-pills">
             {Object.keys(sections).map((sec) => (

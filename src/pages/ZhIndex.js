@@ -32,9 +32,9 @@ const ZhIndex = () => (
       <header className="page-hero">
         <div className="content-standard">
           <div className="title">
-            <h2>
+            <h1>
               <Link to="/zh">你好。</Link>
-            </h2>
+            </h1>
             <p>
               我幫助機構同專業人士以真正落地嘅方式應用 AI。
               如果你正在探索培訓、輔導或培訓師發展，你嚟啱地方。

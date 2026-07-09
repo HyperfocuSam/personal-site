@@ -61,9 +61,9 @@ const Book = () => {
         <header className="page-hero page-hero--dark">
           <div className="content-narrow">
             <div className="title">
-              <h2>
+              <h1>
                 <Link to="/book">Book a Call</Link>
-              </h2>
+              </h1>
               <p>
                 Whether it&apos;s a free discovery call or a focused coaching
                 session, pick a time that works and I&apos;ll be there.

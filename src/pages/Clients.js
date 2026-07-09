@@ -90,9 +90,9 @@ const Clients = () => (
       <header className="page-hero">
         <div className="content-standard">
           <div className="title">
-            <h2>
+            <h1>
               <Link to="/clients">Clients</Link>
-            </h2>
+            </h1>
             <p>Enterprise AI Training Case Studies</p>
           </div>
         </div>

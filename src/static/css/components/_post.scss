@@ -5,7 +5,7 @@
   width: 100%;
 
   // Blog article post titles
-  &--article > header .title h2 {
+  &--article > header .title :is(h1, h2) {
     font-size: 1.75rem;
     line-height: 1.3;
   }

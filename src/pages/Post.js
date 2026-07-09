@@ -239,9 +239,9 @@ const Post = () => {
         <header className="page-hero page-hero--dark">
           <div className="content-narrow">
             <div className="title">
-              <h2>
+              <h1>
                 <Link to={`/blog/${slug}`}>{post.title}</Link>
-              </h2>
+              </h1>
               <div className="post-header__meta">
                 <span className="post-header__date">
                   {dayjs(post.date).format('MMMM D, YYYY')}
@@ -267,6 +267,9 @@ const Post = () => {
                     overrides: {
                       blockquote: {
                         component: PullQuote,
+                      },
+                      h1: {
+                        component: 'h2',
                       },
                     },
                   }}

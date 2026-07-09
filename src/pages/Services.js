@@ -97,9 +97,9 @@ const Services = () => {
         <header className="page-hero">
           <div className="content-standard">
             <div className="title">
-              <h2>
+              <h1>
                 <Link to="/services">AI Training &amp; Workshop Services</Link>
-              </h2>
+              </h1>
               <p>Corporate AI training in Hong Kong and across Asia-Pacific</p>
             </div>
             <div className="services-anchor-pills">
