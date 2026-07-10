@@ -36,8 +36,6 @@
          headers). Only `Content-Security-Policy` and `referrer` are honoured
          in meta; HSTS, X-Frame-Options, Permissions-Policy are HTTP-only and
          still need a Cloudflare proxy (see output/HYPERFOCUSAM-Header-Strategy-Memo).
-         `frame-ancestors` is ignored when CSP is meta-served — kept for parity
-         with the eventual HTTP-header rollout.
          Allow-list: GA (googletagmanager + google-analytics) + PostHog +
          Google Fonts (CSS at fonts.googleapis.com, files at fonts.gstatic.com)
          + YouTube embeds via frame-src (/media episode players — without it
@@ -45,7 +43,7 @@
          `unsafe-inline` is required because the inline analytics bootstrap
          above creates <script> nodes at runtime; tightening would require
          nonces threaded through the CRA build. -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://*.googletagmanager.com https://us-assets.i.posthog.com https://*.posthog.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://us.i.posthog.com https://us-assets.i.posthog.com https://*.posthog.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://*.googletagmanager.com https://us-assets.i.posthog.com https://*.posthog.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://us.i.posthog.com https://us-assets.i.posthog.com https://*.posthog.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com; base-uri 'self'; form-action 'self'; object-src 'none'" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
 
     <!-- Primary Meta Tags (title + description managed per-page by react-helmet-async) -->
@@ -57,7 +55,6 @@
     <!-- OG + Twitter meta tags injected per-page by react-helmet-async (baked by react-snap) -->
     <!-- Static defaults for non-pre-rendered pages only -->
     <meta property="og:site_name" content="Sam Wong" />
-    <meta property="og:locale" content="en_US" />
     <meta name="twitter:creator" content="@HyperfocuSam" />
     
     <!-- Structured Data - Person -->
@@ -175,12 +172,14 @@
     <meta name="theme-color" content="#FCFBF8" />
 
     <link rel="preload" as="font" href="%PUBLIC_URL%/fonts/inter-latin.woff2" type="font/woff2" crossorigin />
-    <link rel="preload" as="font" href="%PUBLIC_URL%/fonts/dm-serif-display-regular.woff2" type="font/woff2" crossorigin />
+    <link rel="preload" as="font" href="%PUBLIC_URL%/fonts/fraunces-latin.woff2" type="font/woff2" crossorigin />
+    <link rel="preload" as="font" href="%PUBLIC_URL%/fonts/jetbrains-mono-latin.woff2" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="%PUBLIC_URL%/fonts/fonts.css" />
     <link rel="preload" as="image" href="%PUBLIC_URL%/images/Sam.webp" type="image/webp" fetchpriority="high" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&amp;family=Noto+Sans+TC:wght@400;700&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
     <link rel="dns-prefetch" href="https://us.i.posthog.com" />
   </head>

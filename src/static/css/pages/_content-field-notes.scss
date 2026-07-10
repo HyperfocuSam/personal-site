@@ -117,6 +117,28 @@
       margin-right: 1rem;
       padding: 1rem;
     }
+
+    // The receipt's three internal columns become too narrow when the shared
+    // stats bar itself switches to two columns. Match the working zh strip by
+    // stacking each number and label within its grid cell.
+    .stat-item.fn-receipt {
+      display: block;
+      text-align: center;
+
+      .fn-receipt__leader {
+        display: none;
+      }
+
+      .stat-item__number {
+        margin-bottom: 0.35rem;
+      }
+
+      .stat-item__label {
+        overflow-wrap: normal;
+        text-align: center;
+        word-break: normal;
+      }
+    }
   }
 }
 
@@ -324,6 +346,13 @@
     background: transparent;
     border-radius: map-get($radius, sm);
     margin-left: 0;
+  }
+
+  .episode-card__meta.fn-stamp {
+    align-items: center;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
   }
 
   .episode-card {

@@ -71,7 +71,7 @@ const Index = () => (
           url: `${SITE_URL}/`,
           speakable: {
             '@type': 'SpeakableSpecification',
-            cssSelector: ['.hero-stats', "meta[name='description']"],
+            cssSelector: ['.stats-strip', "meta[name='description']"],
           },
         }])}
       </script>

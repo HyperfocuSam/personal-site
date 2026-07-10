@@ -16,6 +16,18 @@ const ensureTrailingSlash = (url) => {
   return query ? `${slashed}?${query}` : slashed;
 };
 
+const isZhUrl = (url) => /\/zh(?:\/|$)/.test(url || '');
+
+const getOgLocale = (props) => (
+  isZhUrl(props.canonicalUrl || props.ogUrl) ? 'zh_HK' : 'en_US'
+);
+
+const getAlternateOgLocale = (props) => {
+  const languages = (props.hreflangTags || []).map((tag) => tag.lang);
+  if (!languages.includes('en') || !languages.includes('zh-Hant')) return null;
+  return getOgLocale(props) === 'zh_HK' ? 'en_US' : 'zh_HK';
+};
+
 const Main = (props) => (
   <HelmetProvider>
     <Analytics />
@@ -34,6 +46,10 @@ const Main = (props) => (
       {props.ogImage && <meta property="og:image" content={props.ogImage} />}
       {props.ogUrl && <meta property="og:url" content={ensureTrailingSlash(props.ogUrl)} />}
       {props.ogType && <meta property="og:type" content={props.ogType} />}
+      <meta property="og:locale" content={getOgLocale(props)} />
+      {getAlternateOgLocale(props) && (
+        <meta property="og:locale:alternate" content={getAlternateOgLocale(props)} />
+      )}
       {/* Twitter Card */}
       <meta name="twitter:card" content={props.twitterCard || 'summary_large_image'} />
       {props.twitterTitle && <meta name="twitter:title" content={props.twitterTitle} />}
