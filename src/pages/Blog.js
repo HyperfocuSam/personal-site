@@ -134,9 +134,9 @@ const Blog = () => {
         <header className="page-hero">
           <div className="content-standard">
             <div className="title">
-              <h2>
+              <h1>
                 <Link to="/blog">Blog</Link>
-              </h2>
+              </h1>
               <p>
                 Practical lessons on AI adoption trends, tools, and what helps
                 people work with AI confidently.

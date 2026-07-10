@@ -41,7 +41,7 @@ header {
   width: 100%;
   text-align: center;
 
-  h2 {
+  :is(h1, h2) {
     color: _palette(text-primary);
     font-size: clamp(2.5rem, 2rem + 3vw, 4.5rem);
     font-weight: _font(weight-heading);
@@ -75,7 +75,7 @@ header {
     background: linear-gradient(135deg, _palette(ink) 0%, _palette(ink-mid) 100%);
     color: _palette(text-on-dark);
 
-    h2 {
+    :is(h1, h2) {
       color: _palette(text-on-dark);
 
       a {

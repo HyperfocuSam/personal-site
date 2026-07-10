@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 
 import Main from '../layouts/Main';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
+import { stats } from '../data/stats';
 import ContactForm from '../components/Contact/ContactForm';
 
 const topLogos = [
@@ -15,11 +16,17 @@ const topLogos = [
   { name: 'Publicis Groupe', file: 'publicis.png' },
 ];
 
-const stats = [
-  { number: '10,000+', label: 'Professionals Trained' },
-  { number: '70+', label: 'Organizations' },
-  { number: '9.2/10', label: 'Satisfaction' },
+const statCards = [
+  { number: stats.professionalsTrained.number, label: stats.professionalsTrained.label },
+  { number: stats.organizations.number, label: 'Organizations' },
+  { number: stats.satisfaction.number, label: stats.satisfaction.label },
 ];
+
+const metaDescription = [
+  'Book a free discovery call for corporate AI training in Hong Kong.',
+  `${stats.professionalsTrained.number} professionals trained,`,
+  `${stats.satisfaction.number} satisfaction.`,
+].join(' ');
 
 const faqs = [
   {
@@ -42,7 +49,7 @@ const faqs = [
 const GetStarted = () => (
   <Main
     title="Get Started"
-    description="Book a free discovery call for corporate AI training in Hong Kong. 10,000+ professionals trained, 9.2/10 satisfaction."
+    description={metaDescription}
     hideNav
     canonicalUrl={`${SITE_URL}/get-started`}
     ogTitle="Get Started | AI Training for Your Team"
@@ -87,7 +94,7 @@ const GetStarted = () => (
       <div className="get-started__stats">
         <div className="content-narrow">
           <div className="stats-bar">
-            {stats.map((s) => (
+            {statCards.map((s) => (
               <div key={s.label} className="stat-item">
                 <span className="stat-item__number">{s.number}</span>
                 <span className="stat-item__label">{s.label}</span>

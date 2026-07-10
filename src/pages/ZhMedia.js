@@ -248,9 +248,9 @@ const ZhMedia = () => (
       <header className="page-hero">
         <div className="content-standard">
           <div className="title">
-            <h2>
+            <h1>
               <Link to="/zh/media">媒體</Link>
-            </h2>
+            </h1>
             <p>嘉賓出演、訪問同座談討論。</p>
           </div>
         </div>

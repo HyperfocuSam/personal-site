@@ -237,9 +237,9 @@ const Speaking = () => (
       <header className="page-hero">
         <div className="content-standard">
           <div className="title">
-            <h2>
+            <h1>
               <Link to="/speaking">Speaking &amp; Events</Link>
-            </h2>
+            </h1>
             <p>Keynotes, panels, and workshops that shift how teams think about AI.</p>
           </div>
         </div>

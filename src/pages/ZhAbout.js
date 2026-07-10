@@ -32,9 +32,9 @@ const ZhAbout = () => (
       <header className="page-hero">
         <div className="content-narrow">
           <div className="title">
-            <h2>
+            <h1>
               <Link to="/zh/about">關於我</Link>
-            </h2>
+            </h1>
             <p>點解我做呢份工，同埋我點樣走到今日。</p>
           </div>
         </div>

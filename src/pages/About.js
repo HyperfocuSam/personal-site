@@ -33,9 +33,9 @@ const About = () => (
       <header className="page-hero">
         <div className="content-narrow">
           <div className="title">
-            <h2>
+            <h1>
               <Link to="/about">About Me</Link>
-            </h2>
+            </h1>
             <p>Why I do this work and how I got here.</p>
           </div>
         </div>

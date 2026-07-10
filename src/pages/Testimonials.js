@@ -103,9 +103,9 @@ const Testimonials = () => (
       <header className="page-hero">
         <div className="content-standard">
           <div className="title">
-            <h2>
+            <h1>
               <Link to="/testimonials">Testimonials</Link>
-            </h2>
+            </h1>
             <p>Real feedback from workshop participants and enterprise clients</p>
           </div>
         </div>

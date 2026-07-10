@@ -6,7 +6,7 @@
   border-radius: map-get($radius, xl);
   box-shadow: none;
   padding: 2rem;
-  transition: border-color 0.15s ease, background-color 0.15s ease;
+  transition: border-color 0.15s $ease-out, background-color 0.15s $ease-out;
 
   &:hover {
     border-color: _palette(border-strong);
@@ -19,7 +19,7 @@
 
   p {
     color: _palette(text-body);
-    transition: color 0.15s ease;
+    transition: color 0.15s $ease-out;
   }
 
   p:last-child {

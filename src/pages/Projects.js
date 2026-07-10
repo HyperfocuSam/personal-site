@@ -45,9 +45,9 @@ const Projects = () => (
       <header className="page-hero">
         <div className="content-standard">
           <div className="title">
-            <h2>
+            <h1>
               <Link to="/projects">Projects</Link>
-            </h2>
+            </h1>
             <p>Shipped products with live URLs.</p>
           </div>
         </div>

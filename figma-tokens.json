@@ -4,6 +4,7 @@
   "_capturedFromFigma": "2026-06-25",
   "tokens": [
     { "collection": "Sam/Primitives", "name": "color/amber",        "type": "COLOR", "value": "#c8965a" },
+    { "collection": "Sam/Primitives", "name": "color/amberText",    "type": "COLOR", "value": "#8a6530" },
     { "collection": "Sam/Primitives", "name": "color/amberLight",   "type": "COLOR", "value": "#d4a96e" },
     { "collection": "Sam/Primitives", "name": "color/ink",          "type": "COLOR", "value": "#0c0c0c" },
     { "collection": "Sam/Primitives", "name": "color/inkMid",       "type": "COLOR", "value": "#1a1a1a" },

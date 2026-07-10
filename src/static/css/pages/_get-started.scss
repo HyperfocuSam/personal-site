@@ -69,10 +69,38 @@
       display: flex;
       justify-content: center;
       gap: 3rem;
+      // Override global 5-col grid — this page only has 3 stats
+      grid-template-columns: none;
 
       @media #{map-get($breakpoints, small)} {
         gap: 1.5rem;
         padding: 1rem;
+      }
+
+      // ≤480px: tighten so 3-across fits without horizontal scroll
+      @media #{map-get($breakpoints, xsmall)} {
+        gap: 0.5rem;
+        padding: 0.85rem 0.5rem;
+      }
+    }
+
+    .stat-item {
+      min-width: 0;
+      flex: 1 1 0;
+
+      @media #{map-get($breakpoints, xsmall)} {
+        .stat-item__number {
+          font-size: 1.25rem;
+        }
+
+        .stat-item__label {
+          font-size: 0.7rem;
+        }
+
+        // Hide vertical dividers — too tight at this width
+        &::after {
+          display: none;
+        }
       }
     }
   }

@@ -30,7 +30,8 @@ const OUT = join(ROOT, 'src/static/css/libs/_tokens.figma.generated.scss');
 // One Figma variable can feed more than one $palette key (e.g. ink is both
 // `ink` and `text-primary`). The array on the right makes that explicit.
 const COLOR_MAP = {
-  'color/amber':        ['amber', 'amber-text'],
+  'color/amber':        ['amber'],
+  'color/amberText':    ['amber-text'],
   'color/amberLight':   ['amber-light'],
   'color/ink':          ['ink', 'text-primary'],
   'color/inkMid':       ['ink-mid'],
