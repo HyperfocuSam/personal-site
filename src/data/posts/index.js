@@ -5,6 +5,27 @@
 // linkedPost: slug of the corresponding post in another language (for hreflang)
 const posts = [
   {
+    slug: 'the-architect-that-never-writes-code',
+    title: 'The architect that never writes code',
+    date: '2026-07-11',
+    excerpt: 'Companion take to the build log: the most expensive model in the stack wrote zero implementation code. Four bugs died at the spec stage, three workers passed the same five gates, and the blind pick landed on the cheapest. The pattern, not the model, is the asset.',
+    tags: ['ai-agents', 'ai-tools', 'workflow', 'hot-take'],
+    type: 'insight',
+    featured: false,
+    linkedPost: 'the-architect-that-never-writes-code-tc',
+  },
+  {
+    slug: 'the-architect-that-never-writes-code-tc',
+    title: '從不寫 code 的 architect model',
+    date: '2026-07-11',
+    excerpt: '最貴的模型一行 implementation code 都沒寫——它的全部產出是判斷。四個 bug 死在 spec 階段，三個 worker 通過同樣五道 gate，盲選選中成本最低的一個。資產是 pattern，不是模型。',
+    tags: ['ai-agents', 'ai-工具', '工作流程', '即時觀察'],
+    type: 'insight',
+    language: 'zh-Hant',
+    featured: false,
+    linkedPost: 'the-architect-that-never-writes-code',
+  },
+  {
     slug: 'three-models-one-branch-zero-deployment',
     title: 'Three models, one branch, zero deployment',
     date: '2026-07-10',
