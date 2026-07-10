@@ -34,6 +34,8 @@
   font-family: _font(family-fixed);
   font-size: 0.72rem;
   letter-spacing: 0.08em;
+  max-width: 100%;
+  overflow-wrap: anywhere;
   padding: 0.22rem 0.38rem;
   text-transform: uppercase;
 
@@ -47,6 +49,8 @@
 .fn-entry {
   border-left: 2px solid _palette(ink);
   display: block;
+  min-width: 0;
+  overflow-wrap: anywhere;
   padding: 1.35rem 2rem 1.35rem 1rem;
 }
 
@@ -54,6 +58,8 @@
   background: _palette(surface-raised);
   border: 1px solid _palette(border-subtle);
   border-radius: map-get($radius, sm);
+  min-width: 0;
+  overflow-wrap: anywhere;
   padding: 1.15rem;
 }
 
@@ -63,6 +69,10 @@
   gap: 0.25rem 0.35rem;
   grid-template-columns: auto minmax(0, 1fr) minmax(0, auto);
   min-width: 0;
+
+  > * {
+    min-width: 0;
+  }
 
   &__number {
     color: _palette(ink);
@@ -102,5 +112,11 @@
     color: _palette(verification);
     grid-column: 1 / -1;
     line-height: 1.2;
+  }
+}
+
+@include breakpoint(xsmall) {
+  .fn-entry {
+    padding: 1.1rem 0.85rem;
   }
 }

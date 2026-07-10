@@ -1,6 +1,7 @@
 // Not found page (/*)
 
 .not-found {
+  background: _palette(surface-base);
   text-align: center;
   padding: 6rem 2rem;
   min-height: 60vh;
@@ -10,16 +11,20 @@
   justify-content: center;
 
   h1 {
-    font-size: 3rem;
-    color: _palette(text-primary);
+    color: _palette(verification);
+    font-family: _font(family-fixed);
+    font-size: 0.82rem;
+    letter-spacing: _font(kerning-meta);
     margin-bottom: 0.5em;
+    padding: 0.45rem 0.6rem;
+    text-transform: uppercase;
   }
 
   p {
     // Was _palette(text-secondary) = #8a8a8a — fails WCAG AA contrast (3.3:1)
     // against the #fafaf9 background. Local override to #595959 lifts contrast
     // to ~7:1. Fix landed 2026-05-15 after the first Lighthouse baseline run.
-    color: #595959;
+    color: _palette(text-body);
     font-size: 1.1rem;
   }
 

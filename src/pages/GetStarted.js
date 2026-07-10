@@ -64,7 +64,7 @@ const GetStarted = () => (
     <Helmet>
       <meta name="robots" content="noindex, nofollow" />
     </Helmet>
-    <article className="post get-started" id="get-started">
+    <article className="post get-started field-notes-content" id="get-started">
       {/* Minimal header — logo only, links back to main site */}
       <header className="get-started__header">
         <div className="content-narrow">
@@ -80,7 +80,7 @@ const GetStarted = () => (
           {/* Single-expression text: adjacent text nodes break react-snap hydration (#418) */}
           <h1>
             {'AI Training That Actually Changes '}
-            <em>How Your Team Works</em>
+            <em className="fn-highlight">How Your Team Works</em>
           </h1>
           <p>
             Workshops, coaching, and adoption programs designed around your
@@ -95,9 +95,10 @@ const GetStarted = () => (
         <div className="content-narrow">
           <div className="stats-bar">
             {statCards.map((s) => (
-              <div key={s.label} className="stat-item">
-                <span className="stat-item__number">{s.number}</span>
-                <span className="stat-item__label">{s.label}</span>
+              <div key={s.label} className="stat-item fn-receipt">
+                <span className="stat-item__number fn-receipt__number">{s.number}</span>
+                <span className="fn-receipt__leader" aria-hidden="true" />
+                <span className="stat-item__label fn-receipt__label">{s.label}</span>
               </div>
             ))}
           </div>
@@ -133,7 +134,7 @@ const GetStarted = () => (
       {/* Single testimonial */}
       <section className="get-started__testimonial">
         <div className="content-narrow">
-          <blockquote>
+          <blockquote className="fn-card">
             <p>
               &ldquo;Finally, AI training that&rsquo;s actually useful!&rdquo;
             </p>
@@ -149,7 +150,7 @@ const GetStarted = () => (
         <div className="content-narrow">
           <h2>Common Questions</h2>
           {faqs.map((item) => (
-            <div key={item.q} className="get-started__faq-item">
+            <div key={item.q} className="get-started__faq-item fn-entry">
               <h3>{item.q}</h3>
               <p>{item.a}</p>
             </div>

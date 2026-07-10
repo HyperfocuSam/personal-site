@@ -58,7 +58,7 @@ const ServiceGroup = ({
       {testimonial && (
         /* Quote and attribution are single expressions: adjacent text nodes
            break react-snap hydration (React #418). */
-        <blockquote className="service-group__testimonial">
+        <blockquote className="service-group__testimonial fn-card">
           {`“${testimonial.quote}”`}
           <footer>
             {`${testimonial.name} | ${testimonial.title}${testimonial.company ? `, ${testimonial.company}` : ''}`}
@@ -69,12 +69,13 @@ const ServiceGroup = ({
 
     <div className="service-group__list">
       {services.map((service) => (
-        <article key={service.id} className="service-group__item">
+        <article key={service.id} className="service-group__item fn-entry">
           <h4>{service.title}</h4>
           {service.provider && (
-            <p className="service-group__item-subtitle">
-              {'Delivered via '}
-              <strong>{service.provider}</strong>
+            <p className="service-group__item-subtitle fn-receipt">
+              <span className="fn-receipt__label">Delivered via</span>
+              <span className="fn-receipt__leader" aria-hidden="true" />
+              <strong className="fn-receipt__number">{service.provider}</strong>
             </p>
           )}
           {service.subtitle && (
@@ -90,15 +91,22 @@ const ServiceGroup = ({
               {service.tiers.map((tier) => (
                 <div
                   key={tier.id}
-                  className={`service-group__tier service-group__tier--${tier.level || 'standard'}`}
+                  className={`service-group__tier service-group__tier--${tier.level || 'standard'} fn-card`}
                 >
                   {tier.badge && (
-                    <span className="service-group__tier-badge">{tier.badge}</span>
+                    <span className="service-group__tier-badge fn-stamp fn-stamp--verified">
+                      {tier.badge}
+                    </span>
                   )}
-                  <h5>{tier.title}</h5>
-                  {tier.label && (
-                    <span className="service-group__tier-label">{tier.label}</span>
-                  )}
+                  <div className="service-group__tier-receipt fn-receipt">
+                    <h5 className="fn-receipt__number">{tier.title}</h5>
+                    <span className="fn-receipt__leader" aria-hidden="true" />
+                    {tier.label && (
+                      <span className="service-group__tier-label fn-receipt__label">
+                        {tier.label}
+                      </span>
+                    )}
+                  </div>
                   <p>{tier.description}</p>
                   <CtaButton
                     cta={tier.cta}

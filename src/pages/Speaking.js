@@ -232,7 +232,7 @@ const Speaking = () => (
         {JSON.stringify(schema)}
       </script>
     </Helmet>
-    <article className="post" id="speaking">
+    <article className="post field-notes-content" id="speaking">
       {/* Dark hero */}
       <header className="page-hero">
         <div className="content-standard">
@@ -265,7 +265,7 @@ const Speaking = () => (
           <ScrollReveal variant="fade-up-long" stagger={120}>
             <div className="card-grid cols-3">
               {topics.map((topic) => (
-                <div key={topic.title} className="card card-accent">
+                <div key={topic.title} className="card card-accent fn-card">
                   <h4>{topic.title}</h4>
                   <p>{topic.description}</p>
                 </div>
@@ -284,16 +284,18 @@ const Speaking = () => (
           <ScrollReveal variant="fade-up" stagger={100}>
             <div className="engagement-list">
               {engagements.map((e) => (
-                <div key={`${e.org}-${e.title}`} className="engagement-item">
+                <div key={`${e.org}-${e.title}`} className="engagement-item fn-entry">
                   <div className="engagement-item__left">
-                    <span className="engagement-item__year">{e.year}</span>
+                    <span className="engagement-item__year fn-stamp">{e.year}</span>
                   </div>
                   <div className="engagement-item__right">
                     <h4 className="engagement-item__org">{e.org}</h4>
                     <p className="engagement-item__title">{e.title}</p>
                     <p className="engagement-item__desc">{e.description}</p>
                     {e.stat && (
-                      <span className="engagement-item__stat">{e.stat}</span>
+                      <span className="engagement-item__stat fn-stamp fn-stamp--verified">
+                        {e.stat}
+                      </span>
                     )}
                   </div>
                 </div>
@@ -312,7 +314,7 @@ const Speaking = () => (
           <ScrollReveal variant="fade-up-long" stagger={120}>
             <div className="card-grid cols-2">
               {whatYouGet.map((item) => (
-                <div key={item.title} className="card">
+                <div key={item.title} className="card fn-card">
                   <h4>{item.title}</h4>
                   <p>{item.description}</p>
                 </div>

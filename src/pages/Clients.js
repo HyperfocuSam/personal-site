@@ -14,7 +14,7 @@ import posts from '../data/posts';
 const clientPosts = posts.filter((p) => p.type === 'case-study');
 
 const ClientCard = ({ post }) => (
-  <article className="blog-card blog-card--case-study">
+  <article className="blog-card blog-card--case-study fn-card">
     <Link to={`/blog/${post.slug}`} className="blog-card__link">
       {post.image && (
         <div className="blog-card__image-wrapper">
@@ -28,7 +28,7 @@ const ClientCard = ({ post }) => (
       )}
       <div className="blog-card__content">
         <h3 className="blog-card__title">{post.title}</h3>
-        <p className="blog-card__meta">
+        <p className="blog-card__meta fn-stamp">
           {dayjs(post.date).format('MMM D, YYYY')}
         </p>
         <p className="blog-card__excerpt">{post.excerpt}</p>
@@ -85,7 +85,7 @@ const Clients = () => (
         })}
       </script>
     </Helmet>
-    <article className="post" id="clients">
+    <article className="post field-notes-content" id="clients">
       {/* Dark hero */}
       <header className="page-hero">
         <div className="content-standard">

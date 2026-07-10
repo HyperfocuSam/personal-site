@@ -28,7 +28,7 @@ const About = () => (
       { lang: 'x-default', href: `${SITE_URL}/about` },
     ]}
   >
-    <article className="post" id="about">
+    <article className="post field-notes-content" id="about">
       {/* Dark hero */}
       <header className="page-hero">
         <div className="content-narrow">
@@ -78,7 +78,8 @@ const About = () => (
             Manager at RENPHO, where I built an AI division from scratch.
           </p>
           <p>
-            In 2024, I left that stable role to start AICBO &mdash; free, one-on-one
+            <span className="fn-stamp">In 2024</span>, I left that stable role
+            to start AICBO &mdash; free, one-on-one
             AI tutoring sessions for anyone who wanted to learn. What began as a small
             experiment became 160+ sessions and eventually led to co-founding Adaptig.
           </p>
@@ -109,19 +110,19 @@ const About = () => (
           </ScrollReveal>
           <ScrollReveal variant="fade-up-long" stagger={120}>
             <div className="card-grid cols-2">
-              <div className="card card-accent">
+              <div className="card card-accent fn-card">
                 <h4>Humans are the point.</h4>
                 <p>AI is a tool. The goal is meaningful work.</p>
               </div>
-              <div className="card card-accent">
+              <div className="card card-accent fn-card">
                 <h4>Start with the smallest step.</h4>
                 <p>Small wins compound into real change.</p>
               </div>
-              <div className="card card-accent">
+              <div className="card card-accent fn-card">
                 <h4>Psychological safety comes first.</h4>
                 <p>People do not adopt what they fear.</p>
               </div>
-              <div className="card card-accent">
+              <div className="card card-accent fn-card">
                 <h4>Frameworks beat features.</h4>
                 <p>Tools change. Thinking patterns endure.</p>
               </div>
@@ -142,7 +143,7 @@ const About = () => (
           </ScrollReveal>
           <ScrollReveal variant="fade-up-long" stagger={120}>
             <div className="card-grid cols-3">
-              <div className="card card-accent">
+              <div className="card card-accent fn-card">
                 <h4>Traffic Light Framework</h4>
                 <p>
                   Red / Yellow / Green classification for AI task
@@ -150,7 +151,7 @@ const About = () => (
                   delegate, what to co-create, and what to keep human.
                 </p>
               </div>
-              <div className="card card-accent">
+              <div className="card card-accent fn-card">
                 <h4>IPA Framework</h4>
                 <p>
                   Input &rarr; Process &rarr; Audit. A three-step
@@ -158,7 +159,7 @@ const About = () => (
                   and effectively.
                 </p>
               </div>
-              <div className="card card-accent">
+              <div className="card card-accent fn-card">
                 <h4>C-How Thinking</h4>
                 <p>
                   Bridges left-brain logic and right-brain creativity
@@ -166,7 +167,7 @@ const About = () => (
                   and design workshops.
                 </p>
               </div>
-              <div className="card card-accent">
+              <div className="card card-accent fn-card">
                 <h4>AI Pioneer Program</h4>
                 <p>
                   A 6-session cohort model based on change management.
@@ -174,7 +175,7 @@ const About = () => (
                   across the wider organization.
                 </p>
               </div>
-              <div className="card card-accent">
+              <div className="card card-accent fn-card">
                 <h4>70/30 Split</h4>
                 <p>
                   70% AI execution, 30% human judgment.
@@ -182,7 +183,7 @@ const About = () => (
                   keeping critical thinking with the human.
                 </p>
               </div>
-              <div className="card card-accent">
+              <div className="card card-accent fn-card">
                 <h4>AI Maturity Model</h4>
                 <p>
                   Four stages from Awareness to Transformation.
@@ -200,7 +201,7 @@ const About = () => (
         <div className="content-standard">
           <h3>What I&apos;ve Built</h3>
           <ul>
-            <li>
+            <li className="fn-entry">
               <strong>
                 <a href="https://adaptig.ai" target="_blank" rel="noopener noreferrer">Adaptig</a>
               </strong>
@@ -208,23 +209,23 @@ const About = () => (
                   break react-snap hydration (React #418) */}
               {' - Co-founded a global trainer network spanning North America, Latin America, Europe, and Asia-Pacific.'}
             </li>
-            <li>
+            <li className="fn-entry">
               <strong>AICBO</strong>
               {' - 160+ one-on-one coaching sessions with professionals across industries.'}
             </li>
-            <li>
+            <li className="fn-entry">
               <strong>RENPHO AI Division</strong>
               {' - Led strategic AI transformation and team capability building.'}
             </li>
-            <li>
+            <li className="fn-entry">
               <strong>PromptBox</strong>
               {' - Built internal LLM workflows for daily operations.'}
             </li>
-            <li>
+            <li className="fn-entry">
               <strong>AI Pioneer Program</strong>
               {' - A change management-driven model for building internal AI champions, now in second batch deployment.'}
             </li>
-            <li>
+            <li className="fn-entry">
               <strong>Fooocus Traditional Chinese</strong>
               {' - Contributed translation for wider AI accessibility.'}
             </li>

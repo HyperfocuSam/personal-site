@@ -4,6 +4,12 @@
 .get-started {
   background: _palette(surface-base);
 
+  &.post > * {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   // Minimal header with logo only
   &__header {
     padding: 1.5rem 0;
@@ -19,11 +25,13 @@
     letter-spacing: _font(kerning-heading);
   }
 
-  // Hero — side-by-side on desktop, stacked on mobile
+  // Hero — Field Notes paper title page
   &__hero {
-    background: _palette(ink);
-    color: _palette(text-on-dark);
-    padding: 3rem 0;
+    background: _palette(surface-base);
+    border-bottom: 1px solid _palette(border-subtle);
+    border-top: 1px solid _palette(border-subtle);
+    color: _palette(ink);
+    padding: 3.5rem 0;
   }
 
   &__hero h1 {
@@ -31,13 +39,13 @@
     font-size: 2.2rem;
     font-weight: _font(weight-heading-bold);
     line-height: 1.15;
-    color: #fff;
+    color: _palette(ink);
     letter-spacing: _font(kerning-heading);
     margin-bottom: 1rem;
-    text-align: center;
+    text-align: left;
 
     em {
-      color: _palette(text-on-dark);
+      color: _palette(ink);
       font-style: normal;
     }
 
@@ -49,44 +57,42 @@
   &__hero p {
     font-size: 1.05rem;
     line-height: 1.6;
-    color: _palette(text-on-dark-muted);
-    max-width: 580px;
-    margin: 0 auto;
-    text-align: center;
+    color: _palette(text-body);
+    max-width: 36.25rem;
+    margin: 0;
+    text-align: left;
   }
 
   // Stats
   &__stats {
-    margin-top: -1.5rem;
+    margin-top: 0;
     position: relative;
     z-index: 1;
 
     .stats-bar {
-      background: _palette(surface-overlay);
-      border-radius: 12px;
-      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-      padding: 1.5rem 2rem;
-      display: flex;
-      justify-content: center;
-      gap: 3rem;
-      // Override global 5-col grid — this page only has 3 stats
-      grid-template-columns: none;
+      background: _palette(surface-raised);
+      border: 1px solid _palette(ink);
+      border-radius: map-get($radius, sm);
+      box-shadow: none;
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      padding: 1.25rem;
 
       @media #{map-get($breakpoints, small)} {
-        gap: 1.5rem;
+        gap: 1rem;
         padding: 1rem;
       }
 
-      // ≤480px: tighten so 3-across fits without horizontal scroll
       @media #{map-get($breakpoints, xsmall)} {
-        gap: 0.5rem;
-        padding: 0.85rem 0.5rem;
+        gap: 0.85rem;
+        padding: 0.85rem;
       }
     }
 
     .stat-item {
       min-width: 0;
-      flex: 1 1 0;
+      text-align: left;
 
       @media #{map-get($breakpoints, xsmall)} {
         .stat-item__number {
@@ -112,6 +118,7 @@
   }
 
   &__logos-label {
+    font-family: _font(family-fixed);
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.12em;
@@ -133,8 +140,8 @@
   &__client-logo {
     height: 28px;
     width: auto;
-    filter: grayscale(1);
-    opacity: 0.5;
+    filter: grayscale(1) saturate(0.25);
+    opacity: 0.58;
     transition: opacity _duration(base) $ease-out;
 
     &:hover {
@@ -169,8 +176,8 @@
 
     blockquote {
       margin: 0;
-      padding: 0;
-      border: none;
+      padding: 1.25rem;
+      border: 1px solid _palette(border-subtle);
 
       p {
         font-family: _font(family-heading);
@@ -203,7 +210,8 @@
   }
 
   &__faq-item {
-    margin-bottom: 1.5rem;
+    border-bottom: 1px solid _palette(border-subtle);
+    margin-bottom: 0;
 
     h3 {
       font-size: 1rem;
@@ -238,6 +246,19 @@
       &:hover {
         color: _palette(ink);
       }
+    }
+  }
+
+  @include breakpoint(small) {
+    &__hero,
+    &__form-section,
+    &__faq {
+      padding-bottom: 3.5rem;
+      padding-top: 3.5rem;
+    }
+
+    &__logos-list {
+      gap: 1.25rem;
     }
   }
 }

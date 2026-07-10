@@ -1,0 +1,310 @@
+/* R2 — Field Notes presentation for English content routes */
+
+.field-notes-content {
+  background: _palette(surface-base);
+  color: _palette(text-body);
+
+  :is(h2, h3, h4, h5) {
+    color: _palette(ink);
+    font-family: _font(family-heading);
+    font-variation-settings: "opsz" 48;
+  }
+
+  .section-sunken,
+  .section-alt,
+  .section-warm {
+    background: _palette(surface-sunken);
+  }
+
+  .section-dark {
+    background: _palette(surface-raised);
+    border-bottom: 1px solid _palette(border-subtle);
+    border-top: 1px solid _palette(border-subtle);
+    color: _palette(ink);
+
+    :is(h2, h3, h4, h5, p, li, strong) {
+      color: _palette(text-body);
+    }
+
+    .button,
+    .button-secondary {
+      background: _palette(ink);
+      border: 1px solid _palette(ink);
+      border-radius: map-get($radius, sm);
+      color: _palette(surface-base);
+    }
+  }
+
+  .button,
+  .button-secondary,
+  .button--outline {
+    border-radius: map-get($radius, sm);
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  .card-grid,
+  .blog-grid,
+  .stats-bar {
+    min-width: 0;
+
+    > * {
+      min-width: 0;
+    }
+  }
+
+  .card.fn-card,
+  .blog-card.fn-card,
+  .testimonial-card.fn-card {
+    background: _palette(surface-raised);
+    border: 1px solid _palette(border-subtle);
+    border-left-color: _palette(border-subtle);
+    border-radius: map-get($radius, sm);
+    box-shadow: none;
+  }
+
+  .photo-band {
+    background: _palette(surface-base);
+    padding: 0;
+
+    img {
+      border: 1px solid _palette(ink);
+      border-radius: map-get($radius, sm);
+    }
+  }
+
+  .stats-floating {
+    background: _palette(surface-raised);
+    border: 1px solid _palette(ink);
+    border-radius: map-get($radius, sm);
+    box-shadow: none;
+  }
+
+  .stats-bar {
+    gap: 1rem;
+  }
+
+  .stat-item.fn-receipt {
+    text-align: left;
+
+    &::after {
+      display: none;
+    }
+
+    .stat-item__number {
+      font-size: clamp(1.05rem, 4vw, 1.35rem);
+      margin: 0;
+    }
+
+    .stat-item__label {
+      margin: 0;
+    }
+  }
+
+  @include breakpoint(small) {
+    .section-padding {
+      padding-bottom: 3.5rem;
+      padding-top: 3.5rem;
+    }
+
+    .card-grid,
+    .blog-grid {
+      gap: 1rem;
+    }
+
+    .stats-floating {
+      margin-left: 1rem;
+      margin-right: 1rem;
+      padding: 1rem;
+    }
+  }
+}
+
+#about.field-notes-content {
+  .section-base:first-of-type .content-narrow {
+    background-image: repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 1.85rem,
+      _palette(border-subtle) 1.9rem
+    );
+  }
+
+  .section-base:first-of-type h3 {
+    background: _palette(surface-base);
+    display: inline;
+  }
+
+  .section-base:first-of-type p {
+    line-height: 1.9rem;
+  }
+
+  .photo-band img {
+    border: 1px solid _palette(ink);
+    border-radius: map-get($radius, sm);
+  }
+
+  .section-sunken ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .section-sunken li.fn-entry {
+    border-bottom: 1px solid _palette(border-subtle);
+  }
+}
+
+#contact.field-notes-content,
+#get-started.field-notes-content {
+  .contact-form {
+    padding: 1.25rem;
+  }
+
+  .contact-form__field-label {
+    color: _palette(ink);
+    font-family: _font(family-fixed);
+    font-size: 0.72rem;
+    letter-spacing: _font(kerning-meta);
+    text-transform: uppercase;
+  }
+
+  :is(input[type="text"], input[type="email"], select, textarea) {
+    background: _palette(surface-raised);
+    border: 1px solid _palette(border-strong);
+    border-radius: map-get($radius, sm);
+    color: _palette(ink);
+
+    &:focus {
+      border-color: _palette(ink);
+      box-shadow: 0 0 0 2px _palette(highlighter);
+    }
+  }
+
+  .contact-form__submit {
+    background: _palette(ink);
+    border: 1px solid _palette(ink);
+    border-radius: map-get($radius, sm);
+    color: _palette(surface-base);
+  }
+}
+
+#testimonials.field-notes-content {
+  .testimonials__section > h3 {
+    font-size: clamp(1.8rem, 7vw, 2.5rem);
+  }
+
+  .testimonials__section > p.fn-stamp {
+    color: _palette(amber-text);
+    display: inline-block;
+    font-family: _font(family-fixed);
+    font-size: 0.72rem;
+    letter-spacing: _font(kerning-meta);
+    margin-bottom: 1.5rem;
+  }
+
+  .testimonial-card {
+    padding: 1.25rem;
+
+    &::before {
+      color: _palette(highlighter);
+      left: 0.75rem;
+      opacity: 1;
+      top: 0.5rem;
+    }
+
+    &__quote {
+      color: _palette(ink);
+      font-family: _font(family-heading);
+      font-style: normal;
+      margin-top: 1.75rem;
+    }
+
+    &__author span.fn-stamp {
+      margin-top: 0.6rem;
+    }
+  }
+}
+
+#media.field-notes-content {
+  .media-section-heading {
+    font-size: clamp(1.8rem, 7vw, 2.6rem);
+  }
+
+  .show-intro__badge,
+  .episode-card__badge {
+    background: transparent;
+    border-radius: map-get($radius, sm);
+    margin-left: 0;
+  }
+
+  .episode-card {
+    border-bottom: 1px solid _palette(border-subtle);
+    margin: 0;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+
+    &__meta {
+      white-space: normal;
+    }
+  }
+
+  .video-wrapper {
+    border: 1px solid _palette(ink);
+    border-radius: map-get($radius, sm);
+  }
+}
+
+#speaking.field-notes-content {
+  .engagement-item {
+    border-bottom: 1px solid _palette(border-subtle);
+    gap: 1rem;
+
+    &__left {
+      width: auto;
+    }
+
+    &__stat {
+      background: transparent;
+      border-radius: map-get($radius, sm);
+    }
+  }
+}
+
+#clients.field-notes-content {
+  .blog-card__image {
+    filter: saturate(0.72);
+  }
+
+  .blog-card__meta {
+    display: inline-block;
+    margin-bottom: 0.8rem;
+  }
+}
+
+#corporate-training.field-notes-content {
+  .client-logo-bar__logo {
+    filter: grayscale(1) saturate(0.25);
+    opacity: 0.58;
+  }
+
+  .client-logo-bar__label,
+  .client-logo-bar__item--text {
+    font-family: _font(family-fixed);
+  }
+
+  .section-warm .button,
+  .section-base .button,
+  .section-sunken .button,
+  .button--outline {
+    background: _palette(ink);
+    border: 1px solid _palette(ink);
+    color: _palette(surface-base);
+  }
+
+  .pull-quote {
+    background: _palette(surface-raised);
+    border: 1px solid _palette(ink);
+    border-radius: map-get($radius, sm);
+    padding: 1.25rem;
+  }
+}

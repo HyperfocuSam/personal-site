@@ -55,6 +55,7 @@
 @import "pages/projects";
 @import "pages/get-started";
 @import "pages/book";
+@import "pages/services";
 
 // Reusable Field Notes primitives sit above legacy page selectors so adding
 // an fn-* class opts a component into the shared language predictably.
@@ -63,6 +64,7 @@
 // Homepage preview language. Loaded last so it can cleanly supersede the
 // current editorial layer without disturbing legacy/Zh homepage selectors.
 @import "pages/field-notes";
+@import "pages/content-field-notes";
 
 // Floating WhatsApp button — site-wide
 .floating-whatsapp {

@@ -1147,7 +1147,8 @@
 
     @include breakpoint(medium) {
       grid-template-columns: 1fr;
-      max-width: 420px;
+      max-width: 100%;
+      width: 100%;
     }
   }
 

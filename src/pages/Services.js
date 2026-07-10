@@ -92,7 +92,7 @@ const Services = () => {
         { lang: 'x-default', href: `${SITE_URL}/services` },
       ]}
     >
-      <article className="post" id="services">
+      <article className="post field-notes-content" id="services">
         {/* Dark hero with anchor pills */}
         <header className="page-hero">
           <div className="content-standard">
@@ -120,7 +120,7 @@ const Services = () => {
         </header>
 
         {/* Photo: Corporate workshop in action */}
-        <ScrollReveal variant="blur-in">
+        <ScrollReveal variant="blur-in" className="services-photo-reveal">
           <div className="full-bleed photo-band">
             <OptimizedImage
               src="/images/services/corporate-training.jpeg"

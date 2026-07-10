@@ -69,7 +69,7 @@ const Contact = () => {
           })}
         </script>
       </Helmet>
-      <article className="post" id="contact">
+      <article className="post field-notes-content" id="contact">
         {/* Dark hero */}
         <header className="page-hero">
           <div className="content-narrow">
@@ -139,19 +139,19 @@ const Contact = () => {
             </ScrollReveal>
             <ScrollReveal variant="fade-up-long" stagger={120}>
               <div className="card-grid cols-2">
-                <div className="card">
+                <div className="card fn-card">
                   <h4>Corporate Training</h4>
                   <p>Team workshops and adoption programs</p>
                 </div>
-                <div className="card">
+                <div className="card fn-card">
                   <h4>1-1 Coaching</h4>
                   <p>Personalized support for your own workflow</p>
                 </div>
-                <div className="card">
+                <div className="card fn-card">
                   <h4>Speaking</h4>
                   <p>Keynotes, briefings, and event sessions</p>
                 </div>
-                <div className="card">
+                <div className="card fn-card">
                   <h4>Trainer Recruitment</h4>
                   <p>Joining the Adaptig trainer network</p>
                 </div>

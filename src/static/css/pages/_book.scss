@@ -25,13 +25,15 @@
 }
 
 .roam-embed-container {
-  min-width: 320px;
+  border: 1px solid _palette(ink);
+  border-radius: map-get($radius, sm);
+  min-width: 0;
   min-height: 600px;
   transition: height 0.3s $ease-out;
-  border-radius: map-get($radius, xl);
   overflow: hidden;
   box-shadow: map-get($shadow, lg);
   background: _palette(surface-raised);
+  width: 100%;
 
   iframe {
     border: none;
@@ -52,17 +54,19 @@
 .book-page__options {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
+  gap: 1rem;
   max-width: _size(content-standard);
   margin: 0 auto;
 
   @include breakpoint(medium) {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1rem;
   }
 }
 
 .book-page__option {
+  padding: 1.25rem;
+
   h4 {
     font-size: 1.1rem;
     font-weight: _font(weight-bold);
@@ -92,7 +96,7 @@
   display: inline-block;
   font-size: 0.8rem;
   font-weight: _font(weight-medium);
-  color: _palette(text-secondary);
+  color: _palette(amber-text);
   letter-spacing: map-get($font, kerning-meta);
   text-transform: uppercase;
   margin-bottom: 0.75rem;

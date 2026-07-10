@@ -1,0 +1,164 @@
+/* Services — Field Notes entries and mobile overflow containment */
+
+#services.field-notes-content {
+  .button {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    white-space: normal;
+  }
+
+  .services-anchor-pills,
+  .service-group,
+  .service-group__list,
+  .service-group__item,
+  .service-group__tiers,
+  .service-group__tier,
+  .related-case-studies,
+  .email-capture,
+  .email-capture__form {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  // The reveal wrapper is a direct article child, so _main.scss otherwise
+  // constrains and pads it while .full-bleed adds its own inline padding.
+  // Reset both layers so the photo band cannot widen the 390px canvas.
+  > .services-photo-reveal {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+
+    > .photo-band {
+      max-width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      width: 100%;
+    }
+  }
+
+  .service-group {
+    margin: 0;
+    padding-top: 0;
+
+    &__header {
+      border-bottom: 1px solid _palette(border-subtle);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+
+      h3 {
+        font-family: _font(family-heading);
+        font-size: clamp(2rem, 8vw, 3rem);
+        letter-spacing: _font(kerning-heading);
+      }
+    }
+
+    &__social-proof {
+      color: _palette(verification);
+      font-family: _font(family-fixed);
+      font-size: 0.72rem;
+      letter-spacing: _font(kerning-meta);
+      text-transform: uppercase;
+    }
+
+    &__testimonial {
+      margin: 1.5rem 0 0;
+      padding: 1.25rem;
+    }
+
+    &__item {
+      border-bottom: 1px solid _palette(border-subtle);
+      margin: 0;
+      padding-bottom: 1.5rem;
+      padding-top: 1.5rem;
+
+      h4 {
+        font-family: _font(family-heading);
+        font-size: clamp(1.45rem, 6vw, 2rem);
+        letter-spacing: -0.025em;
+      }
+    }
+
+    &__item-subtitle.fn-receipt {
+      margin-bottom: 1rem;
+      width: 100%;
+    }
+
+    &__tiers {
+      gap: 0.75rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      width: 100%;
+    }
+
+    &__tier {
+      background: _palette(surface-raised);
+      border: 1px solid _palette(border-subtle);
+      color: _palette(text-body);
+      padding: 1.15rem;
+
+      h5,
+      p,
+      .service-group__tier-label {
+        color: _palette(text-body);
+      }
+
+      .button {
+        background: _palette(ink);
+        border: 1px solid _palette(ink);
+        color: _palette(surface-base);
+      }
+    }
+
+    &__tier-badge {
+      align-self: flex-start;
+      background: transparent;
+      border-radius: map-get($radius, sm);
+      margin-bottom: 0.9rem;
+    }
+
+    &__tier-receipt {
+      align-items: baseline;
+      margin-bottom: 0.9rem;
+
+      h5 {
+        margin: 0;
+      }
+    }
+
+    &__primary-cta .button,
+    &__item-cta .button,
+    .service-group__tier .button {
+      max-width: 100%;
+      white-space: normal;
+    }
+  }
+
+  @include breakpoint(medium) {
+    .service-group__tiers {
+      grid-template-columns: minmax(0, 1fr);
+      width: 100%;
+    }
+  }
+
+  @include breakpoint(xsmall) {
+    .services-anchor-pills {
+      gap: 0.45rem;
+
+      .anchor-pill {
+        flex: 1 1 auto;
+        min-width: 0;
+        overflow-wrap: anywhere;
+        padding-left: 0.7rem;
+        padding-right: 0.7rem;
+        text-align: center;
+      }
+    }
+
+    .service-group__testimonial,
+    .service-group__tier {
+      padding: 1rem;
+    }
+  }
+}

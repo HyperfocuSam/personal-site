@@ -62,15 +62,15 @@ const episodes = [
 ];
 
 const EpisodeCard = ({ episode }) => (
-  <div className="episode-card" id={episode.id}>
+  <div className="episode-card fn-entry" id={episode.id}>
     <div className="episode-card__header">
       <h4 className="episode-card__title">
         {`直播${episode.number}: ${episode.title}`}
       </h4>
-      <span className="episode-card__meta">
+      <span className="episode-card__meta fn-stamp">
         {episode.date}
         {episode.membersOnly && (
-          <span className="episode-card__badge">Members Only</span>
+          <span className="episode-card__badge fn-stamp fn-stamp--verified">Members Only</span>
         )}
       </span>
     </div>
@@ -183,7 +183,7 @@ const Media = () => (
         })}
       </script>
     </Helmet>
-    <article className="post" id="media">
+    <article className="post field-notes-content" id="media">
       {/* Dark hero */}
       <header className="page-hero">
         <div className="content-standard">
@@ -201,7 +201,7 @@ const Media = () => (
         <div className="content-standard">
           <h3 className="media-section-heading">As Seen On</h3>
           <div className="show-intro">
-            <span className="show-intro__badge">Club 80 會八十</span>
+            <span className="show-intro__badge fn-stamp fn-stamp--verified">Club 80 會八十</span>
             <span>Popular Cantonese YouTube show</span>
           </div>
           {/* Single-expression text: adjacent text nodes break react-snap hydration (#418) */}
@@ -227,7 +227,7 @@ const Media = () => (
           </ScrollReveal>
           <ScrollReveal variant="fade-up-long" stagger={120}>
             <div className="card-grid cols-2">
-              <div className="card">
+              <div className="card fn-card">
                 <h4>HKEJ Master Class</h4>
                 <p>
                   DotAI invited to co-create a Master Class
@@ -235,7 +235,7 @@ const Media = () => (
                   Marketing and AI employee mindset.
                 </p>
               </div>
-              <div className="card">
+              <div className="card fn-card">
                 <h4>Ming Pao Partnership</h4>
                 <p>
                   Ming Pao partners with DotAI for an AI
@@ -244,7 +244,7 @@ const Media = () => (
                   news planning.
                 </p>
               </div>
-              <div className="card">
+              <div className="card fn-card">
                 <h4>CTgoodjobs Future Leader Awards</h4>
                 <p>
                   DotAI invited as judges and mentors for
@@ -252,7 +252,7 @@ const Media = () => (
                   sharing AI entrepreneurship methods.
                 </p>
               </div>
-              <div className="card">
+              <div className="card fn-card">
                 <h4>JoJo Ventures Speaker Spotlight</h4>
                 <p>
                   Featured as Head of Corporate Training

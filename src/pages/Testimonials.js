@@ -11,11 +11,11 @@ import ScrollReveal from '../components/ScrollReveal';
 const TestimonialCard = ({
   quote, attribution, featured, stat,
 }) => (
-  <div className={`testimonial-card${featured ? ' testimonial-card--featured' : ''}`}>
+  <div className={`testimonial-card fn-card${featured ? ' testimonial-card--featured' : ''}`}>
     <p className="testimonial-card__quote">{quote}</p>
     <p className="testimonial-card__author">
       {attribution}
-      {stat && <span>{stat}</span>}
+      {stat && <span className="fn-stamp fn-stamp--verified">{stat}</span>}
     </p>
   </div>
 );
@@ -37,7 +37,7 @@ const TestimonialSection = ({
 }) => (
   <div className="testimonials__section">
     <h3>{title}</h3>
-    {subtitle && <p>{subtitle}</p>}
+    {subtitle && <p className="fn-stamp">{subtitle}</p>}
     <div className="testimonials__grid">
       {testimonials.map((t) => (
         <TestimonialCard key={t.attribution} {...t} />
@@ -98,7 +98,7 @@ const Testimonials = () => (
         {JSON.stringify(schema)}
       </script>
     </Helmet>
-    <article className="post" id="testimonials">
+    <article className="post field-notes-content" id="testimonials">
       {/* Dark hero */}
       <header className="page-hero">
         <div className="content-standard">
@@ -115,27 +115,30 @@ const Testimonials = () => (
       <section className="section-base">
         <div className="stats-floating content-standard">
           <div className="stats-bar">
-            <div className="stat-item">
-              <span className="stat-item__number">
+            <div className="stat-item fn-receipt">
+              <span className="stat-item__number fn-receipt__number">
                 {testimonialData.stats.satisfaction}
               </span>
-              <span className="stat-item__label">
+              <span className="fn-receipt__leader" aria-hidden="true" />
+              <span className="stat-item__label fn-receipt__label">
                 {`Satisfaction — ${testimonialData.stats.satisfactionSource}`}
               </span>
             </div>
-            <div className="stat-item">
-              <span className="stat-item__number">
+            <div className="stat-item fn-receipt">
+              <span className="stat-item__number fn-receipt__number">
                 {testimonialData.stats.participantsServed}
               </span>
-              <span className="stat-item__label">
+              <span className="fn-receipt__leader" aria-hidden="true" />
+              <span className="stat-item__label fn-receipt__label">
                 Participants Trained
               </span>
             </div>
-            <div className="stat-item">
-              <span className="stat-item__number">
+            <div className="stat-item fn-receipt">
+              <span className="stat-item__number fn-receipt__number">
                 {testimonialData.stats.enterpriseClients}
               </span>
-              <span className="stat-item__label">
+              <span className="fn-receipt__leader" aria-hidden="true" />
+              <span className="stat-item__label fn-receipt__label">
                 Enterprise Clients
               </span>
             </div>

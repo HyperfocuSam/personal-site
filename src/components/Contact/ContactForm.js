@@ -89,7 +89,7 @@ const ContactForm = ({ initialInterest }) => {
         I will reply with a recommended next step.
       </p>
       <form
-        className="contact-form"
+        className="contact-form fn-card"
         onSubmit={handleSubmit}
       >
         <label className="contact-form__field" htmlFor="name">

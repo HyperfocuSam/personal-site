@@ -57,7 +57,7 @@ const Book = () => {
         { lang: 'x-default', href: `${SITE_URL}/book` },
       ]}
     >
-      <article className="post book-page" id="book">
+      <article className="post book-page field-notes-content" id="book">
         <header className="page-hero page-hero--dark">
           <div className="content-narrow">
             <div className="title">
@@ -81,25 +81,25 @@ const Book = () => {
         <section className="book-page__context">
           <div className="content-narrow">
             <div className="book-page__options">
-              <div className="book-page__option">
+              <div className="book-page__option fn-card">
                 <h4>Discovery Call</h4>
-                <span className="book-page__label">Free, 30 min</span>
+                <span className="book-page__label fn-stamp">Free, 30 min</span>
                 <p>
                   Define your goals and see if coaching is a fit.
                   No pressure, no pitch.
                 </p>
               </div>
-              <div className="book-page__option">
+              <div className="book-page__option fn-card">
                 <h4>Coaching Session</h4>
-                <span className="book-page__label">60-90 min</span>
+                <span className="book-page__label fn-stamp">60-90 min</span>
                 <p>
                   Focused work on your active projects and workflows.
                   We start from your real constraints.
                 </p>
               </div>
-              <div className="book-page__option">
+              <div className="book-page__option fn-card">
                 <h4>Something Else?</h4>
-                <span className="book-page__label">Let&apos;s talk</span>
+                <span className="book-page__label fn-stamp">Let&apos;s talk</span>
                 {/* Single-expression text: adjacent nodes break hydration (#418) */}
                 <p>
                   {'For executive advisory, team training, or speaking, '}

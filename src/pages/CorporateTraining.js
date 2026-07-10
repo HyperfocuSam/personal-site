@@ -309,7 +309,7 @@ const CorporateTraining = () => (
       </script>
     </Helmet>
 
-    <article className="post" id="corporate-training">
+    <article className="post field-notes-content" id="corporate-training">
       {/* Hero */}
       <header className="page-hero">
         <div className="content-standard">
@@ -329,27 +329,31 @@ const CorporateTraining = () => (
       <section className="section-base">
         <div className="stats-floating content-standard">
           <div className="stats-bar">
-            <div className="stat-item">
-              <span className="stat-item__number">10,000+</span>
-              <span className="stat-item__label">
+            <div className="stat-item fn-receipt">
+              <span className="stat-item__number fn-receipt__number">10,000+</span>
+              <span className="fn-receipt__leader" aria-hidden="true" />
+              <span className="stat-item__label fn-receipt__label">
                 Professionals Trained
               </span>
             </div>
-            <div className="stat-item">
-              <span className="stat-item__number">9.2/10</span>
-              <span className="stat-item__label">
+            <div className="stat-item fn-receipt">
+              <span className="stat-item__number fn-receipt__number">9.2/10</span>
+              <span className="fn-receipt__leader" aria-hidden="true" />
+              <span className="stat-item__label fn-receipt__label">
                 Avg. Satisfaction
               </span>
             </div>
-            <div className="stat-item">
-              <span className="stat-item__number">70+</span>
-              <span className="stat-item__label">
+            <div className="stat-item fn-receipt">
+              <span className="stat-item__number fn-receipt__number">70+</span>
+              <span className="fn-receipt__leader" aria-hidden="true" />
+              <span className="stat-item__label fn-receipt__label">
                 Organizations Served
               </span>
             </div>
-            <div className="stat-item">
-              <span className="stat-item__number">13</span>
-              <span className="stat-item__label">
+            <div className="stat-item fn-receipt">
+              <span className="stat-item__number fn-receipt__number">13</span>
+              <span className="fn-receipt__leader" aria-hidden="true" />
+              <span className="stat-item__label fn-receipt__label">
                 Countries Reached
               </span>
             </div>
@@ -400,7 +404,7 @@ const CorporateTraining = () => (
           </p>
           <div className="card-grid cols-2" style={{ marginTop: '2rem' }}>
             {workshops.map((w) => (
-              <div key={w.title} className="card" style={{ padding: '1.5rem' }}>
+              <div key={w.title} className="card fn-card" style={{ padding: '1.5rem' }}>
                 <h3 style={{ marginBottom: '0.25rem' }}>{w.title}</h3>
                 <p style={{
                   fontSize: '0.85em',
@@ -435,7 +439,7 @@ const CorporateTraining = () => (
           </p>
           <div className="card-grid cols-3" style={{ marginTop: '2rem' }}>
             {industries.map((ind) => (
-              <div key={ind.name} className="card" style={{ padding: '1.25rem' }}>
+              <div key={ind.name} className="card fn-card" style={{ padding: '1.25rem' }}>
                 <h3 style={{ fontSize: '1.05rem', marginBottom: '0.5rem' }}>
                   {ind.name}
                 </h3>
@@ -514,7 +518,7 @@ const CorporateTraining = () => (
           </p>
           <div className="card-grid cols-2" style={{ marginTop: '2rem' }}>
             {methodologies.map((m) => (
-              <div key={m.name} className="card" style={{ padding: '1.5rem' }}>
+              <div key={m.name} className="card fn-card" style={{ padding: '1.5rem' }}>
                 <h3 style={{ fontSize: '1.05rem', marginBottom: '0.5rem' }}>
                   {m.name}
                 </h3>
@@ -577,7 +581,7 @@ const CorporateTraining = () => (
               <Link
                 key={cs.title}
                 to={cs.link}
-                className="card"
+                className="card fn-card"
                 style={{
                   padding: '1.5rem',
                   textDecoration: 'none',
@@ -692,6 +696,7 @@ const CorporateTraining = () => (
           {faqItems.map((item) => (
             <div
               key={item.q}
+              className="fn-entry"
               style={{ marginBottom: '1.5rem' }}
             >
               <h3 style={{ fontSize: '1rem', marginBottom: '0.5rem' }}>
