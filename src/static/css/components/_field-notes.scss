@@ -1,0 +1,106 @@
+/* Field Notes — reusable evidence-book primitives */
+
+.fn-highlight {
+  display: inline-block;
+  isolation: isolate;
+  max-width: 100%;
+  position: relative;
+
+  &::before {
+    background: _palette(highlighter);
+    bottom: 0.02em;
+    content: '';
+    left: -0.07em;
+    opacity: 0.9;
+    position: absolute;
+    right: -0.09em;
+    top: 0.53em;
+    transform: rotate(-1.2deg) skewX(-7deg);
+    transform-origin: left center;
+    z-index: -1;
+  }
+
+  @include breakpoint(xsmall) {
+    margin-left: 0.07em;
+    margin-right: 0.09em;
+    max-width: calc(100% - 0.16em);
+  }
+}
+
+.fn-stamp {
+  border: 1px solid _palette(border-strong);
+  color: _palette(amber-text);
+  display: inline-block;
+  font-family: _font(family-fixed);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  padding: 0.22rem 0.38rem;
+  text-transform: uppercase;
+
+  &--verified {
+    border-color: _palette(verification);
+    color: _palette(verification);
+    font-weight: _font(weight-bold);
+  }
+}
+
+.fn-entry {
+  border-left: 2px solid _palette(ink);
+  display: block;
+  padding: 1.35rem 2rem 1.35rem 1rem;
+}
+
+.fn-card {
+  background: _palette(surface-raised);
+  border: 1px solid _palette(border-subtle);
+  border-radius: map-get($radius, sm);
+  padding: 1.15rem;
+}
+
+.fn-receipt {
+  align-items: end;
+  display: grid;
+  gap: 0.25rem 0.35rem;
+  grid-template-columns: auto minmax(0, 1fr) minmax(0, auto);
+  min-width: 0;
+
+  &__number {
+    color: _palette(ink);
+    font-family: _font(family-fixed);
+    font-variant-numeric: tabular-nums;
+    font-weight: _font(weight-bold);
+    letter-spacing: -0.04em;
+    line-height: 1;
+    min-width: 0;
+  }
+
+  &__leader {
+    border-bottom: 1px dotted _palette(text-secondary);
+    min-width: 0.2rem;
+    transform: translateY(-0.18rem);
+  }
+
+  &__label,
+  &__annotation {
+    font-family: _font(family-fixed);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  &__label {
+    color: _palette(text-body);
+    font-weight: _font(weight-medium);
+    line-height: 1.25;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    text-align: right;
+    white-space: normal;
+  }
+
+  &__annotation {
+    color: _palette(verification);
+    grid-column: 1 / -1;
+    line-height: 1.2;
+  }
+}

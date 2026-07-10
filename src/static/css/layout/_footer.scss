@@ -1,37 +1,41 @@
-/* Footer — dark footer */
+/* Footer — compact Field Notes colophon */
 
 #site-footer {
-  background-color: _palette(ink);
-  color: _palette(text-on-dark-muted);
-  border-top: 0;
+  background-color: _palette(surface-base);
+  color: _palette(text-body);
+  border-top: 1px solid _palette(border-subtle);
   width: 100%;
 
+  h3,
+  h4,
+  p,
   a {
-    color: _palette(text-on-dark);
+    font-family: _font(family-fixed);
+  }
+
+  a {
+    color: _palette(text-body);
     border-bottom: 0;
 
     &:hover {
-      color: #ffffff;
+      color: _palette(ink);
     }
   }
 
   h3, h4 {
-    color: _palette(text-on-dark);
-    text-transform: none;
-    letter-spacing: 0;
+    color: _palette(text-body);
+    font-size: 0.66rem;
+    letter-spacing: _font(kerning-meta);
+    text-transform: uppercase;
   }
 
   h3 {
-    font-size: 1.25rem;
     margin-bottom: 0.25rem;
   }
 
   h4 {
-    font-size: 0.875rem;
     font-weight: _font(weight-bold);
-    text-transform: uppercase;
-    letter-spacing: _font(kerning-meta);
-    color: _palette(text-on-dark-muted);
+    color: _palette(text-body);
     margin-bottom: 1rem;
   }
 }
@@ -39,10 +43,10 @@
 .footer-inner {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  gap: 3rem;
+  gap: 1.5rem;
   max-width: _size(content-wide);
   margin: 0 auto;
-  padding: 4rem 1.5rem 3rem;
+  padding: 2rem 1.125rem 1.5rem;
 
   @include breakpoint(medium) {
     grid-template-columns: 1fr 1fr;
@@ -50,22 +54,23 @@
 
   @include breakpoint(small) {
     grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 2.5rem 1.5rem 2rem;
+    gap: 1.25rem;
+    padding: 2rem 1.125rem 1.5rem;
   }
 }
 
 .footer-tagline {
-  color: _palette(text-on-dark);
+  color: _palette(text-body);
   font-weight: _font(weight-medium);
-  font-size: 0.95rem;
+  font-size: 0.68rem;
+  line-height: 1.5;
   margin-bottom: 1rem;
 }
 
 .footer-bio {
-  font-size: 0.9rem;
-  line-height: 1.65;
-  color: _palette(text-on-dark-muted);
+  font-size: 0.68rem;
+  line-height: 1.5;
+  color: _palette(text-body);
 }
 
 // Quick links column
@@ -79,12 +84,13 @@
       margin-bottom: 0.5rem;
 
       a {
-        font-size: 0.9rem;
-        color: _palette(text-on-dark-muted);
+        font-size: 0.68rem;
+        line-height: 1.5;
+        color: _palette(text-body);
         transition: color 0.25s $ease-out;
 
         &:hover {
-          color: _palette(text-on-dark);
+          color: _palette(ink);
         }
       }
     }
@@ -102,12 +108,12 @@
       list-style: none;
 
       a {
-        color: _palette(text-on-dark-muted);
+        color: _palette(text-body);
         font-size: 1.1rem;
         transition: color 0.25s $ease-out;
 
         &:hover {
-          color: _palette(text-on-dark);
+          color: _palette(ink);
         }
       }
     }
@@ -115,20 +121,30 @@
 }
 
 .footer-email a {
-  font-size: 0.9rem;
+  font-size: 0.68rem;
+  line-height: 1.5;
 }
 
 // Bottom bar
 .footer-bottom {
-  border-top: 1px solid _palette(ink-light);
+  background: _palette(surface-base);
+  border-top: 1px solid _palette(border-subtle);
   max-width: _size(content-wide);
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: 0.9rem 1.125rem;
   text-align: center;
 
   p {
-    font-size: 0.8rem;
-    color: _palette(text-on-dark-muted);
+    font-size: 0.62rem;
+    color: _palette(text-body);
+    letter-spacing: 0.04em;
     margin: 0;
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (min-width: 737px) {
+  .footer-inner {
+    padding: 2.5rem 2rem 2rem;
   }
 }

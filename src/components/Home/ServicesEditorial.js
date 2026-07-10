@@ -34,9 +34,9 @@ const ServicesEditorial = () => (
         <Link
           key={service.label}
           to={service.href}
-          className="services-editorial__item"
+          className="services-editorial__item fn-entry"
         >
-          <span className="services-editorial__label">{service.label}</span>
+          <span className="services-editorial__label fn-stamp">{service.label}</span>
           <h3 className="services-editorial__heading">{service.title}</h3>
           <p className="services-editorial__desc">{service.description}</p>
           <span className="services-editorial__arrow">&rarr;</span>

@@ -26,11 +26,13 @@ const TestimonialSection = ({
         {limitedTestimonials.map((testimonial, index) => (
           <blockquote
             key={`${testimonial.name}-${testimonial.company || testimonial.title}`}
-            className="testimonial-pullquote__item"
+            className="testimonial-pullquote__item fn-card"
           >
             {/* Quote and role are single expressions: adjacent text nodes
                 break react-snap hydration (React #418). */}
-            <p className="testimonial-pullquote__quote">
+            <p
+              className={`testimonial-pullquote__quote${index === 2 ? ' fn-highlight' : ''}`}
+            >
               {`“${testimonial.quote}”`}
             </p>
             <footer className="testimonial-pullquote__attribution">
@@ -41,7 +43,11 @@ const TestimonialSection = ({
                 </span>
               )}
               {testimonial.company && (
-                <span className="testimonial-pullquote__stamp">{testimonial.company}</span>
+                <span
+                  className="testimonial-pullquote__stamp fn-stamp fn-stamp--verified"
+                >
+                  {testimonial.company}
+                </span>
               )}
             </footer>
             {index < limitedTestimonials.length - 1 && (

@@ -22,7 +22,10 @@ const LatestWriting = () => {
               to={`/blog/${post.slug}`}
               className="latest-writing__item"
             >
-              <time className="latest-writing__date" dateTime={post.date}>
+              <time
+                className="latest-writing__date fn-stamp fn-stamp--verified"
+                dateTime={post.date}
+              >
                 {formatDate(post.date)}
               </time>
               <div className="latest-writing__content">

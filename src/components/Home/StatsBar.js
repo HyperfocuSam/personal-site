@@ -44,9 +44,9 @@ const StatsBar = () => (
       {statsBarItems.map((stat) => (
         <div
           key={stat.label}
-          className={`stats-strip__item${stat.primary ? ' stats-strip__item--primary' : ''}`}
+          className={`stats-strip__item fn-receipt${stat.primary ? ' stats-strip__item--primary' : ''}`}
         >
-          <span className="stats-strip__number">
+          <span className="stats-strip__number fn-receipt__number">
             <StatNumber
               value={stat.value}
               suffix={stat.suffix}
@@ -54,9 +54,12 @@ const StatsBar = () => (
               decimal={stat.decimal}
             />
           </span>
-          <span className="stats-strip__leader" aria-hidden="true" />
-          <span className="stats-strip__label">{stat.label}</span>
-          <span className="stats-strip__annotation">since 2024</span>
+          <span
+            className="stats-strip__leader fn-receipt__leader"
+            aria-hidden="true"
+          />
+          <span className="stats-strip__label fn-receipt__label">{stat.label}</span>
+          <span className="stats-strip__annotation fn-receipt__annotation">since 2024</span>
         </div>
       ))}
     </div>

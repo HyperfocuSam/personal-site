@@ -1,4 +1,4 @@
-/* Header — warm dark sticky navigation */
+/* Header — Field Notes paper/ink navigation */
 
 body {
   padding-top: _size(nav-height);
@@ -12,7 +12,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: _palette(ink);
+  background-color: _palette(surface-raised);
+  border-bottom: 1px solid _palette(border-subtle);
+  box-shadow: none;
+  color: _palette(ink);
   height: _size(nav-height);
   left: 0;
   line-height: _size(nav-height);
@@ -20,23 +23,29 @@ body {
   top: 0;
   width: 100%;
   z-index: _misc(z-index-base);
-  transition: background-color 0.3s $ease-out, box-shadow 0.3s $ease-out;
+  isolation: isolate;
+  transition: background-color _duration(base) $ease-out;
 
-  // Scrolled state — glass effect
+  // Remain fully opaque while sticky so page content never shows through.
   &.scrolled {
-    background-color: rgba(12, 12, 12, 0.92);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+    background-color: _palette(surface-raised);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
   }
 
   a {
-    color: _palette(text-on-dark);
+    color: _palette(ink);
+    font-family: _font(family-fixed);
+    font-size: 0.72rem;
+    font-weight: _font(weight-bold);
+    letter-spacing: _font(kerning-meta);
     text-decoration: none;
     border-bottom: 0;
+    text-transform: uppercase;
 
     &:hover {
-      color: #ffffff;
+      color: _palette(ink);
     }
   }
 
@@ -61,15 +70,14 @@ body {
     font-size: 1rem;
 
     a {
-      font-family: _font(family-heading);
-      font-weight: _font(weight-heading-bold);
-      font-size: 1.1rem;
-      color: _palette(text-on-dark);
-      letter-spacing: 0;
-      text-transform: none;
+      font-family: _font(family-fixed);
+      font-size: 0.72rem;
+      font-weight: _font(weight-bold);
+      letter-spacing: _font(kerning-meta);
+      text-transform: uppercase;
 
       &:hover {
-        color: #ffffff;
+        color: _palette(ink);
       }
     }
   }
@@ -100,29 +108,50 @@ body {
         a {
           display: inline-block;
           border-bottom: 0;
-          font-family: _font(family);
-          font-size: 0.875rem;
-          font-weight: _font(weight-medium);
-          letter-spacing: 0;
-          text-transform: none;
-          color: _palette(text-on-dark-muted);
-          padding: 0.5rem 0.75rem;
-          border-radius: map-get($radius, md);
+          font-family: _font(family-fixed);
+          font-size: 0.72rem;
+          font-weight: _font(weight-bold);
+          letter-spacing: _font(kerning-meta);
+          text-transform: uppercase;
+          color: _palette(ink);
+          padding: 0.5rem 0.7rem;
+          border-radius: 0;
           position: relative;
-          transition: color 0.25s $ease-out;
+          isolation: isolate;
+          transition: color _duration(fast) $ease-out;
 
-          &:hover {
-            color: _palette(text-on-dark);
+          &::after {
+            background: _palette(highlighter);
+            bottom: 0.2rem;
+            content: '';
+            height: 0.35rem;
+            left: 0.6rem;
+            opacity: 0;
+            position: absolute;
+            right: 0.6rem;
+            transform: scaleX(0.65) skewX(-8deg);
+            transform-origin: left center;
+            transition: opacity _duration(fast) $ease-out,
+              transform _duration(fast) $ease-out;
+            z-index: -1;
           }
 
-          // Active state
+          &:hover {
+            color: _palette(ink);
+          }
+
           &.active {
-            color: _palette(text-on-dark);
-            font-weight: _font(weight-bold);
+            color: _palette(ink);
 
             &:hover {
-              color: _palette(text-on-dark);
+              color: _palette(ink);
             }
+          }
+
+          &:hover::after,
+          &.active::after {
+            opacity: 0.85;
+            transform: scaleX(1) skewX(-8deg);
           }
         }
       }
@@ -135,17 +164,21 @@ body {
 
     a {
       display: inline-block;
-      background-color: _palette(amber);
-      color: _palette(ink);
-      font-family: _font(family);
-      font-size: 0.8rem;
+      background-color: _palette(ink);
+      border: 1px solid _palette(ink);
+      color: _palette(surface-base);
+      font-family: _font(family-fixed);
+      font-size: 0.68rem;
       font-weight: _font(weight-bold);
+      letter-spacing: _font(kerning-meta);
       padding: 0.6em 1.5em;
-      border-radius: map-get($radius, md);
-      transition: background-color 0.25s $ease-out;
+      border-radius: map-get($radius, sm);
+      text-transform: uppercase;
+      transition: background-color _duration(base) $ease-out,
+        color _duration(base) $ease-out;
 
       &:hover {
-        background-color: _palette(amber-light);
+        background-color: _palette(surface-raised);
         color: _palette(ink);
       }
     }
@@ -187,6 +220,9 @@ body {
 
     .index-link {
       padding: 0 0 0 1.25rem;
+      max-width: calc(100% - 4rem);
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 }
@@ -199,17 +235,28 @@ body {
   display: none;
 }
 
-// Slide-in menu panel — dark theme
+// Slide-in menu panel — opaque paper surface above page content.
+.bm-menu-wrap {
+  top: 0;
+}
+
+.bm-overlay {
+  background: rgba(20, 20, 18, 0.16) !important;
+  left: 0;
+  top: 0;
+}
+
 .bm-menu {
-  background: _palette(ink);
-  padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
+  background: _palette(surface-raised);
+  border-left: 1px solid _palette(border-subtle);
+  padding: 4.5rem 1.5rem 1.5rem;
+  font-size: 1rem;
 }
 
 .bm-item-list {
-  color: _palette(text-on-dark);
+  color: _palette(ink);
   padding: 0.8em;
-  font-family: _font(family);
+  font-family: _font(family-fixed);
 }
 
 #header .index-link {

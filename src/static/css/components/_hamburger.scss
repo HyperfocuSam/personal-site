@@ -15,8 +15,8 @@
     display: block;
     width: 20px;
     height: 2px;
-    background-color: _palette(text-on-dark);
-    border-radius: 1px;
+    background-color: _palette(ink);
+    border-radius: 0;
     transition: transform 0.3s $ease-out, opacity 0.3s $ease-out;
     transform-origin: center;
   }
@@ -37,11 +37,11 @@
   }
 
   &:hover .hamburger-bar {
-    background-color: _palette(text-on-dark);
+    background-color: _palette(ink);
   }
 }
 
-// Mobile menu list styling (dark theme)
+// Mobile menu list styling
 .bm-item-list {
   margin-top: 0;
 }
@@ -59,18 +59,19 @@
 
   li a h3 {
     border: 0;
-    border-top: solid 1px _palette(ink-light);
+    border-top: solid 1px _palette(border-subtle);
     margin: 1.25em 0 0 0;
     padding: 1.25em 0 0 0;
-    color: _palette(text-on-dark);
-    font-size: 0.95rem;
+    color: _palette(ink);
+    font-family: _font(family-fixed);
+    font-size: 0.72rem;
     font-weight: _font(weight-bold);
-    text-transform: none;
-    letter-spacing: 0;
+    text-transform: uppercase;
+    letter-spacing: _font(kerning-meta);
   }
 
   li a h3:hover {
-    color: _palette(text-on-dark);
+    color: _palette(ink);
   }
 
   li {
@@ -79,6 +80,6 @@
 
   .index-li {
     border-top: none;
-    color: _palette(text-on-dark);
+    color: _palette(ink);
   }
 }

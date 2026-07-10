@@ -33,59 +33,107 @@ header {
   }
 }
 
-// Page hero sections — light editorial with massive serif
+// Page hero sections — Field Notes title page
 .page-hero {
   background: _palette(surface-base);
+  border-bottom: 1px solid _palette(border-subtle);
   color: _palette(text-primary);
-  padding: 8rem 1.5rem 5rem;
+  padding: 4.5rem 0 3.75rem;
   width: 100%;
-  text-align: center;
+  text-align: left;
+
+  .title {
+    margin-bottom: 0;
+  }
 
   :is(h1, h2) {
-    color: _palette(text-primary);
+    color: _palette(ink);
+    font-family: _font(family-heading);
     font-size: clamp(2.5rem, 2rem + 3vw, 4.5rem);
-    font-weight: _font(weight-heading);
-    line-height: 1.1;
+    font-variation-settings: "opsz" 64;
+    font-weight: 650;
+    letter-spacing: -0.04em;
+    line-height: 1.02;
     margin-bottom: 0.75rem;
 
     a {
-      color: _palette(text-primary);
-      &:hover { color: _palette(text-secondary); }
+      color: _palette(ink);
+      &:hover { color: _palette(ink); }
     }
   }
 
   p {
     color: _palette(text-body);
-    font-size: clamp(1rem, 0.95rem + 0.25vw, 1.15rem);
+    font-size: clamp(0.95rem, 0.9rem + 0.25vw, 1.08rem);
     max-width: 540px;
-    margin: 0 auto;
-    line-height: 1.65;
+    margin: 0;
+    line-height: 1.55;
   }
 
   .title p {
     color: _palette(text-body);
   }
 
-  @include breakpoint(small) {
-    padding: 6rem 1.25rem 3.5rem;
+  .post-header__meta,
+  .breadcrumb,
+  &__eyebrow,
+  .meta-label {
+    border: 1px solid _palette(verification);
+    color: _palette(verification);
+    display: inline-flex;
+    font-family: _font(family-fixed);
+    font-size: 0.72rem;
+    font-style: normal;
+    font-weight: _font(weight-bold);
+    gap: 0.5rem;
+    letter-spacing: _font(kerning-meta);
+    line-height: 1.25;
+    padding: 0.3rem 0.4rem;
+    text-transform: uppercase;
   }
 
-  // Dark variant — for blog posts and accent pages
+  .services-anchor-pills {
+    justify-content: flex-start;
+
+    .anchor-pill {
+      background: _palette(surface-raised);
+      border-color: _palette(border-subtle);
+      color: _palette(ink);
+      font-family: _font(family-fixed);
+      font-size: 0.68rem;
+      font-weight: _font(weight-bold);
+      letter-spacing: _font(kerning-meta);
+      text-transform: uppercase;
+    }
+  }
+
+  @include breakpoint(small) {
+    padding: 3.25rem 0 2.75rem;
+
+    > .content-narrow,
+    > .content-standard,
+    > .content-wide {
+      padding-left: 1.125rem;
+      padding-right: 1.125rem;
+    }
+  }
+
+  // Legacy dark hooks now inherit the paper/ink title-page treatment.
   &--dark {
-    background: linear-gradient(135deg, _palette(ink) 0%, _palette(ink-mid) 100%);
-    color: _palette(text-on-dark);
+    background: _palette(surface-base);
+    color: _palette(ink);
 
     :is(h1, h2) {
-      color: _palette(text-on-dark);
+      color: _palette(ink);
 
       a {
-        color: _palette(text-on-dark);
-        &:hover { color: _palette(text-primary); }
+        color: _palette(ink);
+        &:hover { color: _palette(ink); }
       }
     }
 
-    p { color: _palette(text-on-dark-muted); }
-    .title p { color: _palette(text-on-dark-muted); }
+    p { color: _palette(text-body); }
+    .title p { color: _palette(text-body); }
   }
 }
 
