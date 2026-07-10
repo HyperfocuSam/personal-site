@@ -74,7 +74,7 @@ The tradeoff is obvious: small groups are expensive per participant. The economi
 
 Tier 1 was invoiced and paid. As of March 2026, we are in discussions about Tier 2 -- department-specific workshops for Marketing/Design and Finance, each a half-day hands-on format at an external training center. The Marketing workshop was originally planned for post-Chinese New Year; the Finance team is unavailable until April due to year-end closing cycles.
 
-The engagement also validated something I have been refining in my approach: the [tool-agnostic teaching method](why-i-teach-copilot-not-chatgpt). I did not teach "how to use ChatGPT." I taught how to communicate with AI systems using transferable skills -- role setup, structured output, iterative refinement. When the tools change (and they will change), the skills remain.
+The engagement also validated something I have been refining in my approach: the [tool-agnostic teaching method](/blog/why-i-teach-copilot-not-chatgpt). I did not teach "how to use ChatGPT." I taught how to communicate with AI systems using transferable skills -- role setup, structured output, iterative refinement. When the tools change (and they will change), the skills remain.
 
 ---
 
