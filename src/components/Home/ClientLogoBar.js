@@ -57,7 +57,7 @@ const textClients = ['Arup', 'ThreeSixty'];
 
 const ClientLogoBar = () => (
   <section className="logo-marquee full-bleed">
-    <p className="logo-marquee__label">Trusted by leading organizations</p>
+    <p className="logo-marquee__label">verified engagements</p>
     <div className="logo-marquee__track">
       <div className="logo-marquee__scroll" aria-hidden="false">
         {logoClients.map(({

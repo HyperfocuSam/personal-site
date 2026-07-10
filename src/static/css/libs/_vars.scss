@@ -1,5 +1,5 @@
 // Design System: hyperfocusam.com
-// Atmosphere: "Editorial monochrome — confident restraint"
+// Atmosphere: "Field Notes — a practitioner's evidence book"
 
 // Breakpoints.
 $breakpoints: (
@@ -60,6 +60,7 @@ $font: (
     monospace,
   ),
   family-heading: (
+    "Fraunces",
     "DM Serif Display",
     "Georgia",
     serif,
@@ -80,35 +81,38 @@ $font: (
   kerning-meta: 0.08em,
 );
 
-// Palette — monochromatic with amber CTA accent
+// Palette — paper, ink, highlighter, and verification marks
 $palette: (
   // Ink (near-black)
-  ink: #0c0c0c,
+  ink: #141412,
   ink-mid: #1a1a1a,
   ink-light: #2a2a2a,
   ink-deep: #050505,
 
-  // Amber (used ONLY on 2 CTA buttons)
-  amber: #c8965a,
+  // Evidence accents
+  amber: #f5c64f,
   amber-text: #8a6530,
-  amber-light: #d4a96e,
-  amber-subtle: rgba(200, 150, 90, 0.12),
+  amber-light: #f8d878,
+  amber-subtle: rgba(245, 198, 79, 0.18),
+  highlighter: #f5c64f,
+  verification: #2f6b4f,
 
-  // Surfaces (clean neutrals)
-  surface-base: #fafaf9,
+  // Surfaces (paper neutrals)
+  surface-base: #fcfbf8,
   surface-raised: #ffffff,
   surface-overlay: rgba(255, 255, 255, 0.97),
-  surface-sunken: #f0f0f0,
+  surface-sunken: #f7f5f0,
 
   // Text
-  text-primary: #0c0c0c,
-  text-body: #4a4a4a,
-  text-secondary: #8a8a8a,
+  text-primary: #141412,
+  text-body: #3d3b37,
+  text-secondary: #8a867e,
   text-on-dark: #f0ece8,
   text-on-dark-muted: #a39a90,
 
   // Borders
-  border-subtle: #e5e5e5,
+  border: #e7e4dd,
+  border-subtle: #e7e4dd,
   border-strong: #d0d0d0,
 
   // Dark surfaces — warm study (homepage dark mode)
@@ -146,11 +150,32 @@ $palette: (
 @import "tokens.figma.generated";
 $palette: map-merge($palette, $figma-tokens);
 
+// D1 preview overrides. The generated Figma snapshot currently contains the
+// previous palette, so merge the approved Field Notes values last while
+// preserving the existing _palette() accessor contract.
+$field-notes-palette: (
+  ink: #141412,
+  text-primary: #141412,
+  surface-base: #fcfbf8,
+  surface-raised: #ffffff,
+  surface-sunken: #f7f5f0,
+  text-body: #3d3b37,
+  text-secondary: #8a867e,
+  border: #e7e4dd,
+  border-subtle: #e7e4dd,
+  amber: #f5c64f,
+  amber-light: #f8d878,
+  amber-text: #8a6530,
+  highlighter: #f5c64f,
+  verification: #2f6b4f,
+);
+$palette: map-merge($palette, $field-notes-palette);
+
 // Shadows
 $shadow: (
-  sm: 0 1px 2px rgba(0, 0, 0, 0.03),
-  md: 0 2px 8px rgba(0, 0, 0, 0.05),
-  lg: 0 4px 16px rgba(0, 0, 0, 0.07),
+  sm: none,
+  md: none,
+  lg: none,
 );
 
 // Fluid type scale (homepage dark mode)
@@ -164,9 +189,9 @@ $type: (
 // Border radius
 $radius: (
   sm: 2px,
-  md: 3px,
-  lg: 4px,
-  xl: 6px,
+  md: 2px,
+  lg: 2px,
+  xl: 2px,
   full: 50%,
   pill: 100px,
 );

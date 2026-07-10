@@ -37,8 +37,11 @@ const TestimonialSection = ({
               <span className="testimonial-pullquote__name">{testimonial.name}</span>
               {testimonial.title && (
                 <span className="testimonial-pullquote__role">
-                  {[testimonial.title, testimonial.company].filter(Boolean).join(', ')}
+                  {testimonial.title}
                 </span>
+              )}
+              {testimonial.company && (
+                <span className="testimonial-pullquote__stamp">{testimonial.company}</span>
               )}
             </footer>
             {index < limitedTestimonials.length - 1 && (

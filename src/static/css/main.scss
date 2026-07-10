@@ -56,6 +56,10 @@
 @import "pages/get-started";
 @import "pages/book";
 
+// Homepage preview language. Loaded last so it can cleanly supersede the
+// current editorial layer without disturbing legacy/Zh homepage selectors.
+@import "pages/field-notes";
+
 // Floating WhatsApp button — site-wide
 .floating-whatsapp {
   position: fixed;
@@ -65,24 +69,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 56px;
-  height: 56px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   background-color: #25d366;
   color: #ffffff;
   border: 0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: transform 0.2s $ease-out, box-shadow 0.2s $ease-out;
+  box-shadow: none;
+  transition: transform 0.2s $ease-out;
 
   &:hover {
     transform: scale(1.08);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
     color: #ffffff;
   }
 
   @include breakpoint(small) {
-    bottom: 1.25rem;
-    right: 1.25rem;
+    bottom: max(0.875rem, env(safe-area-inset-bottom));
+    right: max(0.875rem, env(safe-area-inset-right));
     width: 48px;
     height: 48px;
 

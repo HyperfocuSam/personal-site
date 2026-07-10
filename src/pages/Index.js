@@ -76,7 +76,7 @@ const Index = () => (
         }])}
       </script>
     </Helmet>
-    <article className="homepage-dark" id="index">
+    <article className="homepage-dark field-notes" id="index">
       {/* 1. Dark Hero — massive centered serif, single CTA */}
       <HeroSection />
 
@@ -123,6 +123,7 @@ const Index = () => (
         <EmailCapture
           title="Get practical AI insights — no fluff"
           blurb="One email when I publish: workshop frameworks, adoption case studies, and tools I actually use with clients."
+          caption="no spam, field notes only"
           variant="dark"
         />
       </ScrollReveal>

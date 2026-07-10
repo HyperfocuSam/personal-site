@@ -54,7 +54,9 @@ const StatsBar = () => (
               decimal={stat.decimal}
             />
           </span>
+          <span className="stats-strip__leader" aria-hidden="true" />
           <span className="stats-strip__label">{stat.label}</span>
+          <span className="stats-strip__annotation">since 2024</span>
         </div>
       ))}
     </div>

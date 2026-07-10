@@ -9,8 +9,11 @@ const HeroSection = () => (
         <br />
         Adopt AI That
         <br />
-        <em>Actually Sticks.</em>
+        <em className="dark-hero__highlight">Actually Sticks.</em>
       </h1>
+      <p className="dark-hero__evidence">
+        <span>field notes · hong kong · since 2024 · 10,000+ trained</span>
+      </p>
       <p className="dark-hero__subtitle">
         Workshops, coaching, and trainer development for organizations
         that want real behavior change &mdash; not just another AI demo.

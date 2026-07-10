@@ -6,6 +6,7 @@ const SUBSTACK_SUBSCRIBE_URL = 'https://wongsam.substack.com/subscribe';
 const EmailCapture = ({
   title,
   blurb,
+  caption,
   leadMagnet,
   variant,
 }) => {
@@ -41,6 +42,7 @@ const EmailCapture = ({
 
   return (
     <section className={`email-capture${leadMagnet ? ' email-capture--magnet' : ''}${variant === 'dark' ? ' email-capture--dark' : ''}`}>
+      {caption && <p className="email-capture__caption">{caption}</p>}
       <h3>{title}</h3>
       <p>{blurb}</p>
 
@@ -102,6 +104,7 @@ const EmailCapture = ({
 EmailCapture.propTypes = {
   title: PropTypes.string,
   blurb: PropTypes.string,
+  caption: PropTypes.string,
   leadMagnet: PropTypes.shape({
     title: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
@@ -112,6 +115,7 @@ EmailCapture.propTypes = {
 EmailCapture.defaultProps = {
   title: 'Stay in the loop',
   blurb: 'Occasional insights on AI adoption. No spam, no hype.',
+  caption: '',
   leadMagnet: null,
   variant: 'default',
 };

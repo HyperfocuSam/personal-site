@@ -9,6 +9,7 @@
 body {
   -ms-overflow-style: scrollbar;
   background-color: _palette(surface-base);
+  margin: 0;
 
   &.is-loading {
     *, *:before, *:after {
