@@ -209,8 +209,21 @@ body {
       display: none;
     }
 
+    // Compact mobile CTA — same label/target as desktop; must fit beside
+    // wordmark + hamburger at 320px without crowding.
     .nav-cta {
-      display: none;
+      display: block;
+      flex-shrink: 0;
+      line-height: 1;
+      margin-left: auto;
+      margin-right: 0.35rem;
+
+      a {
+        font-size: 0.6rem;
+        letter-spacing: 0.04em;
+        padding: 0.4em 0.65em;
+        white-space: nowrap;
+      }
     }
   }
 
@@ -219,10 +232,19 @@ body {
     line-height: _size(nav-height-small);
 
     .index-link {
-      padding: 0 0 0 1.25rem;
-      max-width: calc(100% - 4rem);
+      padding: 0 0 0 0.85rem;
+      max-width: calc(100% - 8.5rem);
       overflow: hidden;
       text-overflow: ellipsis;
+    }
+
+    .nav-cta {
+      margin-right: 0.25rem;
+
+      a {
+        font-size: 0.58rem;
+        padding: 0.35em 0.55em;
+      }
     }
   }
 }

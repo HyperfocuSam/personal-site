@@ -189,8 +189,53 @@
 }
 
 #testimonials.field-notes-content {
+  .section-padding {
+    padding-bottom: 2.5rem;
+    padding-top: 2.5rem;
+
+    @include breakpoint(small) {
+      padding-bottom: 2rem;
+      padding-top: 2rem;
+    }
+  }
+
+  .testimonials-hero-section {
+    padding-top: 1.5rem;
+  }
+
+  .testimonials-hero-quote {
+    border-left: 4px solid _palette(highlighter);
+    margin: 0 auto;
+    max-width: 40rem;
+    padding: 1.5rem 1.35rem;
+
+    &__text {
+      color: _palette(ink);
+      font-family: _font(family-heading);
+      font-size: clamp(1.25rem, 4.5vw, 1.75rem);
+      font-style: normal;
+      line-height: 1.35;
+      margin: 0 0 1rem;
+    }
+
+    &__footer {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      font-size: 0.95rem;
+      font-weight: _font(weight-bold);
+    }
+  }
+
+  .testimonials-top-cta {
+    margin: 1.5rem 0 0;
+    text-align: center;
+  }
+
   .testimonials__section > h3 {
-    font-size: clamp(1.8rem, 7vw, 2.5rem);
+    font-size: clamp(1.45rem, 5.5vw, 2rem);
+    margin-bottom: 0.35rem;
   }
 
   .testimonials__section > p.fn-stamp {
@@ -199,7 +244,51 @@
     font-family: _font(family-fixed);
     font-size: 0.72rem;
     letter-spacing: _font(kerning-meta);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .testimonials__compact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .testimonial-compact {
+    padding: 0.75rem 0.65rem 0.75rem 0.85rem;
+
+    &__quote {
+      color: _palette(ink);
+      font-size: 0.95rem;
+      line-height: 1.55;
+      margin: 0 0 0.45rem;
+    }
+
+    &__author {
+      color: _palette(text-secondary);
+      font-family: _font(family-fixed);
+      font-size: 0.72rem;
+      letter-spacing: _font(kerning-meta);
+      margin: 0;
+      text-transform: uppercase;
+
+      .fn-stamp {
+        display: inline-block;
+        margin-left: 0.5rem;
+        margin-top: 0.35rem;
+      }
+    }
+  }
+
+  .testimonials-closing {
+    text-align: center;
+
+    &__secondary {
+      margin-top: 0.85rem;
+
+      a {
+        font-size: 0.9em;
+      }
+    }
   }
 
   .testimonial-card {
@@ -282,6 +371,31 @@
 }
 
 #corporate-training.field-notes-content {
+  // Hero: room for subtitle + CTA so the floating stats box cannot clip them.
+  .page-hero {
+    overflow: visible;
+    padding-bottom: 3.5rem;
+
+    @include breakpoint(small) {
+      padding-bottom: 3.25rem;
+    }
+  }
+
+  .corporate-hero-cta {
+    margin: 1.25rem 0 0;
+  }
+
+  // Kill the negative-margin overlap that was clipping the hero subtitle.
+  .stats-floating {
+    margin-top: 0;
+
+    @include breakpoint(small) {
+      margin-left: 1rem;
+      margin-right: 1rem;
+      margin-top: 0;
+    }
+  }
+
   .client-logo-bar__logo {
     filter: grayscale(1) saturate(0.25);
     opacity: 0.58;
@@ -299,6 +413,141 @@
     background: _palette(ink);
     border: 1px solid _palette(ink);
     color: _palette(surface-base);
+  }
+
+  // Density: tighter sections and cards on a very long landing page.
+  .section-padding {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+
+    @include breakpoint(small) {
+      padding-bottom: 2.25rem;
+      padding-top: 2.25rem;
+    }
+  }
+
+  .corporate-dense-grid {
+    gap: 0.85rem;
+    margin-top: 1.25rem;
+  }
+
+  .corporate-dense-card {
+    padding: 1rem;
+
+    h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.25rem;
+    }
+
+    ul {
+      margin: 0.5rem 0 0;
+      padding-left: 1.1rem;
+
+      li {
+        font-size: 0.9em;
+        margin-bottom: 0.3rem;
+      }
+    }
+  }
+
+  .corporate-dense-entry {
+    padding: 0.85rem 0.75rem 0.85rem 0.9rem;
+
+    h3 {
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    p {
+      font-size: 0.9em;
+      line-height: 1.55;
+      margin-bottom: 0.4rem;
+    }
+
+    a {
+      font-size: 0.85em;
+    }
+  }
+
+  .corporate-dense-meta {
+    font-size: 0.85em;
+    margin-bottom: 0.5rem;
+    opacity: 0.75;
+  }
+
+  .corporate-case-card {
+    color: inherit;
+    display: block;
+    text-decoration: none;
+  }
+
+  .corporate-steps {
+    line-height: 1.65;
+    margin: 1rem 0 0;
+    padding-left: 1.2rem;
+
+    li {
+      margin-bottom: 0.85rem;
+    }
+  }
+
+  .corporate-inline-quote {
+    margin: 1.5rem auto 0;
+    max-width: 34rem;
+    text-align: center;
+  }
+
+  .corporate-inline-link {
+    margin: 1rem 0 0;
+    text-align: center;
+
+    a {
+      font-size: 0.9em;
+    }
+  }
+
+  .corporate-funding-list {
+    line-height: 1.75;
+    margin-top: 0.75rem;
+  }
+
+  .corporate-faq-entry {
+    margin-bottom: 1rem;
+    padding-bottom: 0.85rem;
+    padding-top: 0.85rem;
+
+    h3 {
+      font-size: 1rem;
+      margin-bottom: 0.35rem;
+    }
+
+    p {
+      font-size: 0.9em;
+      line-height: 1.65;
+      margin: 0;
+    }
+  }
+
+  .corporate-closing-cta {
+    text-align: center;
+
+    .button {
+      margin-top: 0.5rem;
+    }
+  }
+
+  .corporate-closing-alt {
+    font-size: 0.9em;
+    margin-top: 1rem;
+
+    a {
+      border-bottom: 1px solid _palette(border-subtle);
+      color: _palette(ink);
+
+      &:hover {
+        border-color: _palette(ink);
+      }
+    }
   }
 
   .pull-quote {
