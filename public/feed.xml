@@ -6,7 +6,14 @@
     <description>AI adoption insights, workshop reflections, and practical AI training tips from Sam Wong.</description>
     <language>en</language>
     <atom:link href="https://hyperfocusam.com/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Thu, 02 Jul 2026 02:39:01 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jul 2026 08:45:09 GMT</lastBuildDate>
+    <item>
+      <title>Three models, one branch, zero deployment</title>
+      <link>https://hyperfocusam.com/blog/three-models-one-branch-zero-deployment/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/three-models-one-branch-zero-deployment/</guid>
+      <description>First live run of the architect pattern on my own website: Claude Fable 5 wrote the specs and verdicts, Grok 4.5 and GPT-5.5 did the typing in parallel. 75 files, +167/−668 — and nothing ships until I decide.</description>
+      <pubDate>Fri, 10 Jul 2026 00:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>AI made me a manager, not a better maker</title>
       <link>https://hyperfocusam.com/blog/ai-manager-not-maker/</link>

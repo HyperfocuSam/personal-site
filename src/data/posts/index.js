@@ -5,6 +5,15 @@
 // linkedPost: slug of the corresponding post in another language (for hreflang)
 const posts = [
   {
+    slug: 'three-models-one-branch-zero-deployment',
+    title: 'Three models, one branch, zero deployment',
+    date: '2026-07-10',
+    excerpt: 'First live run of the architect pattern on my own website: Claude Fable 5 wrote the specs and verdicts, Grok 4.5 and GPT-5.5 did the typing in parallel. 75 files, +167/−668 — and nothing ships until I decide.',
+    tags: ['ai-agents', 'ai-tools', 'ai-adoption', 'workflow'],
+    type: 'case-study',
+    featured: false,
+  },
+  {
     slug: 'ai-manager-not-maker',
     title: 'AI made me a manager, not a better maker',
     date: '2026-07-02',
