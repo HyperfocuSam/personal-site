@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useMemo } from 'react';
 import { Link, useParams, Navigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Markdown from 'markdown-to-jsx';
@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 
 import Main from '../layouts/Main';
 import posts from '../data/posts';
+import postContent from '../data/posts/content.generated';
 import {
   AuthorCard,
   ShareButtons,
@@ -88,8 +89,7 @@ PullQuote.defaultProps = {
 
 const Post = () => {
   const { slug } = useParams();
-  const [markdown, setMarkdown] = useState('');
-  const [loading, setLoading] = useState(true);
+  const markdown = postContent[slug] ?? '';
 
   const postIndex = posts.findIndex((p) => p.slug === slug);
   const post = posts[postIndex];
@@ -97,22 +97,6 @@ const Post = () => {
   // Get previous and next posts for navigation
   const prevPost = postIndex < posts.length - 1 ? posts[postIndex + 1] : null;
   const nextPost = postIndex > 0 ? posts[postIndex - 1] : null;
-
-  useEffect(() => {
-    if (post) {
-      import(`../data/posts/${slug}.md`)
-        .then((res) => fetch(res.default))
-        .then((res) => res.text())
-        .then((text) => {
-          setMarkdown(text);
-          setLoading(false);
-        })
-        .catch(() => {
-          setMarkdown('Error loading post content.');
-          setLoading(false);
-        });
-    }
-  }, [slug, post]);
 
   const readingTime = useMemo(() => calculateReadingTime(markdown), [markdown]);
   const shouldShowTrainerBanner = useMemo(() => {
@@ -269,26 +253,22 @@ const Post = () => {
         {/* Article Content */}
         <section className="section-base section-padding">
           <div className="content-narrow">
-            {loading ? (
-              <p>Loading...</p>
-            ) : (
-              <div className="post-content">
-                <Markdown
-                  options={{
-                    overrides: {
-                      blockquote: {
-                        component: PullQuote,
-                      },
-                      h1: {
-                        component: 'h2',
-                      },
+            <div className="post-content">
+              <Markdown
+                options={{
+                  overrides: {
+                    blockquote: {
+                      component: PullQuote,
                     },
-                  }}
-                >
-                  {markdown}
-                </Markdown>
-              </div>
-            )}
+                    h1: {
+                      component: 'h2',
+                    },
+                  },
+                }}
+              >
+                {markdown}
+              </Markdown>
+            </div>
 
             {/* Share Buttons */}
             <ShareButtons
