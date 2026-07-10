@@ -59,7 +59,7 @@ const StatsBar = () => (
             aria-hidden="true"
           />
           <span className="stats-strip__label fn-receipt__label">{stat.label}</span>
-          <span className="stats-strip__annotation fn-receipt__annotation">since 2024</span>
+          <span className="stats-strip__annotation fn-receipt__annotation">since 2023</span>
         </div>
       ))}
     </div>

@@ -13,7 +13,7 @@ const HeroSection = () => (
       </h1>
       <p className="dark-hero__evidence">
         <span className="fn-stamp fn-stamp--verified">
-          field notes · hong kong · since 2024 · 10,000+ trained
+          field notes · hong kong · since 2023 · 10,000+ trained
         </span>
       </p>
       <p className="dark-hero__subtitle">
