@@ -15,9 +15,9 @@ const workshops = [
     duration: '半日 (3-4 小時)',
     audience: '全體員工',
     description:
-      '減低對 AI 嘅恐懼，建立信心，俾每位團隊成員一個實用嘅起步點。',
+      '減低對 AI 的恐懼，建立信心，給每位團隊成員一個實用的起步點。',
     outcomes: [
-      '了解 AI 能做同唔能做嘅嘢',
+      '了解 AI 能做和不能做的事情',
       '即場試用 3-5 個 AI 工具處理真實工作',
       '帶走一份個人 AI 行動計劃',
     ],
@@ -27,10 +27,10 @@ const workshops = [
     duration: '全日 (6-7 小時)',
     audience: '團隊及部門',
     description:
-      '由認知進入日常應用。團隊用 AI 重新設計佢哋嘅實際工作流程。',
+      '由認知進入日常應用。團隊用 AI 重新設計他們的實際工作流程。',
     outcomes: [
-      '繪製現有工作流程並搵出 AI 應用機會',
-      '即場建立同測試 AI 輔助工作流程',
+      '繪製現有工作流程並找出 AI 應用機會',
+      '即場建立和測試 AI 輔助工作流程',
       '量化節省時間（平均每人每週 5-8 小時）',
     ],
   },
@@ -39,11 +39,11 @@ const workshops = [
     duration: '6 節、歷時 6 星期',
     audience: '10-20 位精選推動者',
     description:
-      '將好奇嘅員工培養成內部 AI 推動者，帶動全公司採用 AI。',
+      '將好奇的員工培養成內部 AI 推動者，帶動全公司採用 AI。',
     outcomes: [
-      '深入掌握多種 AI 工具同應用場景',
-      '完成有實質成果嘅真實項目',
-      '建立可持續推動 AI 採用嘅內部推動者網絡',
+      '深入掌握多種 AI 工具和應用場景',
+      '完成有實質成果的真實項目',
+      '建立可持續推動 AI 採用的內部推動者網絡',
     ],
   },
   {
@@ -51,11 +51,11 @@ const workshops = [
     duration: '全日或兩日',
     audience: '跨部門團隊',
     description:
-      '結合創意問題解決同 AI 原型製作。團隊喺一日內用 AI 解決真實業務挑戰。',
+      '結合創意問題解決和 AI 原型製作。團隊在一日內用 AI 解決真實業務挑戰。',
     outcomes: [
       '一日內用 AI 解決一個真實業務問題',
-      '製作可向管理層展示嘅可運作原型',
-      '促進跨部門合作同創新文化',
+      '製作可向管理層展示的可運作原型',
+      '促進跨部門合作和創新文化',
     ],
   },
 ];
@@ -79,14 +79,14 @@ const industries = [
     name: '工程及能源',
     clients: '奧雅納、中電',
     example:
-      '為工程專業人士設計嘅 AI 午間講座形式。',
+      '為工程專業人士設計的 AI 午間講座形式。',
     caseStudy: '/blog/clp-ai-agent-automation',
   },
   {
     name: '教育',
     clients: '理工大學、HKCT',
     example:
-      '教師 AI 融入教學同學生工作坊。',
+      '教師 AI 融入教學與學生工作坊。',
     caseStudy: '/blog/hkct-ai-education-workshop',
   },
   {
@@ -100,7 +100,7 @@ const industries = [
     name: '專業服務',
     clients: 'Publicis Groupe、YPO',
     example:
-      '高管簡報會同全球領袖活動。',
+      '高管簡報會和全球領袖活動。',
     caseStudy: null,
   },
 ];
@@ -109,15 +109,15 @@ const caseStudies = [
   {
     title: '中銀香港',
     metric: '1,530 位參加者遍及 13 個國家',
-    insight: '開發咗「交通燈協議」處理數據敏感度。'
-      + '用頭 20 分鐘講安全，反而加速咗採用。',
+    insight: '開發了「交通燈協議」處理數據敏感度。'
+      + '用了頭 20 分鐘講解安全，反而加快了採用。',
     link: '/blog/bochk-banking-ai-training',
   },
   {
     title: 'Garden 集團 — AI Pioneer Program',
     metric: '19 位人力資源專業人士、6 節、每週節省 5-8 小時',
     insight: '證明多節培訓優於一次性工作坊，'
-      + '能帶嚟持久嘅行為改變。',
+      + '能帶來持久的行為改變。',
     link: '/blog/how-to-design-ai-pioneer-program',
   },
   {
@@ -130,8 +130,8 @@ const caseStudies = [
   {
     title: 'HKCT — 400 位教育工作者',
     metric: '75 分鐘內由懷疑轉為嘗試',
-    insight: '用「AI 三段式框架」喺一節課入面'
-      + '將成個教職員團隊由抗拒帶到嘗試。',
+    insight: '用「AI 三段式框架」在一節課裡面'
+      + '將整個教職員團隊由抗拒帶到嘗試。',
     link: '/blog/hkct-ai-education-workshop',
   },
 ];
@@ -139,73 +139,73 @@ const caseStudies = [
 const methodologies = [
   {
     name: '交通燈協議',
-    description: '為受規管行業設計嘅數據敏感度框架。'
+    description: '為受規管行業設計的數據敏感度框架。'
       + '綠燈（公開資料）、黃燈（內部資料，移除識別資訊）、'
-      + '紅燈（個人資料，完全唔用）。即時判斷，唔使諗。',
+      + '紅燈（個人資料，完全不用）。即時判斷，無需猶豫。',
     link: '/blog/traffic-light-protocol-ai-safety',
   },
   {
     name: 'AI Pioneer 模式',
-    description: '揀 10-20 個有好奇心、有影響力嘅人，'
-      + '深入培訓幾個星期。佢哋會成為內部推動者，'
-      + '拉動成個組織前進。比由上而下嘅指令擴展得更快。',
+    description: '挑選 10-20 個有好奇心、有影響力的人，'
+      + '深入培訓幾個星期。他們會成為內部推動者，'
+      + '拉動整個組織前進。比由上而下的指令擴展得更快。',
     link: '/blog/how-to-design-ai-pioneer-program',
   },
   {
     name: '70/30 人機分工',
-    description: '人類保留 70% 嘅思考同決策主導權。'
-      + 'AI 負責 30% — 初稿、數據綜合、格式化。'
+    description: '人類保留 70% 的思考和決策主導權。'
+      + 'AI 負責 30% — 初稿、資料綜合、格式化。'
       + '既防止過度依賴，又最大化生產力提升。',
     link: '/blog/bochk-banking-ai-training',
   },
   {
     name: 'AI 成熟度模型',
     description: '四階段框架：認知、實驗、融合、轉型。'
-      + '80% 嘅公司停留喺第一階段。'
-      + 'Pioneer 模式幫佢哋推進到第二階段。',
+      + '80% 的公司停留在第一階段。'
+      + 'Pioneer 模式幫助他們推進到第二階段。',
     link: '/blog/ai-maturity-trap-stuck-stage-one',
   },
 ];
 
 const faqItems = [
   {
-    q: '香港企業 AI 培訓幾多錢？',
-    a: '費用取決於形式、時長、團隊規模同定制程度。'
-      + '有半日認知工作坊、全日生產力培訓、同多週 Pioneer'
-      + ' Program 可揀。歡迎聯絡索取報價。'
+    q: '香港企業 AI 培訓的收費是多少？',
+    a: '費用取決於形式、時長、團隊規模和度身設計程度。'
+      + '我們提供半日認知工作坊、全日生產力培訓，以及多週 Pioneer'
+      + ' Program 可供選擇。歡迎聯絡我們索取報價。'
       + '部分計劃可能符合 TVP 或其他香港政府資助資格。',
   },
   {
-    q: '工作坊有冇廣東話版本？',
-    a: '有。Sam 以英語同廣東話提供工作坊。'
+    q: '工作坊有沒有廣東話版本？',
+    a: '有。Sam 以英語和廣東話提供工作坊。'
       + '教材可以提供英文、繁體中文或雙語版本。'
       + '大部分香港企業客戶偏好廣東話授課配英文教材。',
   },
   {
-    q: '同其他 AI 培訓供應商有咩唔同？',
-    a: '三樣嘢：（1）重視行為改變 — 工作坊圍繞你團隊嘅實際'
-      + '工作流程設計，唔係示範。（2）實踐者主導 — Sam 每日'
-      + '都用 AI 做嘢，帶嚟真實例子。（3）量度成效 —'
+    q: '與其他 AI 培訓供應商有什麼不同？',
+    a: '三個不同之處：（1）重視行為改變 — 工作坊圍繞你團隊的實際'
+      + '工作流程設計，不是示範。（2）實踐者主導 — Sam 每日'
+      + '都使用 AI 工作，帶來真實例子。（3）量度成效 —'
       + ' Pioneer Program 參加者報告每週節省 5-8 小時。',
   },
   {
-    q: '可唔可以根據我哋嘅行業定制？',
-    a: '每個企業合作都由探索通話開始，了解你團隊嘅崗位、工具、'
-      + '合規要求同目標。工作坊練習用你哋嘅真實工作場景 —'
-      + '唔係教科書例子。Sam 服務過銀行、零售、工程、教育、'
-      + '旅遊同專業服務行業。',
+    q: '是否可以根據我們的行業度身設計？',
+    a: '每個企業合作都由初步諮詢開始，了解你團隊的崗位、工具、'
+      + '合規要求和目標。工作坊練習使用你們的真實工作場景 —'
+      + '不是教科書例子。Sam 服務過銀行、零售、工程、教育、'
+      + '旅遊和專業服務行業。',
   },
   {
-    q: '點樣開始？',
-    a: '預約免費 30 分鐘探索通話，傾吓你團隊嘅需要。'
-      + '冇承諾，冇推銷 — 只係傾吓 AI 培訓'
-      + '對你嘅機構係咪啱。',
+    q: '如何開始？',
+    a: '預約免費 30 分鐘初步諮詢，討論你團隊的需要。'
+      + '沒有承諾，沒有推銷 — 只是探討 AI 培訓'
+      + '對你的機構是否合適。',
   },
   {
-    q: '有冇香港以外嘅培訓服務？',
-    a: '有。透過 Adaptig，Sam 有遍及北美、拉丁美洲、歐洲同'
-      + '亞太嘅全球培訓師網絡。面授同線上形式都有。'
-      + '中銀嘅合作覆蓋咗 13 個國家。',
+    q: '有沒有香港以外的培訓服務？',
+    a: '有。透過 Adaptig，Sam 擁有遍及北美、拉丁美洲、歐洲和'
+      + '亞太的全球培訓師網絡。面授和線上形式都有。'
+      + '中銀的合作覆蓋了 13 個國家。',
   },
 ];
 
@@ -304,7 +304,7 @@ const ZhCorporateTraining = () => (
               香港企業 AI 培訓
             </h1>
             <p>
-              實用工作坊，將 AI 好奇心變成團隊真正養成嘅日常習慣。
+              實用工作坊，將 AI 好奇心變成團隊真正養成的日常習慣。
             </p>
           </div>
         </div>
@@ -348,17 +348,17 @@ const ZhCorporateTraining = () => (
       {/* 點解 */}
       <section className="section-base section-padding">
         <div className="content-narrow">
-          <h2>大部分 AI 培訓嘅問題</h2>
+          <h2>大部分 AI 培訓的問題</h2>
           <p>
-            大部分企業 AI 培訓失敗，因為教嘅係工具，唔係習慣。
-            你嘅團隊參加完工作坊，試用 ChatGPT 一個禮拜，
-            之後就返去舊嘅做法。培訓打咗個剔，但冇改變行為。
+            大部分企業 AI 培訓失敗，因為教的是工具，不是習慣。
+            你的團隊參加完工作坊，試用 ChatGPT 一個星期，
+            之後就回去舊的做法。培訓打了個剔，但沒有改變行為。
           </p>
           <p>
-            我嘅方法唔同。每個工作坊由你團隊嘅實際工作流程出發
-            — 佢哋寫嘅郵件、建嘅報告、做嘅決定。我哋用 AI
-            重新設計呢啲流程。結果係行為改變真正紮根，因為係
-            綁住真實工作，唔係假設嘅示範。
+            我的方法不同。每個工作坊由你團隊的實際工作流程出發
+            — 他們寫的郵件、建立的報告、做的決定。我們用 AI
+            重新設計這些流程。結果是行為改變真正紮根，因為是
+            與真實工作相連，不是假設的示範。
           </p>
         </div>
       </section>
@@ -377,7 +377,7 @@ const ZhCorporateTraining = () => (
         <div className="content-standard">
           <h2>工作坊形式</h2>
           <p>
-            每個形式都根據你嘅行業、團隊規模同目標度身定制。
+            每個形式都根據你的行業、團隊規模和目標度身定制。
             以英語或廣東話授課。
           </p>
           <div className="card-grid cols-2" style={{ marginTop: '2rem' }}>
@@ -412,7 +412,7 @@ const ZhCorporateTraining = () => (
         <div className="content-standard">
           <h2>行業經驗</h2>
           <p>
-            工作坊內容根據你嘅行業工作流程、合規要求同應用場景度身定制。
+            工作坊內容根據你的行業工作流程、合規要求和應用場景度身定制。
           </p>
           <div className="card-grid cols-3" style={{ marginTop: '2rem' }}>
             {industries.map((ind) => (
@@ -454,29 +454,29 @@ const ZhCorporateTraining = () => (
         <div className="content-narrow">
           <h2>合作流程</h2>
           <div style={{ marginTop: '1.5rem' }}>
-            <h3>1. 探索通話（免費、30 分鐘）</h3>
+            <h3>1. 初步諮詢（免費、30 分鐘）</h3>
             <p>
-              傾吓你團隊而家點用 AI、痛點同目標。
-              冇承諾，冇推銷。
+              討論你團隊目前如何使用 AI、痛點和目標。
+              沒有承諾，沒有推銷。
             </p>
             <h3 style={{ marginTop: '1.5rem' }}>
               2. 度身設計工作坊
             </h3>
             <p>
-              我根據你團隊嘅實際工作流程、工具同合規要求設計工作坊。
-              你審閱同批准先會開始。
+              我根據你團隊的實際工作流程、工具和合規要求設計工作坊。
+              你審閱和批准才會開始。
             </p>
             <h3 style={{ marginTop: '1.5rem' }}>3. 授課</h3>
             <p>
-              面授或線上。英語或廣東話。半日到多週計劃都有。
-              你嘅團隊帶走星期一朝早就用得到嘅工作流程。
+              提供面授或線上形式。可選英語或廣東話。從半日到多週的計劃均有提供。
+              你的團隊會帶走在星期一早上便用得著的工作流程。
             </p>
             <h3 style={{ marginTop: '1.5rem' }}>
               4. 跟進支援
             </h3>
             <p>
-              工作坊後嘅支援確保採用持續。Pioneer Program
-              包括每週跟進同真實項目輔導。
+              工作坊後的支援確保採用持續。Pioneer Program
+              包括每週跟進和真實項目輔導。
             </p>
           </div>
         </div>
@@ -487,8 +487,8 @@ const ZhCorporateTraining = () => (
         <div className="content-standard">
           <h2>獨創方法論</h2>
           <p>
-            從真實合作中發展出嚟嘅框架，唔係教科書。
-            每個都針對一個具體嘅採用難題。
+            從真實合作中發展出來的框架，不是教科書。
+            每個都針對一個具體的採用難題。
           </p>
           <div className="card-grid cols-2" style={{ marginTop: '2rem' }}>
             {methodologies.map((m) => (
@@ -507,7 +507,7 @@ const ZhCorporateTraining = () => (
                     display: 'inline-block',
                   }}
                 >
-                  睇實戰應用 &rarr;
+                  查看實戰應用 &rarr;
                 </Link>
               </div>
             ))}
@@ -520,7 +520,7 @@ const ZhCorporateTraining = () => (
         <div className="content-narrow" style={{ textAlign: 'center' }}>
           <blockquote className="pull-quote" style={{ maxWidth: '600px', margin: '0 auto' }}>
             <p>
-              &ldquo;終於有真正有用嘅 AI 培訓！&rdquo;
+              &ldquo;終於有真正有用的 AI 培訓！&rdquo;
             </p>
             <footer style={{ fontSize: '0.9em', marginTop: '0.5rem' }}>
               — 銀行專業人士，中銀香港
@@ -545,8 +545,8 @@ const ZhCorporateTraining = () => (
         <div className="content-standard">
           <h2>精選案例</h2>
           <p>
-            真實合作、真實數據、真實經驗。每個案例都係
-            來自特定客戶合作嘅詳細紀錄。
+            真實合作、真實數據、真實經驗。每個案例均
+            來自特定客戶合作的詳細紀錄。
           </p>
           <div className="card-grid cols-2" style={{ marginTop: '2rem' }}>
             {caseStudies.map((cs) => (
@@ -587,14 +587,14 @@ const ZhCorporateTraining = () => (
           <h2>香港政府 AI 培訓支援</h2>
           <p>
             2026-27 年度《財政預算案》撥款 5,000 萬港元用於 AI
-            普及教育，並成立由財政司司長主持嘅 AI+ 委員會。
+            普及教育，並成立由財政司司長主持的 AI+ 委員會。
             雖然大部分措施針對公眾認知而非企業培訓，
             但有幾個資助途徑可以用：
           </p>
           <ul style={{ marginTop: '1rem', lineHeight: '2' }}>
             <li>
               <strong>BUD 專項基金</strong> &mdash; 每間公司最高
-              15 萬港元用於科技採用，包括 AI 培訓同實施項目。
+              15 萬港元用於科技採用，包括 AI 培訓及實施項目。
             </li>
             <li>
               <strong>「學以致用」計劃 (ERB)</strong> &mdash;
@@ -603,18 +603,18 @@ const ZhCorporateTraining = () => (
             </li>
             <li>
               <strong>RTTP</strong> &mdash; 再工業化及科技培訓計劃
-              資助最多三分之二嘅科技相關培訓費用。
+              資助最多三分之二的科技相關培訓費用。
             </li>
           </ul>
           <p style={{ marginTop: '1rem' }}>
-            唔使等政府計劃完全推出。而家投資有系統嘅 AI
-            培訓嘅公司，會有 12-18 個月嘅領先優勢。
+            無需等待政府計劃完全推出。現在投資有系統的 AI
+            培訓的公司，會有 12-18 個月的領先優勢。
           </p>
           <Link
             to="/blog/hk-2026-budget-ai-training"
             style={{ fontSize: '0.9em' }}
           >
-            閱讀完整分析：5,000 萬 AI 預算實際代表咩 &rarr;
+            閱讀完整分析：5,000 萬 AI 預算實際代表什麼 &rarr;
           </Link>
         </div>
       </section>
@@ -622,32 +622,32 @@ const ZhCorporateTraining = () => (
       {/* 點解大部分培訓失敗 */}
       <section className="section-base section-padding">
         <div className="content-narrow">
-          <h2>點解大部分企業 AI 培訓會失敗</h2>
+          <h2>為何大部分企業 AI 培訓會失敗</h2>
           <p>
-            大部分 AI 培訓教工具而唔係工作流程。
-            你嘅團隊參加完工作坊，試用 ChatGPT 一個禮拜，
-            之後就返去舊嘅做法。培訓打咗個剔，但冇改變行為。
+            大部分 AI 培訓教工具而不是工作流程。
+            你的團隊參加完工作坊，試用 ChatGPT 一個星期，
+            之後就回到舊的做法。培訓只是流於形式，卻沒有改變行為。
           </p>
           <p>
-            做完 180+ 場工作坊之後，規律好清楚：
-            一次性培訓只能產生認知，唔係採用。
-            人喺 24 小時內會忘記 70% 嘅新資訊。
-            解決方法唔係更好嘅內容 — 而係唔同嘅結構。
+            完成 180+ 場工作坊後，規律非常清楚：
+            一次性培訓只能產生認知，不是採用。
+            人在 24 小時內會忘記 70% 的新資訊。
+            解決方法不是更好的內容 — 而是不同的結構。
           </p>
           {/* Single-expression text: adjacent text nodes break react-snap hydration (#418) */}
           <p>
             <Link to="/blog/how-to-design-ai-pioneer-program">
               Pioneer Program 模式
             </Link>
-            {' 之所以有效，因為佢建基於變革管理原則：'
-              + '以工作流程為本嘅練習、每週問責、'
-              + '同埋喺培訓師離開後仍能持續推動採用嘅內部推動者。'}
+            {' 之所以有效，因為它建基於變革管理原則：'
+              + '以工作流程為本的練習、每週問責、'
+              + '以及在培訓師離開後仍能持續推動採用的內部推動者。'}
           </p>
           <Link
             to="/blog/why-ai-training-doesnt-stick"
             style={{ fontSize: '0.9em' }}
           >
-            閱讀更多：點解 AI 培訓留唔住（同埋咩先有效）&rarr;
+            閱讀更多：為何 AI 培訓無法持久（以及什麼才有效）&rarr;
           </Link>
         </div>
       </section>
@@ -675,10 +675,10 @@ const ZhCorporateTraining = () => (
       {/* CTA */}
       <section className="section-base section-padding">
         <div className="content-narrow" style={{ textAlign: 'center' }}>
-          <h2>準備好培訓你嘅團隊？</h2>
+          <h2>準備好培訓你的團隊？</h2>
           <p>
-            預約免費 30 分鐘探索通話。冇承諾 —
-            只係傾吓 AI 培訓對你嘅機構合唔合適。
+            預約免費 30 分鐘初步諮詢。無需承諾 —
+            只是探討 AI 培訓對你的機構是否合適。
           </p>
           <div style={{
             display: 'flex',
