@@ -75,6 +75,15 @@ const Book = () => {
         <section className="book-page__embed-section">
           <div className="book-page__embed-wrap">
             <div className="roam-embed-container" ref={containerRef} />
+            <p className="book-page__fallback">
+              {'If the scheduler doesn’t load, '}
+              <a href={ROAM_LOBBY_URL} target="_blank" rel="noopener noreferrer">
+                book directly on Ro.am
+              </a>
+              {' or '}
+              <Link to="/contact">contact me</Link>
+              .
+            </p>
           </div>
         </section>
 

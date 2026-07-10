@@ -40,6 +40,24 @@
   }
 }
 
+// Always-visible fallback if the embed script fails or is blocked.
+.book-page__fallback {
+  color: _palette(text-body);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin: 1rem 0 0;
+  text-align: center;
+
+  a {
+    border-bottom: 1px solid _palette(border-subtle);
+    color: _palette(ink);
+
+    &:hover {
+      border-color: _palette(ink);
+    }
+  }
+}
+
 // ─── Context cards below the embed ─────────────────────
 .book-page__context {
   background: _palette(surface-sunken);

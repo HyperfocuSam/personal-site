@@ -20,11 +20,6 @@ const groups = [
     socialProof:
       'BOCHK, Chow Tai Fook, Garden, Playmates Toys, HSBC, CLP, YPO.',
     testimonial: testimonials[0],
-    primaryCta: {
-      cta: 'Get in Touch',
-      ctaLink: '/contact',
-      external: false,
-    },
     band: 'section-base',
   },
   {
@@ -34,11 +29,6 @@ const groups = [
     subtitle: 'Personalized coaching for professionals building practical AI habits.',
     socialProof: '160+ professionals coached across finance, marketing, education, healthcare, and technology.',
     testimonial: testimonials[1],
-    primaryCta: {
-      cta: 'Book a Discovery Call',
-      ctaLink: '/book',
-      external: false,
-    },
     band: 'section-sunken',
   },
   {
@@ -49,11 +39,6 @@ const groups = [
     socialProof:
       'Join a global network across North America, Latin America, Europe, and Asia-Pacific.',
     testimonial: testimonials[2],
-    primaryCta: {
-      cta: 'Apply to Join the Network',
-      ctaLink: '/contact?interest=trainer',
-      external: false,
-    },
     band: 'section-base',
   },
 ];
@@ -116,6 +101,11 @@ const Services = () => {
                 Speaking
               </Link>
             </div>
+            <p className="services-hero-cta">
+              <Link to="/book" className="button">
+                Book a Discovery Call
+              </Link>
+            </p>
           </div>
         </header>
 
@@ -142,7 +132,6 @@ const Services = () => {
                   services={services.filter((s) => s.category === group.category)}
                   socialProof={group.socialProof}
                   testimonial={group.testimonial}
-                  primaryCta={group.primaryCta}
                 />
               </ScrollReveal>
             </div>
@@ -171,7 +160,6 @@ const Services = () => {
                   services={services.filter((s) => s.category === group.category)}
                   socialProof={group.socialProof}
                   testimonial={group.testimonial}
-                  primaryCta={group.primaryCta}
                 />
               </ScrollReveal>
             </div>
@@ -324,14 +312,11 @@ const Services = () => {
           </script>
         </Helmet>
 
-        <div style={{ textAlign: 'center', margin: '2rem 0' }}>
-          <Link
-            to="/corporate-ai-training-hong-kong"
-            className="button button--outline"
-          >
-            Corporate AI Training in Hong Kong — Full Guide
+        <p className="services-footer-link">
+          <Link to="/corporate-ai-training-hong-kong">
+            Corporate AI Training in Hong Kong — Full Guide →
           </Link>
-        </div>
+        </p>
 
         <p className="lang-toggle">
           <Link to="/zh/services">&#x4E2D;&#x6587;&#x7248;&#x672C;</Link>

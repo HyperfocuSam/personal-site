@@ -310,7 +310,7 @@ const CorporateTraining = () => (
     </Helmet>
 
     <article className="post field-notes-content" id="corporate-training">
-      {/* Hero */}
+      {/* Hero — primary CTA */}
       <header className="page-hero">
         <div className="content-standard">
           <div className="title">
@@ -322,6 +322,11 @@ const CorporateTraining = () => (
               into daily habits your team actually keeps.
             </p>
           </div>
+          <p className="corporate-hero-cta">
+            <Link to="/book" className="button">
+              Book a Free Discovery Call
+            </Link>
+          </p>
         </div>
       </header>
 
@@ -364,10 +369,10 @@ const CorporateTraining = () => (
       {/* Client logos */}
       <ClientLogoBar />
 
-      {/* Why section */}
+      {/* Why — merged problem + thought-leadership (same thesis, denser) */}
       <section className="section-base section-padding">
         <div className="content-narrow">
-          <h2>The Problem With Most AI Training</h2>
+          <h2>Why Most Corporate AI Training Fails</h2>
           <p>
             Most corporate AI training fails because it teaches tools,
             not habits. Your team attends a workshop, tries ChatGPT for
@@ -375,12 +380,33 @@ const CorporateTraining = () => (
             training checked a box. It didn&rsquo;t change behavior.
           </p>
           <p>
-            My approach is different. Every workshop starts from your
-            team&rsquo;s actual workflows — the emails they write, the
-            reports they build, the decisions they make. We redesign
-            those workflows with AI integrated at each step. The result
-            is behavior change that sticks because it&rsquo;s tied to
-            real work, not hypothetical demos.
+            After 180+ workshops, the pattern is clear: one-off
+            sessions produce awareness, not adoption. People forget
+            70% of new information within 24 hours. The fix
+            isn&rsquo;t better content &mdash; it&rsquo;s a
+            different structure.
+          </p>
+          <p>
+            My approach starts from your team&rsquo;s actual workflows
+            — the emails they write, the reports they build, the
+            decisions they make. We redesign those workflows with AI
+            integrated at each step. Behavior change sticks because
+            it&rsquo;s tied to real work, not hypothetical demos.
+          </p>
+          {/* Single-expression text: adjacent text nodes break react-snap hydration (#418) */}
+          <p>
+            {'The '}
+            <Link to="/blog/how-to-design-ai-pioneer-program">
+              Pioneer Program model
+            </Link>
+            {' works because it’s built around change management principles:'
+              + ' workflow-first exercises, weekly accountability, and internal'
+              + ' champions who sustain adoption after the trainer leaves.'}
+          </p>
+          <p>
+            <Link to="/blog/why-ai-training-doesnt-stick">
+              Read more: Why AI Training Doesn&rsquo;t Stick (And What Actually Works) →
+            </Link>
           </p>
         </div>
       </section>
@@ -402,25 +428,18 @@ const CorporateTraining = () => (
             Every format is customized to your industry, team size,
             and goals. Delivered in English or Cantonese.
           </p>
-          <div className="card-grid cols-2" style={{ marginTop: '2rem' }}>
+          <div className="card-grid cols-2 corporate-dense-grid">
             {workshops.map((w) => (
-              <div key={w.title} className="card fn-card" style={{ padding: '1.5rem' }}>
-                <h3 style={{ marginBottom: '0.25rem' }}>{w.title}</h3>
-                <p style={{
-                  fontSize: '0.85em',
-                  opacity: 0.7,
-                  marginBottom: '1rem',
-                }}
-                >
+              <div key={w.title} className="card fn-card corporate-dense-card">
+                <h3>{w.title}</h3>
+                <p className="corporate-dense-meta">
                   {/* Single expression: adjacent text nodes break react-snap hydration (#418) */}
                   {`${w.duration} · ${w.audience}`}
                 </p>
                 <p>{w.description}</p>
-                <ul style={{ marginTop: '0.75rem', paddingLeft: '1.2rem' }}>
+                <ul>
                   {w.outcomes.map((o) => (
-                    <li key={o} style={{ marginBottom: '0.4rem', fontSize: '0.9em' }}>
-                      {o}
-                    </li>
+                    <li key={o}>{o}</li>
                   ))}
                 </ul>
               </div>
@@ -437,38 +456,23 @@ const CorporateTraining = () => (
             Workshop content is customized to your industry&rsquo;s
             workflows, compliance requirements, and use cases.
           </p>
-          <div className="card-grid cols-3" style={{ marginTop: '2rem' }}>
+          <div className="card-grid cols-3 corporate-dense-grid">
             {industries.map((ind) => (
-              <div key={ind.name} className="card fn-card" style={{ padding: '1.25rem' }}>
-                <h3 style={{ fontSize: '1.05rem', marginBottom: '0.5rem' }}>
-                  {ind.name}
-                </h3>
-                <p style={{ fontSize: '0.85em', opacity: 0.8 }}>
-                  {ind.clients}
-                </p>
-                <p style={{ fontSize: '0.85em', marginTop: '0.5rem' }}>
-                  {ind.example}
-                </p>
+              <div key={ind.name} className="fn-entry corporate-dense-entry">
+                <h3>{ind.name}</h3>
+                <p className="corporate-dense-meta">{ind.clients}</p>
+                <p>{ind.example}</p>
                 {ind.caseStudy && (
-                  <Link
-                    to={ind.caseStudy}
-                    style={{
-                      fontSize: '0.8em',
-                      marginTop: '0.75rem',
-                      display: 'inline-block',
-                    }}
-                  >
-                    Read case study &rarr;
+                  <Link to={ind.caseStudy}>
+                    Read case study →
                   </Link>
                 )}
               </div>
             ))}
           </div>
-          <div style={{ textAlign: 'center', marginTop: '2rem' }}>
-            <Link to="/clients" className="button button--outline">
-              View All Clients
-            </Link>
-          </div>
+          <p className="corporate-inline-link">
+            <Link to="/clients">View all clients →</Link>
+          </p>
         </div>
       </section>
 
@@ -476,39 +480,35 @@ const CorporateTraining = () => (
       <section className="section-warm section-padding">
         <div className="content-narrow">
           <h2>How It Works</h2>
-          <div style={{ marginTop: '1.5rem' }}>
-            <h3>1. Discovery Call (Free, 30 min)</h3>
-            <p>
-              We discuss your team&rsquo;s current AI usage,
-              pain points, and goals. No commitment, no sales pitch.
-            </p>
-            <h3 style={{ marginTop: '1.5rem' }}>
-              2. Custom Workshop Design
-            </h3>
-            <p>
-              I design the workshop around your team&rsquo;s actual
-              workflows, tools, and compliance requirements. You
-              review and approve before we proceed.
-            </p>
-            <h3 style={{ marginTop: '1.5rem' }}>3. Delivery</h3>
-            <p>
-              In-person or virtual. English or Cantonese. Half-day
-              to multi-week programs. Your team leaves with workflows
-              they can use on Monday morning.
-            </p>
-            <h3 style={{ marginTop: '1.5rem' }}>
-              4. Follow-Through
-            </h3>
-            <p>
-              Post-workshop support to ensure adoption sticks.
-              Pioneer Programs include weekly check-ins and real
-              project coaching.
-            </p>
-          </div>
+          <ol className="corporate-steps">
+            <li>
+              <strong>Discovery Call (Free, 30 min).</strong>
+              {' We discuss your team’s current AI usage, pain points,'
+                + ' and goals. No commitment, no sales pitch.'}
+            </li>
+            <li>
+              <strong>Custom Workshop Design.</strong>
+              {' I design the workshop around your team’s actual'
+                + ' workflows, tools, and compliance requirements. You'
+                + ' review and approve before we proceed.'}
+            </li>
+            <li>
+              <strong>Delivery.</strong>
+              {' In-person or virtual. English or Cantonese. Half-day'
+                + ' to multi-week programs. Your team leaves with workflows'
+                + ' they can use on Monday morning.'}
+            </li>
+            <li>
+              <strong>Follow-Through.</strong>
+              {' Post-workshop support to ensure adoption sticks.'
+                + ' Pioneer Programs include weekly check-ins and real'
+                + ' project coaching.'}
+            </li>
+          </ol>
         </div>
       </section>
 
-      {/* Named methodologies */}
+      {/* Named methodologies + proof (testimonial nested for density) */}
       <section className="section-sunken section-padding">
         <div className="content-standard">
           <h2>Signature Methodologies</h2>
@@ -516,59 +516,36 @@ const CorporateTraining = () => (
             Frameworks developed through real engagements, not
             textbooks. Each one solves a specific adoption problem.
           </p>
-          <div className="card-grid cols-2" style={{ marginTop: '2rem' }}>
+          <div className="card-grid cols-2 corporate-dense-grid">
             {methodologies.map((m) => (
-              <div key={m.name} className="card fn-card" style={{ padding: '1.5rem' }}>
-                <h3 style={{ fontSize: '1.05rem', marginBottom: '0.5rem' }}>
-                  {m.name}
-                </h3>
-                <p style={{ fontSize: '0.9em', lineHeight: '1.7' }}>
-                  {m.description}
-                </p>
-                <Link
-                  to={m.link}
-                  style={{
-                    fontSize: '0.8em',
-                    marginTop: '0.75rem',
-                    display: 'inline-block',
-                  }}
-                >
-                  See it in action &rarr;
-                </Link>
+              <div key={m.name} className="fn-entry corporate-dense-entry">
+                <h3>{m.name}</h3>
+                <p>{m.description}</p>
+                <Link to={m.link}>See it in action →</Link>
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Testimonial highlight */}
-      <section className="section-base section-padding">
-        <div className="content-narrow" style={{ textAlign: 'center' }}>
-          <blockquote className="pull-quote" style={{ maxWidth: '600px', margin: '0 auto' }}>
+          <blockquote className="pull-quote corporate-inline-quote">
             <p>
               &ldquo;Finally, AI training that&rsquo;s actually
               useful!&rdquo;
             </p>
-            <footer style={{ fontSize: '0.9em', marginTop: '0.5rem' }}>
+            <footer>
               — Banking Professional, Bank of China (Hong Kong)
               <br />
-              <span style={{ fontSize: '0.85em', opacity: 0.7 }}>
+              <span className="fn-stamp fn-stamp--verified">
                 9.2/10 satisfaction across 1,530 participants
               </span>
             </footer>
           </blockquote>
-          <Link
-            to="/testimonials"
-            className="button button--outline"
-            style={{ marginTop: '1.5rem' }}
-          >
-            Read More Testimonials
-          </Link>
+          <p className="corporate-inline-link">
+            <Link to="/testimonials">Read more testimonials →</Link>
+          </p>
         </div>
       </section>
 
       {/* Featured case studies */}
-      <section className="section-sunken section-padding">
+      <section className="section-base section-padding">
         <div className="content-standard">
           <h2>Featured Case Studies</h2>
           <p>
@@ -576,33 +553,16 @@ const CorporateTraining = () => (
             study is a detailed writeup from a specific client
             engagement.
           </p>
-          <div className="card-grid cols-2" style={{ marginTop: '2rem' }}>
+          <div className="card-grid cols-2 corporate-dense-grid">
             {caseStudies.map((cs) => (
               <Link
                 key={cs.title}
                 to={cs.link}
-                className="card fn-card"
-                style={{
-                  padding: '1.5rem',
-                  textDecoration: 'none',
-                  color: 'inherit',
-                  display: 'block',
-                }}
+                className="card fn-card corporate-dense-card corporate-case-card"
               >
-                <h3 style={{ fontSize: '1.05rem', marginBottom: '0.25rem' }}>
-                  {cs.title}
-                </h3>
-                <p style={{
-                  fontSize: '0.85em',
-                  opacity: 0.7,
-                  marginBottom: '0.75rem',
-                }}
-                >
-                  {cs.metric}
-                </p>
-                <p style={{ fontSize: '0.9em', lineHeight: '1.7' }}>
-                  {cs.insight}
-                </p>
+                <h3>{cs.title}</h3>
+                <p className="corporate-dense-meta">{cs.metric}</p>
+                <p>{cs.insight}</p>
               </Link>
             ))}
           </div>
@@ -620,7 +580,7 @@ const CorporateTraining = () => (
             public awareness rather than corporate training, several
             funding paths are available:
           </p>
-          <ul style={{ marginTop: '1rem', lineHeight: '2' }}>
+          <ul className="corporate-funding-list">
             <li>
               <strong>BUD Fund</strong> &mdash; Up to HK$150,000 per
               company for technology adoption, including AI training
@@ -637,55 +597,16 @@ const CorporateTraining = () => (
               of training costs for technology-related programs.
             </li>
           </ul>
-          <p style={{ marginTop: '1rem' }}>
+          <p>
             Don&rsquo;t wait for government programs to be fully
             rolled out. Companies that invest in structured AI
             training now will have a 12-18 month head start.
           </p>
-          <Link
-            to="/blog/hk-2026-budget-ai-training"
-            style={{ fontSize: '0.9em' }}
-          >
-            Read the full analysis: What the HK$50M AI Budget
-            Actually Means &rarr;
-          </Link>
-        </div>
-      </section>
-
-      {/* Why training fails — thought leadership */}
-      <section className="section-base section-padding">
-        <div className="content-narrow">
-          <h2>Why Most Corporate AI Training Fails</h2>
           <p>
-            Most AI training teaches tools instead of workflows.
-            Your team attends a workshop, tries ChatGPT for a week,
-            then goes back to doing things the old way. The training
-            checked a box but didn&rsquo;t change behavior.
-          </p>
-          <p>
-            After 180+ workshops, the pattern is clear: one-off
-            sessions produce awareness, not adoption. People forget
-            70% of new information within 24 hours. The fix
-            isn&rsquo;t better content &mdash; it&rsquo;s a
-            different structure.
-          </p>
-          {/* Single-expression text: adjacent text nodes break react-snap hydration (#418) */}
-          <p>
-            {'The '}
-            <Link to="/blog/how-to-design-ai-pioneer-program">
-              Pioneer Program model
+            <Link to="/blog/hk-2026-budget-ai-training">
+              Read the full analysis: What the HK$50M AI Budget Actually Means →
             </Link>
-            {' works because it’s built around change management principles:'
-              + ' workflow-first exercises, weekly accountability, and internal'
-              + ' champions who sustain adoption after the trainer leaves.'}
           </p>
-          <Link
-            to="/blog/why-ai-training-doesnt-stick"
-            style={{ fontSize: '0.9em' }}
-          >
-            Read more: Why AI Training Doesn&rsquo;t Stick (And
-            What Actually Works) &rarr;
-          </Link>
         </div>
       </section>
 
@@ -696,15 +617,10 @@ const CorporateTraining = () => (
           {faqItems.map((item) => (
             <div
               key={item.q}
-              className="fn-entry"
-              style={{ marginBottom: '1.5rem' }}
+              className="fn-entry corporate-faq-entry"
             >
-              <h3 style={{ fontSize: '1rem', marginBottom: '0.5rem' }}>
-                {item.q}
-              </h3>
-              <p style={{ fontSize: '0.9em', lineHeight: '1.7' }}>
-                {item.a}
-              </p>
+              <h3>{item.q}</h3>
+              <p>{item.a}</p>
             </div>
           ))}
         </div>
@@ -720,38 +636,35 @@ const CorporateTraining = () => (
         }}
       />
 
-      {/* CTA */}
-      <section className="section-base section-padding">
-        <div className="content-narrow" style={{ textAlign: 'center' }}>
+      {/* Closing primary CTA */}
+      <section className="section-base section-padding corporate-closing-cta">
+        <div className="content-narrow">
           <h2>Ready to Train Your Team?</h2>
           <p>
             Book a free 30-minute discovery call. No commitment —
             just a conversation about what AI training could look
             like for your organization.
           </p>
-          <div style={{
-            display: 'flex',
-            gap: '1rem',
-            justifyContent: 'center',
-            flexWrap: 'wrap',
-            marginTop: '1.5rem',
-          }}
-          >
-            <a
-              href="mailto:sam@adaptig.com?subject=Corporate%20AI%20Training%20Inquiry"
-              className="button"
-            >
-              Email Me
+          <p>
+            <Link to="/book" className="button">
+              Book a Free Discovery Call
+            </Link>
+          </p>
+          <p className="corporate-closing-alt">
+            {'Or '}
+            <a href="mailto:sam@adaptig.com?subject=Corporate%20AI%20Training%20Inquiry">
+              email me
             </a>
+            {' / '}
             <a
               href="https://wa.me/85264315177"
               target="_blank"
               rel="noopener noreferrer"
-              className="button button--outline"
             >
               WhatsApp
             </a>
-          </div>
+            .
+          </p>
         </div>
       </section>
       <p className="lang-toggle">
