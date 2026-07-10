@@ -1,0 +1,394 @@
+/* R3 — Field Notes reading page */
+
+#blog-post.field-notes-content {
+  background: _palette(surface-base);
+
+  .page-hero .content-narrow {
+    max-width: _size(content-narrow);
+  }
+
+  .section-base > .content-narrow,
+  .section-sunken > .content-narrow {
+    max-width: _size(content-narrow);
+  }
+}
+
+.post-header {
+  &__meta {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-top: 0.9rem;
+  }
+
+  &__date.fn-stamp,
+  &__reading-time.fn-stamp,
+  &__language.fn-stamp {
+    background: _palette(surface-base);
+    border-color: _palette(border-strong);
+    color: _palette(amber-text);
+    font-style: normal;
+    text-decoration: none;
+  }
+
+  &__language.fn-stamp {
+    color: _palette(verification);
+
+    &:hover,
+    &:focus-visible {
+      background: _palette(highlighter);
+      border-color: _palette(ink);
+      color: _palette(ink);
+    }
+  }
+
+  &__separator {
+    display: none;
+  }
+}
+
+.post-content {
+  color: _palette(text-body);
+  font-size: 1.02rem;
+  line-height: 1.78;
+  max-width: 65ch;
+
+  p {
+    margin-bottom: 1.45em;
+  }
+
+  :is(h1, h2, h3, h4) {
+    color: _palette(ink);
+    font-family: _font(family-heading);
+    font-variation-settings: "opsz" 48;
+    font-weight: 650;
+    letter-spacing: -0.025em;
+    margin-bottom: 0.7em;
+    margin-top: 1.9em;
+  }
+
+  > :is(h1, h2):first-child {
+    margin-top: 0;
+  }
+
+  a {
+    background-image: linear-gradient(
+      to bottom,
+      transparent 58%,
+      transparent 58%,
+      transparent 91%
+    );
+    border: 0;
+    color: _palette(ink);
+    text-decoration: underline;
+    text-decoration-color: _palette(border-strong);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.16em;
+    transition: background-color _duration(fast) $ease-out;
+
+    &:hover,
+    &:focus-visible {
+      background-image: linear-gradient(
+        to bottom,
+        transparent 58%,
+        _palette(highlighter) 58%,
+        _palette(highlighter) 91%,
+        transparent 91%
+      );
+      color: _palette(ink);
+      text-decoration-color: _palette(ink);
+    }
+  }
+
+  img {
+    border: 1px solid _palette(border-subtle);
+    border-radius: map-get($radius, sm);
+    height: auto;
+    margin: 1.5em 0;
+    max-width: 100%;
+  }
+
+  img + em {
+    color: _palette(text-secondary);
+    display: block;
+    font-family: _font(family-fixed);
+    font-size: 0.72rem;
+    margin-bottom: 1.5em;
+    margin-top: -1em;
+    text-align: center;
+  }
+
+  code,
+  pre {
+    font-family: _font(family-fixed);
+  }
+
+  code {
+    background: _palette(surface-sunken);
+    border: 1px solid _palette(border-subtle);
+    border-radius: map-get($radius, sm);
+    color: _palette(ink);
+    padding: 0.08em 0.28em;
+  }
+
+  pre {
+    background: _palette(surface-sunken);
+    border: 1px solid _palette(border-subtle);
+    border-radius: map-get($radius, sm);
+    overflow-x: auto;
+    padding: 1rem;
+
+    code {
+      background: transparent;
+      border: 0;
+      padding: 0;
+    }
+  }
+}
+
+.pull-quote.fn-card {
+  background: _palette(surface-raised);
+  border: 1px solid _palette(ink);
+  border-radius: map-get($radius, sm);
+  color: _palette(ink);
+  font-family: _font(family-heading);
+  font-size: 1.12rem;
+  font-style: normal;
+  line-height: 1.55;
+  margin: 2rem 0;
+  padding: 1.2rem 1.25rem;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.author-card {
+  align-items: flex-start;
+  background: _palette(surface-raised);
+  border: 1px solid _palette(border-subtle);
+  border-radius: map-get($radius, sm);
+  display: flex;
+  gap: 1.25rem;
+  padding: 1.25rem;
+
+  &__image-link {
+    border: 0;
+    flex-shrink: 0;
+  }
+
+  &__image {
+    border-radius: map-get($radius, full);
+    height: 72px;
+    object-fit: cover;
+    width: 72px;
+  }
+
+  &__info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__name {
+    border: 0;
+    color: _palette(ink);
+    display: block;
+    font-weight: _font(weight-heading-bold);
+    margin-bottom: 0.35rem;
+  }
+
+  &__bio {
+    color: _palette(text-body);
+    font-size: 0.88rem;
+    line-height: 1.5;
+    margin-bottom: 0.6rem;
+  }
+
+  &__links {
+    font-family: _font(family-fixed);
+    font-size: 0.7rem;
+  }
+}
+
+.share-buttons {
+  align-items: center;
+  border-top: 1px solid _palette(border-subtle);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 2rem 0 0;
+  padding-top: 1rem;
+
+  &__label,
+  &__button {
+    font-family: _font(family-fixed);
+    font-size: 0.68rem;
+    letter-spacing: _font(kerning-meta);
+    text-transform: uppercase;
+  }
+
+  &__button {
+    background: transparent;
+    border: 1px solid _palette(border-strong);
+    border-radius: map-get($radius, sm);
+    color: _palette(ink);
+    height: auto;
+    padding: 0.4rem 0.55rem;
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      background: _palette(ink);
+      border-color: _palette(ink);
+      color: _palette(surface-base);
+    }
+  }
+}
+
+.related-posts {
+  margin: 2rem 0;
+
+  &__title {
+    margin-bottom: 1rem;
+  }
+
+  &__grid {
+    display: grid;
+    gap: 0;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  &__item {
+    background: transparent;
+    border-bottom: 1px solid _palette(border-subtle);
+    border-top: 1px solid _palette(border-subtle);
+  }
+
+  &__content {
+    padding: 1rem;
+  }
+
+  &__item-title {
+    font-size: 0.95rem;
+    line-height: 1.3;
+    margin: 0 0 0.5rem;
+  }
+
+  &__date {
+    color: _palette(text-secondary);
+    font-family: _font(family-fixed);
+    font-size: 0.68rem;
+    margin: 0;
+  }
+}
+
+.post-navigation {
+  border-bottom: 1px solid _palette(border-subtle);
+  border-top: 1px solid _palette(border-subtle);
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  margin: 2rem 0;
+  padding: 1.5rem 0;
+
+  &__prev,
+  &__next {
+    flex: 1;
+    max-width: 46%;
+  }
+
+  &__next {
+    text-align: right;
+  }
+
+  &__label {
+    color: _palette(text-secondary);
+    display: block;
+    font-family: _font(family-fixed);
+    font-size: 0.66rem;
+    letter-spacing: _font(kerning-meta);
+    margin-bottom: 0.45rem;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    border: 0;
+    color: _palette(ink);
+    font-family: _font(family-heading);
+    font-weight: 650;
+  }
+}
+
+.post-author-section,
+.service-cta,
+.trainer-banner {
+  margin: 2rem 0;
+}
+
+.service-cta,
+.trainer-banner {
+  background: _palette(surface-raised);
+  border: 1px solid _palette(border-subtle);
+  border-radius: map-get($radius, sm);
+  padding: 1.25rem;
+}
+
+.service-cta__text {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  margin-bottom: 1rem;
+}
+
+.scroll-progress {
+  height: 3px;
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  top: _size(nav-height);
+  width: 100%;
+  z-index: _misc(z-index-base);
+
+  &__bar {
+    background: _palette(ink);
+    height: 100%;
+    transform-origin: left;
+    will-change: transform;
+  }
+}
+
+@include breakpoint(small) {
+  .post-header__meta {
+    gap: 0.35rem;
+  }
+
+  .post-content {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .author-card {
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .related-posts__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .post-navigation {
+    flex-direction: column;
+    gap: 1.25rem;
+
+    &__prev,
+    &__next {
+      max-width: 100%;
+      text-align: left;
+    }
+  }
+
+  .scroll-progress {
+    top: _size(nav-height-small);
+  }
+}

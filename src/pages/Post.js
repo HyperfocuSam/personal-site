@@ -75,7 +75,7 @@ const HOWTO_SCHEMAS = {
 
 // Custom blockquote component for pull quotes
 const PullQuote = ({ children }) => (
-  <blockquote className="pull-quote">{children}</blockquote>
+  <blockquote className="pull-quote fn-card">{children}</blockquote>
 );
 
 PullQuote.propTypes = {
@@ -234,7 +234,10 @@ const Post = () => {
         )}
       </Helmet>
       <ScrollProgress />
-      <article className="post post--article" id="blog-post">
+      <article
+        className={`post post--article field-notes-content${postLang === 'zh-Hant' ? ' zh' : ''}`}
+        id="blog-post"
+      >
         {/* Dark hero with post title */}
         <header className="page-hero page-hero--dark">
           <div className="content-narrow">
@@ -243,13 +246,21 @@ const Post = () => {
                 <Link to={`/blog/${slug}`}>{post.title}</Link>
               </h1>
               <div className="post-header__meta">
-                <span className="post-header__date">
+                <span className="post-header__date fn-stamp">
                   {dayjs(post.date).format('MMMM D, YYYY')}
                 </span>
                 <span className="post-header__separator">|</span>
-                <span className="post-header__reading-time">
+                <span className="post-header__reading-time fn-stamp">
                   {`${readingTime} min read`}
                 </span>
+                {linkedPost && (
+                  <Link
+                    to={`/blog/${linkedPost.slug}`}
+                    className="post-header__language fn-stamp"
+                  >
+                    {linkedPost.language === 'zh-Hant' ? '閱讀中文版本' : 'Read in English'}
+                  </Link>
+                )}
               </div>
             </div>
           </div>

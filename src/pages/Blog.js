@@ -1,17 +1,14 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import dayjs from 'dayjs';
-import PropTypes from 'prop-types';
 
 import { Helmet } from 'react-helmet-async';
 
 import Main from '../layouts/Main';
-import OptimizedImage from '../components/Template/OptimizedImage';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 import posts from '../data/posts';
 import { AuthorCard } from '../components/Blog';
+import FieldNotesList from '../components/Blog/FieldNotesList';
 import EmailCapture from '../components/EmailCapture/EmailCapture';
-import ScrollReveal from '../components/ScrollReveal';
 
 // Type display config
 const typeLabels = {
@@ -30,44 +27,6 @@ const languageLabels = {
   'zh-Hant': '中文',
 };
 
-const BlogCard = ({ post }) => (
-  <article className={`blog-card blog-card--${post.type}`}>
-    <Link to={`/blog/${post.slug}`} className="blog-card__link">
-      {post.image && (
-        <div className="blog-card__image-wrapper">
-          <OptimizedImage
-            src={post.image}
-            alt={post.title}
-            className="blog-card__image"
-            loading="lazy"
-          />
-        </div>
-      )}
-      <div className="blog-card__content">
-        <span className={`blog-type-pill blog-type-pill--${post.type}`}>
-          {typeLabels[post.type] || post.type}
-        </span>
-        <h3 className="blog-card__title">{post.title}</h3>
-        <p className="blog-card__meta">
-          {dayjs(post.date).format('MMM D, YYYY')}
-        </p>
-        <p className="blog-card__excerpt">{post.excerpt}</p>
-      </div>
-    </Link>
-  </article>
-);
-
-BlogCard.propTypes = {
-  post: PropTypes.shape({
-    slug: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    date: PropTypes.string.isRequired,
-    excerpt: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired,
-    image: PropTypes.string,
-  }).isRequired,
-};
-
 // Check if any Chinese posts exist to show the language filter
 const hasChinesePosts = posts.some((p) => p.language === 'zh-Hant');
 
@@ -80,15 +39,10 @@ const Blog = () => {
     : posts.filter((p) => (p.language || 'en') === langFilter);
 
   // Always sort newest-first so the listing reflects recency, not array order
-  const sortedPosts = [...filteredPosts].sort(
-    (a, b) => dayjs(b.date).valueOf() - dayjs(a.date).valueOf(),
-  );
-
-  // Feature the most recent post so the hero never looks stale
-  const featuredPost = sortedPosts[0];
-  const blogPosts = sortedPosts
-    .slice(1)
-    .filter((p) => p.type !== 'case-study');
+  const sortedPosts = [...filteredPosts].sort((a, b) => {
+    if (a.date === b.date) return 0;
+    return a.date < b.date ? 1 : -1;
+  });
 
   return (
     <Main
@@ -129,7 +83,7 @@ const Blog = () => {
           })}
         </script>
       </Helmet>
-      <article className="post" id="blog">
+      <article className="post field-notes-content" id="blog">
         {/* Dark hero */}
         <header className="page-hero">
           <div className="content-standard">
@@ -167,57 +121,12 @@ const Blog = () => {
             {filteredPosts.length === 0 ? (
               <p><em>Posts coming soon. Stay tuned!</em></p>
             ) : (
-              <>
-                {/* Featured Post Hero */}
-                {featuredPost && (
-                  <ScrollReveal variant="fade-up-long">
-                    <section className="blog-featured">
-                      <Link to={`/blog/${featuredPost.slug}`} className="blog-featured__link">
-                        {featuredPost.image && (
-                          <div className="blog-featured__image-wrapper">
-                            <OptimizedImage
-                              src={featuredPost.image}
-                              alt={featuredPost.title}
-                              className="blog-featured__image"
-                              loading="lazy"
-                            />
-                          </div>
-                        )}
-                        <div className="blog-featured__content">
-                          <span className={`blog-type-pill blog-type-pill--${featuredPost.type}`}>
-                            {typeLabels[featuredPost.type] || featuredPost.type}
-                          </span>
-                          <h3 className="blog-featured__title">{featuredPost.title}</h3>
-                          <p className="blog-featured__meta">
-                            {dayjs(featuredPost.date).format('MMMM D, YYYY')}
-                          </p>
-                          <p className="blog-featured__excerpt">{featuredPost.excerpt}</p>
-                        </div>
-                      </Link>
-                    </section>
-                  </ScrollReveal>
-                )}
-
-                {/* Blog Posts Section */}
-                {blogPosts.length > 0 && (
-                  <section className="blog-section">
-                    <ScrollReveal variant="fade-up-long">
-                      <div className="blog-section__header">
-                        <h3 className="blog-section__title">Blog</h3>
-                        <p className="blog-section__subtitle">
-                          Commentary on AI adoption trends, tools, and methodology.
-                        </p>
-                      </div>
-                    </ScrollReveal>
-                    <div className="blog-grid">
-                      {blogPosts.map((post) => (
-                        <BlogCard key={post.slug} post={post} />
-                      ))}
-                    </div>
-                  </section>
-                )}
-
-              </>
+              <FieldNotesList
+                posts={sortedPosts}
+                typeLabels={typeLabels}
+                entryLabel="entries"
+                singleEntryLabel="entry"
+              />
             )}
           </div>
         </section>

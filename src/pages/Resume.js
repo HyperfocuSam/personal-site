@@ -65,7 +65,7 @@ const Resume = () => (
         })}
       </script>
     </Helmet>
-    <article className="post" id="resume">
+    <article className="post field-notes-content resume-document" id="resume">
       {/* Dark hero */}
       <header className="page-hero">
         <div className="content-standard">

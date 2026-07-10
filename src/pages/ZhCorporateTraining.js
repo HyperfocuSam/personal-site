@@ -295,7 +295,7 @@ const ZhCorporateTraining = () => (
       </script>
     </Helmet>
 
-    <article className="post" id="zh-corporate-training">
+    <article className="post field-notes-content zh" id="zh-corporate-training">
       {/* 主視覺 */}
       <header className="page-hero">
         <div className="content-standard">

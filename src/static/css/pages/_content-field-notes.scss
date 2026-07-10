@@ -308,3 +308,43 @@
     padding: 1.25rem;
   }
 }
+
+/* Traditional Chinese routes inherit the Field Notes system without
+   asking Fraunces to render glyphs it does not contain. */
+#zh-index,
+#zh-blog,
+#zh-about,
+#zh-services,
+#zh-corporate-training,
+#zh-media,
+#blog-post.zh {
+  :is(h1, h2, h3, h4, h5, h6) {
+    font-family: _font(family-chinese);
+    font-variation-settings: normal;
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+
+  .fn-stamp {
+    letter-spacing: 0;
+  }
+}
+
+.field-notes-content.zh > .lang-toggle {
+  background: _palette(surface-base);
+  border-bottom: 1px solid _palette(border-subtle);
+  border-top: 1px solid _palette(border-subtle);
+  margin: 0;
+  max-width: 100%;
+  padding: 1rem;
+  text-align: center;
+
+  a {
+    border-bottom: 1px solid _palette(ink);
+    color: _palette(ink);
+    font-family: _font(family-fixed);
+    font-size: 0.68rem;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+}

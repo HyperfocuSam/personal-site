@@ -90,7 +90,7 @@ const ZhServices = () => {
       ]}
     >
       <Helmet><html lang="zh-Hant" /></Helmet>
-      <article className="post" id="zh-services">
+      <article className="post field-notes-content zh" id="zh-services">
         {/* Dark hero with anchor pills */}
         <header className="page-hero">
           <div className="content-standard">

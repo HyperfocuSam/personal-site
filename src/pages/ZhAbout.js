@@ -27,7 +27,7 @@ const ZhAbout = () => (
     ]}
   >
     <Helmet><html lang="zh-Hant" /></Helmet>
-    <article className="post markdown" id="zh-about">
+    <article className="post markdown field-notes-content zh" id="zh-about">
       {/* Dark hero */}
       <header className="page-hero">
         <div className="content-narrow">

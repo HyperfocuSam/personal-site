@@ -1,14 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import dayjs from 'dayjs';
-import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet-async';
 
 import Main from '../layouts/Main';
-import OptimizedImage from '../components/Template/OptimizedImage';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 import posts from '../data/posts';
 import { AuthorCard } from '../components/Blog';
+import FieldNotesList from '../components/Blog/FieldNotesList';
 import EmailCapture from '../components/EmailCapture/EmailCapture';
 
 const typeLabels = {
@@ -22,44 +20,6 @@ const typeLabels = {
 
 // Only show Chinese posts
 const zhPosts = posts.filter((p) => p.language === 'zh-Hant');
-
-const BlogCard = ({ post }) => (
-  <article className={`blog-card blog-card--${post.type}`}>
-    <Link to={`/blog/${post.slug}`} className="blog-card__link">
-      {post.image && (
-        <div className="blog-card__image-wrapper">
-          <OptimizedImage
-            src={post.image}
-            alt={post.title}
-            className="blog-card__image"
-            loading="lazy"
-          />
-        </div>
-      )}
-      <div className="blog-card__content">
-        <span className={`blog-type-pill blog-type-pill--${post.type}`}>
-          {typeLabels[post.type] || post.type}
-        </span>
-        <h3 className="blog-card__title">{post.title}</h3>
-        <p className="blog-card__meta">
-          {dayjs(post.date).format('YYYY年M月D日')}
-        </p>
-        <p className="blog-card__excerpt">{post.excerpt}</p>
-      </div>
-    </Link>
-  </article>
-);
-
-BlogCard.propTypes = {
-  post: PropTypes.shape({
-    slug: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    date: PropTypes.string.isRequired,
-    excerpt: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired,
-    image: PropTypes.string,
-  }).isRequired,
-};
 
 const ZhBlog = () => (
   <Main
@@ -81,7 +41,7 @@ const ZhBlog = () => (
     ]}
   >
     <Helmet><html lang="zh-Hant" /></Helmet>
-    <article className="post" id="zh-blog">
+    <article className="post field-notes-content zh" id="zh-blog">
       {/* Dark hero */}
       <header className="page-hero">
         <div className="content-standard">
@@ -99,11 +59,12 @@ const ZhBlog = () => (
           {zhPosts.length === 0 ? (
             <p><em>中文文章即將推出，敬請期待！</em></p>
           ) : (
-            <div className="blog-grid">
-              {zhPosts.map((post) => (
-                <BlogCard key={post.slug} post={post} />
-              ))}
-            </div>
+            <FieldNotesList
+              posts={zhPosts}
+              typeLabels={typeLabels}
+              entryLabel="篇"
+              singleEntryLabel="篇"
+            />
           )}
         </div>
       </section>

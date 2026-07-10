@@ -1,720 +1,332 @@
-// Blog Listing Page Styles
+/* R3 — Field Notes reading log */
 
-// ── Blog Section Headers ──────────────────────────
-.blog-section {
-  margin: 2.5em 0;
+#blog,
+#zh-blog {
+  .section-base.section-padding {
+    padding-bottom: 3rem;
+    padding-top: 2rem;
+  }
+
+  .section-base > .content-standard {
+    max-width: _size(content-standard);
+  }
+}
+
+.blog-lang-filter {
+  align-items: center;
+  border-bottom: 1px solid _palette(border-subtle);
+  display: flex;
+  gap: 0.4rem;
+  margin: 0 0 1.75rem;
+  padding-bottom: 0.8rem;
+}
+
+.blog-lang-btn {
+  background: transparent;
+  border: 1px solid _palette(border-strong);
+  border-radius: map-get($radius, sm);
+  color: _palette(text-body);
+  cursor: pointer;
+  font-family: _font(family-fixed);
+  font-size: 0.68rem;
+  font-weight: _font(weight-bold);
+  height: auto;
+  letter-spacing: _font(kerning-meta);
+  line-height: 1.3;
+  padding: 0.4rem 0.55rem;
+  text-transform: uppercase;
+  transition: background _duration(fast) $ease-out, color _duration(fast) $ease-out;
+
+  &:hover,
+  &:focus-visible {
+    background: _palette(surface-sunken);
+    border-color: _palette(ink);
+    color: _palette(ink);
+  }
+
+  &--active {
+    background: _palette(ink);
+    border-color: _palette(ink);
+    color: _palette(surface-base);
+
+    &:hover,
+    &:focus-visible {
+      background: _palette(ink);
+      color: _palette(surface-base);
+    }
+  }
+}
+
+.blog-log {
+  min-width: 0;
+}
+
+.blog-year {
+  margin: 0;
+
+  & + & {
+    margin-top: 2.25rem;
+  }
 
   &__header {
-    margin-bottom: 1.5em;
-    padding-bottom: 0.75em;
-    border-bottom: 2px solid _palette(border-strong);
+    align-items: baseline;
+    display: flex;
+    gap: 0.6rem;
+    margin-bottom: 0.35rem;
+    min-width: 0;
   }
 
   &__title {
-    font-size: 1.2em;
-    font-weight: _font(weight-heading-bold);
-    margin-bottom: 0.25em;
-  }
-
-  &__subtitle {
-    color: _palette(text-secondary);
-    font-size: 0.9em;
+    color: _palette(ink);
+    font-family: _font(family-heading);
+    font-size: clamp(1.85rem, 5vw, 2.6rem);
+    font-variation-settings: "opsz" 52;
+    font-weight: 650;
+    letter-spacing: -0.035em;
+    line-height: 1;
     margin: 0;
   }
-}
 
-// ── Type Pills ────────────────────────────────────
-.blog-type-pill {
-  display: inline-block;
-  padding: 0.2em 0.6em;
-  border-radius: map-get($radius, pill);
-  font-size: 0.7em;
-  font-weight: _font(weight-heading);
-  text-transform: uppercase;
-  letter-spacing: _font(kerning-meta);
-  margin-bottom: 0.6em;
-  font-family: _font(family);
-
-  // Default
-  background: _palette(surface-sunken);
-  color: _palette(text-body);
-  border: 1px solid _palette(border-subtle);
-
-  &--case-study {
-    background: _palette(ink);
-    color: _palette(text-on-dark);
-    border-color: _palette(ink);
-  }
-
-  &--insight {
-    background: _palette(ink);
-    color: _palette(text-on-dark);
-    border-color: _palette(ink);
-  }
-
-  &--methodology {
-    background: _palette(tag-green);
-    color: _palette(surface-overlay);
-    border-color: _palette(tag-green);
-  }
-
-  &--framework {
-    background: _palette(tag-purple);
-    color: _palette(surface-overlay);
-    border-color: _palette(tag-purple);
-  }
-
-  &--reflection {
-    background: transparent;
-    color: _palette(text-primary);
-    border: 1px solid _palette(text-primary);
-  }
-
-  &--announcement {
-    background: transparent;
+  &__separator {
     color: _palette(text-secondary);
-    border: 1px solid _palette(border-strong);
+    font-family: _font(family-heading);
+    font-size: 1.25rem;
+  }
+
+  &__count.fn-stamp {
+    border-color: _palette(border-subtle);
+    color: _palette(verification);
+    white-space: nowrap;
+  }
+
+  &__entries {
+    border-top: 1px solid _palette(ink);
   }
 }
 
-// ── Featured Post Hero ────────────────────────────
-.blog-featured {
-  margin: 2em 0 3em 0;
+.blog-entry {
+  align-items: start;
+  border-bottom: 1px solid _palette(border-subtle);
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 7.4rem minmax(0, 1fr);
+  margin: 0;
+  min-height: 5.1rem;
+  padding: 0.65rem 0;
+
+  &__meta {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    min-width: 0;
+  }
+
+  &__date.fn-stamp {
+    border-color: _palette(border-subtle);
+    color: _palette(amber-text);
+    font-variant-numeric: tabular-nums;
+    justify-self: start;
+    letter-spacing: 0.04em;
+    margin-top: 0.08rem;
+    white-space: nowrap;
+  }
 
   &__link {
-    display: block;
     border: 0;
+    color: _palette(ink);
+    display: block;
+    min-width: 0;
     text-decoration: none;
-    transition: border-color 0.25s $ease-out;
-    overflow: hidden;
-    border-radius: map-get($radius, xl);
-    border: 1px solid _palette(border-subtle);
 
-    &:hover {
-      border-color: _palette(border-strong);
+    &:hover,
+    &:focus-visible {
+      color: _palette(ink);
 
-      .blog-featured__image {
-        transform: scale(1.03);
+      .blog-entry__title {
+        background-image: linear-gradient(
+          to bottom,
+          transparent 58%,
+          _palette(highlighter) 58%,
+          _palette(highlighter) 91%,
+          transparent 91%
+        );
       }
     }
   }
 
-  &__image-wrapper {
-    width: 100%;
-    aspect-ratio: 21 / 9;
-    overflow: hidden;
-    background: _palette(surface-sunken);
-  }
-
-  &__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s $ease-out;
-  }
-
-  &__content {
-    padding: 1.5em;
-  }
-
   &__title {
-    color: _palette(text-primary);
-    margin: 0 0 0.5em 0;
-    font-size: 1.5em;
-    line-height: 1.3;
-    overflow-wrap: break-word;
-    word-break: break-word;
+    background-repeat: no-repeat;
+    color: _palette(ink);
+    display: inline;
+    font-family: _font(family-heading);
+    font-size: 1.15rem;
+    font-variation-settings: "opsz" 32;
+    font-weight: 650;
+    letter-spacing: -0.02em;
+    line-height: 1.22;
+    margin: 0;
   }
 
-  &__meta {
+  &__type.fn-stamp {
+    border-color: _palette(border-subtle);
     color: _palette(text-secondary);
-    font-size: 0.85em;
-    margin-bottom: 0.75em;
+    font-size: 0.58rem;
+    line-height: 1.2;
+    max-width: 100%;
+    text-align: center;
   }
 
   &__excerpt {
     color: _palette(text-body);
-    margin-bottom: 0;
-    line-height: 1.6;
+    font-size: 0.82rem;
+    line-height: 1.4;
+    margin: 0.35rem 0 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 }
 
-// ── Blog Post Card Grid ───────────────────────────
+/* Shared case-study cards remain in use on the Clients route. */
 .blog-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 1.5rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 
   @include breakpoint(medium) {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5em;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   @include breakpoint(small) {
     grid-template-columns: 1fr;
-    gap: 1.5em;
   }
 }
 
 .blog-card {
-  border-radius: map-get($radius, xl);
-  overflow: hidden;
-  border: 1px solid _palette(border-subtle);
   background: _palette(surface-raised);
-  transition: border-color 0.15s $ease-out;
-
-  &:hover {
-    border-color: _palette(border-strong);
-
-    .blog-card__image {
-      transform: scale(1.03);
-    }
-  }
-
-  // Subtle left-border accent by type
-  &--case-study {
-    border-left: 3px solid _palette(ink);
-  }
-
-  &--insight {
-    border-left: 3px solid _palette(border-strong);
-  }
-
-  &--methodology {
-    border-left: 3px solid _palette(tag-green);
-  }
-
-  &--framework {
-    border-left: 3px solid _palette(tag-purple);
-  }
-
-  &--reflection {
-    border-left: 3px solid _palette(text-secondary);
-  }
-
-  &--announcement {
-    border-left: 3px solid _palette(border-strong);
-  }
+  border: 1px solid _palette(border-subtle);
+  border-radius: map-get($radius, sm);
+  min-width: 0;
+  overflow: hidden;
 
   &__link {
+    border: 0;
     display: flex;
     flex-direction: column;
     height: 100%;
-    border: 0;
     text-decoration: none;
   }
 
   &__image-wrapper {
-    width: 100%;
     aspect-ratio: 16 / 9;
-    overflow: hidden;
     background: _palette(surface-sunken);
+    overflow: hidden;
+    width: 100%;
   }
 
   &__image {
-    width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s $ease-out;
+    transition: transform _duration(base) $ease-out;
+    width: 100%;
   }
 
   &__content {
     flex: 1;
-    padding: 1em 1.25em 1.25em;
+    padding: 1rem;
   }
 
   &__title {
-    color: _palette(text-primary);
-    margin: 0 0 0.4em 0;
-    font-size: 1em;
-    line-height: 1.35;
-    font-weight: _font(weight-heading-bold);
-    overflow-wrap: break-word;
-    word-break: break-word;
+    color: _palette(ink);
+    font-size: 1rem;
+    line-height: 1.3;
+    margin: 0 0 0.5rem;
+    overflow-wrap: anywhere;
   }
 
   &__meta {
-    color: _palette(text-secondary);
-    font-size: 0.8em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.65rem;
   }
 
   &__excerpt {
     color: _palette(text-body);
-    font-size: 0.85em;
+    font-size: 0.84rem;
     line-height: 1.5;
-    margin-bottom: 0;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-}
-
-// ── Tag Pills ─────────────────────────────────────
-.blog-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5em;
-  margin-bottom: 0.5em;
-
-  &--post {
-    margin-bottom: 1.5em;
-  }
-}
-
-.blog-tag {
-  display: inline-block;
-  background: _palette(surface-sunken);
-  color: _palette(text-body);
-  padding: 0.25em 0.6em;
-  border-radius: 50px;
-  font-size: 0.75em;
-  font-weight: _font(weight-heading);
-  text-transform: lowercase;
-  border: 1px solid _palette(border-subtle);
-}
-
-// ── Language Filter ──────────────────────────────
-.blog-lang-filter {
-  display: flex;
-  gap: 0.5rem;
-  margin: 1rem 0 1.5rem;
-}
-
-.blog-lang-btn {
-  padding: 0.35rem 0.9rem;
-  border-radius: 2rem;
-  border: 1px solid _palette(border-subtle);
-  background: transparent;
-  color: _palette(text-body);
-  cursor: pointer;
-  font-size: 0.85rem;
-  font-weight: _font(weight);
-  transition: all 0.2s $ease-out-snappy;
-
-  &:hover {
-    border-color: _palette(text-primary);
-    color: _palette(text-primary);
-  }
-
-  &--active {
-    border: 2px solid _palette(ink);
-    background: _palette(ink);
-    color: _palette(text-on-dark);
-    font-weight: _font(weight-heading);
-  }
-}
-
-// ── Post Header Meta ──────────────────────────────
-.post-header {
-  &__meta {
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
-    color: _palette(text-secondary);
-    font-size: 0.9em;
-    margin-top: 0.5em;
-  }
-
-  &__separator {
-    color: _palette(border-strong);
-  }
-
-  &__reading-time {
-    font-style: italic;
-  }
-}
-
-// Post header meta inside the Field Notes page hero
-.page-hero .post-header__meta {
-  color: _palette(verification);
-}
-
-.page-hero .post-header__separator {
-  color: _palette(verification);
-}
-
-// ── Post Content Typography ───────────────────────
-.post-content {
-  font-size: 1.05em;
-  line-height: 1.8;
-  max-width: 65ch;
-  color: _palette(text-body);
-
-  p {
-    margin-bottom: 1.5em;
-  }
-
-  h1, h2, h3, h4 {
-    margin-top: 2em;
-    margin-bottom: 0.75em;
-  }
-
-  // First heading in article shouldn't have top margin
-  > h1:first-child,
-  > h2:first-child {
-    margin-top: 0;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-    border-radius: map-get($radius, sm);
-    margin: 1.5em 0;
-  }
-
-  // Image captions
-  img + em {
-    display: block;
-    text-align: center;
-    color: _palette(text-secondary);
-    font-size: 0.9em;
-    margin-top: -1em;
-    margin-bottom: 1.5em;
-  }
-}
-
-// ── Pull Quote Styling ────────────────────────────
-.pull-quote {
-  border-left: 4px solid _palette(border-strong);
-  padding: 1em 0 1em 1.5em;
-  margin: 2em 0;
-  font-size: 1.15em;
-  font-style: italic;
-  color: _palette(text-primary);
-  background: _palette(surface-sunken);
-  border-radius: 0 map-get($radius, lg) map-get($radius, lg) 0;
-
-  p {
-    margin-bottom: 0;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-}
-
-// ── Author Card ───────────────────────────────────
-.author-card {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.5em;
-  padding: 1.5em;
-  background: _palette(surface-raised);
-  border-radius: map-get($radius, xl);
-  border: 0;
-
-  &__image-link {
-    border: 0;
-    flex-shrink: 0;
-  }
-
-  &__image {
-    width: 80px;
-    height: 80px;
-    border-radius: map-get($radius, full);
-    object-fit: cover;
-  }
-
-  &__info {
-    flex: 1;
-  }
-
-  &__name {
-    display: block;
-    font-weight: _font(weight-heading-bold);
-    font-size: 1.1em;
-    color: _palette(text-primary);
-    margin-bottom: 0.5em;
-    border: 0;
-
-    &:hover {
-      color: _palette(text-primary);
-    }
-  }
-
-  &__bio {
-    color: _palette(text-body);
-    font-size: 0.9em;
-    line-height: 1.5;
-    margin-bottom: 0.75em;
-  }
-
-  &__links {
-    font-size: 0.85em;
-  }
-
-  &__social {
-    color: _palette(text-primary);
-    border: 0;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  &__separator {
-    color: _palette(text-secondary);
-    margin: 0 0.5em;
-  }
-
-  &--compact {
-    padding: 1em;
-    gap: 1em;
-
-    .author-card__image {
-      width: 50px;
-      height: 50px;
-    }
-
-    .author-card__name {
-      font-size: 1em;
-      margin-bottom: 0.25em;
-    }
-  }
-
-  @include breakpoint(small) {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-
-    .author-card__image {
-      width: 100px;
-      height: 100px;
-    }
-  }
-}
-
-// ── Share Buttons ─────────────────────────────────
-.share-buttons {
-  display: flex;
-  align-items: center;
-  gap: 0.75em;
-  margin: 2em 0;
-
-  &__label {
-    font-weight: _font(weight-heading);
-    color: _palette(text-primary);
-    font-size: 0.9em;
-    margin-right: 0.25em;
-  }
-
-  &__button {
-    display: inline-block;
-    padding: 0.4em 0.75em;
-    border-radius: map-get($radius, sm);
-    font-size: 0.8em;
-    font-weight: _font(weight-medium);
-    border: 1px solid _palette(border-subtle);
-    background: _palette(surface-raised);
-    color: _palette(text-primary);
-    cursor: pointer;
-    transition: all 0.2s $ease-out-snappy;
-    text-decoration: none;
-    line-height: 1.4;
-    height: auto;
-
-    &:hover {
-      background: _palette(ink);
-      color: _palette(text-on-dark);
-      border-color: _palette(ink);
-    }
-
-    &--linkedin:hover {
-      background: _palette(social-linkedin);
-      color: _palette(surface-overlay);
-      border-color: _palette(social-linkedin);
-    }
-
-    &--twitter:hover {
-      background: _palette(social-twitter);
-      color: _palette(surface-overlay);
-      border-color: _palette(social-twitter);
-    }
-  }
-
-  @include breakpoint(small) {
-    flex-wrap: wrap;
-
-    &__label {
-      margin-right: 0;
-      margin-bottom: 0.5em;
-      width: 100%;
-    }
-
-    &__button {
-      padding: 0.6em 1em;
-      font-size: 0.85em;
-      min-height: 44px;
-      display: inline-flex;
-      align-items: center;
-    }
-  }
-}
-
-// ── Related Posts ─────────────────────────────────
-.related-posts {
-  margin: 3em 0;
-
-  &__title {
-    margin-bottom: 1.5em;
-  }
-
-  &__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5em;
-
-    @include breakpoint(medium) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    @include breakpoint(small) {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  &__item {
-    background: _palette(surface-raised);
-    border-radius: map-get($radius, xl);
-    overflow: hidden;
-    border: 0;
-  }
-
-  &__content {
-    padding: 1em;
-  }
-
-  &__item-title {
-    font-size: 0.95em;
-    margin: 0 0 0.5em 0;
-    line-height: 1.3;
-
-    a {
-      color: _palette(text-primary);
-      border: 0;
-
-      &:hover {
-        color: _palette(text-primary);
-      }
-    }
-  }
-
-  &__date {
-    color: _palette(text-secondary);
-    font-size: 0.8em;
     margin: 0;
   }
+
+  &:hover .blog-card__image {
+    transform: scale(1.025);
+  }
 }
 
-// ── Post Navigation ───────────────────────────────
-.post-navigation {
-  display: flex;
-  justify-content: space-between;
-  gap: 2em;
-  margin: 3em 0;
-  padding: 2em 0;
-  border-top: 1px solid _palette(border-subtle);
-  border-bottom: 1px solid _palette(border-subtle);
-
-  &__prev,
-  &__next {
-    flex: 1;
-    max-width: 45%;
-  }
-
-  &__next {
-    text-align: right;
-  }
-
-  &__label {
-    display: block;
-    font-size: 0.8em;
-    color: _palette(text-secondary);
-    text-transform: uppercase;
-    letter-spacing: _font(kerning-meta);
-    margin-bottom: 0.5em;
-  }
-
-  &__link {
-    color: _palette(text-primary);
-    font-weight: _font(weight-heading);
-    border: 0;
-
-    &:hover {
-      color: _palette(text-primary);
+@include breakpoint(xsmall) {
+  #blog,
+  #zh-blog {
+    .section-base.section-padding {
+      padding-bottom: 2.5rem;
+      padding-top: 1.5rem;
     }
   }
 
-  @include breakpoint(small) {
-    flex-direction: column;
-    gap: 1.5em;
+  .blog-lang-filter {
+    margin-bottom: 1.4rem;
+  }
 
-    &__prev,
-    &__next {
-      max-width: 100%;
-      text-align: left;
+  .blog-lang-btn {
+    letter-spacing: 0.04em;
+    padding-left: 0.45rem;
+    padding-right: 0.45rem;
+  }
+
+  .blog-year {
+    & + & {
+      margin-top: 1.75rem;
+    }
+
+    &__title {
+      font-size: 1.8rem;
+    }
+
+    &__header {
+      gap: 0.45rem;
+    }
+
+    &__count.fn-stamp {
+      font-size: 0.62rem;
     }
   }
-}
 
-// ── Post Author Section ───────────────────────────
-.post-author-section {
-  margin: 2em 0;
-}
+  .blog-entry {
+    gap: 0.7rem;
+    grid-template-columns: 4.65rem minmax(0, 1fr);
+    min-height: 4.6rem;
+    padding: 0.45rem 0;
 
-.service-cta {
-  margin: 2em 0;
-  padding: 1.5em;
-  background: _palette(surface-raised);
-  border: 0;
-  border-left: 4px solid _palette(border-strong);
-  border-radius: 0 map-get($radius, xl) map-get($radius, xl) 0;
-  text-align: left;
+    &__date.fn-stamp {
+      font-size: 0.57rem;
+      letter-spacing: 0;
+      padding-left: 0.25rem;
+      padding-right: 0.25rem;
+    }
 
-  &__text {
-    margin-bottom: 1em;
-    font-size: 0.95em;
-    line-height: 1.6;
-  }
-}
+    &__title {
+      font-size: 0.93rem;
+      line-height: 1.14;
+    }
 
-.trainer-banner {
-  margin: 2em 0;
-  padding: 1.25em;
-  background: _palette(surface-raised);
-  border: 0;
-  border-left: 4px solid _palette(border-strong);
-  border-radius: 0 map-get($radius, xl) map-get($radius, xl) 0;
+    &__type.fn-stamp {
+      font-size: 0.46rem;
+      line-height: 1.1;
+      max-width: 4.65rem;
+      padding: 0.16rem 0.2rem;
+    }
 
-  h3 {
-    margin-bottom: 0.5em;
-  }
-
-  p {
-    margin-bottom: 1em;
-  }
-}
-
-// ── Scroll Progress Bar ──────────────────────────
-.scroll-progress {
-  position: fixed;
-  top: _size(nav-height);
-  left: 0;
-  width: 100%;
-  height: 3px;
-  z-index: _misc(z-index-base);
-  pointer-events: none;
-
-  @include breakpoint(small) {
-    top: _size(nav-height-small);
-  }
-
-  &__bar {
-    height: 100%;
-    background: _palette(ink);
-    transform-origin: left;
-    will-change: transform;
+    &__excerpt {
+      font-size: 0.72rem;
+      line-height: 1.3;
+      margin-top: 0.25rem;
+    }
   }
 }

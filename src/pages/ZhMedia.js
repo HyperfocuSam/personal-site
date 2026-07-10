@@ -243,7 +243,7 @@ const ZhMedia = () => (
     ]}
   >
     <Helmet><html lang="zh-Hant" /></Helmet>
-    <article className="post" id="zh-media">
+    <article className="post field-notes-content zh" id="zh-media">
       {/* Dark hero */}
       <header className="page-hero">
         <div className="content-standard">
