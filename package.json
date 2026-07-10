@@ -69,7 +69,7 @@
     ]
   },
   "reactSnap": {
-    "include": ["/", "/resume", "/zh/blog", "/get-started"],
+    "include": ["/", "/resume", "/zh/blog", "/get-started", "/case-notes/"],
     "skipThirdPartyRequests": true,
     "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"],
     "minifyHtml": {
