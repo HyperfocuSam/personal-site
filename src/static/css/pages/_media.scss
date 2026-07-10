@@ -28,9 +28,13 @@
   }
 
   &__meta {
+    align-items: center;
     font-size: 0.85em;
     color: _palette(text-secondary);
-    white-space: nowrap;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    white-space: normal;
   }
 
   &__badge {
@@ -43,7 +47,7 @@
     border-radius: map-get($radius, sm);
     background: _palette(surface-sunken);
     color: _palette(text-secondary);
-    margin-left: 0.75em;
+    margin-left: 0;
   }
 
   &__stats {

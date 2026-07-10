@@ -26,6 +26,14 @@
     }
   }
 
+  // Field Notes applies a later global heading color. Keep headings on this
+  // ink band at the stronger, component-specific paper contrast.
+  .field-notes-content & {
+    h3 {
+      color: _palette(surface-base);
+    }
+  }
+
   p {
     color: _palette(text-on-dark-muted);
     font-size: 1rem;

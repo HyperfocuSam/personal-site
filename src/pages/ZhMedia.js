@@ -169,7 +169,7 @@ const EpisodeCard = ({ episode }) => (
     {episode.views && (
       <div style={styles.statsRow}>
         <span>{`${episode.views} 觀看次數`}</span>
-        <span>{`${episode.likes} 讚好`}</span>
+        {episode.likes && <span>{`${episode.likes} 讚好`}</span>}
       </div>
     )}
 

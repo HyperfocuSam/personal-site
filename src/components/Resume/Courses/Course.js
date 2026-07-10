@@ -1,17 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Course = ({ data, last }) => (
+const Course = ({ data }) => (
   <li className="course-container">
-    <a href={data.link}>
-      {/* Single expression: adjacent text nodes break react-snap hydration (#418) */}
-      <h4 className="course-number">{`${data.number}:`}</h4>
-      <p className="course-name">{data.title}</p>
-    </a>
-    {!last && (
-      <div className="course-dot">
-        <p className="course-name"> &#8226;</p>
-      </div>
+    {data.link ? (
+      <a href={data.link} className="course-name">{data.title}</a>
+    ) : (
+      <span className="course-name">{data.title}</span>
     )}
   </li>
 );
@@ -22,11 +17,6 @@ Course.propTypes = {
     number: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
   }).isRequired,
-  last: PropTypes.bool,
-};
-
-Course.defaultProps = {
-  last: false,
 };
 
 export default Course;

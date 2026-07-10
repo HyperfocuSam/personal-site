@@ -164,6 +164,7 @@
   }
 
   .skillbar {
+    background: _palette(ink);
     border: 1px solid _palette(border-subtle);
     border-radius: map-get($radius, sm);
     height: 2rem;
@@ -177,6 +178,14 @@
     height: calc(2rem - 2px);
   }
 
+  .skillbar-title {
+    background: _palette(ink);
+  }
+
+  .skillbar-bar {
+    background: _palette(verification);
+  }
+
   .skillbar-title span,
   .skill-bar-percent {
     font-family: _font(family-fixed);
@@ -184,15 +193,19 @@
     line-height: calc(2rem - 2px);
   }
 
+  .skill-bar-percent {
+    color: _palette(surface-base);
+  }
+
   .courses {
     padding-top: 0;
 
     .course-list {
       line-height: 1.9;
+      padding-left: 1.25rem;
       text-align: left;
     }
 
-    .course-number,
     .course-name {
       font-family: _font(family-fixed);
     }
@@ -205,6 +218,15 @@
       line-height: 2;
       margin: 0;
       text-transform: uppercase;
+    }
+
+    .course-container {
+      border-bottom: 1px solid _palette(border-subtle);
+      padding: 0.45rem 0;
+
+      &:last-child {
+        border-bottom: 0;
+      }
     }
   }
 
@@ -227,14 +249,8 @@
       font-size: 1.02rem;
     }
 
-    .course-dot {
-      display: none;
-    }
-
     .course-container a {
-      border-bottom: 1px solid _palette(border-subtle);
-      display: block;
-      padding: 0.45rem 0;
+      display: inline;
     }
   }
 }

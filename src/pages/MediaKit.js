@@ -107,7 +107,7 @@ const MediaKit = () => (
               Sam Wong is an AI training specialist who has trained over 10,000
               professionals across banking, retail, education, and technology
               sectors. He designs and delivers corporate AI workshops through
-              Adaptig (Animo Technology Limited), helping organizations move
+              Adaptig (Adaptig Group Limited), helping organizations move
               from AI curiosity to AI competency. His clients include Bank of
               China (Hong Kong), Chow Tai Fook, Hong Kong Jockey Club, Arup,
               and PolyU. Based in Hong Kong, Sam specializes in practical AI
@@ -117,12 +117,10 @@ const MediaKit = () => (
           <div className="media-kit-bio__column">
             <span className="media-kit-bio__lang-label">中文</span>
             <p>
-              Sam Wong
-              是一位AI培訓專家，已為超過10,000名來自銀行、零售、教育及科技行業的專業人士提供培訓。他透過
-              Adaptig（Animo Technology
-              Limited）設計及執行企業AI工作坊，協助機構從AI好奇階段進入AI實戰能力階段。客戶包括中銀香港、周大福、香港賽馬會、Arup
-              及理工大學。Sam
-              駐港，專注於改變行為而非純粹提升認知的實用AI應用培訓。
+              {'Sam Wong 是一位AI培訓專家，已為超過10,000名來自銀行、零售、教育及科技行業的專業人士提供培訓。'
+                + '他透過 Adaptig（Adaptig Group Limited）設計及執行企業AI工作坊，'
+                + '協助機構從AI好奇階段進入AI實戰能力階段。客戶包括中銀香港、周大福、香港賽馬會、'
+                + 'Arup 及理工大學。Sam 駐港，專注於改變行為而非純粹提升認知的實用AI應用培訓。'}
             </p>
           </div>
         </div>
