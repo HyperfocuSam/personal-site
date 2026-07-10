@@ -5,7 +5,6 @@ import { Helmet } from 'react-helmet-async';
 import Main from '../layouts/Main';
 import cases from '../data/cases';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
-import '../static/css/pages/_case-notes.scss';
 
 const PERSON_ID = `${SITE_URL}/#person`;
 

@@ -16,7 +16,6 @@ import AboutCallout from '../components/Home/AboutCallout';
 import HomeFAQ from '../components/Home/HomeFAQ';
 import EmailCapture from '../components/EmailCapture/EmailCapture';
 import ScrollReveal from '../components/ScrollReveal';
-import '../static/css/pages/_case-notes.scss';
 
 const homepageReceiptFragments = ['bochk', 'garden', 'ctf'].map((id) => {
   const entry = cases.find((caseEntry) => caseEntry.id === id);
