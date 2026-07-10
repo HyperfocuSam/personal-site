@@ -79,6 +79,7 @@ Sam Wong is an AI training specialist who has trained 10,000+ professionals acro
 
 ### Insights & Commentary
 
+- [The architect that never writes code](https://hyperfocusam.com/blog/the-architect-that-never-writes-code/) (2026-07-11) — Companion take to the build log: the most expensive model in the stack wrote zero implementation code. Four bugs died at the spec stage, three workers passed the same five gates, and the blind pick landed on the cheapest. The pattern, not the model, is the asset.
 - [Three Gemini Tools Collapsed Into One Prompt Today](https://hyperfocusam.com/blog/three-gemini-tools-collapsed-into-one-prompt-today/) (2026-05-20) — Google shipped Gemini Omni at I/O 2026 — Veo, Nano Banana, and Genie folded into one multimodal prompt surface. Three of my daily Gemini calls collapse into one. Day one read, API still weeks out, the consolidation thesis lands.
 - [Why Hong Kong's AI Disadvantage Is Actually an Advantage](https://hyperfocusam.com/blog/hong-kong-ai-disadvantage-is-advantage/) (2026-04-13) — I trained 120 CEOs in LA who couldn't copy and paste. Hong Kong's tech literacy is higher than people think. The real gap isn't VPNs — it's information lag and the Cantonese blind spot.
 - [What Nobody Tells You About Building Agentic AI](https://hyperfocusam.com/blog/what-nobody-tells-you-building-agentic-ai/) (2026-03-16) — I built a multi-agent AI system from scratch -- four specialists, a team router, persistent memory, and streaming UX. Here are five things the framework docs don't cover.
@@ -122,6 +123,7 @@ Sam Wong is an AI training specialist who has trained 10,000+ professionals acro
 
 ### Chinese (Traditional) Articles
 
+- [從不寫 code 的 architect model](https://hyperfocusam.com/blog/the-architect-that-never-writes-code-tc/) (2026-07-11) — 最貴的模型一行 implementation code 都沒寫——它的全部產出是判斷。四個 bug 死在 spec 階段，三個 worker 通過同樣五道 gate，盲選選中成本最低的一個。資產是 pattern，不是模型。
 - [今日,我三個 Gemini tab 收埋成一個 prompt](https://hyperfocusam.com/blog/three-gemini-tools-collapsed-into-one-prompt-today-tc/) (2026-05-20) — Google 今早在 I/O 2026 發布 Gemini Omni —— 將 Veo、Nano Banana 與 Genie 折疊進單一個 multimodal prompt surface。我日常使用的三個 Gemini call 收歸為一個。Day one read,API 還需數週才開放,但整合論述終於落地。
 - [加、減、乘、除：教 Copilot 的速查表](https://hyperfocusam.com/blog/plus-minus-multiply-divide-copilot-framework-tc/) (2026-05-11) — 工作坊前一晚凌晨一點，我把剛做完的簡報扔了，按加、減、乘、除四則運算重新組合。框架撐過了那次恐慌，通常這代表它有點承重能力。
 - [用 AI 三十分鐘準備求職面試](https://hyperfocusam.com/blog/prep-job-interview-ai-30-minutes-tc/) (2026-05-04) — 三十分鐘的 AI 循環流程：以 NotebookLM 生成履歷 Podcast，加入招聘廣告重新生成，再以 ChatGPT 語音模式做模擬面試並錄音回傳。

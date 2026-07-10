@@ -163,6 +163,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/corporate-ai-training-hong-kong/" />
   </url>
   <url>
+    <loc>https://hyperfocusam.com/blog/the-architect-that-never-writes-code/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/blog/the-architect-that-never-writes-code/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/blog/the-architect-that-never-writes-code-tc/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/blog/the-architect-that-never-writes-code/" />
+  </url>
+  <url>
+    <loc>https://hyperfocusam.com/blog/the-architect-that-never-writes-code-tc/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/blog/the-architect-that-never-writes-code-tc/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/blog/the-architect-that-never-writes-code/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/blog/the-architect-that-never-writes-code/" />
+  </url>
+  <url>
     <loc>https://hyperfocusam.com/blog/three-models-one-branch-zero-deployment/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
