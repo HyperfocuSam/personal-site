@@ -6,7 +6,7 @@ Not because the content is bad. Not because the tools are wrong. Because the for
 
 A company books a half-day workshop. An external trainer shows up, demos ChatGPT, walks through some prompts, gets a 9/10 satisfaction score. Everyone goes back to their desks. Two weeks later, nothing has changed. The prompts are forgotten. The tools are unused. The company checks "AI training" off its list and wonders why adoption isn't happening.
 
-I know this because I've been that trainer. And after 180+ workshops across banking, retail, education, engineering, and tourism, I've learned that the workshop itself is the least important part of making AI training stick.
+I know this because I've been that trainer. And after training 10,000+ professionals across banking, retail, education, engineering, and tourism, I've learned that the workshop itself is the least important part of making AI training stick.
 
 ## The Forgetting Problem
 

@@ -2,7 +2,7 @@
 
 三個月前我首次打開 Claude Code，以為不過是另一個 terminal chatbox。輸入了一句話，它回答了，我心想：這就是 ChatGPT 穿了件黑色外衣而已。
 
-三個月後的今天，我四間公司的日常運作全部在 Claude Code 上運行。Email、invoice、客戶跟進、meeting transcript、寫 blog、甚至一隻三國志 RPG -- 全部在同一個 terminal window 內完成。438 小時的 session，200 多次對話。而這一切都始於一個我差點就關掉的 terminal。
+三個月後的今天，我四間公司的日常運作全部在 Claude Code 上運行。Email、invoice、客戶跟進、meeting transcript、寫 blog、甚至一隻三國志 RPG -- 全部在同一個 terminal window 內完成。70+ client engagement，438 小時的 session。而這一切都始於一個我差點就關掉的 terminal。
 
 這是「Claude Code 完全攻略」系列的第一篇。不是那種「十個 prompt 提升生產力」的文章 -- 而是我真正在用的系統，從零開始說起。
 
@@ -82,7 +82,7 @@ Every meaningful action: log to worklogs BEFORE responding.
 
 沒有 CLAUDE.md 的 Claude Code 是一個患有失憶症的聰明助手。有了 CLAUDE.md 的 Claude Code 是一個記得規則的 team member。
 
-這就是真正的 unlock。
+這就是真正的分水嶺。
 
 ## 第一個真正的任務
 
@@ -111,7 +111,7 @@ MCP 的 deep dive 會在系列第三篇詳述。但我在第一篇就提及，�
 
 這是「Claude Code 完全攻略」系列的 Part 1。後續還有：
 
-- **Part 2：Skills 與 Memory** -- 如何賦予 Claude Code 持久記憶、可重用的技能、以及從過往 session 學習的能力
+- **Part 2：Skills 與 Memory** -- 如何讓 Claude Code 擁有持久記憶、可重用的技能、以及從過往 session 學習的能力
 - **Part 3：MCP Integration** -- 連接你真正的工具，建立真實的 workflow
 - **Part 4：Hooks 與 Automation** -- event-driven 行為、policy enforcement、建構自主運行的系統
 

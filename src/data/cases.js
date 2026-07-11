@@ -166,7 +166,7 @@ const cases = [
   {
     id: 'expo-panel',
     period: 'Jun 2026',
-    org: 'An SME e-commerce expo hosted by a Hong Kong statutory productivity body',
+    org: 'HKPC — E-commerce Innovation Expo 2026',
     title: 'Panel: AI × MarTech — Save Time, Sell More',
     type: 'Panel',
     scale: 'SME audience',
@@ -174,7 +174,6 @@ const cases = [
     summary: 'Panel discussion on where AI actually saves marketing teams time — practitioner answers, not vendor answers.',
     blogSlug: null,
     image: null,
-    anonymized: true,
   },
   {
     id: 'hk-bank',
