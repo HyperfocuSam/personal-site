@@ -313,7 +313,7 @@ const Post = () => {
           ) : (
             <EmailCapture
               title="Liked this? Get the next one."
-              blurb="I write about AI adoption that actually works — frameworks, case studies, and lessons from 180+ workshops."
+              blurb="I write about AI adoption that actually works — frameworks, case studies, and lessons from training 10,000+ professionals across 70+ organizations."
             />
           )}
         </ScrollReveal>

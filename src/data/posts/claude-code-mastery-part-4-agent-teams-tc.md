@@ -1,6 +1,6 @@
 # Claude Code 完全攻略：Agent 團隊與自動化 -- 你的 AI 工作團隊
 
-我有 9 個 agent。它們正在執行 7 個 cron job。我的 blog 每週一自動發文，完全不需要碰 keyboard。每天早上 8:30，WhatsApp 會收到一則 Cantonese briefing -- calendar 衝突已標記，overdue item 排列完畢。
+我有 9 個 agent。它們正在執行 7 個 cron job。我的 blog 每週一自動發文，完全不需要碰 keyboard。每天早上 8:30，WhatsApp 會收到一則 Cantonese briefing -- calendar 衝突已標記，overdue item 排列完畢。當 client 在 email 中提及某個名字，系統會在我讀 thread 之前，先載入那個人的完整歷史。
 
 一個 agent 有用。一隊 specialist 是完全不同層次的事。
 
@@ -78,7 +78,7 @@ Coordinator -- ada-executive-assistant -- 的 system prompt 內嵌一個 delegat
 
 每個 agent 的 output 輸入至下一個。沒有 research 就無法撰寫 proposal。沒有 proposal 就無法撰寫 email。Coordinator 管理 handoff。
 
-規則很簡單：不需互相等待的就平行執行，需要等待的就順序執行。
+規則很簡單：不需互相等待的就平行執行，需要等待的就順序執行。Coordinator 會從 task description 自行判斷執行模式，我無需指定。但清晰的描述有幫助——『準備 meeting』意味平行；『draft 然後 send』意味順序。
 
 ## Cron Jobs：無人監督的自動化
 
@@ -88,7 +88,7 @@ Agent teams 加上 scheduled execution，便是真正的轉捩點。以下 7 個
 |-----|------|------|
 | **morning-briefing.sh** | 平日 8:30 AM | Calendar + overdue + client status → WhatsApp Cantonese ping |
 | **blog-content-scan.sh** | 週一 10 AM | Scan → 選定 topic → draft → auto-publish（無 review gate） |
-| **blog-nudge.sh** | 週四 10 AM | Blog health check，補捉週一 publish 失敗 |
+| **blog-nudge.sh** | 週四 10 AM | Blog health check，補捉週一 publish 失敗。WhatsApp 失效時以 Gmail 作 fallback |
 | **bookmark-digest.sh** | 每日 9 PM | X/Twitter bookmarks 按主題歸類 |
 | **stale-check.sh** | 週一 9 AM | 找出超過 14 日未動的 todo |
 | **rotate-worklogs.sh** | 每月 1 號 | Archive 舊 worklog，保持低於 15KB |
@@ -106,7 +106,7 @@ Ada 早晨提醒 03/23:
 - [OVERDUE] CTF 發票 — 逾期26日
 - [DUE SOON] Garden 工作坊 — 3日後
 
-Full briefing 在 Craft.
+Full briefing 喺 Craft.
 ```
 
 Calendar event 已與 client memory 交叉比對。若 meeting 涉及的 client 有未完成的 todo，會標記 [PREP NEEDED]。完整 dashboard 存於 Craft document，WhatsApp 只呈現重點。兩個系統、兩層 detail、零手動操作。

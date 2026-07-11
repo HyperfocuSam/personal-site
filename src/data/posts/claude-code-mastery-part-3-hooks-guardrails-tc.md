@@ -6,7 +6,7 @@
 
 我的 PreToolUse hook 攔截了這次操作。Policy engine 比對了 outbound email 的參數，發現我尚未 approve，直接 block。我收到的是一則 deny message 而非 "sent" 確認。檢查後發現地址有誤，修正後手動 approve。整個過程耗時十二秒。損失：零。
 
-做生意的人一定明白：一封寄錯的 email 足以令你與 client 的關係即刻出問題。尤其在香港，你的 client 可能就坐在你另一個 client 的隔壁。這個 hook 救了我一次，整套 system 便已值回票價。
+做生意的人一定明白：一封寄錯的 email 足以令你與 client 的關係即刻出問題。尤其在香港，你的 client 可能就坐在你另一個 client 的隔壁。這個 hook 救了我一次，我用一個週末搭建的整套 system 便已值回票價。
 
 這是 Claude Code 完全攻略的第三篇。[第一篇](/blog/claude-code-mastery-part-1-getting-started-tc)講 CLAUDE.md，[第二篇](/blog/claude-code-mastery-part-2-skills-memory-tc)講 memory 架構。本篇討論的內容，大多數人完全忽略：如何令一個自主 AI agent 安全到你敢讓它處理真正的業務。
 
@@ -16,9 +16,9 @@ AI agent 有用，是因為它不需要請示就能行動。AI agent 危險，�
 
 如果你的 agent 能夠 send email、修改 file、發送 WhatsApp、query database -- 我的 Ada 每天都在執行這些操作 -- 那麼每一個 tool call 都是真槍實彈。發出的 email 無法收回，發出的 WhatsApp 無法刪除。
 
-大部分 Claude Code 使用者完全沒有 guardrails。他們依賴 model 本身的判斷。撰寫 code 時這沒有問題，但當 agent 替你管理 client communication，這個做法就太冒險了。
+大部分 Claude Code 使用者完全沒有 guardrails。他們依賴 model 本身的判斷。撰寫 code 時這沒有問題，但當 agent 替一盤培訓過逾 10,000 名專業人士的生意管理 client communication，這個做法就太冒險了。
 
-我需要的是 "trust but verify" -- 信任但驗證。Hooks 賦予了我這個能力。
+我需要的是 "trust but verify" -- 信任但驗證。Hooks 給了我這個能力。
 
 ## Hooks 是什麼
 
@@ -30,12 +30,33 @@ Claude Code 支援幾種 hook type：
 - **PostToolUse** -- tool 執行之後觸發。可以 inspect output。
 - **Stop** -- session 結束之前觸發。可以阻止退出。
 - **InstructionsLoaded** -- session 開始時觸發。可以注入 context。
+- **Notification** -- agent 發出通知時觸發。
+- **SubagentStart / SubagentStop** -- sub-agent 啟動或關閉時觸發。
 
 在 `.claude/settings.json` 中配置。每個 hook 指定 event type、optional matcher（針對特定 tool），以及 action -- shell command 或 HTTP endpoint。
 
 ## PreToolUse：攔截錯誤的 Email
 
-這就是救了我的那個 hook。每次 Claude Code 準備 send email，hook 便會觸發。它將 tool call 的所有參數 POST 到我本地的 policy server。Server 評估兩條 rule：
+這就是救了我的那個 hook。以下是我 `settings.json` 中的實際配置：
+
+```json
+{
+  "PreToolUse": [
+    {
+      "matcher": "mcp__google_workspace__send_gmail_message",
+      "hooks": [
+        {
+          "type": "http",
+          "url": "http://localhost:18924/hooks/PreToolUse",
+          "timeout": 5
+        }
+      ]
+    }
+  ]
+}
+```
+
+每次 Claude Code 準備 send email，hook 便會觸發。它將 tool call 的所有參數 POST 到我本地的 policy server。Server 評估兩條 rule：
 
 **Rule 1：Sender 驗證。** Email 必須從 `sam@adaptig.com` 發出。使用錯誤 account 即刻 block。
 
@@ -57,8 +78,10 @@ policies:
           - "approved"
           - "send it"
           - "go ahead"
+          - "yes"
           - "confirmed"
           - "lgtm"
+          - "looks good"
         on_fail: deny
         reason: "Outbound email requires explicit user approval."
 ```
@@ -85,7 +108,24 @@ Stop hook 解決的不是安全問題 -- 是紀律問題。
 
 我的 agent 管理著每個 active client 的 memory file -- status、action items、contact details。如果一個 session 處理了 client work 卻在退出時沒有更新 memory file，下一個 session 就會 cold start。這種情況以前每週都會發生一次。
 
-Stop hook 在 session 結束前注入一段 prompt：「本次 session 是否涉及 client work？若是，檢查 memory file 是否已更新。若否，不要退出 -- 立即更新。」
+Stop hook 在 session 結束前注入一段 prompt：
+
+```json
+{
+  "Stop": [
+    {
+      "hooks": [
+        {
+          "type": "prompt",
+          "prompt": "Before ending this session, check: Did this conversation involve any client work? If YES, verify that the relevant Memory files were updated. If they were NOT updated, do NOT end the session yet -- update them now."
+        }
+      ]
+    }
+  ]
+}
+```
+
+這是 prompt-type 的 hook，不是 HTTP hook。它會在 shutdown 前將這段 prompt 注入 agent context，agent 必須評估是否需要 memory write-back，然後才決定更新或確認沒有變更。
 
 Agent 無法跳過這個步驟。Hook 每次都會觸發。部署之後，我再沒有遺失過 session context。
 

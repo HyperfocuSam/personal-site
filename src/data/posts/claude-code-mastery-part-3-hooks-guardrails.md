@@ -17,7 +17,7 @@ Here is the uncomfortable truth about autonomous AI agents. They are useful prec
 
 If your agent can send emails, modify files, post messages, and query databases -- which mine does, daily -- then every tool call is a live round. There is no sandbox. There is no undo button on a sent email. The "move fast and break things" philosophy does not apply when your agent has access to your Gmail, your WhatsApp, and your client database.
 
-Most Claude Code users have zero guardrails. They rely on the model's judgment alone. That works fine for code generation. It does not work when the agent is managing client communications for a business that trains over 10,000 professionals across 13 countries.
+Most Claude Code users have zero guardrails. They rely on the model's judgment alone. That works fine for code generation. It does not work when the agent is managing client communications for a business that trains over 10,000 professionals across six countries.
 
 I needed a "trust but verify" model. Hooks gave me that.
 
@@ -166,4 +166,4 @@ Next in the series: [Part 4 -- Agent Teams](/blog/claude-code-mastery-part-4-age
 
 ---
 
-*I train companies across 13 countries on AI adoption that actually sticks. If you are building with Claude Code and want to compare notes, connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*
+*I train companies across six countries on AI adoption that actually sticks. If you are building with Claude Code and want to compare notes, connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*

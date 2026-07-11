@@ -380,7 +380,8 @@ const CorporateTraining = () => (
             training checked a box. It didn&rsquo;t change behavior.
           </p>
           <p>
-            After 180+ workshops, the pattern is clear: one-off
+            After training 10,000+ professionals across 70+
+            organizations, the pattern is clear: one-off
             sessions produce awareness, not adoption. People forget
             70% of new information within 24 hours. The fix
             isn&rsquo;t better content &mdash; it&rsquo;s a
@@ -582,9 +583,11 @@ const CorporateTraining = () => (
           </p>
           <ul className="corporate-funding-list">
             <li>
-              <strong>BUD Fund</strong> &mdash; Up to HK$150,000 per
-              company for technology adoption, including AI training
-              and implementation projects.
+              <strong>BUD Fund</strong> &mdash; Up to HK$7 million
+              cumulative per company, with fast-track Easy BUD
+              applications capped at HK$150,000 each, for technology
+              adoption including AI training and implementation
+              projects.
             </li>
             <li>
               <strong>Upskill Hong Kong (ERB)</strong> &mdash; The

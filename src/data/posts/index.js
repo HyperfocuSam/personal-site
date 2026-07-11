@@ -55,7 +55,7 @@ const posts = [
   },
   {
     slug: 'three-gemini-tools-collapsed-into-one-prompt-today-tc',
-    title: '今日,我三個 Gemini tab 收埋成一個 prompt',
+    title: '三個 Gemini 工具，今日合併成一個 prompt',
     date: '2026-05-20',
     excerpt: 'Google 今早在 I/O 2026 發布 Gemini Omni —— 將 Veo、Nano Banana 與 Genie 折疊進單一個 multimodal prompt surface。我日常使用的三個 Gemini call 收歸為一個。Day one read,API 還需數週才開放,但整合論述終於落地。',
     tags: ['gemini', '多模態-ai', 'ai-工具', '企業培訓', '即時觀察'],
@@ -308,7 +308,7 @@ const posts = [
   },
   {
     slug: 'claude-code-mastery-part-2-skills-memory-tc',
-    title: 'Claude Code 完全攻略：Skills 與 Memory — 教 AI 學會記憶',
+    title: 'Claude Code 完全攻略：Skills 與 Memory — 讓 AI 學會記憶',
     date: '2026-03-19',
     excerpt: 'AI 最大的問題是遺忘。我在 Claude Code 中建立了四層 memory 系統，加上 40 個 skills 採用 progressive disclosure。本篇詳述整個架構。',
     tags: ['claude-code', 'ai-memory', 'skills', 'productivity-system'],
@@ -345,7 +345,7 @@ const posts = [
     slug: 'ai-change-management-what-actually-works',
     title: 'AI Change Management: What Actually Works (A Field Report From 70+ Organizations)',
     date: '2026-03-23',
-    excerpt: 'Most companies approach AI adoption like a software rollout. After training 3,000+ professionals across 70+ organizations, here is what actually drives lasting behavior change.',
+    excerpt: 'Most companies approach AI adoption like a software rollout. After training 10,000+ professionals across 70+ organizations, here is what actually drives lasting behavior change.',
     tags: ['ai-adoption', 'change-management', 'enterprise', 'methodology'],
     type: 'methodology',
     image: '/images/blog/ai-change-management-cover.webp',
@@ -418,7 +418,7 @@ const posts = [
     slug: 'why-ai-training-doesnt-stick',
     title: 'Why AI Training Doesn\'t Stick (And What Actually Works)',
     date: '2026-03-15',
-    excerpt: 'Most corporate AI training produces zero lasting behavior change. After 180+ workshops and 10,000+ professionals trained, here\'s what actually makes AI adoption stick.',
+    excerpt: 'Most corporate AI training produces zero lasting behavior change. After training 10,000+ professionals across 70+ organizations, here\'s what actually makes AI adoption stick.',
     tags: ['ai-adoption', 'enterprise', 'methodology', 'commentary'],
     type: 'insight',
     image: '/images/blog/why-ai-training-doesnt-stick-cover.webp',
@@ -447,7 +447,7 @@ const posts = [
   },
   {
     slug: 'zh-ai-prompts-beat-procrastination',
-    title: '5 條真係有用既 AI Prompt 打低拖延症（我每日用緊）',
+    title: '5 條真正有用的 AI Prompt 對付拖延症（我每日在用）',
     date: '2026-03-14',
     excerpt: '5 條 viral AI prompt 打低拖延症——點解每條有效、點樣用得更好、加埋 ADHD 實戰 insight。',
     tags: ['ai-adoption', 'productivity', 'personal-reflection', 'tools'],
@@ -691,7 +691,7 @@ const posts = [
   },
   {
     slug: 'zh-3-ai-tools-save-focus',
-    title: '三個拯救專注力嘅 AI 工具：我喺會八十嘅分享',
+    title: '三個拯救專注力的 AI 工具：我在會八十的分享',
     date: '2025-08-10',
     excerpt: '三個真正幫到手嘅 AI 工具：資訊分類、會議筆記、結構化思考。基於我喺會八十第二次做嘉賓嘅分享。',
     tags: ['ai-adoption', 'tools', 'productivity', 'media-appearance'],
@@ -724,7 +724,7 @@ const posts = [
   },
   {
     slug: 'zh-why-pay-for-ai-tools',
-    title: '點解免費AI唔夠用：我喺會八十分享嘅課金實戰經驗',
+    title: '為何免費 AI 不夠用：我在會八十分享的付費實戰經驗',
     date: '2025-06-15',
     excerpt: '在會八十直播的投票中，76% 觀眾沒有付費使用 AI 工具。大部分付了費的人也沒有使用他們付費解鎖的功能。真正充分利用 AI 的人少之又少。',
     tags: ['ai-adoption', 'commentary', 'tools', 'media-appearance'],

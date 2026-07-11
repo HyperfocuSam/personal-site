@@ -593,8 +593,9 @@ const ZhCorporateTraining = () => (
           </p>
           <ul style={{ marginTop: '1rem', lineHeight: '2' }}>
             <li>
-              <strong>BUD 專項基金</strong> &mdash; 每間公司最高
-              15 萬港元用於科技採用，包括 AI 培訓及實施項目。
+              <strong>BUD 專項基金</strong> &mdash; 每間企業累計資助上限
+              700 萬港元，「易 BUD」每宗申請最高 15 萬港元，
+              可用於科技採用，包括 AI 培訓及實施項目。
             </li>
             <li>
               <strong>「學以致用」計劃 (ERB)</strong> &mdash;
@@ -629,7 +630,7 @@ const ZhCorporateTraining = () => (
             之後就回到舊的做法。培訓只是流於形式，卻沒有改變行為。
           </p>
           <p>
-            完成 180+ 場工作坊後，規律非常清楚：
+            為 70+ 機構培訓超過10,000名專業人士後，規律非常清楚：
             一次性培訓只能產生認知，不是採用。
             人在 24 小時內會忘記 70% 的新資訊。
             解決方法不是更好的內容 — 而是不同的結構。

@@ -1,12 +1,18 @@
 # Claude Code 完全攻略：Skills 與 Memory — 讓 AI 學會記憶
 
-你用過多少個 AI 工具？每一個都是如此：花半小時解釋自己在做什麼、偏好什麼、客戶叫什麼名字。然後關閉視窗。隔天回來，它什麼都不記得。
+你用過多少個 AI 工具？每一個都是如此：花 45 分鐘解釋自己在做什麼、偏好什麼、客戶叫什麼名字。然後關閉視窗。隔天回來，它什麼都不記得。
 
 我稱之為「金魚問題」。這個問題是大多數人使用一週後便放棄 AI assistant 的最大原因。
 
 我整間公司都靠 [Claude Code](/blog/claude-code-mastery-part-1-getting-started-tc) 運作 — invoice、workshop 準備、blog 發布、二十多個 client 的 follow-up。若 Claude 每次開新 session 都什麼都不記得，我花在重新解釋 context 的時間比實際做事的時間更多。那就不是 productivity tool，而是一個昂貴的 autocomplete。
 
 因此我建立了一套 [memory system](/blog/claude-code-mastery-part-5-full-blueprint-tc)。四層架構，四十多個 skills，啟動僅需不到 5,000 tokens。以下逐一說明。
+
+## Part 1 回顧：CLAUDE.md 只是起點
+
+在[第一篇](/blog/claude-code-mastery-part-1-getting-started-tc)中，我介紹了 CLAUDE.md 如何充當 AI 的使用手冊 — 一個能在每次 session 重啟後依舊存在的設定檔。若你還未讀過，建議從那裡開始。
+
+但 CLAUDE.md 只是第零層。它告訴 Claude「它是誰」與「該遵守哪些規則」。它不會告訴 Claude 昨天發生了甚麼事、哪個客戶的 invoice 已逾期、或如何將一篇 blog 發布到你的特定網站。要做到這些，你需要 memory 與 skills。
 
 ## 四層 Memory 架構
 
@@ -24,15 +30,17 @@
 ## 2026-03-23 | Domain: Playmates US | Action: Drafted reply | Outcome: Sent for review | Next: Sam to reply all
 ```
 
-一行便能看出時間、所屬 domain、做了什麼、下一步是什麼。這個 file 每月 rotate 一次，保持在 15KB 以下。過大的話 Claude 會耗費 token 閱讀兩個月前的舊紀錄，不值得。
+一行便能看出時間、所屬 domain、做了什麼、下一步是什麼。這個 file 每月 rotate 一次，保持在 15KB 以下。舊 entry 會歸檔，不會刪除。過大的話 Claude 會耗費 token 閱讀兩個月前的舊紀錄，不值得。
 
 每次開新 session，Claude 自動讀取最後 10 條 entry。我無需說明任何事，它已知道上次做到哪裡。
 
 ### 第三層：Curated Memory
 
-21 個 file，每個 client 一個：`memory_adaptig_garden.md`、`memory_playmates_toys_hk.md`、`memory_hkct.md`。每個 file 頂部都有 status header — engagement 進展到哪裡、上一張 invoice、outstanding deliverables、key contacts。
+21 個 file，例如 `memory_adaptig_garden.md`、`memory_playmates_toys_hk.md`、`memory_dorich.md`。每個 file 頂部都有 status header — engagement 進展到哪裡、上一張 invoice、outstanding deliverables、key contacts。
 
 重點在此：當我在對話中提及某個 client 名稱，Claude 會自動 load 該 client 的 memory file。無需指示，它自行執行。因為 CLAUDE.md 裡已寫明這條 rule。
+
+這就是 Agno 模式 — 提及即擷取。無需手動載入 context，不用說「讓我提醒一下 Garden 的事情。」當我說「Garden」，Claude 已知道 Garden 屬於 Batch 2、Top Management 工作坊已確認、invoice GARDEN-2026-003 金額 HKD 63K 已發送。
 
 此外還有一個 `memory_people.md` — 跨 client 的聯絡人目錄，共 41 人。當我說「跟 Joanne 跟進一下」，Claude 會查到 Joanne Chan 是 HKCT 的 contact，然後自動 load HKCT 的 memory file。兩步。零 friction。
 
@@ -94,8 +102,9 @@ description: Create and publish blog posts to hyperfocusam.com
 - **`magic-moment`** — 為 corporate clients 建立 interactive HTML demo
 - **`deck-design`** — 用 AI image generation 配合 brand reference 產出 presentation slides
 - **`workshop-translation`** — 跨語言 localize workshop materials
-- **`video-recolor`** — AI recolor 現有 video 中的產品顏色
+- **`task-notification`** — 經 WhatsApp 發送完成通知，WhatsApp 失效時以原生 macOS 通知作 fallback
 - **`memory-management`** — meta-skill，維護 memory system 本身
+- **`video-recolor`** — AI recolor 現有 video 中的產品顏色
 
 每個都遵循同一 pattern：metadata 啟動時載入，instructions on-demand，resources 需要時才載入。
 

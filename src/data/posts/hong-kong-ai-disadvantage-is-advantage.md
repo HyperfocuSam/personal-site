@@ -47,4 +47,4 @@ That's not a disadvantage. That's a niche nobody else occupies.
 
 ---
 
-*I train companies on AI in three languages across 13 countries. The Hong Kong angle is [what makes this different](/about).*
+*I train companies on AI in three languages across six countries. The Hong Kong angle is [what makes this different](/about).*

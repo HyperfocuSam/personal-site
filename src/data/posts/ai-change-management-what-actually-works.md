@@ -3,7 +3,7 @@
 
 Most companies approach AI adoption like a software rollout. They buy the licenses, run a half-day workshop, send a follow-up email with "resources," and call it done. Three months later, usage is at 4%. The licenses renew anyway.
 
-I've trained over 3,000 professionals across 70+ organizations. The pattern is consistent enough that I can almost predict, from the first scoping call, which companies will see lasting behavior change and which ones will have a very expensive Copilot subscription gathering dust.
+I've trained over 10,000 professionals across 70+ organizations. The pattern is consistent enough that I can almost predict, from the first scoping call, which companies will see lasting behavior change and which ones will have a very expensive Copilot subscription gathering dust.
 
 The difference isn't the tool. It's never the tool.
 
