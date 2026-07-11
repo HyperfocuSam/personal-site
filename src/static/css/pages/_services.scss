@@ -39,19 +39,71 @@
     }
   }
 
+  // Mobile density: pull desktop-scale section padding down hard.
+  .section-padding {
+    padding-bottom: 2.5rem;
+    padding-top: 2.5rem;
+
+    @include breakpoint(small) {
+      padding-bottom: 0.95rem;
+      padding-top: 0.95rem;
+    }
+  }
+
+  .page-hero {
+    @include breakpoint(small) {
+      padding-bottom: 1.75rem;
+      padding-top: 2.25rem;
+    }
+  }
+
+  @include breakpoint(small) {
+    p {
+      line-height: 1.5;
+      margin-bottom: 0.65rem;
+    }
+
+    .services-photo-reveal {
+      margin: 0.35rem 0;
+    }
+  }
+
   .service-group {
     margin: 0;
     padding-top: 0;
 
     &__header {
       border-bottom: 1px solid _palette(border-subtle);
-      margin-bottom: 1.5rem;
-      padding-bottom: 1.5rem;
+      margin-bottom: 1.15rem;
+      padding-bottom: 1.15rem;
 
       h3 {
         font-family: _font(family-heading);
-        font-size: clamp(2rem, 8vw, 3rem);
+        font-size: clamp(1.65rem, 7vw, 2.6rem);
         letter-spacing: _font(kerning-heading);
+        line-height: 1.15;
+        margin-bottom: 0.35rem;
+      }
+
+      > p {
+        line-height: 1.5;
+        margin-bottom: 0.45rem;
+      }
+
+      @include breakpoint(small) {
+        margin-bottom: 0.7rem;
+        padding-bottom: 0.7rem;
+
+        h3 {
+          font-size: clamp(1.35rem, 6.5vw, 1.85rem);
+          margin-bottom: 0.2rem;
+        }
+
+        > p {
+          font-size: 0.92em;
+          line-height: 1.4;
+          margin-bottom: 0.3rem;
+        }
       }
     }
 
@@ -60,24 +112,132 @@
       font-family: _font(family-fixed);
       font-size: 0.72rem;
       letter-spacing: _font(kerning-meta);
+      line-height: 1.35;
       text-transform: uppercase;
+
+      @include breakpoint(small) {
+        font-size: 0.66rem;
+        line-height: 1.3;
+      }
     }
 
+    // Compact testimonial row (was padded fn-card)
     &__testimonial {
-      margin: 1.5rem 0 0;
-      padding: 1.25rem;
+      margin: 0.85rem 0 0;
+      padding: 0.65rem 0.7rem 0.65rem 0.85rem;
+
+      @include breakpoint(small) {
+        margin-top: 0.5rem;
+        padding: 0.4rem 0.45rem 0.4rem 0.6rem;
+      }
+    }
+
+    &__testimonial-quote {
+      color: _palette(ink);
+      font-family: _font(family-heading);
+      font-size: 0.95rem;
+      font-style: normal;
+      line-height: 1.4;
+      margin: 0 0 0.35rem;
+
+      @include breakpoint(small) {
+        font-size: 0.88rem;
+        line-height: 1.35;
+        margin-bottom: 0.2rem;
+      }
+    }
+
+    &__testimonial-attr {
+      color: _palette(text-secondary);
+      font-family: _font(family-fixed);
+      font-size: 0.7rem;
+      letter-spacing: _font(kerning-meta);
+      line-height: 1.3;
+      text-transform: uppercase;
     }
 
     &__item {
       border-bottom: 1px solid _palette(border-subtle);
       margin: 0;
-      padding-bottom: 1.5rem;
-      padding-top: 1.5rem;
+      padding-bottom: 1.15rem;
+      padding-top: 1.15rem;
 
       h4 {
         font-family: _font(family-heading);
-        font-size: clamp(1.45rem, 6vw, 2rem);
+        font-size: clamp(1.25rem, 5.5vw, 1.75rem);
         letter-spacing: -0.025em;
+        line-height: 1.2;
+        margin-bottom: 0.3rem;
+      }
+
+      @include breakpoint(small) {
+        padding-bottom: 0.7rem;
+        padding-left: 0.55rem;
+        padding-right: 0.45rem;
+        padding-top: 0.7rem;
+
+        h4 {
+          font-size: clamp(1.1rem, 5vw, 1.35rem);
+          margin-bottom: 0.15rem;
+        }
+      }
+    }
+
+    // Merged provider + subtitle on one meta line
+    &__item-meta {
+      color: _palette(text-secondary);
+      font-family: _font(family-fixed);
+      font-size: 0.72rem;
+      letter-spacing: _font(kerning-meta);
+      line-height: 1.35;
+      margin-bottom: 0.55rem;
+      text-transform: uppercase;
+
+      @include breakpoint(small) {
+        font-size: 0.66rem;
+        line-height: 1.3;
+        margin-bottom: 0.35rem;
+      }
+    }
+
+    &__item-body {
+      p,
+      li {
+        line-height: 1.55;
+      }
+
+      p {
+        margin-bottom: 0.55rem;
+      }
+
+      ul {
+        margin: 0.35rem 0 0.55rem;
+        padding-left: 1.1rem;
+
+        li {
+          margin-bottom: 0.2rem;
+        }
+      }
+
+      @include breakpoint(small) {
+        p,
+        li {
+          font-size: 0.92em;
+          line-height: 1.4;
+        }
+
+        p {
+          margin-bottom: 0.35rem;
+        }
+
+        ul {
+          margin: 0.2rem 0 0.35rem;
+          padding-left: 0.95rem;
+
+          li {
+            margin-bottom: 0.1rem;
+          }
+        }
       }
     }
 
@@ -87,16 +247,32 @@
     }
 
     &__tiers {
-      gap: 0.75rem;
+      gap: 0.55rem;
       grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin: 0.85rem 0;
       width: 100%;
+
+      > p {
+        margin-bottom: 0.15rem;
+      }
+
+      @include breakpoint(small) {
+        gap: 0.35rem;
+        margin: 0.5rem 0;
+
+        > p {
+          font-size: 0.9em;
+          margin-bottom: 0.05rem;
+        }
+      }
     }
 
     &__tier {
-      background: _palette(surface-raised);
-      border: 1px solid _palette(border-subtle);
+      background: transparent;
+      border: 0;
+      border-left: 2px solid _palette(ink);
       color: _palette(text-body);
-      padding: 1.15rem;
+      padding: 0.65rem 0.55rem 0.65rem 0.75rem;
 
       h5,
       p,
@@ -104,10 +280,28 @@
         color: _palette(text-body);
       }
 
+      p {
+        line-height: 1.45;
+        margin-bottom: 0;
+      }
+
       .button {
         background: _palette(ink);
         border: 1px solid _palette(ink);
         color: _palette(surface-base);
+      }
+
+      @include breakpoint(small) {
+        padding: 0.4rem 0.4rem 0.4rem 0.55rem;
+
+        h5 {
+          font-size: 0.95rem;
+        }
+
+        p {
+          font-size: 0.88em;
+          line-height: 1.35;
+        }
       }
     }
 
@@ -115,23 +309,41 @@
       align-self: flex-start;
       background: transparent;
       border-radius: map-get($radius, sm);
-      margin-bottom: 0.9rem;
+      margin-bottom: 0.45rem;
+
+      @include breakpoint(small) {
+        font-size: 0.64rem;
+        margin-bottom: 0.25rem;
+        padding: 0.15rem 0.3rem;
+      }
     }
 
     &__tier-header {
       align-items: flex-start;
       display: flex;
       flex-direction: column;
-      gap: 0.4rem;
-      margin-bottom: 0.75rem;
+      gap: 0.3rem;
+      margin-bottom: 0.4rem;
 
       h5 {
         margin: 0;
+      }
+
+      @include breakpoint(small) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.3rem 0.5rem;
+        margin-bottom: 0.25rem;
       }
     }
 
     &__tier-format {
       align-self: flex-start;
+
+      @include breakpoint(small) {
+        font-size: 0.64rem;
+        padding: 0.15rem 0.3rem;
+      }
     }
 
     &__quiet-link {
@@ -142,17 +354,26 @@
       font-size: 0.72rem;
       font-weight: _font(weight-bold);
       letter-spacing: _font(kerning-meta);
-      margin-top: 0.75rem;
+      margin-top: 0.5rem;
       text-transform: uppercase;
 
       &:hover {
         border-color: _palette(ink);
         color: _palette(ink);
       }
+
+      @include breakpoint(small) {
+        font-size: 0.66rem;
+        margin-top: 0.3rem;
+      }
     }
 
     &__item-cta {
-      margin-top: 0.75rem;
+      margin-top: 0.5rem;
+
+      @include breakpoint(small) {
+        margin-top: 0.3rem;
+      }
     }
 
     &__primary-cta .button,
@@ -163,12 +384,62 @@
     }
   }
 
+  // Space between stacked groups inside the merged sunken band
+  // (ScrollReveal renders as .sr)
+  .content-standard > .sr + .sr {
+    border-top: 1px solid _palette(border-subtle);
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+
+    @include breakpoint(small) {
+      margin-top: 0.85rem;
+      padding-top: 0.75rem;
+    }
+  }
+
+  .related-case-studies {
+    margin: 0.75rem 0;
+
+    h5 {
+      font-size: 0.85rem;
+      margin-bottom: 0.35rem;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.1rem;
+    }
+
+    li {
+      line-height: 1.4;
+      margin: 0.2rem 0;
+    }
+
+    @include breakpoint(small) {
+      margin: 0.45rem 0;
+
+      h5 {
+        font-size: 0.8rem;
+        margin-bottom: 0.2rem;
+      }
+
+      li {
+        font-size: 0.88em;
+        margin: 0.12rem 0;
+      }
+    }
+  }
+
   .services-hero-cta {
     margin: 1.25rem 0 0;
+
+    @include breakpoint(small) {
+      margin-top: 0.85rem;
+    }
   }
 
   .services-footer-link {
-    margin: 1.5rem 0 0.5rem;
+    margin: 1.15rem 0 0.4rem;
     text-align: center;
 
     a {
@@ -179,6 +450,10 @@
       &:hover {
         border-color: _palette(ink);
       }
+    }
+
+    @include breakpoint(small) {
+      margin-top: 0.75rem;
     }
   }
 
@@ -191,21 +466,17 @@
 
   @include breakpoint(xsmall) {
     .services-anchor-pills {
-      gap: 0.45rem;
+      gap: 0.4rem;
+      margin-top: 0.85rem;
 
       .anchor-pill {
         flex: 1 1 auto;
+        font-size: 0.64rem;
         min-width: 0;
         overflow-wrap: anywhere;
-        padding-left: 0.7rem;
-        padding-right: 0.7rem;
+        padding: 0.4em 0.55em;
         text-align: center;
       }
-    }
-
-    .service-group__testimonial,
-    .service-group__tier {
-      padding: 1rem;
     }
   }
 }

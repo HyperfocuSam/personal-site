@@ -94,10 +94,12 @@ const ServiceGroup = ({
       )}
       {testimonial && (
         /* Quote and attribution are single expressions: adjacent text nodes
-           break react-snap hydration (React #418). */
-        <blockquote className="service-group__testimonial fn-card">
-          {`“${testimonial.quote}”`}
-          <footer>
+           break react-snap hydration (React #418). Compact row on mobile. */
+        <blockquote className="service-group__testimonial fn-entry">
+          <p className="service-group__testimonial-quote">
+            {`“${testimonial.quote}”`}
+          </p>
+          <footer className="service-group__testimonial-attr">
             {`${testimonial.name} | ${testimonial.title}${testimonial.company ? `, ${testimonial.company}` : ''}`}
           </footer>
         </blockquote>
@@ -108,19 +110,18 @@ const ServiceGroup = ({
       {services.map((service) => (
         <article key={service.id} className="service-group__item fn-entry">
           <h4>{service.title}</h4>
-          {service.provider && (
-            <p className="service-group__item-subtitle fn-receipt">
-              <span className="fn-receipt__label">Delivered via</span>
-              <span className="fn-receipt__leader" aria-hidden="true" />
-              <strong className="fn-receipt__number">{service.provider}</strong>
+          {(service.provider || service.subtitle) && (
+            <p className="service-group__item-meta">
+              {service.provider
+                ? `Delivered via ${service.provider}${service.subtitle ? ` · ${service.subtitle}` : ''}`
+                : service.subtitle}
             </p>
           )}
-          {service.subtitle && (
-            <p className="service-group__item-subtitle">
-              <em>{service.subtitle}</em>
-            </p>
+          {service.description && (
+            <div className="service-group__item-body">
+              <Markdown>{service.description}</Markdown>
+            </div>
           )}
-          {service.description && <Markdown>{service.description}</Markdown>}
 
           {service.tiers && service.tiers.length > 0 && (
             <div className="service-group__tiers">
@@ -128,7 +129,7 @@ const ServiceGroup = ({
               {service.tiers.map((tier) => (
                 <div
                   key={tier.id}
-                  className={`service-group__tier service-group__tier--${tier.level || 'standard'} fn-card`}
+                  className={`service-group__tier service-group__tier--${tier.level || 'standard'} fn-entry`}
                 >
                   {tier.badge && (
                     <span className="service-group__tier-badge fn-stamp fn-stamp--verified">

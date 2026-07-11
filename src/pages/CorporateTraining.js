@@ -429,27 +429,27 @@ const CorporateTraining = () => (
             Every format is customized to your industry, team size,
             and goals. Delivered in English or Cantonese.
           </p>
-          <div className="card-grid cols-2 corporate-dense-grid">
+          <div className="corporate-dense-list">
             {workshops.map((w) => (
-              <div key={w.title} className="card fn-card corporate-dense-card">
+              <article key={w.title} className="fn-entry corporate-dense-entry corporate-workshop-entry">
                 <h3>{w.title}</h3>
                 <p className="corporate-dense-meta">
                   {/* Single expression: adjacent text nodes break react-snap hydration (#418) */}
                   {`${w.duration} · ${w.audience}`}
                 </p>
                 <p>{w.description}</p>
-                <ul>
+                <ul className="corporate-outcome-list">
                   {w.outcomes.map((o) => (
                     <li key={o}>{o}</li>
                   ))}
                 </ul>
-              </div>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Industry experience */}
+      {/* Proof: industries + case studies (same thesis — denser single section) */}
       <section className="section-base section-padding">
         <div className="content-standard">
           <h2>Industry Experience</h2>
@@ -474,12 +474,32 @@ const CorporateTraining = () => (
           <p className="corporate-inline-link">
             <Link to="/clients">View all clients →</Link>
           </p>
+
+          <h2 className="corporate-section-subhead">Featured Case Studies</h2>
+          <p>
+            Real engagements, real numbers, real lessons. Each case
+            study is a detailed writeup from a specific client
+            engagement.
+          </p>
+          <div className="card-grid cols-2 corporate-dense-grid">
+            {caseStudies.map((cs) => (
+              <Link
+                key={cs.title}
+                to={cs.link}
+                className="fn-entry corporate-dense-entry corporate-case-card"
+              >
+                <h3>{cs.title}</h3>
+                <p className="corporate-dense-meta">{cs.metric}</p>
+                <p>{cs.insight}</p>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* How it works */}
-      <section className="section-warm section-padding">
-        <div className="content-narrow">
+      {/* Delivery process + methodologies + nested proof quote */}
+      <section className="section-sunken section-padding">
+        <div className="content-standard">
           <h2>How It Works</h2>
           <ol className="corporate-steps">
             <li>
@@ -506,13 +526,8 @@ const CorporateTraining = () => (
                 + ' project coaching.'}
             </li>
           </ol>
-        </div>
-      </section>
 
-      {/* Named methodologies + proof (testimonial nested for density) */}
-      <section className="section-sunken section-padding">
-        <div className="content-standard">
-          <h2>Signature Methodologies</h2>
+          <h2 className="corporate-section-subhead">Signature Methodologies</h2>
           <p>
             Frameworks developed through real engagements, not
             textbooks. Each one solves a specific adoption problem.
@@ -526,14 +541,13 @@ const CorporateTraining = () => (
               </div>
             ))}
           </div>
-          <blockquote className="pull-quote corporate-inline-quote">
+          {/* Compact quote row — copy unchanged; single-expression text for hydration */}
+          <blockquote className="fn-entry corporate-compact-quote">
             <p>
-              &ldquo;Finally, AI training that&rsquo;s actually
-              useful!&rdquo;
+              &ldquo;Finally, AI training that&rsquo;s actually useful!&rdquo;
             </p>
             <footer>
               — Banking Professional, Bank of China (Hong Kong)
-              <br />
               <span className="fn-stamp fn-stamp--verified">
                 9.2/10 satisfaction across 1,530 participants
               </span>
@@ -542,31 +556,6 @@ const CorporateTraining = () => (
           <p className="corporate-inline-link">
             <Link to="/testimonials">Read more testimonials →</Link>
           </p>
-        </div>
-      </section>
-
-      {/* Featured case studies */}
-      <section className="section-base section-padding">
-        <div className="content-standard">
-          <h2>Featured Case Studies</h2>
-          <p>
-            Real engagements, real numbers, real lessons. Each case
-            study is a detailed writeup from a specific client
-            engagement.
-          </p>
-          <div className="card-grid cols-2 corporate-dense-grid">
-            {caseStudies.map((cs) => (
-              <Link
-                key={cs.title}
-                to={cs.link}
-                className="card fn-card corporate-dense-card corporate-case-card"
-              >
-                <h3>{cs.title}</h3>
-                <p className="corporate-dense-meta">{cs.metric}</p>
-                <p>{cs.insight}</p>
-              </Link>
-            ))}
-          </div>
         </div>
       </section>
 

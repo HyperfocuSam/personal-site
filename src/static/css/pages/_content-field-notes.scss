@@ -406,12 +406,17 @@
     padding-bottom: 3.5rem;
 
     @include breakpoint(small) {
-      padding-bottom: 3.25rem;
+      padding-bottom: 1.75rem;
+      padding-top: 2.25rem;
     }
   }
 
   .corporate-hero-cta {
     margin: 1.25rem 0 0;
+
+    @include breakpoint(small) {
+      margin-top: 0.85rem;
+    }
   }
 
   // Kill the negative-margin overlap that was clipping the hero subtitle.
@@ -419,9 +424,29 @@
     margin-top: 0;
 
     @include breakpoint(small) {
-      margin-left: 1rem;
-      margin-right: 1rem;
+      margin-left: 0.75rem;
+      margin-right: 0.75rem;
       margin-top: 0;
+      padding: 0.75rem;
+    }
+  }
+
+  .client-logo-bar {
+    @include breakpoint(small) {
+      padding: 1rem 0.75rem;
+
+      .client-logo-bar__label {
+        margin-bottom: 0.65rem;
+      }
+
+      .client-logo-bar__list {
+        gap: 0.65rem 1.1rem;
+      }
+
+      .client-logo-bar__logo {
+        height: 22px;
+        max-width: 96px;
+      }
     }
   }
 
@@ -446,22 +471,83 @@
 
   // Density: tighter sections and cards on a very long landing page.
   .section-padding {
-    padding-bottom: 3rem;
-    padding-top: 3rem;
+    padding-bottom: 2.5rem;
+    padding-top: 2.5rem;
 
     @include breakpoint(small) {
-      padding-bottom: 2.25rem;
-      padding-top: 2.25rem;
+      padding-bottom: 0.95rem;
+      padding-top: 0.95rem;
+    }
+  }
+
+  // Tighter body rhythm on mobile — presentation only.
+  @include breakpoint(small) {
+    p {
+      line-height: 1.45;
+      margin-bottom: 0.55rem;
+    }
+
+    h2 {
+      font-size: clamp(1.3rem, 5.8vw, 1.75rem);
+      line-height: 1.18;
+      margin-bottom: 0.4rem;
+      margin-top: 0;
+    }
+
+    .content-narrow > p,
+    .content-standard > p {
+      margin-bottom: 0.5rem;
+    }
+
+    .photo-band {
+      margin: 0.25rem 0;
+
+      img {
+        max-height: 12.5rem;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+
+    // Stats strip: less vertical air under the bar
+    .section-base:first-of-type {
+      padding-bottom: 0.35rem;
+      padding-top: 0.35rem;
+    }
+  }
+
+  .corporate-section-subhead {
+    margin-top: 1.5rem;
+
+    @include breakpoint(small) {
+      margin-top: 1.1rem;
     }
   }
 
   .corporate-dense-grid {
-    gap: 0.85rem;
-    margin-top: 1.25rem;
+    gap: 0.65rem;
+    margin-top: 0.85rem;
+
+    @include breakpoint(small) {
+      gap: 0.4rem;
+      margin-top: 0.55rem;
+    }
+  }
+
+  .corporate-dense-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.85rem;
+
+    @include breakpoint(small) {
+      gap: 0.3rem;
+      margin-top: 0.55rem;
+    }
   }
 
   .corporate-dense-card {
-    padding: 1rem;
+    padding: 0.85rem;
 
     h3 {
       font-size: 1.05rem;
@@ -477,31 +563,108 @@
         margin-bottom: 0.3rem;
       }
     }
+
+    @include breakpoint(small) {
+      padding: 0.6rem 0.7rem;
+
+      h3 {
+        font-size: 0.98rem;
+        margin-bottom: 0.12rem;
+      }
+
+      p {
+        font-size: 0.88em;
+        line-height: 1.4;
+        margin-bottom: 0.3rem;
+      }
+
+      ul li {
+        font-size: 0.84em;
+        line-height: 1.35;
+        margin-bottom: 0.12rem;
+      }
+    }
   }
 
   .corporate-dense-entry {
-    padding: 0.85rem 0.75rem 0.85rem 0.9rem;
+    padding: 0.7rem 0.65rem 0.7rem 0.8rem;
 
     h3 {
       font-size: 1rem;
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.2rem;
     }
 
     p {
       font-size: 0.9em;
-      line-height: 1.55;
-      margin-bottom: 0.4rem;
+      line-height: 1.5;
+      margin-bottom: 0.3rem;
     }
 
     a {
       font-size: 0.85em;
     }
+
+    @include breakpoint(small) {
+      padding: 0.45rem 0.5rem 0.45rem 0.65rem;
+
+      h3 {
+        font-size: 0.95rem;
+        line-height: 1.25;
+        margin-bottom: 0.1rem;
+      }
+
+      p {
+        font-size: 0.86em;
+        line-height: 1.4;
+        margin-bottom: 0.2rem;
+      }
+
+      a {
+        font-size: 0.8em;
+        line-height: 1.3;
+      }
+    }
+  }
+
+  .corporate-workshop-entry {
+    .corporate-outcome-list {
+      list-style: none;
+      margin: 0.35rem 0 0;
+      padding: 0;
+
+      li {
+        border-top: 1px dotted _palette(border-subtle);
+        font-size: 0.88em;
+        line-height: 1.4;
+        margin: 0;
+        padding: 0.28rem 0;
+      }
+
+      @include breakpoint(small) {
+        margin-top: 0.2rem;
+
+        li {
+          font-size: 0.82em;
+          line-height: 1.35;
+          padding: 0.18rem 0;
+        }
+      }
+    }
   }
 
   .corporate-dense-meta {
-    font-size: 0.85em;
-    margin-bottom: 0.5rem;
+    font-family: _font(family-fixed);
+    font-size: 0.78em;
+    letter-spacing: _font(kerning-meta);
+    margin-bottom: 0.35rem;
     opacity: 0.75;
+    text-transform: uppercase;
+
+    @include breakpoint(small) {
+      font-size: 0.7em;
+      line-height: 1.3;
+      margin-bottom: 0.18rem;
+    }
   }
 
   .corporate-case-card {
@@ -511,49 +674,129 @@
   }
 
   .corporate-steps {
-    line-height: 1.65;
-    margin: 1rem 0 0;
-    padding-left: 1.2rem;
+    line-height: 1.55;
+    margin: 0.65rem 0 0;
+    padding-left: 1.15rem;
 
     li {
-      margin-bottom: 0.85rem;
+      margin-bottom: 0.55rem;
+    }
+
+    @include breakpoint(small) {
+      line-height: 1.4;
+      margin-top: 0.4rem;
+      padding-left: 1rem;
+
+      li {
+        font-size: 0.9em;
+        margin-bottom: 0.35rem;
+      }
     }
   }
 
-  .corporate-inline-quote {
-    margin: 1.5rem auto 0;
-    max-width: 34rem;
-    text-align: center;
+  .corporate-compact-quote {
+    margin: 1rem 0 0;
+    padding: 0.65rem 0.7rem 0.65rem 0.85rem;
+
+    p {
+      font-family: _font(family-heading);
+      font-size: 0.98rem;
+      line-height: 1.35;
+      margin: 0 0 0.4rem;
+    }
+
+    footer {
+      align-items: flex-start;
+      color: _palette(text-secondary);
+      display: flex;
+      flex-direction: column;
+      font-family: _font(family-fixed);
+      font-size: 0.72rem;
+      gap: 0.35rem;
+      letter-spacing: _font(kerning-meta);
+      text-transform: uppercase;
+    }
+
+    @include breakpoint(small) {
+      margin-top: 0.65rem;
+      padding: 0.45rem 0.5rem 0.45rem 0.65rem;
+
+      p {
+        font-size: 0.9rem;
+        line-height: 1.3;
+        margin-bottom: 0.25rem;
+      }
+
+      footer {
+        font-size: 0.68rem;
+        gap: 0.25rem;
+      }
+    }
   }
 
   .corporate-inline-link {
-    margin: 1rem 0 0;
+    margin: 0.75rem 0 0;
     text-align: center;
 
     a {
       font-size: 0.9em;
     }
+
+    @include breakpoint(small) {
+      margin-top: 0.5rem;
+    }
   }
 
   .corporate-funding-list {
-    line-height: 1.75;
-    margin-top: 0.75rem;
+    line-height: 1.55;
+    margin-top: 0.55rem;
+
+    li {
+      margin-bottom: 0.45rem;
+    }
+
+    @include breakpoint(small) {
+      line-height: 1.4;
+      margin-top: 0.35rem;
+
+      li {
+        font-size: 0.9em;
+        margin-bottom: 0.3rem;
+      }
+    }
   }
 
   .corporate-faq-entry {
-    margin-bottom: 1rem;
-    padding-bottom: 0.85rem;
-    padding-top: 0.85rem;
+    margin-bottom: 0.35rem;
+    padding-bottom: 0.65rem;
+    padding-top: 0.65rem;
 
     h3 {
-      font-size: 1rem;
-      margin-bottom: 0.35rem;
+      font-size: 0.98rem;
+      line-height: 1.3;
+      margin-bottom: 0.25rem;
     }
 
     p {
       font-size: 0.9em;
-      line-height: 1.65;
+      line-height: 1.5;
       margin: 0;
+    }
+
+    @include breakpoint(small) {
+      margin-bottom: 0.15rem;
+      padding-bottom: 0.45rem;
+      padding-top: 0.45rem;
+
+      h3 {
+        font-size: 0.9rem;
+        margin-bottom: 0.15rem;
+      }
+
+      p {
+        font-size: 0.84em;
+        line-height: 1.4;
+      }
     }
   }
 
@@ -563,11 +806,17 @@
     .button {
       margin-top: 0.5rem;
     }
+
+    @include breakpoint(small) {
+      p {
+        margin-bottom: 0.5rem;
+      }
+    }
   }
 
   .corporate-closing-alt {
     font-size: 0.9em;
-    margin-top: 1rem;
+    margin-top: 0.75rem;
 
     a {
       border-bottom: 1px solid _palette(border-subtle);

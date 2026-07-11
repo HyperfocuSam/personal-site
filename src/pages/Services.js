@@ -20,7 +20,6 @@ const groups = [
     socialProof:
       'BOCHK, Chow Tai Fook, Garden, Playmates Toys, HSBC, CLP, YPO.',
     testimonial: testimonials[0],
-    band: 'section-base',
   },
   {
     id: 'one-on-one',
@@ -29,7 +28,6 @@ const groups = [
     subtitle: 'Personalized coaching for professionals building practical AI habits.',
     socialProof: '160+ professionals coached across finance, marketing, education, healthcare, and technology.',
     testimonial: testimonials[1],
-    band: 'section-sunken',
   },
   {
     id: 'train-the-trainer',
@@ -39,7 +37,6 @@ const groups = [
     socialProof:
       'Join a global network across North America, Latin America, Europe, and Asia-Pacific.',
     testimonial: testimonials[2],
-    band: 'section-base',
   },
 ];
 
@@ -120,23 +117,21 @@ const Services = () => {
           </div>
         </ScrollReveal>
 
-        {/* First service group — Organizations */}
-        {groups.slice(0, 1).map((group) => (
-          <section key={group.id} className={`${group.band} section-padding`}>
-            <div className="content-standard">
-              <ScrollReveal variant="fade-up-long">
-                <ServiceGroup
-                  id={group.id}
-                  title={group.title}
-                  subtitle={group.subtitle}
-                  services={services.filter((s) => s.category === group.category)}
-                  socialProof={group.socialProof}
-                  testimonial={group.testimonial}
-                />
-              </ScrollReveal>
-            </div>
-          </section>
-        ))}
+        {/* Organizations */}
+        <section className="section-base section-padding">
+          <div className="content-standard">
+            <ScrollReveal variant="fade-up-long">
+              <ServiceGroup
+                id={groups[0].id}
+                title={groups[0].title}
+                subtitle={groups[0].subtitle}
+                services={services.filter((s) => s.category === groups[0].category)}
+                socialProof={groups[0].socialProof}
+                testimonial={groups[0].testimonial}
+              />
+            </ScrollReveal>
+          </div>
+        </section>
 
         {/* Lead magnet — positioned after Organizations for maximum visibility */}
         <EmailCapture
@@ -148,11 +143,11 @@ const Services = () => {
           }}
         />
 
-        {/* Remaining service groups */}
-        {groups.slice(1).map((group) => (
-          <section key={group.id} className={`${group.band} section-padding`}>
-            <div className="content-standard">
-              <ScrollReveal variant="fade-up-long">
+        {/* Individuals + Trainers — single band for mobile density */}
+        <section className="section-sunken section-padding">
+          <div className="content-standard">
+            {groups.slice(1).map((group) => (
+              <ScrollReveal key={group.id} variant="fade-up-long">
                 <ServiceGroup
                   id={group.id}
                   title={group.title}
@@ -162,9 +157,9 @@ const Services = () => {
                   testimonial={group.testimonial}
                 />
               </ScrollReveal>
-            </div>
-          </section>
-        ))}
+            ))}
+          </div>
+        </section>
 
         <Helmet>
           <script type="application/ld+json">
