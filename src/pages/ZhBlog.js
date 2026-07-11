@@ -24,15 +24,15 @@ const zhPosts = posts.filter((p) => p.language === 'zh-Hant');
 const ZhBlog = () => (
   <Main
     title="網誌"
-    description="Sam Wong 嘅 AI 應用洞察、工作坊經驗同科技人性面嘅分享。AI培訓 香港、企業AI顧問、人工智能工具推薦。"
+    description="Sam Wong 的 AI 應用洞察、工作坊經驗與科技人性面的分享，涵蓋香港 AI 培訓、企業 AI 顧問與人工智能工具推薦。"
     canonicalUrl={`${SITE_URL}/zh/blog`}
     ogTitle="網誌 | Sam Wong"
-    ogDescription="AI 應用洞察、工作坊經驗同科技人性面嘅分享。"
+    ogDescription="AI 應用洞察、工作坊經驗與科技人性面的分享。"
     ogImage={DEFAULT_OG_IMAGE}
     ogUrl={`${SITE_URL}/zh/blog`}
     ogType="website"
     twitterTitle="網誌 | Sam Wong"
-    twitterDescription="AI 應用洞察、工作坊經驗同科技人性面嘅分享。"
+    twitterDescription="AI 應用洞察、工作坊經驗與科技人性面的分享。"
     twitterImage={DEFAULT_OG_IMAGE}
     hreflangTags={[
       { lang: 'en', href: `${SITE_URL}/blog` },
@@ -49,7 +49,7 @@ const ZhBlog = () => (
             <h1>
               <Link to="/zh/blog">網誌</Link>
             </h1>
-            <p>關於 AI 應用趨勢、工具同幫助人自信地使用 AI 嘅實用經驗。</p>
+            <p>關於 AI 應用趨勢、工具以及幫助人自信地使用 AI 的實用經驗。</p>
           </div>
         </div>
       </header>
@@ -78,7 +78,7 @@ const ZhBlog = () => (
 
       <EmailCapture
         title="訂閱 AI 實用資訊"
-        blurb="工作坊框架、採用案例、同我實際用嘅工具 — 有新文章先會寄，冇垃圾郵件。"
+        blurb="工作坊框架、採用案例，與我實際使用的工具 — 有新文章才會寄出，無垃圾郵件。"
       />
 
       <p className="lang-toggle">

@@ -30,6 +30,7 @@ const lazyRoute = (importFn) => {
 const About = lazyRoute(() => import('./pages/About'));
 const CorporateTraining = lazyRoute(() => import('./pages/CorporateTraining'));
 const Blog = lazyRoute(() => import('./pages/Blog'));
+const CaseNotes = lazyRoute(() => import('./pages/CaseNotes'));
 const Clients = lazyRoute(() => import('./pages/Clients'));
 const Contact = lazyRoute(() => import('./pages/Contact'));
 const Index = lazyRoute(() => import('./pages/Index'));
@@ -65,6 +66,7 @@ const exactRoutes = {
   '/': Index,
   '/about': About,
   '/blog': Blog,
+  '/case-notes': CaseNotes,
   '/clients': Clients,
   '/book': Book,
   '/contact': Contact,
@@ -102,6 +104,7 @@ const App = () => (
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<Post />} />
+        <Route path="/case-notes" element={<CaseNotes />} />
         <Route path="/clients" element={<Clients />} />
         <Route path="/book" element={<Book />} />
         <Route path="/contact" element={<Contact />} />

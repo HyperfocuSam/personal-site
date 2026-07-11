@@ -146,9 +146,9 @@ const About = () => (
               <div className="card card-accent fn-card">
                 <h4>Traffic Light Framework</h4>
                 <p>
-                  Red / Yellow / Green classification for AI task
-                  suitability. Helps teams quickly assess what to
-                  delegate, what to co-create, and what to keep human.
+                  A data sensitivity framework for regulated industries.
+                  Green (public info), Yellow (internal, strip identifiers),
+                  Red (PII, full stop). Designed for instant decision-making.
                 </p>
               </div>
               <div className="card card-accent fn-card">
@@ -178,7 +178,7 @@ const About = () => (
               <div className="card card-accent fn-card">
                 <h4>70/30 Split</h4>
                 <p>
-                  70% AI execution, 30% human judgment.
+                  30% AI execution, 70% human judgment.
                   A principle for delegating work to AI while
                   keeping critical thinking with the human.
                 </p>
@@ -375,7 +375,7 @@ const About = () => (
                 name: 'What organizations does Sam Wong work with?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Sam Wong works with Adaptig (Animo Technology Limited), a global AI trainer network he co-founded spanning North America, Latin America, Europe, and Asia-Pacific. His enterprise clients include Bank of China (Hong Kong), Chow Tai Fook, Hong Kong Jockey Club, HSBC, Arup, PolyU, Mattel, Toyota, China Travel Service, and HKCT.',
+                  text: 'Sam Wong works with Adaptig (Adaptig Group Limited), a global AI trainer network he co-founded spanning North America, Latin America, Europe, and Asia-Pacific. His enterprise clients include Bank of China (Hong Kong), Chow Tai Fook, Hong Kong Jockey Club, HSBC, Arup, PolyU, Mattel, Toyota, China Travel Service, and HKCT.',
                 },
               },
               {

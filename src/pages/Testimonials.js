@@ -8,57 +8,51 @@ import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 import testimonialData from '../data/testimonialData';
 import ScrollReveal from '../components/ScrollReveal';
 
-const TestimonialCard = ({
-  quote, attribution, featured, stat,
-}) => (
-  <div className={`testimonial-card fn-card${featured ? ' testimonial-card--featured' : ''}`}>
-    <p className="testimonial-card__quote">{quote}</p>
-    <p className="testimonial-card__author">
+// Signature hero: strongest attributed enterprise quote already on the page.
+const heroTestimonial = testimonialData.corporate.find((t) => t.featured)
+  || testimonialData.corporate[0];
+
+const clusters = [
+  {
+    id: 'corporate',
+    title: 'Corporate training',
+    subtitle: 'Feedback from enterprise AI training engagements',
+    testimonials: testimonialData.corporate.filter(
+      (t) => t.quote !== heroTestimonial.quote,
+    ),
+  },
+  {
+    id: 'about-sam',
+    title: 'Public classes',
+    subtitle: 'Direct feedback from anonymous post-workshop surveys',
+    testimonials: testimonialData.aboutSam,
+  },
+  {
+    id: 'academy',
+    title: 'DotAI Academy',
+    subtitle: 'Practical AI education for Hong Kong professionals',
+    testimonials: testimonialData.academy,
+  },
+];
+
+const CompactQuote = ({ quote, attribution, stat }) => (
+  <div className="testimonial-compact fn-entry">
+    <p className="testimonial-compact__quote">{quote}</p>
+    <p className="testimonial-compact__author">
       {attribution}
       {stat && <span className="fn-stamp fn-stamp--verified">{stat}</span>}
     </p>
   </div>
 );
 
-TestimonialCard.propTypes = {
+CompactQuote.propTypes = {
   quote: PropTypes.string.isRequired,
   attribution: PropTypes.string.isRequired,
-  featured: PropTypes.bool,
   stat: PropTypes.string,
 };
 
-TestimonialCard.defaultProps = {
-  featured: false,
+CompactQuote.defaultProps = {
   stat: null,
-};
-
-const TestimonialSection = ({
-  title, subtitle, testimonials,
-}) => (
-  <div className="testimonials__section">
-    <h3>{title}</h3>
-    {subtitle && <p className="fn-stamp">{subtitle}</p>}
-    <div className="testimonials__grid">
-      {testimonials.map((t) => (
-        <TestimonialCard key={t.attribution} {...t} />
-      ))}
-    </div>
-  </div>
-);
-
-TestimonialSection.propTypes = {
-  title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string,
-  testimonials: PropTypes.arrayOf(
-    PropTypes.shape({
-      quote: PropTypes.string.isRequired,
-      attribution: PropTypes.string.isRequired,
-    }),
-  ).isRequired,
-};
-
-TestimonialSection.defaultProps = {
-  subtitle: null,
 };
 
 // No Review/Rating markup here by design: the survey quotes are anonymous, so
@@ -99,7 +93,6 @@ const Testimonials = () => (
       </script>
     </Helmet>
     <article className="post field-notes-content" id="testimonials">
-      {/* Dark hero */}
       <header className="page-hero">
         <div className="content-standard">
           <div className="title">
@@ -111,7 +104,7 @@ const Testimonials = () => (
         </div>
       </header>
 
-      {/* Stats bar */}
+      {/* Stats bar — structure untouched (mobile layout owned by another lane) */}
       <section className="section-base">
         <div className="stats-floating content-standard">
           <div className="stats-bar">
@@ -146,65 +139,78 @@ const Testimonials = () => (
         </div>
       </section>
 
-      {/* About Sam section */}
-      <section className="section-base section-padding">
-        <div className="content-standard testimonials">
+      {/* Signature hero quote + primary CTA */}
+      <section className="section-base section-padding testimonials-hero-section">
+        <div className="content-standard">
           <ScrollReveal variant="scale-in">
-            <TestimonialSection
-              title="What participants say about Sam"
-              subtitle="Direct feedback from anonymous post-workshop surveys"
-              testimonials={testimonialData.aboutSam}
-            />
+            <blockquote className="testimonials-hero-quote fn-card">
+              <p className="testimonials-hero-quote__text">
+                {`“${heroTestimonial.quote}”`}
+              </p>
+              <footer className="testimonials-hero-quote__footer">
+                <span>{heroTestimonial.attribution}</span>
+                {heroTestimonial.stat && (
+                  <span className="fn-stamp fn-stamp--verified">
+                    {heroTestimonial.stat}
+                  </span>
+                )}
+              </footer>
+            </blockquote>
           </ScrollReveal>
+          <p className="testimonials-top-cta">
+            <Link to="/book" className="button">
+              Book a Discovery Call
+            </Link>
+          </p>
         </div>
       </section>
 
-      {/* Corporate section */}
-      <section className="section-base section-alt section-padding">
-        <div className="content-standard testimonials">
-          <ScrollReveal variant="scale-in">
-            <TestimonialSection
-              title="Enterprise clients"
-              subtitle="Feedback from corporate AI training engagements"
-              testimonials={testimonialData.corporate}
-            />
-          </ScrollReveal>
-        </div>
-      </section>
+      {/* Clustered compact quotes */}
+      {clusters.map((cluster) => (
+        <section
+          key={cluster.id}
+          className={`section-base section-padding${cluster.id === 'about-sam' ? ' section-alt' : ''}`}
+        >
+          <div className="content-standard testimonials">
+            <ScrollReveal variant="scale-in">
+              <div className="testimonials__section">
+                <h3>{cluster.title}</h3>
+                {cluster.subtitle && (
+                  <p className="fn-stamp">{cluster.subtitle}</p>
+                )}
+                <div className="testimonials__compact-list">
+                  {cluster.testimonials.map((t) => (
+                    <CompactQuote
+                      key={t.attribution + t.quote.slice(0, 24)}
+                      quote={t.quote}
+                      attribution={t.attribution}
+                      stat={t.stat}
+                    />
+                  ))}
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+      ))}
 
-      {/* Academy section */}
-      <section className="section-base section-padding">
-        <div className="content-standard testimonials">
-          <ScrollReveal variant="scale-in">
-            <TestimonialSection
-              title="DotAI Academy"
-              subtitle="Practical AI education for Hong Kong professionals"
-              testimonials={testimonialData.academy}
-            />
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* CTA linking to services */}
+      {/* Closing CTA — single primary pattern */}
       <section className="section-warm section-padding">
-        <div className="content-standard" style={{ textAlign: 'center' }}>
+        <div className="content-standard testimonials-closing">
           <ScrollReveal variant="fade-up">
             <h3>Ready to experience this for your team?</h3>
             <p>
               Corporate AI workshops, 1-1 coaching, and Train-the-Trainer programs
               — available in English and Cantonese across Hong Kong and Asia-Pacific.
             </p>
-            <div style={{
-              display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginTop: '1.5rem',
-            }}
-            >
+            <p>
               <Link to="/services" className="button">
                 See Training Services
               </Link>
-              <Link to="/clients" className="button button--outline">
-                View Case Studies
-              </Link>
-            </div>
+            </p>
+            <p className="testimonials-closing__secondary">
+              <Link to="/clients">View case studies →</Link>
+            </p>
           </ScrollReveal>
         </div>
       </section>

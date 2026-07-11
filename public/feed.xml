@@ -6,7 +6,21 @@
     <description>AI adoption insights, workshop reflections, and practical AI training tips from Sam Wong.</description>
     <language>en</language>
     <atom:link href="https://hyperfocusam.com/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Fri, 10 Jul 2026 14:40:18 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jul 2026 18:03:31 GMT</lastBuildDate>
+    <item>
+      <title>The architect that never writes code</title>
+      <link>https://hyperfocusam.com/blog/the-architect-that-never-writes-code/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/the-architect-that-never-writes-code/</guid>
+      <description>Companion take to the build log: the most expensive model in the stack wrote zero implementation code. Four bugs died at the spec stage, three workers passed the same five gates, and the blind pick landed on the cheapest. The pattern, not the model, is the asset.</description>
+      <pubDate>Sat, 11 Jul 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>從不寫 code 的 architect model</title>
+      <link>https://hyperfocusam.com/blog/the-architect-that-never-writes-code-tc/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/the-architect-that-never-writes-code-tc/</guid>
+      <description>最貴的模型一行 implementation code 都沒寫——它的全部產出是判斷。四個 bug 死在 spec 階段，三個 worker 通過同樣五道 gate，盲選選中成本最低的一個。資產是 pattern，不是模型。</description>
+      <pubDate>Sat, 11 Jul 2026 00:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>Three models, one branch, zero deployment</title>
       <link>https://hyperfocusam.com/blog/three-models-one-branch-zero-deployment/</link>

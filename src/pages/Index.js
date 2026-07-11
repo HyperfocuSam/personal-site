@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Main from '../layouts/Main';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
+import cases from '../data/cases';
 import testimonials from '../data/testimonials';
 import TestimonialSection from '../components/Testimonials/TestimonialSection';
 import HeroSection from '../components/Home/HeroSection';
@@ -15,6 +16,19 @@ import AboutCallout from '../components/Home/AboutCallout';
 import HomeFAQ from '../components/Home/HomeFAQ';
 import EmailCapture from '../components/EmailCapture/EmailCapture';
 import ScrollReveal from '../components/ScrollReveal';
+
+const homepageReceiptFragments = ['bochk', 'garden', 'ctf'].map((id) => {
+  const entry = cases.find((caseEntry) => caseEntry.id === id);
+  const receipt = entry.receipts[0];
+  const orgLabel = entry.id === 'garden'
+    ? `${entry.id.charAt(0).toUpperCase()}${entry.id.slice(1)}`
+    : entry.id.toUpperCase();
+  const receiptValue = receipt.includes('/')
+    ? receipt.split(' ')[0]
+    : `${receipt.split(' shipped')[0]} < ${receipt.match(/under (\d+) hours/)[1]}h`;
+
+  return `${orgLabel} ${receiptValue}`;
+});
 
 const Index = () => (
   <Main
@@ -71,7 +85,7 @@ const Index = () => (
           url: `${SITE_URL}/`,
           speakable: {
             '@type': 'SpeakableSpecification',
-            cssSelector: ['.hero-stats', "meta[name='description']"],
+            cssSelector: ['.stats-strip', "meta[name='description']"],
           },
         }])}
       </script>
@@ -84,6 +98,20 @@ const Index = () => (
       <ScrollReveal variant="fade-up-long">
         <StatsBar />
       </ScrollReveal>
+
+      <section className="home-case-notes-strip" aria-labelledby="home-case-notes-heading">
+        <div className="home-case-notes-strip__inner">
+          <h2 className="home-case-notes-strip__heading" id="home-case-notes-heading">
+            <span className="fn-stamp">CASE NOTES</span>
+          </h2>
+          <p className="home-case-notes-strip__receipts">
+            {homepageReceiptFragments.join(' · ')}
+          </p>
+          <Link className="home-case-notes-strip__link" to="/case-notes/">
+            Read the case notes →
+          </Link>
+        </div>
+      </section>
 
       {/* 3. Client Logos — infinite marquee */}
       <ScrollReveal variant="fade-in">

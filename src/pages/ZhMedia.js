@@ -169,7 +169,7 @@ const EpisodeCard = ({ episode }) => (
     {episode.views && (
       <div style={styles.statsRow}>
         <span>{`${episode.views} 觀看次數`}</span>
-        <span>{`${episode.likes} 讚好`}</span>
+        {episode.likes && <span>{`${episode.likes} 讚好`}</span>}
       </div>
     )}
 
@@ -226,15 +226,15 @@ EpisodeCard.propTypes = {
 const ZhMedia = () => (
   <Main
     title="媒體"
-    description="Sam Wong 媒體出演 — 會八十嘉賓專家，討論 AI 工具、生產力同實用科技應用。AI顧問 香港、企業AI培訓。"
+    description="Sam Wong 媒體出演 — 會八十嘉賓專家，討論 AI 工具、生產力與實用科技應用，分享香港 AI 顧問及企業 AI 培訓的實戰觀點。"
     canonicalUrl={`${SITE_URL}/zh/media`}
     ogTitle="媒體出演 | Sam Wong"
-    ogDescription="睇 Sam Wong 喺會八十嘅嘉賓出演，討論 AI 工具、生產力同實用科技應用。"
+    ogDescription="觀看 Sam Wong 在會八十的嘉賓出演，討論 AI 工具、生產力與實用科技應用。"
     ogImage={DEFAULT_OG_IMAGE}
     ogUrl={`${SITE_URL}/zh/media`}
     ogType="website"
     twitterTitle="媒體出演 | Sam Wong"
-    twitterDescription="睇 Sam Wong 喺會八十嘅嘉賓出演，討論 AI 工具、生產力同實用科技應用。"
+    twitterDescription="觀看 Sam Wong 在會八十的嘉賓出演，討論 AI 工具、生產力與實用科技應用。"
     twitterImage={DEFAULT_OG_IMAGE}
     hreflangTags={[
       { lang: 'en', href: `${SITE_URL}/media` },
@@ -251,7 +251,7 @@ const ZhMedia = () => (
             <h1>
               <Link to="/zh/media">媒體</Link>
             </h1>
-            <p>嘉賓出演、訪問同座談討論。</p>
+            <p>嘉賓出演、訪問與座談討論。</p>
           </div>
         </div>
       </header>
@@ -267,9 +267,9 @@ const ZhMedia = () => (
           <p>
             {'Sam 曾以嘉賓專家身份三度出演 '}
             <strong>會八十</strong>
-            ，一個由阿Bu、陳強同 Greg 主持嘅熱門廣東話 YouTube 節目。
-            節目涵蓋科技、AI 工具同實用數碼技能，面向香港觀眾。
-            Sam 嘅三集節目累計觀看次數超過 98,000。
+            ，一個由阿Bu、陳強與 Greg 主持的熱門廣東話 YouTube 節目。
+            節目涵蓋科技、AI 工具與實用數碼技能，面向香港觀眾。
+            Sam 的三集節目累計觀看次數超過 98,000。
           </p>
         </div>
       </section>
@@ -285,15 +285,15 @@ const ZhMedia = () => (
 
       <section className="section-dark section-dark--centered section-padding">
         <div className="content-standard">
-          <h3>有興趣邀請 Sam 上你嘅節目？</h3>
+          <h3>有興趣邀請 Sam 上你的節目？</h3>
           <p>
             Sam 可以接受 Podcast 訪問（直播或預錄）、YouTube 直播、座談討論、
-            會議主題演講，主題包括 AI 應用、生產力同實用科技。
+            會議主題演講，主題包括 AI 應用、生產力與實用科技。
           </p>
           <ul className="actions">
             <li>
               <Link to="/media/kit" className="button">
-                睇媒體資料包
+                查看媒體資料包
               </Link>
             </li>
             <li>

@@ -5,7 +5,44 @@ import Markdown from 'markdown-to-jsx';
 
 import RelatedCaseStudies from './RelatedCaseStudies';
 
-const CtaButton = ({ cta, ctaLink, external }) => {
+const QuietLink = ({ cta, ctaLink, external }) => {
+  const isExternal = external || ctaLink.startsWith('http');
+
+  if (!cta || !ctaLink) {
+    return null;
+  }
+
+  if (isExternal) {
+    return (
+      <a
+        href={ctaLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="service-group__quiet-link"
+      >
+        {`${cta} →`}
+      </a>
+    );
+  }
+
+  return (
+    <Link to={ctaLink} className="service-group__quiet-link">
+      {`${cta} →`}
+    </Link>
+  );
+};
+
+QuietLink.propTypes = {
+  cta: PropTypes.string.isRequired,
+  ctaLink: PropTypes.string.isRequired,
+  external: PropTypes.bool,
+};
+
+QuietLink.defaultProps = {
+  external: false,
+};
+
+const PrimaryCtaButton = ({ cta, ctaLink, external }) => {
   const isExternal = external || ctaLink.startsWith('http');
 
   if (!cta || !ctaLink) {
@@ -27,13 +64,13 @@ const CtaButton = ({ cta, ctaLink, external }) => {
   );
 };
 
-CtaButton.propTypes = {
+PrimaryCtaButton.propTypes = {
   cta: PropTypes.string.isRequired,
   ctaLink: PropTypes.string.isRequired,
   external: PropTypes.bool,
 };
 
-CtaButton.defaultProps = {
+PrimaryCtaButton.defaultProps = {
   external: false,
 };
 
@@ -98,21 +135,15 @@ const ServiceGroup = ({
                       {tier.badge}
                     </span>
                   )}
-                  <div className="service-group__tier-receipt fn-receipt">
-                    <h5 className="fn-receipt__number">{tier.title}</h5>
-                    <span className="fn-receipt__leader" aria-hidden="true" />
+                  <div className="service-group__tier-header">
+                    <h5>{tier.title}</h5>
                     {tier.label && (
-                      <span className="service-group__tier-label fn-receipt__label">
+                      <span className="service-group__tier-format fn-stamp">
                         {tier.label}
                       </span>
                     )}
                   </div>
                   <p>{tier.description}</p>
-                  <CtaButton
-                    cta={tier.cta}
-                    ctaLink={tier.ctaLink}
-                    external={tier.external}
-                  />
                 </div>
               ))}
             </div>
@@ -122,7 +153,7 @@ const ServiceGroup = ({
 
           {service.cta && service.ctaLink && (
             <p className="service-group__item-cta">
-              <CtaButton
+              <QuietLink
                 cta={service.cta}
                 ctaLink={service.ctaLink}
                 external={service.external}
@@ -135,7 +166,7 @@ const ServiceGroup = ({
 
     {primaryCta && (
       <div className="service-group__primary-cta">
-        <CtaButton
+        <PrimaryCtaButton
           cta={primaryCta.cta}
           ctaLink={primaryCta.ctaLink}
           external={primaryCta.external}

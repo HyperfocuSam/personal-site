@@ -67,7 +67,7 @@ For full context including case studies, frameworks, and blog posts, see: ${SITE
 
 ## About
 
-Sam Wong is an AI training specialist who has trained 10,000+ professionals across 70+ organizations in banking, retail, education, engineering, and technology. He co-founded Adaptig (Animo Technology Limited), a global AI trainer network spanning North America, Latin America, Europe, and Asia-Pacific. His approach focuses on behavior change over tool awareness, emphasizing psychological safety and practical workflow integration.
+Sam Wong is an AI training specialist who has trained 10,000+ professionals across 70+ organizations in banking, retail, education, engineering, and technology. He co-founded Adaptig (Adaptig Group Limited), a global AI trainer network spanning North America, Latin America, Europe, and Asia-Pacific. His approach focuses on behavior change over tool awareness, emphasizing psychological safety and practical workflow integration.
 
 ## Services
 
@@ -136,7 +136,7 @@ Contact: sam@adaptig.com
 
 ## About
 
-Sam Wong is an AI training specialist who has trained 10,000+ professionals across 70+ organizations in banking, retail, education, engineering, and technology. He co-founded Adaptig (Animo Technology Limited), a global AI trainer network spanning four continents. His approach focuses on behavior change over tool awareness, emphasizing psychological safety and practical workflow integration. He holds a Master of Arts from the Chinese University of Hong Kong.
+Sam Wong is an AI training specialist who has trained 10,000+ professionals across 70+ organizations in banking, retail, education, engineering, and technology. He co-founded Adaptig (Adaptig Group Limited), a global AI trainer network spanning four continents. His approach focuses on behavior change over tool awareness, emphasizing psychological safety and practical workflow integration. He holds a Master of Arts from the Chinese University of Hong Kong.
 
 ## Services
 

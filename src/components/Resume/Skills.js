@@ -47,7 +47,7 @@ const Skills = ({ skills, categories }) => {
       .sort(comparator)
       .filter((skill) => actCat === 'All' || skill.category.includes(actCat))
       .map((skill) => (
-        <SkillBar categories={categories} data={skill} key={skill.title} />
+        <SkillBar data={skill} key={skill.title} />
       ));
   };
 

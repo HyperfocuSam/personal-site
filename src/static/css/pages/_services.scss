@@ -118,13 +118,41 @@
       margin-bottom: 0.9rem;
     }
 
-    &__tier-receipt {
-      align-items: baseline;
-      margin-bottom: 0.9rem;
+    &__tier-header {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      margin-bottom: 0.75rem;
 
       h5 {
         margin: 0;
       }
+    }
+
+    &__tier-format {
+      align-self: flex-start;
+    }
+
+    &__quiet-link {
+      border-bottom: 1px solid _palette(border-subtle);
+      color: _palette(ink);
+      display: inline-block;
+      font-family: _font(family-fixed);
+      font-size: 0.72rem;
+      font-weight: _font(weight-bold);
+      letter-spacing: _font(kerning-meta);
+      margin-top: 0.75rem;
+      text-transform: uppercase;
+
+      &:hover {
+        border-color: _palette(ink);
+        color: _palette(ink);
+      }
+    }
+
+    &__item-cta {
+      margin-top: 0.75rem;
     }
 
     &__primary-cta .button,
@@ -132,6 +160,25 @@
     .service-group__tier .button {
       max-width: 100%;
       white-space: normal;
+    }
+  }
+
+  .services-hero-cta {
+    margin: 1.25rem 0 0;
+  }
+
+  .services-footer-link {
+    margin: 1.5rem 0 0.5rem;
+    text-align: center;
+
+    a {
+      border-bottom: 1px solid _palette(border-subtle);
+      color: _palette(ink);
+      font-size: 0.9em;
+
+      &:hover {
+        border-color: _palette(ink);
+      }
     }
   }
 

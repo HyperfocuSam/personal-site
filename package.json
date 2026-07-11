@@ -12,7 +12,7 @@
   },
   "scripts": {
     "analyze": "npm run build && source-map-explorer build/static/js/*.chunk.js",
-    "prebuild": "node scripts/generate-sitemap.js && node scripts/generate-llms-txt.js",
+    "prebuild": "node scripts/generate-sitemap.js && node scripts/generate-llms-txt.js && node scripts/generate-post-content.js",
     "build": "rimraf ./build && react-scripts build",
     "lint": "eslint \"**/*.js\"",
     "predeploy": "npm run build && react-snap && node scripts/inject-suspense-markers.js",
@@ -69,7 +69,7 @@
     ]
   },
   "reactSnap": {
-    "include": ["/", "/resume", "/zh/blog", "/get-started"],
+    "include": ["/", "/resume", "/zh/blog", "/get-started", "/case-notes/"],
     "skipThirdPartyRequests": true,
     "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"],
     "minifyHtml": {
