@@ -1,4 +1,4 @@
-# 今日,我三個 Gemini tab 收埋成一個 prompt
+# 三個 Gemini 工具，今日合併成一個 prompt
 
 我的日常工作流之中，Gemini 有三個獨立 surface。Pro 跑會議錄音逐字稿。3 Pro Preview 處理 Adaptig 德語 keynote 材料的英德翻譯。Nano Banana Pro 通過 deck-design skill 生成 slide 圖與 case study illustration。三個 model ID，三條 API call，三套「現在該用哪一個」的判斷邏輯。
 
