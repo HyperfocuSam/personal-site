@@ -1,95 +1,69 @@
-# 兩星期建了一個 AI Chatbot。第三句就崩潰了。
+# 兩星期建了一個 AI Chatbot。第三輪對話就崩潰
 
-客戶需要一個 AI 教育顧問聊天機器人。不是套上 ChatGPT 的外殼——而是具備危機偵測、[multi-agent routing](/blog/zh-agentic-ai-five-lessons)、以及 137 所香港學校資料庫的系統。時間很緊。
+客戶需要一個 AI 顧問 chatbot。不是 ChatGPT 套殼——是一個真正的 [multi-agent 系統](/blog/zh-agentic-ai-five-lessons)：危機偵測、個人化路由、一個涵蓋 137 間香港學校的知識庫。而且要快。
 
-我用兩星期交付了。沒有僱用任何人。我的「團隊」是我自己加上一組 AI agent。
+兩星期，我交貨了。僱員人數：0。團隊是我自己，加一隊 AI coding agent。
 
-這篇文章不是在講速度。而是在講真正交付一個 AI 產品的時候，哪些地方會出問題。
+但這不是一個吹速度的成功故事。這篇講的，是一個人加一隊 agent 出貨的 AI 產品，真正會在哪裡壞。
 
-## 第三句就崩潰
+## Turn 3 崩潰
 
-前兩句完美。第三句，系統死了。
+chatbot 頭兩輪對話完美。第三條訊息就死。
 
-錯誤訊息非常籠統：「抱歉，處理你的請求時出現問題。」沒有 stack trace，沒有線索。
+錯誤訊息極其行貨：「Sorry, there was a problem processing your request.」用戶那邊沒有 stack trace，只有沉默。我花了 1 小時才找到根本原因：系統有一條 `MaxLengthGuardrail`，上限 5,000 字元——防止用戶把整份文件貼進對話框，合理。
 
-花了一個小時才找到原因。系統設有 `MaxLengthGuardrail`，上限為 5,000 字元——原本是防止用戶將整篇文件貼入對話。這是合理的安全措施。但這個防護機制檢查的並非用戶輸入的內容，而是整個 assembled context——包含對話歷史、系統提示、agent 路由元數據與用戶訊息的完整組合。
+但這條 guardrail 檢查的，不是用戶訊息，是「組裝後的 context」——對話歷史加 system prompt 加 agent routing metadata 加用戶訊息的完整 payload。到第三輪，組裝 context 超過 5,000 字元，guardrail 觸發，每一段對話都死在第三、四輪。
 
-到了第三句，assembled context 已超過 5,000 字元。防護機制觸發。每次對話到第三或第四句就中斷。
-
-修復只需六行程式碼：在執行長度檢查前，先提取用戶的實際訊息。但找到這六行，前提是理解框架中「用戶發送的內容」與「框架組裝出來的內容」之間的區別。
-
-這正是任何「十分鐘建立聊天機器人」教程都不會告訴你的差距。
+修復是 6 行 code：先抽出用戶的實際訊息再檢查長度。但找到它，需要理解「用戶送出的」和「framework 在幕後組裝的」是兩樣東西。這正是所有「10 分鐘建 chatbot」教學不會為你準備的落差。
 
 ## 一人開發模式
 
-如何在沒有工程團隊的情況下交付產品？
+沒有工程團隊。要把一個 multi-agent chatbot 從零推到 production，做法是這樣。
 
-**Phase 0 必須手動完成。** 我花了兩天學習框架（Agno Agent OS），深入到能做出架構決策的程度。哪個 agent 處理哪種對話模式、路由如何運作、[防護機制](/blog/claude-code-mastery-part-3-hooks-guardrails-tc)放在流程的哪個位置。AI agent 能寫程式碼，但無法做出基礎架構決策。跳過這一步，後面會全面崩塌。
+Phase 0 是人手做的：我花了 2 天深入學 framework——Agno Agent OS，深到能做架構決定。哪個 agent 管哪種對話模式、routing 怎樣走、[guardrail 該放在 pipeline 哪個位置](/blog/claude-code-mastery-part-3-hooks-guardrails-tc)。AI agent 能執行 code，但不能替你下架構判斷；跳過這步，得到的是一個起得快、但被自己重量壓垮的系統。
 
-**每個階段有一份獨立的開發摘要。** 包含範圍、現有程式碼模式、檔案路徑、驗證清單。Coding agent 讀完摘要、讀完程式碼庫、獨立執行並驗證。我審核、批准、提交。下一個階段從已知的乾淨狀態開始。
+之後每個 phase 一份自足的 brief：spec 包含範圍、現有 code pattern、檔案路徑、驗證清單。coding agent 讀 spec、讀 codebase、執行、驗證；我 review；下一個 phase 開始。流程是這樣：第一，我決定建甚麼；第二，coordinator agent 把意圖翻譯成有具體 pass/fail 標準的技術 spec；第三，coding agent 自主執行；第四，我 review、批准、commit；第五，下一個 phase 由乾淨的已知狀態開始。兩個 phase 就跑起核心系統：3 種對話模式的 multi-agent routing（危機偵測、升學顧問、一般育兒）、137 校知識庫、streaming 回應、用戶登入。
 
-工作流程如下：
+樽頸從來不是寫 code 的速度，是 spec 的清晰度。brief 寫得精確——設計 token 連 hex code、framework API 參照、現有 pattern 例子——agent 就交出乾淨的 code；brief 含糊時，agent 自創慣例，之後要逐條拆。
 
-1. 我決定要建什麼。
-2. Coordinator agent 將意圖轉成有具體 pass/fail 標準的技術規格。
-3. Coding agent 自主執行規格。
-4. 我審核、批准、提交。
-5. 下一階段從已知的乾淨狀態開始。
+## 接手爛攤子的問題
 
-兩個 phase 就令核心系統運作起來：跨三種對話模式的 multi-agent routing（危機偵測、學校顧問、一般育兒）、137 所學校的知識庫、streaming 回應、用戶驗證。
+重建之前，本來有一套舊 codebase：3 個 repo、167,000 行 code，前一隊開發商建的。客戶需要先知道自己手上有甚麼，才能決定下一步建甚麼。我跑了一次 security audit：18 項發現，7 項 critical。critical 包括：API key 硬編碼、直接 commit 進 repo——不在環境變數、不在 secrets manager，在 source code 裡；其中一個 repo 連 Apple 的 .p8 推送通知私鑰都 commit 了進版本控制。任何有 repo 權限的人都拿到 production 憑證。交接評分：3 分，滿分 10 分。
 
-瓶頸從來不是寫程式碼的速度，而是規格說明的精確度。
+而 AI backend——整個系統的大腦——根本不在交接範圍內：交了 3 個 repo，最重要那個不見了。
 
-當摘要寫得精準——包含十六進制色碼、API 參考文檔、現有模式範例——agent 第一次就能交出乾淨的程式碼。當摘要寫得含糊，agent 會自行發明命名慣例，導致整個程式碼庫風格不一致。
+所以「我們已經有一個 AI chatbot」這句話，不是大多數人以為的意思：有 code 不等於有產品；有產品不等於有安全的產品；有安全的產品，不等於有一個撐得過第三輪對話的產品。
 
-## 繼承的程式碼庫問題
+## 「兩星期」實際的樣子
 
-在重建之前，有一套既有的程式碼庫。三個程式碼庫，167,000 行程式碼，由前一個開發團隊建立。客戶需要先了解自己手上有什麼，再決定下一步建什麼。
+Day 1-2：學 framework、讀文件、做 AI 替代不了的架構決定。
 
-我進行了安全審計。18 項發現。7 項為嚴重等級。
+Day 3：寫 Phase 1 spec，細到 coding agent 不用發問。
 
-其中包括直接寫死在原始碼中的 API 金鑰——不是環境變數，不是密鑰管理器，而是硬編碼在程式碼裡。有一個程式碼庫甚至將 Apple .p8 私鑰一同提交到版本控制。任何有程式碼庫存取權限的人都擁有正式環境的憑證。
+Day 4-5：Phase 1 執行與 review——核心 agent、routing 邏輯、知識庫、guardrail。
 
-移交評分：3 分（滿分 10 分）。三個程式碼庫交付了，最重要的那個卻不在其中。
+Day 6：寫 Phase 2 spec——個人化功能、家庭 profile、回應偏好。
 
-因此，「我們已經有 AI 聊天機器人了」這句話，往往不代表你以為的意思。有 code 不等於有 product。有 product 不等於有安全的 product。有安全的 product，也不等於有一個撐得過第三句的 product。
+Day 7-8：Phase 2 執行、部署上 production，然後就是 turn-3 崩潰。
 
-## 「兩星期」的真實內容
+Day 9：debug——guardrail 修復，另加一行漏掉的 Dockerfile，漏了的話任何一次部署都會令 backend 崩潰。
 
-第 1-2 天：學習框架、閱讀文件，做出 AI 無法代勞的架構決策。
+Day 10-14：測試、迭代、對舊 codebase 的 security audit、寫給非技術持份者的 executive summary。
 
-第 3 天：撰寫 Phase 1 規格——詳細到 coding agent 不用提問。
+兩星期是真的。但「兩星期」包含 2 天學習、2 天寫 spec、1 天 debug 一個 6 行的修復，真正 AI 輔助寫 code 的日子大約只有 4 天。
 
-第 4-5 天：Phase 1 執行與審核，包括核心 agents、routing 邏輯、知識庫、防護機制。
+## Spec 清晰度這個樽頸
 
-第 6 天：撰寫 Phase 2 規格——個人化功能、family profiles、回應偏好。
+最大的一課：AI agent 寫 code 快，但垃圾 spec 產出垃圾更快。
 
-第 7-8 天：Phase 2 執行、部署到正式環境，然後第三句崩潰。
+跟 coding agent 說「implement the school advisor feature」，出來的東西技術上可行，但命名慣例和 codebase 其他部分不同、漏用現有 design token、另開 3 個和現有 function 重複的 utility 檔。改成「implement the school advisor feature using the `AdvisorAgent` class pattern from `agents/base.py`, the color tokens from `styles/tokens.ts`, and the streaming pattern from the crisis agent implementation」——第一次就交出乾淨一致的 code。分別不在 AI 的能力，在 spec 的精確度。
 
-第 9 天：偵錯，包括防護機制修復、一行遺漏的 Dockerfile 指令。
+## 這代表甚麼
 
-第 10-14 天：測試、迭代、舊程式碼庫安全審計、撰寫非技術人員能理解的執行摘要。
+一個人可以出貨 production 級 AI 產品。工具存在，framework 夠成熟，coding agent 夠能力。但工作沒有消失，只是轉移了：由寫 code 變成寫 spec；由 debug 語法變成 debug 架構；由管理工程師變成管理 context。
 
-兩星期是真的。但其中有兩天學習、兩天撰寫規格、一天偵錯六行修復。真正由 AI 協助寫程式碼的時間，大約四天。
-
-## 規格精確度的瓶頸
-
-最大的教訓：AI agent 寫程式碼很快，但模糊的規格產出模糊的結果，速度再快也沒有意義。
-
-當我寫「實作學校顧問功能」時，agent 產出的東西技術上可運作，但命名慣例與其他部分不一致，忽略了既有的設計標記，並建立了三個重複現有功能的新工具檔案。
-
-當我寫「使用 `agents/base.py` 中 `AdvisorAgent` 的類別模式、`styles/tokens.ts` 中的色彩標記、以及危機 agent 實作中的串流模式來實作學校顧問功能」時——第一次就產出了乾淨、一致的程式碼。
-
-差異不在 AI 的能力，而在規格的精確度。
-
-## 這意味著什麼
-
-一個人可以建立正式環境的 AI 產品。工具已經存在，框架已經成熟，coding agent 已經具備足夠能力。
-
-但工作並沒有消失。它轉移了。從寫程式碼變成寫規格說明。從偵錯語法變成偵錯架構。從管理工程師變成管理上下文。
-
-聊天機器人在第三句崩潰了。不是因為 AI 失敗，而是因為防護機制守護的是錯誤的東西。
+chatbot 死在第三輪，不是因為 AI 失敗——是因為 guardrail 守錯了東西。
 
 ---
 
-*我撰寫關於 AI 產品開發與企業 AI 落地的文章。如果這篇對你有幫助，歡迎在 [LinkedIn](https://linkedin.com/in/sam-ai-agent) 交流。*
+*我寫建 AI 產品和教企業採用 AI 的實戰。有共鳴的話，[LinkedIn 找我](https://linkedin.com/in/sam-ai-agent)。*

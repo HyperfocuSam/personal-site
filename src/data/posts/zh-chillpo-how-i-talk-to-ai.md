@@ -1,16 +1,14 @@
-# 我點同 AI 傾偈：一個鐘由零到自動 YouTube 頻道
+# 一個小時，由零到全自動 YouTube 頻道：我是怎樣與 AI 溝通的
 
-2026 年 3 月 9 日，我與我的 AI 助理 Ada 開了一個 Claude Code session。2,100 行終端紀錄，一個小時。由一個壞掉的 deploy 開始，到最後建成一條全自動的 lo-fi 音樂 YouTube 頻道——每日自動生成音樂、自動上傳、自動發佈。
+2026 年 3 月 9 日，我開了一個 Claude Code session，對象是我那位 AI 助理 Ada。終端紀錄長達 2,100 行，前後只用了一個小時。起點是一個部署失敗的專案，終點是一條全自動運作的 lo-fi 音樂 YouTube 頻道——每日生成音樂、自動上傳、自動發佈，完全不用我插手。
 
-這篇文章並非談論技術——而是講述如何與 AI 溝通。
+這篇文章不談技術。我想說的是，這一個小時裡面真正的關鍵：如何與 AI 說話。做 AI 培訓時，我最常被問的不是「你用哪個工具」，而是「你到底是怎樣跟它溝通的」。所以，我把這段 session 攤開來，逐點拆解當中的溝通模式。以下所有終端輸出，一字不改，原樣呈現。
 
-我在進行 AI 培訓時，最常被問的問題不是「用什麼工具」，而是「如何與 AI 說話」。所以我將這個 session 完整記錄下來，拆解當中的溝通模式。以下所有終端輸出都是原文，一字不改。
+## 一、不說話的藝術：debug 時最有力的溝通就是沉默
 
-## 1. Debug 的藝術：什麼都不說就是最好的溝通
+第一次部署之後，沒有任何輸出。我什麼都沒有做——沒有問「為什麼不 work」，沒有提議「不如試試這個」。Ada 自己開始排查。
 
-Deploy 之後沒有任何輸出。我什麼都沒有做——沒有問「為何不 work」，沒有提議「試試這個」。Ada 自己開始 debug。
-
-她嘗試了三個 model name，每次改 code、commit、deploy、等待結果：
+她先後試了三個 model name。每次改完 code 就 commit、deploy、等結果：
 
 ```
 ⏺ Update(scripts/generate.py)
@@ -21,7 +19,7 @@ Deploy 之後沒有任何輸出。我什麼都沒有做——沒有問「為何�
       (matches param format)" && railway up --detach 2>&1)
 ```
 
-還是不對。再試：
+還是不行。再改：
 
 ```
 ⏺ Update(scripts/generate.py)
@@ -32,7 +30,7 @@ Deploy 之後沒有任何輸出。我什麼都沒有做——沒有問「為何�
       (per API docs)" && railway up --detach 2>&1)
 ```
 
-Model name 正確了，但 API 表示 lyrics 參數不夠長（最少 10 個字）。Ada 自己找到 workaround——用結構標記當作歌詞，讓 API 生成純音樂：
+這次 model name 對了，但 API 回傳一項要求：歌詞參數最少要有 10 個字。Ada 沒有問我怎麼辦，自己找到了一個取巧的做法——用結構標記充當歌詞，讓 API 生成純音樂：
 
 ```
     instrumental_lyrics = (
@@ -46,7 +44,7 @@ Model name 正確了，但 API 表示 lyrics 參數不夠長（最少 10 個字�
     )
 ```
 
-成功。第一首歌生成了：
+成功了。第一首歌出爐：
 
 ```
 ⏺ It worked! The full pipeline completed successfully:
@@ -57,7 +55,7 @@ Model name 正確了，但 API 表示 lyrics 參數不夠長（最少 10 個字�
   - Metadata saved: YouTube-ready title, description, tags
 ```
 
-Ada 還立刻下載那首歌給我聽：
+她還立刻把歌下載下來，直接在我的電腦上打開：
 
 ```
 ⏺ Bash(curl -s -o /Users/sam/Ada/output/chillpo-sunday-afternoon.mp4
@@ -67,25 +65,25 @@ Ada 還立刻下載那首歌給我聽：
 ⏺ Bash(open /Users/sam/Ada/output/chillpo-sunday-afternoon.mp4)
 ```
 
-> **溝通技巧 #1：不要介入 debug 過程。** 這五個 deploy cycle 裡面，我一個字都沒有打。我沒有問「是不是 model name 錯了」，沒有說「不如試試另一個 API」。Ada 有系統地逐一排除——model name、參數格式、lyrics 長度——每次 commit message 都記錄了改了什麼。最好的溝通，有時就是什麼都不說。
+> **溝通技巧 #1：不要介入 debug 的過程。** 那五輪 deploy cycle，我一個字都沒有打。我沒有問「是不是 model name 錯了」，也沒有說「不如試試另一個 API」。Ada 有系統地逐一排除——model name、參數格式、歌詞長度——每次 commit message 都記下了改動的原因。有時，最好的溝通就是完全不開口。
 
-## 2. 兩個字的決策：怎樣用最少的字做最大的決定
+## 二、兩個字的決策：怎樣用最少的話做最大的決定
 
-Ada 說每首歌需要 artwork。她提出三個方案：
+Ada 跟我說，每首歌都需要 artwork。她列出了三個方案，整齊排列：
 
-- **Option A**：靜態插畫（用 Nano Banana Pro 生成）
-- **Option B**：動態循環（插畫加動畫效果）
-- **Option C**：AI 影片場景（用 Kling AI 生成）
+- **方案 A**：靜態插畫（用 Nano Banana Pro 生成）
+- **方案 B**：動態循環（插畫加上動畫效果）
+- **方案 C**：AI 影片場景（用 Kling AI 生成）
 
-她建議從 A 開始。我的回應：
+她說，建議先由 A 開始。我這樣回應：
 
 ```
 ❯ A , yes
 ```
 
-兩個字。選擇了方案、確認執行。
+兩個字。選了方案，確認執行。
 
-之後 Ada 講解如何設置 YouTube API 上傳。她列出三個階段，每個都標明誰做、要多久：
+後來，Ada 要解釋怎樣設定 YouTube API 來上傳影片。她把步驟分成三個階段，每一個都標明由誰負責、預計要多久：
 
 ```
 ⏺ Here's the full walkthrough, broken into 3 phases.
@@ -95,27 +93,27 @@ Ada 說每首歌需要 artwork。她提出三個方案：
   Phase 3: Auto-Upload Pipeline (me, ~2 min)
 ```
 
-「you, 5 min」、「you + me, 10 min」、「me, ~2 min」。一看就知道哪些要我做，哪些她處理完。我的回應：
+一看就知道：頭兩步我要親自落手，最後一步她自動處理。我的回應：
 
 ```
 ❯ yes , walk me through how to do that
 ```
 
-最後，她問我要不要設置每日自動上傳。我的回應：
+最後，她問我要不要設定每日自動上傳。我答：
 
 ```
 ❯ yes please
 ```
 
-三個決策時刻，沒有一個超過五個字。
+三個決策瞬間，沒有一句超過五個字。
 
-> **溝通技巧 #2：結構化選擇 + 即時決策。** [好的 AI agent](/blog/zh-agentic-ai-five-lessons) 會將開放式問題變成選擇題。好的使用者不會猶豫——選了就做。這不是懶惰，是效率。每次「你覺得呢」的來回，都是在浪費時間。
+> **溝通技巧 #2：結構化的選擇，加上即時的決策。** [一個好的 AI agent](/blog/zh-agentic-ai-five-lessons) 會把開放式問題縮窄成選項。好的使用者不會猶疑——選了就向前走。這不是懶惰，是效率。每次來回一句「你覺得呢」，都是在浪費時間。
 
-## 3. 人機分工：知道哪些是你做、哪些給 AI 做
+## 三、人機分工：知道什麼是你該做的，什麼是交給 AI 做的
 
-整個 session 中，Ada 清楚標明了人機分工。每個步驟都寫明「你做」還是「我做」，讓我不必猜測。
+整個 session 裡，Ada 很清楚地劃分了人機分工。每一個步驟都寫明「你做」還是「我做」，我完全不用猜度。
 
-但最有趣的溝通發生在 Google OAuth 授權那裡。在設定 test user 的時候，Google 彈出了一個 403 錯誤——用繁體中文顯示。我直接複製貼上了整個錯誤訊息：
+但最令我印象深刻的溝通時刻，是 Google OAuth 授權的時候。設定 test user 途中，Google 彈出了一個 403 錯誤——而且是用繁體中文顯示的。我直接把整個錯誤訊息複製貼上：
 
 ```
 ❯ 「ChillPo」尚未完成 Google 驗證程序。這個應用程式目前處於測試階段，
@@ -124,7 +122,7 @@ Ada 說每首歌需要 artwork。她提出三個方案：
 發生錯誤 403： access_denied
 ```
 
-Ada 立刻看懂：
+Ada 看了一看，立刻知道問題所在：
 
 ```
 ⏺ That's the "test users" restriction. You need to add yourself
@@ -138,15 +136,15 @@ Ada 立刻看懂：
   6. Save
 ```
 
-我沒有翻譯、沒有解釋、沒有說「Google 的 OAuth 好像不讓我 access」。直接貼。她直接答。
+我沒有翻譯，沒有解釋，沒有說「Google 的 OAuth 好像不讓我存取」。直接貼。她直接解。
 
-> **溝通技巧 #3：貼上錯誤訊息、不要描述錯誤。** 當你遇到錯誤，直接複製貼上完整的錯誤訊息。不要用自己的話去描述——你的描述會丢失關鍵資訊（錯誤碼、具體參數、堆疊追蹤）。原文永遠比摘要準確。
+> **溝通技巧 #3：貼上錯誤訊息，不要描述錯誤。** 遇到錯誤，直接複製貼上完整的錯誤訊息。不要用自己的話去複述——你的描述會丟失關鍵的資訊（錯誤碼、具體參數、堆疊追蹤）。原文永遠比摘錄準確。
 
-## 4. 最後兩個問題：好的 Agent 問得少、做得多
+## 四、最後兩個問題：好的 agent 問得少，做得多
 
-整個 session 來到最後，Ada 要建立一個 chillpo.com landing page。她可以問十個問題：風格？配色？排版？動畫？手機版？SEO？
+整個 session 來到尾聲，Ada 要幫我建立 chillpo.com 的 landing page。她大可以問十個問題：風格？配色？排版？動畫？手機版？SEO？
 
-她只問了兩個：
+但她只問了兩個：
 
 ```
 ⏺ Two questions:
@@ -155,15 +153,15 @@ Ada 立刻看懂：
   2. Simple landing page or full listening experience?
 ```
 
-一個是技術事實（DNS 有沒有設定），一個是方向性決策（簡單還是完整）。我的回應，連打錯字都沒有改：
+一個是技術事實（DNS 設定了沒有），一個是方向性的抉擇（簡單頁面還是完整體驗）。我這樣回應，連打錯字都沒有改：
 
 ```
 ❯ 1 - no / 2 - kanding page first
 ```
 
-七個字（其中一個打錯），兩個決定。Ada 沒有問「你是不是 meant landing」，直接開工。
+七個字（其中一個打錯），兩個決定。Ada 沒有問「你是不是想說 landing」，直接開工。
 
-然後是整個 session 最後一句：
+session 最後一句，是這樣的：
 
 ```
 ❯ voice activated. thanks zoe. goodnight
@@ -174,26 +172,26 @@ Ada 立刻看懂：
 ⏺ Goodnight Sam. It's Ada, not Zoe — but I'll take it.
 ```
 
-我叫錯名字。她糾正但不介意。這就是好的 agent UX——不會因為一個無關的錯誤而中斷工作流程。
+我叫錯了名字。她輕輕糾正，但不介意。這正是好的 agent UX——不會為了一個無關痛癢的錯誤而中斷工作流程。
 
-> **溝通技巧 #4：只問必要的問題。** Ada 可以問十個問題，問了兩個。每多一個問題，就多一次來回，就多幾分鐘等待。好的 agent 懂得用自己的判斷力填補空白，只在真正需要人類輸入的地方才停下來。
+> **溝通技巧 #4：只問必要的問題。** Ada 可以問十個問題，卻只問了兩個。每多一個問題，就多一輪來回，就多幾分鐘的等候。好的 agent 會用自己的判斷力填補空白，只在真正需要人類輸入的地方才停下來。
 
-## 5. 一個小時的成果
+## 五、一個小時的成果
 
-回顧這個 session，我們由零開始，建成了：
+回頭看這個 session，由零開始，我們建成了：
 
-- MiniMax music-2.0 API 整合，10 種 lo-fi 風格
+- MiniMax music-2.0 API 整合，設定了 10 種 lo-fi 風格
 - 每首歌自動生成插畫 artwork（Nano Banana Pro）
 - FFmpeg 影片合成 pipeline（音樂 + artwork → YouTube 影片）
 - YouTube Data API 自動上傳（OAuth2 + resumable upload）
 - Railway 部署 + node-cron 每日自動執行
 - chillpo.com landing page（深色 lo-fi 主題）
 
-兩條影片已經在 YouTube 上面。第二天醒來，又會多兩條。
+兩條影片已經在 YouTube 上了。第二天醒來，又會多兩條。
 
-這些全部在一個終端 session 中完成。沒有 Jira ticket，沒有 sprint planning，沒有 standup。一個人，一個 AI agent，一個小時。
+這些全部在一個終端 session 內完成。沒有 Jira ticket，沒有 sprint planning，沒有 standup。一個人，一個 AI agent，一個小時。
 
-將「lo-fi YouTube 頻道」換成[任何自動化 pipeline](/blog/ada-gersang-gamifying-claude-code)——報告生成、數據處理、內容發佈——溝通模式都是一樣的。
+把「lo-fi YouTube 頻道」換成[任何自動化 pipeline](/blog/ada-gersang-gamifying-claude-code)——報告生成、數據處理、內容發佈——背後的溝通模式其實一模一樣。
 
 ## 溝通速查表
 
