@@ -1,43 +1,42 @@
-# Claude Code 完全攻略：Hooks 與安全機制 -- 如何讓 AI 安全執行工作
+# Claude Code 完全攻略：Hooks 與安全機制 — 如何讓 AI 安全工作
 
-上個月，我的 AI agent 差點將一張 invoice 發送給錯誤的收件人。
+上個月，我的 AI agent 差點把一張客戶 invoice 發給錯的人。
 
-不是測試，不是假設。是真正的 invoice，真實的金額，寄往錯誤的 client email。Agent 選對了附件、選對了 subject line、寫對了 body text，但它選錯了收件人。
+不是測試。不是沙盤推演。真 invoice、真金額，收件人是錯的客戶 email。附件正確、主旨正確、內文正確，只是從最近聯絡人中挑錯了收件人。
 
-我的 PreToolUse hook 攔截了這次操作。Policy engine 比對了 outbound email 的參數，發現我尚未 approve，直接 block。我收到的是一則 deny message 而非 "sent" 確認。檢查後發現地址有誤，修正後手動 approve。整個過程耗時十二秒。損失：零。
+我的 PreToolUse hook 接住了。
 
-做生意的人一定明白：一封寄錯的 email 足以令你與 client 的關係即刻出問題。尤其在香港，你的 client 可能就坐在你另一個 client 的隔壁。這個 hook 救了我一次，我用一個週末搭建的整套 system 便已值回票價。
+policy engine 比對規則，發現這封 email 缺少用戶明確批准，攔下了發送。我收到的不是「已發送」，是一條拒絕訊息。我翻查草稿、發現地址錯了、改正、人手批准。損失時間：12 秒。損失金額：0。
 
-這是 Claude Code 完全攻略的第三篇。[第一篇](/blog/claude-code-mastery-part-1-getting-started-tc)講 CLAUDE.md，[第二篇](/blog/claude-code-mastery-part-2-skills-memory-tc)講 memory 架構。本篇討論的內容，大多數人完全忽略：如何令一個自主 AI agent 安全到你敢讓它處理真正的業務。
+單這一次，就值回我花一個週末建整套 hooks 系統的成本。
 
-## 自主 AI 的信任問題
+先回顧一下系列進度：[第 1 篇](/blog/claude-code-mastery-part-1-getting-started-tc)講的是 CLAUDE.md——設定 AI 的底層人格與行為邊界；[第 2 篇](/blog/claude-code-mastery-part-2-skills-memory-tc)講記憶架構——讓 agent 跨 session 記得住客戶和工作狀態。這一篇要談的，是多數人完全跳過的部分：讓自主 AI 安全到可以託付真實業務。
 
-AI agent 有用，是因為它不需要請示就能行動。AI agent 危險，也是同樣原因。
+## 信任問題
 
-如果你的 agent 能夠 send email、修改 file、發送 WhatsApp、query database -- 我的 Ada 每天都在執行這些操作 -- 那麼每一個 tool call 都是真槍實彈。發出的 email 無法收回，發出的 WhatsApp 無法刪除。
+自主 agent 有個令人不舒服的真相：它們有用，正因為不用問你；它們危險，也正因為不用問你。我的 agent 每天替我發 email、改檔案、發 WhatsApp 訊息、查資料庫——每一次 tool call 都是實彈。沒有 sandbox，發出去的 email 沒有 undo 鍵。
 
-大部分 Claude Code 使用者完全沒有 guardrails。他們依賴 model 本身的判斷。撰寫 code 時這沒有問題，但當 agent 替一盤培訓過逾 10,000 名專業人士的生意管理 client communication，這個做法就太冒險了。
+當 agent 綁住你的 Gmail、WhatsApp 和客戶資料庫權限，「move fast and break things」絕對不是選項。大部分 Claude Code 用戶處於零護欄狀態，單靠模型的判斷力。寫 code 或許可以這樣玩；替一盤在 6 個國家訓練過 10,000+ 專業人士的生意管客戶通訊，不行。
 
-我需要的是 "trust but verify" -- 信任但驗證。Hooks 給了我這個能力。
+我要的是「信任，但要驗證」。Hooks 給了我這個。
 
-## Hooks 是什麼
+## Hooks 是甚麼
 
-Hooks 是由 Claude Code lifecycle event 觸發的 shell command 或 HTTP call。可以將其理解為 AI agent 的 middleware -- 位於 agent 的意圖與行動之間，能夠觀察、修改，或阻止事件發生。
+在 Claude Code 的生命週期事件上執行的 shell command 或 HTTP call。你可以理解為 AI agent 的 middleware：卡在 agent 的意圖和 agent 的行動之間，可以觀察、修改、攔截。
 
-Claude Code 支援幾種 hook type：
+目前支援的觸發點：
+- **PreToolUse**——工具執行前觸發，可批准或攔截
+- **PostToolUse**——工具執行後觸發，可檢查輸出
+- **Stop**——session 準備結束時觸發，可阻止退出
+- **InstructionsLoaded**——session 開始時觸發，可用來注入 context
+- **Notification**——agent 發出通知時觸發
+- **SubagentStart / SubagentStop**——子 agent 啟動或關閉時觸發
 
-- **PreToolUse** -- tool 執行之前觸發。可以 approve 或 block。
-- **PostToolUse** -- tool 執行之後觸發。可以 inspect output。
-- **Stop** -- session 結束之前觸發。可以阻止退出。
-- **InstructionsLoaded** -- session 開始時觸發。可以注入 context。
-- **Notification** -- agent 發出通知時觸發。
-- **SubagentStart / SubagentStop** -- sub-agent 啟動或關閉時觸發。
+設定放在 `.claude/settings.json` 內：指定事件類型、可選的 matcher（指定對應工具）、動作（shell command 或 HTTP endpoint）。
 
-在 `.claude/settings.json` 中配置。每個 hook 指定 event type、optional matcher（針對特定 tool），以及 action -- shell command 或 HTTP endpoint。
+## PreToolUse——那封從未發出的 email
 
-## PreToolUse：攔截錯誤的 Email
-
-這就是救了我的那個 hook。以下是我 `settings.json` 中的實際配置：
+救了我的那個 hook，真實設定長這樣：
 
 ```json
 {
@@ -56,13 +55,13 @@ Claude Code 支援幾種 hook type：
 }
 ```
 
-每次 Claude Code 準備 send email，hook 便會觸發。它將 tool call 的所有參數 POST 到我本地的 policy server。Server 評估兩條 rule：
+每次 Claude Code 準備經 Google Workspace 發送 Gmail，這個 hook 會先觸發，把工具名稱和全部參數送到我本地的 policy server。server 評估兩條規則。
 
-**Rule 1：Sender 驗證。** Email 必須從 `sam@adaptig.com` 發出。使用錯誤 account 即刻 block。
+規則 1 寄件人驗證：必須來自 `sam@adaptig.com`——不是我的私人 Gmail、不是測試帳號。選錯寄件人立刻攔截，回覆「Wrong sender account. Must use sam@adaptig.com」。
 
-**Rule 2：User approval。** Server 解析整段對話 transcript，搜尋明確的 approval keyword -- "send it"、"go ahead"、"confirmed"。若我尚未 approve，tool call 直接 deny，並附帶提示：「請先 present draft。」
+規則 2 用戶批准：server 會解析對話逐字稿，尋找明確批准關鍵詞——「approved」「send it」「go ahead」「confirmed」「lgtm」；找不到批准即拒絕，訊息是「Outbound email requires explicit user approval. Present the draft first」。
 
-Config 中的 policy 大致如下：
+`config.yaml` 內的政策設定：
 
 ```yaml
 policies:
@@ -86,29 +85,27 @@ policies:
         reason: "Outbound email requires explicit user approval."
 ```
 
-WhatsApp message 與 file send 採用同一模式。所有 outbound communication 都必須通過 approval。
+WhatsApp 訊息同一套邏輯。發送檔案同一套。所有對外通訊都要過批准，無一例外。
 
-## HTTP Hooks Server
+## 自建 HTTP hooks server
 
-所有 hook 均指向一個 FastAPI server，運行於 `localhost:18924`。這並非什麼 microservice 架構 -- 只有 163 行 Python，但可能是我整套 system 中最重要的 code。
+hooks 指向一個跑在 `localhost:18924` 的 FastAPI server。不是甚麼微服務架構習作——163 行 Python，很可能是我整個系統裡最重要的 code。
 
-Server 接收 hook payload -- session ID、tool name、tool input、transcript path -- 然後執行 policy engine。Policy engine 載入 YAML config 的 rules，比對 incoming event，回傳決策：`{"decision": "allow"}` 或 `{"decision": "deny", "reason": "..."}`。
+server 收到 hook payload——裡頭有 session ID、工具名、工具輸入參數、對話逐字稿路徑——交給 policy engine：從 YAML 載入規則、比對事件、回傳決定：`{"decision": "allow"}` 或 `{"decision": "deny", "reason": "..."}`。每一個決定都會記進 SQLite（`store/hooks.db`），讓我可以審計哪些 call 被攔、哪些放行、為甚麼。
 
-每個 decision 都記錄到 SQLite database（`store/hooks.db`）。我可以 audit 哪些 tool call 被 block、哪些被 approve、原因為何。
+第一個月的 log 紀錄：14 次被攔的發送。3 次是真抓到的——錯收件人、錯寄件人、缺批准。11 次是誤報——我自己忘了先說「send it」。調整批准關鍵詞清單之後，誤報率接近零。
 
-部署後第一個月檢視 logs，我找到 14 個被 block 的 send。其中 3 個是真正的 catch -- wrong recipient、wrong sender、missing approval。11 個是 false positive，因為我忘記說 "send it"。調整 approval keywords 之後，false positive rate 降到接近零。
+還有內建 rate limiting：Gmail 每小時上限 20 封、每次相隔 10 秒冷卻。不是因為我真的發那麼多，而是因為自主 agent 一旦失控迴圈，幾分鐘就能燒光你一天的發送配額。
 
-Rate limiting 也已內建。Gmail send 每小時上限 20 次，每次之間 cooldown 10 秒。並非因為我真的會發那麼多 email，而是防止 autonomous agent 失控 loop 耗盡每日 send quota。
+server 由 macOS LaunchAgent 自動啟動：開機時 hooks server 已在跑，先於 Claude Code。沒有手動步驟，沒有忘記的可能。
 
-Server 透過 macOS LaunchAgent 自動啟動。機器一開，hooks server 即已在運行。沒有手動步驟，沒有遺漏的可能。
+## Stop hook——記憶的強制執行
 
-## Stop Hook：記憶強制寫入
+解決的是另一個問題。不是安全——是紀律。
 
-Stop hook 解決的不是安全問題 -- 是紀律問題。
+我的 agent 為每個活躍客戶維護記憶檔——狀態、action item、聯絡人、對話歷史。如果一個 session 涉及客戶工作、agent 卻沒更新記憶檔就退出，context 就丟了，下個 session 要從冷狀態開始。
 
-我的 agent 管理著每個 active client 的 memory file -- status、action items、contact details。如果一個 session 處理了 client work 卻在退出時沒有更新 memory file，下一個 session 就會 cold start。這種情況以前每週都會發生一次。
-
-Stop hook 在 session 結束前注入一段 prompt：
+Stop hook 的設定：
 
 ```json
 {
@@ -125,44 +122,42 @@ Stop hook 在 session 結束前注入一段 prompt：
 }
 ```
 
-這是 prompt-type 的 hook，不是 HTTP hook。它會在 shutdown 前將這段 prompt 注入 agent context，agent 必須評估是否需要 memory write-back，然後才決定更新或確認沒有變更。
+這是 prompt 型 hook，不是 HTTP 型：在關閉之前，把一段 prompt 注入 agent 的 context。agent 自行評估是否需要記憶回寫，然後更新檔案或確認沒有變化。跳不過，每次都觸發。
 
-Agent 無法跳過這個步驟。Hook 每次都會觸發。部署之後，我再沒有遺失過 session context。
+部署這個 hook 以來，我一次都沒再丟過 session context。之前的頻率是每星期至少一次。
 
-## InstructionsLoaded：兩秒 Init
+## InstructionsLoaded——2 秒的開機初始化
 
-InstructionsLoaded hook 在 session start 時觸發。我的做法：
+session 開始時觸發。我的版本注入一段輕量初始化：(1) 讀取 worklog 最後 15 行，看上次 session 發生了甚麼；(2) 查 priority todo 有沒有過期項；(3) 用一句話跟我打招呼——上次的動作、緊急事項、今天聚焦甚麼。全程約 2 秒。
 
-1. 載入最後 15 行 worklog（上次做了什麼）
-2. 檢查 priority todos 是否有 overdue
-3. 一句話問候：上次做了什麼、多少項目到期、今天的 focus 是什麼
+不會載入整套記憶系統——那樣會把 token 燒在未必需要的 context 上；只載入剛好夠恢復動力的量。
 
-整個過程兩秒。不會載入整個 memory system -- 那樣會消耗大量 token。只載入足以恢復 momentum 的資訊量。
+打開 Claude Code 見到一片空白，和打開見到「上個 session：Garden invoice 已發出。今天有 2 項到期。想從哪裡開始？」——這就是工具和助手的分別。
 
-打開 Claude Code 看到空白 prompt，與看到「上次 session：sent Garden invoice。今日有 2 個 item due。要 focus 什麼？」-- 這就是 tool 與 assistant 的分別。
+## PostToolUse——沉默的防線
 
-## PostToolUse：靜默防禦
+我用了一個 prompt injection defender 作為 PostToolUse hook，掃描每次 Read、WebFetch、Bash 的輸出，尋找可疑模式——藏在抓回來的內容裡、試圖操縱 agent 行為的指令。
 
-我運行了一個 prompt injection defender 作為 PostToolUse hook。它掃描每個 Read、WebFetch、Bash output，尋找可疑的 pattern -- 例如 fetched content 中嵌入了試圖操控 agent 行為的 instruction。
+```bash
+uv run ~/.claude/hooks/prompt-injection-defender/post-tool-defender.py
+```
 
-一旦偵測到，便會標記 severity level 並建議謹慎處理。不會 block tool call（PostToolUse 無法 retroactively block），但會在 agent context 中注入 warning。
+它檢查 context 操縱、冒認權威、人格注入、混淆過的 payload。發現時按嚴重程度標記，並把警告注入 agent 的 context，提醒謹慎。它不會攔截——PostToolUse 攔不了已發生的事——但讓危險變得可見。
 
-如果你的 agent fetch 外部 webpage 或 read untrusted file，這些 content 會進入 context window。一段精心撰寫的 injection 可以 redirect agent behavior。Defender 無法令這件事完全不可能發生，但能令它變得可見。
+這一點比多數人以為的更重要：agent 抓一個網頁、讀一個不可信來源的檔案，內容就進了 context window。一段精心設計的注入，可以改寫 agent 的行為。defender 不能令這件事不可能，但能令它看得見。
 
-## 由零開始
+## 由這裡開始
 
-如果你只做一件事：在你的 email sending tool 上加一個 PreToolUse hook。一個 hook。一條 rule。Send 之前要求 explicit approval。
+如果這篇只能帶走一件事，我會說：給你的 email 發送工具加一個 PreToolUse hook。一個 hook、一條規則：任何對外訊息，先要明確批准。
 
-15 分鐘的 setup。保護你免受自主 agent 最高風險的 failure mode：將錯誤的內容發送給錯誤的人。
+15 分鐘的設定，防住自主 agent 最高後果的失敗模式——把錯的東西發給錯的人。複雜的可以之後再疊——HTTP server、policy engine、審計 log、rate limiter，全部能慢慢加上去。地基很簡單：永遠不要讓 agent 在高風險操作上無檢查點地行動。
 
-之後可以逐步增加 complexity -- HTTP server、policy engine、audit log、rate limiter。但基礎很簡單：**高風險操作，必須設有 checkpoint。**
+我描述的整套系統：163 行 policy engine、一份 YAML、`settings.json` 幾條設定。它靜靜地跑，每次 tool call 加不到 100ms 延遲，抓過 3 個真會令我尷尬的錯。
 
-我所描述的 hooks system 是 163 行 policy engine、一個 YAML config file、以及 `settings.json` 中的幾個 entry。靜默運行，每個 tool call 增加不足 100ms latency，攔截過 3 個原本會非常尷尬的錯誤。
+無護欄的自主 AI 是負債。有護欄的自主 AI，是一個永遠不會忘記 double-check 的員工。
 
-沒有 guardrails 的自主 AI 是負債。有 guardrails 的自主 AI 是一個永遠不會忘記 double-check 的員工。
-
-下一篇：[第四篇 -- Agent Teams](/blog/claude-code-mastery-part-4-agent-teams-tc)，討論 multi-agent collaboration、sub-agent delegation，以及當你的 AI agents 開始互相協作時會發生什麼。會有些 weird，但是好的那種 weird。
+系列下一篇：[第 4 篇 Agent Teams](/blog/claude-code-mastery-part-4-agent-teams-tc)——多 agent 協作、子 agent 委派、當你的 AI agent 開始互相合作會發生甚麼。會變得奇怪——是好的那種奇怪。
 
 ---
 
-*我在六個國家培訓企業進行 AI adoption。如果你也在用 Claude Code 構建系統，歡迎到 [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/) connect 交流。*
+*我在 6 個國家教企業做真正留得住的 AI adoption。如果你也在用 Claude Code 搭系統，歡迎在 [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/) 交流。*

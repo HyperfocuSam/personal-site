@@ -1,63 +1,55 @@
-# 起一個 Agentic AI 系統學到既五件事
+# 從零建構一個 Agentic AI 系統學到的五件事
 
-我最近建立了一個 multi-agent AI 系統。不是 chatbot，而是真正的 agent architecture：四個 specialist agent、一個 [team router 自動分配任務](/blog/claude-code-mastery-part-4-agent-teams-tc)，persistent memory 跨 session 記住用戶，streaming UI 即時顯示整個 agentic process。
+人人都在做 chatbot。我在做 agent 系統——分別不是 marketing 用詞，是 architecture。
 
-由零到 production deploy，以下是我最深刻的五個體會。
+最近我從零建了一個：4 個 specialist agent、一個 team router（route mode：leader agent 分析每一條訊息，再 delegate 給最適合的 specialist）、persistent memory（抽取每個用戶的 facts，跨 session 記住）、streaming UI（實時顯示 routing 決定、tool call、每步耗時）。
 
-## 一、Orchestration 是 prompt engineering 問題
+做完之後我更確定了：做出 chatbot 不難，做出 agent 系統很難。以下五件事，framework 的文件不會告訴你。
 
-很多人以為 multi-agent 最難是 architecture。選擇甚麼 framework、如何設計 routing logic、使用甚麼 protocol。錯了。最難是教會 router 不要自己回答。
+## 1. Orchestration 是 prompt engineering 問題，不是架構問題
 
-我使用的是 route mode team — leader agent 分析用戶訊息，然後 delegate 給最適合的 specialist。理論上完美。實際上 router 經常覺得自己能夠回答，特別是 greeting 和簡單問題。
+單一 agent 加 tools 加 memory，開箱即用。一引入 team——router 要 delegate 給 specialist，像我在 [Claude Code Mastery: Agent Teams](/blog/claude-code-mastery-part-4-agent-teams-tc) 那篇寫過的——一切都變了。
 
-最後我要在 instructions 裡寫三次同一個意思：「ALWAYS delegate」「NEVER answer directly」「Even for greetings, delegate to assistant」。三次。同一個規則。它才肯 consistently follow。
+Router 有自己的性格：它總想自己回答問題，不想 delegate，尤其是打招呼和簡單問題。同一條 routing 規則，我要用三種寫法、寫足三次：「ALWAYS delegate」、「NEVER answer directly」、「Even for greetings, delegate to assistant」。寫一次它不理你，寫兩次它偶爾聽話，寫滿三次才穩定下來。LLM 需要 redundancy 才會可靠地遵守 routing constraint。
 
-LLM 需要 redundancy 來 enforce routing constraint。這是實戰教訓，不是理論。
+這是實戰教訓，不是理論。
 
-## 二、Memory 是用戶感知到的最大差異
+## 2. Memory 是殺手級功能——前提是共享
 
-Agent 懂得用 tool、懂得 search、懂得 reason — 這些用戶未必感受到。但當他第二天回來，AI 說「你上次提過你的兒子叫 XX」，整個 experience 立刻不同。
+AI 記得你上星期講過的事，那一刻體驗就變了：它由工具變成顧問，用戶立刻察覺。
 
-重點是：memory 一定要 shared。如果你有四個 agent，每個各自有獨立的 memory store，用戶與 finance agent 說過的事情，wellness agent 完全不知道。對用戶來說他們是在與一個 AI 對話，但背後是四個獨立的腦。
+但 memory 只在所有 agent 讀寫同一個 store 時才成立，正如我在 [Claude Code Mastery: Skills & Memory](/blog/claude-code-mastery-part-2-skills-memory-tc) 拆解過的：如果 finance agent 抽取了一個 fact，而 wellness agent 看不到，你其實是 4 個 chatbot 扮一個系統。Shared state 實作起來極簡單，卻極容易被忽略。
 
-一個 [shared database，所有 agent 讀寫同一個地方](/blog/claude-code-mastery-part-2-skills-memory-tc)。這個 architectural decision 決定了整個產品的 coherence。
+產品層面的洞察：用戶不在乎是哪個 agent 回答，只在乎系統記得。
 
-## 三、Agentic UX 不是關乎答案的事
+## 3. Agentic UX 的重點不在答案
 
-我做過最有價值的 feature 不是 memory，不是 routing，是在 UI 上展示整個 agentic process。
+整個項目最大的升級不在 agent，在 frontend。
 
-用戶見到：「轉交俾財務顧問」→「搜尋網絡... 2.3s」→「完成」。Routing chip、tool spinner、duration badge。
+當我開始把結構化 event 推送到介面——哪個 agent 接手了訊息、call 了哪些 tool、每步用了多久——整個體驗都變了。用戶看得到 routing 決定，看得到一個 web search 轉了 2.3 秒，看得到 router 交棒給 specialist。Activity chip、duration badge、agent label。它不再像一個 chatbot，開始像一隊人在為你工作。
 
-整個 app 立即由「好像一個 chatbot」變成「好像有一個 team 正在幫助我」。這個 perception shift 十分巨大。
+大部分 framework 只給你 streaming text，那是最低要求；真正的產品在於把過程 surface 出來：delegation、tool usage、reasoning chain。用戶看得見機器的內部運作，信任不減反增。Show the work：agentic AI 不是魔術，是看得見的能力。
 
-大部分 agent framework 只 stream text。但 text 是最低要求。真正的 agentic UX 是將 delegation、tool usage、reasoning chain 全部 surface 出來。
+## 4. Guardrail 內藏文化假設
 
-Show the work。不要假裝 magic。
+我寫了一條 input validation：少於 10 個字的回覆當錯誤處理。
 
-## 四、Guardrail 有文化偏見
+英文合理——再簡單的回答都是完整句子。廣東話呢？「好呀！」3 個字，「明白」2 個字，全是正常回覆。這條 guardrail 一直在殺掉好好的回覆，用戶只看到空白 bubble，沒有任何解釋。
 
-我設定了一個 validation rule：回覆少於 10 個字就 reject。英文來說合理，一句完整回答起碼都有十幾個 character。
+問題不止字數。用英文訓練的 prompt injection detector，會把正常中文句式當成攻擊；PII detector 對不同地區的電話號碼格式誤判。每條 validation rule 都內藏它訓練資料裡的文化假設。
 
-廣東話「好呀！」三個字。「明白」兩個字。全部被 reject。用戶看到空白 bubble，以為 app 壞了。
+教訓：為多語言用戶開發，每一條 guardrail 都應視為有罪，直至證明無罪。
 
-更嚴重的是內建的 prompt injection detector。它用英文 pattern 訓練，遇到中文 sentence structure 就 false positive。正常廣東話被當成 injection attack，直接 block。PII detector 對不同的電話號碼格式也會誤判。
+## 5. Framework 的 80/20
 
-每一條 validation rule 都 encodes 著文化假設。你不 audit，它就靜悄悄 kill 你的用戶體驗。
+Agent framework 免費給你 80%：model integration、tool calling、memory extraction、session persistence、streaming——50 行 code 就有一個能動的 agent。
 
-## 五、Framework 給你 80%，Product 是那 20%
+剩下的 20% 才是產品所在：multi-agent 對話真正可用的 session replay、經過不同 storage 層來回而不壞的 encoding、告訴用戶發生了甚麼事的 error state、把十多種 event 分類再重組給 frontend 的 streaming proxy。
 
-Agent framework 真的很強。Model integration、tool calling、memory extraction、session persistence、streaming — 50 行 code 就有一個 working agent。但沒有人 ship 那 80%。
+沒有人 ship 那 80%，人人 ship 的都是那 20%。
 
-你 ship 的是：multi-agent session 的 replay 邏輯。Streaming event 的分類與 reassembly。Error state 的 graceful handling。Multilingual guardrail 的 audit。Empty state UX。
-
-這 20% 沒有 framework 幫到你。這 20% 才是 product。
+Agent 不是 feature，是 architecture。一旦有 routing、memory、tools、specialist delegation，你已不是在做 chatbot，而是在做一個會判斷誰該處理甚麼、記得自己學過甚麼、會執行實際動作的系統。Framework 令 architecture 變得人人可及；產品的部分——UX、edge case、文化假設——仍然在你手上。而 craft 正正在那裡。
 
 ---
 
-Agent 不是 feature。Agent 是 architecture。懂得 route、懂得記憶、懂得用 tool、懂得 delegate。
-
-Framework 降低了門檻。但 craft 仍然在你手上。
-
----
-
-*Sam Wong 在 6 個國家進行 AI adoption training，訓練超過 10,000 位專業人士。[LinkedIn](https://www.linkedin.com/in/sam-ai-agent/) | [Adaptig](https://adaptig.ai)*
+*Sam Wong 在 6 個國家做 AI adoption training，訓練超過 10,000 位專業人士。[LinkedIn](https://www.linkedin.com/in/sam-ai-agent/) | [Adaptig](https://adaptig.ai)*

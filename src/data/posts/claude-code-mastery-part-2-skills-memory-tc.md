@@ -1,83 +1,71 @@
 # Claude Code 完全攻略：Skills 與 Memory — 讓 AI 學會記憶
 
-你用過多少個 AI 工具？每一個都是如此：花 45 分鐘解釋自己在做什麼、偏好什麼、客戶叫什麼名字。然後關閉視窗。隔天回來，它什麼都不記得。
+你用過的每一個 AI 工具都有同一個問題。花 45 分鐘教會它你的 workflow、偏好、限制，關掉視窗，第二天打開——全部忘光。我稱之為「金魚問題」。這也是最多人用 AI 助手一星期就放棄的原因。
 
-我稱之為「金魚問題」。這個問題是大多數人使用一週後便放棄 AI assistant 的最大原因。
+我的整盤生意跑在 Claude Code 上——客戶 invoice、工作坊準備、blog 發佈、20+ 個進行中客戶項目的會議跟進。如果 Claude 每個 session 之間都忘記一切，我重新解釋 context 的時間會多過真正工作的時間。那不是生產力工具，是一個很貴的 autocomplete。
 
-我整間公司都靠 [Claude Code](/blog/claude-code-mastery-part-1-getting-started-tc) 運作 — invoice、workshop 準備、blog 發布、二十多個 client 的 follow-up。若 Claude 每次開新 session 都什麼都不記得，我花在重新解釋 context 的時間比實際做事的時間更多。那就不是 productivity tool，而是一個昂貴的 autocomplete。
+所以我建了一套記憶系統：4 層、40+ 個 skill，整套系統開機載入不超過 5,000 token。以下逐層拆。
 
-因此我建立了一套 [memory system](/blog/claude-code-mastery-part-5-full-blueprint-tc)。四層架構，四十多個 skills，啟動僅需不到 5,000 tokens。以下逐一說明。
+## 第 1 篇回顧——CLAUDE.md 只是起點
 
-## Part 1 回顧：CLAUDE.md 只是起點
+我在[第 1 篇](/blog/claude-code-mastery-part-1-getting-started-tc)講過，CLAUDE.md 是 AI 的操作手冊——跨 session 存活的設定檔。未讀的先讀。
 
-在[第一篇](/blog/claude-code-mastery-part-1-getting-started-tc)中，我介紹了 CLAUDE.md 如何充當 AI 的使用手冊 — 一個能在每次 session 重啟後依舊存在的設定檔。若你還未讀過，建議從那裡開始。
+但 CLAUDE.md 是第 0 層：它告訴 Claude 它是誰、守甚麼規矩。它不會告訴 Claude 昨天發生了甚麼、哪個客戶的 invoice 過期未付、怎樣把 blog post 發上你那個特定的網站。那些要靠 memory 和 skills。
 
-但 CLAUDE.md 只是第零層。它告訴 Claude「它是誰」與「該遵守哪些規則」。它不會告訴 Claude 昨天發生了甚麼事、哪個客戶的 invoice 已逾期、或如何將一篇 blog 發布到你的特定網站。要做到這些，你需要 memory 與 skills。
+## 四層記憶架構
 
-## 四層 Memory 架構
+這不是理論框架。是我 repo 裡現在就放著的檔案。
 
-這不是 theoretical framework — 是我 repo 裡實際存在的 files。
+### 第 1 層：Session 工作記憶
 
-### 第一層：Session Working Memory
+當前對話。短暫，session 完結就消失。所有 AI 工具預設都有、而且只有這個。有用，但不是記憶——是一本每晚扔掉的記事簿。
 
-即當前對話。關閉即消失。每個 AI 工具都有這一層，但僅有這一層。這不算 memory，這只是每晚丟棄的草稿紙。
+### 第 2 層：Worklog
 
-### 第二層：Worklogs
-
-一個 file：`Memory/memory_worklogs.md`。每個有意義的動作都會記錄下來，格式極為嚴格：
+檔案 `Memory/memory_worklogs.md`。每個有意義的動作，在我看到回應之前先記錄。Schema 很嚴格：
 
 ```
 ## 2026-03-23 | Domain: Playmates US | Action: Drafted reply | Outcome: Sent for review | Next: Sam to reply all
 ```
 
-一行便能看出時間、所屬 domain、做了什麼、下一步是什麼。這個 file 每月 rotate 一次，保持在 15KB 以下。舊 entry 會歸檔，不會刪除。過大的話 Claude 會耗費 token 閱讀兩個月前的舊紀錄，不值得。
+一行記下：何時、哪個 domain、發生了甚麼、下一步。檔案每月輪換，保持 15KB 以下；舊紀錄歸檔，不刪除。這個限制本身重要——檔案無限增長的話，Claude 會花 token 讀兩個月前不相干的歷史。
 
-每次開新 session，Claude 自動讀取最後 10 條 entry。我無需說明任何事，它已知道上次做到哪裡。
+這是時間軸骨幹：開新 session 時，Claude 自動讀最後 10 條紀錄。一個字都不用說，連續性就在。
 
-### 第三層：Curated Memory
+### 第 3 層：策展記憶
 
-21 個 file，例如 `memory_adaptig_garden.md`、`memory_playmates_toys_hk.md`、`memory_dorich.md`。每個 file 頂部都有 status header — engagement 進展到哪裡、上一張 invoice、outstanding deliverables、key contacts。
+21 個 `Memory/memory_*.md` 檔案，一客戶一檔、一領域一檔：`memory_adaptig_garden.md`、`memory_playmates_toys_hk.md`、`memory_dorich.md`。每個頂部有 status header：目前階段、上一張 invoice、未交付項、關鍵聯絡人。
 
-重點在此：當我在對話中提及某個 client 名稱，Claude 會自動 load 該 client 的 memory file。無需指示，它自行執行。因為 CLAUDE.md 裡已寫明這條 rule。
+關鍵行為：對話中提到客戶名，Claude 自動先載入那個客戶的檔案再回應——不用吩咐，因為 CLAUDE.md 寫了。這是 Agno 的 pattern：retrieval on mention。我說一聲「Garden」，Claude 已知道現在是 Batch 2、Top Management 工作坊已確認、GARDEN-2026-003 那張 HKD 63K 的 invoice 已發出。
 
-這就是 Agno 模式 — 提及即擷取。無需手動載入 context，不用說「讓我提醒一下 Garden 的事情。」當我說「Garden」，Claude 已知道 Garden 屬於 Batch 2、Top Management 工作坊已確認、invoice GARDEN-2026-003 金額 HKD 63K 已發送。
+另有 `memory_people.md`——跨客戶聯絡人目錄，收錄 41 人。有人說「check with Joanne」，Claude 查到 Joanne Chan 是 HKCT 的聯絡人，載入 HKCT 檔案。兩跳，零阻力。
 
-此外還有一個 `memory_people.md` — 跨 client 的聯絡人目錄，共 41 人。當我說「跟 Joanne 跟進一下」，Claude 會查到 Joanne Chan 是 HKCT 的 contact，然後自動 load HKCT 的 memory file。兩步。零 friction。
+### 第 4 層：Knowledge base
 
-### 第四層：Knowledge Base
+`Knowledge/*.md`：在 worklog 出現 3 次或以上的模式，升級成可重用知識——教訓、SOP、品牌語氣規則、驗證過的 workflow。升級門檻有講究：同一個錯誤糾正 2 次，寫入 `Knowledge/lessons.md` 做護欄；同一個 workflow 成功 5 次，升做正式 SOP。
 
-`Knowledge/*.md` — 由 worklogs 提煉而來的 reusable patterns。出現三次以上的 pattern 才會 promote 上來。
+這不是願景——Claude 會主動提出升級：
 
-Claude 會主動建議：
+> "This is the third time you've asked me to format invoices with the Animo Technology Limited header. Should I capture this as a Knowledge entry?"
 
-> 「你已經第三次要求我用 Animo Technology Limited 格式開 invoice。是否需要我 capture 成 Knowledge entry？」
+答案永遠是 yes。系統就是這樣在我不用維護的情況下變聰明。
 
-需要。永遠需要。這樣系統才會自行進化，無需手動 maintain。
+## Skills——可以規模化的程序記憶
 
-## Skills：教 AI 做事
+Memory 告訴 Claude 發生過甚麼、它知道甚麼；skills 告訴 Claude 怎樣做事。
 
-Memory 告訴 Claude 發生了什麼。Skills 告訴它如何做事。
+以資料夾為單位，放在 `.claude/skills/`，我現在有 40 個。40 個而不塞爆 context，靠 progressive disclosure：
 
-我目前有 40 個 skills，全部放在 `.claude/skills/` 裡。聽起來很多？實際上不會 overload，因為採用了 progressive disclosure pattern。
+每個 skill 三層——Level 1 metadata：名字加一行描述，每個約 100 token，開機只載入這層，40 個 skill 約 4,000 token，Claude 看到一張「我會做甚麼」的菜單而不用載入任何指令；Level 2 instructions：完整 workflow，每個 5,000 token 以下，任務匹配才載入——不是在發佈 blog，`personal-blog` skill 就一直沉睡；Level 3 resources：範本、script、參考檔，大小基本無上限，在 skill 的 workflow 內按需載入。
 
-### 三層載入
+開機成本 4K token 換全張菜單，其餘全部按需。
 
-**Level 1 — Metadata。** 名稱與一句描述。每個 skill 約 100 tokens。啟動時只載入這一層。40 個 skills = 約 4,000 tokens。Claude 看到一個 menu，知道自己能做什麼，但尚未 load 任何 instructions。
-
-**Level 2 — Instructions。** 完整 workflow。每個不超過 5,000 tokens。只有匹配到相應 task 時才會 load。若我不是在 publish blog，`personal-blog` skill 就不會啟動。
-
-**Level 3 — Resources。** Templates、scripts、reference files。基本上無限大。需要時才 load。
-
-這就是為什麼 40 個 skills 不會造成 context bloat。啟動成本僅 4K tokens，其餘全部 on-demand。
-
-### 實例：`personal-blog` skill
+### 一個真實的 skill：`personal-blog`
 
 ```
 .claude/skills/personal-blog/
-└── SKILL.md          # Level 2: 完整 publishing workflow
+└── SKILL.md          # Level 2: full publishing workflow
 ```
-
-SKILL.md 內容（簡化版）：
 
 ```markdown
 ---
@@ -86,66 +74,47 @@ description: Create and publish blog posts to hyperfocusam.com
 ---
 
 ## Workflow
-1. Draft 在 output/Blog/drafts/{slug}.md
-2. Copy 至 personal-site/src/data/posts/
-3. Update index.js（新 entry 加在最頂）
-4. git add → commit → pull --rebase → push → npm run deploy
-5. Cross-post 至 Substack（full content，非 teaser）
+1. Draft in `output/Blog/drafts/{slug}.md`
+2. Copy to `/Users/sam/personal-site/src/data/posts/`
+3. Update index.js (add entry at TOP of array)
+4. git add, commit, pull --rebase, push, npm run deploy
+5. Cross-post to Substack (full content, not teaser)
 ```
 
-五步。每步有具體 path 與 command。沒有任何含糊。我說「寫篇 blog 講 Garden workshop」，Claude 知道在哪裡 draft、在哪裡 copy、如何 update index、如何 deploy。無需每次解釋。我解釋了一次，寫進了 skill file。
+5 步，具體路徑，具體指令，零含糊。我說「寫一篇 Garden 工作坊的 blog post」，Claude 知道在哪起草、複製去哪、怎樣更新 index、怎樣部署。我不用每個 session 解釋——解釋過一次，在 skill 檔案裡。
 
-### 其他 Skills
+### 其他值得一提的 skill
 
-40 個 skills 聽起來多，選幾個說明涵蓋範圍：
+`magic-moment`——為企業客戶建互動 HTML demo，我被讚最多的一個。`deck-design`——用 AI 圖像生成加品牌參考圖做簡報 slide。`workshop-translation`——工作坊教材多語言本地化。`task-notification`——完成通知，行 WhatsApp，後備是 macOS 原生通知。`memory-management`——維護記憶系統本身的 meta-skill。`video-recolor`——AI 對現有影片做產品重新上色。全部同一個 pattern：開機載 metadata，需要才載指令，最後才載資源。
 
-- **`magic-moment`** — 為 corporate clients 建立 interactive HTML demo
-- **`deck-design`** — 用 AI image generation 配合 brand reference 產出 presentation slides
-- **`workshop-translation`** — 跨語言 localize workshop materials
-- **`task-notification`** — 經 WhatsApp 發送完成通知，WhatsApp 失效時以原生 macOS 通知作 fallback
-- **`memory-management`** — meta-skill，維護 memory system 本身
-- **`video-recolor`** — AI recolor 現有 video 中的產品顏色
+## Pattern detection——會自我改進的系統
 
-每個都遵循同一 pattern：metadata 啟動時載入，instructions on-demand，resources 需要時才載入。
+記憶架構不是靜態的。CLAUDE.md 內建 3 個觸發器：近期 worklog 出現 3 次或以上相似動作——提議寫入 Knowledge；2 次或以上相似錯誤——加入 lessons.md 做護欄；同一 workflow 成功執行 5 次或以上——自動升級為正式 SOP。
 
-## Pattern Detection：系統自行進步
+多數人想 AI 記憶想漏了這部分：重點不只是記住發生過甚麼，是辨認發生過的事情裡的模式，再把模式結晶成可重用的知識。
 
-Memory 架構並非 static。CLAUDE.md 裡寫了三個 detection trigger：
+實際效果：我 2026 年 3 月的系統，比 2026 年 1 月的系統聰明得多——不是模型升級了，是 memory 層累積了更好的模式。
 
-1. **3 次以上類似動作** — 建議轉為 Knowledge entry
-2. **2 次以上類似錯誤** — 加入 lessons.md 作為 guardrail
-3. **5 次以上成功執行** — auto-promote 為正式 SOP
+## 實際運作的一天
 
-這才是大多數人未能理解的地方。AI memory 不僅是記住發生過什麼，而是要能從已發生的事件中辨識 pattern，然後轉化為 reusable knowledge。
+星期一早上，打開 Claude Code。未打任何字，它已載入：最後 10 條 worklog（在跟誰工作、有甚麼未完）、todo 檔今天到期的事、一行「上次做到哪」的確認。
 
-實際效果：我三月的 system 明顯比一月的 system 更聰明。不是因為 model 升級 — 而是因為 memory layer 累積了更好的 patterns。
+我打：「Follow up with Joanne about the HKCT training on March 27.」
 
-## 實際操作流程
+Claude 不會問 Joanne 是誰、HKCT 是甚麼、哪個 training。它已查 `memory_people.md` 找到 HKCT 之下的 Joanne Chan，載入 `memory_hkct.md`，知道這是 AI Learning Community 項目、HKD 240K、24 個月、第一節 training 在 3 月 27 日。它用 `email-drafting` skill 起草、經 Google Workspace 整合以 sam@adaptig.com 發出、記錄 worklog、更新 HKCT 記憶檔的跟進時間。
 
-週一早上。開啟 Claude Code。尚未打字，它已載入了：
+我一句話，系統 6 個協調動作。
 
-- 最近 10 條 worklog entry
-- 當天的 deadlines
-- 上次做到哪裡的一句 summary
+這就是 memory 加 skills 買到的東西：不是一個記得你名字的 chatbot，是一個像共事了幾個月的同事一樣運作的系統。
 
-我輸入：「跟 Joanne 跟進一下 HKCT 3月27號那場 training。」
+## 下一篇——Part 3：Hooks
 
-Claude 不會問 Joanne 是誰。不會問 HKCT 是什麼。不會問哪場 training。它已載入 `memory_people.md`，找到 Joanne Chan 是 HKCT contact，載入了 `memory_hkct.md`，知道這是 AI Learning Community engagement，HKD 240K / 24 個月，第一次 training 在 3 月 27 日。
+[第 3 篇](/blog/claude-code-mastery-part-3-hooks-guardrails-tc)會講 Claude Code 的 hooks 系統——令這一切不需人手介入的 event-driven 自動化層：session 生命周期 hook 自動載入 context、pre-tool-use hook 執行安全政策、每個對外動作發生之前都被捕捉的 audit trail。
 
-它 draft email。用 `email-drafting` skill 控制 tone。經 Google Workspace 以 `sam@adaptig.com` 發出。Log 至 worklogs。Update HKCT memory file。
+Memory 告訴 Claude 它知道甚麼。Skills 告訴它怎樣做。Hooks 告訴它幾時做——以及幾時停。（系列完整藍圖在[第 5 篇](/blog/claude-code-mastery-part-5-full-blueprint-tc)。）
 
-我輸入了一句。System 執行了六個 coordinated actions。
-
-這才是 memory 與 skills 的價值。不是一個記得你名字的 chatbot。而是一個如同與你共事數月的同事般運作的 system。
-
-## 下一篇：Part 3 — Hooks
-
-[Part 3](/blog/claude-code-mastery-part-3-hooks-guardrails-tc) 將討論 Claude Code 的 hooks system — event-driven 的 automation layer。Session lifecycle hooks 如何自動載入 context。Pre-tool-use hooks 如何 enforce safety policies。如何建立一個 audit trail 來 catch 每一個 external action。
-
-Memory 告訴 Claude 它知道什麼。Skills 告訴它怎麼做。Hooks 告訴它何時做 — 以及何時該停。
-
-若不在 memory.md 裡，它就什麼都沒記住。
+如果不在 memory.md 裡，它甚麼都沒記住。
 
 ---
 
-*[在 LinkedIn 找我](https://www.linkedin.com/in/sam-ai-agent/)，聊聊如何建立真正能運作的 AI system。*
+*想多看怎樣建真正用得著的 AI 系統，在 LinkedIn 聯絡我：[sam-ai-agent](https://www.linkedin.com/in/sam-ai-agent/)*
