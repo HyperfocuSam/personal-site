@@ -50,7 +50,7 @@ Every example used toy industry context. Supplier delay emails referenced order 
 
 ## Data Safety as an Accelerator
 
-I spent a deliberate segment on data security, using what I call the [traffic light protocol](traffic-light-protocol-ai-safety). The core message was simple: free tools like Gemini and Perplexity are fine for general queries and public information, but confidential company data -- financials, client lists, unreleased product specs -- should only go into enterprise Copilot, which stays within their Microsoft 365 environment.
+I spent a deliberate segment on data security, using what I call the [traffic light protocol](/blog/traffic-light-protocol-ai-safety). The core message was simple: free tools like Gemini and Perplexity are fine for general queries and public information, but confidential company data -- financials, client lists, unreleased product specs -- should only go into enterprise Copilot, which stays within their Microsoft 365 environment.
 
 The golden rule I gave them: if you would not post it on a public notice board, do not paste it into a free AI tool.
 
