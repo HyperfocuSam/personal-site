@@ -28,7 +28,7 @@ const groups = [
     id: 'one-on-one',
     category: 'individuals',
     title: '個人服務',
-    subtitle: '為建立實用 AI 習慣的專業人士提供個人化輔導。',
+    subtitle: '個人化輔導，助專業人士養成實用的 AI 習慣。',
     socialProof: '160+ 位跨行業專業人士接受輔導。',
     testimonial: testimonials[1],
     primaryCta: {
@@ -42,7 +42,7 @@ const groups = [
     id: 'train-the-trainer',
     category: 'trainers',
     title: '培訓師計劃',
-    subtitle: '培訓師招募——希望教授實用 AI 的培訓師。',
+    subtitle: '招募培訓師——想教實用 AI 的人，由這裡開始。',
     socialProof:
       '加入橫跨北美、拉丁美洲、歐洲與亞太的全球網絡。',
     testimonial: testimonials[2],

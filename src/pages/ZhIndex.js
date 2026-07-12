@@ -36,8 +36,8 @@ const ZhIndex = () => (
               <Link to="/zh">你好。</Link>
             </h1>
             <p>
-              我幫助機構與專業人士以真正落地的方式應用 AI。
-              如果你正在探索培訓、輔導或培訓師發展，你來對地方了。
+              我幫機構和專業人士把 AI 真正用進日常工作。
+              培訓、一對一輔導、培訓師發展——你要找的，都在這裡。
             </p>
           </div>
         </div>
@@ -57,8 +57,8 @@ const ZhIndex = () => (
 
       <section className="section-sunken section-padding">
         <div className="content-wide">
-          <h3>我實際做什麼</h3>
-          <p>三個方式幫助你將 AI 應用到真實工作中：</p>
+          <h3>我做的三件事</h3>
+          <p>把 AI 帶進真實工作，有三條路徑：</p>
           <div className="card-grid cols-3">
             <div className="card">
               <h4>企業工作坊</h4>
