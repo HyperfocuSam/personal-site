@@ -1,4 +1,4 @@
-# What 118 Minutes With an E-Commerce Team Revealed About AI Adoption Gaps
+# Three AI Gaps in an E-Commerce Team Already at 70-80% Adoption
 
 On March 11, I took the high-speed rail from Hong Kong to Shenzhen's Futian district -- an 18-minute ride across the border -- to spend two hours with an e-commerce team I used to work with. The company sells smart health devices globally, with 40,000+ monthly orders on their flagship product and nearly 380,000 Amazon reviews across their catalog. They operate in the US, Japan, Germany, and other European markets. By any measure, this is a company that understands scale.
 
@@ -50,7 +50,7 @@ The design team had a parallel version of this problem. They were generating ima
 
 When I opened the floor to questions, the first hand that went up was about data security. "What happens to our product data when we upload it to these AI tools? Can competitors access it?"
 
-This is the question that stops organizations in their tracks. I have written about the [Traffic Light Protocol](/blog/traffic-light-protocol-ai-safety) before -- it is the single most effective framework I have found for unblocking AI adoption in security-conscious environments. I shared the same model with this team:
+This is the question that stops organizations in their tracks. The [Traffic Light Protocol](/blog/traffic-light-protocol-ai-safety) -- which I have written about before -- was the model I shared with this team:
 
 **Green:** Public data, general knowledge queries. Use freely with any AI tool.
 **Yellow:** Internal company data that is not customer-sensitive. Use with cloud AI tools, but strip identifiers and be selective about what you upload.
@@ -72,9 +72,7 @@ For an e-commerce team producing content across six markets, the implications ar
 
 Before the visit, I had researched 10 specific AI application areas for e-commerce: Amazon listing optimization, review mining, ad copy generation, multilingual content, visual content, customer service automation, demand forecasting, competitive intelligence, social media marketing, and internal operations.
 
-I came with stats. AI-optimized Amazon listings convert 15-30% higher. AI sentiment analysis hits 89.7% accuracy versus 74.3% for rule-based systems. AI demand forecasting reduces stockouts by up to 65%.
-
-But the numbers that resonated most with this team were not the aspirational ones. They were the immediate ones: listing creation dropping from 4 hours to 30 minutes. The ability to process 380,000 product reviews in hours instead of never. Content localization costs falling 50-80% per market.
+I came with stats -- the vendor-benchmark kind, conversion lifts and accuracy percentages. Those landed politely and changed nothing. The numbers that resonated with this team were the immediate ones: listing creation dropping from 4 hours to 30 minutes. The ability to process 380,000 product reviews in hours instead of never. Content localization costs falling 50-80% per market.
 
 For a company selling the same products in the US, Japan, and Europe, multilingual content is arguably the highest-ROI AI investment. Each market needs not just translation but localization -- different tone, different SEO keywords, different regulatory language, different cultural context. Traditional translation costs $50-150 per language per SKU. AI localization brings that to $5-15, with same-day turnaround instead of a week.
 
@@ -88,4 +86,4 @@ This team had the willingness and the tools. What they needed was the methodolog
 
 ---
 
-*I train corporate teams on practical AI adoption -- from initial awareness to embedded workflows. If your e-commerce or cross-border team is using AI but not seeing consistent results, I have probably seen your exact problem before. See my [corporate AI training services](/services) or see my [corporate AI training services](/services) or connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*
+*I train corporate teams on practical AI adoption -- from initial awareness to embedded workflows. If your e-commerce or cross-border team is using AI but not seeing consistent results, I have probably seen your exact problem before. See my [corporate AI training services](/services) or connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*

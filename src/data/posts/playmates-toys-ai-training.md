@@ -10,7 +10,7 @@ Playmates Toys is publicly listed, with separate HK and US operations. The Hong 
 
 We structured the engagement as Tier 1 -- what I call the "Magic Show" format. Two sessions designed to build general awareness and executive buy-in, not hands-on skill building. Session one on January 6 focused on AI trends in Hong Kong, multimodal capabilities, and the demo that would determine whether Tier 2 ever happened. Session two on February 9 covered practical productivity workflows for the broader staff.
 
-The total fee for both sessions was USD 4,250, which included a 15% partnership launch discount. I mention this because pricing transparency matters. Too many training providers hide behind "contact us for a quote" when the real question organizations have is straightforward: what does this cost, and is it worth it?
+I told them the price up front, before the first session was booked. Pricing transparency matters -- too many training providers hide behind "contact us for a quote" when the real question organizations have is straightforward: what does this cost, and is it worth it?
 
 ## The Gardening Demo That Closed the Deal
 
@@ -78,4 +78,4 @@ The engagement also validated something I have been refining in my approach: the
 
 ---
 
-*I run AI adoption training for corporate teams across Hong Kong and Asia. If your organization is exploring AI training -- whether for 12 people or 1,200 -- I would be glad to talk through what a practical engagement looks like. See my [corporate AI training services](/services) or see my [corporate AI training services](/services) or connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*
+*I run AI adoption training for corporate teams across Hong Kong and Asia. If your organization is exploring AI training -- whether for 12 people or 1,200 -- I would be glad to talk through what a practical engagement looks like. See my [corporate AI training services](/services) or connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*

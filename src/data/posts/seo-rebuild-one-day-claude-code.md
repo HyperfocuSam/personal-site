@@ -68,11 +68,9 @@ All in about seven hours.
 
 The technical work wasn't hard. Schema markup, hreflang tags, internal linking -- these are well-documented practices. What was hard was doing all of it at once across 30+ files without introducing errors. That's where AI-assisted execution changes the equation.
 
-I didn't use Claude Code because I couldn't do this work manually. I used it because [the gap between knowing what to do and actually doing it](/blog/84-percent-never-used-ai) across an entire site is where most solo practitioners get stuck. You know you should add internal links. You know you should have structured data. But touching 26 files for a "should" task always loses to client work and deadlines.
+It wasn't that I couldn't do this manually. [The gap between knowing what to do and actually doing it](/blog/84-percent-never-used-ai) across an entire site is where solo practitioners get stuck -- that's what Claude Code closed. You know you should add internal links. You know you should have structured data. But touching 26 files for a "should" task always loses to client work and deadlines.
 
 AI didn't do this for me. It made the "should" tasks take hours instead of weeks. That's the difference.
-
-The best time to fix your SEO was six months ago. The second best time is one focused night with a good co-pilot.
 
 ---
 

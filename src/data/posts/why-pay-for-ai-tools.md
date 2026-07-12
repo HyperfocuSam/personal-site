@@ -60,7 +60,7 @@ Most users never switch between models. They don't even know the option exists.
 
 If you're paying for ChatGPT Plus (or any premium AI tool) and haven't touched these, you're leaving most of the value on the table.
 
-**1. The model selector.** It's in the top-left corner of ChatGPT. A simple dropdown. You can switch between 4o, o3, and other models depending on your task. I estimate 7 out of 10 paying users have never touched this. It's the single highest-leverage feature in the product.
+**1. The model selector.** It's in the top-left corner of ChatGPT. A simple dropdown. You can switch between 4o, o3, and other models depending on your task. It's the single most valuable switch in the product, and I estimate 7 out of 10 paying users have never touched it.
 
 **2. Deep Search and web browsing.** ChatGPT can search the internet in real time, cross-reference sources, and even connect to your Gmail and Google Calendar. This transforms it from a static knowledge base into a live research assistant. Most users don't know this mode exists because they never looked past the default chat interface.
 
@@ -74,7 +74,7 @@ The percentage of people actually using AI at its full capability is probably in
 
 This is the competitive landscape right now. Not in five years. Right now. If you invest the time to [learn your tools properly](/blog/ai-tool-stack-3000-professionals) — not just subscribe, but actually learn — you're operating at a level that the vast majority of your peers and competitors haven't reached.
 
-The taxi driver wasn't wrong that AI costs money. He was wrong that it's a scam. The real scam is paying for a tool and never learning to use it.
+The taxi driver wasn't wrong that AI costs money. He was wrong that it's a scam. If you're paying the $20 already, open the model selector and the Settings panel this week — that's where the other two bedrooms are.
 
 ---
 

@@ -622,7 +622,7 @@ const posts = [
   },
   {
     slug: 'renpho-ecommerce-ai-shenzhen',
-    title: 'What 118 Minutes With an E-Commerce Team Revealed About AI Adoption Gaps',
+    title: 'Three AI Gaps in an E-Commerce Team Already at 70-80% Adoption',
     date: '2026-03-11',
     excerpt: 'A Shenzhen visit exposed a pattern I see everywhere: teams using AI at 50% efficiency because nobody taught them model selection.',
     tags: ['case-study', 'e-commerce', 'ai-adoption'],

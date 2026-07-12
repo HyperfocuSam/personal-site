@@ -14,7 +14,11 @@ If you missed the first episode -- where we talked about why paying for AI tools
 
 We live in an environment designed to fracture attention. Notifications, tabs, email threads, Slack channels -- every knowledge worker knows the feeling of sitting down to do deep work and surfacing three hours later having done nothing of substance.
 
+<<<<<<< HEAD
 This isn't theoretical -- ADHD means focus isn't a productivity hack for me. It's the difference between a productive day and a lost one.
+=======
+This isn't theoretical for me. I have ADHD. Focus isn't a productivity hack for me -- it's the difference between a productive day and a lost one.
+>>>>>>> p10/polish-nz
 
 Over the past two years, I've found three AI tools that meaningfully changed how I work. Not tools that promise to "10x your productivity" (I'm skeptical of any tool that makes that claim). Tools that solve specific, real problems in my daily workflow.
 
@@ -30,7 +34,11 @@ This doesn't replace judgment. It replaces the mechanical scanning that drains a
 
 Meetings fragment focus like nothing else. You sit through 60 minutes of discussion, capture maybe 40% of what was said, then spend 30 minutes reconstructing the rest.
 
+<<<<<<< HEAD
 AI transcription tools solve this completely -- Ro.am is the one in my meeting stack. But the real value isn't the transcript -- it's the freedom to be fully present in the conversation. When you know the AI is capturing everything, you stop context-switching between "listening" and "note-taking" modes.
+=======
+AI transcription solves this completely -- Gemini handles mine. But the real value isn't the transcript -- it's the freedom to be fully present in the conversation. When you know the AI is capturing everything, you stop context-switching between "listening" and "note-taking" modes.
+>>>>>>> p10/polish-nz
 
 The result: better conversations, better decisions, and zero post-meeting reconstruction time.
 

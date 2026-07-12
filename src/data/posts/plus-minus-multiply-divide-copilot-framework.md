@@ -34,11 +34,11 @@ This is the move most internal training skips. They teach prompting; they don't 
 
 Multiply is where most people freeze, because the word "agent" has been overused into uselessness. I treat it operationally: an agent is a Plus and a Minus you've already decided on, plus a fixed output shape, saved so you don't have to re-explain them.
 
-I live-build a Receipt Reading Agent in front of the room. Five fictional Hong Kong receipts (a cha chaan teng, a supermarket run, a smudged taxi receipt, a SF Express slip, an office-supplies bundle). The agent's job: read each receipt, output a JSON object with fields a Hong Kong accountant would actually want — date, vendor, total, GST, category, payment method, suggested ledger code. The same prompt, every time, with the same output shape.
+In front of the room, I live-build a Receipt Reading Agent. Five fictional Hong Kong receipts (a cha chaan teng, a supermarket run, a smudged taxi receipt, a SF Express slip, an office-supplies bundle). The agent's job: read each receipt, output a JSON object with fields a Hong Kong accountant would actually want — date, vendor, total, GST, category, payment method, suggested ledger code. The same prompt, every time, with the same output shape.
 
 The room sees that an agent isn't a robot. It's a deliberate decision to stop repeating yourself. The second agent — a raw-material research agent that pulls F&B ingredient pricing from the last 30 days with three sources required — extends the same principle to web search. Multiply is the operator that turns one good prompt into a hundred uses.
 
-## Divide: custom instructions are the cheapest leverage
+## Divide: custom instructions are the cheapest win
 
 Divide is the least dramatic move and the highest return. You carve out a default behaviour so you stop having to specify it. Five templates in the workshop: finance briefing condenser, purchasing negotiation prep, audit-trail discipline, risk-flag preference, report length cap.
 
