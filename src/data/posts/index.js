@@ -7,7 +7,7 @@ const posts = [
   {
     slug: 'three-us-businesses-one-hong-kong-trainer',
     title: 'Three US Businesses, One Hong Kong Trainer',
-    date: '2026-07-12',
+    date: '2026-07-10',
     excerpt: 'Between April and June 2026, I ran three remote AI coaching sessions for US businesses -- a realty firm, a skincare founder, and an equipment dealer. Here\'s what makes a single-session coaching call produce something worth the time.',
     tags: ['remote-coaching', '1:1', 'us-businesses', 'hong-kong', 'workflow'],
     type: 'methodology',
@@ -17,7 +17,7 @@ const posts = [
   {
     slug: 'three-us-businesses-one-hong-kong-trainer-tc',
     title: '三間美國公司，一個香港 AI 教練：遙距一對一怎樣才有用',
-    date: '2026-07-12',
+    date: '2026-07-10',
     excerpt: '2026 年 4 至 6 月，三節來自美國的單次 AI coaching call——沒有課程、沒有後續合約，有用的原因是同一個三步結構：call 前拿到真實任務、工具配對任務、一起做出一個 output。',
     tags: ['remote-coaching', '1:1', 'us-businesses', 'hong-kong', 'workflow'],
     type: 'methodology',
@@ -28,7 +28,7 @@ const posts = [
   {
     slug: 'why-my-best-ai-workshops-have-thirteen-people',
     title: 'Why My Best AI Workshops Have Thirteen People, Not Five Hundred',
-    date: '2026-07-12',
+    date: '2026-06-21',
     excerpt: 'The industry counts reach. But the AI training sessions where workflow actually changes have thirteen people in them, every screen visible, every problem solved in real time.',
     tags: ['workshop-design', 'small-group', 'corporate-training', 'adoption', 'workflow'],
     type: 'insight',
@@ -38,7 +38,7 @@ const posts = [
   {
     slug: 'why-my-best-ai-workshops-have-thirteen-people-tc',
     title: '為什麼我最好的 AI 工作坊是十三個人，不是五百人',
-    date: '2026-07-12',
+    date: '2026-06-21',
     excerpt: '十三人的房間為什麼比五百人的 webinar 更能改變 workflow：三個具體機制——每個螢幕都看得見、session 可以為一個人停、參加者用自己的材料——加上一個講清楚的代價。',
     tags: ['workshop-design', 'small-group', 'corporate-training', 'adoption', 'workflow'],
     type: 'insight',
@@ -49,7 +49,7 @@ const posts = [
   {
     slug: 'one-jewellery-brand-two-ai-trainings-in-two-days',
     title: 'One Jewellery Brand, Two AI Trainings in Two Days: Design, Then Operations',
-    date: '2026-07-12',
+    date: '2026-06-14',
     excerpt: 'A Hong Kong jewellery retailer booked one AI session for its design team, then booked a second for operations the next day. What the two curricula looked like, and what cross-department demand actually signals.',
     tags: ['corporate-training', 'repeat-booking', 'adoption', 'jewellery', 'hong-kong'],
     type: 'case-study',
@@ -58,7 +58,7 @@ const posts = [
   {
     slug: 'what-a-500-person-ai-webinar-can-and-cant-do',
     title: 'What a 500-Person AI Webinar Can and Can\'t Do',
-    date: '2026-07-12',
+    date: '2026-06-30',
     excerpt: 'I delivered a firmwide AI awareness webinar for Publicis Groupe in Hong Kong. About 500 people. Here\'s what a broadcast that size can realistically do, what it can\'t, and the three design choices that make it worth running.',
     tags: ['corporate-training', 'publicis', 'webinar', 'awareness', 'adoption', 'broadcast'],
     type: 'insight',
@@ -67,7 +67,7 @@ const posts = [
   {
     slug: '180-people-six-sessions-one-pattern',
     title: '180 People, Six Sessions, One Pattern',
-    date: '2026-07-12',
+    date: '2026-07-04',
     excerpt: 'Across six different AI sessions and 180 participants at one organisation, the pattern was consistent -- the executives were more anxious than their staff. What this means for who you train first.',
     tags: ['executive-training', 'corporate-ai', 'adoption', 'hierarchy', 'hong-kong'],
     type: 'insight',
@@ -76,7 +76,7 @@ const posts = [
   {
     slug: 'what-120-ceos-asked-after-the-ai-demo',
     title: 'What 120 CEOs Asked After the AI Demo',
-    date: '2026-07-12',
+    date: '2026-06-16',
     excerpt: 'At the YPO AI Advantage Summit in Los Angeles, 120 CEOs asked questions that had nothing to do with AI. They asked about creativity, their children, and whether they\'d started too late. Here are the answers.',
     tags: ['corporate-ai-training', 'ypo', 'hong-kong', 'international'],
     type: 'reflection',
@@ -87,7 +87,7 @@ const posts = [
   {
     slug: 'what-120-ceos-asked-after-the-ai-demo-tc',
     title: '為 120 位 CEO 示範 AI 之後，他們問的問題與 AI 無關',
-    date: '2026-07-12',
+    date: '2026-06-16',
     excerpt: '2025 年 11 月，洛杉磯 YPO 峰會上，120 位 CEO 在 AI 示範後提出的問題涉及創意、子女出路與起步時機，而非技術本身。本文整理這些問題的答案。',
     tags: ['corporate-ai-training', 'ypo', 'hong-kong', 'international'],
     type: 'reflection',
@@ -97,19 +97,9 @@ const posts = [
     linkedPost: 'what-120-ceos-asked-after-the-ai-demo',
   },
   {
-    slug: '1400-signups-25-seats-which-number-measures-ai-adoption',
-    title: '1,400 Free Signups, 25 Paid Seats: Which Number Measures AI Adoption?',
-    date: '2026-07-12',
-    excerpt: 'DotAI\'s free livestream drew 1,400 registrations. The paid bootcamp filled 25 seats. Both numbers are mine. Here\'s what they actually measure, and three questions to ask before you buy AI training.',
-    tags: ['ai-education', 'adoption', 'dotai', 'honest-numbers'],
-    type: 'insight',
-    featured: false,
-    linkedPost: '1400-signups-25-seats-which-number-measures-ai-adoption-tc',
-  },
-  {
     slug: '1400-signups-25-seats-which-number-measures-ai-adoption-tc',
     title: '1,400 人免費報名，25 個付費名額：AI 培訓該看哪個數字？',
-    date: '2026-07-12',
+    date: '2026-07-08',
     excerpt: '1,400 個免費報名與 25 個付費名額，量度的其實是兩件不同的事。AI 培訓的價值，往往不在觸及數字裡。文末有買 AI 培訓前值得先問的三條問題。',
     tags: ['ai-education', 'adoption', 'dotai', 'honest-numbers'],
     type: 'insight',
@@ -120,7 +110,7 @@ const posts = [
   {
     slug: 'garden-ai-training-year-six-departments',
     title: 'A Year of AI Training at Garden: Six Departments, Twenty Sessions',
-    date: '2026-07-12',
+    date: '2026-06-24',
     excerpt: 'What happens when a company doesn\'t just book one AI workshop, but keeps going -- department by department -- for a full year.',
     tags: ['enterprise-adoption', 'garden', 'corporate-training', 'workflow'],
     type: 'case-study',
@@ -130,7 +120,7 @@ const posts = [
   {
     slug: 'garden-ai-training-year-six-departments-tc',
     title: '嘉頓一年 AI 培訓：六個部門，二十節課',
-    date: '2026-07-12',
+    date: '2026-06-24',
     excerpt: '從一場標準 AI 工作坊開始，嘉頓六個部門在一年內上了約二十節課，超過一百名員工受訓，5 月評估達 4.48 分。',
     tags: ['enterprise-adoption', 'garden', 'corporate-training', 'workflow'],
     type: 'case-study',
@@ -141,7 +131,7 @@ const posts = [
   {
     slug: 'five-things-every-ai-trainer-should-prepare',
     title: 'Five Things Every AI Trainer Should Prepare -- and the One That Saves You',
-    date: '2026-07-12',
+    date: '2026-07-02',
     excerpt: 'After enough broken demos and quiet rooms, the preparation for any AI training engagement crystallized into five outputs. Here\'s what they are.',
     tags: ['train-the-trainer', 'adaptig', 'corporate-training', 'methodology'],
     type: 'methodology',
@@ -151,7 +141,7 @@ const posts = [
   {
     slug: 'two-workshops-one-day-parents-kids',
     title: 'Two Workshops, One Day: Parents in the Morning, Kids in the Afternoon',
-    date: '2026-07-12',
+    date: '2026-06-19',
     excerpt: 'A parent workshop about AI fears at a Hong Kong school in the morning. A children\'s AI build in the afternoon. Same tools, same city, and the working answers I\'ve started giving parents since.',
     tags: ['ai-education', 'parents', 'children', 'hong-kong', 'adoption'],
     type: 'reflection',
@@ -161,7 +151,7 @@ const posts = [
   {
     slug: 'two-workshops-one-day-parents-kids-tc',
     title: '同一日兩場 AI 工作坊：上午教家長，下午教小朋友',
-    date: '2026-07-12',
+    date: '2026-06-19',
     excerpt: '同一日，上午我在香港一間中學向約一百位家長講 AI，下午二十個孩子用 AI 生成海報；本文是我實際給家長的答案。',
     tags: ['ai-education', 'parents', 'children', 'hong-kong', 'adoption'],
     type: 'reflection',
@@ -172,7 +162,7 @@ const posts = [
   {
     slug: 'what-smes-actually-ask-about-ai',
     title: 'What SMEs Actually Ask About AI',
-    date: '2026-07-12',
+    date: '2026-06-27',
     excerpt: 'I sat on a panel at an HKPC expo for small businesses. The prepared answers were fine. The audience\'s questions were better — here are the actual answers.',
     tags: ['sme', 'ai-adoption', 'hong-kong', 'hkpc', 'conference'],
     type: 'insight',
