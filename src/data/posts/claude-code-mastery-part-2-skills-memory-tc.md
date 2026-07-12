@@ -34,11 +34,11 @@
 
 ### 第 3 層：策展記憶
 
-21 個 `Memory/memory_*.md` 檔案，一客戶一檔、一領域一檔：`memory_adaptig_garden.md`、`memory_playmates_toys_hk.md`、`memory_dorich.md`。每個頂部有 status header：目前階段、上一張 invoice、未交付項、關鍵聯絡人。
+21 個 `Memory/memory_*.md` 檔案，一客戶一檔、一領域一檔，每個以客戶命名。每個頂部有 status header：目前階段、上一張 invoice、未交付項、關鍵聯絡人。
 
-關鍵行為：對話中提到客戶名，Claude 自動先載入那個客戶的檔案再回應——不用吩咐，因為 CLAUDE.md 寫了。這是 Agno 的 pattern：retrieval on mention。我說一聲「Garden」，Claude 已知道現在是 Batch 2、Top Management 工作坊已確認、GARDEN-2026-003 那張 HKD 63K 的 invoice 已發出。
+關鍵行為：對話中提到客戶名，Claude 自動先載入那個客戶的檔案再回應——不用吩咐，因為 CLAUDE.md 寫了。這是 Agno 的 pattern：retrieval on mention。我說一聲「Garden」，Claude 已知道現在是 Batch 2、Top Management 工作坊已確認、最新一張 invoice 已發出。
 
-另有 `memory_people.md`——跨客戶聯絡人目錄，收錄 41 人。有人說「check with Joanne」，Claude 查到 Joanne Chan 是 HKCT 的聯絡人，載入 HKCT 檔案。兩跳，零阻力。
+另有 `memory_people.md`——跨客戶聯絡人目錄。我用名字提及某位聯絡人，Claude 查到他屬於哪個客戶，載入該客戶的檔案。兩跳，零阻力。
 
 ### 第 4 層：Knowledge base
 
@@ -99,9 +99,9 @@ description: Create and publish blog posts to hyperfocusam.com
 
 星期一早上，打開 Claude Code。未打任何字，它已載入：最後 10 條 worklog（在跟誰工作、有甚麼未完）、todo 檔今天到期的事、一行「上次做到哪」的確認。
 
-我打：「Follow up with Joanne about the HKCT training on March 27.」
+我打：「Follow up with the contact about the training session.」
 
-Claude 不會問 Joanne 是誰、HKCT 是甚麼、哪個 training。它已查 `memory_people.md` 找到 HKCT 之下的 Joanne Chan，載入 `memory_hkct.md`，知道這是 AI Learning Community 項目、HKD 240K、24 個月、第一節 training 在 3 月 27 日。它用 `email-drafting` skill 起草、經 Google Workspace 整合以 sam@adaptig.com 發出、記錄 worklog、更新 HKCT 記憶檔的跟進時間。
+Claude 不會問那位聯絡人是誰、屬於哪個客戶。它已查 `memory_people.md` 找到那位聯絡人所屬的客戶，載入該客戶的記憶檔，知道項目歷史和下一步。它用 `email-drafting` skill 起草、經 Google Workspace 整合以 sam@adaptig.com 發出、記錄 worklog、更新該客戶記憶檔的跟進時間。
 
 我一句話，系統 6 個協調動作。
 

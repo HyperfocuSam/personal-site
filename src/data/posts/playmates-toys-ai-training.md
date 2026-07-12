@@ -6,7 +6,7 @@ That smallness turned out to be the most important feature of the entire engagem
 
 ## The Setup
 
-Playmates Toys is publicly listed, with separate HK and US operations. The Hong Kong team approached us through a referral in late 2025. Their initial concerns were standard: data security anxiety, tool confusion (they were already using Microsoft Copilot through their enterprise license but had no structured approach), and a boss with a very specific personal interest that needed addressing before anything else could proceed.
+Playmates Toys is publicly listed, with separate HK and US operations. The Hong Kong team approached us through a referral in late 2025. Their initial concerns were standard: data security anxiety, tool confusion (they were already using Microsoft Copilot through their enterprise license but had no structured approach), and a specific request that needed addressing before anything else could proceed.
 
 We structured the engagement as Tier 1 -- what I call the "Magic Show" format. Two sessions designed to build general awareness and executive buy-in, not hands-on skill building. Session one on January 6 focused on AI trends in Hong Kong, multimodal capabilities, and the demo that would determine whether Tier 2 ever happened. Session two on February 9 covered practical productivity workflows for the broader staff.
 
@@ -16,11 +16,11 @@ I told them the price up front, before the first session was booked. Pricing tra
 
 Before I could teach anyone anything about prompt engineering or data safety, I had to solve a landscaping problem.
 
-The boss at Playmates had a specific interest: he wanted to see AI applied to garden design. Could you take a photo of existing planters, add reference images of specific flowers, and generate a visualization of what the redesigned garden would look like? This wasn't a toy industry use case. It was a personal curiosity. But it was also the gate through which every subsequent training dollar would pass.
+The first request wasn't a toy-industry use case at all: applying AI to garden design -- take a photo of existing planters, add reference images of specific flowers, and generate a visualization of the redesigned garden. An unusual starting point, but a real one, and getting it right was what opened the door to everything that followed.
 
 I used Google AI Studio with Gemini's image generation capabilities -- what we internally call Nano Banana Pro -- to demonstrate the workflow. Upload a photo, provide reference images, annotate where you want changes, and generate. The output was not perfect, but it was good enough to demonstrate the concept of iterative visual prompting with reference images.
 
-The boss smiled. Tier 2 workshops for Marketing, Design, and Finance were approved in principle the same day.
+It landed. Tier 2 workshops for Marketing, Design, and Finance were approved in principle the same day.
 
 This is a pattern I see repeatedly in corporate AI training. The person who controls the budget rarely cares about the same things as the people who will use the tools daily. You have to address the decision-maker's curiosity first, on their terms, before the organization gives you permission to do the actual work. I have written about this dynamic in the context of [executive versus staff training gaps](ai-maturity-trap-stuck-stage-one) -- the interests diverge, and a good trainer bridges both.
 
@@ -72,7 +72,7 @@ The tradeoff is obvious: small groups are expensive per participant. The economi
 
 ## What Happened Next
 
-Tier 1 was invoiced and paid. As of March 2026, we are in discussions about Tier 2 -- department-specific workshops for Marketing/Design and Finance, each a half-day hands-on format at an external training center. The Marketing workshop was originally planned for post-Chinese New Year; the Finance team is unavailable until April due to year-end closing cycles.
+Tier 1 was completed. As of March 2026, discussions about Tier 2 were underway -- department-specific workshops for Marketing/Design and Finance, each a half-day hands-on format at an external training center. The Marketing workshop was originally planned for post-Chinese New Year; the Finance team is unavailable until April due to year-end closing cycles.
 
 The engagement also validated something I have been refining in my approach: the [tool-agnostic teaching method](/blog/why-i-teach-copilot-not-chatgpt). I did not teach "how to use ChatGPT." I taught how to communicate with AI systems using transferable skills -- role setup, structured output, iterative refinement. When the tools change (and they will change), the skills remain.
 

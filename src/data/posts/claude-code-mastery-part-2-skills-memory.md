@@ -37,13 +37,13 @@ This is the chronological backbone. When I open a new session, Claude reads the 
 
 ### Tier 3: Curated Memory
 
-Twenty-one files following the pattern `Memory/memory_*.md` — one per client, one per major domain. `memory_adaptig_garden.md`. `memory_playmates_toys_hk.md`. `memory_dorich.md`. Each one has a status header at the top: current engagement phase, last invoice, outstanding deliverables, key contacts.
+Twenty-one files following the pattern `Memory/memory_*.md` — one per client, one per major domain. Each one has a status header at the top: current engagement phase, last invoice, outstanding deliverables, key contacts.
 
 The key behavior: when I mention a client name in conversation, Claude auto-loads that client's memory file before responding. I don't ask it to. It just does, because CLAUDE.md tells it to.
 
-This is the Agno pattern — retrieval on mention. No manual context loading. No "let me remind you about Garden." I say "Garden" and Claude already knows we're in Batch 2, that the Top Management workshop is confirmed, and that invoice GARDEN-2026-003 for HKD 63K has been sent.
+This is the Agno pattern — retrieval on mention. No manual context loading. No "let me remind you about Garden." I say "Garden" and Claude already knows we're in Batch 2, that the Top Management workshop is confirmed, and that the latest invoice has gone out.
 
-There's also `memory_people.md` — a cross-client contacts directory. 41 people indexed. When someone says "check with Joanne," Claude looks up Joanne Chan, finds she's the HKCT contact, and loads the HKCT memory file. Two hops. Zero friction.
+There's also `memory_people.md` — a cross-client contacts directory. When someone says "check with a contact," Claude looks up the contact, finds their client, and loads that client's memory file. Two hops. Zero friction.
 
 ### Tier 4: Knowledge Base
 
@@ -131,9 +131,9 @@ Monday morning. I open Claude Code. Before I type anything, it's already loaded:
 - Today's deadlines from the todo file
 - A one-line acknowledgment of where we left off
 
-I type: "Follow up with Joanne about the HKCT training on March 27."
+I type: "Follow up with the contact about the training session."
 
-Claude doesn't ask who Joanne is. It doesn't ask what HKCT is. It doesn't ask about the training. It already loaded `memory_people.md`, found Joanne Chan under HKCT, loaded `memory_hkct.md`, and knows this is the AI Learning Community engagement at HKD 240K over 24 months with the first training on March 27.
+Claude doesn't ask who the contact is or which client they belong to. It already loaded `memory_people.md`, found the contact and their client, loaded that client's memory file, and knows the engagement history and the next step.
 
 It drafts the email. It uses the `email-drafting` skill for tone and formatting. It sends via `sam@adaptig.com` through the Google Workspace integration. It logs the action to worklogs. It updates the HKCT memory file with the follow-up timestamp.
 

@@ -25,7 +25,7 @@ But I don't know if it works the same way in education. Corporate participants h
 
 ## The Part That Surprised Me
 
-In April, the program shifted from staff training to a student workshop. Joanne, my contact at HKCT, sent over a poster for review. I wasn't expecting it. The original plan was 24 months of staff development. But the Student Affairs office had been watching, and they wanted in.
+In April, the program shifted from staff training to a student workshop. My contact at HKCT sent over a poster for review. I wasn't expecting it. The original plan was 24 months of staff development. But the Student Affairs office had been watching, and they wanted in.
 
 This is the pattern I've been describing in corporate settings for two years — train the pioneers, and demand spreads organically. I just hadn't seen it happen in a school before. The staff program is two sessions old, and the institution is already expanding scope beyond the original brief. Whether that's a sign of healthy adoption or scope creep I need to manage, I honestly don't know yet.
 

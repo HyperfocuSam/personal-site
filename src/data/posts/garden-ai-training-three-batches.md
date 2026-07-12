@@ -12,7 +12,7 @@ HR teams bring a specific kind of fear to AI training. They worry about confiden
 
 Garden's HR cohort started at Stage 2 on the [AI Maturity model](/blog/ai-maturity-trap-stuck-stage-one) — people had heard of AI tools and tried a few, but nobody had a consistent workflow. Six sessions to build foundations: what Copilot can actually do, what the security tiers mean in practice, how to save two hours a week on tasks you already dislike doing.
 
-The security architecture was fixed before I arrived. Nigel, the IT lead, had set the boundaries. Copilot as the primary tool. Tier 1 work — research, summarization — is fine. Tier 2 — formatting, drafting — is fine. Tier 3, anything touching internal customer data, P&L figures, or employee records, stays offline. I agreed with that call. Still do. Working within an institution's actual risk appetite is the job, not a constraint on the job.
+The security architecture was fixed before I arrived. The IT lead had set the boundaries. Copilot as the primary tool. Tier 1 work — research, summarization — is fine. Tier 2 — formatting, drafting — is fine. Tier 3, anything touching internal customer data, P&L figures, or employee records, stays offline. I agreed with that call. Still do. Working within an institution's actual risk appetite is the job, not a constraint on the job.
 
 ## By Batch 2, I Had Rebuilt Roughly 60% of the Content
 
@@ -36,7 +36,7 @@ I will be honest about this: I don't know if it will land. HR and Sales at this 
 
 The April 20 Business Leaders session is technically the same cohort from Session I — Garden's senior management. But the content is completely different. This time it's about AI Agents: Copilot's hidden functions, prompt optimization, building a simple automation. The question at the executive level is not whether to use AI — they've already made that call. The question is what to do once the team below them is using it, and the gap between departments is more visible.
 
-Bess, the MD, made one specific request: no Claude Code. She wants the session built around what is already deployed across the organization, not what's theoretically possible. I think that's the right call. When executives see a capability that the rest of their team can't access, either they get excited about something unimplementable, or they tune out because it doesn't apply to their context. Working inside the constraint is the actual job.
+The managing director made one specific request: no Claude Code. She wants the session built around what is already deployed across the organization, not what's theoretically possible. I think that's the right call. When executives see a capability that the rest of their team can't access, either they get excited about something unimplementable, or they tune out because it doesn't apply to their context. Working inside the constraint is the actual job.
 
 ## What AI Maturity Actually Looks Like Across One Organization
 

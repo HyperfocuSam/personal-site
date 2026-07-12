@@ -135,7 +135,7 @@ The system compensates for every one of these:
 
 **The InstructionsLoaded hook is my "where was I?" button.** Every session starts with automatic context. I do not have to remember where I left off. The worklog tells me.
 
-**The memory system is external working memory.** I do not have to remember that Garden is in Batch 2, that the invoice was HKD 63K, that the Top Management workshop is confirmed. It is in `memory_adaptig_garden.md`. Claude loads it the moment I say "Garden."
+**The memory system is external working memory.** I do not have to remember which batch a client is in, what the last invoice covered, or which workshop is confirmed. It is in that client's memory file. Claude loads it the moment I say "Garden."
 
 **The follow-up tracker is automatic nagging.** My `/followups` command classifies every open todo as OVERDUE, DUE SOON, WAITING, or STALE. I do not have to maintain a mental list of commitments. The system maintains it and flags what needs attention.
 
