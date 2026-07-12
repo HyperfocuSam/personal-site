@@ -175,12 +175,12 @@ const methodologies = [
 const faqItems = [
   {
     q: 'How much does corporate AI training cost in Hong Kong?',
-    a: 'Pricing depends on format, duration, team size, and'
-      + ' customization level. Half-day awareness workshops,'
-      + ' full-day productivity sessions, and multi-week Pioneer'
-      + ' Programs are all available. Contact for a custom quote.'
-      + ' Some programs may qualify for TVP or other Hong Kong'
-      + ' government funding schemes.',
+    a: 'Corporate training typically runs HKD 15,000–50,000 per'
+      + ' session or day, depending on format and depth — contact me'
+      + ' for a scoped quote. Half-day awareness workshops, full-day'
+      + ' productivity sessions, and multi-week Pioneer Programs are'
+      + ' all available. Some programs may qualify for TVP or other'
+      + ' Hong Kong government funding schemes.',
   },
   {
     q: 'Are workshops available in Cantonese?',

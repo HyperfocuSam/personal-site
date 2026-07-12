@@ -283,7 +283,7 @@ const Services = () => {
                   name: 'How much does corporate AI training cost in Hong Kong?',
                   acceptedAnswer: {
                     '@type': 'Answer',
-                    text: 'Corporate AI training pricing varies based on format, duration, and team size. Sam Wong offers half-day and full-day workshops, multi-session Pioneer Programs (typically 6 sessions over 6 weeks), and executive advisory packages. Contact for a custom quote based on your team\'s needs. Some programs may be eligible for Hong Kong government funding schemes.',
+                    text: 'Corporate training typically runs HKD 15,000–50,000 per session or day, depending on format and depth — contact me for a scoped quote. Sam Wong offers half-day and full-day workshops, multi-session Pioneer Programs (typically 6 sessions over 6 weeks), and executive advisory packages. Some programs may be eligible for Hong Kong government funding schemes.',
                   },
                 },
                 {
