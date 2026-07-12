@@ -4,11 +4,7 @@ This week I was in a meeting with someone who ran AI adoption across KPMG in the
 
 A pension fund in the UK distributed laptops with [Copilot pre-installed and zero training](/blog/microsoft-copilot-training-hong-kong). No onboarding session. No documentation beyond what Microsoft ships by default. The procurement team checked a box. The AI transformation was declared underway.
 
-<<<<<<< HEAD
-After training over 10,000 professionals across 70+ organizations in six countries, I've seen this pattern so many times that I have my own number for it: [roughly 4% of participants sustain meaningful AI use after a one-off workshop](/blog/why-ai-training-doesnt-stick). Four percent lasting adoption. Ninety-six percent revert to their old workflows within two weeks.
-=======
 After 10,000+ professionals across 70+ organizations in six countries, I have my own number for this pattern: [roughly 4% of participants sustain meaningful AI use after a one-off workshop](/blog/why-ai-training-doesnt-stick). Four percent lasting adoption. Ninety-six percent revert to their old workflows within two weeks.
->>>>>>> p10/polish-nz
 
 The 9% activation rate and my 4% adoption rate are measuring different things, but they're pointing at the same problem. The gap between buying AI and using AI is not a technology gap. It's a human gap.
 
@@ -46,11 +42,7 @@ The difference is structural. In a one-off workshop, I teach you what AI can do.
 
 Here's what continuous looks like in practice:
 
-<<<<<<< HEAD
-- **Month 1:** Introduction. NotebookLM walkthrough. "Here's what's possible."
-=======
 - **Month 1:** Introduction. NotebookLM, properly -- not a demo. "Here's what's possible."
->>>>>>> p10/polish-nz
 - **Month 2:** Advanced features of the tool they're actually using. Address specific blockers from Month 1.
 - **Month 3-6:** Department-specific applications. Real workflows, real data, real problems.
 - **Ongoing:** WhatsApp community where staff ask questions and share wins. I respond. Peers respond. A culture forms.
@@ -76,11 +68,7 @@ If you're planning an AI rollout, here's what your budget should look like:
 - 40% on tools and infrastructure
 - 60% on training, champions, and ongoing support
 
-<<<<<<< HEAD
-Most organizations run 95/5 or worse. Then they blame the tool.
-=======
 Budget 60% for the humans, 40% for the tools. Most organizations run 95/5 and then blame the tool.
->>>>>>> p10/polish-nz
 
 ---
 
