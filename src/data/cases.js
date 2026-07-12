@@ -65,7 +65,7 @@ const cases = [
     receipts: ['Live AI demonstrations on stage at the Skirball Cultural Center'],
     summary: 'Flown to Los Angeles to show a room of company presidents what AI actually does — live, unscripted, on stage.',
     blogSlug: null,
-    image: null,
+    image: '/images/blog/ypo-la-skirball-demo.jpg',
   },
   {
     id: 'playmates-hk',
@@ -89,6 +89,18 @@ const cases = [
     receipts: ['Launch keynote, two hands-on agent classes, one alumni clinic'],
     summary: 'From a four-digit livestream audience to small hands-on rooms teaching people to run AI agents — the full range in one program.',
     blogSlug: 'openclaw-ai-agents-talk',
+    image: null,
+  },
+  {
+    id: 'publicis',
+    period: 'Feb 2026',
+    org: 'Publicis Groupe (Hong Kong)',
+    title: 'Firmwide AI awareness webinar',
+    type: 'Webinar',
+    scale: '~500 participants',
+    receipts: ['Level 1 AI awareness session delivered firmwide'],
+    summary: 'A single webinar reaching an entire agency network\'s Hong Kong operation — awareness at the scale only a broadcast format can deliver.',
+    blogSlug: null,
     image: null,
   },
   {
