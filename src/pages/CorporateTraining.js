@@ -326,6 +326,15 @@ const CorporateTraining = () => (
             <Link to="/book" className="button">
               Book a Free Discovery Call
             </Link>
+            {' '}
+            <a
+              href="https://wa.me/85264315177"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button-secondary"
+            >
+              WhatsApp us
+            </a>
           </p>
         </div>
       </header>

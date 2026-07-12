@@ -110,15 +110,15 @@ MCP stands for Model Context Protocol. It's a standard that lets Claude Code con
 
 I currently have 15+ MCP integrations running. Claude Code can read my email, check my calendar, send WhatsApp messages, create documents in Craft, search the web, control a headless browser, and interact with client management tools. All from the same terminal.
 
-I'm not going to deep-dive MCP in Part 1 -- that's Part 3 of this series. But I mention it here because understanding that MCP exists changes how you think about Claude Code from the start. This isn't a code editor with AI. It's an operating system for AI agents.
+I'm not going to deep-dive MCP in Part 1. But I mention it here because understanding that MCP exists changes how you think about Claude Code from the start. This isn't a code editor with AI. It's an operating system for AI agents.
 
 ## What Comes Next
 
 This is Part 1 of the Claude Code Mastery series. Here's what's ahead:
 
 - **Part 2: Skills and Memory** -- how to give Claude Code persistent knowledge, reusable skills, and the ability to learn from past sessions
-- **Part 3: MCP Integrations** -- connecting Claude Code to your actual tools and building real workflows
-- **Part 4: Hooks and Automation** -- event-driven behavior, policy enforcement, and building systems that run without you
+- **Part 3: Hooks & Guardrails** -- making AI safe to automate: PreToolUse validation, prompt injection scanning, and a policy engine
+- **Part 4: Agent Teams & Automation** -- your AI workforce: delegation rules, parallel execution, and cost-aware model selection
 
 If you've read my posts on [building a voice mode for Claude Code](/blog/i-built-voice-mode-claude-code) or [turning it into an RTK-style strategy game](/blog/ada-gersang-gamifying-claude-code), you've already seen what the endpoint looks like. This series is the path from zero to there.
 
