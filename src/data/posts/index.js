@@ -97,15 +97,13 @@ const posts = [
     linkedPost: 'what-120-ceos-asked-after-the-ai-demo',
   },
   {
-    slug: '1400-signups-25-seats-which-number-measures-ai-adoption-tc',
-    title: '1,400 人免費報名，25 個付費名額：AI 培訓該看哪個數字？',
+    slug: '1400-signups-25-seats-which-number-measures-ai-adoption',
+    title: '1,400 Free Signups, 25 Paid Seats: Which Number Measures AI Adoption?',
     date: '2026-07-08',
-    excerpt: '1,400 個免費報名與 25 個付費名額，量度的其實是兩件不同的事。AI 培訓的價值，往往不在觸及數字裡。文末有買 AI 培訓前值得先問的三條問題。',
+    excerpt: 'DotAI\'s free livestream drew 1,400 registrations. The paid bootcamp filled 25 seats. Both numbers are mine. Here\'s what they actually measure, and three questions to ask before you buy AI training.',
     tags: ['ai-education', 'adoption', 'dotai', 'honest-numbers'],
     type: 'insight',
-    language: 'zh-Hant',
     featured: false,
-    linkedPost: '1400-signups-25-seats-which-number-measures-ai-adoption',
   },
   {
     slug: 'garden-ai-training-year-six-departments',
