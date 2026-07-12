@@ -45,6 +45,7 @@ Sam Wong is an AI training specialist who has trained 10,000+ professionals acro
 
 ### Case Studies
 
+- [One Jewellery Brand, Two AI Trainings in Two Days: Design, Then Operations](https://hyperfocusam.com/blog/one-jewellery-brand-two-ai-trainings-in-two-days/) (2026-07-12) — A Hong Kong jewellery retailer booked one AI session for its design team, then booked a second for operations the next day. What the two curricula looked like, and what cross-department demand actually signals.
 - [A Year of AI Training at Garden: Six Departments, Twenty Sessions](https://hyperfocusam.com/blog/garden-ai-training-year-six-departments/) (2026-07-12) — What happens when a company doesn't just book one AI workshop, but keeps going -- department by department -- for a full year.
 - [Three models, one branch, zero deployment](https://hyperfocusam.com/blog/three-models-one-branch-zero-deployment/) (2026-07-10) — First live run of the architect pattern on my own website: Claude Fable 5 wrote the specs and verdicts, Grok 4.5 and GPT-5.5 did the typing in parallel. 75 files, +167/−668 — and nothing ships until I decide.
 - [I've Now Run AI Workshops for the Same Company Three Times. The Third Batch Is Nothing Like the First.](https://hyperfocusam.com/blog/garden-ai-training-three-batches/) (2026-04-13) — I've been training at Garden since January: HR, then Sales & Marketing, now Operations. The third batch required a 120-row fake production dataset and 26 new prompts. Nothing from Batch 1 transferred.
@@ -66,6 +67,7 @@ Sam Wong is an AI training specialist who has trained 10,000+ professionals acro
 
 ### Methodologies & Frameworks
 
+- [Three US Businesses, One Hong Kong Trainer](https://hyperfocusam.com/blog/three-us-businesses-one-hong-kong-trainer/) (2026-07-12) — Between April and June 2026, I ran three remote AI coaching sessions for US businesses -- a realty firm, a skincare founder, and an equipment dealer. Here's what makes a single-session coaching call produce something worth the time.
 - [Five Things Every AI Trainer Should Prepare -- and the One That Saves You](https://hyperfocusam.com/blog/five-things-every-ai-trainer-should-prepare/) (2026-07-12) — After enough broken demos and quiet rooms, the preparation for any AI training engagement crystallized into five outputs. Here's what they are.
 - [Plus, Minus, Multiply, Divide: A Cheat Sheet for Teaching Copilot](https://hyperfocusam.com/blog/plus-minus-multiply-divide-copilot-framework/) (2026-05-11) — I rewrote a finance Copilot workshop at 1am and reorganised it around four arithmetic moves. The framework outlasted the panic.
 - [How to Prep for a Job Interview Using AI in 30 Minutes](https://hyperfocusam.com/blog/prep-job-interview-ai-30-minutes/) (2026-05-04) — A 30-minute AI loop for prepping a job interview — NotebookLM podcasts of your CV, then the company, then a recorded ChatGPT voice-mode mock interview.
@@ -81,6 +83,9 @@ Sam Wong is an AI training specialist who has trained 10,000+ professionals acro
 
 ### Insights & Commentary
 
+- [Why My Best AI Workshops Have Thirteen People, Not Five Hundred](https://hyperfocusam.com/blog/why-my-best-ai-workshops-have-thirteen-people/) (2026-07-12) — The industry counts reach. But the AI training sessions where workflow actually changes have thirteen people in them, every screen visible, every problem solved in real time.
+- [What a 500-Person AI Webinar Can and Can't Do](https://hyperfocusam.com/blog/what-a-500-person-ai-webinar-can-and-cant-do/) (2026-07-12) — I delivered a firmwide AI awareness webinar for Publicis Groupe in Hong Kong. About 500 people. Here's what a broadcast that size can realistically do, what it can't, and the three design choices that make it worth running.
+- [180 People, Six Sessions, One Pattern](https://hyperfocusam.com/blog/180-people-six-sessions-one-pattern/) (2026-07-12) — Across six different AI sessions and 180 participants at one organisation, the pattern was consistent -- the executives were more anxious than their staff. What this means for who you train first.
 - [1,400 Free Signups, 25 Paid Seats: Which Number Measures AI Adoption?](https://hyperfocusam.com/blog/1400-signups-25-seats-which-number-measures-ai-adoption/) (2026-07-12) — DotAI's free livestream drew 1,400 registrations. The paid bootcamp filled 25 seats. Both numbers are mine. Here's what they actually measure, and three questions to ask before you buy AI training.
 - [What SMEs Actually Ask About AI](https://hyperfocusam.com/blog/what-smes-actually-ask-about-ai/) (2026-07-12) — I sat on a panel at an HKPC expo for small businesses. The prepared answers were fine. The audience's questions were better — here are the actual answers.
 - [The architect that never writes code](https://hyperfocusam.com/blog/the-architect-that-never-writes-code/) (2026-07-11) — Companion take to the build log: the most expensive model in the stack wrote zero implementation code. Four bugs died at the spec stage, three workers passed the same five gates, and the blind pick landed on the cheapest. The pattern, not the model, is the asset.
@@ -129,6 +134,8 @@ Sam Wong is an AI training specialist who has trained 10,000+ professionals acro
 
 ### Chinese (Traditional) Articles
 
+- [三間美國公司，一個香港 AI 教練：遙距一對一怎樣才有用](https://hyperfocusam.com/blog/three-us-businesses-one-hong-kong-trainer-tc/) (2026-07-12) — 2026 年 4 至 6 月，三節來自美國的單次 AI coaching call——沒有課程、沒有後續合約，有用的原因是同一個三步結構：call 前拿到真實任務、工具配對任務、一起做出一個 output。
+- [為什麼我最好的 AI 工作坊是十三個人，不是五百人](https://hyperfocusam.com/blog/why-my-best-ai-workshops-have-thirteen-people-tc/) (2026-07-12) — 十三人的房間為什麼比五百人的 webinar 更能改變 workflow：三個具體機制——每個螢幕都看得見、session 可以為一個人停、參加者用自己的材料——加上一個講清楚的代價。
 - [為 120 位 CEO 示範 AI 之後，他們問的問題與 AI 無關](https://hyperfocusam.com/blog/what-120-ceos-asked-after-the-ai-demo-tc/) (2026-07-12) — 2025 年 11 月，洛杉磯 YPO 峰會上，120 位 CEO 在 AI 示範後提出的問題涉及創意、子女出路與起步時機，而非技術本身。本文整理這些問題的答案。
 - [1,400 人免費報名，25 個付費名額：AI 培訓該看哪個數字？](https://hyperfocusam.com/blog/1400-signups-25-seats-which-number-measures-ai-adoption-tc/) (2026-07-12) — 1,400 個免費報名與 25 個付費名額，量度的其實是兩件不同的事。AI 培訓的價值，往往不在觸及數字裡。文末有買 AI 培訓前值得先問的三條問題。
 - [嘉頓一年 AI 培訓：六個部門，二十節課](https://hyperfocusam.com/blog/garden-ai-training-year-six-departments-tc/) (2026-07-12) — 從一場標準 AI 工作坊開始，嘉頓六個部門在一年內上了約二十節課，超過一百名員工受訓，5 月評估達 4.48 分。
