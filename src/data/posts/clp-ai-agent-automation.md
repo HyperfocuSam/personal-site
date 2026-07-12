@@ -24,7 +24,7 @@ The core of the workshop was a classification system I've been refining through 
 
 **Level 5 -- LLM-Supported Workflow Systems.** Multi-branch automation where AI handles decision points. The same email arrives, but now the system routes it differently based on AI classification -- urgent vs. routine, internal vs. external, action-required vs. FYI. This is where real process automation begins.
 
-**Level 6 -- Self-Built Python Agent Ecosystem.** Custom agent systems built with code. I briefly showed my own setup: a main AI agent managing specialized sub-agents for different task domains. I also demonstrated ElevenLabs voice agents -- I built a CLP customer service voice agent live in the session, using a knowledge base of CLP information and a cloned voice to answer questions verbally. This was the moment the room went quiet, in a good way.
+**Level 6 -- Self-Built Python Agent Ecosystem.** Custom agent systems built with code. I briefly showed my own setup: a main AI agent managing specialized sub-agents for different task domains. The ElevenLabs demo went further -- a CLP customer service voice agent built live in the session, using a knowledge base of CLP information and a cloned voice to answer questions verbally. This was the moment the room went quiet, in a good way.
 
 **Level 7 -- IDE/CLI-Based Agentic Interface.** Tools like Claude Code, Gemini CLI, or Codex where the AI operates directly in a development environment with full system access. This is the bleeding edge. I showed it not because CLP needs it now, but because understanding where the ceiling is helps you plan the stairs.
 
@@ -58,4 +58,4 @@ For CLP, the answer starts with report automation, data analysis, and document p
 
 ---
 
-*I run AI adoption workshops for enterprise teams across Hong Kong. If your organization is trying to figure out where AI agents fit in your operations, I'd welcome a conversation. See my [corporate AI training services](/services) or see my [corporate AI training services](/services) or connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*
+*I run AI adoption workshops for enterprise teams across Hong Kong. If your organization is trying to figure out where AI agents fit in your operations, I'd welcome a conversation. See my [corporate AI training services](/services) or connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*

@@ -87,6 +87,8 @@ The rule is simple: if steps don't depend on each other, run them in parallel. I
 
 ## Cron Jobs: Automation Without Supervision
 
+*Editor's note (July 2026): the autonomous publishing pipeline and morning-briefing jobs described below have been paused since early July 2026; posts now go through a review gate.*
+
 Agent teams become transformative when you combine them with scheduled execution. Here are the seven cron jobs that run my business while I sleep.
 
 | Job | Schedule | What It Does |

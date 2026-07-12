@@ -20,7 +20,7 @@ For CTS, these questions had an additional layer of complexity. Their business s
 
 Most AI training in Hong Kong [defaults to Western tools](/blog/why-i-teach-copilot-not-chatgpt) - ChatGPT, Copilot, Midjourney. For CTS, this would have been a mistake.
 
-Their operations span the mainland China market, where these tools are either inaccessible or impractical. Instead, we focused on [China's AI ecosystem](/blog/renpho-ecommerce-ai-shenzhen): Doubao (ByteDance's AI assistant) and Dreamina (their image generation platform). These tools don't require VPNs, work seamlessly on mobile, and are designed for Chinese language interactions.
+Their operations span the mainland China market, where these tools are either inaccessible or impractical. Instead, we focused on [China's AI ecosystem](/blog/renpho-ecommerce-ai-shenzhen): Doubao (ByteDance's AI assistant) and Dreamina (their image generation platform). These tools don't require VPNs, work well on mobile, and are designed for Chinese language interactions.
 
 This wasn't just a practical choice - it was a strategic one. Executives who only know Western AI tools can't effectively guide China-focused operations. By training on China-native platforms, we equipped the management team to make informed decisions about AI deployment across their entire business.
 
@@ -56,11 +56,11 @@ CTS handles thousands of customer feedback touchpoints - post-tour surveys, onli
 
 We showed executives how AI can rapidly process and synthesize customer feedback, identifying patterns and generating recommendation summaries that feed directly into strategic decisions. The output: presentation-ready insight documents that would have taken days to compile manually.
 
-## The 80/20 Principle for AI Adoption
+## The 70/30 Split for AI Adoption
 
-Throughout the session, I emphasized a framework that resonated strongly with the management team: the 80/20 principle for human-AI collaboration.
+Throughout the session, I emphasized a framework that resonated strongly with the management team: the 70/30 human-AI split.
 
-AI can handle roughly 80% of execution work - drafting, processing, generating, organizing. The remaining 20% - judgment, context, stakeholder management, strategic framing - remains irreducibly human.
+AI handles the repetitive structural parts - roughly 30%: drafting, processing, generating, organizing. The remaining 70% - judgment, context, stakeholder management, strategic framing - remains irreducibly human.
 
 This framing accomplishes two things. It sets realistic expectations about what AI can and can't do. And it clarifies the management role: not learning to operate AI, but learning to direct it. Executives don't need to master prompt engineering. They need to know what outputs to request and how to evaluate what they receive.
 

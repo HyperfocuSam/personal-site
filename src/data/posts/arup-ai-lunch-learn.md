@@ -1,10 +1,10 @@
 # What Happens When 50 Engineers Get 45 Minutes with AI
 
-Here's an unconventional training format: a lunch break, a room full of engineers, and a challenge to rethink how they approach their daily work. When Arup, the global engineering consultancy behind landmarks like the Sydney Opera House and the Bird's Nest Stadium, invited me to run an AI session for their Hong Kong team, the brief was clear: make it practical, make it fast, and make it stick.
+The brief was clear: make it practical, make it fast, and make it stick. Arup — the global engineering consultancy behind landmarks like the Sydney Opera House and the Bird's Nest Stadium — had invited me to run an AI session for their Hong Kong team in an unconventional format: a lunch break, a room full of engineers, and a challenge to rethink how they approach their daily work.
 
 ![Delivering AI training to Arup's engineering team in Hong Kong](/images/blog/arup-ai-workshop.jpg)
 
-What emerged was a framework I now call "C-How Thinking" - and it changed how I approach corporate AI training.
+What emerged was a framework I now call "C-How Thinking".
 
 ## The Problem With Tool-Centric Training
 
@@ -36,7 +36,7 @@ The revelation for most participants wasn't either tool individually. It was the
 
 I deliberately avoided showing every tool capability. Instead, we focused on one complete workflow: brief to draft to visual. Participants left with something they could replicate tomorrow morning, not a mental catalogue of features they'd forget by next week.
 
-**Lesson 2: Safety Unlocks Experimentation**
+**Lesson 2: Safety Comes Before Experimentation**
 
 Before touching any tool, we spent ten minutes on data governance. What can you input? What should you never input? For engineers handling sensitive project data, this wasn't a compliance checkbox - it was the permission they needed to actually use these tools without anxiety.
 
@@ -56,12 +56,8 @@ The cross-pollination was organic and unexpected. By framing AI as a thinking pa
 
 Training engineers on AI isn't about showing them impressive demos. It's about reducing the cognitive overhead between their expertise and its expression. When a brilliant technical insight can flow from thought to draft to presentation in minutes rather than hours, something fundamental changes in how teams approach their work.
 
-The technology is moving fast. But the core principle stays constant: AI's value isn't in what it can do. It's in what it lets you focus on instead.
+The technology keeps moving. The format held up, though: one complete workflow, ten minutes on data safety, and the rest of the workday to test it. If you're planning a session for a technical team, start there.
 
 ---
 
 *If you're exploring AI training for technical teams and want to discuss what might work for your organization, connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*
-
----
-
-*I design and deliver [corporate AI training programs](/services) for teams across Hong Kong and Asia-Pacific. See my full range of [training services](/corporate-ai-training-hong-kong).*

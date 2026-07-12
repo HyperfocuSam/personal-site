@@ -83,8 +83,6 @@ AI change management is not a new discipline. It borrows heavily from organizati
 
 The companies that get this right are building internal AI capability, not dependency on external trainers. The goal of every program I run is to make itself unnecessary within 12–18 months. If the Pioneers are still waiting for me to tell them what to do by Session 6, I've failed.
 
-Prompts are a starting point. Behavior change is the answer.
-
 ## Sources & Further Reading
 
 - McKinsey, "[The State of AI in 2025](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai)" (Nov 2025) -- 88% of organizations use AI, but nearly two-thirds have not begun scaling it across the enterprise.

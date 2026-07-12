@@ -4,7 +4,7 @@ If you're an HR or L&D leader in Hong Kong shopping for AI training, you've prob
 
 The problem isn't finding AI training. It's finding AI training that actually changes how your team works.
 
-I've delivered over 180 workshops across 70+ organizations and trained 10,000+ professionals on AI adoption. I'm obviously not a neutral party here -- I sell training too. But I've also seen what works and what doesn't from the inside, across banking, retail, engineering, education, and tourism. Here's an honest framework for evaluating your options.
+I've delivered over 180 workshops across 70+ organizations and trained 10,000+ professionals on AI adoption. Full disclosure: I sell training too, so discount accordingly. What follows is what I've seen work and fail from the inside, across banking, retail, engineering, education, and tourism -- an honest framework for evaluating your options.
 
 ## The Five Types of AI Training Available in Hong Kong
 

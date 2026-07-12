@@ -85,7 +85,7 @@ Every meaningful action: log to worklogs BEFORE responding.
 
 That file is 200+ lines in production. It contains business context, client databases, communication rules, error handling policies, and integration configurations. Every time I start a session, Claude Code loads it and operates within those constraints.
 
-This is the real unlock. Without CLAUDE.md, Claude Code is a smart assistant with amnesia. With it, Claude Code is a team member who remembers the rules.
+This is the real shift. Without CLAUDE.md, Claude Code is a smart assistant with amnesia. With it, Claude Code is a team member who remembers the rules.
 
 ## Your First Real Task
 
@@ -122,7 +122,7 @@ This is Part 1 of the Claude Code Mastery series. Here's what's ahead:
 
 If you've read my posts on [building a voice mode for Claude Code](/blog/i-built-voice-mode-claude-code) or [turning it into an RTK-style strategy game](/blog/ada-gersang-gamifying-claude-code), you've already seen what the endpoint looks like. This series is the path from zero to there.
 
-The gap between "I installed Claude Code" and "Claude Code runs my business" is not talent or technical skill. It's a mental model shift. Tools, not chat. Systems, not prompts. And a CLAUDE.md file that tells your agent who it is.
+The gap between "I installed Claude Code" and "Claude Code runs my business" is not talent or technical skill. It's a mental model shift.
 
 If it's not in CLAUDE.md, it remembers nothing.
 

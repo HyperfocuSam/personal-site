@@ -37,7 +37,7 @@ Each mercenary's stats reflect their actual utility in my workflow, computed fro
 
 This was the design decision I'm most pleased with. Early on, I made the mistake of showing skills as numeric stat bars — essentially duplicating the five-stat display. It looked wrong immediately. Skills aren't stats. They're discrete abilities you either have or you don't.
 
-So I borrowed from Koei's Romance of the Three Kingdoms XI, which handles this beautifully. Named skills like "Fire God" or "Divine Calculator" that you unlock through specific conditions. Each skill has three tiers:
+So I borrowed from Koei's Romance of the Three Kingdoms XI, which handles this beautifully. Named skills like "Fire God" or "Divine Calculator" that you earn through specific conditions. Each skill has three tiers:
 
 - **Learned (I)** — you've used the tools enough to show competence
 - **Proficient (II)** — regular, sustained usage
@@ -91,7 +91,7 @@ No new infrastructure. No new databases. Just new endpoints on a server that was
 
 Building this in a single session with Ada revealed something I keep seeing in my enterprise AI training work: the best AI integrations don't start from scratch. They layer onto existing workflows.
 
-I didn't set out to build a game. I set out to build an audit logging server for policy enforcement. The game emerged because the data was already there. Every tool call was already being logged. Every session was already being tracked. The gamification layer was just a new lens on existing telemetry.
+The plan was an audit logging server for policy enforcement; the game emerged because the data was already there. Every tool call was already being logged. Every session was already being tracked. The gamification layer was just a new lens on existing telemetry.
 
 This is the same pattern I teach in workshops: don't build an "AI project." Find the workflow you're already doing, find the data you're already generating, and ask what becomes possible when you make it visible.
 

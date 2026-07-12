@@ -25,11 +25,11 @@ The second advantage is cultural. The hardest part of AI adoption isn't the tech
 
 The most common executive excuse I hear: "We're waiting until the tools are more mature." I heard the same thing about email in the late 90s, about cloud storage in 2010, about Slack in 2016. The tools are mature enough. The constraint is not technology.
 
-I catch myself doing a version of this too. I run my entire business on AI — my assistant [Ada manages four companies' operations](/blog/claude-code-mastery-part-5-full-blueprint), my blog publishes autonomously, my morning briefing lands on WhatsApp at 8:30 AM. But there are parts of my workflow I haven't touched because "the tools aren't ready." They probably are. I'm probably just comfortable.
+I catch myself doing a version of this too. My entire business runs on AI — my assistant [Ada manages four companies' operations](/blog/claude-code-mastery-part-5-full-blueprint), my blog publishes autonomously, my morning briefing lands on WhatsApp at 8:30 AM. But there are parts of my workflow I haven't touched because "the tools aren't ready." They probably are. I'm probably just comfortable.
 
 The companies that will dominate their industries in 2027 are not the ones with the best AI tools. They're the ones whose entire workforce knows how to use them. And right now, the bar is: do anything at all.
 
-84% haven't started. If your team has, you're winning. If you haven't, the gap is smaller than you think and the window is wider than you feel.
+84% haven't started. If your team has, you're winning. If you haven't, the gap is smaller than you think. Start anywhere.
 
 ## Sources & Further Reading
 
