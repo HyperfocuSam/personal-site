@@ -15,15 +15,15 @@ At one company, the IT director told me his team flags any AI tool as a security
 
 This is the part companies keep getting wrong. "AI training" in most organizations means someone shows Copilot features for 90 minutes, gets a 9/10 satisfaction score, and leaves. Three weeks later, nothing has changed.
 
-When I [ran a 6-session program for Garden Group's HR team](/blog/how-to-design-ai-pioneer-program), the breakthrough wasn't in session two when they learned Copilot. It was in session five when a participant said "I can figure out what to ask" instead of asking me for a prompt list. That shift — from "give me the 100 prompts" to "I can think through this myself" — is what actual training produces. A webinar can't do that.
+When I [ran a 6-session program for the food manufacturer's HR team](/blog/how-to-design-ai-pioneer-program), the breakthrough wasn't in session two when they learned Copilot. It was in session five when a participant said "I can figure out what to ask" instead of asking me for a prompt list. That shift — from "give me the 100 prompts" to "I can think through this myself" — is what actual training produces. A webinar can't do that.
 
-But here's what I don't know yet: whether that shift sticks after month six. Garden is into Batch 3 now. I'm watching. The early signals are good — participants from Batch 1 are teaching colleagues without being asked. But I don't have a year of data. I'm going on pattern recognition, not proof.
+But here's what I don't know yet: whether that shift sticks after month six. the food manufacturer is into Batch 3 now. I'm watching. The early signals are good — participants from Batch 1 are teaching colleagues without being asked. But I don't have a year of data. I'm going on pattern recognition, not proof.
 
 ## The 84% Number and What It Actually Means
 
 Another stat making rounds: [84% of people have never used AI](/blog/84-percent-never-used-ai). If you're reading this blog, you're almost certainly in the minority. But your colleagues aren't.
 
-When I [trained 1,500 banking professionals at BOCHK](/blog/bochk-banking-ai-training), most of them had never touched an AI tool before walking in. By the end, they were applying the 70/30 split to their daily work. The gap between "never used" and "productive" is smaller than executives think. But someone has to actually bridge it. A memo from HR doesn't count.
+When I [trained 1,500 banking professionals at a major Hong Kong bank](/blog/bochk-banking-ai-training), most of them had never touched an AI tool before walking in. By the end, they were applying the 70/30 split to their daily work. The gap between "never used" and "productive" is smaller than executives think. But someone has to actually bridge it. A memo from HR doesn't count.
 
 ## What I Keep Coming Back To
 

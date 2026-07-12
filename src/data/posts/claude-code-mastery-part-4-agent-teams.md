@@ -61,13 +61,13 @@ Here is every agent I run, what it does, and when it fires.
 
 Each agent has its own MCP server assignments. The comms-agent gets Google Workspace and WhatsApp. The research-agent gets Firecrawl and Exa. The inbox-triage-agent gets Google Workspace but is explicitly read-only -- it can never send, draft, or modify emails. Scope boundaries are not suggestions. They are hard constraints written into each agent's instructions.
 
-The coordinator -- ada-executive-assistant -- has a delegation matrix baked into its system prompt. When I say "draft an invoice for Garden," it does not try to do it itself. It reads the matrix, sees that document generation maps to docs-agent, and delegates. The coordinator's job is routing and synthesis, not execution.
+The coordinator -- ada-executive-assistant -- has a delegation matrix baked into its system prompt. When I say "draft an invoice for a client," it does not try to do it itself. It reads the matrix, sees that document generation maps to docs-agent, and delegates. The coordinator's job is routing and synthesis, not execution.
 
 ## Parallel vs. Sequential: The Architecture Decision
 
 This is where agent teams earn their keep.
 
-**Parallel execution** is for tasks with no dependencies. "Prepare for my meeting with Publicis" spawns three agents simultaneously:
+**Parallel execution** is for tasks with no dependencies. "Prepare for my meeting with a global advertising group" spawns three agents simultaneously:
 
 - research-agent pulls background intel on the client
 - comms-agent surfaces the last five email exchanges
@@ -107,11 +107,11 @@ The morning briefing is the one I notice most. Every weekday at 8:30 AM, before 
 Ada 早晨提醒 03/23:
 
 今日:
-- 14:00 Seneca call (Garden)
+- 14:00 client call
 
 要跟進:
 - [OVERDUE] CTF 發票 — 逾期26日
-- [DUE SOON] Garden 工作坊 — 3日後
+- [DUE SOON] a client 工作坊 — 3日後
 
 Full briefing 喺 Craft.
 ```

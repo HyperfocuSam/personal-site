@@ -14,14 +14,14 @@ const testimonialsZh = [
       + '然後帶來一場改變一切的實戰工作坊。',
     name: 'G.B.',
     title: '總裁',
-    company: 'Bachar Investments',
+    company: 'an investment firm',
   },
   {
     quote: '這次不是一場被動的演示。是親自動手、有人情味、充滿活力。'
       + '團隊離開的時候不只是多了認識，還很期待將學到的東西應用出來。',
     name: 'A.W.',
     title: 'CEO',
-    company: 'Paly Adventures',
+    company: 'an adventure-travel company',
   },
   {
     quote: '有一個真人在房間裡面，完全不同。我們的團隊不覺得自己'
@@ -29,7 +29,7 @@ const testimonialsZh = [
       + '將恐懼變成好奇心。',
     name: 'J.P.',
     title: 'CEO',
-    company: 'Litmus',
+    company: 'a marketing-technology firm',
   },
 ];
 

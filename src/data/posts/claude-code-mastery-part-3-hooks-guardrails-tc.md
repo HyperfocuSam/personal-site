@@ -132,7 +132,7 @@ session 開始時觸發。我的版本注入一段輕量初始化：(1) 讀取 w
 
 不會載入整套記憶系統——那樣會把 token 燒在未必需要的 context 上；只載入剛好夠恢復動力的量。
 
-打開 Claude Code 見到一片空白，和打開見到「上個 session：Garden invoice 已發出。今天有 2 項到期。想從哪裡開始？」——這就是工具和助手的分別。
+打開 Claude Code 見到一片空白，和打開見到「上個 session：a client invoice 已發出。今天有 2 項到期。想從哪裡開始？」——這就是工具和助手的分別。
 
 ## PostToolUse——沉默的防線
 

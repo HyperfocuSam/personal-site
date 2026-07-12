@@ -2,7 +2,7 @@
 
 Hong Kong's 2026-27 Budget earmarked HK$50 million for AI training. Headlines called it a "bold push for citywide AI adoption." But if you're an HR or L&D leader trying to figure out what this actually means for your team, the budget speech doesn't make it easy.
 
-I've delivered AI training to over 10,000 professionals across 70+ organizations in Hong Kong -- Bank of China, Chow Tai Fook, HSBC, CLP, PolyU. Here's what the budget measures actually mean in practice, what they miss, and what you should do regardless.
+I've delivered AI training to over 10,000 professionals across 70+ organizations in Hong Kong -- a major Hong Kong bank, Chow Tai Fook, HSBC, a major Hong Kong utility, PolyU. Here's what the budget measures actually mean in practice, what they miss, and what you should do regardless.
 
 ## What the Budget Actually Includes
 
@@ -30,7 +30,7 @@ The HK$50 million is for public AI literacy -- not corporate training. If you're
 
 **No dedicated corporate AI training subsidy.** Unlike Singapore's SkillsFuture program, which directly subsidizes corporate training, Hong Kong's 2026 measures focus on public literacy and institutional programs rather than private-sector workforce development.
 
-Several industry groups have noted that HK$50 million is "far from adequate" for the scale of transformation needed. For context, I trained 1,530 Bank of China staff across 13 countries in a single engagement. HK$50 million spread across the entire population is a signal of intent, not a training budget.
+Several industry groups have noted that HK$50 million is "far from adequate" for the scale of transformation needed. For context, I trained 1,530 a major Hong Kong bank staff across 13 countries in a single engagement. HK$50 million spread across the entire population is a signal of intent, not a training budget.
 
 ## What This Means for Your Company
 

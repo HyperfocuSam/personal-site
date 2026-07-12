@@ -18,7 +18,7 @@ const groups = [
     title: 'For Organizations',
     subtitle: 'Workshops, training, and events that move teams from interest to real adoption.',
     socialProof:
-      'BOCHK, Chow Tai Fook, Garden, Playmates Toys, HSBC, CLP, YPO.',
+      'a major Hong Kong bank, Chow Tai Fook, the food manufacturer, an international toy company, HSBC, a major Hong Kong utility, YPO.',
     testimonial: testimonials[0],
   },
   {
@@ -235,7 +235,7 @@ const Services = () => {
                   name: 'Who are Sam Wong\'s typical clients for AI training?',
                   acceptedAnswer: {
                     '@type': 'Answer',
-                    text: 'Sam Wong works with enterprises across banking, retail, education, engineering, tourism, and technology sectors. Notable clients include Bank of China (Hong Kong) with 1,530 participants across 13 countries, Chow Tai Fook (three repeat engagements), Hong Kong Jockey Club, HSBC, Arup, PolyU, Mattel, Toyota, and YPO.',
+                    text: 'Sam Wong works with enterprises across banking, retail, education, engineering, tourism, and technology sectors. Notable clients include a major Hong Kong bank with 1,530 participants across 13 countries, Chow Tai Fook (three repeat engagements), Hong Kong Jockey Club, HSBC, Arup, PolyU, Mattel, Toyota, and YPO.',
                   },
                 },
                 {
@@ -299,7 +299,7 @@ const Services = () => {
                   name: 'What industries does Sam Wong provide AI training for in Hong Kong?',
                   acceptedAnswer: {
                     '@type': 'Answer',
-                    text: 'Sam Wong has delivered AI training across banking and finance (Bank of China Hong Kong, HSBC), retail and luxury (Chow Tai Fook, Playmates Toys), engineering (Arup, CLP), education (PolyU, HKCT), tourism (Hong Kong Jockey Club), and professional services. Workshop content is customized to each industry\'s workflows, compliance requirements, and use cases.',
+                    text: 'Sam Wong has delivered AI training across banking and finance (a major Hong Kong bank, HSBC), retail and luxury (Chow Tai Fook, an international toy company), engineering (Arup, a major Hong Kong utility), education (PolyU, HKCT), tourism (Hong Kong Jockey Club), and professional services. Workshop content is customized to each industry\'s workflows, compliance requirements, and use cases.',
                   },
                 },
               ],

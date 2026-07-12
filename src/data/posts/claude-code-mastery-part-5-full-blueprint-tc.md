@@ -50,7 +50,7 @@ Ada/
 
 一個 session 不是一場對話，而是一個具有明確階段的 lifecycle。
 
-**Session start。** InstructionsLoaded hook 觸發。它讀取 worklog 最後 15 行，檢查 priority todo file。在我尚未輸入任何文字之前，Claude 已經知道：上個 session 發送了 Garden invoice，今天有兩個 item 到期，HKCT training 還有四天。兩秒。500 tokens 以下。
+**Session start。** InstructionsLoaded hook 觸發。它讀取 worklog 最後 15 行，檢查 priority todo file。在我尚未輸入任何文字之前，Claude 已經知道：上個 session 發送了 a client invoice，今天有兩個 item 到期，HKCT training 還有四天。兩秒。500 tokens 以下。
 
 **我輸入指令。** CLAUDE.md 提供 project context -- golden rules、business entities、communication style。如果任務足夠複雜，Agent Teams 會 route 至 specialist。Content agent 處理 blog draft。Client-ops agent 處理 invoice。Research agent 處理 analysis。每個 specialist 擁有自己的 context window、自己的 instructions、以及對相關 skills 的 access。
 
@@ -132,7 +132,7 @@ ADHD 意味著我的 working memory 不可靠。我會忘記兩天前對 client 
 
 **InstructionsLoaded hook 是我的「做到哪了？」按鈕。** 每個 session 自動擁有 context。我無需記住上次做到哪裡。Worklog 告訴我。
 
-**Memory system 是外置的 working memory。** 我無需記住某個客戶在第幾個 batch、上一張 invoice 涵蓋甚麼、哪個 workshop 已確認。它都在那個客戶的記憶檔裡。我一說「Garden」，Claude 自動載入。
+**Memory system 是外置的 working memory。** 我無需記住某個客戶在第幾個 batch、上一張 invoice 涵蓋甚麼、哪個 workshop 已確認。它都在那個客戶的記憶檔裡。我一說「a client」，Claude 自動載入。
 
 **Follow-up tracker 是自動化的提醒。** 我的 `/followups` command 將每個 open todo 分類為 OVERDUE、DUE SOON、WAITING、STALE。我無需在腦中維護一份 commitments 清單。System 代為維護，並標記需要關注的項目。
 

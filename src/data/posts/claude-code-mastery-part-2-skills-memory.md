@@ -28,7 +28,7 @@ This is the current conversation. Ephemeral. Gone when the session ends. Every A
 File: `Memory/memory_worklogs.md`. Every meaningful action gets logged here before I see a response. The schema is rigid:
 
 ```
-## 2026-03-23 | Domain: Playmates US | Action: Drafted reply | Outcome: Sent for review | Next: Sam to reply all
+## 2026-03-23 | Domain: an international toy company US | Action: Drafted reply | Outcome: Sent for review | Next: Sam to reply all
 ```
 
 One line tells me when, what domain, what happened, and what's next. The file gets rotated monthly to stay under 15KB. Old entries get archived, not deleted. The constraint matters — if the file grows unchecked, Claude spends tokens reading irrelevant history from two months ago.
@@ -41,7 +41,7 @@ Twenty-one files following the pattern `Memory/memory_*.md` — one per client, 
 
 The key behavior: when I mention a client name in conversation, Claude auto-loads that client's memory file before responding. I don't ask it to. It just does, because CLAUDE.md tells it to.
 
-This is the Agno pattern — retrieval on mention. No manual context loading. No "let me remind you about Garden." I say "Garden" and Claude already knows we're in Batch 2, that the Top Management workshop is confirmed, and that the latest invoice has gone out.
+This is the Agno pattern — retrieval on mention. No manual context loading. No "let me remind you about a client." I say "a client" and Claude already knows we're in Batch 2, that the Top Management workshop is confirmed, and that the latest invoice has gone out.
 
 There's also `memory_people.md` — a cross-client contacts directory. When someone says "check with a contact," Claude looks up the contact, finds their client, and loads that client's memory file. Two hops. Zero friction.
 
@@ -96,7 +96,7 @@ description: Create and publish blog posts to hyperfocusam.com
 5. Cross-post to Substack (full content, not teaser)
 ```
 
-Five steps. Specific paths. Specific commands. No ambiguity. When I say "write a blog post about the Garden workshop," Claude knows exactly where to draft it, where to copy it, how to update the index, and how to deploy. That gets explained once, in the skill file — never again in session.
+Five steps. Specific paths. Specific commands. No ambiguity. When I say "write a blog post about the client workshop," Claude knows exactly where to draft it, where to copy it, how to update the index, and how to deploy. That gets explained once, in the skill file — never again in session.
 
 ### Other Skills Worth Mentioning
 

@@ -375,7 +375,7 @@ const About = () => (
                 name: 'What organizations does Sam Wong work with?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Sam Wong works with Adaptig (Adaptig Group Limited), a global AI trainer network he co-founded spanning North America, Latin America, Europe, and Asia-Pacific. His enterprise clients include Bank of China (Hong Kong), Chow Tai Fook, Hong Kong Jockey Club, HSBC, Arup, PolyU, Mattel, Toyota, China Travel Service, and HKCT.',
+                  text: 'Sam Wong works with Adaptig (Adaptig Group Limited), a global AI trainer network he co-founded spanning North America, Latin America, Europe, and Asia-Pacific. His enterprise clients include a major Hong Kong bank, Chow Tai Fook, Hong Kong Jockey Club, HSBC, Arup, PolyU, Mattel, Toyota, China Travel Service, and HKCT.',
                 },
               },
               {

@@ -99,7 +99,7 @@ Every decision gets logged to a SQLite database at `store/hooks.db`. I can audit
 
 Rate limiting is built in too. Gmail sends are capped at 20 per hour with a 10-second cooldown between calls. Not because I send that many emails, but because a runaway loop in an autonomous agent could burn through your daily send quota in minutes.
 
-The server auto-starts via a macOS LaunchAgent. When my machine boots, the hooks server is already running before I open Claude Code. No manual step, no chance of forgetting.
+The server auto-starts via macOS LaunchAgent. When my machine boots, the hooks server is already running before I open Claude Code. No manual step, no chance of forgetting.
 
 ## Stop Hook: Memory Enforcement
 
@@ -136,7 +136,7 @@ The InstructionsLoaded hook fires at session start. Mine injects a lightweight i
 
 This takes about two seconds. It does not load the entire memory system -- that would burn tokens on context I might not need. It loads just enough to resume momentum.
 
-The difference between opening Claude Code to a blank prompt versus opening it to "Last session: sent Garden invoice. You have 2 items due today. What would you like to focus on?" is the difference between a tool and an assistant.
+The difference between opening Claude Code to a blank prompt versus opening it to "Last session: sent a client invoice. You have 2 items due today. What would you like to focus on?" is the difference between a tool and an assistant.
 
 ## PostToolUse: Silent Defense
 

@@ -9,7 +9,7 @@ import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 const PERSON_ID = `${SITE_URL}/#person`;
 
 const imageDimensions = {
-  '/images/blog/bochk-sam-presenting.webp': { width: 2856, height: 2760 },
+  '/images/blog/sam-virtual-training.webp': { width: 2856, height: 2760 },
   '/images/blog/ctf-workshop-2026.jpeg': { width: 1200, height: 799 },
   '/images/blog/hkct-ai-workshop.jpg': { width: 1200, height: 900 },
 };

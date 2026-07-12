@@ -5,7 +5,7 @@ const testimonialData = {
   // Aggregate stats for the hero section
   stats: {
     satisfaction: '9.2/10',
-    satisfactionSource: 'Bank of China (Hong Kong)',
+    satisfactionSource: 'a major Hong Kong bank',
     participantsServed: '1,500+',
     enterpriseClients: '70+',
   },
@@ -107,7 +107,7 @@ const testimonialData = {
     {
       quote:
         'Finally, AI training that\'s actually useful!',
-      attribution: 'Banking Professional — Bank of China (Hong Kong)',
+      attribution: 'Banking Professional — a major Hong Kong bank',
       category: 'corporate',
       featured: true,
       stat: '9.2/10 satisfaction across 1,500+ participants in 13 countries',
@@ -123,7 +123,7 @@ const testimonialData = {
       quote:
         'Hands-on exercises with different AI models made the session immediately applicable '
         + 'to our daily work.',
-      attribution: 'Participant — Hong Kong 200 Leadership Workshop, Jul 2025',
+      attribution: 'Participant — a youth leadership workshop, Jul 2025',
       category: 'corporate',
     },
     {

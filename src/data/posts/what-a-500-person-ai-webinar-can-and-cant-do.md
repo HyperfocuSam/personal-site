@@ -1,6 +1,6 @@
 # What a 500-Person AI Webinar Can and Can't Do
 
-On February 5, 2026, I delivered an AI awareness webinar for Publicis Groupe in Hong Kong. About five hundred people on the call -- firmwide, the kind of session a global company runs when it decides everyone should have a baseline understanding of what AI tools do.
+On February 5, 2026, I delivered an AI awareness webinar for a global advertising group in Hong Kong. About five hundred people on the call -- firmwide, the kind of session a global company runs when it decides everyone should have a baseline understanding of what AI tools do.
 
 Five hundred is a number worth putting on a slide. It's a less useful number for measuring whether anyone's work looked different by Wednesday.
 
@@ -24,4 +24,4 @@ Second, the live component has to be live. Pre-recorded demos are polished and c
 
 Third, hold real time for questions. The questions that surface at the end of a firmwide session are usually better than anything in the prepared material, because they come from people already thinking about their own work. Those questions -- about language support, about reliability, about whether this replaces their role -- are worth more to the room than any planned slide.
 
-Months after the Publicis session, Adaptig was asked to quote a follow-up for the same client. We declined. The proposed scope didn't include enough follow-up structure to produce a result we'd stand behind. I would rather lose a booking than deliver a session I don't think will change anything. That costs revenue. It's also why the sessions I do take tend to generate repeat bookings -- which, over time, is where the work actually comes from.
+Months after the global advertising group session, Adaptig was asked to quote a follow-up for the same client. We declined. The proposed scope didn't include enough follow-up structure to produce a result we'd stand behind. I would rather lose a booking than deliver a session I don't think will change anything. That costs revenue. It's also why the sessions I do take tend to generate repeat bookings -- which, over time, is where the work actually comes from.

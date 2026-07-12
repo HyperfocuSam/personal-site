@@ -8,12 +8,12 @@ import { stats } from '../data/stats';
 import ContactForm from '../components/Contact/ContactForm';
 
 const topLogos = [
-  { name: 'Bank of China (Hong Kong)', file: 'bochk.png' },
+  { name: 'a major Hong Kong bank', file: 'bochk.png' },
   { name: 'HSBC', file: 'hsbc.png' },
   { name: 'Hong Kong Jockey Club', file: 'hkjc.svg' },
   { name: 'Chow Tai Fook', file: 'ctf.png' },
-  { name: 'CLP', file: 'clp.png' },
-  { name: 'Publicis Groupe', file: 'publicis.png' },
+  { name: 'a major Hong Kong utility', file: 'clp.png' },
+  { name: 'a global advertising group', file: 'publicis.png' },
 ];
 
 const statCards = [
@@ -139,7 +139,7 @@ const GetStarted = () => (
               &ldquo;Finally, AI training that&rsquo;s actually useful!&rdquo;
             </p>
             <footer>
-              <cite>Banking Professional, Bank of China (Hong Kong)</cite>
+              <cite>Banking Professional, a major Hong Kong bank</cite>
             </footer>
           </blockquote>
         </div>

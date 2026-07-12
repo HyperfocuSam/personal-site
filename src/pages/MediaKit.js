@@ -23,7 +23,7 @@ const topics = [
   },
   {
     title: 'What training 3,000 professionals taught me about AI adoption',
-    desc: 'Real patterns from working with BOCHK (1,500 people, 13 countries), Chow Tai Fook, HKJC, and others.',
+    desc: 'Real patterns from working with a major Hong Kong bank (1,500 people, 13 countries), Chow Tai Fook, HKJC, and others.',
   },
   {
     title: 'The hidden features in AI tools that most users never find',
@@ -36,7 +36,7 @@ const topics = [
 ];
 
 const clients = [
-  'Bank of China HK',
+  'a major Hong Kong bank',
   'Chow Tai Fook',
   'Hong Kong Jockey Club',
   'Arup',
@@ -119,7 +119,7 @@ const MediaKit = () => (
             <p>
               {'Sam Wong 是一位AI培訓專家，已為超過10,000名來自銀行、零售、教育及科技行業的專業人士提供培訓。'
                 + '他透過 Adaptig（Adaptig Group Limited）設計及執行企業AI工作坊，'
-                + '協助機構從AI好奇階段進入AI實戰能力階段。客戶包括中銀香港、周大福、香港賽馬會、'
+                + '協助機構從AI好奇階段進入AI實戰能力階段。客戶包括一間大型香港銀行、周大福、香港賽馬會、'
                 + 'Arup 及理工大學。Sam 駐港，專注於改變行為而非純粹提升認知的實用AI應用培訓。'}
             </p>
           </div>

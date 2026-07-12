@@ -15,7 +15,7 @@ const groups = [
     title: '企業服務',
     subtitle: '工作坊、培訓與活動，推動團隊由興趣走向真正應用。',
     socialProof:
-      '中銀香港 (1,530 位參加者, 9.2/10)、周大福 (第三次合作)、匯豐、Playmates Toys、豐田、YPO。',
+      '一間大型香港銀行 (1,530 位參加者, 9.2/10)、周大福 (第三次合作)、匯豐、an international toy company、豐田、YPO。',
     testimonial: testimonials[0],
     primaryCta: {
       cta: '聯絡我們',
@@ -187,7 +187,7 @@ const ZhServices = () => {
                   name: 'Sam Wong 在香港為哪些行業提供 AI 培訓？',
                   acceptedAnswer: {
                     '@type': 'Answer',
-                    text: 'Sam Wong 的 AI 培訓覆蓋銀行及金融業（中銀香港、匯豐）、零售及奢侈品（周大福、Playmates Toys）、工程（奧雅納、中電）、教育（理工大學、HKCT）、旅遊（香港賽馬會）及專業服務。工作坊內容根據每個行業的工作流程、合規要求及實際用途度身定制。',
+                    text: 'Sam Wong 的 AI 培訓覆蓋銀行及金融業（一間大型香港銀行、匯豐）、零售及奢侈品（周大福、an international toy company）、工程（奧雅納、一間香港公用事業公司）、教育（理工大學、HKCT）、旅遊（香港賽馬會）及專業服務。工作坊內容根據每個行業的工作流程、合規要求及實際用途度身定制。',
                   },
                 },
                 {

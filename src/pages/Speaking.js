@@ -51,7 +51,7 @@ const engagements = [
   },
   {
     year: '2024-25',
-    org: 'Bank of China (Hong Kong)',
+    org: 'a major Hong Kong bank',
     title: 'Enterprise AI Training Program',
     description:
       'Comprehensive AI adoption training delivered across 51 sessions in 13 countries.',
@@ -67,10 +67,10 @@ const engagements = [
   },
   {
     year: '2025',
-    org: 'HP',
+    org: 'a global technology company',
     title: 'AI Workplace Experience Day',
     description:
-      'Featured speaker at HP\'s workplace AI experience event in Hong Kong.',
+      'Featured speaker at a global technology company\'s workplace AI experience event in Hong Kong.',
     stat: null,
   },
   {
@@ -115,15 +115,15 @@ const engagements = [
   },
   {
     year: '2025',
-    org: 'HKEJ Master Class',
+    org: 'a local business publication Master Class',
     title: 'Vibe Marketing & AI Employee Mindset',
     description:
-      'Co-created with Hong Kong Economic Journal. Covered the shift from tool awareness to daily AI habit-building.',
+      'Co-created with a local business publication. Covered the shift from tool awareness to daily AI habit-building.',
     stat: null,
   },
   {
     year: '2025',
-    org: 'Hong Kong 200 Leadership Workshop',
+    org: 'a youth leadership workshop',
     title: 'AI for Emerging Leaders',
     description:
       'Workshop designed for Hong Kong\'s next generation of leaders, focusing on practical AI literacy.',
@@ -212,10 +212,10 @@ const schema = {
 const Speaking = () => (
   <Main
     title="Speaking & Events"
-    description="Hong Kong AI keynote speaker and workshop facilitator. Sam Wong delivers talks on practical AI adoption for enterprises. Past events include YPO, Bank of China, HP, MIIT, Chow Tai Fook, and Arup."
+    description="Hong Kong AI keynote speaker and workshop facilitator. Sam Wong delivers talks on practical AI adoption for enterprises. Past events include YPO, a major Hong Kong bank, a global technology company, MIIT, Chow Tai Fook, and Arup."
     canonicalUrl={`${SITE_URL}/speaking`}
     ogTitle="Speaking & Events | Sam Wong"
-    ogDescription="Keynotes, panels, and workshops that shift how teams think about AI. Past events include YPO, Bank of China, HP, and MIIT."
+    ogDescription="Keynotes, panels, and workshops that shift how teams think about AI. Past events include YPO, a major Hong Kong bank, a global technology company, and MIIT."
     ogImage={DEFAULT_OG_IMAGE}
     ogUrl={`${SITE_URL}/speaking`}
     ogType="website"

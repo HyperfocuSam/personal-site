@@ -58,13 +58,13 @@ You are the **Communications Agent** for Ada...
 
 重點不是 agent 的數量，而是每個 agent 的範圍邊界。comms-agent 有 Google Workspace 和 WhatsApp，可以發送、回覆、草擬。inbox-triage-agent 同樣有 Google Workspace，但明文設定為「只讀」——永遠不能發送、起草、修改任何 email。這些不是建議，是寫死在每個 agent 系統指令裡的硬約束。
 
-Coordinator（ada-executive-assistant）的系統 prompt 內建了一張委派矩陣。我說「draft an invoice for Garden」，它不會自己動手——讀矩陣、見到文件生成對應 docs-agent、委派出去。Coordinator 的工作是 routing 和整合，不是執行。這點很重要：當 coordinator 也下場做 task，context window 就開始污染，然後我們又回到單一 agent 的失敗模式。
+Coordinator（ada-executive-assistant）的系統 prompt 內建了一張委派矩陣。我說「draft an invoice for a client」，它不會自己動手——讀矩陣、見到文件生成對應 docs-agent、委派出去。Coordinator 的工作是 routing 和整合，不是執行。這點很重要：當 coordinator 也下場做 task，context window 就開始污染，然後我們又回到單一 agent 的失敗模式。
 
 ## 平行 vs 順序——真正的架構決定
 
 Agent team 真正的回報，在這裡出現。平行執行，用於無依賴的任務。
 
-「Prepare for my meeting with Publicis」同時開 3 個 agent：
+「Prepare for my meeting with a global advertising group」同時開 3 個 agent：
 
 - **research-agent** 拉客戶背景情報  
 - **comms-agent** 撈最近 5 封 email 往來  
@@ -102,11 +102,11 @@ Agent team 再加上排程執行，系統就開始改變性質。以下 7 個 cr
 Ada 早晨提醒 03/23:
 
 今日:
-- 14:00 Seneca call (Garden)
+- 14:00 client call
 
 要跟進:
 - [OVERDUE] CTF 發票 — 逾期26日
-- [DUE SOON] Garden 工作坊 — 3日後
+- [DUE SOON] a client 工作坊 — 3日後
 
 Full briefing 喺 Craft.
 ```

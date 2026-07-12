@@ -68,21 +68,21 @@ const workshops = [
 const industries = [
   {
     name: 'Banking & Finance',
-    clients: 'Bank of China (Hong Kong), HSBC',
+    clients: 'a major Hong Kong bank, HSBC',
     example:
       '1,530 participants across 13 countries. 9.2/10 satisfaction.',
     caseStudy: '/blog/bochk-banking-ai-training',
   },
   {
     name: 'Retail & Luxury',
-    clients: 'Chow Tai Fook, Playmates Toys, FAO Schwarz',
+    clients: 'Chow Tai Fook, an international toy company, FAO Schwarz',
     example:
       '3 repeat engagements with Chow Tai Fook. Design thinking + AI.',
     caseStudy: '/blog/ctf-ai-design-thinking-workshop-2026',
   },
   {
     name: 'Engineering & Energy',
-    clients: 'Arup, CLP',
+    clients: 'Arup, a major Hong Kong utility',
     example:
       'AI lunch-and-learn format for engineering professionals.',
     caseStudy: '/blog/clp-ai-agent-automation',
@@ -103,7 +103,7 @@ const industries = [
   },
   {
     name: 'Professional Services',
-    clients: 'Publicis Groupe, YPO',
+    clients: 'a global advertising group, YPO',
     example:
       'Executive briefings and global leadership events.',
     caseStudy: null,
@@ -112,14 +112,14 @@ const industries = [
 
 const caseStudies = [
   {
-    title: 'Bank of China (Hong Kong)',
+    title: 'a major Hong Kong bank',
     metric: '1,530 participants across 13 countries',
     insight: 'Developed the Traffic Light Protocol for data sensitivity.'
       + ' Spending the first 20 minutes on safety accelerated adoption.',
     link: '/blog/bochk-banking-ai-training',
   },
   {
-    title: 'Garden Group — AI Pioneer Program',
+    title: 'the food manufacturer — AI Pioneer Program',
     metric: '19 HR professionals, 6 sessions, 5-8 hours saved per week',
     insight: 'Proved that multi-session cohorts outperform one-off workshops'
       + ' for lasting behavior change.',
@@ -219,7 +219,7 @@ const faqItems = [
     a: 'Yes. Through Adaptig, Sam has a global trainer network'
       + ' spanning North America, Latin America, Europe, and'
       + ' Asia-Pacific. In-person and virtual formats available.'
-      + ' Bank of China engagement covered 13 countries.',
+      + ' a major Hong Kong bank engagement covered 13 countries.',
   },
 ];
 
@@ -231,8 +231,8 @@ const CorporateTraining = () => (
       + ' Enterprise workshops, prompt engineering training,'
       + ' and AI adoption programs delivered in English and'
       + ' Cantonese. 10,000+ professionals trained, 9.2/10'
-      + ' satisfaction. Bank of China, HSBC, Chow Tai Fook,'
-      + ' CLP, and 70+ organizations served.'
+      + ' satisfaction. a major Hong Kong bank, HSBC, Chow Tai Fook,'
+      + ' a major Hong Kong utility, and 70+ organizations served.'
     }
     canonicalUrl={`${SITE_URL}/corporate-ai-training-hong-kong`}
     ogTitle="Corporate AI Training in Hong Kong | Sam Wong"
@@ -556,7 +556,7 @@ const CorporateTraining = () => (
               &ldquo;Finally, AI training that&rsquo;s actually useful!&rdquo;
             </p>
             <footer>
-              — Banking Professional, Bank of China (Hong Kong)
+              — Banking Professional, a major Hong Kong bank
               <span className="fn-stamp fn-stamp--verified">
                 9.2/10 satisfaction across 1,530 participants
               </span>

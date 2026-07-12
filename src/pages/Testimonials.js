@@ -72,7 +72,7 @@ const schema = [
 const Testimonials = () => (
   <Main
     title="Testimonials"
-    description="Real feedback from 1,500+ AI workshop participants across banking, retail, and education in Hong Kong. Bank of China (Hong Kong): 9.2/10 satisfaction."
+    description="Real feedback from 1,500+ AI workshop participants across banking, retail, and education in Hong Kong. a major Hong Kong bank: 9.2/10 satisfaction."
     canonicalUrl={`${SITE_URL}/testimonials`}
     ogTitle="Testimonials | Sam Wong"
     ogDescription="Real feedback from 1,500+ AI workshop participants and enterprise training clients."

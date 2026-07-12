@@ -12,7 +12,7 @@ const data = [
     desc:
       'AI adoption that sticks. 180+ workshops delivered to 7,000+ participants '
       + 'across 4 continents, powered by a proprietary training platform. '
-      + 'Clients include Bank of China, HSBC, Hong Kong Jockey Club, Mattel, '
+      + 'Clients include a major Hong Kong bank, HSBC, Hong Kong Jockey Club, Mattel, '
       + 'Toyota, YPO, Samsung, Arup, and Diners Club.',
   },
   {

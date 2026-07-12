@@ -27,7 +27,7 @@ I don't start with HR anymore. I start with IT. Every engagement begins with the
 
 When I establish this before training begins, two things happen. The IT director relaxes because there's a boundary he can audit. And employees stop using their phones because they finally have a sanctioned path.
 
-At [BOCHK](/blog/bochk-banking-ai-training), the security framework was in place before a single employee opened an AI tool. That engagement — 1,530 people across 13 countries — had zero data incidents. Not because we avoided AI, but because the IT team felt in control of the boundary from day one.
+At [a major Hong Kong bank](/blog/bochk-banking-ai-training), the security framework was in place before a single employee opened an AI tool. That engagement — 1,530 people across 13 countries — had zero data incidents. Not because we avoided AI, but because the IT team felt in control of the boundary from day one.
 
 ## The Part I Still Get Wrong
 

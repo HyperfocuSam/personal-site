@@ -50,7 +50,7 @@ If a Finance team installs three custom instructions and never touches anything 
 
 Two things, honestly.
 
-The 21-billion-hours-on-Excel opening stat lands hard, but I'm not sure it's the right hook for a Finance audience that already lives in Excel — they don't need to be sold on the size of the problem, they need to be sold on the size of the move. The number works because it's astonishing, but astonishment is not the same as relevance. Next time I'd try the Garden-specific version (which we sized at around 1,125 hours a day across their team) and lose the global stat.
+The 21-billion-hours-on-Excel opening stat lands hard, but I'm not sure it's the right hook for a Finance audience that already lives in Excel — they don't need to be sold on the size of the problem, they need to be sold on the size of the move. The number works because it's astonishing, but astonishment is not the same as relevance. Next time I'd try the the food manufacturer-specific version (which we sized at around 1,125 hours a day across their team) and lose the global stat.
 
 The Magic Moment beat in the middle — a Copilot-makes-a-chart moment between Minus and Multiply — was something I added as insurance against the room going flat. It worked. But if the room is already alive, it's three minutes I'd reclaim. The fallback discipline I built in (口訣: Magic Moment is the first thing cut when running late, Session 2 capture is never cut) survives this critique.
 

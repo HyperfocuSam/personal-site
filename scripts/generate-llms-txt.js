@@ -71,7 +71,7 @@ Sam Wong is an AI training specialist who has trained 10,000+ professionals acro
 
 ## Services
 
-- **Corporate AI Workshops** (via Adaptig): Half-day to multi-day workshops for leadership teams and departments. Human-first facilitation, hands-on exercises tied to real workflows. Clients include Bank of China (Hong Kong), Chow Tai Fook, Hong Kong Jockey Club, HSBC, Mattel, Toyota, Arup, and PolyU.
+- **Corporate AI Workshops** (via Adaptig): Half-day to multi-day workshops for leadership teams and departments. Human-first facilitation, hands-on exercises tied to real workflows. Clients include a major Hong Kong bank, Chow Tai Fook, Hong Kong Jockey Club, HSBC, Mattel, Toyota, Arup, and PolyU.
 - **AI Pioneer Programs**: Multi-session cohort programs (typically 6 sessions) that build lasting AI habits through weekly guided practice on real work tasks. Designed for change management, not just training.
 - **1-1 AI Coaching**: Personalized sessions for professionals. 160+ sessions delivered across industries. Includes discovery calls, standard coaching, and executive advisory tiers.
 - **Train-the-Trainer** (via Adaptig): Certification program for trainers, consultants, and educators who want to teach AI using the Adaptig methodology.
@@ -83,13 +83,13 @@ Sam Wong is an AI training specialist who has trained 10,000+ professionals acro
 - 170+ workshops delivered
 - 70+ organizations served
 - 13 countries reached
-- Bank of China (Hong Kong): 1,530 participants across 13 countries, 9.2/10 satisfaction
+- a major Hong Kong bank: 1,530 participants across 13 countries, 9.2/10 satisfaction
 - Chow Tai Fook: Three repeat engagements
 - 160+ one-on-one coaching sessions delivered
 
 ## Named Frameworks
 
-- **Traffic Light Protocol**: Green/Yellow/Red data sensitivity framework for AI safety in regulated industries (developed with Bank of China HK)
+- **Traffic Light Protocol**: Green/Yellow/Red data sensitivity framework for AI safety in regulated industries (developed with a major Hong Kong bank)
 - **AI Pioneer Model**: Multi-session cohort approach using change management principles
 - **70/30 Human-AI Split**: 70% human judgment, 30% AI assistance
 - **AI Maturity Model**: 4-stage progression from Awareness to Integration to Optimization to Transformation
@@ -140,7 +140,7 @@ Sam Wong is an AI training specialist who has trained 10,000+ professionals acro
 
 ## Services
 
-- **Corporate AI Workshops** (via Adaptig): Half-day to multi-day workshops for leadership teams and departments. Clients include Bank of China, Chow Tai Fook, Hong Kong Jockey Club, HSBC, Arup, and PolyU.
+- **Corporate AI Workshops** (via Adaptig): Half-day to multi-day workshops for leadership teams and departments. Clients include a major Hong Kong bank, Chow Tai Fook, Hong Kong Jockey Club, HSBC, Arup, and PolyU.
 - **AI Pioneer Programs**: 6-session cohort programs that build lasting AI habits through weekly guided practice on real work tasks.
 - **1-1 AI Coaching**: 160+ sessions delivered. Discovery calls, standard coaching, and executive advisory tiers.
 - **Train-the-Trainer** (via Adaptig): Certification for trainers spanning North America, Latin America, Europe, and Asia-Pacific.
@@ -148,7 +148,7 @@ Sam Wong is an AI training specialist who has trained 10,000+ professionals acro
 
 ## Named Frameworks
 
-- **Traffic Light Protocol**: Green/Yellow/Red data sensitivity framework for AI safety in regulated industries (developed with Bank of China HK)
+- **Traffic Light Protocol**: Green/Yellow/Red data sensitivity framework for AI safety in regulated industries (developed with a major Hong Kong bank)
 - **AI Pioneer Model**: Multi-session cohort approach using change management principles \u2014 select 10-20 influential people, train them deeply, they become internal champions
 - **70/30 Human-AI Split**: 70% human judgment, 30% AI assistance \u2014 the ratio that produces sustainable adoption
 - **AI Maturity Model**: 4-stage progression from Awareness to Integration to Optimization to Transformation
@@ -161,7 +161,7 @@ Sam Wong is an AI training specialist who has trained 10,000+ professionals acro
 - 170+ workshops delivered
 - 70+ organizations served
 - 13 countries reached
-- Bank of China (Hong Kong): 1,530 participants across 13 countries, 9.2/10 satisfaction
+- a major Hong Kong bank: 1,530 participants across 13 countries, 9.2/10 satisfaction
 - Chow Tai Fook: 3 repeat engagements
 - 160+ one-on-one coaching sessions
 

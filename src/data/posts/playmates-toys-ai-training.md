@@ -1,12 +1,12 @@
 # What Happens When a Toy Company Takes AI Seriously
 
-I trained the Hong Kong team at Playmates Toys across two sessions in January and February 2026. The engagement was small -- 10 to 12 participants per session, mixed executives and operations staff, 3.5 hours each afternoon at their Kwun Tong office. No massive auditorium. No 500-person webinar. Just a room of people who make decisions about one of the most recognizable toy brands in Asia, trying to figure out what AI actually means for their work.
+I trained the Hong Kong team at an international toy company across two sessions in January and February 2026. The engagement was small -- 10 to 12 participants per session, mixed executives and operations staff, 3.5 hours each afternoon at their Kwun Tong office. No massive auditorium. No 500-person webinar. Just a room of people who make decisions about one of the most recognizable toy brands in Asia, trying to figure out what AI actually means for their work.
 
 That smallness turned out to be the most important feature of the entire engagement.
 
 ## The Setup
 
-Playmates Toys is publicly listed, with separate HK and US operations. The Hong Kong team approached us through a referral in late 2025. Their initial concerns were standard: data security anxiety, tool confusion (they were already using Microsoft Copilot through their enterprise license but had no structured approach), and a specific request that needed addressing before anything else could proceed.
+the company is publicly listed, with separate HK and US operations. The Hong Kong team approached us through a referral in late 2025. Their initial concerns were standard: data security anxiety, tool confusion (they were already using Microsoft Copilot through their enterprise license but had no structured approach), and a specific request that needed addressing before anything else could proceed.
 
 We structured the engagement as Tier 1 -- what I call the "Magic Show" format. Two sessions designed to build general awareness and executive buy-in, not hands-on skill building. Session one on January 6 focused on AI trends in Hong Kong, multimodal capabilities, and the demo that would determine whether Tier 2 ever happened. Session two on February 9 covered practical productivity workflows for the broader staff.
 
@@ -54,11 +54,11 @@ I spent a deliberate segment on data security, using what I call the [traffic li
 
 The golden rule I gave them: if you would not post it on a public notice board, do not paste it into a free AI tool.
 
-This was not a throwaway compliance slide. Playmates had raised data security as a primary concern from the very first meeting in October 2025. Addressing it early and with a clear, memorable framework removed the anxiety that was blocking experimentation. People who feel safe try more things.
+This was not a throwaway compliance slide. the company had raised data security as a primary concern from the very first meeting in October 2025. Addressing it early and with a clear, memorable framework removed the anxiety that was blocking experimentation. People who feel safe try more things.
 
 ## Why Small Groups Work
 
-Most of my engagements are larger. Bank of China was 1,530 participants. [Chow Tai Fook fills conference rooms](/blog/ctf-ai-design-thinking-workshop-2026). The Playmates sessions had 10 to 12 people in each.
+Most of my engagements are larger. a major Hong Kong bank was 1,530 participants. [Chow Tai Fook fills conference rooms](/blog/ctf-ai-design-thinking-workshop-2026). The company sessions had 10 to 12 people in each.
 
 The small format changed the dynamic in ways I want to be honest about:
 
@@ -68,7 +68,7 @@ The small format changed the dynamic in ways I want to be honest about:
 
 **The gardening demo was possible.** In a large session, I would never spend 10 minutes on a single person's niche interest. In this room, that niche interest belonged to the person who signs the checks. The format allowed me to serve the individual while teaching the group.
 
-The tradeoff is obvious: small groups are expensive per participant. The economics only work when the participants are senior enough that their adoption creates downstream impact. At Playmates, training 12 decision-makers who then champion AI adoption across the organization is worth more than training 100 staff members who need permission to change anything.
+The tradeoff is obvious: small groups are expensive per participant. The economics only work when the participants are senior enough that their adoption creates downstream impact. At the company, training 12 decision-makers who then champion AI adoption across the organization is worth more than training 100 staff members who need permission to change anything.
 
 ## What Happened Next
 

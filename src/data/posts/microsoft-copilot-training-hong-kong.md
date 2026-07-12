@@ -12,7 +12,7 @@ When I [wrote about why I teach Copilot instead of ChatGPT](/blog/why-i-teach-co
 
 Copilot solves all three problems because it sits inside the Microsoft 365 security boundary. The data stays where it already lives. IT has already approved the platform. There's no new login, no new tool to learn, no new security review.
 
-For Hong Kong companies dealing with PDPO compliance and cross-border data concerns, this matters more than anywhere else. When I [trained 1,530 banking professionals at BOCHK](/blog/bochk-banking-ai-training), the first 20 minutes of every session focused on data safety using the [Traffic Light Protocol](/blog/traffic-light-protocol-ai-safety). Starting with Copilot meant we could skip the "is this tool allowed?" conversation entirely and focus on building actual workflows.
+For Hong Kong companies dealing with PDPO compliance and cross-border data concerns, this matters more than anywhere else. When I [trained 1,530 banking professionals at a major Hong Kong bank](/blog/bochk-banking-ai-training), the first 20 minutes of every session focused on data safety using the [Traffic Light Protocol](/blog/traffic-light-protocol-ai-safety). Starting with Copilot meant we could skip the "is this tool allowed?" conversation entirely and focus on building actual workflows.
 
 ## What Copilot Training Should Cover
 
@@ -52,7 +52,7 @@ Based on delivering Copilot-focused workshops across multiple Hong Kong industri
 
 **Sessions 3-6 (60 min each, weeks 3-6):** Weekly check-ins. What did you try? What worked? What didn't? This is where the behavior change happens -- through repetition, accountability, and troubleshooting.
 
-When I ran this structure for [Garden Group's HR team](/blog/how-to-design-ai-pioneer-program), participants saved 5-8 hours per week by the end of the program. The tools were limited to Copilot and Microsoft 365 -- no ChatGPT, no third-party tools, no security debates.
+When I ran this structure for [the food manufacturer's HR team](/blog/how-to-design-ai-pioneer-program), participants saved 5-8 hours per week by the end of the program. The tools were limited to Copilot and Microsoft 365 -- no ChatGPT, no third-party tools, no security debates.
 
 ## The ROI for Hong Kong Companies
 

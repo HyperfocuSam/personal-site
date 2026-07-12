@@ -9,7 +9,7 @@ I've been using a version of this AI maturity assessment in my own training for 
 
 **Stage 1: Awareness.** The company knows AI exists. Some employees are experimenting on their own (usually secretly, on personal devices). There's no policy, no training, no strategy. Leadership says "we need to do something about AI" but hasn't defined what.
 
-**Stage 2: Experimentation.** A structured pilot is running. A small team (10-20 people) is being trained. There's a basic AI usage policy. Some security boundaries are defined. This is where Garden Group was when we started their Pioneer Program -- aware of the potential, but lacking the framework to capture it.
+**Stage 2: Experimentation.** A structured pilot is running. A small team (10-20 people) is being trained. There's a basic AI usage policy. Some security boundaries are defined. This is where the food manufacturer was when we started their Pioneer Program -- aware of the potential, but lacking the framework to capture it.
 
 **Stage 3: Integration.** AI is embedded in specific workflows. Teams don't "use AI" as a separate activity -- it's part of how they do their job. Time savings are measured. Best practices are documented. Internal champions exist.
 

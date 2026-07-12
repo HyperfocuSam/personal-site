@@ -14,7 +14,7 @@ The second layer is harder: how do you guide a child's AI use when nobody -- not
 
 **What the afternoon showed**
 
-That same day, twenty children -- ages nine to fifteen, from low-income families -- built AI-generated posters at a Garden CSR workshop. No homework pressure. They described what they wanted, got something different, tried again with different words. The gap between what they described and what the tool produced wasn't frustrating the way it is for adults -- it was a problem to solve, and they solved it by adjusting until the poster looked right.
+That same day, twenty children -- ages nine to fifteen, from low-income families -- built AI-generated posters at a the food manufacturer CSR workshop. No homework pressure. They described what they wanted, got something different, tried again with different words. The gap between what they described and what the tool produced wasn't frustrating the way it is for adults -- it was a problem to solve, and they solved it by adjusting until the poster looked right.
 
 The parents' questions that morning centered on protection. The children's experience centered on access and time with the tools. The comparison isn't quite fair -- children don't have mortgages or careers to protect, and the parents' fears are rational, grounded in real economic uncertainty. A two-hour workshop doesn't dissolve that.
 

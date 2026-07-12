@@ -25,7 +25,7 @@
 檔案 `Memory/memory_worklogs.md`。每個有意義的動作，在我看到回應之前先記錄。Schema 很嚴格：
 
 ```
-## 2026-03-23 | Domain: Playmates US | Action: Drafted reply | Outcome: Sent for review | Next: Sam to reply all
+## 2026-03-23 | Domain: an international toy company US | Action: Drafted reply | Outcome: Sent for review | Next: Sam to reply all
 ```
 
 一行記下：何時、哪個 domain、發生了甚麼、下一步。檔案每月輪換，保持 15KB 以下；舊紀錄歸檔，不刪除。這個限制本身重要——檔案無限增長的話，Claude 會花 token 讀兩個月前不相干的歷史。
@@ -36,7 +36,7 @@
 
 21 個 `Memory/memory_*.md` 檔案，一客戶一檔、一領域一檔，每個以客戶命名。每個頂部有 status header：目前階段、上一張 invoice、未交付項、關鍵聯絡人。
 
-關鍵行為：對話中提到客戶名，Claude 自動先載入那個客戶的檔案再回應——不用吩咐，因為 CLAUDE.md 寫了。這是 Agno 的 pattern：retrieval on mention。我說一聲「Garden」，Claude 已知道現在是 Batch 2、Top Management 工作坊已確認、最新一張 invoice 已發出。
+關鍵行為：對話中提到客戶名，Claude 自動先載入那個客戶的檔案再回應——不用吩咐，因為 CLAUDE.md 寫了。這是 Agno 的 pattern：retrieval on mention。我說一聲「a client」，Claude 已知道現在是 Batch 2、Top Management 工作坊已確認、最新一張 invoice 已發出。
 
 另有 `memory_people.md`——跨客戶聯絡人目錄。我用名字提及某位聯絡人，Claude 查到他屬於哪個客戶，載入該客戶的檔案。兩跳，零阻力。
 
@@ -81,7 +81,7 @@ description: Create and publish blog posts to hyperfocusam.com
 5. Cross-post to Substack (full content, not teaser)
 ```
 
-5 步，具體路徑，具體指令，零含糊。我說「寫一篇 Garden 工作坊的 blog post」，Claude 知道在哪起草、複製去哪、怎樣更新 index、怎樣部署。我不用每個 session 解釋——解釋過一次，在 skill 檔案裡。
+5 步，具體路徑，具體指令，零含糊。我說「寫一篇 a client 工作坊的 blog post」，Claude 知道在哪起草、複製去哪、怎樣更新 index、怎樣部署。我不用每個 session 解釋——解釋過一次，在 skill 檔案裡。
 
 ### 其他值得一提的 skill
 

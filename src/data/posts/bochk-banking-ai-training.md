@@ -1,8 +1,8 @@
 # What 1,500 Banking Professionals Taught Me About AI Adoption
 
-I recently wrapped up a series of AI training workshops for Bank of China (Hong Kong). The scope: 1,530 participants across 13 countries. The first session alone had 617 people simultaneously online. At that scale, everything I thought I knew about AI training got stress-tested.
+I recently wrapped up a series of AI training workshops for a major Hong Kong bank. The scope: 1,530 participants across 13 countries. The first session alone had 617 people simultaneously online. At that scale, everything I thought I knew about AI training got stress-tested.
 
-![Delivering virtual training to BOCHK teams across multiple countries](/images/blog/bochk-sam-presenting.webp)
+![A bright, modern training room where professionals collaborate with AI tools](/images/blog/banking-ai-adoption-cover.webp)
 
 Here's what I learned.
 
@@ -28,13 +28,15 @@ The framework isn't complicated. That's the point. When you're training 1,500 pe
 
 What surprised me: spending the first 20 minutes of every workshop on safety didn't slow things down. It accelerated them. Participants stopped second-guessing themselves. They knew their boundaries. They experimented more confidently within the green zone.
 
+![Delivering the virtual sessions to teams across multiple countries](/images/blog/sam-virtual-training.webp)
+
 ## Lesson 2: Meet People Where They Are
 
 The temptation in AI training is to show what's possible. Look at this image generator. Look at this code interpreter. Look at these advanced agents.
 
 But transformation happens when AI fits into existing workflows, not when it creates new ones.
 
-For the BOCHK team, this meant different approaches for different groups. The training followed a three-tiered structure:
+For the bank team, this meant different approaches for different groups. The training followed a three-tiered structure:
 
 **Layer 1: Office Efficiency** - How does Copilot integrate with the Excel models you already use? How do you summarize the meeting notes you already take? This isn't flashy, but it's where daily time savings accumulate.
 
@@ -42,7 +44,7 @@ For the BOCHK team, this meant different approaches for different groups. The tr
 
 **Layer 3: Decision Support** - For senior staff, I introduced an IPA framework: Input (what data goes in), Process (how AI analyzes it), Action (what decisions result). This reframed AI from "tool" to "thinking partner" for strategic work.
 
-![The IPA Framework - Data Intake, Processing, and Archive & Action with AI](/images/blog/bochk-ipa-framework.jpeg)
+![The IPA Framework - Data Intake, Processing, and Archive & Action with AI](/images/blog/ipa-framework.jpeg)
 
 The key insight: don't ask people to learn new workflows. Show them how AI slots into the workflows they've already mastered.
 

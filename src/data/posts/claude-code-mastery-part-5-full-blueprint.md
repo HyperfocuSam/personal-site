@@ -51,7 +51,7 @@ Every piece maps to a part of this series. CLAUDE.md is Part 1. Memory and skill
 
 A session is not a conversation. It is a lifecycle with defined stages, and each stage activates different parts of the system.
 
-**Session start.** The InstructionsLoaded hook fires. It reads the last 15 lines of my worklog and checks the priority todo file. Before I type a single character, Claude already knows: last session I sent the Garden invoice, there are two items due today, and the HKCT training is in four days. Two seconds. Under 500 tokens.
+**Session start.** The InstructionsLoaded hook fires. It reads the last 15 lines of my worklog and checks the priority todo file. Before I type a single character, Claude already knows: last session I sent the client invoice, there are two items due today, and the HKCT training is in four days. Two seconds. Under 500 tokens.
 
 **Task assignment.** I type something. CLAUDE.md provides the project context -- golden rules, business entities, communication style. If the task is complex or multi-domain, Agent Teams routes it to a specialist. The content agent handles blog drafts. The client-ops agent handles invoices. The research agent handles analysis. Each specialist has its own context window, its own instructions, and access to the relevant subset of skills.
 
@@ -135,7 +135,7 @@ The system compensates for every one of these:
 
 **The InstructionsLoaded hook is my "where was I?" button.** Every session starts with automatic context. I do not have to remember where I left off. The worklog tells me.
 
-**The memory system is external working memory.** I do not have to remember which batch a client is in, what the last invoice covered, or which workshop is confirmed. It is in that client's memory file. Claude loads it the moment I say "Garden."
+**The memory system is external working memory.** I do not have to remember which batch a client is in, what the last invoice covered, or which workshop is confirmed. It is in that client's memory file. Claude loads it the moment I say "a client."
 
 **The follow-up tracker is automatic nagging.** My `/followups` command classifies every open todo as OVERDUE, DUE SOON, WAITING, or STALE. I do not have to maintain a mental list of commitments. The system maintains it and flags what needs attention.
 

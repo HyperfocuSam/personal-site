@@ -21,7 +21,7 @@ const testimonials = [
     quote: 'Finally, AI training that\'s actually useful!',
     name: 'Banking Professional',
     title: '9.2/10 satisfaction',
-    company: 'Bank of China (Hong Kong)',
+    company: 'a major Hong Kong bank',
   },
   {
     quote: 'The instructors\' passion, knowledge and experience in AI, and their '

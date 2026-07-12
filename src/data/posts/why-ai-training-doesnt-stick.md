@@ -16,7 +16,7 @@ Now apply that to a one-off AI workshop. An employee learns 15 prompts, three fr
 
 This isn't a failure of the training. It's a failure of the format.
 
-When I [trained 1,500 banking professionals at BOCHK](/blog/bochk-banking-ai-training), the satisfaction rating was 9.2/10. But I knew from experience that satisfaction scores don't predict adoption. What predicted adoption was whether participants used at least one AI tool in their actual work within the first 48 hours. That became the real metric.
+When I [trained 1,500 banking professionals at a major Hong Kong bank](/blog/bochk-banking-ai-training), the satisfaction rating was 9.2/10. But I knew from experience that satisfaction scores don't predict adoption. What predicted adoption was whether participants used at least one AI tool in their actual work within the first 48 hours. That became the real metric.
 
 ## The Three Reasons AI Training Fails
 
@@ -38,7 +38,7 @@ Large groups can't practice. They can't ask specific questions about their role.
 
 The approach that actually works is what I call the [Pioneer Model](/blog/how-to-design-ai-pioneer-program). Instead of training everyone, you select 10-20 curious, influential people and train them deeply over multiple sessions. These Pioneers become internal champions who pull the rest of the organization forward.
 
-When I ran a [6-session Pioneer Program for Garden Group's HR team](/blog/how-to-design-ai-pioneer-program), the 19 participants ended up saving 5-8 hours per week. More importantly, they started teaching their colleagues without being asked. The training multiplied itself because the Pioneers had enough depth to help others.
+When I ran a [6-session Pioneer Program for the food manufacturer's HR team](/blog/how-to-design-ai-pioneer-program), the 19 participants ended up saving 5-8 hours per week. More importantly, they started teaching their colleagues without being asked. The training multiplied itself because the Pioneers had enough depth to help others.
 
 ### 3. There's no follow-through system
 
@@ -46,7 +46,7 @@ A workshop ends. The trainer leaves. Now what?
 
 Most companies have no answer to this question. There's no follow-up session. No accountability structure. No one checking whether employees actually adopted what they learned. The training sits in a vacuum.
 
-The organizations where I've seen the highest adoption rates all have one thing in common: someone owns the follow-through. At BOCHK, I built reusable reference modules -- the [Traffic Light Protocol](/blog/traffic-light-protocol-ai-safety), the IPA framework -- that teams could access weeks after the training ended. At Garden Group, the 6-session structure meant every week had a checkpoint: "What did you try? What worked? What didn't?"
+The organizations where I've seen the highest adoption rates all have one thing in common: someone owns the follow-through. At a major Hong Kong bank, I built reusable reference modules -- the [Traffic Light Protocol](/blog/traffic-light-protocol-ai-safety), the IPA framework -- that teams could access weeks after the training ended. At the food manufacturer, the 6-session structure meant every week had a checkpoint: "What did you try? What worked? What didn't?"
 
 Follow-through doesn't require expensive systems. It requires someone asking "are you using this?" on a regular basis.
 

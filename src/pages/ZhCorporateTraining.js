@@ -63,21 +63,21 @@ const workshops = [
 const industries = [
   {
     name: '銀行及金融',
-    clients: '中銀香港、匯豐',
+    clients: '一間大型香港銀行、匯豐',
     example:
       '1,530 位參加者遍及 13 個國家。滿意度 9.2/10。',
     caseStudy: '/blog/bochk-banking-ai-training',
   },
   {
     name: '零售及奢侈品',
-    clients: '周大福、Playmates Toys、FAO Schwarz',
+    clients: '周大福、an international toy company、FAO Schwarz',
     example:
       '與周大福合作 3 次。設計思維 + AI 結合。',
     caseStudy: '/blog/ctf-ai-design-thinking-workshop-2026',
   },
   {
     name: '工程及能源',
-    clients: '奧雅納、中電',
+    clients: '奧雅納、一間香港公用事業公司',
     example:
       '為工程專業人士設計的 AI 午間講座形式。',
     caseStudy: '/blog/clp-ai-agent-automation',
@@ -98,7 +98,7 @@ const industries = [
   },
   {
     name: '專業服務',
-    clients: 'Publicis Groupe、YPO',
+    clients: 'a global advertising group、YPO',
     example:
       '高管簡報會和全球領袖活動。',
     caseStudy: null,
@@ -107,14 +107,14 @@ const industries = [
 
 const caseStudies = [
   {
-    title: '中銀香港',
+    title: '一間大型香港銀行',
     metric: '1,530 位參加者遍及 13 個國家',
     insight: '開發了「交通燈協議」處理數據敏感度。'
       + '用了頭 20 分鐘講解安全，反而加快了採用。',
     link: '/blog/bochk-banking-ai-training',
   },
   {
-    title: 'Garden 集團 — AI Pioneer Program',
+    title: '一間香港食品製造商 — AI Pioneer Program',
     metric: '19 位人力資源專業人士、6 節、每週節省 5-8 小時',
     insight: '證明多節培訓優於一次性工作坊，'
       + '能帶來持久的行為改變。',
@@ -217,7 +217,7 @@ const ZhCorporateTraining = () => (
       '香港企業 AI 培訓及工作坊。'
       + '企業工作坊、提示工程培訓、AI 採用計劃，'
       + '以英語及廣東話授課。10,000+ 專業人士受訓、'
-      + '滿意度 9.2/10。中銀香港、匯豐、周大福、中電、'
+      + '滿意度 9.2/10。一間大型香港銀行、匯豐、周大福、一間香港公用事業公司、'
       + '70+ 機構合作經驗。'
     }
     canonicalUrl={`${SITE_URL}/zh/corporate-ai-training-hong-kong`}
@@ -522,7 +522,7 @@ const ZhCorporateTraining = () => (
               &ldquo;終於有真正有用的 AI 培訓！&rdquo;
             </p>
             <footer style={{ fontSize: '0.9em', marginTop: '0.5rem' }}>
-              — 銀行專業人士，中銀香港
+              — 銀行專業人士，一間大型香港銀行
               <br />
               <span style={{ fontSize: '0.85em', opacity: 0.7 }}>
                 1,530 位參加者平均滿意度 9.2/10

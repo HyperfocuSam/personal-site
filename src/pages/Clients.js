@@ -50,7 +50,7 @@ ClientCard.propTypes = {
 const Clients = () => (
   <Main
     title="Clients"
-    description="Case studies from enterprise AI workshops and training engagements in Hong Kong. Clients include Bank of China, Chow Tai Fook, HSBC, CLP, and PolyU."
+    description="Case studies from enterprise AI workshops and training engagements in Hong Kong. Clients include a major Hong Kong bank, Chow Tai Fook, HSBC, a major Hong Kong utility, and PolyU."
     canonicalUrl={`${SITE_URL}/clients`}
     ogTitle="Clients | Sam Wong"
     ogDescription="Case studies from enterprise AI workshops and training engagements by Sam Wong."

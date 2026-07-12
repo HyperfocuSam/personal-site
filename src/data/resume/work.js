@@ -10,9 +10,9 @@ const work = [
     highlights: [
       'Built standardized workshop IP covering AI literacy, prompt engineering, workflow redesign, and design thinking with AI.',
       'Recruited and certified trainers across four continents through a structured Train-the-Trainer program.',
-      'Enterprise clients include Mattel, Toyota, YPO, Bank of China, HSBC, and Hong Kong Jockey Club.',
+      'Enterprise clients include Mattel, Toyota, YPO, a major Hong Kong bank, HSBC, and Hong Kong Jockey Club.',
       'Designed the AI Pioneer Program — a 6-session change management model where 10-20 internal champions drive adoption across the wider organization.',
-      'Expanded into healthcare (College of Surgeons HK) and multi-regional delivery (Playmates Toys HK + US).',
+      'Expanded into healthcare (College of Surgeons HK) and multi-regional delivery (an international toy company HK + US).',
     ],
   },
   {
@@ -24,12 +24,12 @@ const work = [
     across banking, retail, education, engineering, and tourism sectors. Trained 10,000+ professionals
     across 70+ organizations.`,
     highlights: [
-      'Delivered AI training to Bank of China (Hong Kong) — 1,530 participants across 13 countries, 9.2/10 satisfaction.',
+      'Delivered AI training to a major Hong Kong bank — 1,530 participants across 13 countries, 9.2/10 satisfaction.',
       'Three repeat engagements with Chow Tai Fook, including AI x Design Thinking hackathon workshops.',
       'Trained 400 educators at HKCT in a single 75-minute session, shifting perception from skepticism to experimentation.',
-      'Clients include HSBC, Arup, PolyU, Hong Kong Jockey Club, CLP, and China Travel Service.',
+      'Clients include HSBC, Arup, PolyU, Hong Kong Jockey Club, a major Hong Kong utility, and China Travel Service.',
       'Third repeat engagement with Chow Tai Fook — AI x Design Thinking hackathon format with cross-functional teams.',
-      'Delivered AI Pioneer Program for Garden Group: 19 HR professionals over 6 sessions, now scaling to Batch 2.',
+      'Delivered AI Pioneer Program for the food manufacturer: 19 HR professionals over 6 sessions, now scaling to Batch 2.',
     ],
   },
   {
