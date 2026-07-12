@@ -94,6 +94,27 @@ const Contact = () => {
               </p>
 
               <ContactForm initialInterest={initialInterest} />
+
+              {/* Single-expression text: adjacent text nodes break react-snap hydration (#418) */}
+              <p>
+                {'Or '}
+                <a
+                  href="https://wa.me/85264315177"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => {
+                    if (window.gtag) {
+                      window.gtag('event', 'click', {
+                        event_category: 'outbound',
+                        event_label: 'whatsapp',
+                        transport_type: 'beacon',
+                      });
+                    }
+                  }}
+                >
+                  WhatsApp us
+                </a>.
+              </p>
             </ScrollReveal>
           </div>
         </section>
