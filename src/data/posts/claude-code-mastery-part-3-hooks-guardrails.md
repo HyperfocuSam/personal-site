@@ -160,7 +160,7 @@ You can layer complexity later -- HTTP servers, policy engines, audit logs, rate
 
 The hooks system I have described here is 163 lines of policy engine, a YAML config file, and a few entries in `settings.json`. It runs silently, adds less than 100ms of latency per tool call, and has caught three mistakes that would have been genuinely embarrassing.
 
-Autonomous AI without guardrails is a liability. Autonomous AI with guardrails is an employee who never forgets to double-check.
+Autonomous AI with guardrails is an employee who never forgets to double-check.
 
 Next in the series: [Part 4 -- Agent Teams](/blog/claude-code-mastery-part-4-agent-teams), where I cover multi-agent collaboration, sub-agent delegation, and what happens when your AI agents start working with each other. It gets weird. In a good way.
 

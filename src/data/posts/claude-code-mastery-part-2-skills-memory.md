@@ -96,7 +96,7 @@ description: Create and publish blog posts to hyperfocusam.com
 5. Cross-post to Substack (full content, not teaser)
 ```
 
-Five steps. Specific paths. Specific commands. No ambiguity. When I say "write a blog post about the Garden workshop," Claude knows exactly where to draft it, where to copy it, how to update the index, and how to deploy. I don't explain this every session. I explained it once, in the skill file.
+Five steps. Specific paths. Specific commands. No ambiguity. When I say "write a blog post about the Garden workshop," Claude knows exactly where to draft it, where to copy it, how to update the index, and how to deploy. That gets explained once, in the skill file — never again in session.
 
 ### Other Skills Worth Mentioning
 
@@ -146,8 +146,6 @@ That's what memory and skills buy you. Not a chatbot that remembers your name. A
 In Part 3, I'll cover Claude Code's hooks system — the event-driven automation layer that makes all of this run without manual intervention. How session lifecycle hooks auto-load context. How pre-tool-use hooks enforce safety policies. How I built an audit trail that catches every external action before it happens.
 
 Memory tells Claude what it knows. Skills tell Claude how to act. Hooks tell Claude when to act — and when to stop.
-
-If it's not in memory.md, it remembered nothing.
 
 ---
 

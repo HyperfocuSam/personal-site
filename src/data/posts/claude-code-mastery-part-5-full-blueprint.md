@@ -3,7 +3,7 @@
 
 I have ADHD. Not the "I get distracted sometimes" kind. The diagnosed, medicated, still-forgetting-what-I-promised-a-client-yesterday kind. Executive function challenges -- what to do next, what did I commit to, where did I leave off -- are not occasional inconveniences. They are the operating conditions of my professional life.
 
-I manage eight active client engagements across four business entities. I train over 10,000 professionals in six countries. I publish a bilingual blog, maintain a content pipeline, and run an AI voice agent. I do all of this from a single terminal window, through a system I built over five months on top of Claude Code.
+My working week spans eight active client engagements across four business entities, training that has reached over 10,000 professionals in six countries, a bilingual blog, a content pipeline, and an AI voice agent. All of it runs from a single terminal window, through a system I built over five months on top of Claude Code.
 
 This is Part 5 -- the finale of the Claude Code Mastery series. In [Part 1](/blog/claude-code-mastery-part-1-getting-started) I showed you CLAUDE.md. In [Part 2](/blog/claude-code-mastery-part-2-skills-memory) I showed you memory and skills. In [Part 3](/blog/claude-code-mastery-part-3-hooks-guardrails) I showed you hooks and guardrails. In [Part 4](/blog/claude-code-mastery-part-4-agent-teams) I showed you agent teams and automation.
 
@@ -62,6 +62,8 @@ A session is not a conversation. It is a lifecycle with defined stages, and each
 **Memory write-back.** After the task completes, the worklog gets a new entry. Client memory files get updated if status changed. The response footer confirms what was logged -- this is not optional, the system enforces it.
 
 **Session end.** The Stop hook fires. It checks whether client work happened in this session and blocks exit until memory files are updated. Since deploying this hook, I have not lost session context once. Before it, I lost context weekly.
+
+*Editor's note (July 2026): the autonomous publishing pipeline and morning-briefing jobs described below have been paused since early July 2026; posts now go through a review gate.*
 
 **Overnight.** Seven cron jobs run on schedule. The morning briefing compiles my day at 8:30 AM. The blog content scanner runs Mondays at 10 AM and auto-publishes approved drafts. The bookmark digest runs at 9 PM. The stale check runs Monday mornings to flag memory files that have not been updated in over two weeks. The worklog rotation runs on the first of each month.
 
@@ -125,9 +127,9 @@ This order is not arbitrary. It is the order I actually built things in, minus t
 
 ## The ADHD Operating System
 
-I did not build this system because I am organized. I built it because I am not.
+I did not build this system because I am organized. It exists because I am not.
 
-ADHD means my working memory is unreliable. I forget what I promised a client two days ago. I lose track of which engagement is in which phase. I start a session, get pulled into something urgent, and forget what I was originally doing. These are not character flaws. They are how my brain works.
+ADHD means my working memory is unreliable. I forget what I promised a client two days ago, lose track of which engagement is in which phase, start a session, get pulled into something urgent, and forget what I was originally doing. These are not character flaws. They are how my brain works.
 
 The system compensates for every one of these:
 
@@ -143,7 +145,7 @@ The system compensates for every one of these:
 
 Every component of this system exists because I failed at something without it. The memory system exists because I forgot client commitments. The hooks exist because I almost sent wrong emails. The cron jobs exist because I forgot to publish things I had already written. The Stop hook exists because I kept losing context between sessions.
 
-I am not selling a productivity framework. I am describing a prosthetic for executive function. It works because it was built by someone who actually needs it.
+I am not selling a productivity framework. What I am describing is a prosthetic for executive function. It works because it was built by someone who actually needs it.
 
 ## Mistakes and What Did Not Work
 
@@ -161,7 +163,7 @@ The system you see now is version 12. Here is a selection from versions 1 throug
 
 **The voice agent latency problem.** I built a [live voice mode](/blog/i-built-voice-mode-claude-code) using ElevenLabs and Claude as the backend. It worked beautifully in demos. In production, the latency was too high -- ElevenLabs aborts after about one second of silence, and Claude's response time exceeded that. I had to switch to Gemini Flash as the live inference model and keep Claude as a background knowledge layer. The system works now, but the architecture is uglier than I wanted.
 
-I share these not because failure stories are fashionable. I share them because the polished version of this system -- the one I described in Parts 1 through 4 -- can make it look like I knew what I was doing from the start. I did not. I learned what to build by building the wrong thing repeatedly.
+I share these not because failure stories are fashionable, but because the polished version of this system -- the one I described in Parts 1 through 4 -- can make it look like I knew what I was doing from the start. Not so -- I learned what to build by building the wrong thing repeatedly.
 
 ## The Full Picture
 
@@ -175,11 +177,7 @@ What makes the system work is not any single piece. It is the fact that every pi
 
 Most people use Claude Code as a fancy terminal. That is fine. It is genuinely good at that. But if you keep using it, and you keep solving the same problems -- context loss, repeated mistakes, forgotten follow-ups, manual coordination -- you will eventually build something that looks like this. Not because you planned it. Because each problem demands a solution, and the solutions accumulate into a system.
 
-I did not set out to build an AI operating system. I set out to send a client email without forgetting the attachment. Then I needed to remember what I promised them last week. Then I needed to not send invoices to the wrong person. Then I needed the blog to publish itself. Then I needed agents that could work together.
-
-Five months. Twelve versions. One terminal window.
-
-If it is not in the system, it does not exist. And that is exactly why the system works.
+I did not set out to build an AI operating system — I set out to send a client email without forgetting the attachment. Then I needed to remember what I promised them last week. Then I needed to not send invoices to the wrong person. Then I needed the blog to publish itself. Then I needed agents that could work together.
 
 ---
 

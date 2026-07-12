@@ -19,7 +19,7 @@ I've been teaching the [70/30 human-AI split](/blog/bochk-banking-ai-training) f
 
 But I've been applying the same ratio to learners, and I think that's a mistake. A junior analyst who uses AI to draft 30% of their first-ever report is skipping the part where they learn what makes a report coherent. A design intern who generates concepts with AI never develops the visual intuition to evaluate what's actually good.
 
-For learners, the ratio should probably be closer to 90/10 — maybe even 95/5. AI as a checker, not a creator. Build the foundation first, then gradually shift the ratio as competence develops. I haven't formalized this into a framework yet. I'm still working out where the breakpoints are. But the principle feels right: the less experience you have, the more you need to do manually before AI becomes helpful rather than harmful.
+For learners, the ratio should probably be closer to 90/10 — maybe even 95/5. AI as a checker, not a creator. Build the foundation first, then gradually shift the ratio as competence develops. I haven't formalized this into a framework yet — the breakpoints are still moving. But the principle feels right: the less experience you have, the more you need to do manually before AI becomes helpful rather than harmful.
 
 ## The Part Nobody Wants to Hear
 

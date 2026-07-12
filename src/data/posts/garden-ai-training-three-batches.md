@@ -1,8 +1,8 @@
 # I've Now Run AI Workshops for the Same Company Three Times. The Third Batch Is Nothing Like the First.
 
-This week I'm preparing for Batch 3 at Garden — an operations department, 30 people, three Wednesday afternoons starting April 15. When I opened my Batch 1 folder to see what I could reuse, I found 19 slides. I used zero of them.
+This week I'm preparing for Batch 3 at Garden — an operations department, 30 people, three Wednesday afternoons starting April 15. When I opened my Batch 1 folder to see what I could reuse, I found 19 slides. Zero of them survived.
 
-I've been training at Garden since January. HR first, six sessions, 19 participants. Then Sales & Marketing, three sessions, around 30 people. Now Operations. There's also an executive AI Agents workshop booked for April 20 — the Business Leaders cohort coming together for the second time.
+Garden has been on my calendar since January. HR first, six sessions, 19 participants. Then Sales & Marketing, three sessions, around 30 people. Now Operations. There's also an executive AI Agents workshop booked for April 20 — the Business Leaders cohort coming together for the second time.
 
 Four separate engagements. One company. My assumption when I started was that the second batch would be easier than the first, and the third easier than the second. That is not what happened.
 
@@ -12,7 +12,7 @@ HR teams bring a specific kind of fear to AI training. They worry about confiden
 
 Garden's HR cohort started at Stage 2 on the [AI Maturity model](/blog/ai-maturity-trap-stuck-stage-one) — people had heard of AI tools and tried a few, but nobody had a consistent workflow. Six sessions to build foundations: what Copilot can actually do, what the security tiers mean in practice, how to save two hours a week on tasks you already dislike doing.
 
-The security architecture was fixed before I arrived. Nigel, the IT lead, had set the boundaries. Copilot as the primary tool. Tier 1 work — research, summarization — is fine. Tier 2 — formatting, drafting — is fine. Tier 3, anything touching internal customer data, P&L figures, or employee records, stays offline. I agreed with that call. I still do. Working within an institution's actual risk appetite is the job, not a constraint on the job.
+The security architecture was fixed before I arrived. Nigel, the IT lead, had set the boundaries. Copilot as the primary tool. Tier 1 work — research, summarization — is fine. Tier 2 — formatting, drafting — is fine. Tier 3, anything touching internal customer data, P&L figures, or employee records, stays offline. I agreed with that call. Still do. Working within an institution's actual risk appetite is the job, not a constraint on the job.
 
 ## By Batch 2, I Had Rebuilt Roughly 60% of the Content
 
@@ -30,7 +30,7 @@ The MO department runs production workflows. They track output by line, manage s
 
 So I built a 120-row fake production dataset from scratch. Four product lines, patterns embedded in the numbers, designed for Session 3 when we use Copilot to analyze Excel data. I also wrote 26 prompts specifically for operations contexts: shift handover summaries, supplier escalation emails, quality deviation write-ups. Prompts that wouldn't transfer to HR or Sales without significant reworking.
 
-I will be honest about this: I don't know if it will land. I have trained HR teams at this company. I have trained Sales. I have not trained an operations team using this specific approach, with this specific content. Every third batch at a new department inside an organization you think you know feels like walking into a room you've never been in before. The map updates, but the territory keeps expanding.
+I will be honest about this: I don't know if it will land. HR and Sales at this company have been through my sessions; an operations team, with this specific approach and this specific content, has not. Every third batch at a new department inside an organization you think you know feels like walking into a room you've never been in before. The map updates, but the territory keeps expanding.
 
 ## The Executive Layer Is a Separate Problem Entirely
 

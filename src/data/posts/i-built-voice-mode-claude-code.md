@@ -46,7 +46,7 @@ I don't bring up ADHD for sympathy points. I bring it up because developer tools
 
 Think about how much information Claude Code outputs in a typical session. Hundreds of lines. Code diffs, explanations, next steps, caveats. If you can sustain focus on all of that in a monospace terminal font, good for you. I can't always do that, especially late in the day.
 
-Audio changes the dynamic completely. I can listen to Claude's explanation while reviewing the code diff on screen. I can step away from my desk and still absorb the key points. I can catch things I would have skimmed past.
+Audio changes the dynamic completely. I can listen to Claude's explanation while reviewing the code diff on screen. Stepping away from the desk stops costing the key points. I can catch things I would have skimmed past.
 
 This isn't about laziness. It's about meeting your brain where it is.
 

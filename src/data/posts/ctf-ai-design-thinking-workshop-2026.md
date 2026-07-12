@@ -48,14 +48,8 @@ Team B won with their "Time-Cross Love" concept - an emotional storytelling appr
 
 The judges noted that their presentation balanced technology with emotional resonance - they captured the feeling of the IP, not just the aesthetics.
 
-## Key Takeaway
-
-AI tools change rapidly. What remains constant is the AI design mindset: the ability to move fluidly between research, ideation, visualization, and communication. The teams that excelled weren't necessarily the most technically proficient with any single tool - they were the ones who knew how to orchestrate multiple tools toward a coherent creative outcome.
+The teams that excelled weren't necessarily the most technically proficient with any single tool - they were the ones who knew how to orchestrate multiple tools toward a coherent creative outcome.
 
 ---
 
 *This was my third workshop with Chow Tai Fook's design team. If you're interested in AI adoption training for your organization, feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*
-
----
-
-*I design and deliver [corporate AI training programs](/services) for teams across Hong Kong and Asia-Pacific. See my full range of [training services](/corporate-ai-training-hong-kong).*

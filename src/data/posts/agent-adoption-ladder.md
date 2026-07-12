@@ -62,7 +62,7 @@ The ladder isn't about climbing higher. It's about knowing which rung you actual
 
 The competitive landscape is accelerating. Manus just launched local computer access. Microsoft built Copilot Cowork on top of Anthropic's architecture. NVIDIA is reportedly building NemoClaw. OpenClaw continues to grow.
 
-But the pattern is clear: every major AI company is converging on the same insight — agents that live on your computer, working with your files, operating your tools. The question for most people isn't which agent is most powerful. It's which one matches how they actually work.
+But the pattern is clear: every major AI company is converging on the same insight — agents that live on your computer, working with your files, operating your tools. The question for most people is which one matches how they actually work — full stop.
 
 I train companies on this for a living — including [mapping out the levels of AI agents with a utility like CLP](/blog/clp-ai-agent-automation). The ones that succeed aren't the ones with the fanciest tools. They're the ones that figured out the right rung for each team.
 

@@ -72,8 +72,6 @@ Training 1,500 banking professionals didn't teach me much about AI tools. It tau
 
 People don't resist AI because they don't understand it. They resist because they're uncertain about boundaries, worried about compliance, and skeptical that it fits their actual work. Address those concerns first - with simple frameworks, integrated workflows, and clear human/AI boundaries - and adoption follows.
 
-The technology keeps advancing. The human challenges remain remarkably consistent.
-
 ## Sources & Further Reading
 
 - IBM Institute for Business Value, "[2024 Global Outlook for Banking and Financial Markets](https://www.ibm.com/thought-leadership/institute-business-value/en-us/report/2024-banking-financial-markets-outlook)" (Jan 2024) -- 78% of financial institutions are tactically implementing generative AI for at least one use case.

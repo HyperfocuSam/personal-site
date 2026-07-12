@@ -2,9 +2,7 @@
 
 A set of five AI prompts for beating procrastination went viral on X recently, originally from a Reddit post by reclaim_ai. I've seen these shared dozens of times -- and unlike most viral prompt lists, these ones are genuinely useful.
 
-I know because I use variations of all five. Every day.
-
-I have ADHD. Procrastination isn't a productivity problem for me -- it's a wiring problem. I know I need to do the thing. I open the file, stare at it for two seconds, and find myself doing something else entirely. Not because I don't want to. Because my brain won't engage.
+All five are in my daily rotation -- ADHD makes procrastination a wiring problem, not a discipline problem. Knowing I need to do the thing doesn't help -- I open the file, stare at it for two seconds, and find myself doing something else entirely. Not because I don't want to. Because my brain won't engage.
 
 Over the past year I've built these prompts into a daily AI workflow using Claude Code. Here are all five, why each one works, and how to get more out of them.
 

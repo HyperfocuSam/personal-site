@@ -33,7 +33,7 @@ The mistake would be trying to jump from Level 1 to Level 4. Every company that'
 
 **Identify your "agent-ready" workflows.** Look for processes that are repetitive, multi-step, and rule-based. Report generation. Data entry and validation. Email triage. These are the workflows where agents will land first.
 
-**Don't buy agent platforms yet.** The tooling is changing monthly. What's cutting-edge today will be a default feature in six months. Invest in your team's AI fluency now. The platform decision can wait.
+**Don't buy agent platforms yet.** The tooling is changing monthly. What's new today will be a default feature in six months. Invest in your team's AI fluency now. The platform decision can wait.
 
 The agents are coming. But the organizations that benefit first won't be the ones who deployed agents earliest. They'll be the ones whose teams were already fluent enough to supervise them.
 
