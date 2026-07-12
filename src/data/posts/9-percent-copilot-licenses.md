@@ -1,10 +1,10 @@
 # 9% of Copilot Licenses Are Actually Used. I'm Not Surprised.
 
-I was in a meeting this week with someone who ran AI adoption across KPMG in the Nordics. He dropped a number: 9% of all Copilot licenses are activated. Not productively used. Not used daily. Activated.
+This week I was in a meeting with someone who ran AI adoption across KPMG in the Nordics. He dropped a number: 9% of all Copilot licenses are activated. Not productively used. Not used daily. Activated.
 
 A pension fund in the UK distributed laptops with [Copilot pre-installed and zero training](/blog/microsoft-copilot-training-hong-kong). No onboarding session. No documentation beyond what Microsoft ships by default. The procurement team checked a box. The AI transformation was declared underway.
 
-I've trained over 10,000 professionals across 70+ organizations in six countries. I've seen this pattern so many times that I have my own number for it: [roughly 4% of participants sustain meaningful AI use after a one-off workshop](/blog/why-ai-training-doesnt-stick). Four percent lasting adoption. Ninety-six percent revert to their old workflows within two weeks.
+After 10,000+ professionals across 70+ organizations in six countries, I have my own number for this pattern: [roughly 4% of participants sustain meaningful AI use after a one-off workshop](/blog/why-ai-training-doesnt-stick). Four percent lasting adoption. Ninety-six percent revert to their old workflows within two weeks.
 
 The 9% activation rate and my 4% adoption rate are measuring different things, but they're pointing at the same problem. The gap between buying AI and using AI is not a technology gap. It's a human gap.
 
@@ -42,22 +42,14 @@ The difference is structural. In a one-off workshop, I teach you what AI can do.
 
 Here's what continuous looks like in practice:
 
-- **Month 1:** Introduction. NotebookLM deep dive. "Here's what's possible."
+- **Month 1:** Introduction. NotebookLM, properly -- not a demo. "Here's what's possible."
 - **Month 2:** Advanced features of the tool they're actually using. Address specific blockers from Month 1.
 - **Month 3-6:** Department-specific applications. Real workflows, real data, real problems.
 - **Ongoing:** WhatsApp community where staff ask questions and share wins. I respond. Peers respond. A culture forms.
 
 By month three, people stop asking "how do I use this tool" and start asking "can AI do this thing I'm stuck on." That's the shift. That's adoption.
 
-## The Hong Kong Education Problem
-
-This week I also learned something that made my blood boil. The Hong Kong government has allocated HK$2 billion for AI in education. Two billion dollars. That sounds like progress until you read the fine print.
-
-The fund explicitly excludes teacher training. The money can only be spent on "implementation and student-facing activities." Schools can buy systems -- typically ChatGPT wrappers -- but they cannot use the fund to train the teachers who need to operate those systems.
-
-So Hong Kong schools are acquiring AI tools they don't know how to use, funded by a government program that won't pay for the training to use them. The procurement-training gap, codified into policy.
-
-Meanwhile, 15,000 international schools globally are growing at 50% per decade. Forty percent belong to networks like ESF and Harrow, meaning one successful engagement cascades across countries. The schools that figure out AI adoption first will have a structural advantage. The ones waiting for a government fund to cover training will be waiting a long time.
+Hong Kong has now codified this same gap into education policy: the government's HK$2 billion AI-in-education fund explicitly excludes teacher training, so schools can buy systems nobody is trained to run -- [I've written about what it looks like when a school decides to fund the training itself](/blog/when-a-school-commits-to-24-months-of-ai).
 
 ## The Pattern
 
@@ -76,9 +68,7 @@ If you're planning an AI rollout, here's what your budget should look like:
 - 40% on tools and infrastructure
 - 60% on training, champions, and ongoing support
 
-Most organizations run 95/5 or worse. Then they blame the tool.
-
-The tool isn't the training. The training isn't the adoption. The adoption isn't the transformation. We keep buying the first one and expecting the last.
+Budget 60% for the humans, 40% for the tools. Most organizations run 95/5 and then blame the tool.
 
 ---
 

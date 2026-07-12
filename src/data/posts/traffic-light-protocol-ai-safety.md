@@ -4,7 +4,7 @@ Every AI workshop I deliver hits the same wall within the first ten minutes. Som
 
 It does not matter whether I am training bankers, jewelry designers, HR professionals, or engineers. The question always comes. And until it is answered, nobody moves. People will not experiment with a tool they believe could get them fired.
 
-After training over 10,000 professionals across industries, I have landed on a framework that consistently breaks through this wall in under fifteen minutes. I call it the Traffic Light Protocol.
+Somewhere past the 10,000th professional, I landed on a framework that consistently breaks through this wall in under fifteen minutes. I call it the Traffic Light Protocol.
 
 ## Why Policies Fail and Frameworks Stick
 

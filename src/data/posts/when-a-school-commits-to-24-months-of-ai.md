@@ -17,7 +17,7 @@ I spent the first ten minutes on what I always spend the first ten minutes on â€
 
 ## What a 24-Month Commitment Actually Looks Like
 
-The first session was a deep dive. Session two will focus on Copilot's advanced features for the staff who are ready for it. After that, the plan is hybrid: three months of fixed topics building shared fundamentals, then three months of flexible sessions driven by whatever the staff are actually struggling with.
+The first session went deep on one tool. Session two will focus on Copilot's advanced features for the staff who are ready for it. After that, the plan is hybrid: three months of fixed topics building shared fundamentals, then three months of flexible sessions driven by whatever the staff are actually struggling with.
 
 The WhatsApp community launched alongside the first session. The idea is simple â€” between monthly sessions, staff can ask questions, share what they tried, flag what didn't work. I've seen this model work in corporate settings. A continuous engagement produces different behavior than a one-off. People stop asking "how do I use this" and start asking "can AI do this thing I'm stuck on." That shift usually happens around month three.
 

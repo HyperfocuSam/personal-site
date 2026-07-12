@@ -6,9 +6,7 @@ This is what I took away from it.
 
 ## The Setup
 
-DotAI is the largest AI training platform in Hong Kong — 50,000+ people served, 70+ enterprise clients. Jimmy and Matt run the operation out of Kwun Tong. They invited me to guest-speak on their OpenClaw live session, a free online event streamed via OBS from their office. The original registration count was 800. By the time we went live at 8 PM, it had climbed to 1,400.
-
-The session ran one hour total. Jimmy opened with five minutes on why AI agents are exploding in interest. I took the next 25 minutes. Matt followed with a case study on social media automation and a brief on his agent-to-agent SaaS product. Jimmy closed with course registration details.
+Jimmy and Matt at DotAI invited me to guest-speak on their OpenClaw live session, a free online event streamed from their office. Registration was 800 when I said yes and 1,400 by the time we went live at 8 PM.
 
 My block was structured around three acts: hook the audience with a live-looking demo, explain the architecture in plain language, then prove everything with real workflow recordings from my daily operations.
 
@@ -68,9 +66,7 @@ I have [written about this gap before](/blog/ai-agents-knowledge-work-field-note
 
 ## What Comes Next
 
-DotAI is launching structured OpenClaw classes starting March 21. Four levels: installation, basic operations, advanced multi-agent setups, and corporate/enterprise orchestration. I am building the curriculum for the advanced and corporate tiers, drawing on the same [gamified agent framework](/blog/ada-gersang-gamifying-claude-code) I use in my own work.
-
-The course structure maps to a growth roadmap I care about: personal assistant, then power user, then one-person company, then corporate deployment. Each level builds on the previous one. You cannot orchestrate a department of agents if you have never built one for yourself.
+DotAI is launching structured OpenClaw classes in March, and I am building the advanced and corporate tiers of the curriculum, drawing on the same [gamified agent framework](/blog/ada-gersang-gamifying-claude-code) I use in my own work.
 
 The live session was a starting point. The real work is what happens when 1,400 people go home and try to build their first skill file. That is where adoption either sticks or dies. And that is what I will be focused on for the next several weeks.
 
