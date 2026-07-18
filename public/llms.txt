@@ -53,6 +53,6 @@ Email: sam@adaptig.com
 Location: Hong Kong (available globally and across Asia-Pacific)
 Languages: English, Cantonese
 
-## Blog (67 English articles)
+## Blog (68 English articles)
 
 See https://hyperfocusam.com/llms-full.txt for the full catalog with excerpts.

@@ -5,6 +5,27 @@
 // linkedPost: slug of the corresponding post in another language (for hreflang)
 const posts = [
   {
+    slug: 'my-ai-wrote-badly-in-three-languages',
+    title: "Why My AI Wrote Badly in Three Languages (It Wasn't the Model)",
+    date: '2026-07-17',
+    excerpt: "I asked my AI assistant why its writing is bad in English, Chinese and French. The answer wasn't the model -- it was the templates I fed it months ago, when the models were weaker. We deleted eight of them this week.",
+    tags: ['ai-writing', 'claude-code', 'prompts', 'personal-productivity'],
+    type: 'reflection',
+    featured: false,
+    linkedPost: 'my-ai-wrote-badly-in-three-languages-tc',
+  },
+  {
+    slug: 'my-ai-wrote-badly-in-three-languages-tc',
+    title: '我問 AI 為甚麼文筆這麼差——答案不是模型',
+    date: '2026-07-17',
+    excerpt: '問題不在模型，在幾個月前寫下的舊指令：模型每一次升級都更強，舊模板卻一直把文字拉回 2025 年的水平。這星期刪掉了八個問題來源，這篇文章就是第一個測試。',
+    tags: ['ai-writing', 'claude-code', 'prompts', 'personal-productivity'],
+    type: 'reflection',
+    language: 'zh-Hant',
+    featured: false,
+    linkedPost: 'my-ai-wrote-badly-in-three-languages',
+  },
+  {
     slug: 'three-us-businesses-one-hong-kong-trainer',
     title: 'Three US Businesses, One Hong Kong Trainer',
     date: '2026-07-10',

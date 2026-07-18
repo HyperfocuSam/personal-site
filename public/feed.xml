@@ -6,7 +6,20 @@
     <description>AI adoption insights, workshop reflections, and practical AI training tips from Sam Wong.</description>
     <language>en</language>
     <atom:link href="https://hyperfocusam.com/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sun, 12 Jul 2026 16:28:31 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 18 Jul 2026 03:11:15 GMT</lastBuildDate>
+    <item>
+      <title>my-ai-wrote-badly-in-three-languages</title>
+      <link>https://hyperfocusam.com/blog/my-ai-wrote-badly-in-three-languages/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/my-ai-wrote-badly-in-three-languages/</guid>
+      <pubDate>Fri, 17 Jul 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>我問 AI 為甚麼文筆這麼差——答案不是模型</title>
+      <link>https://hyperfocusam.com/blog/my-ai-wrote-badly-in-three-languages-tc/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/my-ai-wrote-badly-in-three-languages-tc/</guid>
+      <description>問題不在模型，在幾個月前寫下的舊指令：模型每一次升級都更強，舊模板卻一直把文字拉回 2025 年的水平。這星期刪掉了八個問題來源，這篇文章就是第一個測試。</description>
+      <pubDate>Fri, 17 Jul 2026 00:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>Three US Businesses, One Hong Kong Trainer</title>
       <link>https://hyperfocusam.com/blog/three-us-businesses-one-hong-kong-trainer/</link>
