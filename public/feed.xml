@@ -6,7 +6,14 @@
     <description>AI adoption insights, workshop reflections, and practical AI training tips from Sam Wong.</description>
     <language>en</language>
     <atom:link href="https://hyperfocusam.com/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sat, 18 Jul 2026 03:11:15 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 17:27:49 GMT</lastBuildDate>
+    <item>
+      <title>懂 AI 和用 AI，是兩件事</title>
+      <link>https://hyperfocusam.com/blog/knowing-ai-and-using-ai-tc/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/knowing-ai-and-using-ai-tc/</guid>
+      <description>很多人上完 AI 課、收藏了一堆提示詞，回到座位卻一切照舊。問題不在工具，而在習慣——真正的改變，是一件小事重複很多次。</description>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>my-ai-wrote-badly-in-three-languages</title>
       <link>https://hyperfocusam.com/blog/my-ai-wrote-badly-in-three-languages/</link>

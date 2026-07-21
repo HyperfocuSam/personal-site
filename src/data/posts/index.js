@@ -5,6 +5,16 @@
 // linkedPost: slug of the corresponding post in another language (for hreflang)
 const posts = [
   {
+    slug: 'knowing-ai-and-using-ai-tc',
+    title: '懂 AI 和用 AI，是兩件事',
+    date: '2026-07-21',
+    excerpt: '很多人上完 AI 課、收藏了一堆提示詞，回到座位卻一切照舊。問題不在工具，而在習慣——真正的改變，是一件小事重複很多次。',
+    tags: ['ai-adoption', 'habit', 'reflection'],
+    type: 'reflection',
+    language: 'zh-Hant',
+    featured: false,
+  },
+  {
     slug: 'my-ai-wrote-badly-in-three-languages',
     title: "Why My AI Wrote Badly in Three Languages (It Wasn't the Model)",
     date: '2026-07-17',
