@@ -8,7 +8,7 @@ const posts = [
     slug: 'knowing-ai-and-using-ai-tc',
     title: '懂 AI 和用 AI，是兩件事',
     date: '2026-07-21',
-    excerpt: '很多人上完 AI 課、收藏了一堆提示詞，回到座位卻一切照舊。問題不在工具，而在習慣——真正的改變，是一件小事重複很多次。',
+    excerpt: '一次性的工作坊過後，大約只有 4% 的人會把 AI 真正用下去，九成六兩星期內打回原形。問題不在工具，而在習慣——真正的改變，是一件小事重複很多次。',
     tags: ['ai-adoption', 'habit', 'reflection'],
     type: 'reflection',
     language: 'zh-Hant',
