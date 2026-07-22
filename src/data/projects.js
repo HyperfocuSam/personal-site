@@ -62,6 +62,47 @@ const data = [
       + 'and YouTube Data API auto-publishes. Runs twice daily via cron on Railway.',
   },
   {
+    title: 'sam-canvas',
+    role: 'Builder',
+    url: 'github.com/HyperfocuSam/sam-canvas',
+    link: 'https://github.com/HyperfocuSam/sam-canvas',
+    date: '2026-07',
+    status: 'live',
+    tech: ['Python', 'Excalidraw', 'Claude Code'],
+    featured: false,
+    desc:
+      'A live shared Excalidraw canvas for you and your AI coding agent. '
+      + 'You sketch in the browser; the agent reads it with full project context '
+      + 'and draws diagram answers back onto the same canvas, live.',
+  },
+  {
+    title: 'style-parody-poster',
+    role: 'Builder',
+    url: 'github.com/HyperfocuSam/style-parody-poster',
+    link: 'https://github.com/HyperfocuSam/style-parody-poster',
+    date: '2026-07',
+    status: 'live',
+    tech: ['Python', 'Gemini 3 Pro Image'],
+    featured: false,
+    desc:
+      'Recreate any poster or ad in its exact art style with your own product and copy. '
+      + 'Deconstructs the reference\'s visual system, maps replacement content slot by slot, '
+      + 'and generates a 4K parody with Nano Banana Pro.',
+  },
+  {
+    title: 'deepseek-tc-localizer',
+    role: 'Builder',
+    url: 'github.com/HyperfocuSam/deepseek-tc-localizer',
+    link: 'https://github.com/HyperfocuSam/deepseek-tc-localizer',
+    date: '2026-07',
+    status: 'live',
+    tech: ['Shell', 'DeepSeek API'],
+    featured: false,
+    desc:
+      'A Hong Kong Traditional Chinese localization reviewer — an agent skill '
+      + 'plus a standalone script, powered by DeepSeek.',
+  },
+  {
     title: 'hyperfocusam.com',
     role: 'Builder',
     url: 'hyperfocusam.com',
