@@ -22,6 +22,8 @@ When I [trained 1,500 banking professionals at a major Hong Kong bank](/blog/boc
 
 After running programs across 70+ organizations, I've identified three patterns that kill AI training effectiveness. All three are fixable.
 
+![Concept map: why AI training doesn't stick. Three problems — teaching tools instead of workflows, training everyone at once, and no follow-through — each mapped to what actually works, plus the six-session fix arc: safety, workflow integration, then independence.](/images/blog/why-ai-training-doesnt-stick.png)
+
 ### 1. Training teaches tools instead of workflows
 
 Most AI training looks like this: "Here's ChatGPT. Here's how to write a prompt. Here are ten things you can do with it." The trainer shows impressive demos. The audience is entertained. Nobody's actual work changes.

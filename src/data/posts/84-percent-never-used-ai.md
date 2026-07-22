@@ -3,6 +3,8 @@
 
 A stat went viral on X recently: 84% of people have never used AI, and just 0.3% of users pay for premium AI services. If you're reading this blog, you're almost certainly in the minority. But step outside your bubble for a moment.
 
+![Infographic: 84% of people have never used AI, and only 0.3% pay for premium. A green gauge shows how small the started-already minority is — which is exactly why beginning now is a head start.](/images/blog/84-percent-never-used-ai.jpg)
+
 I train AI for business across industries — banking, retail, education, engineering. The thing that still surprises me, after more than 200 sessions, is how many smart, experienced professionals have never opened an AI tool in their lives. Not ChatGPT. Not Copilot. Nothing.
 
 These aren't people who are behind. They're people nobody has shown.
