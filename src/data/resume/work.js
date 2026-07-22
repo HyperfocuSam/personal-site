@@ -9,7 +9,7 @@ const work = [
     methodology, curriculum architecture, and Train-the-Trainer certification program.`,
     highlights: [
       'Built standardized workshop IP covering AI literacy, prompt engineering, workflow redesign, and design thinking with AI.',
-      'Recruited and certified trainers across four continents through a structured Train-the-Trainer program.',
+      'Recruited and certified trainers across 20+ countries through a structured Train-the-Trainer program.',
       'Enterprise clients include Mattel, Toyota, YPO, a major Hong Kong bank, HSBC, and Hong Kong Jockey Club.',
       'Designed the AI Pioneer Program — a 6-session change management model where 10-20 internal champions drive adoption across the wider organization.',
       'Expanded into healthcare (College of Surgeons HK) and multi-regional delivery (an international toy company HK + US).',

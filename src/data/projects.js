@@ -10,8 +10,8 @@ const data = [
     tech: ['Proprietary Platform'],
     featured: true,
     desc:
-      'AI adoption that sticks. 180+ workshops delivered to 7,000+ participants '
-      + 'across 4 continents, powered by a proprietary training platform. '
+      'AI adoption that sticks. 230+ workshops delivered to 12,000+ participants '
+      + 'across 20+ countries, powered by a proprietary training platform. '
       + 'Clients include a major Hong Kong bank, HSBC, Hong Kong Jockey Club, Mattel, '
       + 'Toyota, YPO, Samsung, Arup, and Diners Club.',
   },
@@ -45,21 +45,6 @@ const data = [
       + 'Express backend with Claude API, better-sqlite3 for history, '
       + 'dark cinematic frontend with GSAP animations, PostHog analytics. '
       + 'Deployed on Railway. Built under Adaptig.',
-  },
-  {
-    title: 'ChillPo',
-    role: 'Builder',
-    url: 'youtube.com/@ChillPo',
-    link: 'https://www.youtube.com/@ChillPo',
-    image: '/images/projects/chillpo.jpg',
-    date: '2026-03',
-    status: 'live',
-    tech: ['Node.js', 'MiniMax API', 'YouTube API', 'ffmpeg'],
-    featured: true,
-    desc:
-      'Autonomous lo-fi music pipeline. MiniMax generates instrumentals, '
-      + 'Nano Banana Pro creates illustrated artwork, ffmpeg composites video, '
-      + 'and YouTube Data API auto-publishes. Runs twice daily via cron on Railway.',
   },
   {
     title: 'sam-canvas',

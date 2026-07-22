@@ -359,7 +359,7 @@ const About = () => (
                 name: 'Who is Sam Wong?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Sam Wong is an AI training specialist based in Hong Kong who has trained 10,000+ professionals across 70+ organizations. He co-founded Adaptig, a global AI trainer network spanning four continents. He focuses on practical, human-first AI adoption that changes behavior, not just builds awareness.',
+                  text: 'Sam Wong is an AI training specialist based in Hong Kong who has trained 10,000+ professionals across 70+ organizations. He co-founded Adaptig, a global AI trainer network spanning 20+ countries. He focuses on practical, human-first AI adoption that changes behavior, not just builds awareness.',
                 },
               },
               {

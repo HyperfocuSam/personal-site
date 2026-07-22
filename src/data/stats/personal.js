@@ -103,7 +103,7 @@ const data = [
   {
     key: '',
     label: 'Workshops delivered (Adaptig network)',
-    value: '180+',
+    value: '230+',
   },
   {
     key: '',

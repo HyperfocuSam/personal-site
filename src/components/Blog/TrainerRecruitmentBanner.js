@@ -6,7 +6,7 @@ const TrainerRecruitmentBanner = ({ ctaHref }) => (
   <section className="trainer-banner">
     <h3>Like what you see? Teach this.</h3>
     <p>
-      Adaptig is growing a global trainer network across four continents.
+      Adaptig is growing a global trainer network across 20+ countries.
       If you facilitate learning and want to lead practical AI workshops,
       we should talk.
     </p>

@@ -40,7 +40,7 @@ I learned something important: technology adoption isn't a training problem. It'
 
 In 2024, I left the corporate path to focus fully on helping others navigate theirs. You never know what happens next in life.
 
-**Adaptig** — Co-founded with partners who share the belief that AI training should transform people, not just inform them. Our trainer network spans four continents, helping organizations like Mattel, Toyota, and YPO go from unsure to unstoppable.
+**Adaptig** — Co-founded with partners who share the belief that AI training should transform people, not just inform them. Our trainer network spans 20+ countries, helping organizations like Mattel, Toyota, and YPO go from unsure to unstoppable.
 
 I also helped build **DotAI**, Hong Kong's practical AI training community, contributing to corporate training across 70+ organizations.
 

@@ -145,7 +145,7 @@ const cases = [
     org: 'Adaptig Train-the-Trainer',
     title: 'Global trainer cohorts',
     type: 'Train-the-trainer',
-    scale: '8–10 trainers per cohort, across four continents',
+    scale: '8–10 trainers per cohort, across 20+ countries',
     receipts: ['Multiple cohorts delivered, including sessions taught remotely from Tokyo'],
     summary: 'Training the trainers: cohort programs that turn practitioners into AI trainers, run across time zones.',
     blogSlug: null,
