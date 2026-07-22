@@ -4,6 +4,8 @@ I asked my AI assistant a fairly rude question this week: why is your writing ba
 
 The answer wasn't the model.
 
+![Swiss-style typographic poster: "It wasn't the model" over a giant number 8, with "TEMPLATES DELETED" — the eight old instruction templates I removed that were making my AI write badly in English, Chinese and French.](/images/blog/my-ai-wrote-badly-in-three-languages.png)
+
 Buried in my own setup were instructions written months ago, when the models were weaker. An email template that opened with "Hope you're doing well!" A rule that said always end with a call-to-action. Each upgrade gave me a better model, and those old instructions kept dragging its drafts back to 2025.
 
 We deleted eight of these this week. The part that surprised me: the downloaded plugins were all fine. The rot was in the files we wrote ourselves, back when we didn't trust the model to write a plain sentence on its own.
