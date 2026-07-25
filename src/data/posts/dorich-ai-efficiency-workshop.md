@@ -1,88 +1,46 @@
-# Building AI Habits That Stick: A 4-Module Experiment
+In April 2025, Dorich -- a Hong Kong financial education platform -- asked me to run a 2.5-hour AI workshop for their community. The brief was specific: no surface-level demo that gets forgotten within a week. Their audience was professionals focused on career development and personal finance, people who'd tried ChatGPT, found the output generic, and concluded AI wasn't ready for their work.
 
-Most people who've tried AI tools have the same experience: initial excitement, a few successful experiments, then gradual abandonment. The tools sit unused. The old workflows persist. Nothing really changes.
-
-When Dorich, a Hong Kong financial education platform, approached me about running an AI workshop for their community, they were explicit about what they didn't want: another surface-level demo that would be forgotten within a week.
+The usual problem. Someone tries a tool, types "summarize this," gets a bland response, walks away. The gap is usually the prompt, not the tool. So instead of covering four skills in the abstract, we built the session around four prompt patterns, each one designed to solve a bottleneck these professionals were already frustrated by.
 
 ![AI efficiency workshop with the Dorich community](/images/blog/dorich-ai-workshop.png)
 
-We designed something different - a 2.5-hour session structured around four specific skills, each targeting a real workplace bottleneck. The goal wasn't tool mastery. It was habit formation.
+**Pattern 1: The extraction prompt**
 
-## Why Most AI Training Fails
+For processing documents -- reports, meeting notes, research -- where the pain is volume, not complexity.
 
-Here's the pattern I see repeatedly: Someone attends an AI workshop. They learn that ChatGPT can write emails and summarize documents. They go back to work, try it once or twice, find the output doesn't quite match their needs, and conclude that AI "isn't ready" for their work. This is the core reason [most AI training doesn't stick](/blog/why-ai-training-doesnt-stick).
+The pattern: *"Read the attached [document type]. Extract: (1) the three decisions made, (2) action items with owners, (3) anything flagged as unresolved. Format as a table."*
 
-The problem isn't the tools. It's the gap between generic demonstrations and specific workflows. Showing someone that AI can summarize text is useless if they don't know how to integrate summarization into their actual daily routine.
+What makes it work is the specificity of the ask. "Summarize this document" gives you a paragraph you won't use. Naming exactly what you want extracted -- decisions, actions, open items -- gives you output that maps to how you'd actually brief someone. We practiced this on real meeting notes participants brought. Most had their extraction running in under two minutes.
 
-For Dorich's audience - professionals focused on career development and personal finance - we needed to anchor each skill to problems they were already trying to solve.
+**Pattern 2: The perspective prompt**
 
-## The Four-Skill Framework
+For ideation and brainstorming -- when the problem is direction, not information.
 
-**Skill 1: AI Literacy (Reading and Processing)**
+The pattern: *"You are a [specific role -- e.g., skeptical customer / marketing strategist / budget-conscious CFO]. Given [situation], what are the three biggest concerns you'd raise? Then suggest one approach for each."*
 
-The first pain point we addressed: information overload. Professionals spend hours reading reports, meeting notes, and research documents. The cognitive load is exhausting.
+Generic "give me ideas" prompts produce generic ideas. Assigning a role forces the model to reason from a constrained perspective, and asking for concerns before solutions prevents the tool from jumping to optimistic fluff. Several participants used this during the session to stress-test proposals they were preparing for actual meetings the following week.
 
-We demonstrated how [tools like ChatGPT, Google's NotebookLM, and Perplexity](/blog/ai-tool-stack-3000-professionals) can transform this process. Upload a document. Ask for a summary. Request the key action items. Get a translation if needed. The workflow takes minutes instead of hours.
+**Pattern 3: The structure prompt**
 
-But the real lesson wasn't the tool - it was the prompt structure. We taught participants to specify exactly what they needed: "Summarize this in three bullet points" produces different results than "What are the main arguments?" Precision in prompting is a skill that transfers across every AI application.
+For presentations and content -- the blank-page problem.
 
-**Skill 2: AI Creativity (Ideation and Brainstorming)**
+The pattern: *"Create a [number]-slide outline for a presentation on [topic] aimed at [audience]. For each slide: one headline, three bullet points, one suggested visual. Keep the total under [time limit] minutes of speaking."*
 
-"I don't know where to start" is the most common creative block. A blank page, a blank slide, a project that needs a direction. Participants learned how to use AI as a thinking partner.
+The constraint on speaking time forces the model to prioritize. Without it, you get a twelve-slide outline for a five-minute slot. The visual suggestion per slide gives participants a starting point for Canva or PowerPoint without requiring design skills. Watching a complete deck structure appear in thirty seconds -- when they'd normally spend an hour on outlines alone -- was the moment most people in the room reconsidered the tool.
 
-The technique we taught: role-based prompting. Instead of asking "give me ideas for X," you ask the AI to adopt a specific perspective. "You're a marketing strategist - what angles would you explore for this campaign?" or "As a skeptical customer, what objections would you have?"
+**Pattern 4: The analysis prompt**
 
-This approach consistently generates more useful starting points than generic brainstorming. And more importantly, it gives participants a repeatable method they can use independently.
+For spreadsheets and data -- when the bottleneck is interpretation, not collection.
 
-**Skill 3: AI Visual Creation (Presentations and Content)**
+The pattern: *"Here is [data type] from [time period]. Identify: (1) the top three trends, (2) any outliers, (3) one recommendation I should investigate further. Explain your reasoning for each."*
 
-Presentation design is a universal time sink. People with important ideas spend hours wrestling with PowerPoint instead of refining their message.
+Adding "explain your reasoning" separates this from a chart generator. The explanation gives you something to evaluate -- you can spot where the model misread the data, which happens -- and something to include in a report without feeling like you outsourced your judgment. Several groups used this in the final exercise and surfaced trends their managers hadn't noticed.
 
-We showed participants how to go from an outline to a complete presentation draft in under ten minutes. The AI generates structure and content; Canva or similar tools handle visual design. The human role shifts from production to curation - selecting, editing, and refining rather than creating from scratch.
+**What made the difference**
 
-The workshop included a hands-on component where each participant actually built a presentation. Seeing their own work materialize so quickly was the most convincing proof of concept.
+Specificity. Not four skills explained in the abstract -- four patterns practiced on real material. Participants left with prompts they could paste into a tool the next morning, not concepts they'd need to translate into action on their own. The feedback that stuck with me wasn't about AI capabilities. It was: "I finally know what to type."
 
-**Skill 4: AI Data Analysis (Insights from Spreadsheets)**
-
-For anyone working with Excel or Google Sheets, data analysis is often the most tedious part of their job. Finding patterns, creating charts, writing summary reports - all of it takes time that could be spent on actual decision-making.
-
-We demonstrated how AI tools can accelerate this process: paste in data, ask for key trends, request visualizations, get draft recommendations. The AI doesn't replace judgment - it handles the mechanical work so you can focus on interpretation.
-
-## The Group Exercise That Changed Everything
-
-Each module included individual practice, but the session's turning point was the group exercise. Teams chose a real work task - "organize my chaotic notes into a presentation" or "find insights in this sales data" - and completed it using the techniques they'd just learned.
-
-One group transformed meeting notes into a formatted project plan. Another extracted actionable insights from a messy spreadsheet and generated supporting charts. A third produced a complete content calendar from a rough brief.
-
-The reactions were consistent: surprise at the speed, skepticism giving way to excitement, immediate mental mapping to their own pending tasks.
-
-## What Made the Difference
-
-Three design choices made this workshop more effective than typical AI training:
-
-**Specificity over comprehensiveness.** We didn't try to cover every AI capability. Four skills, clearly defined, with immediate practice. Participants left with a manageable toolkit they could actually remember.
-
-**Real tasks, not hypotheticals.** Every exercise used actual work scenarios. When someone sees AI solve a problem they're currently facing, the relevance becomes undeniable.
-
-**Immediate application.** We didn't just explain - we had participants do. By the end of the session, everyone had produced something real using each skill.
-
-## The Feedback That Surprised Me
-
-Post-workshop, the comments that stood out weren't about AI capabilities. They were about clarity:
-
-"I finally know what to do with these tools."
-
-"Before today I thought AI was just for translation. Now I see it everywhere in my work."
-
-"The biggest shift was understanding that AI doesn't give me answers - it gives me starting points."
-
-That last insight is worth emphasizing. The participants who will actually change their workflows aren't the ones who think AI will do their jobs for them. They're the ones who see it as a collaborator that handles the mechanical so they can focus on the meaningful.
-
-## The Takeaway
-
-AI adoption isn't a technology problem. It's a habit problem. You don't need to master every tool or understand every capability. You need four or five specific skills that map directly to your daily pain points, practiced enough that they become automatic.
-
-The question isn't "what can AI do?" It's "what am I currently doing that AI could handle instead?" Start there, and the habits follow.
+That's the gap most AI training doesn't close. People understand what the tools can do. They don't know what to say to them. A reusable prompt pattern, tested on real material during the session -- not after -- is what closes it.
 
 ---
 

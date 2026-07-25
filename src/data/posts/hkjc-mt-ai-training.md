@@ -1,60 +1,48 @@
-# Teaching Hong Kong Jockey Club's Future Leaders to Think in Prompts
+HKJC's Management Trainee Programme brought me in for two days in April 2025 to teach AI-assisted business communication. The MT Programme rotates future leaders through departments before they settle into permanent roles -- these weren't people who needed to automate tasks. They needed to communicate strategically, and they needed to understand how AI fits into that.
 
-In April, I had the opportunity to train Hong Kong Jockey Club's Management Trainees on AI business communication. HKJC isn't just one of Hong Kong's oldest charities - their MT Programme systematically cultivates future leaders with cross-departmental strategic thinking. When they decided to integrate AI into this pipeline, the stakes were different from a typical corporate workshop.
+The curriculum was built around what I called "Text-to-Impact" -- treating AI as a thinking tool for business communication, not just a drafting tool. The framework has three layers, each building on the last. Here they are with the kind of prompts we actually practiced, because a framework described in the abstract is a poster, not a skill.
 
 ![Workshop session with HKJC Management Trainees](/images/blog/hkjc-mt-workshop.jpeg)
 
-These weren't mid-career professionals looking to automate tasks. They were emerging leaders who needed to understand AI as a communication tool - not just for efficiency, but for impact.
+**Layer 1: Precision -- how AI interprets your input**
 
-## The Challenge: Beyond Tool Tutorials
+Most people prompt like they're texting a colleague who already knows the context. AI doesn't have the context.
 
-The brief was clear: teach AI-assisted business writing. But I'd learned from previous engagements that showing features doesn't change behavior. What transforms how people work is shifting how they think about the tool.
+A vague prompt: *"Write a summary of our project."*
 
-For management trainees destined for leadership roles, the question wasn't "how do I use ChatGPT?" It was "how do I design communications that drive action?"
+A precise prompt: *"Summarize the Q3 customer-retention project for a non-technical audience. Cover: what we did, what the results were, what we're doing next. Three paragraphs, under 200 words."*
 
-I built a two-day curriculum around what I called "Text-to-Impact" - a framework that treats AI not as a writing assistant, but as a thinking partner for business communication.
+The improvement comes from specifying the audience, naming the scope, and setting a format constraint. We spent the first half-day on this layer alone, because precision in prompting is precision in thinking -- and management trainees headed for leadership roles benefit from both. Participants rewrote the same prompt three or four times, watching the output sharpen each round. The skill transfers directly: anyone who can write a precise prompt can write a better project brief.
 
-## The Three-Layer Prompt Training
+**Layer 2: Structure -- translating what you need into an output framework**
 
-Instead of teaching prompts as recipes to copy, I structured the training around three progressive layers of capability:
+Once the input is precise, the next gap is structural. Most people accept whatever format the AI gives them. That's backwards -- you should define the structure before the model fills it.
 
-**Layer 1: Precision** - How AI interprets your input. We focused on understanding how generative models parse punctuation, numbers, and sentence structure. This layer is about asking clearer questions - a skill that transfers beyond AI to all professional communication.
+A flat prompt: *"Help me prepare for the board meeting on regional expansion."*
 
-**Layer 2: Structure** - How to translate information needs into output frameworks. This is where participants learned to specify formats, define scope, and guide AI toward actionable responses rather than generic text.
+A structured prompt: *"I'm presenting a three-minute update on Southeast Asia expansion to the board. Create: (1) an opening statement that frames progress against the timeline we committed to, (2) three bullet points on risks flagged since last quarter, (3) one clear ask -- budget approval for the Thailand pilot. Tone: direct, no hedging."*
 
-**Layer 3: Context** - Role simulation and audience awareness. The final layer trained participants to adjust tone, adapt to different stakeholders, and maintain brand consistency across communications.
+The structured version produces something you could almost present as-is. The flat version produces a five-paragraph essay you'd have to rebuild entirely. We used [Microsoft Copilot](/blog/why-i-teach-copilot-not-chatgpt) for this layer -- its Office integration made it practical for the memos, decks, and reports these trainees produce daily. ChatGPT handled the open-ended work in Layer 1. Perplexity came in for research-backed prompts later. The tools mattered less than the structure.
+
+**Layer 3: Context -- role simulation and audience awareness**
+
+The final layer calibrates tone and perspective -- the hardest part to teach, and the one that matters most for people in leadership pipelines.
+
+A context-free prompt: *"Write an email to the department heads about the new policy."*
+
+A context-rich prompt: *"You are a management trainee writing to three department heads (Operations, Finance, HR) who were not consulted during this policy's development. They may feel bypassed. Write an email that acknowledges their expertise, explains the rationale, invites their input on implementation, and keeps the tone collegial but not apologetic. Under 250 words."*
+
+The context-rich version handles something most templates can't: political awareness. For management trainees rotating through departments, understanding how audience and power dynamics shape communication was at least as valuable as the AI skill itself.
 
 ![Prompt training structure demonstration](/images/blog/hkjc-prompt-training.jpeg)
 
-The tools we used - [Microsoft Copilot for stability](/blog/why-i-teach-copilot-not-chatgpt), ChatGPT for depth, Perplexity for research integration - were secondary to this underlying structure. Tools change. The thinking framework doesn't.
+**What this looked like in practice**
 
-## What Worked: Design Thinking Over Features
+By day two, participants were combining all three layers into single prompts and applying them to their actual work. Several built prompt libraries for their departments before the workshop ended -- standard formats for meeting summaries, project updates, stakeholder emails. Others adapted the three-layer pattern for tasks I hadn't anticipated, which is when you know a framework is actually working rather than just being tolerated.
 
-The breakthrough moment came when I stopped calling it "AI training" and started framing it as "communication design."
-
-Once participants understood that [every prompt is essentially a design decision](/blog/stop-telling-ai-be-creative) - what to include, what to omit, what format best serves the reader - engagement shifted. They weren't learning a new tool. They were refining a skill they already had.
-
-I used interactive whiteboards and step-by-step prompt exercises to keep the technical barrier low. The focus stayed on decision-making: Why this format? Why this level of detail? What does your reader actually need?
-
-## The Unexpected Insight
-
-One participant's feedback captured something I hadn't explicitly intended:
-
-> "AI chatbots are no longer just about text-to-text. They're about text-to-IMPACT."
-
-That reframe - from text generation to impact creation - became the throughline for both days. It shifted the conversation from "will AI write my emails?" to "how can AI help me communicate more strategically?"
-
-By the end of the workshop, some participants had already started building their own prompt libraries for their departments. Others were adapting the three-layer structure for meeting summaries and project proposals. One team began exploring how to become the "AI champion" for their unit.
+Feedback scores landed between 4 and 5 out of 5 across the group. But the thing I was watching for was whether they were using the framework a week later without me in the room. The early reports suggested they were -- not because the framework was particularly elegant, but because they'd practiced it enough times on their own material to make it automatic.
 
 ![Participant feedback and workshop engagement](/images/blog/hkjc-workshop-feedback.jpeg)
-
-## The Takeaway
-
-Teaching AI to future leaders requires a different approach than teaching it to practitioners. The goal isn't task automation - it's building a new mode of strategic thinking.
-
-Most feedback scores landed between 4 and 5 out of 5. But the metric I cared about was different: were they using the framework a week later? Were they teaching it to colleagues? The early signs suggested yes.
-
-Prompt engineering will evolve. What remains is the underlying skill: thinking clearly about what you want to communicate, who needs to hear it, and how to structure information for action. AI just makes that thinking visible.
 
 ---
 

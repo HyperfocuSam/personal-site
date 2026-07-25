@@ -6,7 +6,7 @@
     <description>AI adoption insights, workshop reflections, and practical AI training tips from Sam Wong.</description>
     <language>en</language>
     <atom:link href="https://hyperfocusam.com/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 21 Jul 2026 18:21:56 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jul 2026 10:59:08 GMT</lastBuildDate>
     <item>
       <title>懂 AI 和用 AI，是兩件事</title>
       <link>https://hyperfocusam.com/blog/knowing-ai-and-using-ai-tc/</link>
@@ -481,10 +481,9 @@
       <pubDate>Sat, 07 Mar 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>What My AI Drew When I Asked What's in Its Mind</title>
+      <title>How an Art Prompt Turned Into a 78-Bug Audit of My AI Assistant</title>
       <link>https://hyperfocusam.com/blog/what-my-ai-drew-when-i-asked/</link>
       <guid isPermaLink="true">https://hyperfocusam.com/blog/what-my-ai-drew-when-i-asked/</guid>
-      <description>After 200 sessions working together, I asked my AI assistant to draw what's in its mind. What happened next — the art, the conversation, and rebuilding our system together.</description>
       <pubDate>Fri, 06 Mar 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
@@ -593,10 +592,10 @@
       <pubDate>Sun, 10 Aug 2025 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>Teaching Tourism Executives to Think Like AI Strategists</title>
+      <title>Why I Trained CTS Executives on Doubao Instead of ChatGPT</title>
       <link>https://hyperfocusam.com/blog/cts-tourism-ai-training/</link>
       <guid isPermaLink="true">https://hyperfocusam.com/blog/cts-tourism-ai-training/</guid>
-      <description>Designing management-level AI training for China Travel Service, focusing on China-native tools and the 80/20 human-AI collaboration principle.</description>
+      <description>For a tourism company operating across Hong Kong and mainland China, the standard Western AI toolkit was the wrong starting point. The tool decision turned out to be the strategic one.</description>
       <pubDate>Sun, 20 Jul 2025 00:00:00 GMT</pubDate>
     </item>
     <item>
@@ -621,24 +620,21 @@
       <pubDate>Thu, 15 May 2025 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>How 400 Educators Changed Their Minds About AI in 75 Minutes</title>
+      <title>hkct-ai-education-workshop</title>
       <link>https://hyperfocusam.com/blog/hkct-ai-education-workshop/</link>
       <guid isPermaLink="true">https://hyperfocusam.com/blog/hkct-ai-education-workshop/</guid>
-      <description>Introducing the &quot;AI Three-Part Framework&quot; to HKCT staff - a simple mental model for getting 400 educators from skepticism to experimentation.</description>
       <pubDate>Sun, 27 Apr 2025 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>Teaching Hong Kong Jockey Club's Future Leaders to Think in Prompts</title>
+      <title>hkjc-mt-ai-training</title>
       <link>https://hyperfocusam.com/blog/hkjc-mt-ai-training/</link>
       <guid isPermaLink="true">https://hyperfocusam.com/blog/hkjc-mt-ai-training/</guid>
-      <description>Training HKJC Management Trainees on AI business communication through a three-layer prompt framework - from precision to structure to context.</description>
       <pubDate>Sat, 26 Apr 2025 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>Building AI Habits That Stick: A 4-Module Experiment</title>
+      <title>Four Prompt Patterns from a 2.5-Hour Community Workshop</title>
       <link>https://hyperfocusam.com/blog/dorich-ai-efficiency-workshop/</link>
       <guid isPermaLink="true">https://hyperfocusam.com/blog/dorich-ai-efficiency-workshop/</guid>
-      <description>A 2.5-hour workshop designed around four specific skills - literacy, creativity, visual creation, and data analysis - that transformed how participants approach AI tools.</description>
       <pubDate>Wed, 02 Apr 2025 00:00:00 GMT</pubDate>
     </item>
     <item>
