@@ -6,7 +6,14 @@
     <description>AI adoption insights, workshop reflections, and practical AI training tips from Sam Wong.</description>
     <language>en</language>
     <atom:link href="https://hyperfocusam.com/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sat, 25 Jul 2026 10:59:08 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jul 2026 19:28:58 GMT</lastBuildDate>
+    <item>
+      <title>I've Written Down 103 Rules for My AI. Three of Them Broke Last Week.</title>
+      <link>https://hyperfocusam.com/blog/i-wrote-103-rules-for-my-ai-three-broke/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/i-wrote-103-rules-for-my-ai-three-broke/</guid>
+      <description>I published the guide to building a four-tier AI memory system. Then I spent three weeks grading my own. Three rules broke that were already written down -- and none of them failed because the system couldn't find the rule.</description>
+      <pubDate>Sun, 26 Jul 2026 00:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>懂 AI 和用 AI，是兩件事</title>
       <link>https://hyperfocusam.com/blog/knowing-ai-and-using-ai-tc/</link>
@@ -15,9 +22,10 @@
       <pubDate>Tue, 21 Jul 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>my-ai-wrote-badly-in-three-languages</title>
+      <title>Why My AI Wrote Badly in Three Languages (It Wasn't the Model)</title>
       <link>https://hyperfocusam.com/blog/my-ai-wrote-badly-in-three-languages/</link>
       <guid isPermaLink="true">https://hyperfocusam.com/blog/my-ai-wrote-badly-in-three-languages/</guid>
+      <description>I asked my AI assistant why its writing is bad in English, Chinese and French. The answer wasn't the model -- it was the templates I fed it months ago, when the models were weaker. We deleted eight of them this week.</description>
       <pubDate>Fri, 17 Jul 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
@@ -252,9 +260,10 @@
       <pubDate>Sun, 12 Apr 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>9-percent-copilot-licenses</title>
+      <title>9% of Copilot Licenses Are Actually Used. I'm Not Surprised.</title>
       <link>https://hyperfocusam.com/blog/9-percent-copilot-licenses/</link>
       <guid isPermaLink="true">https://hyperfocusam.com/blog/9-percent-copilot-licenses/</guid>
+      <description>Organizations spend millions on AI licenses and zero on training. The adoption gap isn't a tool problem -- it's a training problem wearing a tool costume.</description>
       <pubDate>Fri, 27 Mar 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
@@ -265,9 +274,10 @@
       <pubDate>Fri, 27 Mar 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>ai-chatbot-2-weeks-what-broke</title>
+      <title>I Built an AI Chatbot in 2 Weeks. Here's What Broke on Turn 3.</title>
       <link>https://hyperfocusam.com/blog/ai-chatbot-2-weeks-what-broke/</link>
       <guid isPermaLink="true">https://hyperfocusam.com/blog/ai-chatbot-2-weeks-what-broke/</guid>
+      <description>The gap between 'build an AI chatbot' tutorials and a working production chatbot is measured in crashes, security holes, and spec rewrites.</description>
       <pubDate>Fri, 27 Mar 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
@@ -484,6 +494,7 @@
       <title>How an Art Prompt Turned Into a 78-Bug Audit of My AI Assistant</title>
       <link>https://hyperfocusam.com/blog/what-my-ai-drew-when-i-asked/</link>
       <guid isPermaLink="true">https://hyperfocusam.com/blog/what-my-ai-drew-when-i-asked/</guid>
+      <description>I asked my AI to draw what's in its mind. The interesting part wasn't the drawing -- it was the working session that followed, where we found 78 logged misfires and shipped 14 fixes.</description>
       <pubDate>Fri, 06 Mar 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
@@ -620,21 +631,24 @@
       <pubDate>Thu, 15 May 2025 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>hkct-ai-education-workshop</title>
+      <title>What 75 Minutes of AI Training Can and Can't Do for 400 Educators</title>
       <link>https://hyperfocusam.com/blog/hkct-ai-education-workshop/</link>
       <guid isPermaLink="true">https://hyperfocusam.com/blog/hkct-ai-education-workshop/</guid>
+      <description>HKCT put 400 staff in one room for 75 minutes of AI training. Some started experimenting within a week. Most didn't. Here's what one session honestly achieves.</description>
       <pubDate>Sun, 27 Apr 2025 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>hkjc-mt-ai-training</title>
+      <title>Three Layers of a Better Prompt: What HKJC's Management Trainees Actually Practiced</title>
       <link>https://hyperfocusam.com/blog/hkjc-mt-ai-training/</link>
       <guid isPermaLink="true">https://hyperfocusam.com/blog/hkjc-mt-ai-training/</guid>
+      <description>The three-layer prompt framework I taught Hong Kong Jockey Club's management trainees -- Precision, Structure, Context -- with the actual before-and-after prompts from the workshop.</description>
       <pubDate>Sat, 26 Apr 2025 00:00:00 GMT</pubDate>
     </item>
     <item>
       <title>Four Prompt Patterns from a 2.5-Hour Community Workshop</title>
       <link>https://hyperfocusam.com/blog/dorich-ai-efficiency-workshop/</link>
       <guid isPermaLink="true">https://hyperfocusam.com/blog/dorich-ai-efficiency-workshop/</guid>
+      <description>When Dorich asked for an AI session that wouldn't be forgotten in a week, we built it around four specific prompts their audience could use the next morning.</description>
       <pubDate>Wed, 02 Apr 2025 00:00:00 GMT</pubDate>
     </item>
     <item>

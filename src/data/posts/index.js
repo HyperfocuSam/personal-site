@@ -5,6 +5,15 @@
 // linkedPost: slug of the corresponding post in another language (for hreflang)
 const posts = [
   {
+    slug: 'i-wrote-103-rules-for-my-ai-three-broke',
+    title: "I've Written Down 103 Rules for My AI. Three of Them Broke Last Week.",
+    date: '2026-07-26',
+    excerpt: "I published the guide to building a four-tier AI memory system. Then I spent three weeks grading my own. Three rules broke that were already written down -- and none of them failed because the system couldn't find the rule.",
+    tags: ['claude-code', 'ai-agents', 'memory', 'personal-productivity'],
+    type: 'reflection',
+    featured: false,
+  },
+  {
     slug: 'knowing-ai-and-using-ai-tc',
     title: '懂 AI 和用 AI，是兩件事',
     date: '2026-07-21',

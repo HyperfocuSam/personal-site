@@ -71,11 +71,17 @@ function parsePosts() {
     const langMatch = block.match(/language:\s*'([^']+)'/);
     const linkedMatch = block.match(/linkedPost:\s*'([^']+)'/);
 
-    const titleMatch = block.match(/title:\s*'((?:[^'\\]|\\.)+)'/);
-    const excerptMatch = block.match(/excerpt:\s*'((?:[^'\\]|\\.)+)'/);
+    // Titles/excerpts containing an apostrophe must be written with double quotes
+    // in index.js, so match both quote styles — single-quote-only matching silently
+    // fell back to the slug and shipped "my-post-slug" as the RSS <title>.
+    const titleMatch = block.match(/title:\s*'((?:[^'\\]|\\.)+)'/)
+      || block.match(/title:\s*"((?:[^"\\]|\\.)+)"/);
+    const excerptMatch = block.match(/excerpt:\s*'((?:[^'\\]|\\.)+)'/)
+      || block.match(/excerpt:\s*"((?:[^"\\]|\\.)+)"/);
 
-    // Unescape JS string escapes (e.g. \' -> ', \\ -> \)
-    const unescape = (s) => s.replace(/\\'/g, "'").replace(/\\\\/g, '\\');
+    // Unescape JS string escapes (e.g. \' -> ', \" -> ", \\ -> \)
+    const unescape = (s) =>
+      s.replace(/\\'/g, "'").replace(/\\"/g, '"').replace(/\\\\/g, '\\');
 
     posts.push({
       slug: match[1],

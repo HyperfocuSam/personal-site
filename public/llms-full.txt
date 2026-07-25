@@ -106,6 +106,7 @@ Sam Wong is an AI training specialist who has trained 10,000+ professionals acro
 
 ### Personal & Productivity
 
+- [i-wrote-103-rules-for-my-ai-three-broke](https://hyperfocusam.com/blog/i-wrote-103-rules-for-my-ai-three-broke/) (2026-07-26)
 - [my-ai-wrote-badly-in-three-languages](https://hyperfocusam.com/blog/my-ai-wrote-badly-in-three-languages/) (2026-07-17)
 - [AI made me a manager, not a better maker](https://hyperfocusam.com/blog/ai-manager-not-maker/) (2026-07-02) — AI raised my output and quietly changed the job — from making the thing to deciding what is worth making. Five practitioners circling the same shift, and why taste is the part that did not get automated.
 - [Two Workshops, One Day: Parents in the Morning, Kids in the Afternoon](https://hyperfocusam.com/blog/two-workshops-one-day-parents-kids/) (2026-06-19) — A parent workshop about AI fears at a Hong Kong school in the morning. A children's AI build in the afternoon. Same tools, same city, and the working answers I've started giving parents since.
