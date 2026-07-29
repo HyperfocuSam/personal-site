@@ -5,6 +5,24 @@
 // linkedPost: slug of the corresponding post in another language (for hreflang)
 const posts = [
   {
+    slug: 'five-questions-corporate-ai-training-hong-kong',
+    title: 'Five Questions to Ask Before You Buy Corporate AI Training in Hong Kong',
+    date: '2026-07-29',
+    excerpt: 'Every provider page says the same things: practical, hands-on, tailored. Five questions that tell them apart -- from someone who sells this, so use the questions against me too.',
+    tags: ['ai-adoption', 'enterprise', 'corporate-training'],
+    type: 'framework',
+    featured: false,
+  },
+  {
+    slug: 'ai-train-the-trainer-hong-kong',
+    title: 'How to Choose an AI Train-the-Trainer Program in Hong Kong',
+    date: '2026-07-29',
+    excerpt: 'Hong Kong is short of people who can deliver AI training properly. What a train-the-trainer program should hand you, the five questions to ask before you pay, and where I stand as someone who runs one.',
+    tags: ['train-the-trainer', 'ai-adoption', 'workshop'],
+    type: 'framework',
+    featured: false,
+  },
+  {
     slug: 'i-wrote-103-rules-for-my-ai-three-broke',
     title: "I've Written Down 103 Rules for My AI. Three of Them Broke Last Week.",
     date: '2026-07-26',
