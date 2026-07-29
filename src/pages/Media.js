@@ -61,6 +61,14 @@ const episodes = [
   },
 ];
 
+// Google requires thumbnailUrl and an ISO 8601 uploadDate on VideoObject.
+const youtubeThumbnail = (embedUrl) => `https://i.ytimg.com/vi/${embedUrl.split('/').pop()}/hqdefault.jpg`;
+
+const isoDate = (dateStr) => {
+  const d = new Date(dateStr);
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+};
+
 const EpisodeCard = ({ episode }) => (
   <div className="episode-card fn-entry" id={episode.id}>
     <div className="episode-card__header">
@@ -176,7 +184,8 @@ const Media = () => (
                 name: ep.title,
                 description: ep.description.en,
                 embedUrl: ep.embedUrl,
-                uploadDate: ep.date,
+                thumbnailUrl: youtubeThumbnail(ep.embedUrl),
+                uploadDate: isoDate(ep.date),
               },
             })),
           },

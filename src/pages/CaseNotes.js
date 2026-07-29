@@ -37,6 +37,24 @@ const periodEndValue = (period) => {
   return (Number(years[years.length - 1]) * 12) + monthNumbers[endMonth[1]];
 };
 
+// Google requires startDate on every Event in structured data; derive ISO
+// dates from the human-readable period strings ("Jul – Oct 2025" etc.).
+const isoMonth = (month, year) => `${year}-${String(monthNumbers[month]).padStart(2, '0')}-01`;
+
+const datesFor = (period) => {
+  const tokens = period.match(/([A-Z][a-z]{2})(?: (\d{4}))?/g);
+  const years = period.match(/\d{4}/g);
+  if (!tokens || !years) return {};
+
+  const [startMonth, startYear] = tokens[0].split(' ');
+  const dates = { startDate: isoMonth(startMonth, startYear || years[0]) };
+  if (!period.endsWith('ongoing')) {
+    const [endMonth] = tokens[tokens.length - 1].split(' ');
+    dates.endDate = isoMonth(endMonth, years[years.length - 1]);
+  }
+  return dates;
+};
+
 const deepDives = cases.filter((entry) => entry.deepDive);
 const ledger = cases
   .filter((entry) => !entry.deepDive)
@@ -64,8 +82,10 @@ const CaseNotes = () => {
           '@id': `${SITE_URL}/case-notes/#${entry.id}`,
           name: `${entry.org} — ${entry.title}`,
           description: entry.summary,
+          ...datesFor(entry.period),
           location: {
             '@type': 'Place',
+            name: locationFor(entry.id),
             address: {
               '@type': 'PostalAddress',
               addressLocality: locationFor(entry.id),

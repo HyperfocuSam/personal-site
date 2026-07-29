@@ -72,7 +72,7 @@ const ZhServices = () => {
 
   return (
     <Main
-      title="服務"
+      title="AI 培訓服務 — 香港"
       description="Sam Wong AI 培訓服務 — 企業工作坊、培訓師培訓計劃、一對一輔導，透過 Adaptig 提供，為香港企業提供 AI 培訓及 AI 顧問服務。"
       canonicalUrl={`${SITE_URL}/zh/services`}
       ogTitle="AI 培訓服務 | Sam Wong"
