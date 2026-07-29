@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import { groupPostsByYear } from './FieldNotesList';
 
 describe('groupPostsByYear', () => {
