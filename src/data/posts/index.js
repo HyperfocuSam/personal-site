@@ -5,6 +5,28 @@
 // linkedPost: slug of the corresponding post in another language (for hreflang)
 const posts = [
   {
+    slug: 'five-questions-corporate-ai-training-hong-kong-tc',
+    title: '香港企業採購 AI 培訓前，必問供應商的五條問題',
+    date: '2026-07-29',
+    excerpt: '每間供應商網站的字眼幾乎一樣：practical、hands-on、度身訂造。這份清單幫你在表面相似的說法之間做分辨——而寫這份清單的人，自己就是供應商，每條問題你都可以拿回來問我。',
+    tags: ['ai-adoption', 'enterprise', 'corporate-training'],
+    type: 'framework',
+    language: 'zh-Hant',
+    featured: false,
+    linkedPost: 'five-questions-corporate-ai-training-hong-kong',
+  },
+  {
+    slug: 'ai-train-the-trainer-hong-kong-tc',
+    title: '香港 AI Train-the-Trainer 課程：你買的是什麼？付款前必問的五條問題',
+    date: '2026-07-29',
+    excerpt: '你買的從來不是 AI 知識，而是一套交付系統：可修改的教材、run-of-show、hands-on 帶法、現場出事的應變、證書之後的工作機會——付款前要問的五條問題。',
+    tags: ['train-the-trainer', 'ai-adoption', 'workshop'],
+    type: 'framework',
+    language: 'zh-Hant',
+    featured: false,
+    linkedPost: 'ai-train-the-trainer-hong-kong',
+  },
+  {
     slug: 'five-questions-corporate-ai-training-hong-kong',
     title: 'Five Questions to Ask Before You Buy Corporate AI Training in Hong Kong',
     date: '2026-07-29',
@@ -12,6 +34,7 @@ const posts = [
     tags: ['ai-adoption', 'enterprise', 'corporate-training'],
     type: 'framework',
     featured: false,
+    linkedPost: 'five-questions-corporate-ai-training-hong-kong-tc',
   },
   {
     slug: 'ai-train-the-trainer-hong-kong',
@@ -21,6 +44,7 @@ const posts = [
     tags: ['train-the-trainer', 'ai-adoption', 'workshop'],
     type: 'framework',
     featured: false,
+    linkedPost: 'ai-train-the-trainer-hong-kong-tc',
   },
   {
     slug: 'i-wrote-103-rules-for-my-ai-three-broke',

@@ -163,16 +163,40 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/corporate-ai-training-hong-kong/" />
   </url>
   <url>
+    <loc>https://hyperfocusam.com/blog/five-questions-corporate-ai-training-hong-kong-tc/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/blog/five-questions-corporate-ai-training-hong-kong-tc/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/blog/five-questions-corporate-ai-training-hong-kong/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/blog/five-questions-corporate-ai-training-hong-kong/" />
+  </url>
+  <url>
+    <loc>https://hyperfocusam.com/blog/ai-train-the-trainer-hong-kong-tc/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/blog/ai-train-the-trainer-hong-kong-tc/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/blog/ai-train-the-trainer-hong-kong/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/blog/ai-train-the-trainer-hong-kong/" />
+  </url>
+  <url>
     <loc>https://hyperfocusam.com/blog/five-questions-corporate-ai-training-hong-kong/</loc>
     <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/blog/five-questions-corporate-ai-training-hong-kong/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/blog/five-questions-corporate-ai-training-hong-kong-tc/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/blog/five-questions-corporate-ai-training-hong-kong/" />
   </url>
   <url>
     <loc>https://hyperfocusam.com/blog/ai-train-the-trainer-hong-kong/</loc>
     <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/blog/ai-train-the-trainer-hong-kong/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/blog/ai-train-the-trainer-hong-kong-tc/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/blog/ai-train-the-trainer-hong-kong/" />
   </url>
   <url>
     <loc>https://hyperfocusam.com/blog/i-wrote-103-rules-for-my-ai-three-broke/</loc>
