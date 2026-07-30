@@ -877,14 +877,14 @@
       justify-content: center;
     }
 
-    // The two amber CTAs — the only place amber appears in the entire design
+    // The signal-red CTAs — the one red moment on the page (brand v1.0)
     .button {
-      background-color: _palette(amber);
-      color: _palette(ink);
+      background-color: _palette(signal);
+      color: _palette(text-on-accent);
 
       &:hover {
-        background-color: _palette(amber-light);
-        color: _palette(ink);
+        background-color: _palette(signal-deep);
+        color: _palette(text-on-accent);
       }
     }
 
@@ -895,7 +895,7 @@
 
       &:hover {
         background-color: _palette(amber);
-        color: _palette(ink);
+        color: _palette(ink-deep);
       }
     }
   }

@@ -45,14 +45,14 @@ $size: (
   nav-height-small: 56px,
 );
 
-// Font.
+// Font — Sam Wong brand v1.0 (Arsenal-derived, 2026-07-30):
+// Bitter is the ONE voice (headings AND body); Archivo condensed bold italic
+// is the display face for hot-take moments only; JetBrains Mono for receipts.
 $font: (
   family: (
-    "Inter",
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif,
+    "Bitter",
+    "Georgia",
+    serif,
   ),
   family-fixed: (
     "JetBrains Mono",
@@ -60,23 +60,28 @@ $font: (
     monospace,
   ),
   family-heading: (
-    "Fraunces",
+    "Bitter",
     "Georgia",
     serif,
   ),
+  family-display: (
+    "Archivo",
+    "Arial Narrow",
+    sans-serif,
+  ),
   family-chinese: (
     "Noto Sans TC",
-    "Inter",
+    "Bitter",
     -apple-system,
     sans-serif,
   ),
-  weight: 400,
-  weight-medium: 500,
-  weight-bold: 600,
-  weight-heading: 600,
-  weight-heading-bold: 700,
-  weight-heading-extrabold: 700,
-  kerning-heading: -0.03em,
+  weight: 450,
+  weight-medium: 550,
+  weight-bold: 700,
+  weight-heading: 700,
+  weight-heading-bold: 800,
+  weight-heading-extrabold: 800,
+  kerning-heading: -0.02em,
   kerning-meta: 0.08em,
 );
 
@@ -170,6 +175,56 @@ $field-notes-palette: (
 );
 $palette: map-merge($palette, $field-notes-palette);
 
+// ── Sam Wong brand v1.0 — Arsenal-derived tokens (2026-07-30) ──
+// Applied as the FINAL merge layer so the rebrand is one explicit, reversible
+// block. Canonical: Ada Knowledge/brand-assets/Personal/09-Brand-Mark/colors-fonts.md
+// + output/SAMWONG-Brand-System-20260730/. Structural DNA: one red per
+// viewport, navy-black ink, white field, heritage gold as detail only.
+$samwong-arsenal-v1: (
+  // Ink — navy-black authority base (replaces warm black)
+  ink: #0a0e23,
+  ink-mid: #10142b,
+  ink-light: #23283f,
+  ink-deep: #05070f,
+
+  // Signal red — replaces the amber evidence accents.
+  // signal = CTA red on light; amber (legacy key) = brighter red readable on ink.
+  signal: #d0021b,
+  signal-deep: #8e0b16,
+  amber: #e63e52,
+  amber-text: #8e0b16,
+  amber-light: #f26b7a,
+  amber-subtle: rgba(208, 2, 27, 0.12),
+  highlighter: rgba(208, 2, 27, 0.16),
+  heritage: #a28b52,
+
+  // Surfaces — white field (paper warmth retired)
+  surface-base: #ffffff,
+  surface-raised: #ffffff,
+  surface-overlay: rgba(255, 255, 255, 0.97),
+  surface-sunken: #f7f6f3,
+
+  // Text
+  text-primary: #0a0e23,
+  text-body: #23283f,
+  text-secondary: #4a4e63,
+  text-on-dark: #e8e9f0,
+  text-on-dark-muted: #9ba0b8,
+  text-on-accent: #ffffff,
+
+  // Borders
+  border: #e3e4ea,
+  border-subtle: #e3e4ea,
+  border-strong: #c9cbd6,
+
+  // Dark surfaces — ink navy replaces the warm-brown study
+  surface-dark-deep: #070a18,
+  surface-dark: #0a0e23,
+  surface-dark-raised: #141830,
+  surface-dark-subtle: #1d2239,
+);
+$palette: map-merge($palette, $samwong-arsenal-v1);
+
 // Shadows
 $shadow: (
   sm: none,
@@ -177,20 +232,21 @@ $shadow: (
   lg: none,
 );
 
-// Fluid type scale (homepage dark mode)
+// Fluid type scale — tempered per brand v1.0 (flat-hierarchy DNA: the page
+// cannot shout; weight signals importance, size stays disciplined)
 $type: (
-  hero: clamp(3.5rem, 3rem + 5vw, 7rem),
-  section-title: clamp(2.5rem, 2rem + 3vw, 4.5rem),
+  hero: clamp(2.5rem, 2.25rem + 2.5vw, 4rem),
+  section-title: clamp(1.75rem, 1.5rem + 1.5vw, 2.5rem),
   subtitle: clamp(1.125rem, 1rem + 0.5vw, 1.375rem),
   body-large: clamp(1rem, 0.95rem + 0.25vw, 1.125rem),
 );
 
-// Border radius
+// Border radius — brand v1.0: 2px receipts, 8px default, 16px CTA only
 $radius: (
   sm: 2px,
-  md: 2px,
-  lg: 2px,
-  xl: 2px,
+  md: 8px,
+  lg: 8px,
+  xl: 16px,
   full: 50%,
   pill: 100px,
 );

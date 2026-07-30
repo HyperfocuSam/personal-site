@@ -122,6 +122,8 @@ Sam Wong is an AI training specialist who has trained 10,000+ professionals acro
 
 ### Frameworks
 
+- [Five Questions to Ask Before You Buy Corporate AI Training in Hong Kong](https://hyperfocusam.com/blog/five-questions-corporate-ai-training-hong-kong/) (2026-07-29) — Every provider page says the same things: practical, hands-on, tailored. Five questions that tell them apart -- from someone who sells this, so use the questions against me too.
+- [How to Choose an AI Train-the-Trainer Program in Hong Kong](https://hyperfocusam.com/blog/ai-train-the-trainer-hong-kong/) (2026-07-29) — Hong Kong is short of people who can deliver AI training properly. What a train-the-trainer program should hand you, the five questions to ask before you pay, and where I stand as someone who runs one.
 - [The Agent Adoption Ladder: What Most People Get Wrong About AI Agents](https://hyperfocusam.com/blog/agent-adoption-ladder/) (2026-03-17) — I taught my non-technical co-founder about AI agents. What came out is a four-tier framework for matching the right agent tool to how you actually work — from chatbots to multi-agent orchestration.
 - [The AI Maturity Trap: Why Most Companies Are Stuck at Stage 1](https://hyperfocusam.com/blog/ai-maturity-trap-stuck-stage-one/) (2026-01-20) — Most companies think they're behind on AI. They're right -- but the fix isn't more tools. The 4-stage maturity model and how to move past Stage 1.
 
@@ -135,6 +137,8 @@ Sam Wong is an AI training specialist who has trained 10,000+ professionals acro
 
 ### Chinese (Traditional) Articles
 
+- [香港企業採購 AI 培訓前，必問供應商的五條問題](https://hyperfocusam.com/blog/five-questions-corporate-ai-training-hong-kong-tc/) (2026-07-29) — 每間供應商網站的字眼幾乎一樣：practical、hands-on、度身訂造。這份清單幫你在表面相似的說法之間做分辨——而寫這份清單的人，自己就是供應商，每條問題你都可以拿回來問我。
+- [香港 AI Train-the-Trainer 課程：你買的是什麼？付款前必問的五條問題](https://hyperfocusam.com/blog/ai-train-the-trainer-hong-kong-tc/) (2026-07-29) — 你買的從來不是 AI 知識，而是一套交付系統：可修改的教材、run-of-show、hands-on 帶法、現場出事的應變、證書之後的工作機會——付款前要問的五條問題。
 - [懂 AI 和用 AI，是兩件事](https://hyperfocusam.com/blog/knowing-ai-and-using-ai-tc/) (2026-07-21) — 一次性的工作坊過後，大約只有 4% 的人會把 AI 真正用下去，九成六兩星期內打回原形。問題不在工具，而在習慣——真正的改變，是一件小事重複很多次。
 - [我問 AI 為甚麼文筆這麼差——答案不是模型](https://hyperfocusam.com/blog/my-ai-wrote-badly-in-three-languages-tc/) (2026-07-17) — 問題不在模型，在幾個月前寫下的舊指令：模型每一次升級都更強，舊模板卻一直把文字拉回 2025 年的水平。這星期刪掉了八個問題來源，這篇文章就是第一個測試。
 - [從不寫 code 的 architect model](https://hyperfocusam.com/blog/the-architect-that-never-writes-code-tc/) (2026-07-11) — 一個從不寫 code 的 architect 模型，統籌 3 個來自不同公司的模型在同一條 git branch 上工作，在 spec 階段就消滅了 4 個 bug，最終產出一份淨刪減的 diff。模型是可以互換的應徵者——orchestration 才是資產。
