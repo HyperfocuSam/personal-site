@@ -238,7 +238,7 @@ const CorporateTraining = () => (
     ogTitle="Corporate AI Training in Hong Kong | Sam Wong"
     ogDescription={
       'Enterprise AI workshops and training programs in Hong Kong.'
-      + ' 10,000+ professionals trained, 9.2/10 satisfaction.'
+      + ' 10,000+ professionals trained. Top programme score 9.2/10 (BOCHK, 1,530 participants).'
       + ' Delivered in English and Cantonese.'
     }
     ogImage={DEFAULT_OG_IMAGE}

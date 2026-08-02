@@ -167,3 +167,27 @@
     will-change: auto;
   }
 }
+
+// ── Failsafe (2026-08-02 audit) ─────────────────────────────────────────────
+// Five of nine homepage sections shipped at opacity 0 until IntersectionObserver
+// fired — JS was a single point of failure for the whole page, including the
+// email capture. Every reveal class now settles visible on its own after 2.5s;
+// the observer normally wins first, so real users still get the motion.
+.sr-fade-up,
+.sr-fade-in,
+.sr-slide-left,
+.sr-slide-right,
+.sr-fade-up-long,
+.sr-scale-in,
+.sr-blur-in,
+.sr-child {
+  animation: sr-failsafe 0.6s ease 2.5s forwards;
+}
+
+@keyframes sr-failsafe {
+  to {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}

@@ -13,6 +13,10 @@ const routes = [
     path: '/about',
   },
   {
+    label: 'Case Notes',
+    path: '/case-notes',
+  },
+  {
     label: 'Blog',
     path: '/blog',
   },

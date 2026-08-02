@@ -31,6 +31,15 @@ const HeroSection = () => (
           Book a Free Call
         </Link>
       </div>
+      {/* 2026-08-02 audit: the receipts are the best line on the site and sat
+          800px down — a scoped strip now rides under the CTAs. Single JSX
+          expression: adjacent text nodes break react-snap hydration (#418). */}
+      <p className="dark-hero__receipts">
+        <Link to="/case-notes">
+          {'A major HK bank 9.2/10 (1,530 participants) · Garden 4.48/5 (n=29)'
+            + ' · CTF: 5 teams shipped in under 3 hours → the receipts'}
+        </Link>
+      </p>
     </div>
   </section>
 );

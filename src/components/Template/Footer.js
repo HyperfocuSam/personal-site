@@ -13,7 +13,7 @@ const Footer = () => (
             copyright line): adjacent text nodes break react-snap hydration
             (React #418) because the baked HTML merges them into one node. */}
         <p className="footer-bio">
-          {'AI Training Specialist helping enterprises and individuals adopt AI. Co-founder of '}
+          {'AI Training Specialist helping enterprises and individuals adopt AI. Co-Founder & Director of Academy at '}
           <a href="https://adaptig.ai" target="_blank" rel="noopener noreferrer">Adaptig</a>
           .
         </p>

@@ -27,6 +27,17 @@
     width: 100%;
   }
 
+  // 2026-08-02 audit fix: the zeroed gutter is safe on desktop (960px cap
+  // auto-centres) but pinned the hero to x=0 on phones. Restore a gutter
+  // below tablet width only.
+  @media (max-width: 736px) {
+    .content-narrow,
+    .content-wide {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+  }
+
   .dark-hero {
     background: _palette(surface-base);
     overflow: visible;
@@ -99,8 +110,8 @@
     }
 
     &__cta {
-      background: _palette(ink);
-      border: 1px solid _palette(ink);
+      background: _palette(signal);
+      border: 1px solid _palette(signal);
       border-radius: map-get($radius, sm);
       color: _palette(surface-base);
       font-family: _font(family-fixed);

@@ -43,11 +43,27 @@ const ZhIndex = () => (
         </div>
       </header>
 
+      {/* 2026-08-02: 實績受 Sam 指示加到中文主頁。Single-expression text:
+          adjacent text nodes break react-snap hydration (#418). */}
+      <section className="section-sunken section-padding">
+        <div className="content-wide">
+          <h3>實績，有數據為證</h3>
+          <p>
+            香港大型銀行 9.2/10 滿意度（1,530 名參加者）· 嘉頓 4.48/5 實測評分（n=29）· 周大福 5 隊在 3 小時內完成完整市場方案
+          </p>
+          <p>
+            <Link to="/case-notes" className="button-ghost">
+              查看完整實績記錄（英文版）&rarr;
+            </Link>
+          </p>
+        </div>
+      </section>
+
       <section className="section-base section-padding">
         <div className="content-wide">
           <TestimonialSection
-            title="獲各界領袖信賴"
-            subtitle="來自管理層團隊、創辦人與新晉領袖的聲音。"
+            title="獲客戶團隊信賴"
+            subtitle="來自客戶團隊與受訓專業人士的真實回饋。"
             testimonials={testimonialsZh}
             limit={2}
             featured

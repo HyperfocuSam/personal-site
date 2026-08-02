@@ -188,12 +188,14 @@ $samwong-arsenal-v1: (
   ink-deep: #05070f,
 
   // Signal red — replaces the amber evidence accents.
-  // signal = CTA red on light; amber (legacy key) = brighter red readable on ink.
+  // signal = CTA red on light. The legacy amber keys now carry heritage gold:
+  // #E63E52 was an invented hex (not in colors-fonts.md) and is retired
+  // (2026-08-02 audit) — red stays scarce, gold does the detail work on ink.
   signal: #d0021b,
   signal-deep: #8e0b16,
-  amber: #e63e52,
+  amber: #a28b52,
   amber-text: #8e0b16,
-  amber-light: #f26b7a,
+  amber-light: #c9b57e,
   amber-subtle: rgba(208, 2, 27, 0.12),
   highlighter: rgba(208, 2, 27, 0.16),
   heritage: #a28b52,
@@ -222,6 +224,11 @@ $samwong-arsenal-v1: (
   surface-dark: #0a0e23,
   surface-dark-raised: #141830,
   surface-dark-subtle: #1d2239,
+
+  // Rebrand completion (2026-08-02): brand v1.0 has no green — verified/trust
+  // marks and legacy tag-green carry heritage gold instead.
+  verification: #a28b52,
+  tag-green: #a28b52,
 );
 $palette: map-merge($palette, $samwong-arsenal-v1);
 

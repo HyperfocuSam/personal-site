@@ -25,6 +25,34 @@
   padding-right: 0;
 }
 
+// 2026-08-02 audit fix: full-bleed sections manage their own inner width,
+// but their text children still need a phone gutter (hero began at x=0).
+@media (max-width: 736px) {
+  #main > article.homepage-dark .content-narrow,
+  #main > article.homepage-dark .content-wide {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+// 2026-08-02 audit: receipts strip under the hero CTAs.
+.dark-hero__receipts {
+  margin-top: 1.4rem;
+
+  a {
+    border-bottom: 1px solid rgba(162, 139, 82, 0.45);
+    color: _palette(amber);
+    font-family: _font(family-fixed);
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+
+    &:hover {
+      border-bottom-color: _palette(amber);
+    }
+  }
+}
+
 // ─── Hero — massive centered serif on warm cream ─────────────
 .dark-hero {
   background: _palette(surface-base);

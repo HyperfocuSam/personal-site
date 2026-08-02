@@ -73,7 +73,7 @@ const Index = () => (
             '@type': 'Person',
             name: 'Sam Wong',
             url: SITE_URL,
-            jobTitle: 'AI Training Specialist',
+            jobTitle: 'Co-Founder & Director of Academy, Adaptig',
             worksFor: [
               { '@type': 'Organization', name: 'Adaptig', url: 'https://adaptig.ai' },
             ],
