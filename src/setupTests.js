@@ -29,22 +29,23 @@ Object.defineProperty(window, 'matchMedia', {
 });
 
 // IntersectionObserver — required by any lazy-load or scroll-reveal pattern
-// that hooks into element visibility.
-window.IntersectionObserver = class {
-  observe = noop;
-
-  unobserve = noop;
-
-  disconnect = noop;
-
-  takeRecords = () => [];
+// that hooks into element visibility. Constructor functions rather than
+// classes: `new Fn()` returns the object literal, and the repo's eslint config
+// allows only one class per file.
+window.IntersectionObserver = function IntersectionObserverStub() {
+  return {
+    observe: noop,
+    unobserve: noop,
+    disconnect: noop,
+    takeRecords: () => [],
+  };
 };
 
 // ResizeObserver — some UI libs call this at mount time.
-window.ResizeObserver = class {
-  observe = noop;
-
-  unobserve = noop;
-
-  disconnect = noop;
+window.ResizeObserver = function ResizeObserverStub() {
+  return {
+    observe: noop,
+    unobserve: noop,
+    disconnect: noop,
+  };
 };
