@@ -19,13 +19,13 @@ const topLogos = [
 const statCards = [
   { number: stats.professionalsTrained.number, label: stats.professionalsTrained.label },
   { number: stats.organizations.number, label: 'Organizations' },
-  { number: stats.satisfaction.number, label: stats.satisfaction.label },
+  { number: stats.oneOnOnes.number, label: stats.oneOnOnes.label },
 ];
 
 const metaDescription = [
   'Book a free discovery call for corporate AI training in Hong Kong.',
   `${stats.professionalsTrained.number} professionals trained,`,
-  `${stats.satisfaction.number} satisfaction.`,
+  `${stats.oneOnOnes.number} one-on-one sessions.`,
 ].join(' ');
 
 const faqs = [

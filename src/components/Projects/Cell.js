@@ -22,15 +22,17 @@ const Cell = ({ data }) => (
           ))}
         </div>
       )}
-      <a
-        href={data.link}
-        className="project-card__url"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {data.url}
-        <span>&nbsp;&rarr;</span>
-      </a>
+      {data.link && (
+        <a
+          href={data.link}
+          className="project-card__url"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {data.url}
+          <span>&nbsp;&rarr;</span>
+        </a>
+      )}
     </div>
   </article>
 );
@@ -39,8 +41,8 @@ Cell.propTypes = {
   data: PropTypes.shape({
     title: PropTypes.string.isRequired,
     role: PropTypes.string.isRequired,
-    url: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired,
+    url: PropTypes.string,
+    link: PropTypes.string,
     date: PropTypes.string.isRequired,
     status: PropTypes.string.isRequired,
     tech: PropTypes.arrayOf(PropTypes.string),

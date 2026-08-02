@@ -103,6 +103,100 @@ const data = [
       + 'structured data for SEO, and full Chinese localization.',
   },
   {
+    title: 'Aimeee',
+    role: 'Co-builder',
+    date: '2026-03',
+    status: 'building',
+    tech: ['React', 'AI product'],
+    desc:
+      'AI-assisted learning and portfolio products for kids, built with the '
+      + 'DoRich education team. In development — public launch to come.',
+  },
+  {
+    title: 'screenstudio-agent',
+    role: 'Builder',
+    url: 'github.com/HyperfocuSam/screenstudio-agent',
+    link: 'https://github.com/HyperfocuSam/screenstudio-agent',
+    date: '2026-07',
+    status: 'live',
+    tech: ['TypeScript', 'Screen Studio'],
+    desc:
+      'Drive Screen Studio from the command line so an AI agent can record '
+      + 'and edit screen demos end to end.',
+  },
+  {
+    title: 'claude-voice',
+    role: 'Builder',
+    url: 'github.com/HyperfocuSam/claude-voice',
+    link: 'https://github.com/HyperfocuSam/claude-voice',
+    date: '2026-06',
+    status: 'live',
+    tech: ['Python', 'TTS'],
+    desc:
+      'Speak Claude Code responses aloud — an accessibility plugin for '
+      + 'developers who listen while they work.',
+  },
+  {
+    title: 'speak-selection-mac',
+    role: 'Builder',
+    url: 'github.com/HyperfocuSam/speak-selection-mac',
+    link: 'https://github.com/HyperfocuSam/speak-selection-mac',
+    date: '2026-06',
+    status: 'live',
+    tech: ['Python', 'Raycast'],
+    desc:
+      'Highlight any text on macOS and hear it read aloud — Raycast hotkey '
+      + 'or right-click.',
+  },
+  {
+    title: 'tool-tts',
+    role: 'Builder',
+    url: 'github.com/HyperfocuSam/tool-tts',
+    link: 'https://github.com/HyperfocuSam/tool-tts',
+    date: '2026-05',
+    status: 'live',
+    tech: ['Python', 'Docker'],
+    desc:
+      'Text-to-speech web tool with a browser UI and Traditional Chinese '
+      + 'support, packaged in Docker.',
+  },
+  {
+    title: 'buzz-agent-packs',
+    role: 'Builder',
+    url: 'github.com/HyperfocuSam/buzz-agent-packs',
+    link: 'https://github.com/HyperfocuSam/buzz-agent-packs',
+    date: '2026-07',
+    status: 'live',
+    tech: ['Python', 'Multi-agent'],
+    desc:
+      'Two working agent teams for Buzz, a hive-mind communication platform '
+      + '— a seven-agent bench for real work.',
+  },
+  {
+    title: 'Vector-Rush',
+    role: 'Builder',
+    url: 'github.com/HyperfocuSam/Vector-Rush',
+    link: 'https://github.com/HyperfocuSam/Vector-Rush',
+    date: '2026-06',
+    status: 'live',
+    tech: ['C#', 'Unity'],
+    desc:
+      'A 3D neon tunnel flyer built end-to-end through the Unity CLI — an '
+      + 'experiment in agent-driven game development.',
+  },
+  {
+    title: 'Fooocus-zh_TW_HK',
+    role: 'Maintainer',
+    url: 'github.com/HyperfocuSam/Fooocus-zh_TW_HK',
+    link: 'https://github.com/HyperfocuSam/Fooocus-zh_TW_HK',
+    date: '2025-06',
+    status: 'live',
+    tech: ['i18n'],
+    desc:
+      'Traditional Chinese UI translation for Fooocus, the open-source '
+      + 'image-generation tool.',
+  },
+  {
     title: 'Adaptig Public Classes',
     role: 'Builder',
     url: 'adaptig.ai',

@@ -49,7 +49,7 @@ const ZhIndex = () => (
         <div className="content-wide">
           <h3>實績，有數據為證</h3>
           <p>
-            香港大型銀行 9.2/10 滿意度（1,530 名參加者）· 嘉頓 4.48/5 實測評分（n=29）· 周大福 5 隊在 3 小時內完成完整市場方案
+            周大福 5 隊在 3 小時內交付完整市場方案 · 嘉頓 6 個部門與管理層先後回訪 · 一個 400 人培訓日發展成 24 個月的 AI 學習社群
           </p>
           <p>
             <Link to="/case-notes" className="button-ghost">

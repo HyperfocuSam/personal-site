@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 const HeroSection = () => (
   <section className="dark-hero full-bleed">
     <div className="dark-hero__inner content-wide">
+      {/* Sam's own tagline (2026-08-02) — his coinage after Arteta's
+          "love for the game"; replaces the generic adoption promise. */}
       <h1 className="dark-hero__headline">
-        I Help Teams
+        Love for the
         <br />
-        Adopt AI That
-        <br />
-        <em className="dark-hero__highlight fn-highlight">Actually Sticks.</em>
+        <em className="dark-hero__highlight fn-highlight">Adoption.</em>
       </h1>
       <p className="dark-hero__evidence">
         <span className="fn-stamp fn-stamp--verified">
@@ -36,8 +36,9 @@ const HeroSection = () => (
           expression: adjacent text nodes break react-snap hydration (#418). */}
       <p className="dark-hero__receipts">
         <Link to="/case-notes">
-          {'A major HK bank 9.2/10 (1,530 participants) · Garden 4.48/5 (n=29)'
-            + ' · CTF: 5 teams shipped in under 3 hours → the receipts'}
+          {'5 teams shipped go-to-market proposals in under 3 hours (CTF)'
+            + ' · 6 departments came back (Garden)'
+            + ' · one staff day became a 24-month AI community → the receipts'}
         </Link>
       </p>
     </div>

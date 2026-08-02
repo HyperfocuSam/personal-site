@@ -25,9 +25,11 @@ const stats = {
     suffix: '',
     label: 'Countries Reached',
   },
-  satisfaction: {
-    number: '9.2/10',
-    label: 'Satisfaction',
+  oneOnOnes: {
+    number: '300',
+    value: 300,
+    suffix: '',
+    label: 'One-on-One Sessions',
   },
 };
 
