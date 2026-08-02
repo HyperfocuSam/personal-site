@@ -37,7 +37,7 @@
     border: 1px solid _palette(border-strong);
     color: _palette(amber-text);
     display: inline-block;
-    font-family: _font(family-fixed);
+    font-family: _font(family);
     font-size: 0.7rem;
     font-variation-settings: normal;
     font-weight: _font(weight-bold);
@@ -91,7 +91,7 @@
 
   .daterange {
     color: _palette(verification);
-    font-family: _font(family-fixed);
+    font-family: _font(family);
     font-size: 0.68rem;
     font-variant-numeric: tabular-nums;
     letter-spacing: 0.04em;
@@ -109,7 +109,7 @@
 
     .degree {
       color: _palette(text-body);
-      font-family: _font(family-fixed);
+      font-family: _font(family);
       font-size: 0.68rem;
       font-weight: _font(weight-bold);
       letter-spacing: 0.06em;
@@ -148,7 +148,7 @@
     border-radius: map-get($radius, sm);
     box-shadow: none;
     color: _palette(text-body);
-    font-family: _font(family-fixed);
+    font-family: _font(family);
     font-size: 0.66rem;
     height: auto;
     letter-spacing: 0.04em;
@@ -188,7 +188,7 @@
 
   .skillbar-title span,
   .skill-bar-percent {
-    font-family: _font(family-fixed);
+    font-family: _font(family);
     height: calc(2rem - 2px);
     line-height: calc(2rem - 2px);
   }
@@ -207,7 +207,7 @@
     }
 
     .course-name {
-      font-family: _font(family-fixed);
+      font-family: _font(family);
     }
 
     .course-name {

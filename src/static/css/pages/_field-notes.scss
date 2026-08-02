@@ -68,7 +68,7 @@
 
     &__evidence {
       color: _palette(verification);
-      font-family: _font(family-fixed);
+      font-family: _font(family);
       font-size: 0.72rem;
       font-weight: _font(weight-bold);
       letter-spacing: _font(kerning-meta);
@@ -114,7 +114,7 @@
       border: 1px solid _palette(signal);
       border-radius: map-get($radius, sm);
       color: _palette(surface-base);
-      font-family: _font(family-fixed);
+      font-family: _font(family);
       font-size: 0.7rem;
       font-weight: _font(weight-bold);
       letter-spacing: _font(kerning-meta);
@@ -168,7 +168,7 @@
 
     &__label {
       color: _palette(verification);
-      font-family: _font(family-fixed);
+      font-family: _font(family);
       font-size: 0.72rem;
       font-weight: _font(weight-bold);
       letter-spacing: _font(kerning-meta);
@@ -188,7 +188,7 @@
 
     &__text {
       color: _palette(text-body);
-      font-family: _font(family-fixed);
+      font-family: _font(family);
       font-size: 0.7rem;
       opacity: 0.65;
       text-transform: uppercase;
@@ -263,7 +263,7 @@
 
     &__arrow {
       color: _palette(ink);
-      font-family: _font(family-fixed);
+      font-family: _font(family);
       font-size: 1rem;
       margin: 0;
       position: absolute;
@@ -419,7 +419,7 @@
     &__more {
       border-bottom: 1px solid _palette(ink);
       color: _palette(ink) !important;
-      font-family: _font(family-fixed);
+      font-family: _font(family);
       font-size: 0.68rem;
       letter-spacing: _font(kerning-meta);
       margin-top: 1.5rem;
@@ -473,7 +473,7 @@
     &__link {
       border-bottom: 1px solid _palette(ink);
       color: _palette(ink) !important;
-      font-family: _font(family-fixed);
+      font-family: _font(family);
       font-size: 0.68rem;
       letter-spacing: _font(kerning-meta);
       text-transform: uppercase;
@@ -557,7 +557,7 @@
 
     .email-capture__caption {
       color: _palette(verification);
-      font-family: _font(family-fixed);
+      font-family: _font(family);
       font-size: 0.72rem;
       font-weight: _font(weight-bold);
       letter-spacing: _font(kerning-meta);
@@ -596,7 +596,7 @@
       border: 1px solid _palette(ink);
       border-radius: map-get($radius, sm);
       color: _palette(surface-base);
-      font-family: _font(family-fixed);
+      font-family: _font(family);
       font-size: 0.7rem;
       letter-spacing: _font(kerning-meta);
       text-transform: uppercase;
@@ -613,7 +613,7 @@
     &__whatsapp,
     a.email-capture__whatsapp {
       color: _palette(text-body);
-      font-family: _font(family-fixed);
+      font-family: _font(family);
       font-size: 0.64rem;
       letter-spacing: 0.04em;
       margin-top: 1rem;
@@ -631,7 +631,7 @@
 
     a {
       color: _palette(text-body);
-      font-family: _font(family-fixed);
+      font-family: _font(family);
       font-size: 0.66rem;
       letter-spacing: _font(kerning-meta);
       text-transform: uppercase;

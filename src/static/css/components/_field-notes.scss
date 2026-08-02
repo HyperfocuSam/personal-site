@@ -31,7 +31,7 @@
   border: 1px solid _palette(border-strong);
   color: _palette(amber-text);
   display: inline-block;
-  font-family: _font(family-fixed);
+  font-family: _font(family);
   font-size: 0.72rem;
   letter-spacing: 0.08em;
   max-width: 100%;
@@ -76,7 +76,7 @@
 
   &__number {
     color: _palette(ink);
-    font-family: _font(family-fixed);
+    font-family: _font(family);
     font-variant-numeric: tabular-nums;
     font-weight: _font(weight-bold);
     letter-spacing: -0.04em;
@@ -92,7 +92,7 @@
 
   &__label,
   &__annotation {
-    font-family: _font(family-fixed);
+    font-family: _font(family);
     font-size: 0.72rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;

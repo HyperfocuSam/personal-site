@@ -184,7 +184,7 @@
 
   .contact-form__field-label {
     color: _palette(ink);
-    font-family: _font(family-fixed);
+    font-family: _font(family);
     font-size: 0.72rem;
     letter-spacing: _font(kerning-meta);
     text-transform: uppercase;
@@ -263,7 +263,7 @@
   .testimonials__section > p.fn-stamp {
     color: _palette(amber-text);
     display: inline-block;
-    font-family: _font(family-fixed);
+    font-family: _font(family);
     font-size: 0.72rem;
     letter-spacing: _font(kerning-meta);
     margin-bottom: 1rem;
@@ -287,7 +287,7 @@
 
     &__author {
       color: _palette(text-secondary);
-      font-family: _font(family-fixed);
+      font-family: _font(family);
       font-size: 0.72rem;
       letter-spacing: _font(kerning-meta);
       margin: 0;
@@ -457,7 +457,7 @@
 
   .client-logo-bar__label,
   .client-logo-bar__item--text {
-    font-family: _font(family-fixed);
+    font-family: _font(family);
   }
 
   .section-warm .button,
@@ -653,7 +653,7 @@
   }
 
   .corporate-dense-meta {
-    font-family: _font(family-fixed);
+    font-family: _font(family);
     font-size: 0.78em;
     letter-spacing: _font(kerning-meta);
     margin-bottom: 0.35rem;
@@ -710,7 +710,7 @@
       color: _palette(text-secondary);
       display: flex;
       flex-direction: column;
-      font-family: _font(family-fixed);
+      font-family: _font(family);
       font-size: 0.72rem;
       gap: 0.35rem;
       letter-spacing: _font(kerning-meta);
@@ -869,7 +869,7 @@
   a {
     border-bottom: 1px solid _palette(ink);
     color: _palette(ink);
-    font-family: _font(family-fixed);
+    font-family: _font(family);
     font-size: 0.68rem;
     letter-spacing: 0;
     text-transform: uppercase;

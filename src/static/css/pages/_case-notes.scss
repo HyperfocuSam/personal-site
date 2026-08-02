@@ -100,7 +100,7 @@
     border: 1px solid _palette(ink);
     border-radius: map-get($radius, sm);
     color: _palette(surface-base);
-    font-family: _font(family-fixed);
+    font-family: _font(family);
     font-size: 0.74rem;
     letter-spacing: _font(kerning-meta);
     text-transform: uppercase;
@@ -172,7 +172,7 @@
 
   &__org {
     color: _palette(verification);
-    font-family: _font(family-fixed);
+    font-family: _font(family);
     font-size: 0.72rem;
     font-weight: _font(weight-bold);
     letter-spacing: 0.06em;
@@ -199,7 +199,7 @@
   &__scale {
     border-bottom: 1px dotted _palette(border-strong);
     color: _palette(text-body);
-    font-family: _font(family-fixed);
+    font-family: _font(family);
     font-size: 0.76rem;
     line-height: 1.5;
     margin: 1rem 0;
@@ -251,7 +251,7 @@
 
   &__compact-receipt {
     color: _palette(text-body);
-    font-family: _font(family-fixed);
+    font-family: _font(family);
     font-size: 0.76rem;
     line-height: 1.5;
     margin: 0.75rem 0 0;
@@ -261,7 +261,7 @@
     border-bottom: 1px solid _palette(ink);
     color: _palette(ink);
     display: inline-block;
-    font-family: _font(family-fixed);
+    font-family: _font(family);
     font-size: 0.72rem;
     font-weight: _font(weight-bold);
     letter-spacing: 0.04em;
@@ -298,7 +298,7 @@
 
   &__receipts {
     color: _palette(ink);
-    font-family: _font(family-fixed);
+    font-family: _font(family);
     font-size: 0.78rem;
     font-weight: _font(weight-bold);
     letter-spacing: 0.02em;
@@ -310,7 +310,7 @@
   &__link {
     border-bottom: 1px solid _palette(ink);
     color: _palette(ink);
-    font-family: _font(family-fixed);
+    font-family: _font(family);
     font-size: 0.7rem;
     font-weight: _font(weight-bold);
     letter-spacing: 0.04em;

@@ -112,7 +112,7 @@
   img + em {
     color: _palette(text-secondary);
     display: block;
-    font-family: _font(family-fixed);
+    font-family: _font(family);
     font-size: 0.72rem;
     margin-bottom: 1.5em;
     margin-top: -1em;
@@ -206,7 +206,7 @@
   }
 
   &__links {
-    font-family: _font(family-fixed);
+    font-family: _font(family);
     font-size: 0.7rem;
   }
 }
@@ -222,7 +222,7 @@
 
   &__label,
   &__button {
-    font-family: _font(family-fixed);
+    font-family: _font(family);
     font-size: 0.68rem;
     letter-spacing: _font(kerning-meta);
     text-transform: uppercase;
@@ -277,7 +277,7 @@
 
   &__date {
     color: _palette(text-secondary);
-    font-family: _font(family-fixed);
+    font-family: _font(family);
     font-size: 0.68rem;
     margin: 0;
   }
@@ -305,7 +305,7 @@
   &__label {
     color: _palette(text-secondary);
     display: block;
-    font-family: _font(family-fixed);
+    font-family: _font(family);
     font-size: 0.66rem;
     letter-spacing: _font(kerning-meta);
     margin-bottom: 0.45rem;

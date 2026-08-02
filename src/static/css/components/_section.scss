@@ -81,7 +81,7 @@ header {
     border: 1px solid _palette(verification);
     color: _palette(verification);
     display: inline-flex;
-    font-family: _font(family-fixed);
+    font-family: _font(family);
     font-size: 0.72rem;
     font-style: normal;
     font-weight: _font(weight-bold);
@@ -99,7 +99,7 @@ header {
       background: _palette(surface-raised);
       border-color: _palette(border-subtle);
       color: _palette(ink);
-      font-family: _font(family-fixed);
+      font-family: _font(family);
       font-size: 0.68rem;
       font-weight: _font(weight-bold);
       letter-spacing: _font(kerning-meta);

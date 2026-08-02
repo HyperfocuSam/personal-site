@@ -1,35 +1,50 @@
 // Jest setup — loaded automatically by Create React App before any test runs.
 // Mocks browser APIs that JSDOM does not implement so React components that
 // query them at render time don't crash.
+//
+// These are PLAIN functions, not jest.fn(). Create React App ships
+// `resetMocks: true` (react-scripts/scripts/utils/createJestConfig.js), which
+// runs before EVERY test and strips `mockImplementation` off any jest.fn().
+// A jest.fn()-based polyfill therefore returns `undefined` by the time a
+// component calls it — which is exactly how `window.matchMedia(...).matches`
+// started throwing "Cannot read properties of undefined". Plain functions
+// survive the reset. Do not "modernise" these back into jest.fn().
 
-// matchMedia polyfill — required by ScrollReveal and any theme/media-query
-// hook. Returns a non-matching stub for every query.
+const noop = () => {};
+
+// matchMedia — required by ScrollReveal and any theme/media-query hook.
+// Returns a non-matching stub for every query.
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
-  value: jest.fn().mockImplementation((query) => ({
+  value: (query) => ({
     matches: false,
     media: query,
     onchange: null,
-    addListener: jest.fn(), // deprecated but still referenced by some libs
-    removeListener: jest.fn(), // deprecated
-    addEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
-  })),
+    addListener: noop, // deprecated but still referenced by some libs
+    removeListener: noop, // deprecated
+    addEventListener: noop,
+    removeEventListener: noop,
+    dispatchEvent: () => false,
+  }),
 });
 
-// IntersectionObserver polyfill — required by any lazy-load or scroll-reveal
-// pattern that hooks into element visibility.
-window.IntersectionObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
-  unobserve: jest.fn(),
-  disconnect: jest.fn(),
-  takeRecords: jest.fn(() => []),
-}));
+// IntersectionObserver — required by any lazy-load or scroll-reveal pattern
+// that hooks into element visibility.
+window.IntersectionObserver = class {
+  observe = noop;
 
-// ResizeObserver polyfill — some UI libs call this at mount time.
-window.ResizeObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
-  unobserve: jest.fn(),
-  disconnect: jest.fn(),
-}));
+  unobserve = noop;
+
+  disconnect = noop;
+
+  takeRecords = () => [];
+};
+
+// ResizeObserver — some UI libs call this at mount time.
+window.ResizeObserver = class {
+  observe = noop;
+
+  unobserve = noop;
+
+  disconnect = noop;
+};
