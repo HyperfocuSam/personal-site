@@ -30,19 +30,25 @@ const OUT = join(ROOT, 'src/static/css/libs/_tokens.figma.generated.scss');
 // One Figma variable can feed more than one $palette key (e.g. ink is both
 // `ink` and `text-primary`). The array on the right makes that explicit.
 const COLOR_MAP = {
-  'color/amber':        ['amber'],
-  'color/amberText':    ['amber-text'],
-  'color/amberLight':   ['amber-light'],
-  'color/ink':          ['ink', 'text-primary'],
-  'color/inkMid':       ['ink-mid'],
-  'color/bg':           ['surface-base'],
-  'color/raised':       ['surface-raised'],
-  'color/sunken':       ['surface-sunken'],
-  'color/textBody':     ['text-body'],
-  'color/textMuted':    ['text-secondary'],
-  'color/borderSubtle': ['border-subtle'],
-  'color/darkDeep':     ['surface-dark-deep'],
-  'color/onDark':       ['text-on-dark'],
+  // Brand v1.0 (2026-08-02): the legacy amber keys carry heritage gold, the
+  // legacy amber-text carries signal-deep, and verified/trust marks carry
+  // heritage — same contract as the (now retired) $samwong-arsenal-v1 core.
+  'color/ink':           ['ink', 'text-primary'],
+  'color/inkMid':        ['ink-mid'],
+  'color/inkSoft':       ['ink-light'],
+  'color/signal':        ['signal'],
+  'color/signalDeep':    ['signal-deep', 'amber-text'],
+  'color/heritage':      ['heritage', 'amber', 'verification', 'tag-green'],
+  'color/heritageLight': ['amber-light'],
+  'color/bg':            ['surface-base'],
+  'color/raised':        ['surface-raised'],
+  'color/sunken':        ['surface-sunken'],
+  'color/textBody':      ['text-body'],
+  'color/textMuted':     ['text-secondary'],
+  'color/borderSubtle':  ['border', 'border-subtle'],
+  'color/borderStrong':  ['border-strong'],
+  'color/darkDeep':      ['surface-dark-deep'],
+  'color/onDark':        ['text-on-dark'],
 };
 
 // --- Load the snapshot and index it by Figma variable name ---
