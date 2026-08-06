@@ -59,8 +59,23 @@ public/                 # CRA public directory
 
 ## Deployment
 
-- **Platform:** GitHub Pages, deployed from `main` via GitHub Actions (`.github/workflows/github-pages.yml`)
-- **Trigger:** every push to `main` (or manual `workflow_dispatch`) runs `retry npm run predeploy` (5x retry) then `actions/deploy-pages`
+> ⚠ **The Actions workflow does NOT publish this site. Read this before believing a green CI run.**
+> Pages is configured `build_type: legacy` with source branch **`gh-pages`**
+> (`gh api repos/HyperfocuSam/personal-site/pages`). `.github/workflows/github-pages.yml` uses
+> `actions/deploy-pages`, which only publishes when `build_type` is `workflow`. So the workflow goes
+> green on every push to `main`, uploads an artifact **that Pages ignores**, and the live site keeps
+> serving whatever is on `gh-pages`.
+> This froze the live site on a **25 Jul 2026** build for 12 days: brand v1.0, the 2 Aug audit
+> truth-fixes, two blog posts and the projects portfolio were all merged to `main` and never public.
+> Found 6 Aug 2026.
+>
+> **Until `build_type` is switched to `workflow`, publishing means:** `npm run predeploy && npx gh-pages -d build --dotfiles`
+> **Then always verify against the LIVE URL, never the local build or a green check:**
+> `curl -s https://hyperfocusam.com/<route> | grep '<a string only the new build has>'`
+
+- **Platform:** GitHub Pages, served from the **`gh-pages` branch** (legacy build type), custom domain `hyperfocusam.com` via `build/CNAME`
+- **Trigger (actual):** a push to `gh-pages` starts GitHub's legacy Pages builder — independent of Actions, so it still works during an Actions outage. Watch it with `gh api repos/HyperfocuSam/personal-site/pages/builds`.
+- **Trigger (aspirational):** every push to `main` runs `retry npm run predeploy` (5x retry) then `actions/deploy-pages` — green, but inert until Pages `build_type` is `workflow`
 - **Config:** `vercel.json` is NOT honored on GitHub Pages — it only applies if the site moves to Vercel. GitHub Pages serves no custom HTTP headers, so security headers (HSTS/X-Frame-Options/Permissions-Policy) would require fronting the site with Cloudflare.
 - **Pre-rendering:** react-snap generates static HTML at build time (configured in package.json under `reactSnap`; any route not reachable by link-crawl must be added to `reactSnap.include` or it 404s)
 - **Node:** >=16.x required
