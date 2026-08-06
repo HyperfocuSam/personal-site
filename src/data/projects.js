@@ -161,6 +161,22 @@ const data = [
       + 'support, packaged in Docker.',
   },
   {
+    title: 'Buzz (block/buzz)',
+    role: 'Open-source contributor',
+    url: 'github.com/block/buzz/pulls',
+    link: 'https://github.com/block/buzz/pulls?q=is%3Apr+author%3AHyperfocuSam',
+    date: '2026-07',
+    status: 'in review',
+    tech: ['Rust', 'React', 'Tauri', 'i18n'],
+    desc:
+      'Contributing upstream to Buzz, Block\'s open-source agent workspace. '
+      + 'Built the desktop internationalization layer — react-i18next runtime, a Language '
+      + 'setting, and a 153-key extraction with a handoff manifest for human translators — '
+      + 'which another contributor has already used as the base for a complete Japanese locale. '
+      + 'Also fixed typed @mention resolution so the desktop app matches the CLI and relay. '
+      + 'Pull requests open for review.',
+  },
+  {
     title: 'buzz-agent-packs',
     role: 'Builder',
     url: 'github.com/HyperfocuSam/buzz-agent-packs',
