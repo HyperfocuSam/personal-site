@@ -9,11 +9,14 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+# This repo's Pages is `build_type: legacy` with source branch `gh-pages`, so the
+# artifact path (actions/upload-pages-artifact + actions/deploy-pages) publishes
+# NOTHING — it went green on every push while the live site stayed on a 25 Jul build
+# for 12 days. This job pushes the built site to `gh-pages` instead, which is what
+# Pages actually serves, and then proves it from the live URL.
+# See AGENTS.md > Deployment. Fixed 2026-08-06.
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
@@ -24,11 +27,8 @@ concurrency:
 jobs:
   # Single deploy job since we're just deploying
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -66,12 +66,44 @@ jobs:
           NODE_ENV: production
           # Remove this line if you would like to skip using google analytics
           REACT_APP_GA_TRACKING_ID: UA-68649021-1
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: "build"
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Guard — the build must carry the custom domain
+        run: |
+          # Without build/CNAME, pushing to gh-pages drops hyperfocusam.com and the
+          # site falls back to the github.io subdomain.
+          test -s build/CNAME || { echo "::error::build/CNAME is missing — refusing to publish"; exit 1; }
+          test -s build/index.html || { echo "::error::build/index.html is missing — refusing to publish"; exit 1; }
+
+      - name: Publish to gh-pages
+        run: |
+          set -euo pipefail
+          cd build
+          git init -q
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Deploy ${GITHUB_SHA::8} from ${GITHUB_REF_NAME}"
+          git push -f "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Prove it published — read the LIVE site, not a green check
+        run: |
+          set -uo pipefail
+          # Pages serves gh-pages verbatim, so the live homepage is byte-identical to
+          # what we just built — an exact hash match, with no false-positive window
+          # that a "does it contain string X" check would have.
+          # -L is mandatory: routes without a trailing slash 301-redirect, and a bare
+          # curl returns a ~162-byte redirect stub that fails every content check.
+          want=$(sha256sum build/index.html | cut -d' ' -f1)
+          echo "want sha256=$want"
+          for i in $(seq 1 30); do
+            got=$(curl -sL --max-time 20 "https://hyperfocusam.com/?cb=$i" | sha256sum | cut -d' ' -f1)
+            if [ "$want" = "$got" ]; then
+              echo "LIVE — hyperfocusam.com is serving this exact build."
+              exit 0
+            fi
+            echo "  attempt $i: live=$got"
+            sleep 20
+          done
+          echo "::error::gh-pages was pushed but the live site never served this build (10 min)."
+          exit 1
