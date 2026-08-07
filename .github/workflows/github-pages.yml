@@ -20,8 +20,13 @@ permissions:
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+# NOT "pages": GitHub's built-in "pages build and deployment" workflow uses that group,
+# and a run of it wedged by the 2026-08-06 Actions outage sat `queued` forever, holding
+# the lock and blocking this job at `pending` with zero jobs scheduled. It cannot even be
+# force-cancelled ("cannot cancel a workflow re-run that has not yet queued"). This job
+# pushes to a branch rather than creating a Pages deployment, so it never needed that group.
 concurrency:
-  group: "pages"
+  group: "publish-gh-pages"
   cancel-in-progress: false
 
 jobs:
