@@ -1,6 +1,6 @@
-# Sam Wong — AI Training Specialist
+# Sam Wong — Co-Founder, Adaptig · AI Train-the-Trainer
 
-> AI adoption training for enterprise teams. 10,000+ professionals trained across 70+ organizations. Based in Hong Kong, available globally.
+> Co-Founder & Director of Academy at Adaptig. I train the people who train AI. 10,000+ professionals trained across 70+ organizations in 13 countries. Based in Hong Kong, available globally.
 
 Website: https://hyperfocusam.com
 Services: https://hyperfocusam.com/services
@@ -10,7 +10,7 @@ Contact: sam@adaptig.com
 
 ## About
 
-Sam Wong is an AI training specialist who has trained 10,000+ professionals across 70+ organizations in banking, retail, education, engineering, and technology. He co-founded Adaptig (Adaptig Group Limited), a global AI trainer network spanning four continents. His approach focuses on behavior change over tool awareness, emphasizing psychological safety and practical workflow integration. He holds a Master of Arts from the Chinese University of Hong Kong.
+Sam Wong is Co-Founder & Director of Academy at Adaptig (Adaptig Group Limited) and an AI train-the-trainer — he trains the people who train AI. Personally he has trained 10,000+ professionals across 70+ organizations in 13 countries, in banking, retail, education, engineering, and technology. As a company, Adaptig has delivered 180+ workshops to 7,000+ participants across 4 continents in 8 languages. His approach focuses on behavior change over tool awareness, emphasizing psychological safety and practical workflow integration. He holds a Master of Arts from the Chinese University of Hong Kong.
 
 ## Services
 

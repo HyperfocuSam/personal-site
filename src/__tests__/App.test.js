@@ -40,10 +40,10 @@ describe('renders the app', () => {
 
   it('should render a Sam Wong title', async () => {
     // Title format has drifted over time ("Sam Wong | AI Training Specialist"
-    // → "Sam Wong | AI Training Specialist - Hong Kong" etc.). Match on the
-    // stable parts (Sam Wong + AI Training) instead of an exact string.
+    // → "Sam Wong | Co-Founder, Adaptig — AI Train-the-Trainer", Sam's ruling
+    // 2026-08-07). Match on the stable parts, not an exact string.
     expect(document.title).toMatch(/Sam Wong/);
-    expect(document.title).toMatch(/AI Training/i);
+    expect(document.title).toMatch(/AI Train/i);
   });
 
   // Navigation tests — use href-based selectors instead of :nth-child so

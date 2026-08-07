@@ -96,7 +96,7 @@ No generic curriculum. We start from your current role, tools, and constraints.`
     category: 'trainers',
     anchor: 'train-the-trainer',
     title: 'Train-the-Trainer Program',
-    subtitle: 'Join a global network across 20+ countries',
+    subtitle: 'Join Adaptig\'s global trainer network across 4 continents',
     provider: 'Adaptig',
     description: `Best for trainers, consultants, HR leaders, and educators who want to teach AI with confidence.
 

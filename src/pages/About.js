@@ -12,14 +12,14 @@ import ScrollReveal from '../components/ScrollReveal';
 const About = () => (
   <Main
     title="About"
-    description="Sam Wong is a Hong Kong-based AI training specialist who has trained 10,000+ professionals across 70+ organizations. From ADHD diagnosis to building Adaptig."
+    description="Sam Wong is Co-Founder & Director of Academy at Adaptig, a Hong Kong-based AI train-the-trainer who has trained 10,000+ professionals across 70+ organizations. From ADHD diagnosis to building Adaptig."
     canonicalUrl={`${SITE_URL}/about`}
-    ogTitle="About Sam Wong | AI Training Specialist"
+    ogTitle="About Sam Wong | Co-Founder & AI Train-the-Trainer"
     ogDescription="From ADHD diagnosis to training 10,000+ professionals in AI adoption. The story behind Adaptig."
     ogImage={DEFAULT_OG_IMAGE}
     ogUrl={`${SITE_URL}/about`}
     ogType="profile"
-    twitterTitle="About Sam Wong | AI Training Specialist"
+    twitterTitle="About Sam Wong | Co-Founder & AI Train-the-Trainer"
     twitterDescription="Why I do this work and how I got here."
     twitterImage={DEFAULT_OG_IMAGE}
     hreflangTags={[
@@ -307,7 +307,7 @@ const About = () => (
             alternateName: ['Samuel Wong', 'HyperfocuSam'],
             url: 'https://hyperfocusam.com/about',
             image: 'https://hyperfocusam.com/images/Sam.png',
-            jobTitle: 'AI Training Specialist',
+            jobTitle: 'Co-Founder & Director of Academy',
             worksFor: [
               { '@type': 'Organization', name: 'Adaptig', url: 'https://adaptig.ai' },
               { '@type': 'Organization', name: 'DotAI', url: 'https://dotai.hk' },
@@ -328,7 +328,7 @@ const About = () => (
             }],
             hasOccupation: {
               '@type': 'Occupation',
-              name: 'Corporate AI Training Specialist',
+              name: 'AI Train-the-Trainer & Corporate AI Trainer',
               occupationLocation: { '@type': 'City', name: 'Hong Kong' },
               skills: 'Generative AI adoption, Microsoft Copilot training, ChatGPT for enterprise, AI workshop facilitation, change management, Train-the-Trainer programs, prompt engineering, behavior change',
             },
@@ -347,7 +347,7 @@ const About = () => (
               'https://www.threads.net/@sam_ai_cbo',
               'https://www.instagram.com/sam_ai_cbo/',
             ],
-            description: 'Hong Kong-based AI training specialist. 10,000+ professionals trained across 70+ organizations in 13 countries on practical AI adoption that changes behavior, not just builds awareness.',
+            description: 'Co-Founder & Director of Academy at Adaptig. I train the people who train AI. 10,000+ professionals trained across 70+ organizations in 13 countries on practical AI adoption that changes behavior, not just builds awareness.',
           })}
         </script>
         <script type="application/ld+json">
@@ -360,7 +360,7 @@ const About = () => (
                 name: 'Who is Sam Wong?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Sam Wong is an AI training specialist based in Hong Kong who has trained 10,000+ professionals across 70+ organizations. He co-founded Adaptig, a global AI trainer network spanning 20+ countries. He focuses on practical, human-first AI adoption that changes behavior, not just builds awareness.',
+                  text: 'Sam Wong is Co-Founder & Director of Academy at Adaptig, a Hong Kong-based AI train-the-trainer who has personally trained 10,000+ professionals across 70+ organizations. He co-founded Adaptig, a global AI trainer network spanning 4 continents and 8 languages, where he is Co-Founder & Director of Academy. He focuses on practical, human-first AI adoption that changes behavior, not just builds awareness.',
                 },
               },
               {

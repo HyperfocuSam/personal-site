@@ -289,7 +289,7 @@ const CorporateTraining = () => (
             '@type': 'Person',
             name: 'Sam Wong',
             url: SITE_URL,
-            jobTitle: 'AI Training Specialist',
+            jobTitle: 'Co-Founder & Director of Academy',
           },
         })}
       </script>

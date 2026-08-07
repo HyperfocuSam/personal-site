@@ -190,7 +190,7 @@ function generateRssFeed() {
   let rss = '<?xml version="1.0" encoding="UTF-8"?>\n';
   rss += '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n';
   rss += '  <channel>\n';
-  rss += '    <title>Sam Wong | AI Training Specialist</title>\n';
+  rss += '    <title>Sam Wong | Co-Founder & AI Train-the-Trainer</title>\n';
   rss += `    <link>${SITE_URL}/blog</link>\n`;
   rss += '    <description>AI adoption insights, workshop reflections, and practical AI training tips from Sam Wong.</description>\n';
   rss += '    <language>en</language>\n';

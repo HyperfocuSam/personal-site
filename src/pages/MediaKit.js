@@ -59,15 +59,15 @@ const formats = [
 const MediaKit = () => (
   <Main
     title="Media Kit"
-    description="Speaker media kit for Sam Wong - AI Training Specialist based in Hong Kong. Available for keynotes, panels, podcasts, and livestreams."
+    description="Speaker media kit for Sam Wong - Co-Founder of Adaptig and AI train-the-trainer, based in Hong Kong. Available for keynotes, panels, podcasts, and livestreams."
     canonicalUrl={`${SITE_URL}/media/kit`}
     ogTitle="Media Kit | Sam Wong"
-    ogDescription="Speaker media kit for Sam Wong, AI Training Specialist. 10,000+ professionals trained across 13 countries."
+    ogDescription="Speaker media kit for Sam Wong, Co-Founder of Adaptig and AI train-the-trainer. 10,000+ professionals trained across 13 countries."
     ogImage={DEFAULT_OG_IMAGE}
     ogUrl={`${SITE_URL}/media/kit`}
     ogType="website"
     twitterTitle="Media Kit | Sam Wong"
-    twitterDescription="Speaker media kit for Sam Wong, AI Training Specialist. 10,000+ professionals trained across 13 countries."
+    twitterDescription="Speaker media kit for Sam Wong, Co-Founder of Adaptig and AI train-the-trainer. 10,000+ professionals trained across 13 countries."
     twitterImage={DEFAULT_OG_IMAGE}
   >
     <article id="media-kit">
@@ -83,7 +83,7 @@ const MediaKit = () => (
             loading="eager"
           />
           <h1 className="media-kit-hero__name">Sam Wong</h1>
-          <p className="media-kit-hero__subtitle">AI Training Specialist | Hong Kong</p>
+          <p className="media-kit-hero__subtitle">Co-Founder, Adaptig | AI Train-the-Trainer | Hong Kong</p>
           <p className="media-kit-hero__tagline">AI adoption that sticks.</p>
           <div className="media-kit-hero__stats">
             {stats.map((item) => (
@@ -104,7 +104,8 @@ const MediaKit = () => (
           <div className="media-kit-bio__column">
             <span className="media-kit-bio__lang-label">English</span>
             <p>
-              Sam Wong is an AI training specialist who has trained over 10,000
+              Sam Wong is Co-Founder & Director of Academy at Adaptig, an AI
+              train-the-trainer who has trained over 10,000
               professionals across banking, retail, education, and technology
               sectors. He designs and delivers corporate AI workshops through
               Adaptig (Adaptig Group Limited), helping organizations move

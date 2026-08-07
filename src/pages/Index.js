@@ -27,17 +27,17 @@ const homepageReceiptFragments = [
 const Index = () => (
   <Main
     description={
-      'Hong Kong-based AI training specialist. Sam Wong delivers corporate AI workshops, '
+      'Hong Kong-based AI train-the-trainer. Sam Wong is Co-Founder & Director of Academy at Adaptig, delivering Train-the-Trainer programs, corporate AI workshops, '
       + '1-1 coaching, and Train-the-Trainer programs for enterprises across Asia-Pacific. '
       + '10,000+ professionals trained.'
     }
     canonicalUrl={`${SITE_URL}/`}
-    ogTitle="Sam Wong | AI Training Specialist - Hong Kong"
+    ogTitle="Sam Wong | Co-Founder, Adaptig — AI Train-the-Trainer"
     ogDescription="Corporate AI workshops, coaching, and Train-the-Trainer programs for Hong Kong enterprises. 10,000+ professionals trained through Adaptig."
     ogImage={DEFAULT_OG_IMAGE}
     ogUrl={`${SITE_URL}/`}
     ogType="website"
-    twitterTitle="Sam Wong | AI Training Specialist - Hong Kong"
+    twitterTitle="Sam Wong | Co-Founder, Adaptig — AI Train-the-Trainer"
     twitterDescription="Corporate AI workshops, coaching, and Train-the-Trainer programs for Hong Kong enterprises."
     twitterImage={DEFAULT_OG_IMAGE}
     hreflangTags={[
@@ -51,10 +51,10 @@ const Index = () => (
         {JSON.stringify([{
           '@context': 'https://schema.org',
           '@type': 'ProfessionalService',
-          name: 'Sam Wong - AI Training Specialist',
+          name: 'Sam Wong - Co-Founder & AI Train-the-Trainer',
           url: SITE_URL,
           image: `${SITE_URL}/images/Sam.png`,
-          description: 'Hong Kong-based AI training specialist delivering corporate workshops, coaching, and Train-the-Trainer programs for enterprises across Asia-Pacific.',
+          description: 'Hong Kong-based AI train-the-trainer. Co-Founder & Director of Academy at Adaptig, delivering Train-the-Trainer certification, corporate workshops, and coaching for enterprises across Asia-Pacific.',
           areaServed: ['Hong Kong', 'Asia-Pacific', 'Global'],
           serviceType: ['AI Training', 'Corporate AI Workshops', 'Prompt Engineering Training', 'Executive AI Coaching', 'Train-the-Trainer Certification'],
           knowsLanguage: ['English', 'Cantonese', 'Mandarin'],

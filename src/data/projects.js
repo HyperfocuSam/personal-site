@@ -10,8 +10,9 @@ const data = [
     tech: ['Proprietary Platform'],
     featured: true,
     desc:
-      'AI adoption that sticks. 230+ workshops delivered to 12,000+ participants '
-      + 'across 20+ countries, powered by a proprietary training platform. '
+      'AI adoption that sticks. As a company Adaptig has delivered 180+ workshops to '
+      + '7,000+ participants across 4 continents in 8 languages, powered by a '
+      + 'proprietary training platform. '
       + 'Clients include a major Hong Kong bank, HSBC, Hong Kong Jockey Club, Mattel, '
       + 'Toyota, YPO, Samsung, Arup, and Diners Club.',
   },
@@ -171,7 +172,7 @@ const data = [
     desc:
       'Contributing upstream to Buzz, Block\'s open-source agent workspace. '
       + 'Built the desktop internationalization layer — react-i18next runtime, a Language '
-      + 'setting, and a 153-key extraction with a handoff manifest for human translators — '
+      + 'setting, and a 140-key extraction with a handoff manifest for human translators — '
       + 'which another contributor has already used as the base for a complete Japanese locale. '
       + 'Also fixed typed @mention resolution so the desktop app matches the CLI and relay. '
       + 'Pull requests open for review.',

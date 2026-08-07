@@ -22,7 +22,7 @@ const SideBar = () => {
     <section id="sidebar">
       <section id="intro">
         <Link to="/" className="logo">
-          <OptimizedImage src={`${PUBLIC_URL}/images/Sam.png`} alt="Sam Wong - AI Training Specialist in Hong Kong" />
+          <OptimizedImage src={`${PUBLIC_URL}/images/Sam.png`} alt="Sam Wong - Co-Founder & AI Train-the-Trainer in Hong Kong" />
         </Link>
         <header>
           <h2>SAM WONG</h2>
@@ -35,7 +35,7 @@ const SideBar = () => {
       <section className="blurb">
         <h2>About</h2>
         <p>
-          AI Training Specialist helping enterprises and individuals adopt AI.{' '}
+          Co-Founder & Director of Academy at Adaptig. I train the people who train AI.{' '}
           Co-founder of <a href="https://adaptig.ai" target="_blank" rel="noopener noreferrer">Adaptig</a>.
           <br /><br />
           70+ enterprise clients. 10,000+ professionals trained.

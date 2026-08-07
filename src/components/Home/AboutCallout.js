@@ -17,7 +17,7 @@ const AboutCallout = () => (
       />
       <h2 className="about-callout__name">Sam Wong</h2>
       <p className="about-callout__bio">
-        Hong Kong-based AI training specialist. 10,000+ professionals trained
+        Hong Kong-based AI train-the-trainer. 10,000+ professionals trained
         across 70+ organizations in 13 countries. I turn AI curiosity into
         daily habits that stick.
       </p>

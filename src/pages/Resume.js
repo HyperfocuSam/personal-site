@@ -55,7 +55,7 @@ const Resume = () => (
           mainEntity: {
             '@type': 'Person',
             name: 'Sam Wong',
-            jobTitle: 'AI Training Specialist',
+            jobTitle: 'Co-Founder & Director of Academy',
             worksFor: [
               { '@type': 'Organization', name: 'Adaptig', url: 'https://adaptig.ai' },
             ],

@@ -39,7 +39,7 @@ const Main = (props) => (
       // words of the headline. Drop it once the headline no longer has room, and
       // keep the headline itself untouched.
       titleTemplate={(props.title || '').length > 48 ? '%s' : '%s | Sam Wong'}
-      defaultTitle="Sam Wong | AI Training Specialist - Hong Kong"
+      defaultTitle="Sam Wong | Co-Founder, Adaptig — AI Train-the-Trainer"
       defer={false}
     >
       {props.title && <title>{props.title}</title>}
@@ -130,16 +130,16 @@ Main.propTypes = {
 Main.defaultProps = {
   children: null,
   title: null,
-  description: 'Sam Wong - AI Training Specialist helping enterprises and individuals '
-    + 'adopt AI through corporate workshops, 1-1 coaching, and Train-the-Trainer programs.',
+  description: 'Sam Wong - Co-Founder & Director of Academy at Adaptig. I train the people '
+    + 'who train AI: Train-the-Trainer programs, corporate AI workshops, and 1-1 coaching.',
   canonicalUrl: null,
-  ogTitle: 'Sam Wong | AI Training Specialist',
+  ogTitle: 'Sam Wong | Co-Founder & AI Train-the-Trainer',
   ogDescription: 'Helping enterprises and individuals thrive with AI. Corporate workshops, 1-1 coaching, and Train-the-Trainer programs.',
   ogImage: 'https://hyperfocusam.com/images/og-image.jpg',
   ogUrl: 'https://hyperfocusam.com/',
   ogType: 'website',
   twitterCard: 'summary_large_image',
-  twitterTitle: 'Sam Wong | AI Training Specialist',
+  twitterTitle: 'Sam Wong | Co-Founder & AI Train-the-Trainer',
   twitterDescription: 'Helping enterprises and individuals thrive with AI. Corporate workshops, 1-1 coaching, and Train-the-Trainer programs.',
   twitterImage: 'https://hyperfocusam.com/images/og-image.jpg',
   articlePublishedTime: null,

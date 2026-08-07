@@ -149,7 +149,12 @@ describe('S1 verified bug regressions', () => {
       expect(content).not.toContain('Adaptig (Animo Technology Limited)');
       expect(content).toContain('Adaptig (Adaptig Group Limited)');
     });
-    expect(generator).not.toMatch(/3,000\+|180\+/);
+    expect(generator).not.toMatch(/3,000\+/);
+    // Adaptig's company figures (180+ workshops / 7,000+ participants) may appear, but
+    // never bare — they are not Sam's personal numbers (10,000+ / 70+ orgs / 13 countries).
+    // Every sentence mentioning them must attribute them to Adaptig.
+    generator.split(/(?<=\.)\s+/).filter((sentence) => /180\+|7,000\+/.test(sentence))
+      .forEach((sentence) => expect(sentence).toMatch(/Adaptig/));
   });
 
   it('removes meta-only CSP noise and includes the indexable book route', () => {
