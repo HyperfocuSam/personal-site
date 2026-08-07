@@ -4,7 +4,7 @@ Welcome to this new space where I'll share insights, learnings, and thoughts on 
 
 ## Why Start a Blog?
 
-After conducting 200+ one-on-one AI coaching sessions and dozens of corporate workshops, I've accumulated a wealth of observations about how people interact with AI, what works, and what doesn't.
+After conducting 300 one-on-one AI coaching sessions and dozens of corporate workshops, I've accumulated a wealth of observations about how people interact with AI, what works, and what doesn't.
 
 This blog is my way of sharing those insights more broadly.
 
