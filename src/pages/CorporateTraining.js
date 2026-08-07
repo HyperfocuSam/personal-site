@@ -640,6 +640,12 @@ const CorporateTraining = () => (
       {/* Closing primary CTA */}
       <section className="section-base section-padding corporate-closing-cta">
         <div className="content-narrow">
+          <p className="services-footer-link">
+            <Link to="/ai-train-the-trainer-hong-kong">
+              Training trainers rather than teams? AI Train-the-Trainer →
+            </Link>
+          </p>
+
           <h2>Ready to Train Your Team?</h2>
           <p>
             Book a free 30-minute discovery call. No commitment —

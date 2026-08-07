@@ -29,6 +29,7 @@ const lazyRoute = (importFn) => {
 // Every route - we lazy load so that each page can be chunked
 const About = lazyRoute(() => import('./pages/About'));
 const CorporateTraining = lazyRoute(() => import('./pages/CorporateTraining'));
+const TrainTheTrainer = lazyRoute(() => import('./pages/TrainTheTrainer'));
 const Blog = lazyRoute(() => import('./pages/Blog'));
 const CaseNotes = lazyRoute(() => import('./pages/CaseNotes'));
 const Clients = lazyRoute(() => import('./pages/Clients'));
@@ -71,6 +72,7 @@ const exactRoutes = {
   '/book': Book,
   '/contact': Contact,
   '/corporate-ai-training-hong-kong': CorporateTraining,
+  '/ai-train-the-trainer-hong-kong': TrainTheTrainer,
   '/get-started': GetStarted,
   '/media/kit': MediaKit,
   '/media': Media,
@@ -109,6 +111,7 @@ const App = () => (
         <Route path="/book" element={<Book />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/corporate-ai-training-hong-kong" element={<CorporateTraining />} />
+        <Route path="/ai-train-the-trainer-hong-kong" element={<TrainTheTrainer />} />
         <Route path="/get-started" element={<GetStarted />} />
         <Route path="/media/kit" element={<MediaKit />} />
         <Route path="/media" element={<Media />} />

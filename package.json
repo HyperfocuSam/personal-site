@@ -69,9 +69,19 @@
     ]
   },
   "reactSnap": {
-    "include": ["/", "/resume", "/zh/blog", "/get-started", "/case-notes/"],
+    "include": [
+      "/",
+      "/resume",
+      "/zh/blog",
+      "/get-started",
+      "/case-notes/",
+      "/ai-train-the-trainer-hong-kong"
+    ],
     "skipThirdPartyRequests": true,
-    "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"],
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
+    ],
     "minifyHtml": {
       "collapseWhitespace": false,
       "removeComments": false

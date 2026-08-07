@@ -313,6 +313,12 @@ const Services = () => {
           </Link>
         </p>
 
+        <p className="services-footer-link">
+          <Link to="/ai-train-the-trainer-hong-kong">
+            AI Train-the-Trainer in Hong Kong — Certification for Trainers →
+          </Link>
+        </p>
+
         <p className="lang-toggle">
           <Link to="/zh/services">&#x4E2D;&#x6587;&#x7248;&#x672C;</Link>
         </p>
