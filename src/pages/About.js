@@ -308,6 +308,7 @@ const About = () => (
             url: 'https://hyperfocusam.com/about',
             image: 'https://hyperfocusam.com/images/Sam.png',
             jobTitle: 'Co-Founder & Director of Academy',
+            disambiguatingDescription: 'Hong Kong-based AI train-the-trainer and Co-Founder & Director of Academy at Adaptig — trains corporate trainers across Asia-Pacific.',
             worksFor: [
               { '@type': 'Organization', name: 'Adaptig', url: 'https://adaptig.ai' },
               { '@type': 'Organization', name: 'DotAI', url: 'https://dotai.hk' },
