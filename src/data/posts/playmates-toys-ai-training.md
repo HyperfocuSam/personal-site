@@ -22,7 +22,7 @@ I used Google AI Studio with Gemini's image generation capabilities -- what we i
 
 It landed. Tier 2 workshops for Marketing, Design, and Finance were approved in principle the same day.
 
-This is a pattern I see repeatedly in corporate AI training. The person who controls the budget rarely cares about the same things as the people who will use the tools daily. You have to address the decision-maker's curiosity first, on their terms, before the organization gives you permission to do the actual work. I have written about this dynamic in the context of [executive versus staff training gaps](ai-maturity-trap-stuck-stage-one) -- the interests diverge, and a good trainer bridges both.
+This is a pattern I see repeatedly in corporate AI training. The person who controls the budget rarely cares about the same things as the people who will use the tools daily. You have to address the decision-maker's curiosity first, on their terms, before the organization gives you permission to do the actual work. I have written about this dynamic in the context of [executive versus staff training gaps](/blog/ai-maturity-trap-stuck-stage-one) -- the interests diverge, and a good trainer bridges both.
 
 ## What I Actually Taught
 
