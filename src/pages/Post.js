@@ -208,14 +208,19 @@ const Post = () => {
             href={`${SITE_URL}/blog/${linkedPost.slug}/`}
           />
         )}
-        {/* x-default hreflang — points to English version or self if English */}
-        {linkedPost && (
-          <link
-            rel="alternate"
-            hrefLang="x-default"
-            href={postLang === 'en' ? postUrl : `${SITE_URL}/blog/${linkedPost.slug}/`}
-          />
-        )}
+        {/* x-default hreflang — the English version, or this page when it stands alone.
+            Emitted unconditionally: a page that declares hrefLang="zh-Hant" with no
+            x-default is an incomplete cluster and search engines discard the lot.
+            That was leaving the two TC-only posts with a language and no default. */}
+        <link
+          rel="alternate"
+          hrefLang="x-default"
+          href={
+            linkedPost && postLang !== 'en'
+              ? `${SITE_URL}/blog/${linkedPost.slug}/`
+              : postUrl
+          }
+        />
       </Helmet>
       <ScrollProgress />
       <article

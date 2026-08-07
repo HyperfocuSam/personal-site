@@ -345,6 +345,7 @@ const About = () => (
               'https://x.com/HyperfocuSam',
               'https://github.com/HyperfocuSam',
               'https://www.threads.net/@sam_ai_cbo',
+              'https://www.instagram.com/sam_ai_cbo/',
             ],
             description: 'Hong Kong-based AI training specialist. 10,000+ professionals trained across 70+ organizations in 13 countries on practical AI adoption that changes behavior, not just builds awareness.',
           })}

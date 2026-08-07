@@ -33,7 +33,12 @@ const Main = (props) => (
     <Analytics />
     <ScrollToTop />
     <Helmet
-      titleTemplate="%s | Sam Wong"
+      // The " | Sam Wong" suffix costs 12 characters. On a long editorial headline
+      // that pushes the title past the ~60 chars a result listing shows, so the
+      // suffix is what gets truncated anyway — it buys nothing and hides the last
+      // words of the headline. Drop it once the headline no longer has room, and
+      // keep the headline itself untouched.
+      titleTemplate={(props.title || '').length > 48 ? '%s' : '%s | Sam Wong'}
       defaultTitle="Sam Wong | AI Training Specialist - Hong Kong"
       defer={false}
     >
