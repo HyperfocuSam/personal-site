@@ -54,7 +54,7 @@ const Navigation = () => {
         </ul>
       </nav>
       <div className="nav-cta">
-        <Link to="/book">Book a Call</Link>
+        <Link to="/book" data-cta="nav_book">Book a Call</Link>
       </div>
       <Hamburger />
     </header>

@@ -2,39 +2,111 @@ import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 import Main from '../layouts/Main';
+import { track } from '../utils/track';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 
 const ROAM_EMBED_SCRIPT = 'https://ro.am/lobbylinks/embed.js';
 const ROAM_LOBBY_URL = 'https://ro.am/samwong/';
 const ACCENT_COLOR = '#c8965a';
+const LOAD_TIMEOUT_MS = 8000;
 
+/**
+ * The site's primary CTA, and until 2026-08-11 the least observable page on it.
+ *
+ * The Ro.am lobby is a cross-origin iframe, so slot selection and booking
+ * completion are invisible to us and any "bookings" number derived here would
+ * be fabricated. What this instrumentation measures is DELIVERY: did the
+ * scheduler actually render for this human, and if not, why.
+ *
+ * That distinction is not academic. From 2026-05-15 the site's own CSP omitted
+ * ro.am from script-src and frame-src, so this page rendered an empty box for
+ * three months while pageviews looked perfectly healthy.
+ */
 const Book = () => {
   const containerRef = useRef(null);
+  const settledRef = useRef(false);
 
   useEffect(() => {
+    // react-snap would otherwise bake this <script> into build/book/index.html
+    // and every real visitor would pay for a duplicate request.
+    if (navigator.userAgent === 'ReactSnap') return undefined;
+
     const el = containerRef.current;
     if (!el) return undefined;
+
+    const t0 = (window.performance && window.performance.now()) || 0;
+    const elapsed = () => Math.round(
+      ((window.performance && window.performance.now()) || 0) - t0,
+    );
+
+    // Only the first outcome counts: onSizeChange fires repeatedly as the
+    // widget resizes, and a CSP refusal trips both the violation event and
+    // script.onerror.
+    const settle = (event, props) => {
+      if (settledRef.current) return;
+      settledRef.current = true;
+      track(event, props);
+    };
+
+    // Highest-signal detector on the page, and the one that would have caught
+    // the 2026-05 outage on day one instead of month three.
+    const onViolation = (e) => {
+      if ((e.blockedURI || '').includes('ro.am')) {
+        settle('booking_embed_failed', {
+          reason: 'csp_blocked',
+          blocked_uri: e.blockedURI,
+          violated_directive: e.violatedDirective,
+          elapsed_ms: elapsed(),
+        });
+      }
+    };
+    document.addEventListener('securitypolicyviolation', onViolation);
 
     const script = document.createElement('script');
     script.src = ROAM_EMBED_SCRIPT;
     script.async = true;
+    script.onerror = () => settle('booking_embed_failed', {
+      reason: 'script_error',
+      elapsed_ms: elapsed(),
+    });
     script.onload = () => {
-      if (window.Roam) {
-        window.Roam.initLobbyEmbed({
-          url: ROAM_LOBBY_URL,
-          parentElement: el,
-          accentColor: ACCENT_COLOR,
-          theme: 'light',
-          lobbyConfiguration: 'default',
-          onSizeChange: (_width, height) => {
-            el.style.height = `${height}px`;
-          },
+      if (!window.Roam) {
+        settle('booking_embed_failed', {
+          reason: 'no_global',
+          elapsed_ms: elapsed(),
         });
+        return;
       }
+      window.Roam.initLobbyEmbed({
+        url: ROAM_LOBBY_URL,
+        parentElement: el,
+        accentColor: ACCENT_COLOR,
+        theme: 'light',
+        lobbyConfiguration: 'default',
+        onSizeChange: (_width, height) => {
+          el.style.height = `${height}px`;
+          // Best available proof of life: onSizeChange only fires once the
+          // cross-origin frame posts back, so the script loaded AND executed
+          // AND the handshake succeeded.
+          settle('booking_embed_loaded', { load_ms: elapsed() });
+        },
+      });
     };
     document.body.appendChild(script);
 
+    const timer = setTimeout(() => {
+      const frame = el.querySelector('iframe');
+      if (!frame || !frame.offsetHeight) {
+        settle('booking_embed_failed', {
+          reason: 'timeout',
+          elapsed_ms: LOAD_TIMEOUT_MS,
+        });
+      }
+    }, LOAD_TIMEOUT_MS);
+
     return () => {
+      clearTimeout(timer);
+      document.removeEventListener('securitypolicyviolation', onViolation);
       script.remove();
     };
   }, []);

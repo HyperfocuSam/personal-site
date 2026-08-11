@@ -49,7 +49,7 @@ const ServiceCta = ({ tags }) => {
           Sam Wong helps teams adopt AI through workshops, coaching,
           and trainer development across Hong Kong and Asia-Pacific.
         </p>
-        <Link to="/services" className="button">
+        <Link to="/services" className="button" data-cta="blog_service_cta_default">
           View Training Services
         </Link>
       </div>
@@ -61,7 +61,7 @@ const ServiceCta = ({ tags }) => {
   return (
     <div className="service-cta">
       <p className="service-cta__text">{cta.text}</p>
-      <Link to={cta.href} className="button">
+      <Link to={cta.href} className="button" data-cta={`blog_service_cta_${match}`}>
         {cta.label}
       </Link>
     </div>

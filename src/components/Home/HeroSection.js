@@ -23,11 +23,11 @@ const HeroSection = () => (
       </p>
       <div className="dark-hero__actions">
         {/* Single-expression text: adjacent text nodes break react-snap hydration (#418) */}
-        <Link to="/services" className="dark-hero__cta">
+        <Link to="/services" className="dark-hero__cta" data-cta="hero_services">
           {'How I Can Help '}
           <span className="dark-hero__arrow">&rarr;</span>
         </Link>
-        <Link to="/book" className="dark-hero__cta dark-hero__cta--secondary">
+        <Link to="/book" className="dark-hero__cta dark-hero__cta--secondary" data-cta="hero_book">
           Book a Free Call
         </Link>
       </div>

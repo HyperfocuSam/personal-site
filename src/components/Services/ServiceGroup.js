@@ -5,7 +5,12 @@ import Markdown from 'markdown-to-jsx';
 
 import RelatedCaseStudies from './RelatedCaseStudies';
 
-const QuietLink = ({ cta, ctaLink, external }) => {
+// data-cta is read by the delegated click listener in utils/track.js. Threading
+// it through these two components names every CTA defined in data/services.js,
+// data/services-zh.js and pages/ZhServices.js at once, with no per-page edits.
+const QuietLink = ({
+  cta, ctaLink, external, ctaId,
+}) => {
   const isExternal = external || ctaLink.startsWith('http');
 
   if (!cta || !ctaLink) {
@@ -19,6 +24,7 @@ const QuietLink = ({ cta, ctaLink, external }) => {
         target="_blank"
         rel="noopener noreferrer"
         className="service-group__quiet-link"
+        data-cta={ctaId}
       >
         {`${cta} →`}
       </a>
@@ -26,7 +32,7 @@ const QuietLink = ({ cta, ctaLink, external }) => {
   }
 
   return (
-    <Link to={ctaLink} className="service-group__quiet-link">
+    <Link to={ctaLink} className="service-group__quiet-link" data-cta={ctaId}>
       {`${cta} →`}
     </Link>
   );
@@ -36,13 +42,17 @@ QuietLink.propTypes = {
   cta: PropTypes.string.isRequired,
   ctaLink: PropTypes.string.isRequired,
   external: PropTypes.bool,
+  ctaId: PropTypes.string,
 };
 
 QuietLink.defaultProps = {
   external: false,
+  ctaId: undefined,
 };
 
-const PrimaryCtaButton = ({ cta, ctaLink, external }) => {
+const PrimaryCtaButton = ({
+  cta, ctaLink, external, ctaId,
+}) => {
   const isExternal = external || ctaLink.startsWith('http');
 
   if (!cta || !ctaLink) {
@@ -51,14 +61,20 @@ const PrimaryCtaButton = ({ cta, ctaLink, external }) => {
 
   if (isExternal) {
     return (
-      <a href={ctaLink} target="_blank" rel="noopener noreferrer" className="button">
+      <a
+        href={ctaLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="button"
+        data-cta={ctaId}
+      >
         {cta}
       </a>
     );
   }
 
   return (
-    <Link to={ctaLink} className="button">
+    <Link to={ctaLink} className="button" data-cta={ctaId}>
       {cta}
     </Link>
   );
@@ -68,10 +84,12 @@ PrimaryCtaButton.propTypes = {
   cta: PropTypes.string.isRequired,
   ctaLink: PropTypes.string.isRequired,
   external: PropTypes.bool,
+  ctaId: PropTypes.string,
 };
 
 PrimaryCtaButton.defaultProps = {
   external: false,
+  ctaId: undefined,
 };
 
 const ServiceGroup = ({
@@ -158,6 +176,7 @@ const ServiceGroup = ({
                 cta={service.cta}
                 ctaLink={service.ctaLink}
                 external={service.external}
+                ctaId={service.id && `service_${service.id}`}
               />
             </p>
           )}
@@ -171,6 +190,7 @@ const ServiceGroup = ({
           cta={primaryCta.cta}
           ctaLink={primaryCta.ctaLink}
           external={primaryCta.external}
+          ctaId={primaryCta.id ? `primary_${primaryCta.id}` : 'primary_cta'}
         />
       </div>
     )}
@@ -214,6 +234,7 @@ ServiceGroup.propTypes = {
     company: PropTypes.string,
   }),
   primaryCta: PropTypes.shape({
+    id: PropTypes.string,
     cta: PropTypes.string.isRequired,
     ctaLink: PropTypes.string.isRequired,
     external: PropTypes.bool,

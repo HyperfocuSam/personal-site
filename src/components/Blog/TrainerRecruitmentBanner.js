@@ -10,7 +10,7 @@ const TrainerRecruitmentBanner = ({ ctaHref }) => (
       If you facilitate learning and want to lead practical AI workshops,
       we should talk.
     </p>
-    <Link to={ctaHref} className="button">
+    <Link to={ctaHref} className="button" data-cta="trainer_banner">
       Apply to Join the Network
     </Link>
   </section>

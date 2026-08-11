@@ -1,5 +1,9 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, {
+  useEffect, useState, useCallback, useRef,
+} from 'react';
 import PropTypes from 'prop-types';
+
+import { track, identifyLead } from '../../utils/track';
 
 const interestOptions = [
   'Corporate Training',
@@ -11,7 +15,7 @@ const interestOptions = [
 
 const FORMSPREE_URL = 'https://formspree.io/f/mwvrrwbe';
 
-const ContactForm = ({ initialInterest }) => {
+const ContactForm = ({ initialInterest, placement }) => {
   const [interest, setInterest] = useState(initialInterest);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -20,6 +24,11 @@ const ContactForm = ({ initialInterest }) => {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(null);
 
+  // Refs, not state: a re-render during hydration is how React #418 happens,
+  // and this codebase has paid for that lesson several times over.
+  const startedRef = useRef(false);
+  const cspBlockedRef = useRef(false);
+
   useEffect(() => {
     if (interestOptions.includes(initialInterest)) {
       setInterest(initialInterest);
@@ -27,6 +36,27 @@ const ContactForm = ({ initialInterest }) => {
       setInterest('Corporate Training');
     }
   }, [initialInterest]);
+
+  // Distinguishes "the browser refused the request" from "Formspree was down".
+  // Between 2026-05-15 and 2026-08-11 the site's own CSP omitted formspree.io
+  // and silently ate every submission for 88 days; the failure was
+  // indistinguishable from a flaky network. This listener makes the next
+  // occurrence self-reporting.
+  useEffect(() => {
+    const onViolation = (e) => {
+      if ((e.blockedURI || '').includes('formspree.io')) {
+        cspBlockedRef.current = true;
+      }
+    };
+    document.addEventListener('securitypolicyviolation', onViolation);
+    return () => document.removeEventListener('securitypolicyviolation', onViolation);
+  }, []);
+
+  const noteStarted = useCallback(() => {
+    if (startedRef.current) return;
+    startedRef.current = true;
+    track('contact_form_started', { interest, placement });
+  }, [interest, placement]);
 
   const handleSubmit = useCallback(async (e) => {
     e.preventDefault();
@@ -47,26 +77,27 @@ const ContactForm = ({ initialInterest }) => {
 
       if (res.ok) {
         setSubmitted(true);
-        if (window.posthog) {
-          window.posthog.capture('contact_form_submitted', { interest });
-        }
-        if (window.gtag) {
-          window.gtag('event', 'generate_lead', {
-            event_category: 'contact',
-            event_label: interest,
-            value: 1,
-          });
-        }
+        track('contact_form_submitted', { interest, placement });
+        identifyLead(email, {
+          name,
+          interest,
+          identified_via: 'contact_form',
+        });
       } else {
         const data = await res.json().catch(() => ({}));
         setError(data.error || 'Something went wrong. Please try again.');
+        track('contact_form_failed', { reason: 'server', status: res.status });
       }
     } catch {
       setError('Network error. Please check your connection and try again.');
+      track('contact_form_failed', {
+        reason: cspBlockedRef.current ? 'csp_blocked' : 'network',
+        status: 0,
+      });
     } finally {
       setSubmitting(false);
     }
-  }, [interest, name, email, message]);
+  }, [interest, name, email, message, placement]);
 
   if (submitted) {
     return (
@@ -96,6 +127,7 @@ const ContactForm = ({ initialInterest }) => {
         action={FORMSPREE_URL}
         method="POST"
         onSubmit={handleSubmit}
+        onChange={noteStarted}
       >
         <label className="contact-form__field" htmlFor="name">
           <span className="contact-form__field-label">Name</span>
@@ -180,16 +212,24 @@ const ContactForm = ({ initialInterest }) => {
           </li>
         </ul>
       </form>
+      <p className="contact-form__privacy">
+        Your message comes straight to my inbox. I use PostHog and Google
+        Analytics to see how this site gets used.
+      </p>
     </section>
   );
 };
 
 ContactForm.propTypes = {
   initialInterest: PropTypes.string,
+  // Which surface this instance is rendered on, so /contact and the
+  // /get-started lander stay separable in the funnel.
+  placement: PropTypes.string,
 };
 
 ContactForm.defaultProps = {
   initialInterest: 'Corporate Training',
+  placement: 'contact_page',
 };
 
 export default ContactForm;

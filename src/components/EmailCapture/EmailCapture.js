@@ -1,6 +1,8 @@
 import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 
+import { track, identifyLead } from '../../utils/track';
+
 const SUBSTACK_SUBSCRIBE_URL = 'https://wongsam.substack.com/subscribe';
 
 const EmailCapture = ({
@@ -16,19 +18,20 @@ const EmailCapture = ({
   const handleSubmit = useCallback((e) => {
     e.preventDefault();
 
-    const event = leadMagnet ? 'lead_magnet_downloaded' : 'newsletter_subscribed';
-    if (window.posthog) {
-      window.posthog.capture(event, {
-        source: window.location.pathname,
-        ...(leadMagnet && { magnet: leadMagnet.title }),
-      });
-    }
-    if (window.gtag) {
-      window.gtag('event', 'sign_up', {
-        event_category: 'newsletter',
-        method: leadMagnet ? 'lead_magnet' : 'substack',
-      });
-    }
+    // Always newsletter_subscribed here, magnet or not. lead_magnet_downloaded
+    // now fires from the actual PDF anchor in the success state below, so it
+    // means "opened the PDF" rather than "asked for it" — the magnet funnel is
+    // two real steps instead of one event standing in for both.
+    //
+    // outcome: 'handoff' is deliberate. This opens Substack in a new tab and
+    // the site never learns whether the subscribe completed, so the event must
+    // not be read as a confirmed subscriber.
+    track('newsletter_subscribed', {
+      source: window.location.pathname,
+      outcome: 'handoff',
+      ...(leadMagnet && { magnet: leadMagnet.title }),
+    });
+    identifyLead(email, { identified_via: 'newsletter' });
 
     window.open(
       `${SUBSTACK_SUBSCRIBE_URL}?email=${encodeURIComponent(email)}`,
@@ -83,15 +86,6 @@ const EmailCapture = ({
             target="_blank"
             rel="noopener noreferrer"
             className="email-capture__whatsapp"
-            onClick={() => {
-              if (window.gtag) {
-                window.gtag('event', 'click', {
-                  event_category: 'outbound',
-                  event_label: 'whatsapp',
-                  transport_type: 'beacon',
-                });
-              }
-            }}
           >
             Or message me on WhatsApp
           </a>

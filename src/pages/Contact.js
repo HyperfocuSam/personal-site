@@ -102,15 +102,6 @@ const Contact = () => {
                   href="https://wa.me/85264315177"
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => {
-                    if (window.gtag) {
-                      window.gtag('event', 'click', {
-                        event_category: 'outbound',
-                        event_label: 'whatsapp',
-                        transport_type: 'beacon',
-                      });
-                    }
-                  }}
                 >
                   WhatsApp us
                 </a>.
@@ -136,15 +127,6 @@ const Contact = () => {
                 href="https://wa.me/85264315177"
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => {
-                  if (window.gtag) {
-                    window.gtag('event', 'click', {
-                      event_category: 'outbound',
-                      event_label: 'whatsapp',
-                      transport_type: 'beacon',
-                    });
-                  }
-                }}
               >
                 WhatsApp
               </a>.
