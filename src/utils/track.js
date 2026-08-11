@@ -41,7 +41,9 @@ const isPrerender = () => (
 const GA_EVENTS = {
   cta_clicked: (p) => ['select_content', {
     content_type: 'cta',
-    item_id: p.cta_id,
+    // Fall back to placement: an unlabelled CTA still reports where it was,
+    // which beats item_id: undefined.
+    item_id: p.cta_id || p.placement,
   }],
   outbound_click: (p) => ['click', {
     event_category: 'outbound',
@@ -355,9 +357,14 @@ export const installOutboundTracking = () => {
     // Without target="_blank" the click unloads this document, which cancels an
     // in-flight XHR. Every icon in src/data/contact.js renders this way.
     const sameTab = anchor.getAttribute('target') !== '_blank';
+    const ctaId = anchor.getAttribute('data-cta');
 
     track(hit.event, {
       ...hit.props,
+      // cta_id is the deliberate, stable name from a data-cta attribute.
+      // placement is always present and is derived from position when no
+      // attribute was set, so every event is attributable either way.
+      ...(ctaId && { cta_id: ctaId }),
       placement: placementOf(anchor),
       ...(sameTab && { beacon: true }),
     });
