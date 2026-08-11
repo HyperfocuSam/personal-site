@@ -88,8 +88,13 @@ const ContactForm = ({ initialInterest }) => {
         Share your goals, current context, and timeline.
         I will reply with a recommended next step.
       </p>
+      {/* action/method are a no-JS fallback only: handleSubmit calls
+          preventDefault, so a native POST happens solely when React never
+          hydrated. Requires formspree.io in the CSP form-action directive. */}
       <form
         className="contact-form fn-card"
+        action={FORMSPREE_URL}
+        method="POST"
         onSubmit={handleSubmit}
       >
         <label className="contact-form__field" htmlFor="name">
