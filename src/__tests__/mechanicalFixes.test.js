@@ -133,11 +133,15 @@ describe('S1 verified bug regressions', () => {
   it('contains only the specified About and legal-entity corrections', () => {
     const about = read('src/pages/About.js');
     const mediaKit = read('src/pages/MediaKit.js');
+    // The About FAQ answers moved to src/data/faqs.js when they were made
+    // visible on the page — they had been schema-only. The legal-entity
+    // assertion follows the copy rather than the file it used to live in.
+    const aboutCopy = about + read('src/data/faqs.js');
     expect(about).not.toContain('70% AI execution, 30% human judgment.');
     expect(about.match(/30% AI execution, 70% human judgment\./g)).toHaveLength(1);
     expect(about).toContain('A data sensitivity framework for regulated industries.');
     expect(about).toContain('Green (public info), Yellow (internal, strip identifiers),');
-    expect(about).toContain('Adaptig (Adaptig Group Limited)');
+    expect(aboutCopy).toContain('Adaptig (Adaptig Group Limited)');
     expect(mediaKit.match(/Adaptig Group Limited/g)).toHaveLength(2);
   });
 

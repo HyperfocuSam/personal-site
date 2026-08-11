@@ -27,11 +27,19 @@ function parsePosts() {
     const block = content.substring(blockStart, blockEnd > -1 ? blockEnd : undefined);
 
     const langMatch = block.match(/language:\s*'([^']+)'/);
-    const titleMatch = block.match(/title:\s*'((?:[^'\\]|\\.)+)'/);
-    const excerptMatch = block.match(/excerpt:\s*'((?:[^'\\]|\\.)+)'/);
+    // Titles/excerpts containing an apostrophe must be written with double
+    // quotes in index.js, so match both styles. generate-sitemap.js:80 already
+    // carries this fix; single-quote-only matching here silently fell back to
+    // the slug and shipped six posts — including the HKJC and HKCT case
+    // studies — as bare slug strings in llms-full.txt, the one file AI engines
+    // read most.
+    const titleMatch = block.match(/title:\s*'((?:[^'\\]|\\.)+)'/)
+      || block.match(/title:\s*"((?:[^"\\]|\\.)+)"/);
+    const excerptMatch = block.match(/excerpt:\s*'((?:[^'\\]|\\.)+)'/)
+      || block.match(/excerpt:\s*"((?:[^"\\]|\\.)+)"/);
     const typeMatch = block.match(/type:\s*'([^']+)'/);
 
-    const unescape = (s) => s.replace(/\\'/g, "'").replace(/\\\\/g, '\\');
+    const unescape = (s) => s.replace(/\\'/g, "'").replace(/\\"/g, '"').replace(/\\\\/g, '\\');
 
     posts.push({
       slug: match[1],
@@ -77,7 +85,10 @@ Sam Wong is Co-Founder & Director of Academy at Adaptig (Adaptig Group Limited) 
 - **Train-the-Trainer** (via Adaptig): Certification program for trainers, consultants, and educators who want to teach AI using the Adaptig methodology.
 - **Keynotes and Events**: 30-60 minute keynotes, executive briefings, panel discussions, and conference workshops.
 
-## Key Results
+## Key Results (Sam Wong personally)
+
+These are Sam's own delivery figures. Adaptig's company-wide figures are stated
+separately in the summary above and should never be merged with these.
 
 - 10,000+ professionals trained
 - 170+ workshops delivered
@@ -86,6 +97,20 @@ Sam Wong is Co-Founder & Director of Academy at Adaptig (Adaptig Group Limited) 
 - a major Hong Kong bank: 1,530 participants across 13 countries, 9.2/10 satisfaction
 - Chow Tai Fook: Three repeat engagements
 - 300 one-on-one coaching sessions delivered
+
+## Engagement Formats and Pricing
+
+Every engagement is quoted after a free 30-minute discovery call, because scope
+depends on headcount, language, delivery mode, and how much follow-through the
+organization wants. Typical shapes:
+
+- **Half-day or full-day corporate workshop**, on-site or online, English or Cantonese, usually 10-50 participants.
+- **Multi-session cohort programs** (the AI Pioneer Model) that run across weeks rather than a single day, for organizations that want habits rather than awareness.
+- **1-1 coaching**, sold as discovery call, standard coaching, or executive advisory.
+- **Train-the-Trainer certification** for trainers, L&D leads, and consultants who must teach AI, not just use it.
+- **Keynotes and executive briefings**, 30-60 minutes.
+
+To get a quote, book a discovery call at ${SITE_URL}/book/ or email sam@adaptig.com.
 
 ## Named Frameworks
 
@@ -98,12 +123,15 @@ Sam Wong is Co-Founder & Director of Academy at Adaptig (Adaptig Group Limited) 
 
 ## Links
 
-- Website: ${SITE_URL}
-- Services: ${SITE_URL}/services
-- Blog: ${SITE_URL}/blog
-- Case Studies: ${SITE_URL}/clients
-- Media Appearances: ${SITE_URL}/media
-- Contact: ${SITE_URL}/contact
+- Website: ${SITE_URL}/
+- Book a discovery call: ${SITE_URL}/book/
+- Services: ${SITE_URL}/services/
+- Corporate AI Training (Hong Kong): ${SITE_URL}/corporate-ai-training-hong-kong/
+- AI Train-the-Trainer (Hong Kong): ${SITE_URL}/ai-train-the-trainer-hong-kong/
+- Case Notes (engagement outcomes): ${SITE_URL}/case-notes/
+- Blog: ${SITE_URL}/blog/
+- Media Appearances: ${SITE_URL}/media/
+- Contact: ${SITE_URL}/contact/
 - Adaptig: https://adaptig.ai
 - LinkedIn: https://linkedin.com/in/sam-ai-agent/
 - X/Twitter: https://x.com/HyperfocuSam
@@ -211,8 +239,11 @@ Sam Wong is Co-Founder & Director of Academy at Adaptig (Adaptig Group Limited) 
 
 ## Key Pages
 
+- [Book a discovery call](${SITE_URL}/book/) \u2014 Free 30 minutes; the way every engagement is scoped and quoted
 - [Corporate AI Training Hong Kong](${SITE_URL}/corporate-ai-training-hong-kong/) \u2014 Pillar page with methodologies, case studies, FAQ, and government funding info
+- [AI Train-the-Trainer Hong Kong](${SITE_URL}/ai-train-the-trainer-hong-kong/) \u2014 Certification for trainers, L&D leads and consultants who must teach AI
 - [Services](${SITE_URL}/services/) \u2014 Full service catalog with coaching tiers and Train-the-Trainer
+- [Case Notes](${SITE_URL}/case-notes/) \u2014 What rooms actually shipped, engagement by engagement
 - [About](${SITE_URL}/about/) \u2014 Biography, career path, frameworks, and credentials
 - [Clients](${SITE_URL}/clients/) \u2014 Enterprise client list with industry breakdown
 - [Testimonials](${SITE_URL}/testimonials/) \u2014 Client feedback and satisfaction data

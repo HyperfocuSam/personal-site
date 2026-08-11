@@ -8,6 +8,8 @@ import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 import testimonials from '../data/testimonials';
 import TestimonialSection from '../components/Testimonials/TestimonialSection';
 import ScrollReveal from '../components/ScrollReveal';
+import FaqSection from '../components/FaqSection/FaqSection';
+import { aboutFaqs } from '../data/faqs';
 
 const About = () => (
   <Main
@@ -351,47 +353,15 @@ const About = () => (
             description: 'Co-Founder & Director of Academy at Adaptig. I train the people who train AI. 10,000+ professionals trained across 70+ organizations in 13 countries on practical AI adoption that changes behavior, not just builds awareness.',
           })}
         </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: [
-              {
-                '@type': 'Question',
-                name: 'Who is Sam Wong?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Sam Wong is Co-Founder & Director of Academy at Adaptig, a Hong Kong-based AI train-the-trainer who has personally trained 10,000+ professionals across 70+ organizations. He co-founded Adaptig, a global AI trainer network spanning 4 continents and 8 languages, where he is Co-Founder & Director of Academy. He focuses on practical, human-first AI adoption that changes behavior, not just builds awareness.',
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'What is Sam Wong\'s background?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Sam Wong holds a Master of Arts in Public & Comparative History from the Chinese University of Hong Kong, specializing in records management and knowledge systems. His career moved from Executive Assistant to the President of ThreeSixty Group (Sharper Image / FAO Schwarz) to AI Product Manager at RENPHO, where he built an AI division from scratch. In 2024, he started AICBO — free 1-on-1 AI tutoring — which grew into 300 coaching sessions and led to co-founding Adaptig.',
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'What organizations does Sam Wong work with?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Sam Wong works with Adaptig (Adaptig Group Limited), a global AI trainer network he co-founded spanning North America, Latin America, Europe, and Asia-Pacific. His enterprise clients include a major Hong Kong bank, Chow Tai Fook, Hong Kong Jockey Club, HSBC, Arup, PolyU, Mattel, Toyota, China Travel Service, and HKCT.',
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'What is Sam Wong\'s training approach?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Sam Wong\'s approach is built on four principles: humans are the point (AI is a tool, the goal is meaningful work), start with the smallest step (small wins compound into real change), psychological safety comes first (people don\'t adopt what they fear), and frameworks beat features (tools change, thinking patterns endure). He emphasizes behavior change over tool training.',
-                },
-              },
-            ],
-          })}
-        </script>
+
       </Helmet>
+
+      <FaqSection
+        faqs={aboutFaqs}
+        id="about-faq"
+        title="Frequently asked questions"
+        path="/about/"
+      />
 
       <p className="lang-toggle">
         <Link to="/zh/about">&#x4E2D;&#x6587;&#x7248;&#x672C;</Link>

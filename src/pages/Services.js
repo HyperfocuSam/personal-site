@@ -10,6 +10,8 @@ import services from '../data/services';
 import testimonials from '../data/testimonials';
 import ServiceGroup from '../components/Services/ServiceGroup';
 import ScrollReveal from '../components/ScrollReveal';
+import FaqSection from '../components/FaqSection/FaqSection';
+import { servicesFaqs } from '../data/faqs';
 
 const groups = [
   {
@@ -217,95 +219,15 @@ const Services = () => {
               ],
             })}
           </script>
-          <script type="application/ld+json">
-            {JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'FAQPage',
-              mainEntity: [
-                {
-                  '@type': 'Question',
-                  name: 'What types of AI training does Sam Wong offer?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'Sam Wong offers corporate AI workshops through Adaptig, multi-session AI Pioneer Programs for cohort-based learning, 1-1 AI coaching for professionals, Train-the-Trainer certification programs, and keynotes and event sessions. Services are available for organizations, individuals, and aspiring AI trainers.',
-                  },
-                },
-                {
-                  '@type': 'Question',
-                  name: 'Who are Sam Wong\'s typical clients for AI training?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'Sam Wong works with enterprises across banking, retail, education, engineering, tourism, and technology sectors. Notable clients include a major Hong Kong bank with 1,530 participants across 13 countries, Chow Tai Fook (three repeat engagements), Hong Kong Jockey Club, HSBC, Arup, PolyU, Mattel, Toyota, and YPO.',
-                  },
-                },
-                {
-                  '@type': 'Question',
-                  name: 'What results can teams expect from corporate AI workshops?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'Workshops achieve a 9.2/10 average satisfaction rating. The focus is on behavior change rather than tool awareness — teams learn to integrate AI into their actual daily workflows. Multi-session Pioneer Programs have shown participants saving 5-8 hours per week through AI-assisted workflow redesign.',
-                  },
-                },
-                {
-                  '@type': 'Question',
-                  name: 'What is the Adaptig Train-the-Trainer program?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'The Adaptig Train-the-Trainer program is a certification path for trainers, consultants, HR leaders, and educators who want to teach AI with confidence. Participants receive the Adaptig facilitation methodology, complete workshop materials and delivery structure, trainer community support, certification, and ongoing delivery opportunities through a global network spanning North America, Latin America, Europe, and Asia-Pacific.',
-                  },
-                },
-                {
-                  '@type': 'Question',
-                  name: 'How does Sam Wong\'s AI coaching work?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'AI coaching is personalized 1-1 sessions starting from the individual\'s current role, tools, and constraints — no generic curriculum. There are three tiers: a free 30-minute discovery call, standard 60-90 minute sessions focused on active projects, and premium executive AI advisory for leaders navigating AI transformation decisions. Over 300 one-on-one sessions across industries.',
-                  },
-                },
-                {
-                  '@type': 'Question',
-                  name: 'What is the AI Pioneer Program model?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'The AI Pioneer Program is a multi-session cohort approach (typically 6 sessions over 6 weeks) based on change management principles. Instead of training everyone at once, 10-20 curious and influential people are selected and trained deeply. They work on real tasks from their actual jobs each week. These Pioneers then become internal champions who drive adoption across the wider organization.',
-                  },
-                },
-                {
-                  '@type': 'Question',
-                  name: 'Where is Sam Wong based and what languages does he work in?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'Sam Wong is based in Hong Kong and available globally, with particular focus across the Asia-Pacific region. He delivers training in English and Cantonese. Workshops have been delivered to teams across 13 countries.',
-                  },
-                },
-                {
-                  '@type': 'Question',
-                  name: 'How much does corporate AI training cost in Hong Kong?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'Corporate training typically runs HKD 15,000–50,000 per session or day, depending on format and depth — contact me for a scoped quote. Sam Wong offers half-day and full-day workshops, multi-session Pioneer Programs (typically 6 sessions over 6 weeks), and executive advisory packages. Some programs may be eligible for Hong Kong government funding schemes.',
-                  },
-                },
-                {
-                  '@type': 'Question',
-                  name: 'Are AI training workshops available in Cantonese?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'Yes. Sam Wong delivers AI training in both English and Cantonese, making workshops accessible to Hong Kong teams regardless of language preference. Materials can be provided in English, Traditional Chinese, or bilingual formats.',
-                  },
-                },
-                {
-                  '@type': 'Question',
-                  name: 'What industries does Sam Wong provide AI training for in Hong Kong?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'Sam Wong has delivered AI training across banking and finance (a major Hong Kong bank, HSBC), retail and luxury (Chow Tai Fook, an international toy company), engineering (Arup, a major Hong Kong utility), education (PolyU, HKCT), tourism (Hong Kong Jockey Club), and professional services. Workshop content is customized to each industry\'s workflows, compliance requirements, and use cases.',
-                  },
-                },
-              ],
-            })}
-          </script>
+
         </Helmet>
+
+        <FaqSection
+          faqs={servicesFaqs}
+          id="services-faq"
+          title="Frequently asked questions"
+          path="/services/"
+        />
 
         <p className="services-footer-link">
           <Link to="/corporate-ai-training-hong-kong">

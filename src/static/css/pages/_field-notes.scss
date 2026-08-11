@@ -96,6 +96,18 @@
       }
     }
 
+    // The entity sentence — who Sam is, in plain crawlable text, inside the
+    // ~365px the median visitor actually sees. Slightly heavier than the
+    // subtitle beneath it so it reads as the answer, not as more body copy.
+    &__identity {
+      color: _palette(ink);
+      font-size: 1.05rem;
+      font-weight: _font(weight-medium);
+      line-height: 1.5;
+      margin: 0 0 0.85rem;
+      max-width: 42rem;
+    }
+
     &__subtitle {
       color: _palette(text-body);
       font-size: 1rem;

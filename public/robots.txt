@@ -49,16 +49,21 @@ Allow: /
 User-agent: Perplexity-User
 Allow: /
 
-# Sitemap & Feed
-Sitemap: https://hyperfocusam.com/sitemap.xml
+# These rules must sit inside a User-agent group. A blank line does NOT end a
+# group — only a new User-agent line does — so when these lived at the bottom of
+# the file they applied to Perplexity-User alone and every other crawler ignored
+# them. Restated under `*` so they mean what they read like.
+User-agent: *
+Allow: /llms.txt
+Allow: /llms-full.txt
+Disallow: /api
+Disallow: /static/js/*.map
+Disallow: /static/css/*.map
 
 # AI discoverability — llms.txt spec (https://llmstxt.org/)
 # llms.txt = concise site map + metadata for LLMs
 # llms-full.txt = extended context (bio, frameworks, full article excerpts)
-Allow: /llms.txt
-Allow: /llms-full.txt
 
-# Disallow non-essential paths
-Disallow: /api
-Disallow: /static/js/*.map
-Disallow: /static/css/*.map
+# Sitemap & Feed
+Sitemap: https://hyperfocusam.com/sitemap.xml
+Sitemap: https://hyperfocusam.com/feed.xml

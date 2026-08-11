@@ -340,6 +340,29 @@
   margin-bottom: 1rem;
 }
 
+// Quiet secondary route straight to the calendar. Deliberately not a second
+// button — the service link is the path that already converts and shouldn't
+// have to compete.
+.service-cta__book {
+  border-bottom: 0;
+  color: _palette(text-secondary);
+  display: inline-block;
+  font-size: 0.85rem;
+  margin-left: 0.85rem;
+
+  &:hover {
+    color: _palette(ink);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .service-cta__book {
+    display: block;
+    margin-left: 0;
+    margin-top: 0.85rem;
+  }
+}
+
 .scroll-progress {
   height: 3px;
   left: 0;

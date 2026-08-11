@@ -16,7 +16,10 @@ Sam Wong is Co-Founder & Director of Academy at Adaptig (Adaptig Group Limited) 
 - **Train-the-Trainer** (via Adaptig): Certification program for trainers, consultants, and educators who want to teach AI using the Adaptig methodology.
 - **Keynotes and Events**: 30-60 minute keynotes, executive briefings, panel discussions, and conference workshops.
 
-## Key Results
+## Key Results (Sam Wong personally)
+
+These are Sam's own delivery figures. Adaptig's company-wide figures are stated
+separately in the summary above and should never be merged with these.
 
 - 10,000+ professionals trained
 - 170+ workshops delivered
@@ -25,6 +28,20 @@ Sam Wong is Co-Founder & Director of Academy at Adaptig (Adaptig Group Limited) 
 - a major Hong Kong bank: 1,530 participants across 13 countries, 9.2/10 satisfaction
 - Chow Tai Fook: Three repeat engagements
 - 300 one-on-one coaching sessions delivered
+
+## Engagement Formats and Pricing
+
+Every engagement is quoted after a free 30-minute discovery call, because scope
+depends on headcount, language, delivery mode, and how much follow-through the
+organization wants. Typical shapes:
+
+- **Half-day or full-day corporate workshop**, on-site or online, English or Cantonese, usually 10-50 participants.
+- **Multi-session cohort programs** (the AI Pioneer Model) that run across weeks rather than a single day, for organizations that want habits rather than awareness.
+- **1-1 coaching**, sold as discovery call, standard coaching, or executive advisory.
+- **Train-the-Trainer certification** for trainers, L&D leads, and consultants who must teach AI, not just use it.
+- **Keynotes and executive briefings**, 30-60 minutes.
+
+To get a quote, book a discovery call at https://hyperfocusam.com/book/ or email sam@adaptig.com.
 
 ## Named Frameworks
 
@@ -37,12 +54,15 @@ Sam Wong is Co-Founder & Director of Academy at Adaptig (Adaptig Group Limited) 
 
 ## Links
 
-- Website: https://hyperfocusam.com
-- Services: https://hyperfocusam.com/services
-- Blog: https://hyperfocusam.com/blog
-- Case Studies: https://hyperfocusam.com/clients
-- Media Appearances: https://hyperfocusam.com/media
-- Contact: https://hyperfocusam.com/contact
+- Website: https://hyperfocusam.com/
+- Book a discovery call: https://hyperfocusam.com/book/
+- Services: https://hyperfocusam.com/services/
+- Corporate AI Training (Hong Kong): https://hyperfocusam.com/corporate-ai-training-hong-kong/
+- AI Train-the-Trainer (Hong Kong): https://hyperfocusam.com/ai-train-the-trainer-hong-kong/
+- Case Notes (engagement outcomes): https://hyperfocusam.com/case-notes/
+- Blog: https://hyperfocusam.com/blog/
+- Media Appearances: https://hyperfocusam.com/media/
+- Contact: https://hyperfocusam.com/contact/
 - Adaptig: https://adaptig.ai
 - LinkedIn: https://linkedin.com/in/sam-ai-agent/
 - X/Twitter: https://x.com/HyperfocuSam

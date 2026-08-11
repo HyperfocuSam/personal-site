@@ -7,9 +7,13 @@ import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 import testimonialsZh from '../data/testimonials-zh';
 import TestimonialSection from '../components/Testimonials/TestimonialSection';
 
+// Pass a bare title and let Main.js's titleTemplate add "| Sam Wong", the way
+// every other page does. The old value carried the brand itself AND was under
+// the template's 48-char threshold, so it rendered with the suffix twice:
+// "Sam Wong | AI 培訓專家 - 香港 | Sam Wong".
 const ZhIndex = () => (
   <Main
-    title="Sam Wong | AI 培訓專家 - 香港"
+    title="AI 培訓專家 - 香港"
     description="Sam Wong 協助團隊與專業人士自信地應用 AI，透過工作坊、輔導和培訓師發展，以人為本、實用、注重成果，為香港企業提供 AI 培訓及顧問服務。"
     canonicalUrl={`${SITE_URL}/zh`}
     ogTitle="Sam Wong | AI 培訓專家"

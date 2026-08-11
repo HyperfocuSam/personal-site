@@ -35,6 +35,17 @@ const TAG_TO_SERVICE = {
   },
 };
 
+// The blog is the best funnel on the site — 33% bounce against the homepage's
+// 79.5%, and 28% of blog readers reach /services — but until now NONE of the 98
+// posts linked to /book. A reader could only reach the calendar via the global
+// nav. The service link stays primary because that path demonstrably works;
+// booking is added beside it as the direct route for anyone already convinced.
+const BookLink = () => (
+  <Link to="/book" className="service-cta__book" data-cta="blog_cta_book">
+    or book a free 30-minute call &rarr;
+  </Link>
+);
+
 const ServiceCta = ({ tags }) => {
   if (!tags || tags.length === 0) return null;
 
@@ -52,6 +63,7 @@ const ServiceCta = ({ tags }) => {
         <Link to="/services" className="button" data-cta="blog_service_cta_default">
           View Training Services
         </Link>
+        <BookLink />
       </div>
     );
   }
@@ -64,6 +76,7 @@ const ServiceCta = ({ tags }) => {
       <Link to={cta.href} className="button" data-cta={`blog_service_cta_${match}`}>
         {cta.label}
       </Link>
+      <BookLink />
     </div>
   );
 };

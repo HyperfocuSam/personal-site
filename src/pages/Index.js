@@ -27,9 +27,11 @@ const homepageReceiptFragments = [
 const Index = () => (
   <Main
     description={
-      'Hong Kong-based AI train-the-trainer. Sam Wong is Co-Founder & Director of Academy at Adaptig, delivering Train-the-Trainer programs, corporate AI workshops, '
-      + '1-1 coaching, and Train-the-Trainer programs for enterprises across Asia-Pacific. '
-      + '10,000+ professionals trained.'
+      // 152 chars. Was 274 — nearly double the ~155 Google renders — and it
+      // said "Train-the-Trainer programs" twice in one sentence.
+      'Sam Wong is a Hong Kong AI train-the-trainer and Co-Founder at Adaptig. '
+      + 'Corporate AI workshops, 1-1 coaching, trainer certification. '
+      + '10,000+ trained.'
     }
     canonicalUrl={`${SITE_URL}/`}
     ogTitle="Sam Wong | Co-Founder, Adaptig — AI Train-the-Trainer"

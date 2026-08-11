@@ -276,9 +276,14 @@ const Post = () => {
             </div>
 
             {/* Share Buttons */}
+            {/* Build the URL from SITE_URL, never window.location. react-snap
+                prerenders on localhost:45678, so reading window baked
+                "http://localhost:45678/blog/..." into the static HTML of all 98
+                posts — hydration fixed it for humans, but crawlers and AI
+                fetchers that read raw HTML saw localhost. */}
             <ShareButtons
               title={post.title}
-              url={typeof window !== 'undefined' ? window.location.href : ''}
+              url={postUrl}
             />
           </div>
         </section>
