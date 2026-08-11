@@ -231,9 +231,10 @@ const Post = () => {
         <header className="page-hero page-hero--dark">
           <div className="content-narrow">
             <div className="title">
-              <h1>
-                <Link to={`/blog/${slug}`}>{post.title}</Link>
-              </h1>
+              {/* Was <Link to={`/blog/${slug}`}> — every post's H1 linked to the
+                  post it was already on, across all 98. Same pattern removed
+                  from /about and /book. */}
+              <h1>{post.title}</h1>
               <div className="post-header__meta">
                 <span className="post-header__date fn-stamp">
                   {dayjs(post.date).format('MMMM D, YYYY')}

@@ -42,6 +42,35 @@ const groups = [
   },
 ];
 
+// Built from src/data/services.js rather than hand-written, so the catalog
+// cannot drift from what the page actually renders. The ProfessionalService
+// node carried six keys and no offers at all — "what does he sell, and how do
+// I buy it" was the one question the commercial page could not answer to a
+// machine, while llms.txt already published the engagement shapes in prose.
+const offerCatalog = {
+  '@type': 'OfferCatalog',
+  name: 'AI training and coaching engagements',
+  itemListElement: services.map((service) => ({
+    '@type': 'Offer',
+    name: service.title,
+    // Trailing slash before the fragment: GitHub Pages 301s /services to
+    // /services/, and AI fetchers often don't follow the redirect.
+    url: `${SITE_URL}/services/#${service.anchor}`,
+    availability: 'https://schema.org/InStock',
+    itemOffered: {
+      '@type': 'Service',
+      name: service.title,
+      description: service.subtitle,
+      serviceType: service.title,
+      provider: service.provider === 'Adaptig'
+        ? { '@type': 'Organization', name: 'Adaptig', url: 'https://adaptig.ai' }
+        : { '@type': 'Person', name: 'Sam Wong', url: SITE_URL },
+      areaServed: ['Hong Kong', 'Asia-Pacific'],
+      availableLanguage: ['English', 'Cantonese', 'Mandarin'],
+    },
+  })),
+};
+
 const Services = () => {
   const { hash } = useLocation();
 
@@ -168,13 +197,16 @@ const Services = () => {
             {JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'ProfessionalService',
+              '@id': `${SITE_URL}/services/#service`,
               name: 'Sam Wong - AI Training Services',
-              url: `${SITE_URL}/services`,
+              url: `${SITE_URL}/services/`,
               provider: {
                 '@type': 'Person', name: 'Sam Wong', url: SITE_URL,
               },
               areaServed: ['Hong Kong', 'Asia-Pacific'],
               serviceType: ['AI Training', 'Corporate Workshops', 'Executive Coaching', 'Train-the-Trainer'],
+              availableLanguage: ['English', 'Cantonese', 'Mandarin'],
+              hasOfferCatalog: offerCatalog,
             })}
           </script>
           <script type="application/ld+json">

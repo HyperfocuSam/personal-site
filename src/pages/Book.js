@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 import Main from '../layouts/Main';
 import { track } from '../utils/track';
@@ -129,13 +130,78 @@ const Book = () => {
         { lang: 'x-default', href: `${SITE_URL}/book` },
       ]}
     >
+      {/* The site's primary CTA had no page-level structured data at all, so
+          the one thing an AI engine most needs to answer — "how do I actually
+          engage him, and what does the first step cost" — was unreadable here.
+          The free discovery call is stated as a priced Offer precisely because
+          "free" is the answer that removes the objection. */}
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebPage',
+            '@id': `${SITE_URL}/book/#webpage`,
+            url: `${SITE_URL}/book/`,
+            name: 'Book a Call with Sam Wong',
+            description: 'Book a free 30-minute discovery call or a paid coaching session with Sam Wong, Co-Founder & Director of Academy at Adaptig, Hong Kong.',
+            inLanguage: 'en',
+            isPartOf: { '@id': `${SITE_URL}/#website` },
+            about: { '@id': `${SITE_URL}/#person` },
+            potentialAction: {
+              '@type': 'ScheduleAction',
+              name: 'Book a discovery call',
+              target: ROAM_LOBBY_URL,
+            },
+            mainEntity: {
+              '@type': 'Service',
+              name: 'AI coaching and advisory with Sam Wong',
+              serviceType: ['AI Coaching', 'Executive AI Advisory', 'Corporate AI Training'],
+              provider: { '@type': 'Person', name: 'Sam Wong', url: SITE_URL },
+              areaServed: ['Hong Kong', 'Asia-Pacific', 'Global'],
+              availableLanguage: ['English', 'Cantonese', 'Mandarin'],
+              hasOfferCatalog: {
+                '@type': 'OfferCatalog',
+                name: 'Ways to start',
+                itemListElement: [
+                  {
+                    '@type': 'Offer',
+                    name: 'Discovery Call',
+                    description: 'Define your goals and see if coaching is a fit. No pressure, no pitch.',
+                    price: '0',
+                    priceCurrency: 'HKD',
+                    availability: 'https://schema.org/InStock',
+                    url: `${SITE_URL}/book/`,
+                    itemOffered: {
+                      '@type': 'Service',
+                      name: 'Discovery Call',
+                      description: '30-minute introductory call.',
+                    },
+                  },
+                  {
+                    '@type': 'Offer',
+                    name: 'Coaching Session',
+                    description: 'Focused 60-90 minute work on your active projects and workflows.',
+                    availability: 'https://schema.org/InStock',
+                    url: `${SITE_URL}/book/`,
+                    itemOffered: {
+                      '@type': 'Service',
+                      name: 'One-to-one AI Coaching Session',
+                      description: 'Personalised coaching on AI tools and workflows for professionals.',
+                    },
+                  },
+                ],
+              },
+            },
+          })}
+        </script>
+      </Helmet>
       <article className="post book-page field-notes-content" id="book">
         <header className="page-hero page-hero--dark">
           <div className="content-narrow">
             <div className="title">
-              <h1>
-                <Link to="/book">Book a Call</Link>
-              </h1>
+              {/* Was wrapped in <Link to="/book"> — a heading linking to its own
+                  page. Same pattern removed from /about and every post. */}
+              <h1>Book a Call</h1>
               <p>
                 Whether it&apos;s a free discovery call or a focused coaching
                 session, pick a time that works and I&apos;ll be there.
@@ -159,11 +225,15 @@ const Book = () => {
           </div>
         </section>
 
-        <section className="book-page__context">
+        <section className="book-page__context" aria-labelledby="book-options-heading">
           <div className="content-narrow">
+            {/* The page went H1 -> H4 with no section heading between them. */}
+            <h2 className="book-page__options-heading" id="book-options-heading">
+              What you can book
+            </h2>
             <div className="book-page__options">
               <div className="book-page__option fn-card">
-                <h4>Discovery Call</h4>
+                <h3>Discovery Call</h3>
                 <span className="book-page__label fn-stamp">Free, 30 min</span>
                 <p>
                   Define your goals and see if coaching is a fit.
@@ -171,7 +241,7 @@ const Book = () => {
                 </p>
               </div>
               <div className="book-page__option fn-card">
-                <h4>Coaching Session</h4>
+                <h3>Coaching Session</h3>
                 <span className="book-page__label fn-stamp">60-90 min</span>
                 <p>
                   Focused work on your active projects and workflows.
@@ -179,7 +249,7 @@ const Book = () => {
                 </p>
               </div>
               <div className="book-page__option fn-card">
-                <h4>Something Else?</h4>
+                <h3>Something Else?</h3>
                 <span className="book-page__label fn-stamp">Let&apos;s talk</span>
                 {/* Single-expression text: adjacent nodes break hydration (#418) */}
                 <p>

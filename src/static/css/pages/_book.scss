@@ -85,7 +85,9 @@
 .book-page__option {
   padding: 1.25rem;
 
-  h4 {
+  // h3 since the option headings moved one level up under a real section h2;
+  // the size stays where h4 had it so the cards render unchanged.
+  h3 {
     font-size: 1.1rem;
     font-weight: _font(weight-bold);
     color: _palette(text-primary);

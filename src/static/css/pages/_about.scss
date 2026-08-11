@@ -1,0 +1,27 @@
+/* /about — page-scoped overrides */
+
+#about {
+  // Heading levels moved h3 -> h2 (sections) and h4 -> h3 (cards) so the page
+  // finally has an H2. It used to run H1 -> H3, with its only H2 arriving in
+  // the FAQ block at the very bottom — the two most commercially important
+  // pages on the site had no section heading a crawler could read as one.
+  //
+  // Globally h3 is 1.65rem against h4's 1.1rem, so the promotion alone would
+  // have made every card title half again as large inside a three-column grid.
+  // Cards keep their own scale: the semantics change, the rendering does not.
+  .card :is(h3, h4) {
+    font-size: 1.1rem;
+  }
+}
+
+// Third route out of the closing band. The two buttons are the calendar and the
+// services page; this stays a text link so it competes with neither. Colors come
+// from .section-dark a in base/_textures.scss.
+.about-cta__quiet {
+  font-size: 0.85rem;
+  margin-top: 1rem;
+
+  a {
+    border-bottom: 0;
+  }
+}

@@ -18,6 +18,9 @@ const typeLabels = {
   framework: 'Framework',
   reflection: 'Reflection',
   announcement: 'Announcement',
+  // 2 posts carry type: 'commentary'. Without an entry here they rendered the
+  // raw lowercase slug as their badge.
+  commentary: 'Commentary',
 };
 
 // Language filter options

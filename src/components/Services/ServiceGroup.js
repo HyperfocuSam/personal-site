@@ -103,7 +103,10 @@ const ServiceGroup = ({
 }) => (
   <section id={id} className="service-group">
     <header className="service-group__header">
-      <h3>{title}</h3>
+      {/* h2, not h3: /services ran H1 -> H3 with its only H2 arriving in the FAQ
+          block at the bottom. Sizes are pinned in pages/_services.scss for both
+          #services and #zh-services, so this is a semantic change only. */}
+      <h2>{title}</h2>
       {subtitle && <p>{subtitle}</p>}
       {socialProof && (
         <p className="service-group__social-proof">
@@ -127,7 +130,7 @@ const ServiceGroup = ({
     <div className="service-group__list">
       {services.map((service) => (
         <article key={service.id} className="service-group__item fn-entry">
-          <h4>{service.title}</h4>
+          <h3>{service.title}</h3>
           {(service.provider || service.subtitle) && (
             <p className="service-group__item-meta">
               {service.provider

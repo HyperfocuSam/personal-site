@@ -5,6 +5,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { execFileSync } = require('child_process');
 
 const SITE_URL = 'https://hyperfocusam.com';
 const POSTS_FILE = path.join(__dirname, '..', 'src', 'data', 'posts', 'index.js');
@@ -29,31 +30,33 @@ const AI_ASSETS = [
   { path: '/llms-full.txt', priority: '0.8', changefreq: 'weekly' },
 ];
 
+// `source` is the page component each URL is rendered from. It exists so
+// <lastmod> can report when the page actually changed — see lastModified().
 const STATIC_PAGES = [
   // English pages
-  { path: '/', priority: '1.0', changefreq: 'weekly' },
-  { path: '/services', priority: '0.9', changefreq: 'weekly' },
-  { path: '/about', priority: '0.8', changefreq: 'monthly' },
-  { path: '/blog', priority: '0.8', changefreq: 'weekly' },
-  { path: '/media', priority: '0.8', changefreq: 'monthly' },
-  { path: '/media/kit', priority: '0.8', changefreq: 'monthly' },
-  { path: '/clients', priority: '0.8', changefreq: 'monthly' },
-  { path: '/case-notes', priority: '0.8', changefreq: 'monthly' },
-  { path: '/contact', priority: '0.7', changefreq: 'monthly' },
-  { path: '/corporate-ai-training-hong-kong', priority: '0.9', changefreq: 'weekly' },
-  { path: '/ai-train-the-trainer-hong-kong', priority: '0.9', changefreq: 'weekly' },
-  { path: '/resume', priority: '0.6', changefreq: 'monthly' },
-  { path: '/projects', priority: '0.6', changefreq: 'monthly' },
-  { path: '/speaking', priority: '0.8', changefreq: 'monthly' },
-  { path: '/testimonials', priority: '0.8', changefreq: 'monthly' },
-  { path: '/book', priority: '0.8', changefreq: 'monthly' },
+  { path: '/', priority: '1.0', changefreq: 'weekly', source: 'src/pages/Index.js' },
+  { path: '/services', priority: '0.9', changefreq: 'weekly', source: 'src/pages/Services.js' },
+  { path: '/about', priority: '0.8', changefreq: 'monthly', source: 'src/pages/About.js' },
+  { path: '/blog', priority: '0.8', changefreq: 'weekly', source: 'src/pages/Blog.js' },
+  { path: '/media', priority: '0.8', changefreq: 'monthly', source: 'src/pages/Media.js' },
+  { path: '/media/kit', priority: '0.8', changefreq: 'monthly', source: 'src/pages/MediaKit.js' },
+  { path: '/clients', priority: '0.8', changefreq: 'monthly', source: 'src/pages/Clients.js' },
+  { path: '/case-notes', priority: '0.8', changefreq: 'monthly', source: 'src/pages/CaseNotes.js' },
+  { path: '/contact', priority: '0.7', changefreq: 'monthly', source: 'src/pages/Contact.js' },
+  { path: '/corporate-ai-training-hong-kong', priority: '0.9', changefreq: 'weekly', source: 'src/pages/CorporateTraining.js' },
+  { path: '/ai-train-the-trainer-hong-kong', priority: '0.9', changefreq: 'weekly', source: 'src/pages/TrainTheTrainer.js' },
+  { path: '/resume', priority: '0.6', changefreq: 'monthly', source: 'src/pages/Resume.js' },
+  { path: '/projects', priority: '0.6', changefreq: 'monthly', source: 'src/pages/Projects.js' },
+  { path: '/speaking', priority: '0.8', changefreq: 'monthly', source: 'src/pages/Speaking.js' },
+  { path: '/testimonials', priority: '0.8', changefreq: 'monthly', source: 'src/pages/Testimonials.js' },
+  { path: '/book', priority: '0.8', changefreq: 'monthly', source: 'src/pages/Book.js' },
   // Chinese pages
-  { path: '/zh', priority: '1.0', changefreq: 'weekly', lang: 'zh-Hant', alternate: '/' },
-  { path: '/zh/about', priority: '0.8', changefreq: 'monthly', lang: 'zh-Hant', alternate: '/about' },
-  { path: '/zh/blog', priority: '0.8', changefreq: 'weekly', lang: 'zh-Hant', alternate: '/blog' },
-  { path: '/zh/services', priority: '0.9', changefreq: 'weekly', lang: 'zh-Hant', alternate: '/services' },
-  { path: '/zh/media', priority: '0.8', changefreq: 'monthly', lang: 'zh-Hant', alternate: '/media' },
-  { path: '/zh/corporate-ai-training-hong-kong', priority: '0.9', changefreq: 'weekly', lang: 'zh-Hant', alternate: '/corporate-ai-training-hong-kong' },
+  { path: '/zh', priority: '1.0', changefreq: 'weekly', lang: 'zh-Hant', alternate: '/', source: 'src/pages/ZhIndex.js' },
+  { path: '/zh/about', priority: '0.8', changefreq: 'monthly', lang: 'zh-Hant', alternate: '/about', source: 'src/pages/ZhAbout.js' },
+  { path: '/zh/blog', priority: '0.8', changefreq: 'weekly', lang: 'zh-Hant', alternate: '/blog', source: 'src/pages/ZhBlog.js' },
+  { path: '/zh/services', priority: '0.9', changefreq: 'weekly', lang: 'zh-Hant', alternate: '/services', source: 'src/pages/ZhServices.js' },
+  { path: '/zh/media', priority: '0.8', changefreq: 'monthly', lang: 'zh-Hant', alternate: '/media', source: 'src/pages/ZhMedia.js' },
+  { path: '/zh/corporate-ai-training-hong-kong', priority: '0.9', changefreq: 'weekly', lang: 'zh-Hant', alternate: '/corporate-ai-training-hong-kong', source: 'src/pages/ZhCorporateTraining.js' },
 ];
 
 function parsePosts() {
@@ -106,6 +109,37 @@ function parsePosts() {
   return posts;
 }
 
+/**
+ * Date a page's source last actually changed, as YYYY-MM-DD.
+ *
+ * Every static page used to be stamped with the build date, so all 22 <lastmod>
+ * values changed on every deploy even when one word moved on one page. A
+ * lastmod that is always "today" carries no information, and crawlers learn to
+ * discount it — which costs exactly the recrawl priority the field exists to
+ * buy. The last commit that touched the component is the honest answer.
+ *
+ * Falls back to filesystem mtime (shallow clone, no git), then to today.
+ */
+function lastModified(sourcePath) {
+  if (!sourcePath) return null;
+  const abs = path.join(__dirname, '..', sourcePath);
+  try {
+    const out = execFileSync('git', ['log', '-1', '--format=%cs', '--', sourcePath], {
+      cwd: path.join(__dirname, '..'),
+      encoding: 'utf-8',
+      stdio: ['ignore', 'pipe', 'ignore'],
+    }).trim();
+    if (/^\d{4}-\d{2}-\d{2}$/.test(out)) return out;
+  } catch (e) {
+    // git unavailable or file untracked — fall through to mtime
+  }
+  try {
+    return fs.statSync(abs).mtime.toISOString().split('T')[0];
+  } catch (e) {
+    return null;
+  }
+}
+
 function generateSitemap() {
   const today = new Date().toISOString().split('T')[0];
   const posts = parsePosts();
@@ -119,7 +153,7 @@ function generateSitemap() {
     const loc = page.path === '/' ? SITE_URL + '/' : `${SITE_URL}${page.path}/`;
     xml += '  <url>\n';
     xml += `    <loc>${loc}</loc>\n`;
-    xml += `    <lastmod>${today}</lastmod>\n`;
+    xml += `    <lastmod>${lastModified(page.source) || today}</lastmod>\n`;
     xml += `    <changefreq>${page.changefreq}</changefreq>\n`;
     xml += `    <priority>${page.priority}</priority>\n`;
     // Bidirectional hreflang for bilingual page pairs (with trailing slashes)

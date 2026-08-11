@@ -5,18 +5,27 @@ import { Helmet } from 'react-helmet-async';
 // answers (corporate AI training HK, AI training for banks, AI adoption
 // consultant, Train-the-Trainer, cost, why training doesn't stick). Each
 // answer leads with a self-contained sentence so AI engines can lift it.
+//
+// Client naming follows Sam's ruling of 2026-07-12
+// (output/SAM-ClientNaming-Decisions-20260712.md): the bank, the utility, the
+// food manufacturer, the toy company and the advertising group are ANONYMIZE —
+// named clients here are on the KEEP list. This file predates the sitewide
+// anonymisation pass (75fa2dcd) by eleven days and was missed by it, so the
+// bank was named on the live homepage for a month. Do not reintroduce it.
+// The logo bar deliberately still shows those logos — Sam's decision of
+// 2026-08-11 is that the ruling is text-only.
 const faqs = [
   {
     q: 'What makes good corporate AI training in Hong Kong?',
     a: 'Good corporate AI training in Hong Kong is measured by adoption, not attendance'
       + ' — whether teams still use AI on real work weeks after the session. My programs'
       + ' run on that standard, with 10,000+ professionals trained across 70+ organizations'
-      + ' including Bank of China (HK), HSBC, and Chow Tai Fook.',
+      + ' including HSBC, Chow Tai Fook, and a major Hong Kong bank.',
   },
   {
     q: 'Do you run AI training for banks and regulated industries?',
-    a: 'Yes — including a Bank of China (HK) program that reached 1,530 participants across'
-      + ' 13 countries with zero data incidents. For regulated environments I use the Traffic'
+    a: 'Yes — including a program for a major Hong Kong bank that reached 1,530 participants'
+      + ' across 13 countries with zero data incidents. For regulated environments I use the Traffic'
       + ' Light Protocol, a green/yellow/red framework for what staff can safely put into AI tools.',
   },
   {
