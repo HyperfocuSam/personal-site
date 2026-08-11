@@ -222,12 +222,21 @@ body {
 
     ul {
       height: inherit;
-      line-height: inherit;
+      // line-height:1 + flex centring. The 56px line-height inherited from
+      // #header made the 44px button's line box taller than the button, which
+      // pushed its centre to y=50 in a 56px header — the burger hung ~22px
+      // below the wordmark and CTA, overlapping the bottom border.
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
 
       li {
         border-left: 0;
-        height: inherit;
-        line-height: inherit;
+        display: flex;
+        align-items: center;
+        height: auto;
+        line-height: 1;
         white-space: nowrap;
       }
     }
@@ -248,9 +257,16 @@ body {
       margin-right: 0.35rem;
 
       a {
+        // Was an 18px-tall tap target — the primary CTA on the phone, and
+        // barely hittable with a thumb. Matches the language switch's height
+        // so the two read as one control group.
+        align-items: center;
+        display: inline-flex;
         font-size: 0.6rem;
+        justify-content: center;
         letter-spacing: 0.04em;
-        padding: 0.4em 0.65em;
+        min-height: 38px;
+        padding: 0 0.7em;
         white-space: nowrap;
       }
     }
@@ -281,7 +297,22 @@ body {
       margin-left: 0;
     }
 
-    .hamburger-container { order: 3; }
+    // The burger <li> is `position: fixed; right: 0` (see .open-menu /
+    // .close-menu below) so it stays pinned while the drawer animates — which
+    // means it is out of flow and the flex row reserves NO width for it. The
+    // container collapsed to the 16px of .main padding and the 44px button
+    // overhung leftwards onto the Book a Call CTA. Previously invisible only
+    // because the burger also sat ~22px too low; fixing that alignment exposed
+    // it. Reserve its width explicitly.
+    .hamburger-container {
+      order: 3;
+      flex-shrink: 0;
+      width: 2.75rem;
+    }
+
+    .main {
+      padding-right: 0;
+    }
   }
 
   @include breakpoint(small) {
@@ -303,7 +334,10 @@ body {
 
       a {
         font-size: 0.58rem;
-        padding: 0.35em 0.55em;
+        // Keep the flex centring and min-height from the medium breakpoint;
+        // a plain padding override here would collapse the tap target again.
+        min-height: 38px;
+        padding: 0 0.6em;
       }
     }
 
