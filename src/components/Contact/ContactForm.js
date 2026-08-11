@@ -52,7 +52,17 @@ const ContactForm = ({ initialInterest, placement }) => {
     return () => document.removeEventListener('securitypolicyviolation', onViolation);
   }, []);
 
-  const noteStarted = useCallback(() => {
+  // Formspree discards any submission where a field named `_gotcha` arrives
+  // non-empty, so this needs no server-side work. It matters because bots have
+  // outnumbered humans on this form 97 attempts to 11, and Formspree's free
+  // tier caps at 50 submissions/month — a quota rejection returns non-OK and
+  // would look exactly like the 88-day CSP outage that already cost a lead.
+  const gotchaRef = useRef(null);
+
+  const noteStarted = useCallback((e) => {
+    // A bot filling the honeypot must not register as a started form; these
+    // funnel numbers only just became trustworthy.
+    if (e && e.target && e.target.name === '_gotcha') return;
     if (startedRef.current) return;
     startedRef.current = true;
     track('contact_form_started', { interest, placement });
@@ -71,7 +81,13 @@ const ContactForm = ({ initialInterest, placement }) => {
           Accept: 'application/json',
         },
         body: JSON.stringify({
-          name, email, interest, message,
+          name,
+          email,
+          interest,
+          message,
+          // Read straight off the DOM node: a bot that fills the field never
+          // dispatches React's onChange, so component state would miss it.
+          _gotcha: (gotchaRef.current && gotchaRef.current.value) || '',
         }),
       });
 
@@ -129,6 +145,21 @@ const ContactForm = ({ initialInterest, placement }) => {
         onSubmit={handleSubmit}
         onChange={noteStarted}
       >
+        {/* Honeypot. Rendered unconditionally and hidden in CSS — a
+            conditionally-rendered node here is exactly how react-snap
+            hydration (React #418) breaks, and this file has been bitten
+            before. Off-screen rather than display:none so bots that skip
+            hidden inputs still fill it. */}
+        <input
+          ref={gotchaRef}
+          type="text"
+          name="_gotcha"
+          className="contact-form__gotcha"
+          tabIndex="-1"
+          autoComplete="off"
+          aria-hidden="true"
+        />
+
         <label className="contact-form__field" htmlFor="name">
           <span className="contact-form__field-label">Name</span>
           <input

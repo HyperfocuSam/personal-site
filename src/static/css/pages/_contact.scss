@@ -83,6 +83,31 @@
   }
 }
 
+// Deliberately NOT scoped under #contact: ContactForm also renders on
+// /get-started (article id "get-started"), and a scoped rule would leave the
+// honeypot visible there.
+//
+// Off-screen rather than display:none or hidden — bots commonly skip fields
+// their heuristics read as hidden, and the point is that they fill it.
+// Formspree drops any submission where _gotcha is non-empty.
+.contact-form__gotcha {
+  position: absolute !important;
+  left: -9999px !important;
+  top: auto !important;
+  width: 1px !important;
+  height: 1px !important;
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+.contact-form__privacy {
+  color: _palette(text-secondary);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin-top: 1em;
+  max-width: 760px;
+}
+
 .inline {
   min-width: 150px;
   display: inline-block;

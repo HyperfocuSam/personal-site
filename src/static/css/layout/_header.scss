@@ -184,6 +184,35 @@ body {
     }
   }
 
+  // Language switch — sits between the nav links and the Book CTA so the
+  // `margin-left: auto` on .nav-cta absorbs the slack and this stays clustered
+  // with the wordmark. Visible in the fixed header at every width; never
+  // hidden behind the hamburger.
+  .nav-lang {
+    flex-shrink: 0;
+    line-height: 1;
+
+    a {
+      // #header a forces uppercase + kerning-meta tracking, which makes CJK
+      // glyphs look broken and adds a phantom trailing space.
+      border: 1px solid _palette(border-subtle);
+      border-radius: 2px;
+      color: _palette(text-secondary);
+      display: inline-block;
+      font-size: 0.66rem;
+      letter-spacing: 0.02em;
+      padding: 0.35em 0.6em;
+      text-transform: none;
+      transition: color _duration(base) $ease-out,
+                  border-color _duration(base) $ease-out;
+
+      &:hover {
+        border-color: _palette(ink);
+        color: _palette(ink);
+      }
+    }
+  }
+
   // Hamburger area (right side on mobile)
   .main {
     height: inherit;
@@ -225,6 +254,34 @@ body {
         white-space: nowrap;
       }
     }
+
+    // With .links hidden, the switcher would otherwise sit flush against the
+    // wordmark and read as part of the logo. Move the auto margin onto it so
+    // the right-hand cluster becomes [中文] [BOOK A CALL] [☰].
+    .nav-lang {
+      order: 1;
+      margin-left: auto;
+      margin-right: 0.4rem;
+
+      a {
+        // 40px tall: a 17px tap target is not usable with a thumb, and this
+        // control exists specifically for mobile visitors.
+        align-items: center;
+        display: inline-flex;
+        font-size: 0.66rem;
+        min-height: 40px;
+        min-width: 40px;
+        justify-content: center;
+        padding: 0 0.55em;
+      }
+    }
+
+    .nav-cta {
+      order: 2;
+      margin-left: 0;
+    }
+
+    .hamburger-container { order: 3; }
   }
 
   @include breakpoint(small) {
@@ -233,7 +290,10 @@ body {
 
     .index-link {
       padding: 0 0 0 0.85rem;
-      max-width: calc(100% - 8.5rem);
+      // Reserve for the right-hand cluster. Was 8.5rem for CTA + hamburger;
+      // the language switch is a third element, and under-reserving here
+      // ellipsizes the "SAM WONG" wordmark.
+      max-width: calc(100% - 11rem);
       overflow: hidden;
       text-overflow: ellipsis;
     }
@@ -244,6 +304,17 @@ body {
       a {
         font-size: 0.58rem;
         padding: 0.35em 0.55em;
+      }
+    }
+
+    .nav-lang {
+      margin-right: 0.3rem;
+
+      a {
+        font-size: 0.64rem;
+        min-height: 38px;
+        min-width: 38px;
+        padding: 0 0.45em;
       }
     }
   }

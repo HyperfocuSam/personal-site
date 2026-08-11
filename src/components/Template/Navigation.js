@@ -3,10 +3,12 @@ import { Link, useLocation } from 'react-router-dom';
 
 import Hamburger from './Hamburger';
 import routes from '../../data/routes';
+import { counterpartOf } from '../../data/langPairs';
 
 const Navigation = () => {
   const { pathname } = useLocation();
   const [scrolled, setScrolled] = useState(false);
+  const other = counterpartOf(pathname);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -53,6 +55,22 @@ const Navigation = () => {
             ))}
         </ul>
       </nav>
+      {/* Language switch lives in the fixed header, NOT the hamburger. Until
+          2026-08-11 the only 中文版本 link on the homepage sat 6,873px down a
+          7,623px page — roughly eight phone screens — and 172 Hong Kong mobile
+          visitors arriving from a Cantonese YouTube show got an English-only
+          site with no way to know the Chinese one existed. */}
+      <div className="nav-lang">
+        <Link
+          to={other.href}
+          data-cta="nav_lang"
+          lang={other.lang === 'zh' ? 'zh-Hant' : 'en'}
+          hrefLang={other.lang === 'zh' ? 'zh-Hant' : 'en'}
+          aria-label={other.lang === 'zh' ? '切換至中文版本' : 'Switch to English'}
+        >
+          {other.lang === 'zh' ? '中文' : 'EN'}
+        </Link>
+      </div>
       <div className="nav-cta">
         <Link to="/book" data-cta="nav_book">Book a Call</Link>
       </div>
