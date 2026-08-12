@@ -67,6 +67,18 @@ const About = () => (
             The focus is not tool hype. It is whether teams still use AI on real
             work weeks after the session &mdash; real behavior change.
           </p>
+          {/* Sam's two institutional credentials, confirmed 2026-08-07 and
+              approved for bios and collateral, appeared NOWHERE on this site
+              until 2026-08-12 — HKPC and HKCT were named only as clients. They
+              are the strongest third-party authority markers he holds, and the
+              only ones a stranger can verify without taking his word for it.
+              "Registered Speaker", never "Trainer" — the HKPC trainer claim is
+              explicitly banned in memory_sam_profile.md. */}
+          <p>
+            He is a <strong>Registered Speaker</strong> with the Hong Kong
+            Productivity Council and an <strong>Official Trainer Partner</strong> of
+            the Hong Kong College of Technology.
+          </p>
 
           <h2>How It Started</h2>
           <p>
@@ -347,6 +359,26 @@ const About = () => (
               recognizedBy: {
                 '@type': 'CollegeOrUniversity',
                 name: 'The Chinese University of Hong Kong',
+              },
+            }, {
+              '@type': 'EducationalOccupationalCredential',
+              credentialCategory: 'Registered Speaker',
+              name: 'Registered Speaker, Hong Kong Productivity Council',
+              recognizedBy: {
+                '@type': 'Organization',
+                name: 'Hong Kong Productivity Council',
+                alternateName: 'HKPC',
+                url: 'https://www.hkpc.org/',
+              },
+            }, {
+              '@type': 'EducationalOccupationalCredential',
+              credentialCategory: 'Official Trainer Partner',
+              name: 'Official Trainer Partner, Hong Kong College of Technology',
+              recognizedBy: {
+                '@type': 'CollegeOrUniversity',
+                name: 'Hong Kong College of Technology',
+                alternateName: 'HKCT',
+                url: 'https://www.hkct.edu.hk/',
               },
             }],
             hasOccupation: {
