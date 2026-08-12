@@ -179,8 +179,10 @@ const faqItems = [
       + ' session or day, depending on format and depth — contact me'
       + ' for a scoped quote. Half-day awareness workshops, full-day'
       + ' productivity sessions, and multi-week Pioneer Programs are'
-      + ' all available. Some programs may qualify for TVP or other'
-      + ' Hong Kong government funding schemes.',
+      + ' all available. Some programs may qualify for NITTP, which'
+      + ' matches 1:1 up to HKD 250,000 per company per financial'
+      + ' year. TVP, still named in most provider FAQs, closed to new'
+      + ' applications on 31 December 2024.',
   },
   {
     q: 'Are workshops available in Cantonese?',
@@ -584,28 +586,49 @@ const CorporateTraining = () => (
             funding paths are available:
           </p>
           <ul className="corporate-funding-list">
+            {/* Checked against itf.gov.hk and tid.gov.hk on 2026-08-12. The
+                previous version said RTTP subsidises "up to 2/3" — true until
+                31 July 2025, wrong since, and wrong on the programme's name
+                too. Buyers in this section are finance and L&D people who know
+                these schemes; being a year out of date here costs more
+                credibility than it saves effort. */}
+            <li>
+              <strong>NITTP</strong> &mdash; The New Industrialisation
+              and Technology Training Programme, formerly RTTP.
+              Since 1 August 2025 it matches 1:1 rather than 2:1
+              &mdash; half your course fee &mdash; capped at
+              HK$250,000 per company per financial year, one course
+              per trainee per year. The course must be registered
+              with the VTC first.
+            </li>
             <li>
               <strong>BUD Fund</strong> &mdash; Up to HK$7 million
               cumulative per company, with fast-track Easy BUD
-              applications capped at HK$150,000 each, for technology
-              adoption including AI training and implementation
-              projects.
+              applications capped at HK$150,000 each. From 15 June
+              2026 it carries targeted support for projects involving
+              AI elements. Training can sit inside a funded project;
+              a standalone workshop is not eligible on its own.
             </li>
             <li>
-              <strong>Upskill Hong Kong (ERB)</strong> &mdash; The
-              Employees Retraining Board is adding AI application
-              courses to its curriculum for employed workers.
-            </li>
-            <li>
-              <strong>RTTP</strong> &mdash; The Re-industrialisation
-              and Technology Training Programme subsidizes up to 2/3
-              of training costs for technology-related programs.
+              <strong>ERB</strong> &mdash; The Employees Retraining
+              Board is adding AI application courses to its
+              curriculum for employed workers.
             </li>
           </ul>
+          <p>
+            The Technology Voucher Programme is often mentioned in
+            this context and has been closed to new applications
+            since 31 December 2024.
+          </p>
           <p>
             Don&rsquo;t wait for government programs to be fully
             rolled out. Companies that invest in structured AI
             training now will have a 12-18 month head start.
+          </p>
+          <p>
+            <Link to="/blog/how-to-choose-ai-training-hong-kong">
+              Compare all five types of AI training available in Hong Kong →
+            </Link>
           </p>
           <p>
             <Link to="/blog/hk-2026-budget-ai-training">

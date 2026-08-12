@@ -174,7 +174,10 @@ const faqItems = [
       + '視乎形式與深度——歡迎聯絡索取正式報價。'
       + '我們提供半日認知工作坊、全日生產力培訓，以及多週 Pioneer'
       + ' Program 可供選擇。'
-      + '部分計劃可能符合 TVP 或其他香港政府資助資格。',
+      + '部分計劃可能符合 NITTP 資助資格：1:1 配對，'
+      + '每間企業每個財政年度上限 25 萬港元。'
+      + '至於大部分同業仍在提的「科技券」（TVP），'
+      + '已於 2024 年 12 月 31 日停止接受新申請。',
   },
   {
     q: '工作坊有沒有廣東話版本？',
@@ -612,22 +615,36 @@ const ZhCorporateTraining = () => (
             雖然大部分措施針對公眾認知而非企業培訓，
             但有幾個資助途徑可以用：
           </p>
+          {/* Official terms and figures checked at itf.gov.hk/tc and
+              tid.gov.hk on 2026-08-12. This block previously said RTTP funds
+              「最多三分之二」 — correct until 31 July 2025, wrong since, and the
+              programme has been renamed. This is the page that ranks #2 in
+              Hong Kong for 「企業 AI 培訓 香港 工作坊」, so a stale figure here
+              is seen by more buyers than anywhere else on the site. */}
           <ul style={{ marginTop: '1rem', lineHeight: '2' }}>
             <li>
-              <strong>BUD 專項基金</strong> &mdash; 每間企業累計資助上限
-              700 萬港元，「易 BUD」每宗申請最高 15 萬港元，
-              可用於科技採用，包括 AI 培訓及實施項目。
+              <strong>NITTP</strong> &mdash; 新型工業化及科技培訓計劃，
+              前身為 RTTP。2025 年 8 月 1 日起由 2:1 改為
+              <strong>1:1 配對</strong>，即資助一半課程費用，
+              每間企業每個財政年度上限 25 萬港元，
+              每名僱員每年一個課程。課程須先向職業訓練局註冊。
             </li>
             <li>
-              <strong>「學以致用」計劃 (ERB)</strong> &mdash;
+              <strong>BUD 專項基金</strong> &mdash; 每間企業累計資助上限
+              700 萬港元，「易 BUD」每宗申請最高 15 萬港元。
+              2026 年 6 月 15 日起，涉及人工智能元素的項目可獲針對性支援。
+              培訓可以放進已獲資助的項目內，但單獨一場工作坊不符合申請資格。
+            </li>
+            <li>
+              <strong>ERB</strong> &mdash;
               僱員再培訓局正將 AI 應用課程加入
               在職人士課程中。
             </li>
-            <li>
-              <strong>RTTP</strong> &mdash; 再工業化及科技培訓計劃
-              資助最多三分之二的科技相關培訓費用。
-            </li>
           </ul>
+          <p style={{ marginTop: '1rem' }}>
+            經常有人提起的「科技券」（TVP），
+            自 2024 年 12 月 31 日起已停止接受新申請。
+          </p>
           <p style={{ marginTop: '1rem' }}>
             無需等待政府計劃完全推出。現在投資有系統的 AI
             培訓的公司，會有 12-18 個月的領先優勢。

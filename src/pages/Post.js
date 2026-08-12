@@ -22,6 +22,36 @@ import EmailCapture from '../components/EmailCapture/EmailCapture';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 import ScrollReveal from '../components/ScrollReveal';
 
+// FAQ schema for buyer-guide posts. The questions a Hong Kong buyer actually
+// types are funding questions, and every competing guide on page one answers
+// them with schemes that have closed or ratios that changed — so this is the
+// one place the site can be more useful than a better-resourced competitor.
+// Answers must match the post body; if the body changes, change these.
+const FAQ_SCHEMAS = {
+  'how-to-choose-ai-training-hong-kong': [
+    {
+      q: 'Is the Technology Voucher Programme (TVP) still available for AI training in Hong Kong?',
+      a: 'No. TVP stopped accepting new applications after 31 December 2024. Provider guides that still list it as a live 75% subsidy of up to HK$600,000 are out of date.',
+    },
+    {
+      q: 'What government funding covers corporate AI training in Hong Kong in 2026?',
+      a: 'The New Industrialisation and Technology Training Programme (NITTP, formerly RTTP). Since 1 August 2025 it matches on a 1:1 basis rather than 2:1, with a ceiling of HK$250,000 per enterprise per financial year and one course per trainee per financial year. The course must be registered with the VTC first.',
+    },
+    {
+      q: 'Can the BUD Fund pay for AI training?',
+      a: 'Not directly. The BUD Fund has a cumulative ceiling of HK$7 million per enterprise, but it funds branding, upgrading and domestic sales projects. Training can sit inside a funded project; you cannot apply to BUD for a standalone workshop.',
+    },
+    {
+      q: 'How much does corporate AI training cost in Hong Kong?',
+      a: 'University and institutional programmes run HK$5,000-30,000 per person. Global training firms charge HK$2,000-8,000 per person online or HK$15,000-40,000 for in-person workshops. Consulting engagements run HK$50,000-200,000 and up. Practitioner-led training runs HK$15,000-80,000 and up per engagement depending on format and duration.',
+    },
+    {
+      q: 'What should I ask a corporate AI training provider before signing?',
+      a: 'What the facilitator uses AI for in their own work, how they handle data sensitivity and PDPO compliance, what happens after the workshop, whether they can show a case study from your industry, and how they measure success beyond same-day satisfaction scores.',
+    },
+  ],
+};
+
 // HowTo schema for framework posts — improves AI search citability
 const HOWTO_SCHEMAS = {
   'traffic-light-protocol-ai-safety': {
@@ -194,6 +224,20 @@ const Post = () => {
             ],
           })}
         </script>
+        {/* FAQ schema for buyer-guide posts */}
+        {FAQ_SCHEMAS[slug] && (
+          <script type="application/ld+json">
+            {JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: FAQ_SCHEMAS[slug].map((item) => ({
+                '@type': 'Question',
+                name: item.q,
+                acceptedAnswer: { '@type': 'Answer', text: item.a },
+              })),
+            })}
+          </script>
+        )}
         {/* HowTo schema for framework posts */}
         {HOWTO_SCHEMAS[slug] && (
           <script type="application/ld+json">

@@ -6,6 +6,18 @@ The problem isn't finding AI training. It's finding AI training that actually ch
 
 I've delivered over 180 workshops across 70+ organizations and trained 10,000+ professionals on AI adoption. Full disclosure: I sell training too, so discount accordingly. What follows is what I've seen work and fail from the inside, across banking, retail, engineering, education, and tourism -- an honest framework for evaluating your options. Once you have a shortlist, [these five questions](/blog/five-questions-corporate-ai-training-hong-kong) will sort the finalists.
 
+## The Options at a Glance
+
+| Option | Typical cost | Best for | What you give up |
+|---|---|---|---|
+| **University / institutional**<br>HKU, CUHK, HKUST, PolyU, HKPC Academy | HK$5,000-30,000 per person | A credential on someone's CV | Any tie to your own workflows |
+| **Global training firms**<br>NobleProg, Coursera for Business, LinkedIn Learning, Udemy Business | HK$2,000-8,000 online; HK$15,000-40,000 in person | Standardised coverage across offices | Local context, Cantonese delivery, PDPO framing |
+| **Local consulting firms**<br>Boutique AI transformation consultancies | HK$50,000-200,000+ per engagement | Executive alignment and strategy | Sometimes the hands-on training itself |
+| **Government-subsidised**<br>HKPC Academy, HKMA, ERB providers, NITTP-registered courses | Heavily subsidised, sometimes free | Cost-conscious SMEs | Speed and customisation |
+| **Practitioner-led**<br>Independent trainers and small specialist firms — this is where I sit | HK$15,000-80,000+ per engagement | Behaviour change tied to real work | Brand recognition, academic credentials, scale |
+
+Most companies need more than one of these. The rest of this post is how to tell which, and the questions that sort providers inside each category.
+
 ## The Five Types of AI Training Available in Hong Kong
 
 ### 1. University and Institutional Programs
@@ -58,19 +70,33 @@ I've delivered over 180 workshops across 70+ organizations and trained 10,000+ p
 
 ### 4. Government-Subsidized Programs
 
-**Providers:** ERB (Upskill Hong Kong), RTTP, BUD Fund-eligible providers
+**Providers:** HKPC Academy, HKMA, ERB course providers, and any provider running an NITTP-registered course
 
 **Best for:** SMEs looking to offset training costs
 
 **Format:** Varies -- courses, workshops, seminars
 
-**What you get:** Cost savings (RTTP covers up to 2/3 of technology training costs; BUD Fund provides up to HK$150,000 per company). Government programs are expanding AI content in the 2026-27 budget cycle.
+**What you get:** Cost savings, if you read the current rules rather than last year's. See the funding section below, because most of what's written about this online is out of date.
 
 **What you don't get:** Speed or customization. Government programs take time to develop and approve. The curriculum is standardized rather than tailored to your industry. The [HK$50 million AI literacy push](/blog/hk-2026-budget-ai-training) announced in the 2026 Budget targets public awareness, not corporate workflow transformation.
 
 **Cost:** Heavily subsidized, sometimes free
 
 **Best fit:** Budget-conscious SMEs willing to trade customization for cost savings. Less suitable for enterprises that need training tied to specific tools and workflows.
+
+## What Government Funding Actually Covers in 2026
+
+I had two figures wrong in the March version of this post, and most of the competing guides still have them wrong today. Checked against the government's own pages on 12 August 2026:
+
+**The Technology Voucher Programme is closed.** TVP stopped accepting new applications after 31 December 2024. Several provider guides currently ranking for "corporate AI training Hong Kong" still list it as a live 75% subsidy worth up to HK$600,000. It is not. If a vendor offers to "help you apply for TVP", that tells you when they last updated their sales deck.
+
+**RTTP is now NITTP, and the terms got worse.** The New Industrialisation and Technology Training Programme still subsidises Hong Kong enterprises to train staff in advanced technologies, but from 1 August 2025 it matches **1:1**, not 2:1. That is half your course fee, not two-thirds. The ceiling dropped to **HK$250,000 per enterprise per financial year**, down from HK$500,000, and each trainee gets one course per financial year. The course has to be registered with the VTC first, so this shapes your timeline as well as your budget.
+
+**The BUD Fund is not a training scheme, but it just became more useful for AI.** Its cumulative ceiling really is HK$7 million per enterprise -- I previously wrote HK$150,000, which is actually the per-application ceiling for the fast-track "Easy BUD" route, itself raised from HK$100,000 on 15 June 2026. BUD funds branding, upgrading and market development projects, so training can sit inside a funded project but you cannot apply to BUD for a workshop on its own. The part worth knowing: the same 15 June 2026 enhancement added targeted funding support for BUD projects that involve artificial intelligence elements. If AI adoption is already part of a market-development project, that is a live door, and it opened two months ago.
+
+The practical version: if you are a Hong Kong-registered, non-subvented company and your provider will register the course, NITTP halves the bill up to HK$250,000 a year. If AI sits inside a wider BUD project, look at the June enhancement. Everything else you have read about AI training subsidies in Hong Kong is probably describing a scheme that closed.
+
+Sources, so you can check rather than trust me: [NITTP](https://www.itf.gov.hk/en/funding-programmes/promoting-new-industrialisation/new-industrialisation-support-scheme/nittp/index.html) and [TVP](https://tvp.itf.gov.hk/) at the Innovation and Technology Fund, and the [BUD Fund](https://www.tid.gov.hk/en/our_work/support_for_trade_industry/bud.html) at Trade and Industry.
 
 ### 5. Practitioner-Led Training
 
@@ -138,6 +164,4 @@ If I were an L&D manager in Hong Kong with HK$100,000 to spend on AI training th
 
 That's it. No online course subscriptions people won't use. No conference attendance that produces inspiration but not action. Focused investment in the people and structure that will actually drive adoption.
 
----
-
-*I deliver [corporate AI training](/corporate-ai-training-hong-kong) for Hong Kong enterprises focused on lasting behavior change. See my full range of [training services](/services) or connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*
+One more thing, since I sell the last category on that list. If what you need is a credential your staff can put on a CV, go to HKU or HKUST and don't call me. If you need one consistent module delivered to eleven offices in nine countries, a global firm will do it better than I will. Practitioner-led training is the right answer for a narrower case than most of us admit: you have already tried the generic version, and it didn't change what anybody does on a Tuesday.

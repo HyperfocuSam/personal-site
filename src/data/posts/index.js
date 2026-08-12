@@ -631,10 +631,15 @@ const posts = [
   },
   {
     slug: 'how-to-choose-ai-training-hong-kong',
-    title: 'How to Choose Corporate AI Training in Hong Kong (2026 Guide)',
+    title: 'Corporate AI Training in Hong Kong: The Five Options Compared (2026)',
     date: '2026-03-15',
-    excerpt: 'Universities, consulting firms, government programs, global platforms, or practitioner-led training -- an honest framework for evaluating AI training options in Hong Kong.',
-    tags: ['ai-adoption', 'enterprise'],
+    // The funding section was materially wrong (RTTP's ratio, the BUD ceiling)
+    // and TVP has been closed since 31 Dec 2024. Corrected 2026-08-12 against
+    // itf.gov.hk and tid.gov.hk. datePublished stays honest; dateModified is
+    // what tells Google the page is current.
+    dateModified: '2026-08-12',
+    excerpt: 'Universities, global firms, consultancies, government-subsidised courses, or practitioner-led training -- costs, trade-offs, and what Hong Kong government funding actually covers in 2026, now that TVP is closed and RTTP has become NITTP.',
+    tags: ['ai-adoption', 'enterprise', 'corporate-training'],
     type: 'insight',
     image: '/images/blog/how-to-choose-ai-training-hk-cover.webp',
     featured: false,
