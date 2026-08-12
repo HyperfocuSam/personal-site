@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 
 import { Helmet } from 'react-helmet-async';
+import { useSearchParams } from 'react-router-dom';
 
 import Main from '../layouts/Main';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 import posts from '../data/posts';
+import { tagLabel, topicClusters } from '../data/tags';
 import { AuthorCard } from '../components/Blog';
 import FieldNotesList from '../components/Blog/FieldNotesList';
 import EmailCapture from '../components/EmailCapture/EmailCapture';
@@ -34,11 +36,36 @@ const hasChinesePosts = posts.some((p) => p.language === 'zh-Hant');
 
 const Blog = () => {
   const [langFilter, setLangFilter] = useState('all');
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  // The topic is read from the URL only AFTER mount. react-snap prerenders this
+  // page with no query string, so resolving ?topic= during the first client
+  // render would hand React a different tree than the HTML it is hydrating —
+  // exactly the #418 failure this site has already shipped once.
+  const [topic, setTopic] = useState(null);
+  useEffect(() => {
+    setTopic(searchParams.get('topic'));
+  }, [searchParams]);
 
   // Filter posts by language
-  const filteredPosts = langFilter === 'all'
+  const inLanguage = langFilter === 'all'
     ? posts
     : posts.filter((p) => (p.language || 'en') === langFilter);
+
+  // Clusters are counted against the language-filtered set, so the number on a
+  // chip always matches the number of entries clicking it produces.
+  const clusters = useMemo(() => topicClusters(inLanguage), [inLanguage]);
+
+  const activeTopic = clusters.some((c) => c.tag === topic) ? topic : null;
+  const filteredPosts = activeTopic
+    ? inLanguage.filter((p) => (p.tags || []).includes(activeTopic))
+    : inLanguage;
+
+  const selectTopic = (tag) => {
+    const next = new URLSearchParams(searchParams);
+    if (tag) next.set('topic', tag); else next.delete('topic');
+    setSearchParams(next, { replace: true });
+  };
 
   // Always sort newest-first so the listing reflects recency, not array order
   const sortedPosts = [...filteredPosts].sort((a, b) => {
@@ -75,7 +102,10 @@ const Blog = () => {
             description: 'AI adoption insights, workshop learnings, and the human side of technology.',
             mainEntity: {
               '@type': 'ItemList',
-              itemListElement: filteredPosts.slice(0, 10).map((post, i) => ({
+              // The language-filtered set, not the topic-filtered one: the
+              // schema should describe the page a crawler was served, and the
+              // topic chips only ever narrow it after a click.
+              itemListElement: inLanguage.slice(0, 10).map((post, i) => ({
                 '@type': 'ListItem',
                 position: i + 1,
                 url: `${SITE_URL}/blog/${post.slug}`,
@@ -115,6 +145,34 @@ const Blog = () => {
                     {label}
                   </button>
                 ))}
+              </div>
+            )}
+
+            {/* Topic clusters — 98 posts were one flat reverse-chronological
+                list, and the 108 tags behind them were not clickable anywhere
+                on the site. */}
+            {clusters.length > 0 && (
+              <div className="blog-topics">
+                <span className="blog-topics__label fn-stamp">Browse by topic</span>
+                <div className="blog-topics__chips">
+                  <button
+                    type="button"
+                    onClick={() => selectTopic(null)}
+                    className={`blog-topic-chip${activeTopic ? '' : ' blog-topic-chip--active'}`}
+                  >
+                    {`All (${inLanguage.length})`}
+                  </button>
+                  {clusters.map(({ tag, count }) => (
+                    <button
+                      key={tag}
+                      type="button"
+                      onClick={() => selectTopic(activeTopic === tag ? null : tag)}
+                      className={`blog-topic-chip${activeTopic === tag ? ' blog-topic-chip--active' : ''}`}
+                    >
+                      {`${tagLabel(tag, 'en')} (${count})`}
+                    </button>
+                  ))}
+                </div>
               </div>
             )}
 

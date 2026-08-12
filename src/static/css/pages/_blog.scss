@@ -57,6 +57,62 @@
   }
 }
 
+/* Topic clusters — the 108 tags behind these 98 posts were never clickable */
+.blog-topics {
+  border-bottom: 1px solid _palette(border-subtle);
+  margin: 0 0 1.75rem;
+  padding-bottom: 0.9rem;
+
+  &__label {
+    color: _palette(text-secondary);
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  &__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+}
+
+.blog-topic-chip {
+  background: transparent;
+  border: 1px solid _palette(border-subtle);
+  border-radius: map-get($radius, sm);
+  color: _palette(text-body);
+  cursor: pointer;
+  font-family: _font(family);
+  font-size: 0.72rem;
+  height: auto;
+  line-height: 1.3;
+  padding: 0.32rem 0.6rem;
+  transition: background _duration(fast) $ease-out, color _duration(fast) $ease-out;
+
+  &:hover,
+  &:focus-visible {
+    background: _palette(surface-sunken);
+    border-color: _palette(ink);
+    color: _palette(ink);
+  }
+
+  // Ink, not signal red: red is match day on Sam's own surfaces (workshop,
+  // sharing, event), never a UI control. This also matches the language filter
+  // sitting directly above it.
+  &--active {
+    background: _palette(ink);
+    border-color: _palette(ink);
+    color: _palette(surface-base);
+
+    &:hover,
+    &:focus-visible {
+      background: _palette(ink);
+      border-color: _palette(ink);
+      color: _palette(surface-base);
+    }
+  }
+}
+
 .blog-log {
   min-width: 0;
 }

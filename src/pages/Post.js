@@ -94,16 +94,29 @@ const Post = () => {
   const postIndex = posts.findIndex((p) => p.slug === slug);
   const post = posts[postIndex];
 
-  // Get previous and next posts for navigation
-  const prevPost = postIndex < posts.length - 1 ? posts[postIndex + 1] : null;
-  const nextPost = postIndex > 0 ? posts[postIndex - 1] : null;
+  // Previous/next walk the posts of the SAME language, not raw array positions.
+  // The array interleaves English and Chinese by date, so index arithmetic sent
+  // a Chinese reader to an English post roughly every other click — the same
+  // defect the related-posts list carried.
+  const siblings = useMemo(() => {
+    if (!post) return [];
+    return posts.filter((p) => (p.language || 'en') === (post.language || 'en'));
+  }, [post]);
+  const siblingIndex = siblings.findIndex((p) => p.slug === slug);
+  const prevPost = siblingIndex >= 0 && siblingIndex < siblings.length - 1
+    ? siblings[siblingIndex + 1]
+    : null;
+  const nextPost = siblingIndex > 0 ? siblings[siblingIndex - 1] : null;
 
   const readingTime = useMemo(() => calculateReadingTime(markdown), [markdown]);
   const shouldShowTrainerBanner = useMemo(() => {
-    if (!post || !post.tags) {
+    if (!post) {
       return false;
     }
-    return post.tags.some((tag) => ['workshop', 'case-study'].includes(tag));
+    // `case-study` is a type, not a tag, since the vocabulary normalisation —
+    // reading tags alone would have silently hidden this banner on all 23 case
+    // studies, the posts most likely to attract a trainer.
+    return post.type === 'case-study' || (post.tags || []).includes('workshop');
   }, [post]);
 
   if (!post) {
@@ -300,7 +313,7 @@ const Post = () => {
             </ScrollReveal>
 
             <ScrollReveal variant="fade-up">
-              <ServiceCta tags={post.tags} />
+              <ServiceCta tags={post.tags} type={post.type} language={postLang} />
             </ScrollReveal>
 
             {shouldShowTrainerBanner && (
@@ -333,7 +346,7 @@ const Post = () => {
         <section className="section-base section-padding">
           <div className="content-standard">
             <ScrollReveal variant="fade-up-long" stagger={120}>
-              <RelatedPosts currentSlug={slug} currentTags={post.tags} />
+              <RelatedPosts currentSlug={slug} currentTags={post.tags} language={postLang} />
             </ScrollReveal>
 
             <nav className="post-navigation">
