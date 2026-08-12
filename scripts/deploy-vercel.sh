@@ -42,8 +42,18 @@ fi
 [ "$fail" -eq 0 ] || { echo "REFUSING TO DEPLOY." >&2; exit 1; }
 echo "✓ $routes routes prerendered"
 
-# Vercel reads vercel.json from the deployment root, which is build/.
+# Vercel reads BOTH vercel.json and the project link from the deployment root,
+# which is build/ — and `npm run build` rimrafs build/ every time. Without the
+# link written here the CLI sees an unlinked directory and silently creates a
+# BRAND NEW project named after the folder ("build"), deploying there instead.
+# That happened on 2026-08-12: the domain stayed pinned to an older deployment
+# on the real project while three --prod deploys landed on the decoy, so the
+# live site served pre-consolidation content with none of the redirects.
 cp vercel.json build/vercel.json
-trap 'rm -f build/vercel.json' EXIT
+mkdir -p build/.vercel
+cat > build/.vercel/project.json <<'JSON'
+{"projectId":"prj_LqDvQEsJZ5TbghrByKKat7dGyNpv","orgId":"team_HfeGEAmmbft7JYl4UZ4ILErY","projectName":"hyperfocusam"}
+JSON
+trap 'rm -rf build/vercel.json build/.vercel' EXIT
 
 npx vercel deploy build --yes "$@"
