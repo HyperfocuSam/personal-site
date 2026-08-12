@@ -399,7 +399,11 @@
   }
 }
 
-#corporate-training.field-notes-content {
+// Both corporate landers. #zh-corporate-training was NOT in this selector until
+// 2026-08-12, so the global `.stats-floating { margin: -2.5rem auto 0 }` still
+// applied there and the card sat on top of the Chinese H1.
+#corporate-training.field-notes-content,
+#zh-corporate-training.field-notes-content {
   // Hero: room for subtitle + CTA so the floating stats box cannot clip them.
   .page-hero {
     overflow: visible;

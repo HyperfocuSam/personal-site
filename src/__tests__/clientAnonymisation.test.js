@@ -23,6 +23,10 @@ const root = path.resolve(__dirname, '..', '..');
 //   ZhCorporateTraining FAQ — 中銀, on the page that ranks #2     (fixed 2026-08-12)
 //
 // A rule nothing enforces decays. This is the enforcement.
+// Latin AND Chinese spellings. The first version of this list only knew the
+// Latin ones, and 嘉頓 — Garden's Chinese name — was sitting on the Chinese
+// homepage's proof line while every English page said "a Hong Kong food
+// manufacturer". Found 2026-08-12, by looking at the rendered page.
 const FORBIDDEN = [
   'Bank of China',
   'BOCHK',
@@ -33,6 +37,7 @@ const FORBIDDEN = [
   'Publicis Groupe',
   'Paly Adventures',
   'Bachar Investments',
+  '嘉頓',
 ];
 
 // The ONE deliberate exception, Sam's decision of 2026-08-11: the client logo

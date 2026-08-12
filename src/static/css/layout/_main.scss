@@ -17,10 +17,19 @@
     padding-right: 1.5rem;
   }
 
-  // Post/page header
+  // Post/page header — full-bleed, so it opts out of the horizontal gutter the
+  // rule above gives every other child.
+  //
+  // This used the `padding: 0` shorthand, which also zeroed the VERTICAL
+  // padding `.page-hero` sets on itself (4.5rem 0 3.75rem). Because
+  // `#main > article > header` outranks `.page-hero` on specificity, every page
+  // hero on the site rendered with padding-top: 0 and its H1 sat flush against
+  // the bottom edge of the fixed 64px header, in both languages. Long-standing;
+  // found 2026-08-12 by looking at the rendered page rather than the HTML.
   > article > header {
     max-width: 100%;
-    padding: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 

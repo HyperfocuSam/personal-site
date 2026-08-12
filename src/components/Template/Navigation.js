@@ -28,7 +28,11 @@ const Navigation = () => {
   };
 
   return (
-    <header id="header" className={scrolled ? 'scrolled' : ''} role="banner">
+    <header
+      id="header"
+      className={`${scrolled ? 'scrolled' : ''}${isZh ? ' header--zh' : ''}`.trim()}
+      role="banner"
+    >
       <div className="index-link">
         {routes
           .filter((l) => l.index)

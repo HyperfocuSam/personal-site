@@ -312,6 +312,25 @@ const ZhCorporateTraining = () => (
               實用為本的工作坊，把團隊對 AI 的好奇心，變成日常真正用得著的習慣。
             </p>
           </div>
+          {/* The Chinese lander had NO booking CTA in its hero while the English
+              twin carried two — on the page that ranks #2 in Hong Kong for the
+              commercial query. Its absence is also why the floating stats card
+              landed on the H1: the card is pulled up 2.5rem to sit over the
+              hero's lower edge, and without this row there was no lower edge. */}
+          <p className="corporate-hero-cta">
+            <Link to="/zh/book" className="button">
+              預約免費諮詢通話
+            </Link>
+            {' '}
+            <a
+              href="https://wa.me/85264315177"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button-secondary"
+            >
+              WhatsApp 我
+            </a>
+          </p>
         </div>
       </header>
 

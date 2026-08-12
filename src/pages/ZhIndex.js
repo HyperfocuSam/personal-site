@@ -50,12 +50,18 @@ const ZhIndex = () => (
       <section className="section-sunken section-padding">
         <div className="content-wide">
           <h3>實績，有數據為證</h3>
+          {/* The food manufacturer's Chinese name was live here while every
+              English page said "a Hong Kong food manufacturer" — Sam's
+              2026-07-12 ruling covers both spellings, and the guard test only
+              knew the Latin one until now. */}
           <p>
-            周大福 5 隊在 3 小時內交付完整市場方案 · 嘉頓 6 個部門與管理層先後回訪 · 一個 400 人培訓日發展成 24 個月的 AI 學習社群
+            周大福 5 隊在 3 小時內交付完整市場方案 · 一間香港食品製造商 6 個部門與管理層先後回訪 · 一個 400 人培訓日發展成 24 個月的 AI 學習社群
           </p>
           <p>
+            {/* Pointed at the English /case-notes until 2026-08-12, hence the
+                「（英文版）」 note. There is a Chinese page now. */}
             <Link to="/zh/case-notes" className="button-ghost">
-              查看完整實績記錄（英文版）&rarr;
+              查看完整實績記錄 &rarr;
             </Link>
           </p>
         </div>

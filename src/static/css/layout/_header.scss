@@ -163,7 +163,14 @@ body {
     margin-right: 1.5rem;
 
     a {
-      display: inline-block;
+      // #header sets line-height to the 64px nav height so the text links centre
+      // themselves. This is a padded BUTTON, so it inherited a 64px line box and
+      // rendered 79px tall inside a 64px header — overflowing 8px above and 7px
+      // below, in both languages, for as long as the button has existed.
+      // Caught on 2026-08-12 by finally looking at the rendered page.
+      line-height: 1;
+      display: inline-flex;
+      align-items: center;
       background-color: _palette(ink);
       border: 1px solid _palette(ink);
       color: _palette(surface-base);
@@ -171,7 +178,7 @@ body {
       font-size: 0.68rem;
       font-weight: _font(weight-bold);
       letter-spacing: _font(kerning-meta);
-      padding: 0.6em 1.5em;
+      padding: 0.75em 1.5em;
       border-radius: map-get($radius, sm);
       text-transform: uppercase;
       transition: background-color _duration(base) $ease-out,
@@ -181,6 +188,20 @@ body {
         background-color: _palette(surface-raised);
         color: _palette(ink);
       }
+    }
+  }
+
+  // Chinese header. `#header a` forces uppercase + kerning-meta tracking, which
+  // is right for Latin small-caps navigation and wrong for CJK: uppercase does
+  // nothing to a Han glyph, and 0.08em tracking adds a phantom trailing space
+  // after the last character. .nav-lang already carried this fix for the 中文
+  // toggle; the nav links and the Book CTA became Chinese on 2026-08-12 and
+  // needed the same treatment.
+  &.header--zh {
+    .links a,
+    .nav-cta a {
+      letter-spacing: 0.02em;
+      text-transform: none;
     }
   }
 
