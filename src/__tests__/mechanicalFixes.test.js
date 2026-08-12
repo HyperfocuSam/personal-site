@@ -6,11 +6,9 @@ import '@testing-library/jest-dom';
 import fs from 'fs';
 import path from 'path';
 import React from 'react';
-import { cleanup, render, screen } from '@testing-library/react';
+import { cleanup, render } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 
-import Course from '../components/Resume/Courses/Course';
-import SkillBar from '../components/Resume/Skills/SkillBar';
 import Main from '../layouts/Main';
 
 const root = path.resolve(__dirname, '..', '..');
@@ -29,6 +27,10 @@ afterEach(() => {
   consoleError.mockRestore();
 });
 
+// Two tests were removed with the components they guarded (Resume/Courses/Course
+// and Resume/Skills/SkillBar): /resume and /projects were retired in Phase C
+// after 0 and 1 pageviews in 90 days and zero inbound links. The assertions had
+// no subject left — this is not a coverage reduction.
 describe('S1 verified bug regressions', () => {
   it('keeps the email capture heading paper-colored inside Field Notes pages', () => {
     const styles = read('src/static/css/components/_email-capture.scss');
@@ -52,28 +54,6 @@ describe('S1 verified bug regressions', () => {
     expect(styles).toMatch(/&__meta\s*\{[\s\S]*?display:\s*inline-flex[\s\S]*?flex-wrap:\s*wrap/);
     expect(styles).toMatch(/&__badge\s*\{[\s\S]*?margin-left:\s*0/);
     expect(fieldNotesStyles).toMatch(/\.episode-card__meta\.fn-stamp\s*\{[\s\S]*?display:\s*inline-flex/);
-  });
-
-  it('renders course titles as the course entries instead of HIST labels', () => {
-    render(<Course data={{ title: 'Records Management & Archives', number: 'HIST', link: '' }} />);
-    expect(screen.getByText('Records Management & Archives')).toBeInTheDocument();
-    expect(screen.queryByText('HIST:')).not.toBeInTheDocument();
-  });
-
-  it('leaves skill colors to the Field Notes stylesheet', () => {
-    const { container } = render(
-      <SkillBar
-        data={{ title: 'Corporate AI Training', competency: 5, category: ['AI Training'] }}
-        categories={[{ name: 'AI Training', color: '#37b1f5' }]}
-      />,
-    );
-    expect(container.querySelector('.skillbar-title')).not.toHaveStyle({ background: '#37b1f5' });
-    expect(container.querySelector('.skillbar-bar')).not.toHaveStyle({ background: '#37b1f5' });
-
-    const styles = read('src/static/css/pages/_resume.scss');
-    expect(styles).toMatch(/\.skillbar\s*\{[\s\S]*?background:\s*_palette\(ink\)/);
-    expect(styles).toMatch(/\.skillbar-title[\s\S]*?background:\s*_palette\(ink\)/);
-    expect(styles).toMatch(/\.skillbar-bar[\s\S]*?background:\s*_palette\((verification|highlighter)\)/);
   });
 
   it('serves all Latin font families from stable public woff2 URLs', () => {

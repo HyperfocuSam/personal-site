@@ -1,6 +1,6 @@
 # I Rebuilt My Entire SEO in One Day. Here's What Actually Moved the Needle.
 
-My website had been live for months. It had 30+ blog posts, case studies across [banking](/blog/bochk-banking-ai-training), [retail](/blog/playmates-toys-ai-training), [education](/blog/hkct-ai-education-workshop), and [engineering](/blog/arup-ai-lunch-learn). Decent traffic. Good content.
+My website had been live for months. It had 30+ blog posts, case studies across [banking](/blog/1500-banking-professionals-ai-adoption), [retail](/blog/toy-company-takes-ai-seriously), [education](/blog/hkct-ai-education-workshop), and [engineering](/blog/arup-ai-lunch-learn). Decent traffic. Good content.
 
 It also had zero internal links. No structured data. No schema markup. A meta description that called me a "private tutor." And a sitemap that mangled apostrophes in every title.
 

@@ -32,17 +32,13 @@ const CorporateTraining = lazyRoute(() => import('./pages/CorporateTraining'));
 const TrainTheTrainer = lazyRoute(() => import('./pages/TrainTheTrainer'));
 const Blog = lazyRoute(() => import('./pages/Blog'));
 const CaseNotes = lazyRoute(() => import('./pages/CaseNotes'));
-const Clients = lazyRoute(() => import('./pages/Clients'));
 const Contact = lazyRoute(() => import('./pages/Contact'));
 const Index = lazyRoute(() => import('./pages/Index'));
 const Media = lazyRoute(() => import('./pages/Media'));
 const NotFound = lazyRoute(() => import('./pages/NotFound'));
 const Post = lazyRoute(() => import('./pages/Post'));
-const Projects = lazyRoute(() => import('./pages/Projects'));
-const Resume = lazyRoute(() => import('./pages/Resume'));
 const Services = lazyRoute(() => import('./pages/Services'));
 const Speaking = lazyRoute(() => import('./pages/Speaking'));
-const Testimonials = lazyRoute(() => import('./pages/Testimonials'));
 
 // Chinese (Traditional) pages
 const ZhIndex = lazyRoute(() => import('./pages/ZhIndex'));
@@ -68,7 +64,6 @@ const exactRoutes = {
   '/about': About,
   '/blog': Blog,
   '/case-notes': CaseNotes,
-  '/clients': Clients,
   '/book': Book,
   '/contact': Contact,
   '/corporate-ai-training-hong-kong': CorporateTraining,
@@ -82,11 +77,8 @@ const exactRoutes = {
   '/zh/media': ZhMedia,
   '/zh/services': ZhServices,
   '/zh/corporate-ai-training-hong-kong': ZhCorporateTraining,
-  '/projects': Projects,
-  '/resume': Resume,
   '/services': Services,
   '/speaking': Speaking,
-  '/testimonials': Testimonials,
 };
 
 export const preloadRouteChunk = (rawPathname) => {
@@ -107,7 +99,6 @@ const App = () => (
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<Post />} />
         <Route path="/case-notes" element={<CaseNotes />} />
-        <Route path="/clients" element={<Clients />} />
         <Route path="/book" element={<Book />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/corporate-ai-training-hong-kong" element={<CorporateTraining />} />
@@ -121,11 +112,8 @@ const App = () => (
         <Route path="/zh/media" element={<ZhMedia />} />
         <Route path="/zh/services" element={<ZhServices />} />
         <Route path="/zh/corporate-ai-training-hong-kong" element={<ZhCorporateTraining />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/resume" element={<Resume />} />
         <Route path="/services" element={<Services />} />
         <Route path="/speaking" element={<Speaking />} />
-        <Route path="/testimonials" element={<Testimonials />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Suspense>

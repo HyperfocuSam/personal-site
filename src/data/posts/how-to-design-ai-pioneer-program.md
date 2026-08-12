@@ -37,7 +37,7 @@ Here's how I designed the program's arc. Each session built on the previous one,
 
 Three design decisions made this program different from the dozens of workshops I've delivered:
 
-**1. The Wednesday rhythm.** Meeting weekly at the same time created accountability. Participants knew they'd need to show progress. When I [trained 1,500 bankers across 13 countries at a major Hong Kong bank](/blog/bochk-banking-ai-training), the scale was impressive but the format was one-and-done. The company program proved that consistency beats intensity.
+**1. The Wednesday rhythm.** Meeting weekly at the same time created accountability. Participants knew they'd need to show progress. When I [trained 1,500 bankers across 13 countries at a major Hong Kong bank](/blog/1500-banking-professionals-ai-adoption), the scale was impressive but the format was one-and-done. The company program proved that consistency beats intensity.
 
 **2. Enterprise-grade constraints.** Restricting to Copilot within their Microsoft tenant sounds limiting, but it actually accelerated adoption. No one had to worry about "am I allowed to use this?" The security question was answered before we started. Their IT lead, who had been skeptical after a failed AI vision project years earlier, became a supporter once he saw we weren't asking for new licenses or infrastructure.
 

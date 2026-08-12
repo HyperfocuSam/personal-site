@@ -17,7 +17,7 @@ const servicesZh = [
     ctaLink: 'https://adaptig.ai',
     external: true,
     relatedPosts: [
-      'bochk-banking-ai-training',
+      '1500-banking-professionals-ai-adoption',
       'ctf-ai-design-thinking-workshop-2026',
     ],
   },
@@ -102,7 +102,7 @@ const servicesZh = [
     external: false,
     relatedPosts: [
       'ctf-ai-design-thinking-workshop-2026',
-      'bochk-banking-ai-training',
+      '1500-banking-professionals-ai-adoption',
     ],
   },
 ];

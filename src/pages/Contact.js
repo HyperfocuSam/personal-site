@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 import { Helmet } from 'react-helmet-async';
 
@@ -74,9 +74,7 @@ const Contact = () => {
         <header className="page-hero">
           <div className="content-narrow">
             <div className="title">
-              <h1>
-                <Link to="/contact">Contact</Link>
-              </h1>
+              <h1>Contact</h1>
               <p>Let&apos;s find the right next step</p>
             </div>
           </div>

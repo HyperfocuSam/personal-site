@@ -15,7 +15,7 @@ I don't have a clean study to cite for this — it's pattern recognition from ru
 
 ## Where I Got the Ratio Wrong
 
-I've been teaching the [70/30 human-AI split](/blog/bochk-banking-ai-training) for over a year now. The idea: use AI for the repetitive structural parts (30%) and keep human judgment for the rest (70%). For experienced professionals, this works. It accelerates without undermining.
+I've been teaching the [70/30 human-AI split](/blog/1500-banking-professionals-ai-adoption) for over a year now. The idea: use AI for the repetitive structural parts (30%) and keep human judgment for the rest (70%). For experienced professionals, this works. It accelerates without undermining.
 
 But I've been applying the same ratio to learners, and I think that's a mistake. A junior analyst who uses AI to draft 30% of their first-ever report is skipping the part where they learn what makes a report coherent. A design intern who generates concepts with AI never develops the visual intuition to evaluate what's actually good.
 

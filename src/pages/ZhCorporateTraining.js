@@ -66,7 +66,7 @@ const industries = [
     clients: '一間大型香港銀行、匯豐',
     example:
       '1,530 位參加者遍及 13 個國家。滿意度 9.2/10。',
-    caseStudy: '/blog/bochk-banking-ai-training',
+    caseStudy: '/blog/1500-banking-professionals-ai-adoption',
   },
   {
     name: '零售及奢侈品',
@@ -80,7 +80,7 @@ const industries = [
     clients: '奧雅納、一間香港公用事業公司',
     example:
       '為工程專業人士設計的 AI 午間講座形式。',
-    caseStudy: '/blog/clp-ai-agent-automation',
+    caseStudy: '/blog/utility-company-seven-levels-ai-agents',
   },
   {
     name: '教育',
@@ -111,7 +111,7 @@ const caseStudies = [
     metric: '1,530 位參加者遍及 13 個國家',
     insight: '開發了「交通燈協議」處理數據敏感度。'
       + '用了頭 20 分鐘講解安全，反而加快了採用。',
-    link: '/blog/bochk-banking-ai-training',
+    link: '/blog/1500-banking-professionals-ai-adoption',
   },
   {
     title: '一間香港食品製造商 — AI Pioneer Program',
@@ -156,7 +156,7 @@ const methodologies = [
     description: '人類保留 70% 的思考和決策主導權。'
       + 'AI 負責 30% — 初稿、資料綜合、格式化。'
       + '既防止過度依賴，又最大化生產力提升。',
-    link: '/blog/bochk-banking-ai-training',
+    link: '/blog/1500-banking-professionals-ai-adoption',
   },
   {
     name: 'AI 成熟度模型',
@@ -441,7 +441,7 @@ const ZhCorporateTraining = () => (
             ))}
           </div>
           <div style={{ textAlign: 'center', marginTop: '2rem' }}>
-            <Link to="/clients" className="button button--outline">
+            <Link to="/case-notes" className="button button--outline">
               查看所有客戶
             </Link>
           </div>
@@ -530,7 +530,7 @@ const ZhCorporateTraining = () => (
             </footer>
           </blockquote>
           <Link
-            to="/testimonials"
+            to="/case-notes#voices-heading"
             className="button button--outline"
             style={{ marginTop: '1.5rem' }}
           >

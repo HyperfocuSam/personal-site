@@ -71,7 +71,7 @@ const industries = [
     clients: 'a major Hong Kong bank, HSBC',
     example:
       '1,530 participants across 13 countries. 9.2/10 satisfaction.',
-    caseStudy: '/blog/bochk-banking-ai-training',
+    caseStudy: '/blog/1500-banking-professionals-ai-adoption',
   },
   {
     name: 'Retail & Luxury',
@@ -85,7 +85,7 @@ const industries = [
     clients: 'Arup, a major Hong Kong utility',
     example:
       'AI lunch-and-learn format for engineering professionals.',
-    caseStudy: '/blog/clp-ai-agent-automation',
+    caseStudy: '/blog/utility-company-seven-levels-ai-agents',
   },
   {
     name: 'Education',
@@ -116,7 +116,7 @@ const caseStudies = [
     metric: '1,530 participants across 13 countries',
     insight: 'Developed the Traffic Light Protocol for data sensitivity.'
       + ' Spending the first 20 minutes on safety accelerated adoption.',
-    link: '/blog/bochk-banking-ai-training',
+    link: '/blog/1500-banking-professionals-ai-adoption',
   },
   {
     title: 'the food manufacturer — AI Pioneer Program',
@@ -161,7 +161,7 @@ const methodologies = [
     description: 'Humans retain 70% ownership of thinking and decisions.'
       + ' AI handles 30% — first drafts, data synthesis, formatting.'
       + ' Prevents over-reliance while maximizing productivity gains.',
-    link: '/blog/bochk-banking-ai-training',
+    link: '/blog/1500-banking-professionals-ai-adoption',
   },
   {
     name: 'AI Maturity Model',
@@ -226,13 +226,15 @@ const faqItems = [
 const CorporateTraining = () => (
   <Main
     title="Corporate AI Training - Hong Kong"
+    // No longer opens with the same sentence as /services — that duplication
+    // had the hub and this lander competing for one query. This page leads on
+    // enterprise delivery and the receipts; /services leads on the three
+    // audiences. (The old line also read "...satisfaction. a major Hong Kong
+    // bank, HSBC..." — a sentence left mid-air by the anonymisation pass.)
     description={
-      'Corporate AI training and workshops in Hong Kong.'
-      + ' Enterprise workshops, prompt engineering training,'
-      + ' and AI adoption programs delivered in English and'
-      + ' Cantonese. 10,000+ professionals trained, 9.2/10'
-      + ' satisfaction. a major Hong Kong bank, HSBC, Chow Tai Fook,'
-      + ' a major Hong Kong utility, and 70+ organizations served.'
+      'Enterprise AI workshops in Hong Kong, delivered in English and'
+      + ' Cantonese. 10,000+ professionals trained across 70+ organizations'
+      + ' including HSBC and Chow Tai Fook, at 9.2/10 satisfaction.'
     }
     canonicalUrl={`${SITE_URL}/corporate-ai-training-hong-kong`}
     ogTitle="Corporate AI Training in Hong Kong | Sam Wong"
@@ -265,9 +267,8 @@ const CorporateTraining = () => (
           url: `${SITE_URL}/corporate-ai-training-hong-kong`,
           image: `${SITE_URL}/images/Sam.png`,
           description:
-            'Corporate AI training and workshops in Hong Kong.'
-            + ' Enterprise workshops, coaching, and Train-the-Trainer'
-            + ' programs delivered in English and Cantonese.',
+            'Enterprise AI workshops and adoption programs for Hong Kong'
+            + ' companies, delivered on site in English and Cantonese.',
           areaServed: ['Hong Kong', 'Asia-Pacific', 'Global'],
           serviceType: [
             'Corporate AI Training',
@@ -481,7 +482,7 @@ const CorporateTraining = () => (
             ))}
           </div>
           <p className="corporate-inline-link">
-            <Link to="/clients">View all clients →</Link>
+            <Link to="/case-notes">See the delivered engagements →</Link>
           </p>
 
           <h2 className="corporate-section-subhead">Featured Case Studies</h2>
@@ -563,7 +564,7 @@ const CorporateTraining = () => (
             </footer>
           </blockquote>
           <p className="corporate-inline-link">
-            <Link to="/testimonials">Read more testimonials →</Link>
+            <Link to="/case-notes#voices-heading">Read more of what people said →</Link>
           </p>
         </div>
       </section>

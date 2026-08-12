@@ -36,7 +36,7 @@ I deliberately exclude tools that are:
 
 **1. Too volatile.** If a tool changes its pricing or features monthly, I don't build a workshop around it. My toolkit includes tools that have been stable for at least 6 months.
 
-**2. Not enterprise-safe.** Any tool that doesn't have clear data handling policies gets excluded. When I'm working with [banking professionals at scale](/blog/bochk-banking-ai-training), I can't afford ambiguity about where data goes.
+**2. Not enterprise-safe.** Any tool that doesn't have clear data handling policies gets excluded. When I'm working with [banking professionals at scale](/blog/1500-banking-professionals-ai-adoption), I can't afford ambiguity about where data goes.
 
 **3. Redundant.** I'd rather teach 3 tools deeply than 10 tools superficially. Most workflows can be covered with Copilot + one general-purpose LLM + one specialized tool.
 

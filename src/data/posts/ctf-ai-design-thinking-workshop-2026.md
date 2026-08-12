@@ -1,6 +1,6 @@
 # Training the World's Largest Jewelry Retailer on AI x Design Thinking
 
-Last week marked my [third engagement training](/blog/garden-ai-training-three-batches) Chow Tai Fook's design team on AI adoption. For context, Chow Tai Fook operates 5,900+ retail outlets worldwide with annual sales exceeding HK$100 billion. When a company of this scale invests in AI training, they're not looking for generic tutorials - they want [workflows that integrate into existing processes](/blog/why-ai-training-doesnt-stick).
+Last week marked my [third engagement training](/blog/food-company-ai-workshops-three-batches) Chow Tai Fook's design team on AI adoption. For context, Chow Tai Fook operates 5,900+ retail outlets worldwide with annual sales exceeding HK$100 billion. When a company of this scale invests in AI training, they're not looking for generic tutorials - they want [workflows that integrate into existing processes](/blog/why-ai-training-doesnt-stick).
 
 ![Workshop team at Chow Tai Fook](/images/blog/ctf-workshop-2026.jpeg)
 

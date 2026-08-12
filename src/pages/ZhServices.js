@@ -95,9 +95,7 @@ const ZhServices = () => {
         <header className="page-hero">
           <div className="content-standard">
             <div className="title">
-              <h1>
-                <Link to="/zh/services">AI 培訓及工作坊服務</Link>
-              </h1>
+              <h1>AI 培訓及工作坊服務</h1>
               <p>香港及亞太區企業 AI 培訓</p>
             </div>
             <div className="services-anchor-pills">

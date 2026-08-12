@@ -32,9 +32,7 @@ const ZhAbout = () => (
       <header className="page-hero">
         <div className="content-narrow">
           <div className="title">
-            <h1>
-              <Link to="/zh/about">關於我</Link>
-            </h1>
+            <h1>關於我</h1>
             <p>為何我從事這份工作，以及我如何走到今天。</p>
           </div>
         </div>
@@ -119,11 +117,6 @@ const ZhAbout = () => (
               {' — 帶領策略性 AI 轉型和團隊能力發展。'}
             </li>
           </ul>
-          <p>
-            {'你可以在 '}
-            <Link to="/projects">Projects</Link>
-            {' 看到完整時間線。'}
-          </p>
         </div>
       </section>
 

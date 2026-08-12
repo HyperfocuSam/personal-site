@@ -1,3 +1,6 @@
+// /book is deliberately NOT here. The header already carries a "Book a Call"
+// button (Navigation.js); listing it in the nav as well asked for the same
+// action twice within the first 400px, competing with itself.
 const routes = [
   {
     index: true,
@@ -19,10 +22,6 @@ const routes = [
   {
     label: 'Blog',
     path: '/blog',
-  },
-  {
-    label: 'Book',
-    path: '/book',
   },
   {
     label: 'Contact',

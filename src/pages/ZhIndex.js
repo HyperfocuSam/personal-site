@@ -36,9 +36,7 @@ const ZhIndex = () => (
       <header className="page-hero">
         <div className="content-standard">
           <div className="title">
-            <h1>
-              <Link to="/zh">你好。</Link>
-            </h1>
+            <h1>你好。</h1>
             <p>
               我幫機構和專業人士把 AI 真正用進日常工作。
               培訓、一對一輔導、培訓師發展——你要找的，都在這裡。

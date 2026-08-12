@@ -71,8 +71,7 @@
   "reactSnap": {
     "include": [
       "/",
-      "/resume",
-      "/zh/blog",
+        "/zh/blog",
       "/get-started",
       "/case-notes/",
       "/ai-train-the-trainer-hong-kong"

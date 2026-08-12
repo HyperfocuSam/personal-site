@@ -64,7 +64,7 @@ The competitive landscape is accelerating. Manus just launched local computer ac
 
 But the pattern is clear: every major AI company is converging on the same insight — agents that live on your computer, working with your files, operating your tools. The question for most people is which one matches how they actually work — full stop.
 
-I train companies on this for a living — including [mapping out the levels of AI agents with a utility like a major Hong Kong utility](/blog/clp-ai-agent-automation). The ones that succeed aren't the ones with the fanciest tools. They're the ones that figured out the right rung for each team.
+I train companies on this for a living — including [mapping out the levels of AI agents with a utility like a major Hong Kong utility](/blog/utility-company-seven-levels-ai-agents). The ones that succeed aren't the ones with the fanciest tools. They're the ones that figured out the right rung for each team.
 
 ---
 

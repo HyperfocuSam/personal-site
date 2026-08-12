@@ -197,9 +197,7 @@ const Media = () => (
       <header className="page-hero">
         <div className="content-standard">
           <div className="title">
-            <h1>
-              <Link to="/media">Media / 媒體</Link>
-            </h1>
+            <h1>Media / 媒體</h1>
             <p>Guest appearances, interviews, and panel discussions.</p>
           </div>
         </div>

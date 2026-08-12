@@ -6,7 +6,7 @@
     <description>AI adoption insights, workshop reflections, and practical AI training tips from Sam Wong.</description>
     <language>en</language>
     <atom:link href="https://hyperfocusam.com/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 11 Aug 2026 18:31:13 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 12 Aug 2026 00:39:50 GMT</lastBuildDate>
     <item>
       <title>香港企業採購 AI 培訓前，必問供應商的五條問題</title>
       <link>https://hyperfocusam.com/blog/five-questions-corporate-ai-training-hong-kong-tc/</link>
@@ -128,15 +128,15 @@
     </item>
     <item>
       <title>A Year of AI Training at a Hong Kong Food Company: Six Departments, Twenty Sessions</title>
-      <link>https://hyperfocusam.com/blog/garden-ai-training-year-six-departments/</link>
-      <guid isPermaLink="true">https://hyperfocusam.com/blog/garden-ai-training-year-six-departments/</guid>
+      <link>https://hyperfocusam.com/blog/food-company-year-of-ai-six-departments/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/food-company-year-of-ai-six-departments/</guid>
       <description>What happens when a company doesn't just book one AI workshop, but keeps going -- department by department -- for a full year.</description>
       <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
       <title>一間香港食品公司的一年 AI 培訓：六個部門，二十節課</title>
-      <link>https://hyperfocusam.com/blog/garden-ai-training-year-six-departments-tc/</link>
-      <guid isPermaLink="true">https://hyperfocusam.com/blog/garden-ai-training-year-six-departments-tc/</guid>
+      <link>https://hyperfocusam.com/blog/food-company-year-of-ai-six-departments-tc/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/food-company-year-of-ai-six-departments-tc/</guid>
       <description>從一場標準 AI 工作坊開始，該公司六個部門在一年內上了約二十節課，超過一百名員工受訓，5 月評估達 4.48 分。</description>
       <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
     </item>
@@ -240,15 +240,15 @@
     </item>
     <item>
       <title>I've Now Run AI Workshops for the Same Company Three Times. The Third Batch Is Nothing Like the First.</title>
-      <link>https://hyperfocusam.com/blog/garden-ai-training-three-batches/</link>
-      <guid isPermaLink="true">https://hyperfocusam.com/blog/garden-ai-training-three-batches/</guid>
+      <link>https://hyperfocusam.com/blog/food-company-ai-workshops-three-batches/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/food-company-ai-workshops-three-batches/</guid>
       <description>I've been training at a Hong Kong food manufacturer since January: HR, then Sales &amp; Marketing, now Operations. The third batch required a 120-row fake production dataset and 26 new prompts. Nothing from Batch 1 transferred.</description>
       <pubDate>Mon, 13 Apr 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
       <title>三輪 AI 工作坊，同一間公司——第三輪我一張舊 slide 都沒用</title>
-      <link>https://hyperfocusam.com/blog/garden-ai-training-three-batches-tc/</link>
-      <guid isPermaLink="true">https://hyperfocusam.com/blog/garden-ai-training-three-batches-tc/</guid>
+      <link>https://hyperfocusam.com/blog/food-company-ai-workshops-three-batches-tc/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/food-company-ai-workshops-three-batches-tc/</guid>
       <description>1 月起在一間香港食品製造商培訓：HR、市場及銷售，現在是營運。第三輪他放棄全部舊 slide，從零建 120 行虛構生產數據集和 26 條專用 prompt，並坦言未知成效。一間機構的 AI 成熟度不是一個分數，是一幅拼布。</description>
       <pubDate>Mon, 13 Apr 2026 00:00:00 GMT</pubDate>
     </item>
@@ -478,15 +478,15 @@
     </item>
     <item>
       <title>What Happens When a Toy Company Takes AI Seriously</title>
-      <link>https://hyperfocusam.com/blog/playmates-toys-ai-training/</link>
-      <guid isPermaLink="true">https://hyperfocusam.com/blog/playmates-toys-ai-training/</guid>
+      <link>https://hyperfocusam.com/blog/toy-company-takes-ai-seriously/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/toy-company-takes-ai-seriously/</guid>
       <description>Two sessions, 12 executives, and a gardening demo that secured buy-in. Inside an international toy company's AI training.</description>
       <pubDate>Mon, 09 Feb 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
       <title>Teaching a Utility Company the 7 Levels of AI Agents</title>
-      <link>https://hyperfocusam.com/blog/clp-ai-agent-automation/</link>
-      <guid isPermaLink="true">https://hyperfocusam.com/blog/clp-ai-agent-automation/</guid>
+      <link>https://hyperfocusam.com/blog/utility-company-seven-levels-ai-agents/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/utility-company-seven-levels-ai-agents/</guid>
       <description>I taught a major Hong Kong utility's team a 7-level AI agent framework, from basic chatbots to CLI-based systems. Here's what a utility company needs to know about AI agents.</description>
       <pubDate>Tue, 23 Dec 2025 00:00:00 GMT</pubDate>
     </item>
@@ -611,8 +611,8 @@
     </item>
     <item>
       <title>What 1,500 Banking Professionals Taught Me About AI Adoption</title>
-      <link>https://hyperfocusam.com/blog/bochk-banking-ai-training/</link>
-      <guid isPermaLink="true">https://hyperfocusam.com/blog/bochk-banking-ai-training/</guid>
+      <link>https://hyperfocusam.com/blog/1500-banking-professionals-ai-adoption/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/1500-banking-professionals-ai-adoption/</guid>
       <description>Lessons from training employees at a major Hong Kong bank across 13 countries - on safety frameworks, workflow integration, and the 70/30 human-AI split.</description>
       <pubDate>Sat, 15 Nov 2025 00:00:00 GMT</pubDate>
     </item>

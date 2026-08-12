@@ -16,7 +16,7 @@ Now apply that to a one-off AI workshop. An employee learns 15 prompts, three fr
 
 This isn't a failure of the training. It's a failure of the format.
 
-When I [trained 1,500 banking professionals at a major Hong Kong bank](/blog/bochk-banking-ai-training), the satisfaction rating was 9.2/10. But I knew from experience that satisfaction scores don't predict adoption. What predicted adoption was whether participants used at least one AI tool in their actual work within the first 48 hours. That became the real metric.
+When I [trained 1,500 banking professionals at a major Hong Kong bank](/blog/1500-banking-professionals-ai-adoption), the satisfaction rating was 9.2/10. But I knew from experience that satisfaction scores don't predict adoption. What predicted adoption was whether participants used at least one AI tool in their actual work within the first 48 hours. That became the real metric.
 
 ## The Three Reasons AI Training Fails
 

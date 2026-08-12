@@ -70,7 +70,15 @@ const FAQS = [
 
 const TrainTheTrainer = () => (
   <Main
-    title="AI Train-the-Trainer"
+    // Was "AI Train-the-Trainer" — 20 characters that never said Hong Kong,
+    // the one word the commercial query turns on. At 47 chars this still picks
+    // up Main.js's " | Sam Wong" suffix, which is wanted here: the full title
+    // reads "AI Train-the-Trainer Certification in Hong Kong | Sam Wong" (57),
+    // inside what a result listing shows. The informational query is owned by
+    // /blog/ai-train-the-trainer-hong-kong ("How to Choose an AI
+    // Train-the-Trainer Program in Hong Kong") — a different page for a
+    // different intent, not a duplicate, so it is NOT canonicalised away.
+    title="AI Train-the-Trainer Certification in Hong Kong"
     description={
       'AI Train-the-Trainer in Hong Kong: certification for trainers, L&D leads and '
       + 'consultants who must teach AI, not just use it. Run by Adaptig.'
@@ -125,7 +133,7 @@ const TrainTheTrainer = () => (
       <header className="page-hero">
         <div className="content-standard">
           <div className="title">
-            <h1><Link to="/ai-train-the-trainer-hong-kong">AI Train-the-Trainer</Link></h1>
+            <h1>AI Train-the-Trainer</h1>
             <p>I train the people who train AI.</p>
           </div>
         </div>

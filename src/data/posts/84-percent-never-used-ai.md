@@ -11,7 +11,7 @@ These aren't people who are behind. They're people nobody has shown.
 
 ## The Gap Closes Fast
 
-When I [walked into a room of 1,500 banking professionals at a major Hong Kong bank](/blog/bochk-banking-ai-training), most had literally never interacted with an AI tool. People managing portfolios, running compliance, processing transactions across 13 countries. Smart people. Skilled people. People who'd simply never been given permission and a path.
+When I [walked into a room of 1,500 banking professionals at a major Hong Kong bank](/blog/1500-banking-professionals-ai-adoption), most had literally never interacted with an AI tool. People managing portfolios, running compliance, processing transactions across 13 countries. Smart people. Skilled people. People who'd simply never been given permission and a path.
 
 The gap between "never used AI" and "productive with AI" is not years. In a [45-minute session with 50 engineers at Arup](/blog/arup-ai-lunch-learn), we went from zero to participants independently using AI for their actual work. Forty-five minutes. Not because I'm a great teacher. Because the barrier was never ability. It was access and permission.
 

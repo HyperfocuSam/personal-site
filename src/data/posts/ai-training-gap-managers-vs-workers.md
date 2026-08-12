@@ -23,7 +23,7 @@ But here's what I don't know yet: whether that shift sticks after month six. the
 
 Another stat making rounds: [84% of people have never used AI](/blog/84-percent-never-used-ai). If you're reading this blog, you're almost certainly in the minority. But your colleagues aren't.
 
-When I [trained 1,500 banking professionals at a major Hong Kong bank](/blog/bochk-banking-ai-training), most of them had never touched an AI tool before walking in. By the end, they were applying the 70/30 split to their daily work. The gap between "never used" and "productive" is smaller than executives think. But someone has to actually bridge it. A memo from HR doesn't count.
+When I [trained 1,500 banking professionals at a major Hong Kong bank](/blog/1500-banking-professionals-ai-adoption), most of them had never touched an AI tool before walking in. By the end, they were applying the 70/30 split to their daily work. The gap between "never used" and "productive" is smaller than executives think. But someone has to actually bridge it. A memo from HR doesn't count.
 
 ## What I Keep Coming Back To
 

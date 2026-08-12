@@ -89,7 +89,11 @@ const Services = () => {
   return (
     <Main
       title="AI Training Services - Hong Kong"
-      description="Corporate AI training and workshops in Hong Kong. Sam Wong delivers enterprise AI workshops, prompt engineering training, 1-1 coaching, and Train-the-Trainer certification through Adaptig. Available in English and Cantonese."
+      // 157 chars. Was 236, and it opened with the IDENTICAL sentence as
+      // /corporate-ai-training-hong-kong — two pages telling Google the same
+      // thing about the same query. This one is the hub and names all three
+      // audiences; the lander below leads on enterprise alone.
+      description="Sam Wong's AI training in Hong Kong: corporate workshops for teams, 1-1 coaching for professionals, and Train-the-Trainer certification. English and Cantonese."
       canonicalUrl={`${SITE_URL}/services`}
       ogTitle="Corporate AI Training & Workshops - Hong Kong | Sam Wong"
       ogDescription="Enterprise AI workshops, prompt engineering training, coaching, and Train-the-Trainer programs in Hong Kong. Delivered through Adaptig."
@@ -110,9 +114,7 @@ const Services = () => {
         <header className="page-hero">
           <div className="content-standard">
             <div className="title">
-              <h1>
-                <Link to="/services">AI Training &amp; Workshop Services</Link>
-              </h1>
+              <h1>AI Training &amp; Workshop Services</h1>
               <p>Corporate AI training in Hong Kong and across Asia-Pacific</p>
             </div>
             <div className="services-anchor-pills">

@@ -54,7 +54,7 @@ const HOWTO_SCHEMAS = {
       { name: 'Stage 4: Transformation', text: 'AI changes your operating model. New roles emerge, decision-making improves through AI insights, and workflows are fundamentally redesigned for human-AI partnership at scale.' },
     ],
   },
-  'bochk-banking-ai-training': {
+  '1500-banking-professionals-ai-adoption': {
     name: 'How to Use the IPA Framework for Safe AI Decision-Making',
     description: 'A three-step mental model — Input, Process, Action — that reframes AI from a standalone tool into a thinking partner for strategic work, with built-in data governance.',
     steps: [

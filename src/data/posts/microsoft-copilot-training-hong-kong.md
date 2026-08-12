@@ -12,7 +12,7 @@ When I [wrote about why I teach Copilot instead of ChatGPT](/blog/why-i-teach-co
 
 Copilot solves all three problems because it sits inside the Microsoft 365 security boundary. The data stays where it already lives. IT has already approved the platform. There's no new login, no new tool to learn, no new security review.
 
-For Hong Kong companies dealing with PDPO compliance and cross-border data concerns, this matters more than anywhere else. When I [trained 1,530 banking professionals at a major Hong Kong bank](/blog/bochk-banking-ai-training), the first 20 minutes of every session focused on data safety using the [Traffic Light Protocol](/blog/traffic-light-protocol-ai-safety). Starting with Copilot meant we could skip the "is this tool allowed?" conversation entirely and focus on building actual workflows.
+For Hong Kong companies dealing with PDPO compliance and cross-border data concerns, this matters more than anywhere else. When I [trained 1,530 banking professionals at a major Hong Kong bank](/blog/1500-banking-professionals-ai-adoption), the first 20 minutes of every session focused on data safety using the [Traffic Light Protocol](/blog/traffic-light-protocol-ai-safety). Starting with Copilot meant we could skip the "is this tool allowed?" conversation entirely and focus on building actual workflows.
 
 ## What Copilot Training Should Cover
 

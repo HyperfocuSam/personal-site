@@ -248,11 +248,6 @@ const About = () => (
               {' - Contributed translation for wider AI accessibility.'}
             </li>
           </ul>
-          <p>
-            {'You can still browse the full timeline in '}
-            <Link to="/projects">Projects</Link>
-            .
-          </p>
           <ScrollReveal variant="blur-in">
             <div className="photo-grid cols-3">
               <OptimizedImage

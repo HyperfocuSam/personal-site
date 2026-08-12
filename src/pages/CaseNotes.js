@@ -1,9 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import dayjs from 'dayjs';
 import { Helmet } from 'react-helmet-async';
 
 import Main from '../layouts/Main';
 import cases from '../data/cases';
+import posts from '../data/posts';
+import testimonialData from '../data/testimonialData';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 
 const PERSON_ID = `${SITE_URL}/#person`;
@@ -54,6 +57,26 @@ const datesFor = (period) => {
   }
   return dates;
 };
+
+// Absorbed from /testimonials and /clients (retired 2026-08-12). The site had
+// three separate social-proof pages — this one for delivered engagements,
+// /clients for the case-study write-ups, /testimonials for the quotes — which
+// split the same argument across three URLs competing for the same query.
+// /case-notes wins: it is the page in the nav and it carries the ItemList and
+// EducationEvent schema. Nothing was dropped; the other two now 301 here.
+const voiceClusters = [
+  { id: 'corporate', title: 'Enterprise training', quotes: testimonialData.corporate },
+  { id: 'public-classes', title: 'Public classes', quotes: testimonialData.aboutSam },
+  { id: 'academy', title: 'DotAI Academy', quotes: testimonialData.academy },
+];
+
+// Case-study posts that are NOT already linked from a case note above, so the
+// same engagement never appears twice on the page.
+const linkedSlugs = new Set(cases.map((entry) => entry.blogSlug).filter(Boolean));
+const writeUps = posts
+  .filter((post) => post.type === 'case-study'
+    && post.language !== 'zh-Hant'
+    && !linkedSlugs.has(post.slug));
 
 const deepDives = cases.filter((entry) => entry.deepDive);
 const ledger = cases
@@ -218,6 +241,42 @@ const CaseNotes = () => {
                 </article>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section className="case-notes__section" aria-labelledby="voices-heading">
+          <div className="case-notes__section-inner">
+            <h2 id="voices-heading">What people said</h2>
+            {voiceClusters.map((cluster) => (
+              <div className="case-notes__voices" key={cluster.id}>
+                <h3 className="case-notes__voices-title">{cluster.title}</h3>
+                <div className="testimonials__compact-list">
+                  {cluster.quotes.map((quote) => (
+                    <div className="testimonial-compact fn-entry" key={quote.quote}>
+                      <p className="testimonial-compact__quote">{quote.quote}</p>
+                      <p className="testimonial-compact__author">{quote.attribution}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section
+          className="case-notes__section case-notes__section--ledger"
+          aria-labelledby="writeups-heading"
+        >
+          <div className="case-notes__section-inner">
+            <h2 id="writeups-heading">Written up in full</h2>
+            <ul className="case-notes__writeups">
+              {writeUps.map((post) => (
+                <li className="case-notes__writeup fn-entry" key={post.slug}>
+                  <Link to={`/blog/${post.slug}/`}>{post.title}</Link>
+                  <span className="fn-stamp">{dayjs(post.date).format('MMM YYYY')}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 
 import { Helmet } from 'react-helmet-async';
 
@@ -91,9 +90,7 @@ const Blog = () => {
         <header className="page-hero">
           <div className="content-standard">
             <div className="title">
-              <h1>
-                <Link to="/blog">Blog</Link>
-              </h1>
+              <h1>Blog</h1>
               <p>
                 Practical lessons on AI adoption trends, tools, and what helps
                 people work with AI confidently.

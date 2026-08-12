@@ -47,3 +47,7 @@ The checklist still works against anyone, us included. Ask us the same questions
 If you want slides to read aloud, no TTT program will save the session. AI training is hands-on or it's nothing - participants open the tools, and things go wrong in real time. If that sounds stressful rather than fun, sell something else.
 
 If it sounds fun: the demand is real, Hong Kong is short of people who can do this properly, and most of the hard content work is already done for you. Come see a session first.
+
+---
+
+If you want the specifics of the one I run — twelve sessions over six weeks, and who it is for — that is on the [AI Train-the-Trainer certification page](/ai-train-the-trainer-hong-kong/).
