@@ -5,18 +5,23 @@
 // `.lang-toggle` link — with no shared helper. The nav switcher needs it on
 // every route including ones that have no translation, so it lives here.
 //
-// Only six pages have a Chinese twin. Everything else (case notes, blog posts,
-// speaking, media kit...) falls back to the Chinese homepage: a chrome element
-// that appears and disappears between pages is worse than one that always
-// works, and a reader who wants Chinese is better served landing on /zh than
-// on nothing.
+// Every page in the header and footer now has a Chinese twin (2026-08-12).
+// Anything still missing one — blog posts, /get-started — falls back to the
+// Chinese homepage: a chrome element that appears and disappears between pages
+// is worse than one that always works, and a reader who wants Chinese is better
+// served landing on /zh than on nothing.
 
 export const EN_TO_ZH = {
   '/': '/zh',
   '/about': '/zh/about',
   '/blog': '/zh/blog',
+  '/book': '/zh/book',
+  '/case-notes': '/zh/case-notes',
+  '/contact': '/zh/contact',
   '/media': '/zh/media',
+  '/media/kit': '/zh/media/kit',
   '/services': '/zh/services',
+  '/speaking': '/zh/speaking',
   '/corporate-ai-training-hong-kong': '/zh/corporate-ai-training-hong-kong',
 };
 

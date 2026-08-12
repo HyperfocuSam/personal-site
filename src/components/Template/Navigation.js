@@ -2,13 +2,18 @@ import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 import Hamburger from './Hamburger';
-import routes from '../../data/routes';
-import { counterpartOf } from '../../data/langPairs';
+import { routesFor } from '../../data/routes';
+import { counterpartOf, isZhPath } from '../../data/langPairs';
 
 const Navigation = () => {
   const { pathname } = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const other = counterpartOf(pathname);
+  // On a Chinese page the whole header is Chinese, not just the toggle. Until
+  // 2026-08-12 this rendered the English list on /zh, so the only way out of a
+  // Chinese page was back into English.
+  const routes = routesFor(pathname);
+  const isZh = isZhPath(pathname);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -72,7 +77,9 @@ const Navigation = () => {
         </Link>
       </div>
       <div className="nav-cta">
-        <Link to="/book" data-cta="nav_book">Book a Call</Link>
+        <Link to={isZh ? '/zh/book' : '/book'} data-cta="nav_book">
+          {isZh ? '預約通話' : 'Book a Call'}
+        </Link>
       </div>
       <Hamburger />
     </header>

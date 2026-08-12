@@ -29,7 +29,6 @@ const lazyRoute = (importFn) => {
 // Every route - we lazy load so that each page can be chunked
 const About = lazyRoute(() => import('./pages/About'));
 const CorporateTraining = lazyRoute(() => import('./pages/CorporateTraining'));
-const TrainTheTrainer = lazyRoute(() => import('./pages/TrainTheTrainer'));
 const Blog = lazyRoute(() => import('./pages/Blog'));
 const CaseNotes = lazyRoute(() => import('./pages/CaseNotes'));
 const Contact = lazyRoute(() => import('./pages/Contact'));
@@ -47,6 +46,11 @@ const ZhBlog = lazyRoute(() => import('./pages/ZhBlog'));
 const ZhMedia = lazyRoute(() => import('./pages/ZhMedia'));
 const ZhServices = lazyRoute(() => import('./pages/ZhServices'));
 const ZhCorporateTraining = lazyRoute(() => import('./pages/ZhCorporateTraining'));
+const ZhBook = lazyRoute(() => import('./pages/ZhBook'));
+const ZhCaseNotes = lazyRoute(() => import('./pages/ZhCaseNotes'));
+const ZhContact = lazyRoute(() => import('./pages/ZhContact'));
+const ZhSpeaking = lazyRoute(() => import('./pages/ZhSpeaking'));
+const ZhMediaKit = lazyRoute(() => import('./pages/ZhMediaKit'));
 
 // Media Kit (designed HTML version)
 const MediaKit = lazyRoute(() => import('./pages/MediaKit'));
@@ -67,7 +71,6 @@ const exactRoutes = {
   '/book': Book,
   '/contact': Contact,
   '/corporate-ai-training-hong-kong': CorporateTraining,
-  '/ai-train-the-trainer-hong-kong': TrainTheTrainer,
   '/get-started': GetStarted,
   '/media/kit': MediaKit,
   '/media': Media,
@@ -77,6 +80,11 @@ const exactRoutes = {
   '/zh/media': ZhMedia,
   '/zh/services': ZhServices,
   '/zh/corporate-ai-training-hong-kong': ZhCorporateTraining,
+  '/zh/book': ZhBook,
+  '/zh/case-notes': ZhCaseNotes,
+  '/zh/contact': ZhContact,
+  '/zh/speaking': ZhSpeaking,
+  '/zh/media/kit': ZhMediaKit,
   '/services': Services,
   '/speaking': Speaking,
 };
@@ -102,7 +110,6 @@ const App = () => (
         <Route path="/book" element={<Book />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/corporate-ai-training-hong-kong" element={<CorporateTraining />} />
-        <Route path="/ai-train-the-trainer-hong-kong" element={<TrainTheTrainer />} />
         <Route path="/get-started" element={<GetStarted />} />
         <Route path="/media/kit" element={<MediaKit />} />
         <Route path="/media" element={<Media />} />
@@ -112,6 +119,11 @@ const App = () => (
         <Route path="/zh/media" element={<ZhMedia />} />
         <Route path="/zh/services" element={<ZhServices />} />
         <Route path="/zh/corporate-ai-training-hong-kong" element={<ZhCorporateTraining />} />
+        <Route path="/zh/book" element={<ZhBook />} />
+        <Route path="/zh/case-notes" element={<ZhCaseNotes />} />
+        <Route path="/zh/contact" element={<ZhContact />} />
+        <Route path="/zh/speaking" element={<ZhSpeaking />} />
+        <Route path="/zh/media/kit" element={<ZhMediaKit />} />
         <Route path="/services" element={<Services />} />
         <Route path="/speaking" element={<Speaking />} />
         <Route path="*" element={<NotFound />} />

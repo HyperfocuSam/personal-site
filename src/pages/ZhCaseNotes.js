@@ -4,9 +4,9 @@ import dayjs from 'dayjs';
 import { Helmet } from 'react-helmet-async';
 
 import Main from '../layouts/Main';
-import cases from '../data/cases';
+import zhCases from '../data/cases-zh';
 import posts from '../data/posts';
-import testimonialData from '../data/testimonialData';
+import testimonialsZh from '../data/testimonials-zh';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 import {
   imageDimensions, datesFor, locationFor, splitLedger,
@@ -14,41 +14,32 @@ import {
 
 const PERSON_ID = `${SITE_URL}/#person`;
 
-// Absorbed from /testimonials and /clients (retired 2026-08-12). The site had
-// three separate social-proof pages — this one for delivered engagements,
-// /clients for the case-study write-ups, /testimonials for the quotes — which
-// split the same argument across three URLs competing for the same query.
-// /case-notes wins: it is the page in the nav and it carries the ItemList and
-// EducationEvent schema. Nothing was dropped; the other two now 301 here.
-const voiceClusters = [
-  { id: 'corporate', title: 'Enterprise training', quotes: testimonialData.corporate },
-  { id: 'public-classes', title: 'Public classes', quotes: testimonialData.aboutSam },
-  { id: 'academy', title: 'DotAI Academy', quotes: testimonialData.academy },
-];
+const { deepDives, ledger } = splitLedger(zhCases);
 
-// Case-study posts that are NOT already linked from a case note above, so the
-// same engagement never appears twice on the page.
-const linkedSlugs = new Set(cases.map((entry) => entry.blogSlug).filter(Boolean));
-const writeUps = posts
+// The Chinese case-study posts. /case-notes explicitly EXCLUDES these
+// (`post.language !== 'zh-Hant'`), so until this page existed the four Chinese
+// write-ups were listed nowhere at all.
+const linkedSlugs = new Set(zhCases.map((entry) => entry.blogSlug).filter(Boolean));
+const zhWriteUps = posts
   .filter((post) => post.type === 'case-study'
-    && post.language !== 'zh-Hant'
+    && post.language === 'zh-Hant'
     && !linkedSlugs.has(post.slug));
 
-const { deepDives, ledger } = splitLedger(cases);
-
-const CaseNotes = () => {
-  const caseNotesJsonLd = {
+const ZhCaseNotes = () => {
+  const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
       {
         '@type': 'ItemList',
-        '@id': `${SITE_URL}/case-notes/#case-notes-list`,
-        name: 'Case Notes',
-        itemListElement: cases.map((entry) => ({
+        '@id': `${SITE_URL}/zh/case-notes/#case-notes-list`,
+        name: '案例記錄',
+        inLanguage: 'zh-Hant',
+        itemListElement: zhCases.map((entry) => ({
           '@type': 'EducationEvent',
-          '@id': `${SITE_URL}/case-notes/#${entry.id}`,
+          '@id': `${SITE_URL}/zh/case-notes/#${entry.id}`,
           name: `${entry.org} — ${entry.title}`,
           description: entry.summary,
+          inLanguage: 'zh-Hant',
           ...datesFor(entry.period),
           location: {
             '@type': 'Place',
@@ -69,16 +60,16 @@ const CaseNotes = () => {
 
   return (
     <Main
-      title="Case Notes"
-      description="Delivered engagements, with receipts. Named where the client is already public; described where they are not."
-      canonicalUrl={`${SITE_URL}/case-notes`}
-      ogTitle="Case Notes | Sam Wong"
-      ogDescription="Delivered engagements, with receipts. Named where the client is already public; described where they are not."
+      title="案例記錄 — 交付過的企業 AI 培訓"
+      description="21 個交付過的項目，連數字一齊放出來：銀行、食品製造、珠寶、玩具、教育、旅遊。客戶已公開的就寫名，未公開的就只寫行業。"
+      canonicalUrl={`${SITE_URL}/zh/case-notes`}
+      ogTitle="案例記錄 | Sam Wong"
+      ogDescription="交付過的項目，連數字一齊放出來。客戶已公開的就寫名，未公開的就只寫行業。"
       ogImage={DEFAULT_OG_IMAGE}
-      ogUrl={`${SITE_URL}/case-notes`}
+      ogUrl={`${SITE_URL}/zh/case-notes`}
       ogType="website"
-      twitterTitle="Case Notes | Sam Wong"
-      twitterDescription="Delivered engagements, with receipts. Named where the client is already public; described where they are not."
+      twitterTitle="案例記錄 | Sam Wong"
+      twitterDescription="交付過的項目，連數字一齊放出來。"
       twitterImage={DEFAULT_OG_IMAGE}
       hreflangTags={[
         { lang: 'en', href: `${SITE_URL}/case-notes` },
@@ -87,24 +78,24 @@ const CaseNotes = () => {
       ]}
     >
       <Helmet>
-        <script type="application/ld+json">{JSON.stringify(caseNotesJsonLd)}</script>
+        <html lang="zh-Hant" />
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 
-      <article className="case-notes field-notes-content" id="case-notes">
+      <article className="case-notes field-notes-content zh" id="zh-case-notes">
         <header className="case-notes__hero">
           <div className="case-notes__hero-inner">
-            <p className="fn-stamp fn-stamp--verified">Field record / verified</p>
-            <h1>Case Notes</h1>
+            <p className="fn-stamp fn-stamp--verified">實地記錄 / 已核實</p>
+            <h1>案例記錄</h1>
             <p>
-              Delivered engagements, with receipts. Named where the client is already
-              public; described where they are not.
+              交付過的項目，連數字一齊放出來。客戶已經公開的就寫名，未公開的就只寫行業。
             </p>
           </div>
         </header>
 
-        <section className="case-notes__section" aria-labelledby="deep-dives-heading">
+        <section className="case-notes__section" aria-labelledby="zh-deep-dives-heading">
           <div className="case-notes__section-inner">
-            <h2 id="deep-dives-heading"><span className="fn-highlight">Deep dives</span></h2>
+            <h2 id="zh-deep-dives-heading"><span className="fn-highlight">深入案例</span></h2>
             <div className="case-notes__deep-list">
               {deepDives.map((entry) => {
                 const dimensions = entry.image ? imageDimensions[entry.image] : null;
@@ -135,6 +126,8 @@ const CaseNotes = () => {
                         />
                       )}
 
+                      {/* Receipts stay in their recorded language on purpose —
+                          they quote participants. See src/data/cases-zh.js. */}
                       <ul className="case-note__receipts">
                         {entry.receipts.map((receipt) => (
                           <li className="case-note__receipt fn-receipt" key={receipt}>
@@ -152,7 +145,7 @@ const CaseNotes = () => {
                       <p className="case-note__summary">{entry.summary}</p>
                       {entry.blogSlug && (
                         <Link className="case-note__link" to={`/blog/${entry.blogSlug}/`}>
-                          Read the full case →
+                          睇完整案例 →
                         </Link>
                       )}
                     </div>
@@ -163,9 +156,9 @@ const CaseNotes = () => {
           </div>
         </section>
 
-        <section className="case-notes__section case-notes__section--ledger" aria-labelledby="ledger-heading">
+        <section className="case-notes__section case-notes__section--ledger" aria-labelledby="zh-ledger-heading">
           <div className="case-notes__section-inner">
-            <h2 id="ledger-heading">The ledger</h2>
+            <h2 id="zh-ledger-heading">項目紀錄</h2>
             <div className="case-notes__ledger">
               {ledger.map((entry) => (
                 <article className="case-note case-note--compact fn-entry" key={entry.id}>
@@ -179,7 +172,7 @@ const CaseNotes = () => {
                     <p className="case-note__compact-receipt">{entry.receipts[0]}</p>
                     {entry.blogSlug && (
                       <Link className="case-note__link" to={`/blog/${entry.blogSlug}/`}>
-                        Read the full case →
+                        睇完整案例 →
                       </Link>
                     )}
                   </div>
@@ -189,48 +182,49 @@ const CaseNotes = () => {
           </div>
         </section>
 
-        <section className="case-notes__section" aria-labelledby="voices-heading">
+        <section className="case-notes__section" aria-labelledby="zh-voices-heading">
           <div className="case-notes__section-inner">
-            <h2 id="voices-heading">What people said</h2>
-            {voiceClusters.map((cluster) => (
-              <div className="case-notes__voices" key={cluster.id}>
-                <h3 className="case-notes__voices-title">{cluster.title}</h3>
-                <div className="testimonials__compact-list">
-                  {cluster.quotes.map((quote) => (
-                    <div className="testimonial-compact fn-entry" key={quote.quote}>
-                      <p className="testimonial-compact__quote">{quote.quote}</p>
-                      <p className="testimonial-compact__author">{quote.attribution}</p>
-                    </div>
-                  ))}
-                </div>
+            <h2 id="zh-voices-heading">客戶點講</h2>
+            <div className="case-notes__voices">
+              <div className="testimonials__compact-list">
+                {testimonialsZh.map((item) => (
+                  <div className="testimonial-compact fn-entry" key={item.quote}>
+                    <p className="testimonial-compact__quote">{item.quote}</p>
+                    <p className="testimonial-compact__author">
+                      {[item.name, item.title, item.company].filter(Boolean).join('，')}
+                    </p>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </section>
 
-        <section
-          className="case-notes__section case-notes__section--ledger"
-          aria-labelledby="writeups-heading"
-        >
-          <div className="case-notes__section-inner">
-            <h2 id="writeups-heading">Written up in full</h2>
-            <ul className="case-notes__writeups">
-              {writeUps.map((post) => (
-                <li className="case-notes__writeup fn-entry" key={post.slug}>
-                  <Link to={`/blog/${post.slug}/`}>{post.title}</Link>
-                  <span className="fn-stamp">{dayjs(post.date).format('MMM YYYY')}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
+        {zhWriteUps.length > 0 && (
+          <section
+            className="case-notes__section case-notes__section--ledger"
+            aria-labelledby="zh-writeups-heading"
+          >
+            <div className="case-notes__section-inner">
+              <h2 id="zh-writeups-heading">完整寫成文章</h2>
+              <ul className="case-notes__writeups">
+                {zhWriteUps.map((post) => (
+                  <li className="case-notes__writeup fn-entry" key={post.slug}>
+                    <Link to={`/blog/${post.slug}/`}>{post.title}</Link>
+                    <span className="fn-stamp">{dayjs(post.date).format('YYYY年M月')}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        )}
 
         <section className="case-notes__cta">
-          <Link className="button" to="/book">Book a call</Link>
+          <Link className="button" to="/zh/book">預約通話</Link>
         </section>
       </article>
     </Main>
   );
 };
 
-export default CaseNotes;
+export default ZhCaseNotes;

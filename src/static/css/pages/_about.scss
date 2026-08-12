@@ -25,3 +25,17 @@
     border-bottom: 0;
   }
 }
+
+/* Chinese pages built 2026-08-12 (/zh/contact, /zh/speaking) use the correct
+   H2 -> H3 outline from the start rather than inheriting /about's old
+   H1 -> H3 -> H4 shape. Globally h3 is 1.65rem against h4's 1.1rem, so a card
+   title promoted for semantics would render half again as large inside a
+   three-column grid. Same pin as #about above: the semantics change, the
+   rendering does not. */
+#zh-contact,
+#zh-speaking,
+#zh-case-notes {
+  .card :is(h3, h4) {
+    font-size: 1.1rem;
+  }
+}

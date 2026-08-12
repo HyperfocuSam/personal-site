@@ -73,12 +73,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/corporate-ai-training-hong-kong/" />
   </url>
   <url>
-    <loc>https://hyperfocusam.com/ai-train-the-trainer-hong-kong/</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://hyperfocusam.com/speaking/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>monthly</changefreq>
@@ -143,6 +137,51 @@
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/zh/corporate-ai-training-hong-kong/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/corporate-ai-training-hong-kong/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/corporate-ai-training-hong-kong/" />
+  </url>
+  <url>
+    <loc>https://hyperfocusam.com/zh/case-notes/</loc>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/zh/case-notes/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/case-notes/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/case-notes/" />
+  </url>
+  <url>
+    <loc>https://hyperfocusam.com/zh/contact/</loc>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/zh/contact/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/contact/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/contact/" />
+  </url>
+  <url>
+    <loc>https://hyperfocusam.com/zh/book/</loc>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/zh/book/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/book/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/book/" />
+  </url>
+  <url>
+    <loc>https://hyperfocusam.com/zh/speaking/</loc>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/zh/speaking/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/speaking/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/speaking/" />
+  </url>
+  <url>
+    <loc>https://hyperfocusam.com/zh/media/kit/</loc>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/zh/media/kit/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/media/kit/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/media/kit/" />
   </url>
   <url>
     <loc>https://hyperfocusam.com/blog/five-questions-corporate-ai-training-hong-kong-tc/</loc>

@@ -5,17 +5,57 @@ import PropTypes from 'prop-types';
 
 import { track, identifyLead } from '../../utils/track';
 
+// The VALUE is always English and never translated — it is what lands in Sam's
+// inbox and what `interest` reports in the funnel, so a Chinese enquiry has to
+// be filterable alongside an English one. Only the label changes.
 const interestOptions = [
-  'Corporate Training',
-  '1-1 Coaching',
-  'Speaking',
-  'Become an Adaptig Trainer',
-  'Other',
+  { value: 'Corporate Training', en: 'Corporate Training', zh: '企業培訓' },
+  { value: '1-1 Coaching', en: '1-1 Coaching', zh: '一對一教練' },
+  { value: 'Speaking', en: 'Speaking', zh: '演講邀請' },
+  { value: 'Become an Adaptig Trainer', en: 'Become an Adaptig Trainer', zh: '成為 Adaptig 導師' },
+  { value: 'Other', en: 'Other', zh: '其他' },
 ];
+const interestValues = interestOptions.map((o) => o.value);
+
+const COPY = {
+  en: {
+    heading: 'Tell me what you need',
+    intro: 'Share your goals, current context, and timeline. I will reply with a recommended next step.',
+    name: 'Name',
+    email: 'Email',
+    interest: 'Interest',
+    message: 'Message',
+    placeholder: 'Tell me your goals, context, and what support you are looking for.',
+    send: 'Send Message',
+    sending: 'Sending...',
+    sentTitle: 'Message sent',
+    sentBody: (n) => `Thanks, ${n}. I'll reply within 24 hours.`,
+    errorServer: 'Something went wrong. Please try again.',
+    errorNetwork: 'Network error. Please check your connection and try again.',
+    privacy: 'Your message comes straight to my inbox. I use PostHog and Google Analytics to see how this site gets used.',
+  },
+  'zh-Hant': {
+    heading: '講講你需要甚麼',
+    intro: '講一下你的目標、目前的情況和時間表，我會回覆一個建議的下一步。',
+    name: '姓名',
+    email: '電郵',
+    interest: '想了解',
+    message: '訊息',
+    placeholder: '講一下你的目標、背景，以及你想要甚麼支援。',
+    send: '傳送訊息',
+    sending: '傳送中...',
+    sentTitle: '訊息已傳送',
+    sentBody: (n) => `多謝你，${n}。我會在 24 小時內回覆。`,
+    errorServer: '出了點問題，請再試一次。',
+    errorNetwork: '網絡錯誤，請檢查連線後再試。',
+    privacy: '你的訊息會直接送到我的收件箱。我用 PostHog 和 Google Analytics 了解這個網站的使用情況。',
+  },
+};
 
 const FORMSPREE_URL = 'https://formspree.io/f/mwvrrwbe';
 
-const ContactForm = ({ initialInterest, placement }) => {
+const ContactForm = ({ initialInterest, placement, language }) => {
+  const t = COPY[language] || COPY.en;
   const [interest, setInterest] = useState(initialInterest);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -30,7 +70,7 @@ const ContactForm = ({ initialInterest, placement }) => {
   const cspBlockedRef = useRef(false);
 
   useEffect(() => {
-    if (interestOptions.includes(initialInterest)) {
+    if (interestValues.includes(initialInterest)) {
       setInterest(initialInterest);
     } else {
       setInterest('Corporate Training');
@@ -101,11 +141,11 @@ const ContactForm = ({ initialInterest, placement }) => {
         });
       } else {
         const data = await res.json().catch(() => ({}));
-        setError(data.error || 'Something went wrong. Please try again.');
+        setError(data.error || t.errorServer);
         track('contact_form_failed', { reason: 'server', status: res.status });
       }
     } catch {
-      setError('Network error. Please check your connection and try again.');
+      setError(t.errorNetwork);
       track('contact_form_failed', {
         reason: cspBlockedRef.current ? 'csp_blocked' : 'network',
         status: 0,
@@ -113,16 +153,14 @@ const ContactForm = ({ initialInterest, placement }) => {
     } finally {
       setSubmitting(false);
     }
-  }, [interest, name, email, message, placement]);
+  }, [interest, name, email, message, placement, t]);
 
   if (submitted) {
     return (
       <section className="contact-form-section">
         <div className="contact-form__success">
-          <h3>Message sent</h3>
-          <p>
-            Thanks, {name}. I&apos;ll reply within 24 hours.
-          </p>
+          <h3>{t.sentTitle}</h3>
+          <p>{t.sentBody(name)}</p>
         </div>
       </section>
     );
@@ -130,11 +168,8 @@ const ContactForm = ({ initialInterest, placement }) => {
 
   return (
     <section className="contact-form-section">
-      <h3>Tell me what you need</h3>
-      <p>
-        Share your goals, current context, and timeline.
-        I will reply with a recommended next step.
-      </p>
+      <h3>{t.heading}</h3>
+      <p>{t.intro}</p>
       {/* action/method are a no-JS fallback only: handleSubmit calls
           preventDefault, so a native POST happens solely when React never
           hydrated. Requires formspree.io in the CSP form-action directive. */}
@@ -161,7 +196,7 @@ const ContactForm = ({ initialInterest, placement }) => {
         />
 
         <label className="contact-form__field" htmlFor="name">
-          <span className="contact-form__field-label">Name</span>
+          <span className="contact-form__field-label">{t.name}</span>
           <input
             id="name"
             name="name"
@@ -174,7 +209,7 @@ const ContactForm = ({ initialInterest, placement }) => {
         </label>
 
         <label className="contact-form__field" htmlFor="email">
-          <span className="contact-form__field-label">Email</span>
+          <span className="contact-form__field-label">{t.email}</span>
           <input
             id="email"
             name="email"
@@ -187,9 +222,7 @@ const ContactForm = ({ initialInterest, placement }) => {
         </label>
 
         <label className="contact-form__field" htmlFor="interest">
-          <span className="contact-form__field-label">
-            Interest
-          </span>
+          <span className="contact-form__field-label">{t.interest}</span>
           <div className="select-wrapper">
             <select
               id="interest"
@@ -199,8 +232,8 @@ const ContactForm = ({ initialInterest, placement }) => {
               required
             >
               {interestOptions.map((option) => (
-                <option key={option} value={option}>
-                  {option}
+                <option key={option.value} value={option.value}>
+                  {language === 'zh-Hant' ? option.zh : option.en}
                 </option>
               ))}
             </select>
@@ -208,9 +241,7 @@ const ContactForm = ({ initialInterest, placement }) => {
         </label>
 
         <label className="contact-form__field" htmlFor="message">
-          <span className="contact-form__field-label">
-            Message
-          </span>
+          <span className="contact-form__field-label">{t.message}</span>
           <textarea
             id="message"
             name="message"
@@ -218,10 +249,7 @@ const ContactForm = ({ initialInterest, placement }) => {
             required
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            placeholder={
-              'Tell me your goals, context, and what '
-              + 'support you are looking for.'
-            }
+            placeholder={t.placeholder}
           />
         </label>
 
@@ -238,29 +266,28 @@ const ContactForm = ({ initialInterest, placement }) => {
               className="button contact-form__submit"
               disabled={submitting}
             >
-              {submitting ? 'Sending...' : 'Send Message'}
+              {submitting ? t.sending : t.send}
             </button>
           </li>
         </ul>
       </form>
-      <p className="contact-form__privacy">
-        Your message comes straight to my inbox. I use PostHog and Google
-        Analytics to see how this site gets used.
-      </p>
+      <p className="contact-form__privacy">{t.privacy}</p>
     </section>
   );
 };
 
 ContactForm.propTypes = {
   initialInterest: PropTypes.string,
-  // Which surface this instance is rendered on, so /contact and the
-  // /get-started lander stay separable in the funnel.
+  // Which surface this instance is rendered on, so /contact, /zh/contact and
+  // the /get-started lander stay separable in the funnel.
   placement: PropTypes.string,
+  language: PropTypes.oneOf(['en', 'zh-Hant']),
 };
 
 ContactForm.defaultProps = {
   initialInterest: 'Corporate Training',
   placement: 'contact_page',
+  language: 'en',
 };
 
 export default ContactForm;

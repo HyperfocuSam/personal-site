@@ -171,7 +171,7 @@ Sam Wong is Co-Founder & Director of Academy at Adaptig (Adaptig Group Limited) 
 
 - [Book a discovery call](https://hyperfocusam.com/book/) — Free 30 minutes; the way every engagement is scoped and quoted
 - [Corporate AI Training Hong Kong](https://hyperfocusam.com/corporate-ai-training-hong-kong/) — Pillar page with methodologies, case studies, FAQ, and government funding info
-- [AI Train-the-Trainer Hong Kong](https://hyperfocusam.com/ai-train-the-trainer-hong-kong/) — Certification for trainers, L&D leads and consultants who must teach AI
+- [AI Train-the-Trainer Hong Kong](https://hyperfocusam.com/blog/ai-train-the-trainer-hong-kong/) — Certification for trainers, L&D leads and consultants who must teach AI
 - [Services](https://hyperfocusam.com/services/) — Full service catalog with coaching tiers and Train-the-Trainer
 - [Case Notes](https://hyperfocusam.com/case-notes/) — What rooms actually shipped, engagement by engagement
 - [About](https://hyperfocusam.com/about/) — Biography, career path, frameworks, and credentials

@@ -9,8 +9,8 @@ import TestimonialSection from '../components/Testimonials/TestimonialSection';
 
 const ZhAbout = () => (
   <Main
-    title="關於我"
-    description="Sam Wong — 香港AI顧問、企業AI培訓師。提供實用人工智能培訓、一對一AI輔導、企業工作坊，幫助團隊真正應用AI。"
+    title="關於 Sam Wong — 香港 AI 導師培訓師"
+    description="Sam Wong 是 Adaptig 聯合創辦人兼學院總監，一位駐香港的 AI 導師培訓師——他教的是教 AI 的人。已為 70+ 間機構、10,000+ 位專業人士提供培訓，遍及 13 個國家。"
     canonicalUrl={`${SITE_URL}/zh/about`}
     ogTitle="關於 Sam Wong | AI 培訓專家"
     ogDescription="為何我從事這份工作，以及我如何走到今天。由 ADHD 診斷到培訓超過 10,000 位專業人士應用 AI。"
@@ -26,7 +26,21 @@ const ZhAbout = () => (
       { lang: 'x-default', href: `${SITE_URL}/about` },
     ]}
   >
-    <Helmet><html lang="zh-Hant" /></Helmet>
+    <Helmet>
+      <html lang="zh-Hant" />
+      <script type="application/ld+json">
+        {JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'AboutPage',
+          name: '關於 Sam Wong',
+          url: `${SITE_URL}/zh/about/`,
+          inLanguage: 'zh-Hant',
+          description: 'Sam Wong 是 Adaptig 聯合創辦人兼學院總監，駐香港的 AI 導師培訓師。',
+          isPartOf: { '@id': `${SITE_URL}/#website` },
+          mainEntity: { '@id': `${SITE_URL}/#person` },
+        })}
+      </script>
+    </Helmet>
     <article className="post markdown field-notes-content zh" id="zh-about">
       {/* Dark hero */}
       <header className="page-hero">
@@ -149,7 +163,7 @@ const ZhAbout = () => (
               </Link>
             </li>
             <li>
-              <Link to="/contact" className="button-secondary">
+              <Link to="/zh/contact" className="button-secondary">
                 聯絡我
               </Link>
             </li>

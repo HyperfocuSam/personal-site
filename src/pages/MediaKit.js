@@ -103,14 +103,20 @@ const MediaKit = () => (
         <div className="media-kit-bio">
           <div className="media-kit-bio__column">
             <span className="media-kit-bio__lang-label">English</span>
+            {/* "a major Hong Kong bank", not the name. Sam's ruling of
+                2026-07-12 anonymises it, and the Chinese column beside this one
+                has carried the anonymised wording all along — the sitewide pass
+                (75fa2dcd) fixed the Chinese and missed the English in the same
+                file. It was live on /media/kit until 2026-08-12. The logo bar
+                stays as it is; that exemption is Sam's and is deliberate. */}
             <p>
               Sam Wong is Co-Founder & Director of Academy at Adaptig, an AI
               train-the-trainer who has trained over 10,000
               professionals across banking, retail, education, and technology
               sectors. He designs and delivers corporate AI workshops through
               Adaptig (Adaptig Group Limited), helping organizations move
-              from AI curiosity to AI competency. His clients include Bank of
-              China (Hong Kong), Chow Tai Fook, Hong Kong Jockey Club, Arup,
+              from AI curiosity to AI competency. His clients include a major
+              Hong Kong bank, Chow Tai Fook, Hong Kong Jockey Club, Arup,
               and PolyU. Based in Hong Kong, Sam specializes in practical AI
               adoption that changes behavior, not just builds awareness.
             </p>

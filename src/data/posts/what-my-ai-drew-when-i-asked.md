@@ -14,7 +14,7 @@ After the art conversation -- which was genuinely strange, and I sat with it lon
 
 So we did. We pulled every logged session and scanned for instances where Ada had picked the wrong tool, wrong email address, wrong workflow, or wrong approach and I'd had to manually redirect her. The count came back at 78.
 
-Seventy-eight logged misfires. Some were trivial -- sending to the wrong email alias, defaulting to the wrong transcription quality. Others were structural -- confusing two engagements with similar names (Playmates Toys HK and US are separate clients; Ada mixed them up more than once), missing a client's preferred communication channel. A few were pattern problems: repeating the same mistake because the correction lived in my head and not in any file the system could reference.
+Seventy-eight logged misfires. Some were trivial -- sending to the wrong email alias, defaulting to the wrong transcription quality. Others were structural -- confusing two engagements at one client's Hong Kong and US arms, which are separate contracts (Ada mixed them up more than once), missing a client's preferred communication channel. A few were pattern problems: repeating the same mistake because the correction lived in my head and not in any file the system could reference.
 
 **The 14 fixes**
 

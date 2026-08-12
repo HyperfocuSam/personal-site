@@ -54,8 +54,8 @@ const ZhBlog = () => {
 
   return (
     <Main
-      title="網誌"
-      description="Sam Wong 的 AI 應用洞察、工作坊經驗與科技人性面的分享，涵蓋香港 AI 培訓、企業 AI 顧問與人工智能工具推薦。"
+      title="AI 應用網誌 — 香港企業培訓實戰筆記"
+      description="Sam Wong 的 AI 應用筆記：企業培訓現場的觀察、工作坊設計方法、實際在用的 AI 工具，以及科技的人性面。寫給香港的在職專業人士與企業決策者。"
       canonicalUrl={`${SITE_URL}/zh/blog`}
       ogTitle="網誌 | Sam Wong"
       ogDescription="AI 應用洞察、工作坊經驗與科技人性面的分享。"
@@ -71,7 +71,29 @@ const ZhBlog = () => {
         { lang: 'x-default', href: `${SITE_URL}/blog` },
       ]}
     >
-      <Helmet><html lang="zh-Hant" /></Helmet>
+      <Helmet>
+        <html lang="zh-Hant" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'CollectionPage',
+            name: 'AI 應用網誌 | Sam Wong',
+            url: `${SITE_URL}/zh/blog/`,
+            inLanguage: 'zh-Hant',
+            description: '企業 AI 培訓現場的觀察、工作坊設計方法，以及實際在用的 AI 工具。',
+            isPartOf: { '@id': `${SITE_URL}/#website` },
+            mainEntity: {
+              '@type': 'ItemList',
+              itemListElement: zhPosts.slice(0, 10).map((post, i) => ({
+                '@type': 'ListItem',
+                position: i + 1,
+                url: `${SITE_URL}/blog/${post.slug}/`,
+                name: post.title,
+              })),
+            },
+          })}
+        </script>
+      </Helmet>
       <article className="post field-notes-content zh" id="zh-blog">
         {/* Dark hero */}
         <header className="page-hero">

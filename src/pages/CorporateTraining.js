@@ -240,7 +240,10 @@ const CorporateTraining = () => (
     ogTitle="Corporate AI Training in Hong Kong | Sam Wong"
     ogDescription={
       'Enterprise AI workshops and training programs in Hong Kong.'
-      + ' 10,000+ professionals trained. Top programme score 9.2/10 (BOCHK, 1,530 participants).'
+      // The bank is on Sam's anonymise list, and og:description is what every
+      // social preview and most crawlers read — the one place the page body was
+      // clean but the head was not. Found live 2026-08-12.
+      + ' 10,000+ professionals trained. Top programme score 9.2/10 across 1,530 participants.'
       + ' Delivered in English and Cantonese.'
     }
     ogImage={DEFAULT_OG_IMAGE}
@@ -642,7 +645,7 @@ const CorporateTraining = () => (
       <section className="section-base section-padding corporate-closing-cta">
         <div className="content-narrow">
           <p className="services-footer-link">
-            <Link to="/ai-train-the-trainer-hong-kong">
+            <Link to="/blog/ai-train-the-trainer-hong-kong/">
               Training trainers rather than teams? AI Train-the-Trainer →
             </Link>
           </p>

@@ -127,7 +127,7 @@ To get a quote, book a discovery call at ${SITE_URL}/book/ or email sam@adaptig.
 - Book a discovery call: ${SITE_URL}/book/
 - Services: ${SITE_URL}/services/
 - Corporate AI Training (Hong Kong): ${SITE_URL}/corporate-ai-training-hong-kong/
-- AI Train-the-Trainer (Hong Kong): ${SITE_URL}/ai-train-the-trainer-hong-kong/
+- AI Train-the-Trainer (Hong Kong): ${SITE_URL}/blog/ai-train-the-trainer-hong-kong/
 - Case Notes (engagement outcomes): ${SITE_URL}/case-notes/
 - Blog: ${SITE_URL}/blog/
 - Media Appearances: ${SITE_URL}/media/
@@ -241,7 +241,7 @@ Sam Wong is Co-Founder & Director of Academy at Adaptig (Adaptig Group Limited) 
 
 - [Book a discovery call](${SITE_URL}/book/) \u2014 Free 30 minutes; the way every engagement is scoped and quoted
 - [Corporate AI Training Hong Kong](${SITE_URL}/corporate-ai-training-hong-kong/) \u2014 Pillar page with methodologies, case studies, FAQ, and government funding info
-- [AI Train-the-Trainer Hong Kong](${SITE_URL}/ai-train-the-trainer-hong-kong/) \u2014 Certification for trainers, L&D leads and consultants who must teach AI
+- [AI Train-the-Trainer Hong Kong](${SITE_URL}/blog/ai-train-the-trainer-hong-kong/) \u2014 Certification for trainers, L&D leads and consultants who must teach AI
 - [Services](${SITE_URL}/services/) \u2014 Full service catalog with coaching tiers and Train-the-Trainer
 - [Case Notes](${SITE_URL}/case-notes/) \u2014 What rooms actually shipped, engagement by engagement
 - [About](${SITE_URL}/about/) \u2014 Biography, career path, frameworks, and credentials

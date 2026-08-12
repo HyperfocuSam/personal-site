@@ -225,8 +225,8 @@ EpisodeCard.propTypes = {
 
 const ZhMedia = () => (
   <Main
-    title="媒體"
-    description="Sam Wong 媒體出演 — 會八十嘉賓專家，討論 AI 工具、生產力與實用科技應用，分享香港 AI 顧問及企業 AI 培訓的實戰觀點。"
+    title="媒體報導 — Sam Wong 的節目訪問與演講"
+    description="Sam Wong 的媒體出演：粵語 YouTube 節目《會八十》三度擔任嘉賓專家，講 AI 工具、專注力與實用科技，面向香港觀眾。另有座談、演講與訪問記錄。"
     canonicalUrl={`${SITE_URL}/zh/media`}
     ogTitle="媒體出演 | Sam Wong"
     ogDescription="觀看 Sam Wong 在會八十的嘉賓出演，討論 AI 工具、生產力與實用科技應用。"
@@ -242,7 +242,21 @@ const ZhMedia = () => (
       { lang: 'x-default', href: `${SITE_URL}/media` },
     ]}
   >
-    <Helmet><html lang="zh-Hant" /></Helmet>
+    <Helmet>
+      <html lang="zh-Hant" />
+      <script type="application/ld+json">
+        {JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'CollectionPage',
+          name: '媒體報導 | Sam Wong',
+          url: `${SITE_URL}/zh/media/`,
+          inLanguage: 'zh-Hant',
+          description: 'Sam Wong 的媒體出演：粵語節目訪問、座談與演講記錄。',
+          isPartOf: { '@id': `${SITE_URL}/#website` },
+          about: { '@id': `${SITE_URL}/#person` },
+        })}
+      </script>
+    </Helmet>
     <article className="post field-notes-content zh" id="zh-media">
       {/* Dark hero */}
       <header className="page-hero">
@@ -290,12 +304,12 @@ const ZhMedia = () => (
           </p>
           <ul className="actions">
             <li>
-              <Link to="/media/kit" className="button">
+              <Link to="/zh/media/kit" className="button">
                 查看媒體資料包
               </Link>
             </li>
             <li>
-              <Link to="/contact" className="button-secondary">
+              <Link to="/zh/contact" className="button-secondary">
                 聯絡我
               </Link>
             </li>

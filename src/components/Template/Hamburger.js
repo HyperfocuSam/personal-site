@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Menu from 'react-burger-menu/lib/menus/slide';
-import routes from '../../data/routes';
+import { routesFor } from '../../data/routes';
 
 // Menu is imported EAGERLY on purpose. It used to be React.lazy-loaded, but
 // the nav renders on every page: during hydration the pending chunk swapped
@@ -12,6 +12,10 @@ import routes from '../../data/routes';
 
 const Hamburger = () => {
   const [open, setOpen] = useState(false);
+  // Mobile carries the Hong Kong audience — 131 of 429 sessions, and the 172
+  // visitors who arrived from a Cantonese YouTube show landed here first. The
+  // burger menu must speak the same language as the page behind it.
+  const routes = routesFor(useLocation().pathname);
 
   return (
     <div className="hamburger-container">

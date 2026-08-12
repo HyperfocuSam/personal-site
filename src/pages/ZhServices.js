@@ -5,8 +5,36 @@ import { Helmet } from 'react-helmet-async';
 import Main from '../layouts/Main';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 import servicesZh from '../data/services-zh';
+
 import testimonials from '../data/testimonials';
 import ServiceGroup from '../components/Services/ServiceGroup';
+
+// Built from src/data/services-zh.js rather than hand-written, so the catalog
+// cannot drift from what the page renders — the same pattern as Services.js.
+// The English ProfessionalService gained an offer catalog in Phase A; the
+// Chinese one, on the page that ranks #2 in Hong Kong for the commercial query,
+// still had six keys and no offers.
+const offerCatalogZh = {
+  '@type': 'OfferCatalog',
+  name: 'AI 培訓與教練服務',
+  itemListElement: servicesZh.map((service) => ({
+    '@type': 'Offer',
+    name: service.title,
+    url: `${SITE_URL}/zh/services/#${service.anchor}`,
+    availability: 'https://schema.org/InStock',
+    itemOffered: {
+      '@type': 'Service',
+      name: service.title,
+      description: service.subtitle,
+      serviceType: service.title,
+      provider: service.provider === 'Adaptig'
+        ? { '@type': 'Organization', name: 'Adaptig', url: 'https://adaptig.ai' }
+        : { '@type': 'Person', name: 'Sam Wong', url: SITE_URL },
+      areaServed: ['Hong Kong', 'Asia-Pacific'],
+      availableLanguage: ['Cantonese', 'Mandarin', 'English'],
+    },
+  })),
+};
 
 const groups = [
   {
@@ -72,8 +100,8 @@ const ZhServices = () => {
 
   return (
     <Main
-      title="AI 培訓服務 — 香港"
-      description="Sam Wong AI 培訓服務 — 企業工作坊、培訓師培訓計劃、一對一輔導，透過 Adaptig 提供，為香港企業提供 AI 培訓及 AI 顧問服務。"
+      title="AI 培訓服務 — 企業工作坊、一對一教練、導師認證"
+      description="Sam Wong 在香港提供的三種合作方式：為團隊而設的企業 AI 工作坊、為專業人士而設的一對一教練，以及 Adaptig 的導師認證計劃。粵語、英語皆可。"
       canonicalUrl={`${SITE_URL}/zh/services`}
       ogTitle="AI 培訓服務 | Sam Wong"
       ogDescription="企業工作坊、培訓師培訓計劃、一對一輔導。透過 Adaptig 提供。"
@@ -144,11 +172,13 @@ const ZhServices = () => {
               areaServed: ['Hong Kong', 'Asia-Pacific'],
               serviceType: ['AI 培訓', '企業工作坊', 'AI 輔導', '培訓師認證'],
               knowsLanguage: ['English', 'Cantonese', 'Mandarin'],
+              inLanguage: 'zh-Hant',
               address: {
                 '@type': 'PostalAddress',
                 addressLocality: 'Hong Kong',
                 addressCountry: 'HK',
               },
+              hasOfferCatalog: offerCatalogZh,
             })}
           </script>
           <script type="application/ld+json">

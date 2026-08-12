@@ -48,6 +48,16 @@ If you want slides to read aloud, no TTT program will save the session. AI train
 
 If it sounds fun: the demand is real, Hong Kong is short of people who can do this properly, and most of the hard content work is already done for you. Come see a session first.
 
+## How my own cohort runs
+
+Since I've just spent this whole piece telling you to interrogate providers, here are my answers to my own questions.
+
+Twelve sessions across six weeks, twice a week, live. Cohort #7 ran with participants split between Hong Kong and Germany, which is the normal shape — the trainer network spans multiple time zones and Adaptig delivers in 8 languages across 4 continents. Between cohorts, the Trainer Academy meets weekly and I own that session.
+
+Every session ends with a participant survey and a structured handover to the next trainer, covering group dynamics and what was actually covered. That isn't administration. It's the standard you're certified against, and it's the reason a client gets the same workshop from any trainer in the network.
+
+Everything taught has been run in front of a paying room first: 10,000+ professionals across 70+ organizations in 13 countries, plus 300 one-on-one coaching sessions. The material you get is the material I use.
+
 ---
 
-If you want the specifics of the one I run — twelve sessions over six weeks, and who it is for — that is on the [AI Train-the-Trainer certification page](/ai-train-the-trainer-hong-kong/).
+If this sounds like the right fit, [book a call](/book/) or [see the trainer track](/services/#train-the-trainer).

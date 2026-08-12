@@ -74,7 +74,11 @@
         "/zh/blog",
       "/get-started",
       "/case-notes/",
-      "/ai-train-the-trainer-hong-kong"
+      "/zh/book",
+      "/zh/case-notes",
+      "/zh/contact",
+      "/zh/speaking",
+      "/zh/media/kit"
     ],
     "skipThirdPartyRequests": true,
     "puppeteerArgs": [

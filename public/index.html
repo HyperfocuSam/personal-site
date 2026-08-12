@@ -25,7 +25,24 @@
           !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group identify setPersonProperties setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags resetGroups onFeatureFlags addFeatureFlagsHandler onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
           window.posthog.init('phc_J1HRDoTxYEByM1SpZOw8kMzF5XZfspYSW1g4h5CogZb', {
             api_host: 'https://us.i.posthog.com',
-            defaults: '2026-01-30'
+            defaults: '2026-01-30',
+            // Every page was being counted twice. Vercel serves the trailing-slash
+            // form, but a client-side <Link to="/about"> writes "/about" into the
+            // history — so /about had 43 entry sessions and /about/ had 31, and
+            // the same page appeared as two rows in every path-grouped number.
+            // `trailingSlash: true` only rewrites server requests, so this does
+            // not self-heal. Normalise here rather than in track.js: $pathname is
+            // set by PostHog's own history_change pageview, which track.js never
+            // touches. Root stays "/", and .txt/.xml paths keep their real shape.
+            sanitize_properties: function (properties) {
+              ['$pathname', '$prev_pageview_pathname'].forEach(function (key) {
+                var p = properties[key];
+                if (typeof p === 'string' && p.length > 1 && p.slice(-1) !== '/' && p.indexOf('.') === -1) {
+                  properties[key] = p + '/';
+                }
+              });
+              return properties;
+            }
           });
         });
       }());
@@ -35,30 +52,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
-    <!-- Security headers — meta-tag form (gh-pages doesn't support custom HTTP
-         headers). Only `Content-Security-Policy` and `referrer` are honoured
-         in meta; HSTS, X-Frame-Options, Permissions-Policy are HTTP-only and
-         still need a Cloudflare proxy (see output/HYPERFOCUSAM-Header-Strategy-Memo).
-         Allow-list: GA (googletagmanager + google-analytics) + PostHog +
-         Google Fonts (CSS at fonts.googleapis.com, files at fonts.gstatic.com)
-         + YouTube embeds via frame-src (/media episode players — without it
-         default-src 'self' blocks the iframes entirely).
+    <!-- THE CSP LIVES IN vercel.json, NOT HERE. Do not re-add a meta copy.
 
-         EVERY THIRD-PARTY CONVERSION SURFACE MUST BE LISTED HERE. Between
-         2026-05-15 and 2026-08-11 this policy silently killed both money
-         paths on the site: formspree.io was missing from connect-src, so the
-         contact form's fetch was refused for 88 days (0 submissions, every
-         visitor saw "Network error"), and ro.am was missing from script-src
-         and frame-src, so /book rendered an empty box. Adding a conversion
-         integration means adding its origin here AND in vercel.json, then
-         verifying against the live URL — not the green Actions run.
-         Required today: formspree.io (connect-src + form-action, the form
-         POST), ro.am (script-src for lobbylinks/embed.js, frame-src for the
-         scheduler iframe, connect-src for its callbacks).
-         `unsafe-inline` is required because the inline analytics bootstrap
-         above creates <script> nodes at runtime; tightening would require
-         nonces threaded through the CRA build. -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://*.googletagmanager.com https://us-assets.i.posthog.com https://*.posthog.com https://ro.am; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://us.i.posthog.com https://us-assets.i.posthog.com https://*.posthog.com https://formspree.io https://ro.am https://*.ro.am; frame-src https://www.youtube.com https://www.youtube-nocookie.com https://ro.am https://*.ro.am; base-uri 'self'; form-action 'self' https://formspree.io; object-src 'none'" />
+         A meta CSP and a header CSP are enforced together as an INTERSECTION,
+         so two copies mean an origin has to be added to both or it is blocked
+         by whichever one forgot it — with no error anyone would notice. That
+         exact failure ran from 2026-05-15 to 2026-08-11: formspree.io was
+         missing from connect-src and the contact form's fetch was refused for
+         88 days. Fifteen people submitted three to six times each in that
+         window and every one of them was thrown away. The meta tag was kept
+         through the Vercel cutover only until the header was proven, and this
+         is that retirement (2026-08-12).
+
+         Adding a conversion integration means editing `headers` in
+         vercel.json and verifying against the LIVE URL:
+             curl -sI https://hyperfocusam.com/contact/ | grep -i content-security-policy
+         `src/__tests__/conversionOrigins.test.js` fails the build if
+         formspree.io or ro.am ever leaves that policy. -->
     <meta name="referrer" content="strict-origin-when-cross-origin" />
 
     <!-- Primary Meta Tags (title + description managed per-page by react-helmet-async) -->

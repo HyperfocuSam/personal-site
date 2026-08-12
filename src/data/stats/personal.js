@@ -42,17 +42,17 @@ const data = [
   },
   {
     key: '',
-    label: 'Largest single program (BOCHK)',
+    label: 'Largest single program (a major Hong Kong bank)',
     value: '1,530 participants',
   },
   {
     key: '',
-    label: 'Largest simultaneous session (BOCHK)',
+    label: 'Largest simultaneous session (a major Hong Kong bank)',
     value: '617 participants',
   },
   {
     key: '',
-    label: 'Avg. satisfaction (BOCHK)',
+    label: 'Avg. satisfaction (a major Hong Kong bank)',
     value: '9.2/10',
   },
   {

@@ -70,7 +70,7 @@ const industries = [
   },
   {
     name: '零售及奢侈品',
-    clients: '周大福、an international toy company、FAO Schwarz',
+    clients: '周大福、一間國際玩具公司、FAO Schwarz',
     example:
       '與周大福合作 3 次。設計思維 + AI 結合。',
     caseStudy: '/blog/ctf-ai-design-thinking-workshop-2026',
@@ -98,7 +98,7 @@ const industries = [
   },
   {
     name: '專業服務',
-    clients: 'a global advertising group、YPO',
+    clients: '一間國際廣告集團、YPO',
     example:
       '高管簡報會和全球領袖活動。',
     caseStudy: null,
@@ -204,9 +204,13 @@ const faqItems = [
   },
   {
     q: '有沒有香港以外的培訓服務？',
+    // The bank's Chinese short name was still here. Sam's 2026-07-12 ruling
+    // anonymises it and the English pages have said "a major Hong Kong bank"
+    // since 75fa2dcd — this Chinese FAQ was missed, on the page that ranks #2
+    // in Hong Kong for the commercial query. Found 2026-08-12.
     a: '有。透過 Adaptig，Sam 擁有遍及北美、拉丁美洲、歐洲和'
       + '亞太的全球培訓師網絡。面授和線上形式都有。'
-      + '中銀的合作覆蓋了 13 個國家。',
+      + '與一間香港大型銀行的合作覆蓋了 13 個國家。',
   },
 ];
 
@@ -441,7 +445,7 @@ const ZhCorporateTraining = () => (
             ))}
           </div>
           <div style={{ textAlign: 'center', marginTop: '2rem' }}>
-            <Link to="/case-notes" className="button button--outline">
+            <Link to="/zh/case-notes" className="button button--outline">
               查看所有客戶
             </Link>
           </div>
@@ -530,7 +534,7 @@ const ZhCorporateTraining = () => (
             </footer>
           </blockquote>
           <Link
-            to="/case-notes#voices-heading"
+            to="/zh/case-notes#zh-voices-heading"
             className="button button--outline"
             style={{ marginTop: '1.5rem' }}
           >

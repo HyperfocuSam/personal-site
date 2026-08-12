@@ -16,6 +16,14 @@ const ensureTrailingSlash = (url) => {
   return query ? `${slashed}?${query}` : slashed;
 };
 
+// Approximate SERP width: CJK and full-width punctuation render at roughly
+// double the advance of a Latin glyph, so counting characters understates a
+// Chinese title by about half.
+const titleWidth = (title) => [...(title || '')].reduce(
+  (width, ch) => width + (/[ᄀ-ᅟ⺀-꓏가-힣豈-﫿︰-﹏＀-｠￠-￦]/.test(ch) ? 2 : 1),
+  0,
+);
+
 const isZhUrl = (url) => /\/zh(?:\/|$)/.test(url || '');
 
 const getOgLocale = (props) => (
@@ -38,7 +46,13 @@ const Main = (props) => (
       // suffix is what gets truncated anyway — it buys nothing and hides the last
       // words of the headline. Drop it once the headline no longer has room, and
       // keep the headline itself untouched.
-      titleTemplate={(props.title || '').length > 48 ? '%s' : '%s | Sam Wong'}
+      //
+      // Measured in DISPLAY WIDTH, not characters: a CJK glyph is about twice
+      // the width of a Latin one, so 「香港企業 AI 培訓 — Sam Wong 的實戰筆記」 is
+      // already wider than a 60-character English title while counting as 24.
+      // The old character test never fired on a Chinese page, so all six of them
+      // carried the suffix whether or not there was room for it.
+      titleTemplate={titleWidth(props.title) > 48 ? '%s' : '%s | Sam Wong'}
       defaultTitle="Sam Wong | Co-Founder, Adaptig — AI Train-the-Trainer"
       defer={false}
     >

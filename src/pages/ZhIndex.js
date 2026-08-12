@@ -13,8 +13,8 @@ import TestimonialSection from '../components/Testimonials/TestimonialSection';
 // "Sam Wong | AI 培訓專家 - 香港 | Sam Wong".
 const ZhIndex = () => (
   <Main
-    title="AI 培訓專家 - 香港"
-    description="Sam Wong 協助團隊與專業人士自信地應用 AI，透過工作坊、輔導和培訓師發展，以人為本、實用、注重成果，為香港企業提供 AI 培訓及顧問服務。"
+    title="香港企業 AI 培訓與工作坊 — Sam Wong"
+    description="Sam Wong 是 Adaptig 聯合創辦人兼學院總監，駐香港的 AI 導師培訓師。已培訓 10,000+ 位專業人士、遍及 13 個國家。企業工作坊、一對一教練、導師認證，粵語英語皆可。"
     canonicalUrl={`${SITE_URL}/zh`}
     ogTitle="Sam Wong | AI 培訓專家"
     ogDescription="幫助企業和個人自信應用 AI。企業工作坊、一對一輔導、培訓師培訓計劃。"
@@ -54,7 +54,7 @@ const ZhIndex = () => (
             周大福 5 隊在 3 小時內交付完整市場方案 · 嘉頓 6 個部門與管理層先後回訪 · 一個 400 人培訓日發展成 24 個月的 AI 學習社群
           </p>
           <p>
-            <Link to="/case-notes" className="button-ghost">
+            <Link to="/zh/case-notes" className="button-ghost">
               查看完整實績記錄（英文版）&rarr;
             </Link>
           </p>
@@ -134,7 +134,7 @@ const ZhIndex = () => (
               </Link>
             </li>
             <li>
-              <Link to="/contact" className="button-secondary">
+              <Link to="/zh/contact" className="button-secondary">
                 預約諮詢
               </Link>
             </li>

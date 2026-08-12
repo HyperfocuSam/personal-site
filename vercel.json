@@ -76,6 +76,11 @@
       "permanent": true
     },
     {
+      "source": "/ai-train-the-trainer-hong-kong/",
+      "destination": "/blog/ai-train-the-trainer-hong-kong/",
+      "permanent": true
+    },
+    {
       "source": "/projects/",
       "destination": "/about/",
       "permanent": true
