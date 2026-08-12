@@ -24,6 +24,8 @@ const titleWidth = (title) => [...(title || '')].reduce(
   0,
 );
 
+const needsSuffix = (title) => titleWidth(title) <= 48 && !/Sam Wong/.test(title || '');
+
 const isZhUrl = (url) => /\/zh(?:\/|$)/.test(url || '');
 
 const getOgLocale = (props) => (
@@ -52,7 +54,10 @@ const Main = (props) => (
       // already wider than a 60-character English title while counting as 24.
       // The old character test never fired on a Chinese page, so all six of them
       // carried the suffix whether or not there was room for it.
-      titleTemplate={titleWidth(props.title) > 48 ? '%s' : '%s | Sam Wong'}
+      //
+      // Also suppressed when the headline already says "Sam Wong" — otherwise
+      // /zh rendered 「香港企業 AI 培訓與工作坊 — Sam Wong | Sam Wong」.
+      titleTemplate={needsSuffix(props.title) ? '%s | Sam Wong' : '%s'}
       defaultTitle="Sam Wong | Co-Founder, Adaptig — AI Train-the-Trainer"
       defer={false}
     >

@@ -13,7 +13,7 @@ import TestimonialSection from '../components/Testimonials/TestimonialSection';
 // "Sam Wong | AI 培訓專家 - 香港 | Sam Wong".
 const ZhIndex = () => (
   <Main
-    title="香港企業 AI 培訓與工作坊 — Sam Wong"
+    title="香港企業 AI 培訓與工作坊"
     description="Sam Wong 是 Adaptig 聯合創辦人兼學院總監，駐香港的 AI 導師培訓師。已培訓 10,000+ 位專業人士、遍及 13 個國家。企業工作坊、一對一教練、導師認證，粵語英語皆可。"
     canonicalUrl={`${SITE_URL}/zh`}
     ogTitle="Sam Wong | AI 培訓專家"
