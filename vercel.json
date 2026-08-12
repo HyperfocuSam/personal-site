@@ -61,57 +61,57 @@
   ],
   "redirects": [
     {
-      "source": "/clients",
+      "source": "/clients/",
       "destination": "/case-notes/",
       "permanent": true
     },
     {
-      "source": "/testimonials",
+      "source": "/testimonials/",
       "destination": "/case-notes/",
       "permanent": true
     },
     {
-      "source": "/resume",
+      "source": "/resume/",
       "destination": "/about/",
       "permanent": true
     },
     {
-      "source": "/projects",
+      "source": "/projects/",
       "destination": "/about/",
       "permanent": true
     },
     {
-      "source": "/blog/bochk-banking-ai-training",
+      "source": "/blog/bochk-banking-ai-training/",
       "destination": "/blog/1500-banking-professionals-ai-adoption/",
       "permanent": true
     },
     {
-      "source": "/blog/clp-ai-agent-automation",
+      "source": "/blog/clp-ai-agent-automation/",
       "destination": "/blog/utility-company-seven-levels-ai-agents/",
       "permanent": true
     },
     {
-      "source": "/blog/playmates-toys-ai-training",
+      "source": "/blog/playmates-toys-ai-training/",
       "destination": "/blog/toy-company-takes-ai-seriously/",
       "permanent": true
     },
     {
-      "source": "/blog/garden-ai-training-three-batches",
+      "source": "/blog/garden-ai-training-three-batches/",
       "destination": "/blog/food-company-ai-workshops-three-batches/",
       "permanent": true
     },
     {
-      "source": "/blog/garden-ai-training-three-batches-tc",
+      "source": "/blog/garden-ai-training-three-batches-tc/",
       "destination": "/blog/food-company-ai-workshops-three-batches-tc/",
       "permanent": true
     },
     {
-      "source": "/blog/garden-ai-training-year-six-departments",
+      "source": "/blog/garden-ai-training-year-six-departments/",
       "destination": "/blog/food-company-year-of-ai-six-departments/",
       "permanent": true
     },
     {
-      "source": "/blog/garden-ai-training-year-six-departments-tc",
+      "source": "/blog/garden-ai-training-year-six-departments-tc/",
       "destination": "/blog/food-company-year-of-ai-six-departments-tc/",
       "permanent": true
     }
