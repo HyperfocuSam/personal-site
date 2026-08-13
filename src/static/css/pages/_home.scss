@@ -53,69 +53,102 @@
   }
 }
 
-// ─── Hero — massive centered serif on warm cream ─────────────
+// ─── Hero — split layout with photo ─────────────
 .dark-hero {
   background: _palette(surface-base);
-  padding: 16rem 1.5rem 12rem;
-  text-align: center;
+  padding: 10rem 1.5rem 8rem;
   position: relative;
   overflow: hidden;
 
   &__inner {
-    max-width: _size(content-standard);
+    max-width: _size(content-wide);
     margin: 0 auto;
-    position: relative;
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  &__content {
+    flex: 1 1 55%;
+    min-width: 0;
+  }
+
+  &__eyebrow {
+    margin-bottom: 2rem;
+
+    .fn-stamp {
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+    }
   }
 
   &__headline {
     font-family: _font(family-heading);
-    font-size: clamp(3.5rem, 2.5rem + 6vw, 8rem);
+    font-size: clamp(2.5rem, 2rem + 3vw, 4.5rem);
     font-weight: _font(weight-heading);
     color: _palette(ink);
-    line-height: 1.0;
-    letter-spacing: -0.04em;
-    margin-bottom: 2.5rem;
-
-    em {
-      font-style: italic;
-      color: _palette(text-secondary);
-      display: block;
-    }
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.5rem;
   }
 
-  &__subtitle {
+  &__subhead {
     color: _palette(text-body);
     font-size: clamp(1.05rem, 0.95rem + 0.5vw, 1.3rem);
     line-height: 1.7;
-    max-width: 520px;
-    margin: 0 auto 3.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  &__who-line {
+    margin-bottom: 2.5rem;
+
+    .fn-stamp {
+      font-size: 0.8rem;
+      color: _palette(text-secondary);
+    }
   }
 
   &__actions {
     display: flex;
-    justify-content: center;
     gap: 1rem;
     flex-wrap: wrap;
+    margin-bottom: 2rem;
   }
 
   &__cta {
     display: inline-flex;
     align-items: center;
     gap: 0.6rem;
-    background: _palette(ink);
-    color: _palette(text-on-dark);
-    padding: 1.1rem 2.75rem;
+    padding: 1.1rem 2.5rem;
     border-radius: map-get($radius, xl);
-    font-size: 1.05rem;
+    font-size: 1rem;
     font-weight: _font(weight-bold);
     text-decoration: none;
-    border: 0;
     letter-spacing: 0.01em;
-    transition: background 0.25s $ease-out;
+    transition: all 0.25s $ease-out;
+    border: 2px solid transparent;
 
-    &:hover {
-      background: _palette(ink-light);
-      color: _palette(text-on-dark);
+    &--primary {
+      background: _palette(signal);
+      color: _palette(text-on-accent);
+      border-color: _palette(signal);
+
+      &:hover {
+        background: _palette(signal-deep);
+        border-color: _palette(signal-deep);
+        color: _palette(text-on-accent);
+      }
+    }
+
+    &--secondary {
+      background: transparent;
+      border-color: _palette(ink);
+      color: _palette(ink);
+
+      &:hover {
+        background: _palette(ink);
+        color: _palette(text-on-dark);
+      }
     }
   }
 
@@ -124,41 +157,108 @@
     font-size: 1.1em;
   }
 
-  &__cta--secondary {
-    background: transparent;
-    border: 2px solid _palette(ink);
-    color: _palette(ink);
-
-    &:hover {
-      background: _palette(ink);
-      color: _palette(text-on-dark);
-    }
-  }
-
   &__cta:hover &__arrow {
     transform: translateX(4px);
   }
 
+  &__proof {
+    .fn-stamp {
+      font-size: 0.8rem;
+      line-height: 1.6;
+      display: block;
+    }
+  }
+
+  &__photo {
+    flex: 0 0 45%;
+    position: relative;
+    border-radius: map-get($radius, xl);
+    overflow: hidden;
+    box-shadow: map-get($shadow, lg);
+    aspect-ratio: 4 / 3;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  &__photo-caption {
+    position: absolute;
+    bottom: 0.75rem;
+    right: 0.75rem;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0.35rem 0.75rem;
+    border-radius: map-get($radius, md);
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+  }
+
   // Staggered entrance animation
+  &__eyebrow,
   &__headline,
-  &__subtitle,
-  &__actions {
+  &__subhead,
+  &__who-line,
+  &__actions,
+  &__proof,
+  &__photo {
     animation: hero-reveal 1s $ease-out-smooth both;
   }
 
-  &__headline   { animation-delay: 0.1s; }
-  &__subtitle   { animation-delay: 0.35s; }
-  &__actions    { animation-delay: 0.55s; }
+  &__eyebrow   { animation-delay: 0.05s; }
+  &__headline  { animation-delay: 0.15s; }
+  &__subhead   { animation-delay: 0.25s; }
+  &__who-line  { animation-delay: 0.35s; }
+  &__actions   { animation-delay: 0.45s; }
+  &__proof     { animation-delay: 0.55s; }
+  &__photo     { animation-delay: 0.2s; }
 
   @include breakpoint(medium) {
-    padding: 12rem 1.5rem 8rem;
+    padding: 8rem 1.5rem 6rem;
+
+    &__inner {
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    &__content {
+      flex: 1 1 auto;
+      text-align: left;
+    }
+
+    &__photo {
+      flex: 0 0 auto;
+      width: 100%;
+      max-width: 500px;
+      order: 1;
+    }
+
+    &__actions {
+      justify-content: flex-start;
+    }
   }
 
   @include breakpoint(small) {
-    padding: 8rem 1.25rem 5rem;
+    padding: 6rem 1.25rem 4rem;
 
-    &__subtitle {
-      margin-bottom: 2.5rem;
+    &__inner {
+      gap: 2.5rem;
+    }
+
+    &__photo {
+      max-width: 100%;
+    }
+
+    &__actions {
+      flex-direction: column;
+      width: 100%;
+
+      .dark-hero__cta {
+        width: 100%;
+        justify-content: center;
+      }
     }
   }
 }
@@ -359,11 +459,26 @@
     border-bottom: 1px solid _palette(border-subtle);
     text-decoration: none;
     color: inherit;
-    transition: color 0.15s $ease-out;
+    transition: all 0.2s $ease-out;
     position: relative;
 
     &:first-of-type {
       border-top: 1px solid _palette(border-subtle);
+    }
+
+    &--primary {
+      border-left: 3px solid _palette(signal);
+      padding-left: 2rem;
+      margin-left: -2rem;
+
+      .services-editorial__label {
+        color: _palette(signal);
+      }
+
+      @include breakpoint(small) {
+        padding-left: 1.25rem;
+        margin-left: -1.25rem;
+      }
     }
 
     &:hover .services-editorial__heading {
@@ -660,6 +775,97 @@
       width: 140px;
       height: 140px;
     }
+  }
+}
+
+// ─── Case Notes Receipt Cards ────────────────────────────────
+.home-case-notes-cards {
+  padding: 6rem 1.5rem;
+  background: _palette(surface-sunken);
+  border-top: 1px solid _palette(border-subtle);
+  border-bottom: 1px solid _palette(border-subtle);
+
+  &__heading {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    .fn-stamp {
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    @include breakpoint(medium) {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  }
+
+  @include breakpoint(small) {
+    padding: 4rem 1.25rem;
+
+    &__heading {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.case-receipt-card {
+  display: flex;
+  flex-direction: column;
+  background: _palette(surface-base);
+  border: 1px solid _palette(border-subtle);
+  border-radius: map-get($radius, lg);
+  padding: 2rem 1.75rem;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.25s $ease-out;
+  box-shadow: map-get($shadow, sm);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: map-get($shadow, md);
+    border-color: _palette(border-strong);
+  }
+
+  &__org {
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    color: _palette(amber);
+    margin-bottom: 1rem;
+  }
+
+  &__metric {
+    flex: 1;
+    font-family: _font(family-heading);
+    font-size: clamp(1.15rem, 1rem + 0.5vw, 1.4rem);
+    font-weight: _font(weight-heading);
+    color: _palette(text-primary);
+    line-height: 1.3;
+    margin: 0 0 1.25rem;
+    letter-spacing: _font(kerning-heading);
+  }
+
+  &__arrow {
+    font-size: 1.5rem;
+    color: _palette(text-secondary);
+    transition: transform 0.2s $ease-out-snappy;
+  }
+
+  &:hover &__arrow {
+    transform: translateX(4px);
+    color: _palette(ink);
+  }
+
+  @include breakpoint(small) {
+    padding: 1.75rem 1.5rem;
   }
 }
 

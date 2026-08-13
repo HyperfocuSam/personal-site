@@ -25,16 +25,11 @@ const services = [
 const ServicesEditorial = () => (
   <section className="services-editorial full-bleed">
     <div className="content-narrow">
-      {/* Single-expression text: adjacent text nodes break react-snap hydration (#418) */}
-      <h2 className="services-editorial__title">
-        {'How I Can '}
-        <em>Help</em>
-      </h2>
-      {services.map((service) => (
+      {services.map((service, index) => (
         <Link
           key={service.label}
           to={service.href}
-          className="services-editorial__item fn-entry"
+          className={`services-editorial__item fn-entry${index === 0 ? ' services-editorial__item--primary' : ''}`}
         >
           <span className="services-editorial__label fn-stamp">{service.label}</span>
           <h3 className="services-editorial__heading">{service.title}</h3>

@@ -9,7 +9,7 @@ const formatDate = (dateStr) => dayjs(dateStr).format('MMM D, YYYY');
 const LatestWriting = () => {
   const englishPosts = posts
     .filter((p) => p.language !== 'zh-Hant')
-    .slice(0, 6);
+    .slice(0, 3);
 
   return (
     <section className="latest-writing full-bleed">
