@@ -116,6 +116,11 @@ const Services = () => {
             <div className="title">
               <h1>AI Training &amp; Workshop Services</h1>
               <p>Corporate AI training in Hong Kong and across Asia-Pacific</p>
+              <p className="services-who-line">
+                <span className="fn-stamp fn-stamp--muted">
+                  Corporate workshops &amp; Train-the-Trainer via Adaptig · Coaching &amp; speaking as Sam
+                </span>
+              </p>
             </div>
             <div className="services-anchor-pills">
               <Link to="/services#organizations" className="anchor-pill">

@@ -32,14 +32,38 @@ const ZhIndex = () => (
   >
     <Helmet><html lang="zh-Hant" /></Helmet>
     <article className="post field-notes-content zh" id="zh-index">
-      {/* Dark hero */}
-      <header className="page-hero">
-        <div className="content-standard">
-          <div className="title">
-            <h1>你好。</h1>
-            <p>
-              我幫機構和專業人士把 AI 真正用進日常工作。
-              培訓、一對一輔導、培訓師發展——你要找的，都在這裡。
+      {/* Hero with split layout */}
+      <header className="page-hero page-hero--split">
+        <div className="content-wide">
+          <div className="page-hero__content">
+            <p className="page-hero__eyebrow">
+              <span className="fn-stamp fn-stamp--verified">
+                field notes · 香港 · 自 2023 年起已培訓 10,000+ 人
+              </span>
+            </p>
+            <h1>週一過後仍然有用的 AI 培訓。</h1>
+            <p className="page-hero__subhead">
+              我培訓培訓 AI 的人。為香港和亞太區團隊提供工作坊、小組培訓和培訓師培訓，
+              讓真正的行為改變發生——而非又一場演示。
+            </p>
+            <p className="page-hero__who-line">
+              <span className="fn-stamp">
+                透過 Adaptig 預約 Sam · 聯合創辦人兼學院總監
+              </span>
+            </p>
+            <div className="page-hero__actions">
+              <Link to="/zh/book" className="button">
+                預約免費通話 &rarr;
+              </Link>
+              <Link to="/zh/services" className="button-ghost">
+                看看我能如何幫助你
+              </Link>
+            </div>
+            <p className="page-hero__proof">
+              <span className="fn-stamp fn-stamp--muted">
+                周大福：3 小時內交付 5 個市場方案 · Garden：6 個部門回訪 · 
+                HKCT：一個培訓日 → 24 個月的 AI 社群
+              </span>
             </p>
           </div>
         </div>

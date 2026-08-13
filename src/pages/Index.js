@@ -87,7 +87,7 @@ const Index = () => (
       </script>
     </Helmet>
     <article className="homepage-dark field-notes" id="index">
-      {/* 1. Dark Hero — massive centered serif, single CTA */}
+      {/* 1. Hero — split layout with new copy and CTAs */}
       <HeroSection />
 
       {/* 2. Stats — understated horizontal strip */}
@@ -95,61 +95,75 @@ const Index = () => (
         <StatsBar />
       </ScrollReveal>
 
-      <section className="home-case-notes-strip" aria-labelledby="home-case-notes-heading">
-        <div className="home-case-notes-strip__inner">
-          <h2 className="home-case-notes-strip__heading" id="home-case-notes-heading">
-            <span className="fn-stamp">CASE NOTES</span>
-          </h2>
-          <p className="home-case-notes-strip__receipts">
-            {homepageReceiptFragments.join(' · ')}
-          </p>
-          <Link className="home-case-notes-strip__link" to="/case-notes/">
-            Read the case notes →
-          </Link>
-        </div>
-      </section>
-
-      {/* 3. Client Logos — infinite marquee */}
+      {/* 3. Client Logos — verified engagements marquee */}
       <ScrollReveal variant="fade-in">
         <ClientLogoBar />
       </ScrollReveal>
 
-      {/* 4. Services — single-column editorial */}
+      {/* 4. Path Split — three service cards (Workshops emphasized) */}
       <ScrollReveal variant="fade-up-long">
         <ServicesEditorial />
       </ScrollReveal>
 
-      {/* 5. Testimonials — full-width pull quotes */}
+      {/* 5. Case Notes — three receipt cards with metrics */}
+      <section className="home-case-notes-cards full-bleed" aria-labelledby="home-case-notes-heading">
+        <div className="content-narrow">
+          <h2 className="home-case-notes-cards__heading" id="home-case-notes-heading">
+            <span className="fn-stamp">CASE NOTES</span>
+          </h2>
+          <div className="home-case-notes-cards__grid">
+            <Link to="/case-notes/" className="case-receipt-card">
+              <span className="case-receipt-card__org fn-stamp">Chow Tai Fook</span>
+              <p className="case-receipt-card__metric">5 go-to-market proposals in under 3 hours</p>
+              <span className="case-receipt-card__arrow">&rarr;</span>
+            </Link>
+            <Link to="/case-notes/" className="case-receipt-card">
+              <span className="case-receipt-card__org fn-stamp">Garden (food manufacturer)</span>
+              <p className="case-receipt-card__metric">6 departments came back</p>
+              <span className="case-receipt-card__arrow">&rarr;</span>
+            </Link>
+            <Link to="/case-notes/" className="case-receipt-card">
+              <span className="case-receipt-card__org fn-stamp">HKCT</span>
+              <p className="case-receipt-card__metric">one staff day → 24-month AI community</p>
+              <span className="case-receipt-card__arrow">&rarr;</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. Testimonials — 2-3 max full-width pull quotes */}
       <ScrollReveal variant="scale-in">
         <TestimonialSection
-          testimonials={testimonials}
+          testimonials={testimonials.slice(0, 2)}
           variant="dark-pullquote"
         />
       </ScrollReveal>
 
-      {/* 6. Latest Writing — date + title list */}
+      {/* 7. Latest Writing — 3 posts */}
       <ScrollReveal variant="fade-up-long">
         <LatestWriting />
       </ScrollReveal>
 
-      {/* 7. About — photo + bio callout */}
+      {/* 8. About — photo + bio callout */}
       <ScrollReveal variant="blur-in">
         <AboutCallout />
       </ScrollReveal>
 
-      {/* 8. FAQ — question-shaped answer targets for AI discovery queries */}
-      <ScrollReveal variant="fade-up-long">
-        <HomeFAQ />
-      </ScrollReveal>
-
-      {/* 9. Email Capture — ink band for contrast */}
+      {/* 9. Playbook Capture — free lead magnet above FAQ */}
       <ScrollReveal variant="fade-up">
         <EmailCapture
-          title="Get practical AI insights — no fluff"
-          blurb="One email when I publish: workshop frameworks, adoption case studies, and tools I actually use with clients."
-          caption="no spam, field notes only"
-          variant="dark"
+          title="Free: AI Pioneer Program Playbook"
+          blurb="The 6-session structure I use with enterprise clients — champion selection, habit framework, and measurement template."
+          leadMagnet={{
+            title: 'AI Pioneer Program Playbook (PDF)',
+            url: '/downloads/ai-pioneer-program-playbook.pdf',
+          }}
         />
+      </ScrollReveal>
+
+      {/* 10. FAQ — 4 questions for AI discovery queries */}
+      <ScrollReveal variant="fade-up-long">
+        <HomeFAQ />
       </ScrollReveal>
 
       <p className="lang-toggle lang-toggle--dark">

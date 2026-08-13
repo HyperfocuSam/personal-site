@@ -1,5 +1,13 @@
 /* Services — Field Notes entries and mobile overflow containment */
 
+.services-who-line {
+  margin-top: 1rem;
+  
+  .fn-stamp {
+    font-size: 0.75rem;
+  }
+}
+
 #services.field-notes-content {
   .button {
     max-width: 100%;

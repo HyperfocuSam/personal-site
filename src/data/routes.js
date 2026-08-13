@@ -21,18 +21,20 @@ import { isZhPath } from './langPairs';
 export const EN_ROUTES = [
   { index: true, label: 'SAM WONG', path: '/' },
   { label: 'Services', path: '/services' },
-  { label: 'About', path: '/about' },
   { label: 'Case Notes', path: '/case-notes' },
+  { label: 'About', path: '/about' },
   { label: 'Blog', path: '/blog' },
+  { label: 'Speaking', path: '/speaking' },
   { label: 'Contact', path: '/contact' },
 ];
 
 export const ZH_ROUTES = [
   { index: true, label: 'SAM WONG', path: '/zh' },
   { label: '服務', path: '/zh/services' },
-  { label: '關於', path: '/zh/about' },
   { label: '案例', path: '/zh/case-notes' },
+  { label: '關於', path: '/zh/about' },
   { label: '網誌', path: '/zh/blog' },
+  { label: '演講', path: '/zh/speaking' },
   { label: '聯絡', path: '/zh/contact' },
 ];
 
