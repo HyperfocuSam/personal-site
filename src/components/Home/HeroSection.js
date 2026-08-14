@@ -41,11 +41,11 @@ const HeroSection = () => (
       </div>
       <div className="dark-hero__photo">
         <OptimizedImage
-          src="/images/home/workshop-corporate.jpg"
-          alt="Corporate AI training workshop in Hong Kong"
+          src="/images/about/sam-stage-ypo.jpg"
+          alt="Sam Wong presenting at YPO Los Angeles"
           loading="eager"
         />
-        <p className="dark-hero__photo-caption fn-stamp">hands-on workshop · hong kong</p>
+        <p className="dark-hero__photo-caption fn-stamp">keynote · ypo los angeles</p>
       </div>
     </div>
   </section>

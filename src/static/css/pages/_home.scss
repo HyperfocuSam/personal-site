@@ -170,18 +170,19 @@
   }
 
   &__photo {
-    flex: 0 0 40%;
+    flex: 0 0 38%;
     position: relative;
     border-radius: map-get($radius, xl);
     overflow: hidden;
     box-shadow: map-get($shadow, lg);
-    align-self: stretch;
-    min-height: 400px;
+    align-self: flex-start;
+    aspect-ratio: 3 / 4;
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center 20%;
       display: block;
     }
   }
@@ -234,6 +235,11 @@
       width: 100%;
       max-width: 500px;
       order: 1;
+      aspect-ratio: 16 / 9;
+
+      img {
+        object-position: center center;
+      }
     }
 
     &__actions {
@@ -340,6 +346,72 @@
     &__item:last-child {
       grid-column: 1 / -1;
     }
+  }
+}
+
+// ─── Proof strip — three equal workshop photos ────────────────
+.proof-strip {
+  padding: 4rem 1.5rem;
+  background: _palette(surface-base);
+  border-top: 1px solid _palette(border-subtle);
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: start;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.25s $ease-out;
+    position: relative;
+    aspect-ratio: 4 / 3;
+    border-radius: map-get($radius, lg);
+    overflow: hidden;
+    box-shadow: map-get($shadow, sm);
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: map-get($shadow, md);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  &__caption {
+    position: absolute;
+    bottom: 0.75rem;
+    left: 0.75rem;
+    background: rgba(255, 255, 255, 0.92);
+    padding: 0.4rem 0.85rem;
+    border-radius: map-get($radius, md);
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    color: _palette(ink);
+  }
+
+  @include breakpoint(medium) {
+    padding: 3rem 1.5rem;
+
+    &__inner {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  }
+
+  @include breakpoint(small) {
+    padding: 2.5rem 1.25rem;
   }
 }
 
