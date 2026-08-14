@@ -33,23 +33,13 @@ const HeroCarousel = ({ slides, autoAdvanceMs }) => {
     };
   }, [currentIndex, isPaused, autoAdvanceMs]);
 
-  const handleKeyDown = (e) => {
-    if (e.key === 'ArrowLeft') {
-      goToPrevious();
-    } else if (e.key === 'ArrowRight') {
-      goToNext();
-    }
-  };
-
   return (
     <div
       className="hero-carousel"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
-      onKeyDown={handleKeyDown}
       role="region"
       aria-label="Workshop photos carousel"
-      tabIndex={0}
     >
       <div className="hero-carousel__viewport">
         <div
