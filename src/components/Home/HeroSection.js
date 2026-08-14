@@ -1,6 +1,34 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import OptimizedImage from '../Template/OptimizedImage';
+import HeroCarousel from './HeroCarousel';
+
+const carouselSlides = [
+  {
+    src: '/images/home/workshop-dotai-academy.jpg',
+    alt: 'AI workshop with participants and laptops in Hong Kong',
+    caption: 'workshop · hong kong',
+  },
+  {
+    src: '/images/blog/ctf-workshop-2026.jpeg',
+    alt: 'Chow Tai Fook AI workshop with team working on laptops',
+    caption: 'chow tai fook · hong kong',
+  },
+  {
+    src: '/images/blog/arup-ai-workshop.jpg',
+    alt: 'Sam Wong presenting at Arup corporate AI training',
+    caption: 'arup · hong kong',
+  },
+  {
+    src: '/images/blog/hkct-ai-workshop.jpg',
+    alt: 'HKCT auditorium workshop with packed audience',
+    caption: 'hkct · hong kong',
+  },
+  {
+    src: '/images/blog/creativity-workshop-la.jpg',
+    alt: 'YPO Los Angeles workshop with 120 participants',
+    caption: 'ypo · los angeles',
+  },
+];
 
 const HeroSection = () => (
   <section className="dark-hero full-bleed">
@@ -24,11 +52,11 @@ const HeroSection = () => (
           </span>
         </p>
         <div className="dark-hero__actions">
-          <Link to="/book" className="dark-hero__cta dark-hero__cta--primary" data-cta="hero_book">
+          <Link to="/book/" className="dark-hero__cta dark-hero__cta--primary" data-cta="hero_book">
             {'Book a free call '}
             <span className="dark-hero__arrow">&rarr;</span>
           </Link>
-          <Link to="/services" className="dark-hero__cta dark-hero__cta--secondary" data-cta="hero_services">
+          <Link to="/services/" className="dark-hero__cta dark-hero__cta--secondary" data-cta="hero_services">
             See how I can help
           </Link>
         </div>
@@ -40,12 +68,7 @@ const HeroSection = () => (
         </p>
       </div>
       <div className="dark-hero__photo">
-        <OptimizedImage
-          src="/images/home/workshop-dotai-academy.jpg"
-          alt="AI workshop with participants and laptops in Hong Kong"
-          loading="eager"
-        />
-        <p className="dark-hero__photo-caption fn-stamp">workshop · hong kong</p>
+        <HeroCarousel slides={carouselSlides} autoAdvanceMs={6000} />
       </div>
     </div>
   </section>

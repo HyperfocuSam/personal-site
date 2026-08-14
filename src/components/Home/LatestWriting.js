@@ -19,7 +19,7 @@ const LatestWriting = () => {
           {englishPosts.map((post) => (
             <Link
               key={post.slug}
-              to={`/blog/${post.slug}`}
+              to={`/blog/${post.slug}/`}
               className="latest-writing__item"
             >
               <time
@@ -35,7 +35,7 @@ const LatestWriting = () => {
             </Link>
           ))}
         </div>
-        <Link to="/blog" className="latest-writing__more">
+        <Link to="/blog/" className="latest-writing__more">
           View all writing &rarr;
         </Link>
       </div>
