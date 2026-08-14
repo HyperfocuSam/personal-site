@@ -127,6 +127,28 @@ const Index = () => (
         />
       </ScrollReveal>
 
+      {/* 5b. Conversion band — mirror of the /zh band (ZhIndex.js). Median scroll
+          is 53% (the earlier 5% figure was a measurement artifact), so the ask
+          lands right after the social proof most visitors actually reach. */}
+      <ScrollReveal variant="fade-up">
+        <section className="section-dark section-dark--centered section-padding">
+          <div className="content-standard">
+            <ul className="actions">
+              <li>
+                <Link to="/book" className="button" data-cta="home_band_book">
+                  Book a Free 30-min Call
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className="button-secondary" data-cta="home_band_services">
+                  See How I Can Help
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </ScrollReveal>
+
       {/* 6. Latest Writing — date + title list */}
       <ScrollReveal variant="fade-up-long">
         <LatestWriting />

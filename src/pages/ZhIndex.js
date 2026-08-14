@@ -135,12 +135,12 @@ const ZhIndex = () => (
         <div className="content-standard">
           <ul className="actions">
             <li>
-              <Link to="/zh/services" className="button">
+              <Link to="/zh/services" className="button" data-cta="home_band_services">
                 查看服務選項
               </Link>
             </li>
             <li>
-              <Link to="/zh/contact" className="button-secondary">
+              <Link to="/zh/book" className="button-secondary" data-cta="home_band_book">
                 預約諮詢
               </Link>
             </li>

@@ -46,8 +46,9 @@ const groups = [
       '一間大型香港銀行 (1,530 位參加者, 9.2/10)、周大福 (第三次合作)、匯豐、an international toy company、豐田、YPO。',
     testimonial: testimonials[0],
     primaryCta: {
+      id: 'organizations',
       cta: '聯絡我們',
-      ctaLink: '/contact',
+      ctaLink: '/zh/contact',
       external: false,
     },
     band: 'section-base',
@@ -60,8 +61,9 @@ const groups = [
     socialProof: '160+ 位跨行業專業人士接受輔導。',
     testimonial: testimonials[1],
     primaryCta: {
+      id: 'one-on-one',
       cta: '預約免費諮詢',
-      ctaLink: '/book',
+      ctaLink: '/zh/book',
       external: false,
     },
     band: 'section-sunken',
@@ -75,8 +77,9 @@ const groups = [
       '加入橫跨北美、拉丁美洲、歐洲與亞太的全球網絡。',
     testimonial: testimonials[2],
     primaryCta: {
+      id: 'train-the-trainer',
       cta: '申請加入網絡',
-      ctaLink: '/contact?interest=trainer',
+      ctaLink: '/zh/contact?interest=trainer',
       external: false,
     },
     band: 'section-base',

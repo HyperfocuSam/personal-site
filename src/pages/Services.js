@@ -22,6 +22,12 @@ const groups = [
     socialProof:
       'a major Hong Kong bank, Chow Tai Fook, the food manufacturer, an international toy company, HSBC, a major Hong Kong utility, YPO.',
     testimonial: testimonials[0],
+    primaryCta: {
+      id: 'organizations',
+      cta: 'Discuss Training for Your Team',
+      ctaLink: '/contact',
+      external: false,
+    },
   },
   {
     id: 'one-on-one',
@@ -30,6 +36,12 @@ const groups = [
     subtitle: 'Personalized coaching for professionals building practical AI habits.',
     socialProof: '300 one-on-one sessions across finance, marketing, education, healthcare, and technology.',
     testimonial: testimonials[1],
+    primaryCta: {
+      id: 'one-on-one',
+      cta: 'Book a Free Discovery Call',
+      ctaLink: '/book',
+      external: false,
+    },
   },
   {
     id: 'train-the-trainer',
@@ -39,6 +51,12 @@ const groups = [
     socialProof:
       'Join a global network across North America, Latin America, Europe, and Asia-Pacific.',
     testimonial: testimonials[2],
+    primaryCta: {
+      id: 'train-the-trainer',
+      cta: 'Apply to Join the Network',
+      ctaLink: '/contact?interest=trainer',
+      external: false,
+    },
   },
 ];
 
@@ -132,7 +150,7 @@ const Services = () => {
               </Link>
             </div>
             <p className="services-hero-cta">
-              <Link to="/book" className="button">
+              <Link to="/book" className="button" data-cta="services_hero_book">
                 Book a Discovery Call
               </Link>
             </p>
@@ -161,6 +179,7 @@ const Services = () => {
                 services={services.filter((s) => s.category === groups[0].category)}
                 socialProof={groups[0].socialProof}
                 testimonial={groups[0].testimonial}
+                primaryCta={groups[0].primaryCta}
               />
             </ScrollReveal>
           </div>
@@ -188,6 +207,7 @@ const Services = () => {
                   services={services.filter((s) => s.category === group.category)}
                   socialProof={group.socialProof}
                   testimonial={group.testimonial}
+                  primaryCta={group.primaryCta}
                 />
               </ScrollReveal>
             ))}

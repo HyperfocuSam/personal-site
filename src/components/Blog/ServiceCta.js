@@ -137,10 +137,10 @@ const DEFAULT_CTA = {
 // 98 posts linked to /book. A reader could only reach the calendar via the
 // global nav. The service link stays primary because that path demonstrably
 // works; booking is added beside it as the direct route for anyone already
-// convinced. /book has no Chinese twin, so both languages point at the same
-// page — the booking flow itself is English.
+// convinced. Each language routes to its own booking page (/zh/book exists —
+// src/pages/ZhBook.js, in the sitemap).
 const BookLink = ({ isChinese }) => (
-  <Link to="/book" className="service-cta__book" data-cta="blog_cta_book">
+  <Link to={isChinese ? '/zh/book' : '/book'} className="service-cta__book" data-cta="blog_cta_book">
     {isChinese ? '或預約 30 分鐘免費通話 →' : 'or book a free 30-minute call →'}
   </Link>
 );

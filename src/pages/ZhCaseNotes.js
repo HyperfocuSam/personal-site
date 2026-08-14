@@ -220,7 +220,7 @@ const ZhCaseNotes = () => {
         )}
 
         <section className="case-notes__cta">
-          <Link className="button" to="/zh/book">預約通話</Link>
+          <Link className="button" to="/zh/book" data-cta="case_notes_book">預約通話</Link>
         </section>
       </article>
     </Main>

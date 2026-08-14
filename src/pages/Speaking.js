@@ -161,7 +161,7 @@ const Speaking = () => (
                 </Link>
               </li>
               <li>
-                <Link to="/contact?interest=speaking" className="button-secondary">
+                <Link to="/contact?interest=speaking" className="button-secondary" data-cta="speaking_contact">
                   Get in Touch
                 </Link>
               </li>

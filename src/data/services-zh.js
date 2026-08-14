@@ -36,7 +36,7 @@ const servicesZh = [
 - 座談會和問答
 - 實戰工作坊`,
     cta: '查詢演講或活動',
-    ctaLink: '/contact',
+    ctaLink: '/zh/contact',
     external: false,
     relatedPosts: [
       'hkjc-mt-ai-training',
@@ -53,7 +53,7 @@ const servicesZh = [
 
 沒有通用課程。我們從你目前的角色、工具和限制開始。`,
     cta: '了解輔導是否適合你',
-    ctaLink: '/contact',
+    ctaLink: '/zh/contact',
     external: false,
     relatedPosts: ['polyu-finance-ai-workflow'],
     tiers: [
@@ -62,7 +62,7 @@ const servicesZh = [
         title: '免費諮詢 (30 分鐘)',
         description: '無壓力的通話，確定目標和看看輔導是否適合你。',
         cta: '預約免費諮詢',
-        ctaLink: '/book',
+        ctaLink: '/zh/book',
         external: false,
       },
       {
@@ -70,7 +70,7 @@ const servicesZh = [
         title: 'AI 輔導課程 (標準)',
         description: '60-90 分鐘，專注於你的進行中項目和工作流程。',
         cta: '預約輔導課程',
-        ctaLink: '/book',
+        ctaLink: '/zh/book',
         external: false,
       },
       {
@@ -78,7 +78,7 @@ const servicesZh = [
         title: '高管 AI 顧問 (高級)',
         description: '為正在處理 AI 轉型決策的領導者提供長期顧問合作。',
         cta: '查詢高管顧問服務',
-        ctaLink: '/contact',
+        ctaLink: '/zh/contact',
         external: false,
       },
     ],
@@ -98,7 +98,7 @@ const servicesZh = [
 - 培訓師社群和授課支援
 - 認證和持續發展機會`,
     cta: '申請加入網絡',
-    ctaLink: '/contact?interest=trainer',
+    ctaLink: '/zh/contact?interest=trainer',
     external: false,
     relatedPosts: [
       'ctf-ai-design-thinking-workshop-2026',

@@ -302,7 +302,7 @@ const Media = () => (
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="button-secondary">
+                <Link to="/contact" className="button-secondary" data-cta="media_contact">
                   Get in Touch
                 </Link>
               </li>

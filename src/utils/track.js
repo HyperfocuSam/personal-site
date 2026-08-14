@@ -272,9 +272,10 @@ const classify = (anchor) => {
         props: { magnet: url.pathname.split('/').pop() },
       };
     }
-    // Only the two funnel destinations are worth an event. Ordinary internal
-    // navigation is already covered by PostHog's history_change pageviews.
-    if (/^\/(book|contact)(\/|$)/.test(url.pathname)) {
+    // Only the two funnel destinations are worth an event, in either language
+    // (/book, /contact, /zh/book, /zh/contact). Ordinary internal navigation is
+    // already covered by PostHog's history_change pageviews.
+    if (/^\/(?:zh\/)?(?:book|contact)(?:\/|$)/.test(url.pathname)) {
       return {
         event: 'cta_clicked',
         props: { destination: url.pathname },

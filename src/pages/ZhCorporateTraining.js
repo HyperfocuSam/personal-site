@@ -321,7 +321,7 @@ const ZhCorporateTraining = () => (
               landed on the H1: the card is pulled up 2.5rem to sit over the
               hero's lower edge, and without this row there was no lower edge. */}
           <p className="corporate-hero-cta">
-            <Link to="/zh/book" className="button">
+            <Link to="/zh/book" className="button" data-cta="corporate_hero_book">
               預約免費諮詢通話
             </Link>
             {' '}

@@ -16,12 +16,14 @@ const HeroSection = () => (
           field notes · hong kong · since 2023 · 10,000+ trained
         </span>
       </p>
-      {/* The entity sentence. Median homepage scroll depth is 5% of a 7,295px
-          page — about 365px — so for most visitors the hero IS the website,
-          and until now it never said who Sam is: "Sam Wong is" appeared zero
-          times on the homepage, which is why AI engines cite him on branded
-          queries only. Kept as its own <p> with a single text child; adjacent
-          text nodes break react-snap hydration (#418). */}
+      {/* The entity sentence. Median homepage scroll depth is 53% (the earlier
+          5% reading was a measurement artifact — it described the previous
+          page, not this one), but until now the hero never said who Sam is:
+          "Sam Wong is" appeared zero times on the homepage, which is why AI
+          engines cite him on branded queries only. The mid-page conversion
+          band in Index.js now carries the second ask, further down the page
+          most visitors actually reach. Kept as its own <p> with a single text
+          child; adjacent text nodes break react-snap hydration (#418). */}
       <p className="dark-hero__identity">
         Sam Wong is Co-Founder &amp; Director of Academy at Adaptig in Hong Kong.
         He trains the people who train AI.

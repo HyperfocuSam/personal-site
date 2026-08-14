@@ -329,7 +329,7 @@ const CorporateTraining = () => (
             </p>
           </div>
           <p className="corporate-hero-cta">
-            <Link to="/book" className="button">
+            <Link to="/book" className="button" data-cta="corporate_hero_book">
               Book a Free Discovery Call
             </Link>
             {' '}
@@ -680,7 +680,7 @@ const CorporateTraining = () => (
             like for your organization.
           </p>
           <p>
-            <Link to="/book" className="button">
+            <Link to="/book" className="button" data-cta="corporate_closing_book">
               Book a Free Discovery Call
             </Link>
           </p>

@@ -184,12 +184,12 @@ const ZhAbout = () => (
         <div className="content-standard">
           <ul className="actions">
             <li>
-              <Link to="/zh/services" className="button">
+              <Link to="/zh/services" className="button" data-cta="about_services">
                 查看服務選項
               </Link>
             </li>
             <li>
-              <Link to="/zh/contact" className="button-secondary">
+              <Link to="/zh/contact" className="button-secondary" data-cta="about_contact">
                 聯絡我
               </Link>
             </li>

@@ -226,7 +226,7 @@ const CaseNotes = () => {
         </section>
 
         <section className="case-notes__cta">
-          <Link className="button" to="/book">Book a call</Link>
+          <Link className="button" to="/book" data-cta="case_notes_book">Book a call</Link>
         </section>
       </article>
     </Main>

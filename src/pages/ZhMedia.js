@@ -309,7 +309,7 @@ const ZhMedia = () => (
               </Link>
             </li>
             <li>
-              <Link to="/zh/contact" className="button-secondary">
+              <Link to="/zh/contact" className="button-secondary" data-cta="media_contact">
                 聯絡我
               </Link>
             </li>

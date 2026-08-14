@@ -157,12 +157,12 @@ const ZhSpeaking = () => (
             </p>
             <ul className="actions">
               <li>
-                <Link to="/zh/book" className="button">
+                <Link to="/zh/book" className="button" data-cta="speaking_book">
                   預約通話
                 </Link>
               </li>
               <li>
-                <Link to="/zh/contact?interest=speaking" className="button-secondary">
+                <Link to="/zh/contact?interest=speaking" className="button-secondary" data-cta="speaking_contact">
                   聯絡我
                 </Link>
               </li>
