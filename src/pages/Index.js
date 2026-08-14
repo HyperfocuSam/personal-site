@@ -9,6 +9,7 @@ import TestimonialSection from '../components/Testimonials/TestimonialSection';
 import HeroSection from '../components/Home/HeroSection';
 import StatsBar from '../components/Home/StatsBar';
 import ClientLogoBar from '../components/Home/ClientLogoBar';
+import ProofStrip from '../components/Home/ProofStrip';
 import ServicesEditorial from '../components/Home/ServicesEditorial';
 import LatestWriting from '../components/Home/LatestWriting';
 import AboutCallout from '../components/Home/AboutCallout';
@@ -90,6 +91,11 @@ const Index = () => (
       {/* 3. Client Logos — verified engagements marquee */}
       <ScrollReveal variant="fade-in">
         <ClientLogoBar />
+      </ScrollReveal>
+
+      {/* 3.5. Proof — real workshop photos */}
+      <ScrollReveal variant="fade-up-long">
+        <ProofStrip />
       </ScrollReveal>
 
       {/* 4. Path Split — three service cards (Workshops emphasized) */}
