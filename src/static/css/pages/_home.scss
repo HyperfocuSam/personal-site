@@ -64,7 +64,7 @@
     max-width: _size(content-wide);
     margin: 0 auto;
     display: flex;
-    gap: 4rem;
+    gap: 3rem;
     align-items: flex-start;
   }
 
@@ -175,7 +175,8 @@
     border-radius: map-get($radius, xl);
     overflow: hidden;
     box-shadow: map-get($shadow, lg);
-    aspect-ratio: 3 / 2;
+    align-self: stretch;
+    min-height: 400px;
 
     img {
       width: 100%;
@@ -455,8 +456,9 @@
 
   &__item {
     display: block;
-    padding: 2.5rem 0;
+    padding: 2.5rem 0 2.5rem 2rem;
     border-bottom: 1px solid _palette(border-subtle);
+    border-left: 3px solid transparent;
     text-decoration: none;
     color: inherit;
     transition: all 0.2s $ease-out;
@@ -467,17 +469,10 @@
     }
 
     &--primary {
-      border-left: 3px solid _palette(signal);
-      padding-left: 2rem;
-      margin-left: -2rem;
+      border-left-color: _palette(signal);
 
       .services-editorial__label {
         color: _palette(signal);
-      }
-
-      @include breakpoint(small) {
-        padding-left: 1.25rem;
-        margin-left: -1.25rem;
       }
     }
 
@@ -488,6 +483,10 @@
     &:hover .services-editorial__arrow {
       transform: translateX(6px);
       color: _palette(ink);
+    }
+
+    @include breakpoint(small) {
+      padding-left: 1.25rem;
     }
   }
 
@@ -716,7 +715,6 @@
 // ─── About callout — photo + bio ─────────────────────────────
 .about-callout {
   padding: 8rem 1.5rem;
-  text-align: center;
   background: _palette(surface-sunken);
   border-top: 1px solid _palette(border-subtle);
 
@@ -724,18 +722,23 @@
     max-width: _size(content-narrow);
     margin: 0 auto;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    gap: 3rem;
   }
 
   &__photo {
+    flex-shrink: 0;
     width: 180px;
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
     object-position: top center;
-    margin-bottom: 2rem;
     border: 3px solid _palette(border-subtle);
+  }
+
+  &__content {
+    flex: 1;
+    min-width: 0;
   }
 
   &__name {
@@ -751,8 +754,7 @@
     color: _palette(text-body);
     font-size: map-get($type, body-large);
     line-height: 1.65;
-    max-width: 480px;
-    margin: 0 auto 2rem;
+    margin: 0 0 1.5rem;
   }
 
   &__link {
@@ -765,6 +767,19 @@
 
     &:hover {
       color: _palette(amber-light) !important;
+    }
+  }
+
+  @include breakpoint(medium) {
+    &__inner {
+      flex-direction: column;
+      text-align: center;
+      gap: 2rem;
+    }
+
+    &__photo {
+      width: 160px;
+      height: 160px;
     }
   }
 
@@ -799,6 +814,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+    align-items: start;
 
     @include breakpoint(medium) {
       grid-template-columns: 1fr;
@@ -840,6 +856,9 @@
     letter-spacing: 0.06em;
     color: _palette(amber);
     margin-bottom: 1rem;
+    min-height: 1.4em;
+    display: flex;
+    align-items: flex-start;
   }
 
   &__metric {

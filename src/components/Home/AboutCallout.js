@@ -15,15 +15,17 @@ const AboutCallout = () => (
         className="about-callout__photo"
         loading="lazy"
       />
-      <h2 className="about-callout__name">Sam Wong</h2>
-      <p className="about-callout__bio">
-        Hong Kong-based AI train-the-trainer. 10,000+ professionals trained
-        across 70+ organizations in 13 countries. I turn AI curiosity into
-        daily habits that stick.
-      </p>
-      <Link to="/about" className="about-callout__link">
-        More about me &rarr;
-      </Link>
+      <div className="about-callout__content">
+        <h2 className="about-callout__name">Sam Wong</h2>
+        <p className="about-callout__bio">
+          Hong Kong-based AI train-the-trainer. 10,000+ professionals trained
+          across 70+ organizations in 13 countries. I turn AI curiosity into
+          daily habits that stick.
+        </p>
+        <Link to="/about" className="about-callout__link">
+          More about me &rarr;
+        </Link>
+      </div>
     </div>
   </section>
 );
