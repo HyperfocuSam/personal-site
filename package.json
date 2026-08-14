@@ -71,7 +71,7 @@
   "reactSnap": {
     "include": [
       "/",
-        "/zh/blog",
+      "/zh/blog",
       "/get-started",
       "/case-notes/",
       "/zh/book",

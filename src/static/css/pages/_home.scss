@@ -281,6 +281,169 @@
   }
 }
 
+// ─── Hero Carousel ─────────────────────────────────────────
+.hero-carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  &__viewport {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: inherit;
+  }
+
+  &__slides {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s $ease-out-smooth;
+  }
+
+  &__slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+
+    picture,
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      display: block;
+    }
+  }
+
+  &__nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border: 0;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    color: _palette(ink);
+    cursor: pointer;
+    transition: all 0.2s $ease-out;
+    z-index: 10;
+    box-shadow: map-get($shadow, sm);
+
+    &:hover {
+      background: rgba(255, 255, 255, 1);
+      box-shadow: map-get($shadow, md);
+      transform: translateY(-50%) scale(1.05);
+    }
+
+    &:focus {
+      outline: 2px solid _palette(signal);
+      outline-offset: 2px;
+    }
+
+    &--prev {
+      left: 0.75rem;
+    }
+
+    &--next {
+      right: 0.75rem;
+    }
+
+    @include breakpoint(small) {
+      width: 2rem;
+      height: 2rem;
+      font-size: 1rem;
+
+      &--prev {
+        left: 0.5rem;
+      }
+
+      &--next {
+        right: 0.5rem;
+      }
+    }
+  }
+
+  &__dots {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+    z-index: 10;
+  }
+
+  &__dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.2s $ease-out;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.8);
+      transform: scale(1.2);
+    }
+
+    &:focus {
+      outline: 2px solid _palette(signal);
+      outline-offset: 2px;
+    }
+
+    &--active {
+      background: rgba(255, 255, 255, 0.95);
+      width: 1.25rem;
+      border-radius: map-get($radius, pill);
+    }
+  }
+
+  &__caption {
+    position: absolute;
+    bottom: 0.75rem;
+    right: 0.75rem;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0.35rem 0.75rem;
+    border-radius: map-get($radius, md);
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    color: _palette(ink);
+    z-index: 10;
+    transition: opacity 0.3s $ease-out;
+  }
+
+  @include breakpoint(small) {
+    &__caption {
+      bottom: 0.5rem;
+      right: 0.5rem;
+      font-size: 0.65rem;
+      padding: 0.3rem 0.65rem;
+    }
+
+    &__dots {
+      bottom: 2rem;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-carousel__slides {
+    transition: none;
+  }
+
+  .hero-carousel__nav,
+  .hero-carousel__dot {
+    transition: none;
+  }
+}
+
 // ─── Stats strip — understated horizontal metrics ────────────
 .stats-strip {
   background: _palette(surface-base);

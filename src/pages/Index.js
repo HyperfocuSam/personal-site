@@ -192,7 +192,7 @@ const Index = () => (
       </ScrollReveal>
 
       <p className="lang-toggle lang-toggle--dark">
-        <Link to="/zh">&#x4E2D;&#x6587;&#x7248;&#x672C;</Link>
+        <Link to="/zh/">&#x4E2D;&#x6587;&#x7248;&#x672C;</Link>
       </p>
     </article>
   </Main>
