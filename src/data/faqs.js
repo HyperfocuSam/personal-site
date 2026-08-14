@@ -17,7 +17,7 @@ export const servicesFaqs = [
   },
   {
     q: 'Who are Sam Wong\'s typical clients for AI training?',
-    a: 'Sam Wong works with enterprises across banking, retail, education, engineering, tourism, and technology sectors. Notable clients include a major Hong Kong bank with 1,530 participants across 13 countries, Chow Tai Fook (three repeat engagements), Hong Kong Jockey Club, HSBC, Arup, PolyU, Mattel, Toyota, and YPO.',
+    a: 'Sam Wong works with enterprises across banking, retail, education, engineering, tourism, and technology sectors. Notable clients include a major Hong Kong bank with 1,530 participants across 13 countries, Chow Tai Fook (three repeat engagements), Hong Kong Jockey Club, HSBC, Arup, PolyU, and YPO.',
   },
   {
     q: 'What results can teams expect from corporate AI workshops?',
@@ -41,7 +41,7 @@ export const servicesFaqs = [
   },
   {
     q: 'How much does corporate AI training cost in Hong Kong?',
-    a: 'Corporate training typically runs HKD 15,000–50,000 per session or day, depending on format and depth — contact me for a scoped quote. Sam Wong offers half-day and full-day workshops, multi-session Pioneer Programs (typically 6 sessions over 6 weeks), and executive advisory packages. Some programs may be eligible for Hong Kong government funding schemes.',
+    a: 'Every engagement is quoted after a free 30-minute discovery call, because scope depends on headcount, language, delivery mode, and how much follow-through the organization wants. Sam Wong offers half-day and full-day workshops, multi-session Pioneer Programs (typically 6 sessions over 6 weeks), and executive advisory packages. Some programs may be eligible for Hong Kong government funding such as NITTP, which matches 1:1 up to HKD 250,000 per company per financial year.',
   },
   {
     q: 'Are AI training workshops available in Cantonese?',
@@ -64,7 +64,7 @@ export const aboutFaqs = [
   },
   {
     q: 'What organizations does Sam Wong work with?',
-    a: 'Sam Wong works with Adaptig (Adaptig Group Limited), a global AI trainer network he co-founded spanning North America, Latin America, Europe, and Asia-Pacific. His enterprise clients include a major Hong Kong bank, Chow Tai Fook, Hong Kong Jockey Club, HSBC, Arup, PolyU, Mattel, Toyota, China Travel Service, and HKCT.',
+    a: 'Sam Wong works with Adaptig (Adaptig Group Limited), a global AI trainer network he co-founded spanning North America, Latin America, Europe, and Asia-Pacific. His enterprise clients include a major Hong Kong bank, Chow Tai Fook, Hong Kong Jockey Club, HSBC, Arup, PolyU, China Travel Service, and HKCT.',
   },
   {
     q: 'What is Sam Wong\'s training approach?',

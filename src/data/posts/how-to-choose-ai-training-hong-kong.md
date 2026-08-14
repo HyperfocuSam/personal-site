@@ -4,7 +4,7 @@ If you're an HR or L&D leader in Hong Kong shopping for AI training, you've prob
 
 The problem isn't finding AI training. It's finding AI training that actually changes how your team works.
 
-I've delivered over 180 workshops across 70+ organizations and trained 10,000+ professionals on AI adoption. Full disclosure: I sell training too, so discount accordingly. What follows is what I've seen work and fail from the inside, across banking, retail, engineering, education, and tourism -- an honest framework for evaluating your options. Once you have a shortlist, [these five questions](/blog/five-questions-corporate-ai-training-hong-kong) will sort the finalists.
+I've trained 10,000+ professionals across 70+ organizations on AI adoption. Full disclosure: I sell training too, so discount accordingly. What follows is what I've seen work and fail from the inside, across banking, retail, engineering, education, and tourism -- an honest framework for evaluating your options. Once you have a shortlist, [these five questions](/blog/five-questions-corporate-ai-training-hong-kong) will sort the finalists.
 
 ## The Options at a Glance
 
@@ -14,7 +14,7 @@ I've delivered over 180 workshops across 70+ organizations and trained 10,000+ p
 | **Global training firms**<br>NobleProg, Coursera for Business, LinkedIn Learning, Udemy Business | HK$2,000-8,000 online; HK$15,000-40,000 in person | Standardised coverage across offices | Local context, Cantonese delivery, PDPO framing |
 | **Local consulting firms**<br>Boutique AI transformation consultancies | HK$50,000-200,000+ per engagement | Executive alignment and strategy | Sometimes the hands-on training itself |
 | **Government-subsidised**<br>HKPC Academy, HKMA, ERB providers, NITTP-registered courses | Heavily subsidised, sometimes free | Cost-conscious SMEs | Speed and customisation |
-| **Practitioner-led**<br>Independent trainers and small specialist firms — this is where I sit | HK$15,000-80,000+ per engagement | Behaviour change tied to real work | Brand recognition, academic credentials, scale |
+| **Practitioner-led**<br>Independent trainers and small specialist firms | HK$15,000-80,000+ per engagement | Behaviour change tied to real work | Brand recognition, academic credentials, scale |
 
 Most companies need more than one of these. The rest of this post is how to tell which, and the questions that sort providers inside each category.
 

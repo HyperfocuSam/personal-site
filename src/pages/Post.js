@@ -119,7 +119,7 @@ PullQuote.defaultProps = {
 
 const Post = () => {
   const { slug } = useParams();
-  const markdown = postContent[slug] ?? '';
+  const markdown = (postContent[slug] ?? '').replace(/^# [^\n]+\n+/, '');
 
   const postIndex = posts.findIndex((p) => p.slug === slug);
   const post = posts[postIndex];

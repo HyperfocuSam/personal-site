@@ -26,11 +26,13 @@ The HK$50 million is for public AI literacy -- not corporate training. If you're
 
 **TVP is gone.** The Technology Voucher Programme, which many companies used to fund technology adoption projects (including training), stopped accepting applications after December 2024. It has not been renewed.
 
-**BUD Fund is the closest replacement.** An additional HK$200 million was injected into the BUD Dedicated Fund, with the per-company cap raised to HK$150,000. This can subsidize AI adoption for SMEs, but the scope is different from TVP.
+**NITTP is the one direct training subsidy.** The New Industrialisation and Technology Training Programme (formerly RTTP) matches course fees 1:1 up to HK$250,000 per enterprise per financial year, for courses registered with the VTC. It is the only scheme that pays for training as training — details in [the buyer's guide](/blog/how-to-choose-ai-training-hong-kong).
 
-**No dedicated corporate AI training subsidy.** Unlike Singapore's SkillsFuture program, which directly subsidizes corporate training, Hong Kong's 2026 measures focus on public literacy and institutional programs rather than private-sector workforce development.
+**BUD Fund is the closest replacement — read the caps carefully.** The BUD Dedicated Fund's cumulative ceiling is HK$7 million per company; the HK$150,000 figure often quoted is the per-application cap on the fast-track Easy BUD route. BUD funds branding, upgrading and market-development projects, so training can sit inside a funded project but not stand alone — and since 15 June 2026 it carries targeted support for projects involving AI elements.
 
-Several industry groups have noted that HK$50 million is "far from adequate" for the scale of transformation needed. For context, I trained 1,530 a major Hong Kong bank staff across 13 countries in a single engagement. HK$50 million spread across the entire population is a signal of intent, not a training budget.
+**Beyond NITTP, no broad corporate AI training subsidy.** Unlike Singapore's SkillsFuture program, which directly subsidizes corporate training, Hong Kong's 2026 measures focus on public literacy and institutional programs rather than private-sector workforce development.
+
+Several industry groups have noted that HK$50 million is "far from adequate" for the scale of transformation needed. For context, a single engagement for a major Hong Kong bank trained 1,530 staff across 13 countries. HK$50 million spread across the entire population is a signal of intent, not a training budget.
 
 ## What This Means for Your Company
 

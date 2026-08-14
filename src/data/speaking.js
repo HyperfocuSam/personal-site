@@ -124,7 +124,7 @@ export const engagements = [
   {
     id: 'masterclass',
     year: '2025',
-    org: 'a local business publication Master Class',
+    org: 'Master Class — a local business publication',
     title: 'Vibe Marketing & AI Employee Mindset',
     description: 'Co-created with a local business publication. Covered the shift from tool awareness to daily AI habit-building.',
     stat: null,

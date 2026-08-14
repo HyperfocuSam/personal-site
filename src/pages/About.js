@@ -287,7 +287,7 @@ const About = () => (
         <div className="content-wide">
           <ScrollReveal variant="scale-in">
             <TestimonialSection
-              title="What leaders say"
+              title="What participants say"
               subtitle="Voices from the professionals I have trained and coached."
               testimonials={testimonials}
               limit={2}

@@ -20,7 +20,7 @@ const groups = [
     title: 'For Organizations',
     subtitle: 'Workshops, training, and events that move teams from interest to real adoption.',
     socialProof:
-      'a major Hong Kong bank, Chow Tai Fook, the food manufacturer, an international toy company, HSBC, a major Hong Kong utility, YPO.',
+      'Chow Tai Fook, HSBC, YPO — plus a major Hong Kong bank, a leading Hong Kong food manufacturer, an international toy company, and a major Hong Kong utility.',
     testimonial: testimonials[0],
     primaryCta: {
       id: 'organizations',

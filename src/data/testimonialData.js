@@ -6,7 +6,7 @@ const testimonialData = {
   stats: {
     satisfaction: '9.2/10',
     satisfactionSource: 'a major Hong Kong bank',
-    participantsServed: '1,500+',
+    participantsServed: '1,530',
     enterpriseClients: '70+',
   },
 
@@ -110,7 +110,7 @@ const testimonialData = {
       attribution: 'Banking Professional — a major Hong Kong bank',
       category: 'corporate',
       featured: true,
-      stat: '9.2/10 satisfaction across 1,500+ participants in 13 countries',
+      stat: '9.2/10 satisfaction across 1,530 participants in 13 countries',
     },
     {
       quote:

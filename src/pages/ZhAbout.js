@@ -163,8 +163,8 @@ const ZhAbout = () => (
       <section className="section-sunken section-padding">
         <div className="content-wide">
           <TestimonialSection
-            title="領導者怎麼說"
-            subtitle="和我合作過的 CEO 和創辦人的評價。"
+            title="學員怎麼說"
+            subtitle="受訓學員與輔導對象的真實回饋。"
             testimonials={testimonials}
             limit={2}
           />

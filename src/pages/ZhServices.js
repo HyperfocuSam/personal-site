@@ -8,6 +8,8 @@ import servicesZh from '../data/services-zh';
 
 import testimonials from '../data/testimonials';
 import ServiceGroup from '../components/Services/ServiceGroup';
+import FaqSection from '../components/FaqSection/FaqSection';
+import { zhServicesFaqs } from '../data/faqs-zh';
 
 // Built from src/data/services-zh.js rather than hand-written, so the catalog
 // cannot drift from what the page renders — the same pattern as Services.js.
@@ -43,7 +45,7 @@ const groups = [
     title: '企業服務',
     subtitle: '工作坊、培訓與活動，推動團隊由興趣走向真正應用。',
     socialProof:
-      '一間大型香港銀行 (1,530 位參加者, 9.2/10)、周大福 (第三次合作)、匯豐、an international toy company、豐田、YPO。',
+      '周大福（第三次合作）、匯豐、YPO——加上一間大型香港銀行（1,530 位參加者、滿意度 9.2/10）及一間國際玩具公司。',
     testimonial: testimonials[0],
     primaryCta: {
       id: 'organizations',
@@ -58,7 +60,7 @@ const groups = [
     category: 'individuals',
     title: '個人服務',
     subtitle: '個人化輔導，助專業人士養成實用的 AI 習慣。',
-    socialProof: '160+ 位跨行業專業人士接受輔導。',
+    socialProof: '300 節一對一輔導，橫跨金融、市場推廣、教育及醫療。',
     testimonial: testimonials[1],
     primaryCta: {
       id: 'one-on-one',
@@ -184,55 +186,18 @@ const ZhServices = () => {
               hasOfferCatalog: offerCatalogZh,
             })}
           </script>
-          <script type="application/ld+json">
-            {JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'FAQPage',
-              mainEntity: [
-                {
-                  '@type': 'Question',
-                  name: 'Sam Wong 提供哪些類型的 AI 培訓？',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'Sam Wong 透過 Adaptig 提供企業 AI 工作坊、多節 AI Pioneer Program、一對一 AI 輔導、培訓師認證計劃，以及主題演講與活動。服務涵蓋企業、個人及有志成為 AI 培訓師的專業人士。',
-                  },
-                },
-                {
-                  '@type': 'Question',
-                  name: '香港企業 AI 培訓的收費是多少？',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: '企業培訓一般 HKD 15,000–50,000 一節／一天，視乎形式與深度——歡迎聯絡索取正式報價。Sam Wong 提供半日及全日工作坊、多節 Pioneer Program（通常 6 節、歷時 6 星期）、以及高管顧問服務。部分計劃可能符合香港政府資助計劃資格。',
-                  },
-                },
-                {
-                  '@type': 'Question',
-                  name: 'AI 培訓工作坊是否有廣東話版本？',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: '有。Sam Wong 以英語和廣東話提供 AI 培訓，確保香港團隊無論語言偏好都可以參與。教材可以提供英文、繁體中文或雙語版本。',
-                  },
-                },
-                {
-                  '@type': 'Question',
-                  name: 'Sam Wong 在香港為哪些行業提供 AI 培訓？',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'Sam Wong 的 AI 培訓覆蓋銀行及金融業（一間大型香港銀行、匯豐）、零售及奢侈品（周大福、an international toy company）、工程（奧雅納、一間香港公用事業公司）、教育（理工大學、HKCT）、旅遊（香港賽馬會）及專業服務。工作坊內容根據每個行業的工作流程、合規要求及實際用途度身定制。',
-                  },
-                },
-                {
-                  '@type': 'Question',
-                  name: '企業 AI 工作坊可以預期哪些效果？',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: '工作坊平均滿意度達 9.2/10。重點是行為改變而非工具認知——團隊學會將 AI 融入日常工作流程。多節 Pioneer Program 參加者平均每週透過 AI 輔助工作流程設計節省 5-8 小時。',
-                  },
-                },
-              ],
-            })}
-          </script>
         </Helmet>
+
+        {/* Visible FAQ block + FAQPage schema, from one array. This page
+            previously shipped the FAQPage schema below with no matching
+            visible content — the same defect faqs.js was created to fix on
+            the English side. */}
+        <FaqSection
+          faqs={zhServicesFaqs}
+          id="zh-services-faq"
+          title="常見問題"
+          path="/zh/services/"
+        />
 
         <p className="lang-toggle">
           <Link to="/services">View in English</Link>

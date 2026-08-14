@@ -4,7 +4,7 @@ const services = [
     category: 'organizations',
     anchor: 'organizations',
     title: 'Adaptig Workshops',
-    subtitle: 'From unsure to unstoppable',
+    subtitle: 'From first prompts to daily habits',
     provider: 'Adaptig',
     description: `Best for leadership teams and departments that need AI adoption, not just awareness.
 
@@ -50,7 +50,7 @@ const services = [
     anchor: 'one-on-one',
     title: '1-1 Coaching Paths',
     subtitle: 'Your goals, your pace, your real projects',
-    description: `Best for professionals who want direct support applying AI to real work. Over 160 individuals coached across finance, marketing, education, and healthcare.
+    description: `Best for professionals who want direct support applying AI to real work. Over 300 one-on-one sessions across finance, marketing, education, and healthcare.
 
 No generic curriculum. We start from your current role, tools, and constraints.`,
     cta: 'Talk About Coaching Fit',

@@ -60,7 +60,7 @@ At current Copilot pricing (approximately HK$230/user/month for Microsoft 365 E3
 
 A structured training program that moves adoption from 10% to 60-70% doesn't just pay for itself -- it turns an existing cost center into a productivity multiplier.
 
-For Hong Kong companies exploring government support, the [BUD Fund](/blog/hk-2026-budget-ai-training) can subsidize up to HK$150,000 per company for technology adoption projects, and the RTTP covers up to two-thirds of technology training costs.
+For Hong Kong companies exploring government support, the NITTP (formerly RTTP) matches training costs 1:1 up to HK$250,000 per company per financial year for VTC-registered courses, and the [BUD Fund](/blog/hk-2026-budget-ai-training) — HK$7 million cumulative per company, with fast-track Easy BUD applications capped at HK$150,000 each — can cover training that sits inside a wider upgrading project. See the [funding section of the buyer's guide](/blog/how-to-choose-ai-training-hong-kong) for what changed in 2025-26.
 
 ## Getting Started
 

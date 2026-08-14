@@ -108,7 +108,7 @@ EmailCapture.propTypes = {
 
 EmailCapture.defaultProps = {
   title: 'Stay in the loop',
-  blurb: 'Occasional insights on AI adoption. No spam, no hype.',
+  blurb: 'One or two emails a month on what actually makes AI adoption work. Unsubscribe anytime.',
   caption: '',
   leadMagnet: null,
   variant: 'default',

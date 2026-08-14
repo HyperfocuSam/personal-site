@@ -22,8 +22,8 @@ const topics = [
     desc: 'A 4-stage framework for enterprise AI adoption, and why tool training alone doesn\'t move organizations forward.',
   },
   {
-    title: 'What training 3,000 professionals taught me about AI adoption',
-    desc: 'Real patterns from working with a major Hong Kong bank (1,500 people, 13 countries), Chow Tai Fook, HKJC, and others.',
+    title: 'What training 10,000+ professionals taught me about AI adoption',
+    desc: 'Real patterns from working with a major Hong Kong bank (1,530 participants, 13 countries), Chow Tai Fook, HKJC, and others.',
   },
   {
     title: 'The hidden features in AI tools that most users never find',
@@ -43,9 +43,7 @@ const clients = [
   'PolyU',
   'HKCT',
   'China Travel Service',
-  'Mattel',
   'HSBC',
-  'Toyota',
   'YPO',
 ];
 

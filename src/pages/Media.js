@@ -235,11 +235,11 @@ const Media = () => (
           <ScrollReveal variant="fade-up-long" stagger={120}>
             <div className="card-grid cols-2">
               <div className="card fn-card">
-                <h4>a local business publication Master Class</h4>
+                <h4>Master Class with a business publication</h4>
                 <p>
-                  DotAI invited to co-create a Master Class
-                  with a local business publication on Vibe
-                  Marketing and AI employee mindset.
+                  DotAI was invited to co-create a Master Class with
+                  a local business publication, covering Vibe
+                  Marketing and the AI-employee mindset.
                 </p>
               </div>
               <div className="card fn-card">

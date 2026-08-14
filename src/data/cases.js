@@ -9,7 +9,7 @@ const cases = [
     org: 'a major Hong Kong bank',
     title: 'Multi-session corporate AI training program',
     type: 'Corporate training',
-    scale: '1,500+ banking professionals across 13 countries',
+    scale: '1,530 banking professionals across 13 countries',
     receipts: ['9.2/10 average satisfaction', '5 sessions', '"Finally, AI training that\'s actually useful!" — participant'],
     summary: 'A multi-session program designed and delivered for banking teams — prompt craft applied to real banking workflows, measured after every session.',
     blogSlug: '1500-banking-professionals-ai-adoption',

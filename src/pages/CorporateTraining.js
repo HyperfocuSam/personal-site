@@ -175,9 +175,9 @@ const methodologies = [
 const faqItems = [
   {
     q: 'How much does corporate AI training cost in Hong Kong?',
-    a: 'Corporate training typically runs HKD 15,000–50,000 per'
-      + ' session or day, depending on format and depth — contact me'
-      + ' for a scoped quote. Half-day awareness workshops, full-day'
+    a: 'Every engagement is quoted after a free 30-minute discovery'
+      + ' call — scope depends on headcount, language, and'
+      + ' follow-through. Half-day awareness workshops, full-day'
       + ' productivity sessions, and multi-week Pioneer Programs are'
       + ' all available. Some programs may qualify for NITTP, which'
       + ' matches 1:1 up to HKD 250,000 per company per financial'
@@ -397,10 +397,10 @@ const CorporateTraining = () => (
           <p>
             After training 10,000+ professionals across 70+
             organizations, the pattern is clear: one-off
-            sessions produce awareness, not adoption. People forget
-            70% of new information within 24 hours. The fix
-            isn&rsquo;t better content &mdash; it&rsquo;s a
-            different structure.
+            sessions produce awareness, not adoption. The Ebbinghaus
+            forgetting curve says people forget roughly 70% of new
+            information within 24 hours. The fix isn&rsquo;t better
+            content &mdash; it&rsquo;s a different structure.
           </p>
           <p>
             My approach starts from your team&rsquo;s actual workflows

@@ -53,7 +53,7 @@ Hong Kong has now codified this same gap into education policy: the government's
 
 ## The Pattern
 
-After 200+ sessions across six countries, the pattern is always the same:
+Session after session, across companies and countries, the pattern is the same:
 
 **One-off training:** People are excited during the workshop. They try the tool for a week. They hit a friction point. No one is there to help. They revert.
 
