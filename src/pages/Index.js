@@ -16,6 +16,8 @@ import AboutCallout from '../components/Home/AboutCallout';
 import HomeFAQ from '../components/Home/HomeFAQ';
 import EmailCapture from '../components/EmailCapture/EmailCapture';
 import ScrollReveal from '../components/ScrollReveal';
+import OptimizedImage from '../components/Template/OptimizedImage';
+import ScaleInterlude from '../components/Home/ScaleInterlude';
 
 const Index = () => (
   <Main
@@ -110,20 +112,40 @@ const Index = () => (
             <span className="fn-stamp">CASE NOTES</span>
           </h2>
           <div className="home-case-notes-cards__grid">
-            <Link to="/case-notes/" className="case-receipt-card">
-              <span className="case-receipt-card__org fn-stamp">Chow Tai Fook</span>
-              <p className="case-receipt-card__metric">5 go-to-market proposals in under 3 hours</p>
-              <span className="case-receipt-card__arrow">&rarr;</span>
+            <Link to="/case-notes/" className="case-receipt-card case-receipt-card--with-photo">
+              <div className="case-receipt-card__photo">
+                <OptimizedImage
+                  src="/images/blog/ctf-workshop-2026.jpeg"
+                  alt="Chow Tai Fook team workshop"
+                  loading="lazy"
+                />
+              </div>
+              <div className="case-receipt-card__content">
+                <span className="case-receipt-card__org fn-stamp">Chow Tai Fook</span>
+                <p className="case-receipt-card__metric">5 go-to-market proposals in under 3 hours</p>
+                <span className="case-receipt-card__arrow">&rarr;</span>
+              </div>
             </Link>
-            <Link to="/case-notes/" className="case-receipt-card">
-              <span className="case-receipt-card__org fn-stamp">Garden (food manufacturer)</span>
-              <p className="case-receipt-card__metric">6 departments came back</p>
-              <span className="case-receipt-card__arrow">&rarr;</span>
+            <Link to="/case-notes/" className="case-receipt-card case-receipt-card--text-only">
+              <div className="case-receipt-card__content">
+                <span className="case-receipt-card__org fn-stamp">Garden (food manufacturer)</span>
+                <p className="case-receipt-card__metric">6 departments came back</p>
+                <span className="case-receipt-card__arrow">&rarr;</span>
+              </div>
             </Link>
-            <Link to="/case-notes/" className="case-receipt-card">
-              <span className="case-receipt-card__org fn-stamp">HKCT</span>
-              <p className="case-receipt-card__metric">one staff day → 24-month AI community</p>
-              <span className="case-receipt-card__arrow">&rarr;</span>
+            <Link to="/case-notes/" className="case-receipt-card case-receipt-card--with-photo">
+              <div className="case-receipt-card__photo">
+                <OptimizedImage
+                  src="/images/blog/hkct-ai-workshop.jpg"
+                  alt="HKCT auditorium workshop with packed audience"
+                  loading="lazy"
+                />
+              </div>
+              <div className="case-receipt-card__content">
+                <span className="case-receipt-card__org fn-stamp">HKCT</span>
+                <p className="case-receipt-card__metric">one staff day → 24-month AI community</p>
+                <span className="case-receipt-card__arrow">&rarr;</span>
+              </div>
             </Link>
           </div>
         </div>
@@ -135,6 +157,11 @@ const Index = () => (
           testimonials={testimonials.slice(0, 2)}
           variant="dark-pullquote"
         />
+      </ScrollReveal>
+
+      {/* 6.5. Scale Interlude — one wide room photo showing reach */}
+      <ScrollReveal variant="fade-in">
+        <ScaleInterlude />
       </ScrollReveal>
 
       {/* 7. Latest Writing — 3 posts */}
