@@ -65,11 +65,11 @@
     margin: 0 auto;
     display: flex;
     gap: 4rem;
-    align-items: center;
+    align-items: flex-start;
   }
 
   &__content {
-    flex: 1 1 55%;
+    flex: 1 1 60%;
     min-width: 0;
   }
 
@@ -84,11 +84,11 @@
 
   &__headline {
     font-family: _font(family-heading);
-    font-size: clamp(2.5rem, 2rem + 3vw, 4.5rem);
+    font-size: clamp(2rem, 1.5rem + 2vw, 3.25rem);
     font-weight: _font(weight-heading);
     color: _palette(ink);
-    line-height: 1.1;
-    letter-spacing: -0.03em;
+    line-height: 1.25;
+    letter-spacing: -0.015em;
     margin-bottom: 1.5rem;
   }
 
@@ -170,12 +170,12 @@
   }
 
   &__photo {
-    flex: 0 0 45%;
+    flex: 0 0 40%;
     position: relative;
     border-radius: map-get($radius, xl);
     overflow: hidden;
     box-shadow: map-get($shadow, lg);
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 3 / 2;
 
     img {
       width: 100%;
