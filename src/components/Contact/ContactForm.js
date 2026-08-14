@@ -130,6 +130,9 @@ const ContactForm = ({ initialInterest, placement, language }) => {
           email,
           interest,
           message,
+          // Drives the auto-reply's language server-side; the value is the
+          // page's language prop, so /contact and /zh/contact differ.
+          language,
           // Read straight off the DOM node: a bot that fills the field never
           // dispatches React's onChange, so component state would miss it.
           _gotcha: (gotchaRef.current && gotchaRef.current.value) || '',
@@ -200,6 +203,10 @@ const ContactForm = ({ initialInterest, placement, language }) => {
           autoComplete="off"
           aria-hidden="true"
         />
+
+        {/* Carries the page language into the native no-JS POST. Rendered
+            unconditionally with a per-page-constant value — hydration-safe. */}
+        <input type="hidden" name="language" value={language} />
 
         <label className="contact-form__field" htmlFor="name">
           <span className="contact-form__field-label">{t.name}</span>

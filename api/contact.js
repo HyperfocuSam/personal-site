@@ -15,7 +15,12 @@
 //                   Resend's shared onboarding sender, which may only deliver
 //                   to the account owner's address. Switch to a verified
 //                   hyperfocusam.com sender once the domain's DKIM records
-//                   are live in Resend, and only then add a lead auto-reply.
+//                   are live in Resend.
+//   CONTACT_AUTOREPLY_FROM  unset = no auto-reply (the gate). Set it to a
+//                   verified sender (e.g. "Sam Wong <hello@hyperfocusam.com>")
+//                   ONLY after (a) the domain verifies in Resend and (b) Sam
+//                   approved the auto-reply copy below. An auto-reply from an
+//                   unverified sender would fail per-lead, silently.
 
 const RESEND_API = 'https://api.resend.com/emails';
 
@@ -71,6 +76,7 @@ module.exports = async (req, res) => {
   const email = field(body, 'email', 320);
   const interest = field(body, 'interest', 100);
   const message = field(body, 'message', 5000);
+  const language = field(body, 'language', 10) === 'zh-Hant' ? 'zh-Hant' : 'en';
 
   // Honeypot, same contract Formspree had: a filled _gotcha is a bot, and bots
   // get a convincing success so they don't retry. They outnumbered humans on
@@ -124,6 +130,59 @@ module.exports = async (req, res) => {
     const detail = await upstream.text().catch(() => '');
     console.error('resend_send_failed', upstream.status, detail.slice(0, 500));
     return res.status(502).json({ error: 'Could not send your message. Please try again.' });
+  }
+
+  // Instant acknowledgment to the lead. Best-effort by design: the lead is
+  // already in Sam's inbox at this point, so an auto-reply failure must never
+  // turn a captured lead into a visitor-facing error.
+  const autoFrom = process.env.CONTACT_AUTOREPLY_FROM;
+  if (autoFrom) {
+    const zh = language === 'zh-Hant';
+    const autoreply = {
+      from: autoFrom,
+      to: [email],
+      reply_to: [process.env.CONTACT_TO || 'sam@adaptig.com'],
+      subject: zh ? '收到你的訊息 — Sam Wong' : 'Got your message — Sam Wong',
+      text: zh
+        ? [
+          `${name}，你好：`,
+          '',
+          '多謝你的訊息，已經收到，我會在 24 小時內回覆。',
+          '',
+          '如果比較急，有兩個快一點的方法：',
+          '預約通話：https://hyperfocusam.com/book/',
+          'WhatsApp：https://wa.me/85264315177',
+          '',
+          'Sam Wong',
+          'hyperfocusam.com',
+          '',
+          '（這是自動確認信；下一封回覆會由我本人發出。）',
+        ].join('\n')
+        : [
+          `Hi ${name},`,
+          '',
+          "Thanks for reaching out — your message has arrived and I'll reply within 24 hours.",
+          '',
+          "If it's time-sensitive, two faster doors:",
+          'Book a call: https://hyperfocusam.com/book/',
+          'WhatsApp: https://wa.me/85264315177',
+          '',
+          'Sam Wong',
+          'hyperfocusam.com',
+          '',
+          '(This is an automatic confirmation; the reply you get next will be from me.)',
+        ].join('\n'),
+    };
+    try {
+      const ack = await fetch(RESEND_API, {
+        method: 'POST',
+        headers: { Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify(autoreply),
+      });
+      if (!ack.ok) console.error('autoreply_failed', ack.status, (await ack.text().catch(() => '')).slice(0, 300));
+    } catch (err) {
+      console.error('autoreply_failed', String(err).slice(0, 300));
+    }
   }
 
   return succeed(req, res);
