@@ -29,30 +29,20 @@ const faqs = [
       + ' Light Protocol, a green/yellow/red framework for what staff can safely put into AI tools.',
   },
   {
-    q: 'What does an AI adoption consultant actually do?',
-    a: 'An AI adoption consultant changes how people work, not just which tools they know'
-      + ' — most one-off AI training fails, with only about 4% of participants still using AI'
-      + ' weeks later. My work targets that gap through multi-session cohort programs (the AI'
-      + ' Pioneer Model) built on change-management principles.',
-  },
-  {
-    q: 'Do you offer Train-the-Trainer AI certification in Hong Kong?',
-    a: 'Yes — through Adaptig, for trainers, consultants, and educators who want to teach AI'
-      + ' with a proven methodology. It covers facilitation, the frameworks I use with enterprise'
-      + ' clients, and how to build lasting adoption rather than one-off awareness.',
-  },
-  {
     q: 'How much does corporate AI training in Hong Kong cost?',
     a: 'It depends on format (half-day workshop, multi-session cohort, or Train-the-Trainer),'
-      + ' group size, and language. The best next step is a short discovery call to scope what'
-      + ' your team needs — reach me at sam@adaptig.com.',
+      + ' group size, and language. Every engagement is quoted after a free 30-minute discovery'
+      + ' call to scope what your team needs — reach me at sam@adaptig.com.',
   },
   {
+    // Trimmed 6→4 (2026-08-14): the adoption-consultant and TtT questions cut
+    // (both answered on /services); the unsourced "about 4%" figures removed —
+    // this page's whole argument is receipts, so no number without a source.
     q: 'Why doesn\'t most corporate AI training stick?',
-    a: 'Most AI training doesn\'t stick because it teaches tools, not behaviour — about 4% of'
-      + ' participants sustain meaningful AI use after a one-off workshop, and the rest revert'
-      + ' within two weeks. Lasting adoption needs psychological safety, real-workflow practice,'
-      + ' and follow-through, which is why I run cohorts, not single sessions.',
+    a: 'Most AI training doesn\'t stick because it teaches tools, not behaviour — most'
+      + ' participants revert to their old workflows within weeks of a one-off session. Lasting'
+      + ' adoption needs psychological safety, real-workflow practice, and follow-through,'
+      + ' which is why I run cohorts, not single sessions.',
   },
 ];
 

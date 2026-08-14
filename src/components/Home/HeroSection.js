@@ -1,58 +1,53 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import OptimizedImage from '../Template/OptimizedImage';
 
+const { PUBLIC_URL } = process.env;
+
+// Hero contract (Sam's rulings, 2026-08-14): the H1 is the claim — his own
+// line, promoted from body text. One red per viewport: the Book CTA. The
+// credential line replaces the old "field notes · since 2023" stamp (the date
+// undercut him and the label read as a blog chip). Receipts moved to the
+// ProofReceipt band below the stats — the hero makes the claim, the band
+// proves it. Every text node is a single expression: adjacent text nodes
+// break react-snap hydration (React #418).
 const HeroSection = () => (
   <section className="dark-hero full-bleed">
     <div className="dark-hero__inner content-wide">
-      {/* Sam's own tagline (2026-08-02) — his coinage after Arteta's
-          "love for the game"; replaces the generic adoption promise. */}
-      <h1 className="dark-hero__headline">
-        Love for the
-        <br />
-        <em className="dark-hero__highlight fn-highlight">Adoption.</em>
-      </h1>
-      <p className="dark-hero__evidence">
-        <span className="fn-stamp fn-stamp--verified">
-          field notes · hong kong · since 2023 · 10,000+ trained
-        </span>
-      </p>
-      {/* The entity sentence. Median homepage scroll depth is 53% (the earlier
-          5% reading was a measurement artifact — it described the previous
-          page, not this one), but until now the hero never said who Sam is:
-          "Sam Wong is" appeared zero times on the homepage, which is why AI
-          engines cite him on branded queries only. The mid-page conversion
-          band in Index.js now carries the second ask, further down the page
-          most visitors actually reach. Kept as its own <p> with a single text
-          child; adjacent text nodes break react-snap hydration (#418). */}
-      <p className="dark-hero__identity">
-        Sam Wong is Co-Founder &amp; Director of Academy at Adaptig in Hong Kong.
-        He trains the people who train AI.
-      </p>
-      <p className="dark-hero__subtitle">
-        Workshops, coaching, and trainer development for organizations
-        that want real behavior change &mdash; not just another AI demo.
-        Based in Hong Kong, working across Asia-Pacific.
-      </p>
-      <div className="dark-hero__actions">
-        {/* Single-expression text: adjacent text nodes break react-snap hydration (#418) */}
-        <Link to="/services" className="dark-hero__cta" data-cta="hero_services">
-          {'How I Can Help '}
-          <span className="dark-hero__arrow">&rarr;</span>
-        </Link>
-        <Link to="/book" className="dark-hero__cta dark-hero__cta--secondary" data-cta="hero_book">
-          Book a Free Call
-        </Link>
+      <div className="dark-hero__copy">
+        <h1 className="dark-hero__headline">
+          I train the people who train AI.
+        </h1>
+        <p className="dark-hero__credential">
+          Sam Wong · Co-Founder &amp; Director of Academy, Adaptig · Hong Kong
+        </p>
+        <p className="dark-hero__subtitle">
+          Workshops, coaching, and trainer certification for organizations
+          that want AI in daily use &mdash; weeks after the session ends.
+        </p>
+        <div className="dark-hero__actions">
+          <Link to="/book" className="dark-hero__cta" data-cta="hero_book">
+            Book a Free Call
+          </Link>
+          {/* Single-expression text: adjacent text nodes break hydration (#418) */}
+          <Link to="/services" className="dark-hero__cta dark-hero__cta--secondary" data-cta="hero_services">
+            {'See how I can help '}
+            <span className="dark-hero__arrow">&rarr;</span>
+          </Link>
+        </div>
       </div>
-      {/* 2026-08-02 audit: the receipts are the best line on the site and sat
-          800px down — a scoped strip now rides under the CTAs. Single JSX
-          expression: adjacent text nodes break react-snap hydration (#418). */}
-      <p className="dark-hero__receipts">
-        <Link to="/case-notes">
-          {'5 teams shipped go-to-market proposals in under 3 hours (CTF)'
-            + ' · 6 departments came back (Garden)'
-            + ' · one staff day became a 24-month AI community → the receipts'}
-        </Link>
-      </p>
+      {/* Rendered unconditionally (hydration safety); CSS hides it below 980px.
+          The cutout portrait is already preloaded in index.html. */}
+      <div className="dark-hero__photo">
+        <OptimizedImage
+          src={`${PUBLIC_URL}/images/Sam.png`}
+          alt="Sam Wong"
+          width={380}
+          height={440}
+          loading="eager"
+          fetchPriority="high"
+        />
+      </div>
     </div>
   </section>
 );

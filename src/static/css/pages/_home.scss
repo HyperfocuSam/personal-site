@@ -36,22 +36,6 @@
 }
 
 // 2026-08-02 audit: receipts strip under the hero CTAs.
-.dark-hero__receipts {
-  margin-top: 1.4rem;
-
-  a {
-    border-bottom: 1px solid rgba(162, 139, 82, 0.45);
-    color: _palette(amber);
-    font-family: _font(family);
-    font-size: 0.8rem;
-    letter-spacing: 0.04em;
-    text-decoration: none;
-
-    &:hover {
-      border-bottom-color: _palette(amber);
-    }
-  }
-}
 
 // ─── Hero — massive centered serif on warm cream ─────────────
 .dark-hero {

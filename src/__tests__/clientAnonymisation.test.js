@@ -38,6 +38,14 @@ const FORBIDDEN = [
   'Paly Adventures',
   'Bachar Investments',
   '嘉頓',
+  // Hardened 2026-08-14: the list knew 嘉頓 but not the English name, which
+  // is how "Garden: 6 departments re-booked" shipped on the live homepage.
+  // Colon/paren forms only — bare "Garden" would flag the common noun.
+  'Garden:',
+  '(Garden)',
+  'Playmates',
+  '彩星',
+  '陽獅',
 ];
 
 // The ONE deliberate exception, Sam's decision of 2026-08-11: the client logo

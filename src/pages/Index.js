@@ -8,21 +8,13 @@ import testimonials from '../data/testimonials';
 import TestimonialSection from '../components/Testimonials/TestimonialSection';
 import HeroSection from '../components/Home/HeroSection';
 import StatsBar from '../components/Home/StatsBar';
+import ProofReceipt from '../components/Home/ProofReceipt';
 import ClientLogoBar from '../components/Home/ClientLogoBar';
 import ServicesEditorial from '../components/Home/ServicesEditorial';
 import LatestWriting from '../components/Home/LatestWriting';
-import AboutCallout from '../components/Home/AboutCallout';
 import HomeFAQ from '../components/Home/HomeFAQ';
 import EmailCapture from '../components/EmailCapture/EmailCapture';
 import ScrollReveal from '../components/ScrollReveal';
-
-// Outcomes, not scores (Sam's ruling, 2026-08-02) — and the bank stays
-// anonymous here like everywhere else on the site.
-const homepageReceiptFragments = [
-  'CTF: 5 proposals shipped in under 3 hours',
-  'Garden: 6 departments re-booked',
-  'one staff day became a 24-month AI community',
-];
 
 const Index = () => (
   <Main
@@ -87,56 +79,51 @@ const Index = () => (
       </script>
     </Helmet>
     <article className="homepage-dark field-notes" id="index">
-      {/* 1. Dark Hero — massive centered serif, single CTA */}
+      {/* 1. Hero (white) — the claim, the credential, one red CTA, portrait */}
       <HeroSection />
 
-      {/* 2. Stats — understated horizontal strip */}
+      {/* 2. Stats (soft) — the four canonical numbers */}
       <ScrollReveal variant="fade-up-long">
         <StatsBar />
       </ScrollReveal>
 
-      <section className="home-case-notes-strip" aria-labelledby="home-case-notes-heading">
-        <div className="home-case-notes-strip__inner">
-          <h2 className="home-case-notes-strip__heading" id="home-case-notes-heading">
-            <span className="fn-stamp">CASE NOTES</span>
-          </h2>
-          <p className="home-case-notes-strip__receipts">
-            {homepageReceiptFragments.join(' · ')}
-          </p>
-          <Link className="home-case-notes-strip__link" to="/case-notes/">
-            Read the case notes →
-          </Link>
-        </div>
-      </section>
+      {/* 3. Proof receipt (ink) — the one quantified receipt, then the logos
+          that back it. Replaces the old case-notes strip, whose text named
+          Garden (anonymise ruling is text-only; logos are exempt). */}
+      <ScrollReveal variant="fade-in">
+        <ProofReceipt language="en" />
+      </ScrollReveal>
 
-      {/* 3. Client Logos — infinite marquee */}
+      {/* 4. Client Logos (white) — infinite marquee */}
       <ScrollReveal variant="fade-in">
         <ClientLogoBar />
       </ScrollReveal>
 
-      {/* 4. Services — single-column editorial */}
+      {/* 5. Services (soft) — single-column editorial */}
       <ScrollReveal variant="fade-up-long">
         <ServicesEditorial />
       </ScrollReveal>
 
-      {/* 5. Testimonials — full-width pull quotes */}
+      {/* 6. Testimonials (white) — three corporate quotes; heading kept the
+          weaker claim on purpose (never "leaders" over participant voices) */}
       <ScrollReveal variant="scale-in">
         <TestimonialSection
+          title="From client teams"
           testimonials={testimonials}
           variant="dark-pullquote"
         />
       </ScrollReveal>
 
-      {/* 5b. Conversion band — mirror of the /zh band (ZhIndex.js). Median scroll
-          is 53% (the earlier 5% figure was a measurement artifact), so the ask
-          lands right after the social proof most visitors actually reach. */}
+      {/* 7. Conversion band (ink) — the ask lands right after the social proof
+          most visitors actually reach (median scroll 53%). CTA label repeats
+          the hero's verbatim — one ask, one wording. */}
       <ScrollReveal variant="fade-up">
         <section className="section-dark section-dark--centered section-padding">
           <div className="content-standard">
             <ul className="actions">
               <li>
                 <Link to="/book" className="button" data-cta="home_band_book">
-                  Book a Free 30-min Call
+                  Book a Free Call
                 </Link>
               </li>
               <li>
@@ -149,27 +136,25 @@ const Index = () => (
         </section>
       </ScrollReveal>
 
-      {/* 6. Latest Writing — date + title list */}
+      {/* 8. Selected writing (white) — three buyer-relevant posts, curated,
+          not the raw latest-N feed (which surfaced practitioner-diary posts
+          to L&D buyers). AboutCallout absorbed into the hero; the about link
+          rides here. */}
       <ScrollReveal variant="fade-up-long">
         <LatestWriting />
       </ScrollReveal>
 
-      {/* 7. About — photo + bio callout */}
-      <ScrollReveal variant="blur-in">
-        <AboutCallout />
-      </ScrollReveal>
-
-      {/* 8. FAQ — question-shaped answer targets for AI discovery queries */}
+      {/* 9. FAQ (soft) — question-shaped answer targets for AI discovery queries */}
       <ScrollReveal variant="fade-up-long">
         <HomeFAQ />
       </ScrollReveal>
 
-      {/* 9. Email Capture — ink band for contrast */}
+      {/* 10. Email Capture — bordered card close */}
       <ScrollReveal variant="fade-up">
         <EmailCapture
-          title="Get practical AI insights — no fluff"
-          blurb="One email when I publish: workshop frameworks, adoption case studies, and tools I actually use with clients."
-          caption="no spam, field notes only"
+          title="Field notes from real client rooms"
+          blurb="One email when I publish: workshop frameworks, adoption case studies, and tools I use with clients."
+          caption="field notes only"
           variant="dark"
         />
       </ScrollReveal>

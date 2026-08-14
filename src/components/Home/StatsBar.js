@@ -2,9 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { stats } from '../../data/stats';
 
+// All four are canonical (memory_sam_profile.md). "170+ Workshops" was
+// dropped 2026-08-14 — no ruled workshop count exists, and the site carried
+// three contradicting variants (170+/180+/230+).
 const statsBarItems = [
   stats.professionalsTrained,
-  stats.workshops,
+  stats.oneOnOnes,
   stats.organizations,
   stats.countries,
 ];
@@ -59,7 +62,6 @@ const StatsBar = () => (
             aria-hidden="true"
           />
           <span className="stats-strip__label fn-receipt__label">{stat.label}</span>
-          <span className="stats-strip__annotation fn-receipt__annotation">since 2023</span>
         </div>
       ))}
     </div>

@@ -40,8 +40,10 @@
   text-transform: uppercase;
 
   &--verified {
+    // Gold border stays (hairline duty); gold TEXT at stamp size measured
+    // 3.31:1 on white — AA fail — so the text runs ink-soft.
     border-color: _palette(verification);
-    color: _palette(verification);
+    color: _palette(text-secondary);
     font-weight: _font(weight-bold);
   }
 }

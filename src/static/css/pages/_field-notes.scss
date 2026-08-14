@@ -49,63 +49,34 @@
       max-width: _size(content-standard);
     }
 
+    // Hero type rides the site's own tempered scale (flat-hierarchy DNA) —
+    // the old 121px display clamp was 4.3× the brand spec and the reason the
+    // page led with typography instead of a claim.
     &__headline {
       color: _palette(ink);
       font-family: _font(family-heading);
-      font-size: clamp(3rem, 14vw, 4.35rem);
+      font-size: map-get($type, hero);
       font-variation-settings: "opsz" 72;
-      font-weight: 650;
-      letter-spacing: -0.045em;
-      line-height: 0.92;
-      margin: 0 0 1.5rem;
-
-      em {
-        color: _palette(ink);
-        display: inline-block;
-        font-style: normal;
-      }
+      font-weight: 700;
+      letter-spacing: -0.035em;
+      line-height: 1.05;
+      margin: 0 0 1rem;
     }
 
-    &__evidence {
-      color: _palette(verification);
+    // Credential line — replaces the "field notes · since 2023" stamp. Gold
+    // stays a hairline (brand rule); the text itself is AA-safe ink-soft.
+    &__credential {
+      border-bottom: 1px solid _palette(verification);
+      color: _palette(text-secondary);
+      display: inline-block;
       font-family: _font(family);
-      font-size: 0.72rem;
+      font-size: 0.74rem;
       font-weight: _font(weight-bold);
       letter-spacing: _font(kerning-meta);
       line-height: 1.5;
-      margin: 0 0 1.25rem;
+      margin: 0 0 1.1rem;
+      padding-bottom: 0.4rem;
       text-transform: uppercase;
-
-      span {
-        border: 1px solid _palette(verification);
-        display: inline-flex;
-        max-width: 100%;
-        padding: 0.45rem 0.55rem;
-        transform: rotate(-0.35deg);
-      }
-
-      span::before {
-        border: 1px solid _palette(verification);
-        content: '✓';
-        display: inline-grid;
-        flex: 0 0 auto;
-        height: 1.05rem;
-        margin-right: 0.45rem;
-        place-items: center;
-        width: 1.05rem;
-      }
-    }
-
-    // The entity sentence — who Sam is, in plain crawlable text, inside the
-    // ~365px the median visitor actually sees. Slightly heavier than the
-    // subtitle beneath it so it reads as the answer, not as more body copy.
-    &__identity {
-      color: _palette(ink);
-      font-size: 1.05rem;
-      font-weight: _font(weight-medium);
-      line-height: 1.5;
-      margin: 0 0 0.85rem;
-      max-width: 42rem;
     }
 
     &__subtitle {
@@ -121,10 +92,15 @@
       justify-content: flex-start;
     }
 
+    // Photo column: rendered unconditionally (hydration), shown ≥980px only.
+    &__photo {
+      display: none;
+    }
+
     &__cta {
       background: _palette(signal);
       border: 1px solid _palette(signal);
-      border-radius: map-get($radius, sm);
+      border-radius: map-get($radius, xl);
       color: _palette(surface-base);
       font-family: _font(family);
       font-size: 0.7rem;
@@ -151,7 +127,7 @@
   }
 
   .stats-strip {
-    background: _palette(surface-raised);
+    background: _palette(surface-sunken);
     border-color: _palette(border-subtle);
     padding: 2.4rem 1rem;
 
@@ -197,9 +173,56 @@
       text-align: left;
       word-break: normal;
     }
+  }
 
-    &__annotation {
-      text-align: left;
+  // The one hard receipt — ink band, mono evidence, right after the stats.
+  .proof-receipt {
+    background: _palette(ink);
+    padding: 3rem 1.125rem;
+
+    &__inner {
+      margin: 0 auto;
+      max-width: _size(content-narrow);
+    }
+
+    &__stamp {
+      color: _palette(verification);
+      font-family: _font(family);
+      font-size: 0.68rem;
+      font-weight: _font(weight-bold);
+      letter-spacing: _font(kerning-meta);
+      margin: 0 0 1rem;
+      text-transform: uppercase;
+    }
+
+    &__primary {
+      color: _palette(surface-base);
+      font-family: _font(family);
+      font-size: clamp(0.95rem, 3.4vw, 1.15rem);
+      font-weight: _font(weight-bold);
+      line-height: 1.55;
+      margin: 0 0 0.85rem;
+    }
+
+    &__fragments {
+      color: rgba(255, 255, 255, 0.72);
+      font-family: _font(family);
+      font-size: 0.8rem;
+      line-height: 1.6;
+      margin: 0 0 1.35rem;
+    }
+
+    &__link {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+      color: _palette(surface-base) !important;
+      font-family: _font(family);
+      font-size: 0.68rem;
+      letter-spacing: _font(kerning-meta);
+      text-transform: uppercase;
+
+      &:hover {
+        border-bottom-color: _palette(surface-base);
+      }
     }
   }
 
@@ -209,7 +232,9 @@
     padding: 2.25rem 0;
 
     &__label {
-      color: _palette(verification);
+      // Gold text at 0.72rem measured 3.31:1 on white (AA fail) — gold stays
+      // for hairlines; small text runs ink-soft.
+      color: _palette(text-secondary);
       font-family: _font(family);
       font-size: 0.72rem;
       font-weight: _font(weight-bold);
@@ -252,6 +277,13 @@
       margin: 0 auto;
       max-width: _size(content-narrow);
     }
+  }
+
+  // Band rhythm: white → soft → ink → white → soft → white → ink → white →
+  // soft. No two same-tone bands abut.
+  .services-editorial,
+  .home-faq {
+    background: _palette(surface-sunken);
   }
 
   .services-editorial {
@@ -315,11 +347,21 @@
   }
 
   .testimonial-pullquote {
-    background: _palette(surface-sunken);
+    background: _palette(surface-base);
     display: grid;
     gap: 0;
     grid-template-columns: minmax(0, 1fr);
     padding: 3.25rem 1.125rem;
+
+    &__title {
+      color: _palette(ink);
+      font-family: _font(family-heading);
+      font-size: clamp(1.75rem, 8vw, 2.5rem);
+      font-weight: 650;
+      grid-column: 1 / -1;
+      letter-spacing: -0.035em;
+      margin: 0 0 1.5rem;
+    }
 
     &__item {
       margin: -0.5px;
@@ -341,23 +383,6 @@
       margin: 0 0 1rem;
       position: relative;
       z-index: 0;
-    }
-
-    &__item:nth-child(3) .testimonial-pullquote__quote {
-      display: inline;
-
-      &::before {
-        background: _palette(highlighter);
-        bottom: 0.08em;
-        content: '';
-        left: -0.15em;
-        opacity: 0.8;
-        position: absolute;
-        right: -0.15em;
-        top: 0.53em;
-        transform: rotate(-0.5deg) skewX(-6deg);
-        z-index: -1;
-      }
     }
 
     &__attribution {
@@ -458,69 +483,22 @@
       line-height: 1.45;
     }
 
+    &__links {
+      display: flex;
+      gap: 1.5rem;
+      margin: 1.5rem 0 0;
+    }
+
     &__more {
       border-bottom: 1px solid _palette(ink);
       color: _palette(ink) !important;
       font-family: _font(family);
       font-size: 0.68rem;
       letter-spacing: _font(kerning-meta);
-      margin-top: 1.5rem;
       text-transform: uppercase;
 
       &:hover {
         border-bottom-color: _palette(ink);
-        color: _palette(ink) !important;
-      }
-    }
-  }
-
-  .about-callout {
-    background: _palette(surface-sunken);
-    border-color: _palette(border-subtle);
-    padding: 3.25rem 1.125rem;
-    text-align: left;
-
-    &__inner {
-      align-items: flex-start;
-      margin: 0 auto;
-      max-width: _size(content-narrow);
-    }
-
-    &__photo {
-      border: 1px solid _palette(ink);
-      border-radius: map-get($radius, sm);
-      height: 112px;
-      margin-bottom: 1.2rem;
-      transform: rotate(-1.2deg);
-      width: 112px;
-    }
-
-    &__name {
-      color: _palette(ink);
-      font-family: _font(family-heading);
-      font-size: 2rem;
-      font-weight: 650;
-      letter-spacing: -0.035em;
-      margin-bottom: 0.45rem;
-    }
-
-    &__bio {
-      color: _palette(text-body);
-      font-size: 0.94rem;
-      line-height: 1.5;
-      margin: 0 0 1.25rem;
-      max-width: 34rem;
-    }
-
-    &__link {
-      border-bottom: 1px solid _palette(ink);
-      color: _palette(ink) !important;
-      font-family: _font(family);
-      font-size: 0.68rem;
-      letter-spacing: _font(kerning-meta);
-      text-transform: uppercase;
-
-      &:hover {
         color: _palette(ink) !important;
       }
     }
@@ -598,7 +576,8 @@
     }
 
     .email-capture__caption {
-      color: _palette(verification);
+      // Gold small text fails AA on white — ink-soft instead (gold = hairlines).
+      color: _palette(text-secondary);
       font-family: _font(family);
       font-size: 0.72rem;
       font-weight: _font(weight-bold);
@@ -684,15 +663,12 @@
 @media screen and (min-width: 737px) {
   .field-notes {
     .dark-hero {
-      padding: 6.5rem 2rem 6rem;
+      padding: 5.5rem 2rem 5rem;
 
+      // No display-size override: the hero stays on $type.hero (~64px max) —
+      // flat-hierarchy DNA; the claim carries the weight, not the point size.
       &__headline {
-        font-size: clamp(4.75rem, 8.5vw, 7.6rem);
-        max-width: 58rem;
-      }
-
-      &__evidence {
-        font-size: 0.7rem;
+        max-width: 34rem;
       }
 
       &__subtitle {
@@ -747,12 +723,14 @@
         padding: 1.75rem;
       }
 
-      &__item:nth-child(3) {
+      // The title <h2> is grid child 1, so the featured full-width slot is
+      // the THIRD quote = nth-child(4).
+      &__item:nth-child(4) {
         grid-column: 1 / -1;
         padding-right: 20%;
       }
 
-      &__item:nth-child(3) .testimonial-pullquote__quote {
+      &__item:nth-child(4) .testimonial-pullquote__quote {
         font-size: 1.45rem;
       }
     }
@@ -765,26 +743,8 @@
       }
     }
 
-    .about-callout {
-      padding: 5.5rem 2rem;
-
-      &__inner {
-        display: grid;
-        gap: 0 2rem;
-        grid-template-columns: 128px minmax(0, 1fr);
-      }
-
-      &__photo {
-        grid-row: 1 / 4;
-        height: 128px;
-        width: 128px;
-      }
-
-      &__name,
-      &__bio,
-      &__link {
-        grid-column: 2;
-      }
+    .proof-receipt {
+      padding: 4rem 2rem;
     }
 
     .email-capture {
@@ -801,6 +761,31 @@
     }
   }
 
+}
+
+// Hero portrait column — desktop only. The right half of the hero sat empty
+// at 1440px; every benchmark practitioner site leads with the person.
+@media screen and (min-width: 980px) {
+  .field-notes {
+    .dark-hero {
+      &__inner {
+        align-items: center;
+        display: grid;
+        gap: 3rem;
+        grid-template-columns: minmax(0, 1fr) 320px;
+      }
+
+      &__photo {
+        display: block;
+
+        img {
+          display: block;
+          height: auto;
+          width: 100%;
+        }
+      }
+    }
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -23,6 +23,7 @@ const TestimonialSection = ({
   if (variant === 'dark-pullquote') {
     return (
       <section className="testimonial-pullquote">
+        {title && <h2 className="testimonial-pullquote__title">{title}</h2>}
         {limitedTestimonials.map((testimonial, index) => (
           <blockquote
             key={`${testimonial.name}-${testimonial.company || testimonial.title}`}
@@ -30,9 +31,7 @@ const TestimonialSection = ({
           >
             {/* Quote and role are single expressions: adjacent text nodes
                 break react-snap hydration (React #418). */}
-            <p
-              className={`testimonial-pullquote__quote${index === 2 ? ' fn-highlight' : ''}`}
-            >
+            <p className="testimonial-pullquote__quote">
               {`“${testimonial.quote}”`}
             </p>
             <footer className="testimonial-pullquote__attribution">
