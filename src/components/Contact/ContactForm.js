@@ -52,7 +52,12 @@ const COPY = {
   },
 };
 
-const FORMSPREE_URL = 'https://formspree.io/f/mwvrrwbe';
+// Same-origin on purpose (see api/contact.js): with the receiver on our own
+// /api/contact there is no third-party origin for the CSP to forget — the
+// omission that silently ate every submission for 88 days in 2026. Formspree
+// (https://formspree.io/f/mwvrrwbe) remains live as the rollback for one week
+// after the 2026-08-14 cutover; its CSP entries go in the cleanup commit.
+const CONTACT_ENDPOINT = '/api/contact';
 
 const ContactForm = ({ initialInterest, placement, language }) => {
   const t = COPY[language] || COPY.en;
@@ -77,14 +82,15 @@ const ContactForm = ({ initialInterest, placement, language }) => {
     }
   }, [initialInterest]);
 
-  // Distinguishes "the browser refused the request" from "Formspree was down".
-  // Between 2026-05-15 and 2026-08-11 the site's own CSP omitted formspree.io
-  // and silently ate every submission for 88 days; the failure was
-  // indistinguishable from a flaky network. This listener makes the next
-  // occurrence self-reporting.
+  // Distinguishes "the browser refused the request" from "the mail service was
+  // down". Between 2026-05-15 and 2026-08-11 the site's own CSP silently ate
+  // every submission for 88 days; the failure was indistinguishable from a
+  // flaky network. A same-origin endpoint makes a connect-src violation nearly
+  // impossible, but the tripwire stays: if it ever fires, PostHog gets
+  // `csp_blocked` instead of a lie about the visitor's connection.
   useEffect(() => {
     const onViolation = (e) => {
-      if ((e.blockedURI || '').includes('formspree.io')) {
+      if ((e.blockedURI || '').includes('/api/contact')) {
         cspBlockedRef.current = true;
       }
     };
@@ -92,11 +98,10 @@ const ContactForm = ({ initialInterest, placement, language }) => {
     return () => document.removeEventListener('securitypolicyviolation', onViolation);
   }, []);
 
-  // Formspree discards any submission where a field named `_gotcha` arrives
-  // non-empty, so this needs no server-side work. It matters because bots have
-  // outnumbered humans on this form 97 attempts to 11, and Formspree's free
-  // tier caps at 50 submissions/month — a quota rejection returns non-OK and
-  // would look exactly like the 88-day CSP outage that already cost a lead.
+  // api/contact.js discards any submission where a field named `_gotcha`
+  // arrives non-empty (same contract Formspree had). It matters because bots
+  // have outnumbered humans on this form 97 attempts to 11 — and unlike the
+  // old free tier there is no monthly quota left for them to burn through.
   const gotchaRef = useRef(null);
 
   const noteStarted = useCallback((e) => {
@@ -114,7 +119,7 @@ const ContactForm = ({ initialInterest, placement, language }) => {
     setError(null);
 
     try {
-      const res = await fetch(FORMSPREE_URL, {
+      const res = await fetch(CONTACT_ENDPOINT, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -172,10 +177,11 @@ const ContactForm = ({ initialInterest, placement, language }) => {
       <p>{t.intro}</p>
       {/* action/method are a no-JS fallback only: handleSubmit calls
           preventDefault, so a native POST happens solely when React never
-          hydrated. Requires formspree.io in the CSP form-action directive. */}
+          hydrated. Covered by `form-action 'self'` in the CSP; the endpoint
+          answers a native POST with a readable HTML confirmation page. */}
       <form
         className="contact-form fn-card"
-        action={FORMSPREE_URL}
+        action={CONTACT_ENDPOINT}
         method="POST"
         onSubmit={handleSubmit}
         onChange={noteStarted}

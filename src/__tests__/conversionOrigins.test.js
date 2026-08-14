@@ -36,10 +36,18 @@ describe('conversion origins survive in the CSP', () => {
     expect(policy).toBeDefined();
   });
 
-  it('lets the contact form POST to Formspree', () => {
-    // connect-src covers the fetch() the React handler makes; form-action covers
-    // the native POST fallback that fires when React never hydrated. Losing
-    // either one breaks a real path.
+  it('lets the contact form POST to its own /api/contact', () => {
+    // Since 2026-08-14 the form posts same-origin to api/contact.js (Resend).
+    // connect-src 'self' covers the fetch() the React handler makes;
+    // form-action 'self' covers the native POST fallback that fires when React
+    // never hydrated. Losing either one breaks a real path.
+    expect(directive('connect-src')).toMatch(/'self'/);
+    expect(directive('form-action')).toMatch(/'self'/);
+  });
+
+  it('keeps Formspree usable as the rollback during the cutover week', () => {
+    // Remove this test together with the formspree.io CSP entries in the
+    // cleanup commit once the Resend path has survived a week in production.
     expect(directive('connect-src')).toContain('https://formspree.io');
     expect(directive('form-action')).toContain('https://formspree.io');
   });
