@@ -33,7 +33,9 @@ check() {
 }
 check build/about/index.html "Quick Version"
 check build/services/index.html "For Organizations"
-check build/index.html "Love for the"
+# Sentinel = the current hero H1 (redesign 2026-08-14). Update it whenever
+# the headline changes, or this guard refuses a perfectly good build.
+check build/index.html "I train the people who train AI"
 routes=$(find build -type f -name index.html | wc -l | tr -d ' ')
 if [ "$routes" -lt 100 ]; then
   echo "✗ only $routes prerendered routes, expected ~121 — react-snap probably hung" >&2
