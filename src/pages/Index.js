@@ -16,14 +16,6 @@ import HomeFAQ from '../components/Home/HomeFAQ';
 import EmailCapture from '../components/EmailCapture/EmailCapture';
 import ScrollReveal from '../components/ScrollReveal';
 
-// Outcomes, not scores (Sam's ruling, 2026-08-02) — and the bank stays
-// anonymous here like everywhere else on the site.
-const homepageReceiptFragments = [
-  'CTF: 5 proposals shipped in under 3 hours',
-  'Garden: 6 departments re-booked',
-  'one staff day became a 24-month AI community',
-];
-
 const Index = () => (
   <Main
     description={

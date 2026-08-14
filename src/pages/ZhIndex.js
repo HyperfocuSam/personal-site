@@ -61,7 +61,7 @@ const ZhIndex = () => (
             </div>
             <p className="page-hero__proof">
               <span className="fn-stamp fn-stamp--muted">
-                周大福：3 小時內交付 5 個市場方案 · Garden：6 個部門回訪 · 
+                周大福：3 小時內交付 5 個市場方案 · Garden：6 個部門回訪 ·
                 HKCT：一個培訓日 → 24 個月的 AI 社群
               </span>
             </p>

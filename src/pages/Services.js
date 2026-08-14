@@ -129,7 +129,10 @@ const Services = () => {
               <Link to="/services#one-on-one" className="anchor-pill">
                 Individuals
               </Link>
-              <Link to="/services#train-the-trainer" className="anchor-pill">
+              <Link
+                to="/services#train-the-trainer"
+                className="anchor-pill"
+              >
                 Trainers
               </Link>
               <Link to="/speaking" className="anchor-pill">
