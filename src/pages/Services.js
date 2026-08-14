@@ -118,7 +118,8 @@ const Services = () => {
               <p>Corporate AI training in Hong Kong and across Asia-Pacific</p>
               <p className="services-who-line">
                 <span className="fn-stamp fn-stamp--muted">
-                  Corporate workshops &amp; Train-the-Trainer via Adaptig · Coaching &amp; speaking as Sam
+                  Corporate workshops &amp; Train-the-Trainer via Adaptig ·
+                  Coaching &amp; speaking as Sam
                 </span>
               </p>
             </div>
