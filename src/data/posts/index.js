@@ -6,9 +6,9 @@
 const posts = [
   {
     slug: 'the-ai-tools-i-actually-use-2026-tc',
-    title: '2026 年我真正在用的 AI 工具',
+    title: '2026 年，我真正付錢用的 AI 工具',
     date: '2026-08-15',
-    excerpt: '工作坊結束後，總有人問我自己用哪一套。這是 2026 年我付費使用的版本。',
+    excerpt: '每次工作坊結束，總有人問我自己實際用甚麼。這是 2026 年我付錢在用的版本。',
     tags: ['ai-tools', 'productivity', 'workflow'],
     type: 'insight',
     language: 'zh-Hant',
