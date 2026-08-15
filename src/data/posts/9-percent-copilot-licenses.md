@@ -4,7 +4,7 @@ This week I was in a meeting with someone who ran AI adoption across KPMG in the
 
 A pension fund in the UK distributed laptops with [Copilot pre-installed and zero training](/blog/microsoft-copilot-training-hong-kong). No onboarding session. No documentation beyond what Microsoft ships by default. The procurement team checked a box. The AI transformation was declared underway.
 
-After 10,000+ professionals across 70+ organizations in six countries, I have my own number for this pattern: [roughly 4% of participants sustain meaningful AI use after a one-off workshop](/blog/why-ai-training-doesnt-stick). Four percent lasting adoption. Ninety-six percent revert to their old workflows within two weeks.
+After 10,000+ professionals across 70+ organizations in 13 countries, I have my own number for this pattern: [roughly 4% of participants sustain meaningful AI use after a one-off workshop](/blog/why-ai-training-doesnt-stick). Four percent lasting adoption. Ninety-six percent revert to their old workflows within two weeks.
 
 The 9% activation rate and my 4% adoption rate are measuring different things, but they're pointing at the same problem. The gap between buying AI and using AI is not a technology gap. It's a human gap.
 

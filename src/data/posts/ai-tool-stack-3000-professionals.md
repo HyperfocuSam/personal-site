@@ -1,7 +1,7 @@
 
-# The AI Tool Stack I Use to Train 3,000 Professionals a Year
+# The AI Tool Stack I Use in Corporate Training
 
-People ask me which AI tool is "the best." After training over 3,000 professionals as an AI trainer in Hong Kong, my answer is always the same: it depends on the room.
+People ask me which AI tool is "the best." After training 10,000+ professionals as an AI trainer in Hong Kong, my answer is always the same: it depends on the room.
 
 The tool stack I use changes for every workshop. A bank gets a different toolkit than a jewelry company. An engineering firm gets different tools than a university. But after two years of refining this across industries, I've settled on a core stack with modular additions.
 

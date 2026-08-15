@@ -16,7 +16,7 @@ policy engine 比對規則，發現這封 email 缺少用戶明確批准，攔�
 
 自主 agent 有個令人不舒服的真相：它們有用，正因為不用問你；它們危險，也正因為不用問你。我的 agent 每天替我發 email、改檔案、發 WhatsApp 訊息、查資料庫——每一次 tool call 都是實彈。沒有 sandbox，發出去的 email 沒有 undo 鍵。
 
-當 agent 綁住你的 Gmail、WhatsApp 和客戶資料庫權限，「move fast and break things」絕對不是選項。大部分 Claude Code 用戶處於零護欄狀態，單靠模型的判斷力。寫 code 或許可以這樣玩；替一盤在 6 個國家訓練過 10,000+ 專業人士的生意管客戶通訊，不行。
+當 agent 綁住你的 Gmail、WhatsApp 和客戶資料庫權限，「move fast and break things」絕對不是選項。大部分 Claude Code 用戶處於零護欄狀態，單靠模型的判斷力。寫 code 或許可以這樣玩；替一盤在 13 個國家訓練過 10,000+ 專業人士的生意管客戶通訊，不行。
 
 我要的是「信任，但要驗證」。Hooks 給了我這個。
 
@@ -160,4 +160,4 @@ uv run ~/.claude/hooks/prompt-injection-defender/post-tool-defender.py
 
 ---
 
-*我在 6 個國家教企業做真正留得住的 AI adoption。如果你也在用 Claude Code 搭系統，歡迎在 [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/) 交流。*
+*我在 13 個國家教企業做真正留得住的 AI adoption。如果你也在用 Claude Code 搭系統，歡迎在 [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/) 交流。*

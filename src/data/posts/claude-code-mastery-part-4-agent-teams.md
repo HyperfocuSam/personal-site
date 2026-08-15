@@ -144,7 +144,7 @@ If you are starting today, here is what I would do:
 4. Add one cron job: the morning briefing. It takes 20 minutes to set up and changes how you start every day.
 5. Scale from there based on what you actually need, not what sounds impressive on a blog post
 
-The architecture I have described is not theoretical. It runs my business across 20+ client engagements, six countries, and three business entities. It processes meeting recordings, generates invoices, publishes blog posts, and sends morning briefings in Cantonese. It cost me roughly 200 hours to build over four months. It saves me roughly 15 hours per week now.
+The architecture I have described is not theoretical. It runs my business across 20+ client engagements, 13 countries, and three business entities. It processes meeting recordings, generates invoices, publishes blog posts, and sends morning briefings in Cantonese. It cost me roughly 200 hours to build over four months. It saves me roughly 15 hours per week now.
 
 Those numbers compound. The system gets better because the memory gets richer. The agents get more accurate because the skills get more refined. The cron jobs catch more edge cases because the worklogs record more patterns.
 
@@ -152,4 +152,4 @@ Next in the series: Part 5, where I pull everything together into a complete blu
 
 ---
 
-*I train companies across six countries on AI adoption that actually sticks. If you are building with Claude Code and want to compare notes, connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*
+*I train companies across 13 countries on AI adoption that actually sticks. If you are building with Claude Code and want to compare notes, connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*

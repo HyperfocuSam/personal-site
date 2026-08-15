@@ -923,7 +923,7 @@ const posts = [
   },
   {
     slug: 'ai-tool-stack-3000-professionals',
-    title: 'The AI Tool Stack I Use to Train 3,000 Professionals a Year',
+    title: 'The AI Tool Stack I Use in Corporate Training',
     date: '2025-12-22',
     excerpt: 'The complete AI tool stack an AI trainer uses across banking, retail, education, and engineering workshops -- from Copilot to NotebookLM.',
     tags: ['ai-adoption', 'ai-tools', 'enterprise'],

@@ -52,4 +52,4 @@ Agent 不是 feature，是 architecture。一旦有 routing、memory、tools、s
 
 ---
 
-*Sam Wong 在 6 個國家做 AI adoption training，訓練超過 10,000 位專業人士。[LinkedIn](https://www.linkedin.com/in/sam-ai-agent/) | [Adaptig](https://adaptig.ai)*
+*Sam Wong 在 13 個國家做 AI adoption training，訓練超過 10,000 位專業人士。[LinkedIn](https://www.linkedin.com/in/sam-ai-agent/) | [Adaptig](https://adaptig.ai)*

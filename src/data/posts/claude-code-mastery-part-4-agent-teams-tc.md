@@ -141,7 +141,7 @@ Blog pipeline 是最進取的一個：auto-publish 模式。每個星期一，sc
 4. 加一個 cron job：morning briefing。20 分鐘設定，改變你每天的開場  
 5. 按實際需要擴展，不是按 blog post 上聽起來威的東西
 
-這套架構不是理論。它跑著我 20+ 個客戶項目、6 個國家、3 個商業實體：處理會議錄音、生成 invoice、發佈 blog、發廣東話早晨簡報。建造成本大約 200 小時、橫跨 4 個月；現在每星期省回約 15 小時。
+這套架構不是理論。它跑著我 20+ 個客戶項目、13 個國家、3 個商業實體：處理會議錄音、生成 invoice、發佈 blog、發廣東話早晨簡報。建造成本大約 200 小時、橫跨 4 個月；現在每星期省回約 15 小時。
 
 這些數字會複利。記憶愈厚系統愈好，skills 愈磨愈準，worklog 記的模式愈多，cron 接住的 edge case 就愈多。系統不是建好就定型——它持續在長。
 
@@ -149,4 +149,4 @@ Blog pipeline 是最進取的一個：auto-publish 模式。每個星期一，sc
 
 ---
 
-*我在 6 個國家教企業做真正留得住的 AI adoption。如果你也在用 Claude Code 搭系統，歡迎在 [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/) 交流。*
+*我在 13 個國家教企業做真正留得住的 AI adoption。如果你也在用 Claude Code 搭系統，歡迎在 [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/) 交流。*

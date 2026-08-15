@@ -4,7 +4,7 @@ Last night, my co-founder asked me: "But then why is Claude Code better? Because
 
 We'd been talking for over an hour. He's not technical — he runs sales, partnerships, client relationships. He uses Lovable to build landing pages and Claude to draft emails. But he'd been hearing the word "agent" everywhere and wanted to understand what it actually means in practice.
 
-So I walked him through it. Not from a spec sheet. From how I actually use these tools every day to run a business across six countries.
+So I walked him through it. Not from a spec sheet. From how I actually use these tools every day to run a business across 13 countries.
 
 What came out of that conversation is something I now think of as the Agent Adoption Ladder — a framework for understanding where you are, where you need to be, and why most people are climbing to the wrong rung.
 

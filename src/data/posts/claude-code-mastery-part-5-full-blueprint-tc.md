@@ -2,7 +2,7 @@
 
 我有 ADHD。不是那種「偶爾分心」的程度，而是確診、正在服藥、卻依然會忘記昨天對 client 承諾過什麼的程度。Executive function 的問題 -- 下一步做什麼、答應過別人什麼、上次做到哪裡 -- 不是偶發的不便，而是我日常運作的基本條件。
 
-我手上有八個 active client engagement，四間公司，訓練過超過一萬名 professional，遍及六個國家。同時撰寫中英雙語 blog，維護 content pipeline，運行一個 AI voice agent。全部在一個 terminal window 內完成。
+我手上有八個 active client engagement，四間公司，訓練過超過一萬名 professional，遍及十三個國家。同時撰寫中英雙語 blog，維護 content pipeline，運行一個 AI voice agent。全部在一個 terminal window 內完成。
 
 本篇是 Claude Code 完全攻略系列的最後一篇。[第一篇](/blog/claude-code-mastery-part-1-getting-started-tc)講 CLAUDE.md。[第二篇](/blog/claude-code-mastery-part-2-skills-memory-tc)講 memory 與 skills。[第三篇](/blog/claude-code-mastery-part-3-hooks-guardrails-tc)講 hooks 與安全機制。[第四篇](/blog/claude-code-mastery-part-4-agent-teams-tc)講 agent teams 與自動化。
 

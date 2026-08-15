@@ -56,4 +56,4 @@ The frameworks make the architecture accessible. The product work -- the UX, the
 
 ---
 
-*Sam Wong builds agentic AI systems and trains companies on AI adoption across six countries. Connect on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*
+*Sam Wong builds agentic AI systems and trains companies on AI adoption across 13 countries. Connect on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*

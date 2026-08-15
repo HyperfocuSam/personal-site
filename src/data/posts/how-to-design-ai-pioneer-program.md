@@ -5,7 +5,7 @@ Most corporate AI training fails because it treats AI adoption like an IT rollou
 
 ## The Problem With One-Off Workshops
 
-I've trained over 3,000 professionals across banking, jewelry, tourism, and education. The pattern is always the same: a half-day workshop generates excitement, participants leave buzzing with ideas, and three weeks later, almost nobody has changed their daily workflow.
+I've trained 10,000+ professionals across banking, jewelry, tourism, and education. The pattern is always the same: a half-day workshop generates excitement, participants leave buzzing with ideas, and three weeks later, almost nobody has changed their daily workflow.
 
 The reason is simple. A single session can spark interest, but it can't build habits. When I ran [a 75-minute session for 400 educators at HKCT](/blog/hkct-ai-education-workshop), the energy was incredible -- but a keynote can't follow up on whether anyone actually used what they learned.
 

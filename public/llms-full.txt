@@ -78,7 +78,7 @@ Sam Wong is Co-Founder & Director of Academy at Adaptig (Adaptig Group Limited) 
 - [Microsoft Copilot Training for Hong Kong Companies: What Actually Works](https://hyperfocusam.com/blog/microsoft-copilot-training-hong-kong/) (2026-03-15) — Your company already pays for Copilot. Here's why adoption is low, what Copilot training should actually cover, and the program structure that produces lasting behavior change.
 - [The Traffic Light Protocol: How I Teach AI Safety in 15 Minutes](https://hyperfocusam.com/blog/traffic-light-protocol-ai-safety/) (2026-03-12) — A 3-color data classification system that makes AI safety intuitive. Used across banking, retail, and 500-person webinars.
 - [Why I Teach Copilot Instead of ChatGPT in Enterprise Workshops](https://hyperfocusam.com/blog/why-i-teach-copilot-not-chatgpt/) (2025-12-30) — Most AI trainers default to ChatGPT. Here's why I start with Microsoft Copilot for enterprise workshops and how it changes adoption.
-- [The AI Tool Stack I Use to Train 3,000 Professionals a Year](https://hyperfocusam.com/blog/ai-tool-stack-3000-professionals/) (2025-12-22) — The complete AI tool stack an AI trainer uses across banking, retail, education, and engineering workshops -- from Copilot to NotebookLM.
+- [The AI Tool Stack I Use in Corporate Training](https://hyperfocusam.com/blog/ai-tool-stack-3000-professionals/) (2025-12-22) — The complete AI tool stack an AI trainer uses across banking, retail, education, and engineering workshops -- from Copilot to NotebookLM.
 
 ### Insights & Commentary
 
@@ -176,8 +176,6 @@ Sam Wong is Co-Founder & Director of Academy at Adaptig (Adaptig Group Limited) 
 - [Services](https://hyperfocusam.com/services/) — Full service catalog with coaching tiers and Train-the-Trainer
 - [Case Notes](https://hyperfocusam.com/case-notes/) — What rooms actually shipped, engagement by engagement
 - [About](https://hyperfocusam.com/about/) — Biography, career path, frameworks, and credentials
-- [Clients](https://hyperfocusam.com/clients/) — Enterprise client list with industry breakdown
-- [Testimonials](https://hyperfocusam.com/testimonials/) — Client feedback and satisfaction data
 - [Speaking](https://hyperfocusam.com/speaking/) — Keynotes and event appearances
 - [Contact](https://hyperfocusam.com/contact/) — Booking and inquiry
 
