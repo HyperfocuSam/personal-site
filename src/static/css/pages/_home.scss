@@ -37,102 +37,69 @@
 
 // 2026-08-02 audit: receipts strip under the hero CTAs.
 
-// ─── Hero — split layout with photo ─────────────
+// ─── Hero — massive centered serif on warm cream ─────────────
 .dark-hero {
   background: _palette(surface-base);
-  padding: 10rem 1.5rem 8rem;
+  padding: 16rem 1.5rem 12rem;
+  text-align: center;
   position: relative;
   overflow: hidden;
 
   &__inner {
-    max-width: _size(content-wide);
+    max-width: _size(content-standard);
     margin: 0 auto;
-    display: flex;
-    gap: 3rem;
-    align-items: flex-start;
-  }
-
-  &__content {
-    flex: 1 1 60%;
-    min-width: 0;
-  }
-
-  &__eyebrow {
-    margin-bottom: 2rem;
-
-    .fn-stamp {
-      font-size: 0.75rem;
-      letter-spacing: 0.06em;
-    }
+    position: relative;
   }
 
   &__headline {
     font-family: _font(family-heading);
-    font-size: clamp(2rem, 1.5rem + 2vw, 3.25rem);
+    font-size: clamp(3.5rem, 2.5rem + 6vw, 8rem);
     font-weight: _font(weight-heading);
     color: _palette(ink);
-    line-height: 1.25;
-    letter-spacing: -0.015em;
-    margin-bottom: 1.5rem;
+    line-height: 1.0;
+    letter-spacing: -0.04em;
+    margin-bottom: 2.5rem;
+
+    em {
+      font-style: italic;
+      color: _palette(text-secondary);
+      display: block;
+    }
   }
 
-  &__subhead {
+  &__subtitle {
     color: _palette(text-body);
     font-size: clamp(1.05rem, 0.95rem + 0.5vw, 1.3rem);
     line-height: 1.7;
-    margin-bottom: 1.25rem;
-  }
-
-  &__who-line {
-    margin-bottom: 2.5rem;
-
-    .fn-stamp {
-      font-size: 0.8rem;
-      color: _palette(text-secondary);
-    }
+    max-width: 520px;
+    margin: 0 auto 3.5rem;
   }
 
   &__actions {
     display: flex;
+    justify-content: center;
     gap: 1rem;
     flex-wrap: wrap;
-    margin-bottom: 2rem;
   }
 
   &__cta {
     display: inline-flex;
     align-items: center;
     gap: 0.6rem;
-    padding: 1.1rem 2.5rem;
+    background: _palette(ink);
+    color: _palette(text-on-dark);
+    padding: 1.1rem 2.75rem;
     border-radius: map-get($radius, xl);
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: _font(weight-bold);
     text-decoration: none;
+    border: 0;
     letter-spacing: 0.01em;
-    transition: all 0.25s $ease-out;
-    border: 2px solid transparent;
+    transition: background 0.25s $ease-out;
 
-    &--primary {
-      background: _palette(signal);
-      color: _palette(text-on-accent);
-      border-color: _palette(signal);
-
-      &:hover {
-        background: _palette(signal-deep);
-        border-color: _palette(signal-deep);
-        color: _palette(text-on-accent);
-      }
-    }
-
-    &--secondary {
-      background: transparent;
-      border-color: _palette(ink);
-      color: _palette(ink);
-
-      &:hover {
-        background: _palette(ink);
-        color: _palette(text-on-dark);
-      }
+    &:hover {
+      background: _palette(ink-light);
+      color: _palette(text-on-dark);
     }
   }
 
@@ -141,115 +108,41 @@
     font-size: 1.1em;
   }
 
+  &__cta--secondary {
+    background: transparent;
+    border: 2px solid _palette(ink);
+    color: _palette(ink);
+
+    &:hover {
+      background: _palette(ink);
+      color: _palette(text-on-dark);
+    }
+  }
+
   &__cta:hover &__arrow {
     transform: translateX(4px);
   }
 
-  &__proof {
-    .fn-stamp {
-      font-size: 0.8rem;
-      line-height: 1.6;
-      display: block;
-    }
-  }
-
-  &__photo {
-    flex: 0 0 42%;
-    position: relative;
-    border-radius: map-get($radius, xl);
-    overflow: hidden;
-    box-shadow: map-get($shadow, lg);
-    align-self: flex-start;
-    aspect-ratio: 4 / 3;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center center;
-      display: block;
-    }
-  }
-
-  &__photo-caption {
-    position: absolute;
-    bottom: 0.75rem;
-    right: 0.75rem;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 0.35rem 0.75rem;
-    border-radius: map-get($radius, md);
-    font-size: 0.7rem;
-    letter-spacing: 0.05em;
-  }
-
   // Staggered entrance animation
-  &__eyebrow,
   &__headline,
-  &__subhead,
-  &__who-line,
-  &__actions,
-  &__proof,
-  &__photo {
+  &__subtitle,
+  &__actions {
     animation: hero-reveal 1s $ease-out-smooth both;
   }
 
-  &__eyebrow   { animation-delay: 0.05s; }
-  &__headline  { animation-delay: 0.15s; }
-  &__subhead   { animation-delay: 0.25s; }
-  &__who-line  { animation-delay: 0.35s; }
-  &__actions   { animation-delay: 0.45s; }
-  &__proof     { animation-delay: 0.55s; }
-  &__photo     { animation-delay: 0.2s; }
+  &__headline   { animation-delay: 0.1s; }
+  &__subtitle   { animation-delay: 0.35s; }
+  &__actions    { animation-delay: 0.55s; }
 
   @include breakpoint(medium) {
-    padding: 8rem 1.5rem 6rem;
-
-    &__inner {
-      flex-direction: column;
-      gap: 3rem;
-    }
-
-    &__content {
-      flex: 1 1 auto;
-      text-align: left;
-    }
-
-    &__photo {
-      flex: 0 0 auto;
-      width: 100%;
-      max-width: 600px;
-      order: 1;
-      aspect-ratio: 4 / 3;
-
-      img {
-        object-position: center center;
-      }
-    }
-
-    &__actions {
-      justify-content: flex-start;
-    }
+    padding: 12rem 1.5rem 8rem;
   }
 
   @include breakpoint(small) {
-    padding: 6rem 1.25rem 4rem;
+    padding: 8rem 1.25rem 5rem;
 
-    &__inner {
-      gap: 2.5rem;
-    }
-
-    &__photo {
-      max-width: 100%;
-    }
-
-    &__actions {
-      flex-direction: column;
-      width: 100%;
-
-      .dark-hero__cta {
-        width: 100%;
-        justify-content: center;
-      }
+    &__subtitle {
+      margin-bottom: 2.5rem;
     }
   }
 }
@@ -262,169 +155,6 @@
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-// ─── Hero Carousel ─────────────────────────────────────────
-.hero-carousel {
-  position: relative;
-  width: 100%;
-  height: 100%;
-
-  &__viewport {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    border-radius: inherit;
-  }
-
-  &__slides {
-    display: flex;
-    height: 100%;
-    transition: transform 0.5s $ease-out-smooth;
-  }
-
-  &__slide {
-    flex-shrink: 0;
-    width: 100%;
-    height: 100%;
-
-    picture,
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center center;
-      display: block;
-    }
-  }
-
-  &__nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.9);
-    border: 0;
-    border-radius: 50%;
-    width: 2.5rem;
-    height: 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.25rem;
-    color: _palette(ink);
-    cursor: pointer;
-    transition: all 0.2s $ease-out;
-    z-index: 10;
-    box-shadow: map-get($shadow, sm);
-
-    &:hover {
-      background: rgba(255, 255, 255, 1);
-      box-shadow: map-get($shadow, md);
-      transform: translateY(-50%) scale(1.05);
-    }
-
-    &:focus {
-      outline: 2px solid _palette(signal);
-      outline-offset: 2px;
-    }
-
-    &--prev {
-      left: 0.75rem;
-    }
-
-    &--next {
-      right: 0.75rem;
-    }
-
-    @include breakpoint(small) {
-      width: 2rem;
-      height: 2rem;
-      font-size: 1rem;
-
-      &--prev {
-        left: 0.5rem;
-      }
-
-      &--next {
-        right: 0.5rem;
-      }
-    }
-  }
-
-  &__dots {
-    position: absolute;
-    bottom: 2.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 0.5rem;
-    z-index: 10;
-  }
-
-  &__dot {
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.5);
-    border: 0;
-    padding: 0;
-    cursor: pointer;
-    transition: all 0.2s $ease-out;
-
-    &:hover {
-      background: rgba(255, 255, 255, 0.8);
-      transform: scale(1.2);
-    }
-
-    &:focus {
-      outline: 2px solid _palette(signal);
-      outline-offset: 2px;
-    }
-
-    &--active {
-      background: rgba(255, 255, 255, 0.95);
-      width: 1.25rem;
-      border-radius: map-get($radius, pill);
-    }
-  }
-
-  &__caption {
-    position: absolute;
-    bottom: 0.75rem;
-    right: 0.75rem;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 0.35rem 0.75rem;
-    border-radius: map-get($radius, md);
-    font-size: 0.7rem;
-    letter-spacing: 0.05em;
-    color: _palette(ink);
-    z-index: 10;
-    transition: opacity 0.3s $ease-out;
-  }
-
-  @include breakpoint(small) {
-    &__caption {
-      bottom: 0.5rem;
-      right: 0.5rem;
-      font-size: 0.65rem;
-      padding: 0.3rem 0.65rem;
-    }
-
-    &__dots {
-      bottom: 2rem;
-    }
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero-carousel__slides {
-    transition: none;
-  }
-
-  .hero-carousel__nav,
-  .hero-carousel__dot {
-    transition: none;
   }
 }
 
@@ -493,72 +223,6 @@
     &__item:last-child {
       grid-column: 1 / -1;
     }
-  }
-}
-
-// ─── Proof strip — three equal workshop photos ────────────────
-.proof-strip {
-  padding: 4rem 1.5rem;
-  background: _palette(surface-base);
-  border-top: 1px solid _palette(border-subtle);
-
-  &__inner {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    align-items: start;
-  }
-
-  &__item {
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    color: inherit;
-    transition: transform 0.25s $ease-out;
-    position: relative;
-    aspect-ratio: 4 / 3;
-    border-radius: map-get($radius, lg);
-    overflow: hidden;
-    box-shadow: map-get($shadow, sm);
-
-    &:hover {
-      transform: translateY(-4px);
-      box-shadow: map-get($shadow, md);
-    }
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-  }
-
-  &__caption {
-    position: absolute;
-    bottom: 0.75rem;
-    left: 0.75rem;
-    background: rgba(255, 255, 255, 0.92);
-    padding: 0.4rem 0.85rem;
-    border-radius: map-get($radius, md);
-    font-size: 0.7rem;
-    letter-spacing: 0.06em;
-    color: _palette(ink);
-  }
-
-  @include breakpoint(medium) {
-    padding: 3rem 1.5rem;
-
-    &__inner {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-      max-width: 500px;
-      margin: 0 auto;
-    }
-  }
-
-  @include breakpoint(small) {
-    padding: 2.5rem 1.25rem;
   }
 }
 
@@ -675,27 +339,15 @@
 
   &__item {
     display: block;
-    padding: 2.5rem 0 2.5rem 2rem;
+    padding: 2.5rem 0;
     border-bottom: 1px solid _palette(border-subtle);
-    border-left: 3px solid transparent;
     text-decoration: none;
     color: inherit;
-    transition: all 0.2s $ease-out;
+    transition: color 0.15s $ease-out;
     position: relative;
-    display: flex;
-    gap: 2rem;
-    align-items: center;
 
     &:first-of-type {
       border-top: 1px solid _palette(border-subtle);
-    }
-
-    &--primary {
-      border-left-color: _palette(signal);
-
-      .services-editorial__label {
-        color: _palette(signal);
-      }
     }
 
     &:hover .services-editorial__heading {
@@ -706,45 +358,6 @@
       transform: translateX(6px);
       color: _palette(ink);
     }
-
-    &:hover .services-editorial__photo img {
-      transform: scale(1.05);
-    }
-
-    @include breakpoint(small) {
-      padding-left: 1.25rem;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 1.5rem;
-    }
-  }
-
-  &__photo {
-    flex-shrink: 0;
-    width: 120px;
-    aspect-ratio: 4 / 3;
-    border-radius: map-get($radius, md);
-    overflow: hidden;
-    box-shadow: map-get($shadow, sm);
-    background: _palette(surface-sunken);
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.35s $ease-out;
-    }
-
-    @include breakpoint(small) {
-      width: 100%;
-      max-width: 300px;
-    }
-  }
-
-  &__text {
-    flex: 1;
-    min-width: 0;
   }
 
   &__label {
@@ -792,53 +405,6 @@
 
     &__title {
       margin-bottom: 2rem;
-    }
-  }
-}
-
-// ─── Scale interlude — full-bleed room photo showing reach ───────
-.scale-interlude {
-  background: _palette(ink);
-  padding: 0;
-  position: relative;
-
-  &__inner {
-    max-width: _size(content-wide);
-    margin: 0 auto;
-    position: relative;
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      opacity: 0.92;
-    }
-
-    @include breakpoint(medium) {
-      aspect-ratio: 4 / 3;
-    }
-  }
-
-  &__caption {
-    position: absolute;
-    bottom: 1.5rem;
-    left: 1.5rem;
-    background: rgba(255, 255, 255, 0.95);
-    padding: 0.5rem 0.9rem;
-    border-radius: map-get($radius, md);
-    font-size: 0.7rem;
-    letter-spacing: 0.05em;
-    color: _palette(ink);
-    box-shadow: map-get($shadow, md);
-
-    @include breakpoint(small) {
-      bottom: 1rem;
-      left: 1rem;
-      font-size: 0.65rem;
-      padding: 0.45rem 0.75rem;
     }
   }
 }
@@ -1019,6 +585,7 @@
 // ─── About callout — photo + bio ─────────────────────────────
 .about-callout {
   padding: 8rem 1.5rem;
+  text-align: center;
   background: _palette(surface-sunken);
   border-top: 1px solid _palette(border-subtle);
 
@@ -1026,23 +593,18 @@
     max-width: _size(content-narrow);
     margin: 0 auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 3rem;
   }
 
   &__photo {
-    flex-shrink: 0;
     width: 180px;
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
     object-position: top center;
+    margin-bottom: 2rem;
     border: 3px solid _palette(border-subtle);
-  }
-
-  &__content {
-    flex: 1;
-    min-width: 0;
   }
 
   &__name {
@@ -1058,7 +620,8 @@
     color: _palette(text-body);
     font-size: map-get($type, body-large);
     line-height: 1.65;
-    margin: 0 0 1.5rem;
+    max-width: 480px;
+    margin: 0 auto 2rem;
   }
 
   &__link {
@@ -1074,169 +637,12 @@
     }
   }
 
-  @include breakpoint(medium) {
-    &__inner {
-      flex-direction: column;
-      text-align: center;
-      gap: 2rem;
-    }
-
-    &__photo {
-      width: 160px;
-      height: 160px;
-    }
-  }
-
   @include breakpoint(small) {
     padding: 5rem 1.25rem;
 
     &__photo {
       width: 140px;
       height: 140px;
-    }
-  }
-}
-
-// ─── Case Notes Receipt Cards ────────────────────────────────
-.home-case-notes-cards {
-  padding: 6rem 1.5rem;
-  background: _palette(surface-sunken);
-  border-top: 1px solid _palette(border-subtle);
-  border-bottom: 1px solid _palette(border-subtle);
-
-  &__heading {
-    text-align: center;
-    margin-bottom: 3rem;
-
-    .fn-stamp {
-      font-size: 0.8rem;
-      letter-spacing: 0.08em;
-    }
-  }
-
-  &__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    align-items: start;
-
-    @include breakpoint(medium) {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-      max-width: 500px;
-      margin: 0 auto;
-    }
-  }
-
-  @include breakpoint(small) {
-    padding: 4rem 1.25rem;
-
-    &__heading {
-      margin-bottom: 2rem;
-    }
-  }
-}
-
-.case-receipt-card {
-  display: flex;
-  flex-direction: column;
-  background: _palette(surface-base);
-  border: 1px solid _palette(border-subtle);
-  border-radius: map-get($radius, lg);
-  padding: 0;
-  text-decoration: none;
-  color: inherit;
-  transition: all 0.25s $ease-out;
-  box-shadow: map-get($shadow, sm);
-  overflow: hidden;
-
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: map-get($shadow, md);
-    border-color: _palette(border-strong);
-  }
-
-  &__photo {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-    background: _palette(surface-sunken);
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center center;
-      display: block;
-      transition: transform 0.4s $ease-out;
-    }
-  }
-
-  &:hover &__photo img {
-    transform: scale(1.03);
-  }
-
-  &__content {
-    padding: 2rem 1.75rem;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-  }
-
-  // Text-only variant: make it intentional, not a missing image
-  &--text-only {
-    justify-content: center;
-    min-height: 240px;
-
-    .case-receipt-card__content {
-      padding: 2.5rem 1.75rem;
-      justify-content: center;
-    }
-
-    .case-receipt-card__metric {
-      font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
-    }
-  }
-
-  &__org {
-    font-size: 0.7rem;
-    letter-spacing: 0.06em;
-    color: _palette(amber);
-    margin-bottom: 1rem;
-    min-height: 1.4em;
-    display: flex;
-    align-items: flex-start;
-  }
-
-  &__metric {
-    flex: 1;
-    font-family: _font(family-heading);
-    font-size: clamp(1.15rem, 1rem + 0.5vw, 1.4rem);
-    font-weight: _font(weight-heading);
-    color: _palette(text-primary);
-    line-height: 1.3;
-    margin: 0 0 1.25rem;
-    letter-spacing: _font(kerning-heading);
-  }
-
-  &__arrow {
-    font-size: 1.5rem;
-    color: _palette(text-secondary);
-    transition: transform 0.2s $ease-out-snappy;
-  }
-
-  &:hover &__arrow {
-    transform: translateX(4px);
-    color: _palette(ink);
-  }
-
-  @include breakpoint(small) {
-    &__content {
-      padding: 1.75rem 1.5rem;
-    }
-
-    &--text-only .case-receipt-card__content {
-      padding: 2rem 1.5rem;
     }
   }
 }
