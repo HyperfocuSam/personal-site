@@ -54,9 +54,10 @@ const COPY = {
 
 // Same-origin on purpose (see api/contact.js): with the receiver on our own
 // /api/contact there is no third-party origin for the CSP to forget — the
-// omission that silently ate every submission for 88 days in 2026. Formspree
-// (https://formspree.io/f/mwvrrwbe) remains live as the rollback for one week
-// after the 2026-08-14 cutover; its CSP entries go in the cleanup commit.
+// omission that silently ate every submission for 88 days in 2026.
+// The Formspree rollback was retired on 2026-08-15 along with its CSP entries,
+// after the Resend path was exercised end to end through both the English and
+// the Chinese form and both messages were confirmed delivered.
 const CONTACT_ENDPOINT = '/api/contact';
 
 const ContactForm = ({ initialInterest, placement, language }) => {

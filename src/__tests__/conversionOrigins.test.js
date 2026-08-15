@@ -45,11 +45,26 @@ describe('conversion origins survive in the CSP', () => {
     expect(directive('form-action')).toMatch(/'self'/);
   });
 
-  it('keeps Formspree usable as the rollback during the cutover week', () => {
-    // Remove this test together with the formspree.io CSP entries in the
-    // cleanup commit once the Resend path has survived a week in production.
-    expect(directive('connect-src')).toContain('https://formspree.io');
-    expect(directive('form-action')).toContain('https://formspree.io');
+  it('has retired the Formspree rollback', () => {
+    // The cutover week is over: the Resend path was exercised end to end on
+    // 2026-08-15 through both the English and Chinese forms and both messages
+    // were confirmed delivered. Dead allowances are not free — a CSP nobody
+    // trusts as a list of what the site actually talks to is a CSP nobody
+    // reads carefully, which is how the next omission gets in.
+    expect(directive('connect-src')).not.toContain('formspree.io');
+    expect(directive('form-action')).not.toContain('formspree.io');
+  });
+
+  it('lets GTM report the generate_lead conversion', () => {
+    // The same omission as 2026-05-15, caught 2026-08-15 in a real browser and
+    // never in review: gtag posts the Google Ads conversion beacon to
+    // https://www.google.com/measurement/conversion — a different origin from
+    // the google-analytics.com one below — and it was refused on pageview and
+    // again on submit, the second carrying value=1. GA4's own collection
+    // endpoint was allowed throughout, so the event was in GA4 reports and
+    // absent from Ads conversion measurement, which is exactly the kind of
+    // half-failure that reads as "working".
+    expect(directive('connect-src')).toContain('https://www.google.com');
   });
 
   it('lets the booking page load and frame the Ro.am embed', () => {
