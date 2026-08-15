@@ -10,13 +10,11 @@ const stats = {
     primary: true,
     format: true,
   },
-  workshops: {
-    number: '170+',
-    value: 170,
-    suffix: '+',
-    label: 'Workshops Delivered',
-    labelZh: '場工作坊',
-  },
+  // `workshops` removed 2026-08-15. No ruled workshop count exists and the
+  // site carried four contradicting variants (170+/180+/200+/230+); StatsBar
+  // stopped rendering it on 2026-08-14 but the key stayed one import away from
+  // a stat bar. The file itself is live — StatsBar.js and GetStarted.js both
+  // import it.
   organizations: {
     number: '70+',
     value: 70,

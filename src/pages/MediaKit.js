@@ -9,7 +9,6 @@ const stats = [
   { number: '10,000+', label: 'Professionals Trained' },
   { number: '6', label: 'Sectors' },
   { number: '13', label: 'Countries Reached' },
-  { number: '9.2/10', label: 'Avg. Satisfaction' },
 ];
 
 const topics = [

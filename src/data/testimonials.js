@@ -16,7 +16,7 @@ const testimonials = [
       + 'to practical tool they can use on Monday morning.',
     name: 'Training Department',
     title: 'Corporate AI Workshop',
-    company: 'a Fortune 500 financial institution',
+    company: 'an international financial institution',
   },
   {
     quote: 'The Pioneer Program didn\'t just teach us AI — it changed how our department '

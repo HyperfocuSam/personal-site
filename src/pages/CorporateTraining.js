@@ -236,7 +236,8 @@ const CorporateTraining = () => (
     description={
       'Enterprise AI workshops in Hong Kong, delivered in English and'
       + ' Cantonese. 10,000+ professionals trained across 70+ organizations'
-      + ' including HSBC and Chow Tai Fook, at 9.2/10 satisfaction.'
+      + ' including HSBC and Chow Tai Fook. Top programme score 9.2/10'
+      + ' across 1,530 participants.'
     }
     canonicalUrl={`${SITE_URL}/corporate-ai-training-hong-kong`}
     ogTitle="Corporate AI Training in Hong Kong | Sam Wong"
@@ -354,13 +355,6 @@ const CorporateTraining = () => (
               <span className="fn-receipt__leader" aria-hidden="true" />
               <span className="stat-item__label fn-receipt__label">
                 Professionals Trained
-              </span>
-            </div>
-            <div className="stat-item fn-receipt">
-              <span className="stat-item__number fn-receipt__number">9.2/10</span>
-              <span className="fn-receipt__leader" aria-hidden="true" />
-              <span className="stat-item__label fn-receipt__label">
-                Avg. Satisfaction
               </span>
             </div>
             <div className="stat-item fn-receipt">

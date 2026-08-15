@@ -164,10 +164,10 @@ const ZhAbout = () => (
               {' — 300 場跨行業專業人士的一對一輔導。'}
             </li>
             <li>
-              <strong>RENPHO AI Division</strong>
+              <strong>RENPHO</strong>
               {/* 「策略性」 = "strategic" jargon filler (2026-08-15 audit) —
                   the receipt is leading the transformation, not the adjective. */}
-              {' — 帶領 AI 轉型和團隊能力發展。'}
+              {' — 行政總裁行政助理，其後轉任 AI 產品經理：AI 應用推行與團隊能力發展。'}
             </li>
           </ul>
         </div>

@@ -108,7 +108,7 @@ const About = () => (
             of Hong Kong, specializing in records management and knowledge systems.
             My career moved from Executive Assistant to the President of ThreeSixty
             Group (the company behind Sharper Image and FAO Schwarz) to AI Product
-            Manager at RENPHO, where I built an AI division from scratch.
+            Manager at RENPHO, working on AI adoption and team capability.
           </p>
           <p>
             <span className="fn-stamp">In 2024</span>, I left that stable role
@@ -247,8 +247,8 @@ const About = () => (
               {' - 300 one-on-one coaching sessions with professionals across industries.'}
             </li>
             <li className="fn-entry">
-              <strong>RENPHO AI Division</strong>
-              {' - Led strategic AI transformation and team capability building.'}
+              <strong>RENPHO</strong>
+              {' - EA to CEO, then AI Product Manager: AI adoption and team capability building.'}
             </li>
             <li className="fn-entry">
               <strong>PromptBox</strong>

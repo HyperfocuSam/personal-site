@@ -224,14 +224,14 @@ const ZhCorporateTraining = () => (
       '香港企業 AI 培訓及工作坊。'
       + '企業工作坊、提示工程培訓、AI 採用計劃，'
       + '以英語及廣東話授課。10,000+ 專業人士受訓、'
-      + '滿意度 9.2/10。一間大型香港銀行、匯豐、周大福、一間香港公用事業公司、'
+      + '一間大型香港銀行、匯豐、周大福、一間香港公用事業公司、'
       + '70+ 機構合作經驗。'
     }
     canonicalUrl={`${SITE_URL}/zh/corporate-ai-training-hong-kong`}
     ogTitle="香港企業 AI 培訓 | Sam Wong"
     ogDescription={
       '香港企業 AI 工作坊及培訓計劃。'
-      + '10,000+ 專業人士受訓、滿意度 9.2/10。'
+      + '10,000+ 專業人士受訓。最高課程評分 9.2/10，來自一間銀行 1,530 位參加者的計劃。'
       + '以英語及廣東話授課。'
     }
     ogImage={DEFAULT_OG_IMAGE}
@@ -345,12 +345,6 @@ const ZhCorporateTraining = () => (
               <span className="stat-item__number">10,000+</span>
               <span className="stat-item__label">
                 專業人士受訓
-              </span>
-            </div>
-            <div className="stat-item">
-              <span className="stat-item__number">9.2/10</span>
-              <span className="stat-item__label">
-                平均滿意度
               </span>
             </div>
             <div className="stat-item">

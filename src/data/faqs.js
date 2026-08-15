@@ -25,7 +25,7 @@ export const servicesFaqs = [
   },
   {
     q: 'What results can teams expect from corporate AI workshops?',
-    a: 'Workshops achieve a 9.2/10 average satisfaction rating. The focus is on behavior change rather than tool awareness — teams learn to integrate AI into their actual daily workflows. Multi-session Pioneer Programs have shown participants saving 5-8 hours per week through AI-assisted workflow redesign.',
+    a: 'The strongest programme score on record is 9.2/10, from one bank\'s Asia-Pacific AI programme across 1,530 participants. The focus is on behavior change rather than tool awareness — teams learn to integrate AI into their actual daily workflows. Multi-session Pioneer Programs have shown participants saving 5-8 hours per week through AI-assisted workflow redesign.',
   },
   {
     q: 'What is the Adaptig Train-the-Trainer program?',
@@ -64,7 +64,7 @@ export const aboutFaqs = [
   },
   {
     q: 'What is Sam Wong\'s background?',
-    a: 'I hold a Master of Arts in Public & Comparative History from the Chinese University of Hong Kong, specializing in records management and knowledge systems. My career moved from Executive Assistant to the President of ThreeSixty Group (Sharper Image / FAO Schwarz) to AI Product Manager at RENPHO, where I built an AI division from scratch. In 2024, I started AICBO — free 1-on-1 AI tutoring — which grew into 300 coaching sessions and led to co-founding Adaptig.',
+    a: 'I hold a Master of Arts in Public & Comparative History from the Chinese University of Hong Kong, specializing in records management and knowledge systems. My career moved from Executive Assistant to the President of ThreeSixty Group (Sharper Image / FAO Schwarz) to AI Product Manager at RENPHO, working on AI adoption and team capability. In 2024, I started AICBO — free 1-on-1 AI tutoring — which grew into 300 coaching sessions and led to co-founding Adaptig.',
   },
   {
     q: 'What organizations does Sam Wong work with?',

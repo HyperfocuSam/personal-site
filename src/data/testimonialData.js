@@ -2,13 +2,13 @@
 // Attribution: "Course + date" for academy (anonymous survey data), "Role — Company" for corporate
 
 const testimonialData = {
-  // Aggregate stats for the hero section
-  stats: {
-    satisfaction: '9.2/10',
-    satisfactionSource: 'a major Hong Kong bank',
-    participantsServed: '1,530',
-    enterpriseClients: '70+',
-  },
+  // The `stats` block that used to sit here held a bare `satisfaction:
+  // '9.2/10'` with its scope in a sibling field, which is one careless render
+  // away from publishing one bank's programme score as a site-wide average.
+  // Nothing consumed it — CaseNotes.js reads only .corporate, .aboutSam and
+  // .academy — so it was a trap, not a claim. Removed 2026-08-15. The scoped
+  // receipt on the homepage (components/Home/ProofReceipt.js) is the one place
+  // that number belongs.
 
   // Quotes that specifically mention Sam or his teaching approach
   aboutSam: [

@@ -39,7 +39,7 @@ export const topicsZh = overlay(topics, {
 
 export const engagementsZh = overlay(engagements, {
   ypo: { org: 'YPO 全球活動', title: 'The 45 Minutes AI Show', description: '在洛杉磯為 YPO 會員及家屬做的互動式演講，以現場示範為主。' },
-  bank: { org: '一間香港大型銀行', title: '企業 AI 培訓計劃', description: '橫跨 13 個國家、共 51 節的完整 AI 應用培訓。' },
+  bank: { org: '一間香港大型銀行', title: '企業 AI 培訓計劃', description: '橫跨 13 個國家的完整 AI 應用培訓。' },
   miit: { org: '中國工信部', title: 'AI 訓練師訓練營', description: '在重慶舉行的工信部 AI 訓練師訓練營主題演講。' },
   'tech-company': { org: '一間國際科技公司', title: 'AI 職場體驗日', description: '在該公司香港的職場 AI 體驗活動擔任講者。' },
   ctf: { org: '周大福', title: 'AI × 設計思維黑客松', description: '三次回頭合作，把創意解難和實作 AI 原型結合。' },

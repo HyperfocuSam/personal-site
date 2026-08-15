@@ -243,8 +243,6 @@ Sam Wong is Co-Founder & Director of Academy at Adaptig (Adaptig Group Limited) 
 - [Services](${SITE_URL}/services/) \u2014 Full service catalog with coaching tiers and Train-the-Trainer
 - [Case Notes](${SITE_URL}/case-notes/) \u2014 What rooms actually shipped, engagement by engagement
 - [About](${SITE_URL}/about/) \u2014 Biography, career path, frameworks, and credentials
-- [Clients](${SITE_URL}/clients/) \u2014 Enterprise client list with industry breakdown
-- [Testimonials](${SITE_URL}/testimonials/) \u2014 Client feedback and satisfaction data
 - [Speaking](${SITE_URL}/speaking/) \u2014 Keynotes and event appearances
 - [Contact](${SITE_URL}/contact/) \u2014 Booking and inquiry
 

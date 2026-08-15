@@ -11,7 +11,6 @@ const stats = [
   { number: '10,000+', label: '受訓專業人士' },
   { number: '6', label: '行業' },
   { number: '13', label: '國家' },
-  { number: '9.2/10', label: '平均滿意度' },
 ];
 
 const topics = [
