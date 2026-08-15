@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-// Copy per language in one object (bilingual rule). The zh items are the
-// 我做的三件事 copy that already ran on the old /zh homepage — live, Sam-read,
-// one-voice consistent.
+// Copy per language in one object (bilingual rule). The zh descriptions were
+// rewritten 2026-08-15 through the deepseek pipeline (generate + judge + Sam's
+// OK) after the native-reader audit flagged the old /zh homepage lines as
+// English calques.
 const COPY = {
   en: {
     title: 'How I Can ',
@@ -37,19 +38,22 @@ const COPY = {
       {
         label: '企業',
         title: '企業工作坊',
-        description: '統一團隊認知、降低恐懼、建立與日常工作流程掛鉤的實用技能。',
+        // 2026-08-15 DeepSeek rewrite (Sam's OK): 統一/掛鉤 align-calques out,
+        // 降低恐懼 → 消除顧慮 (the native phrasing; the psychological-safety
+        // meaning stays).
+        description: '協助團隊建立對 AI 的共同認知，消除使用上的顧慮，學到的技能回到崗位即可應用。',
         href: '/zh/services#organizations',
       },
       {
         label: '個人',
         title: '一對一輔導',
-        description: '圍繞你的項目、角色與目標的個人化課程。',
+        description: '課程完全圍繞你的項目、崗位與目標而設計。',
         href: '/zh/services#one-on-one',
       },
       {
         label: '培訓師',
         title: '培訓師培訓計劃',
-        description: '協助培訓師掌握 Adaptig 方法論，自信教授 AI。',
+        description: '協助培訓師掌握 Adaptig 方法論，教 AI 時更有信心與把握。',
         href: '/zh/services#train-the-trainer',
       },
     ],
