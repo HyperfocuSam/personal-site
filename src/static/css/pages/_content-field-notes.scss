@@ -26,6 +26,21 @@
       color: _palette(text-body);
     }
 
+    // base/_textures.scss:32 gives `.section-dark a` the paper-white
+    // `text-on-dark`. This block repaints the band white, so any bare link
+    // inside it was left at #e8e9f0 on #ffffff — ratio 1.21, invisible. It hid
+    // because the two links beside it on /about are `.button`/`.button-secondary`
+    // and were already handled below, so only the quiet third route out of the
+    // page ("or send me a message →", About.js:329) was affected — on the #2
+    // organic landing page. Found 2026-08-15 audit.
+    a:not(.button):not(.button-secondary) {
+      color: _palette(text-body);
+
+      &:hover {
+        color: _palette(ink);
+      }
+    }
+
     .button,
     .button-secondary {
       background: _palette(ink);

@@ -150,4 +150,31 @@ describe('S1 verified bug regressions', () => {
     expect(sitemap).toContain('<loc>https://hyperfocusam.com/book/</loc>');
     expect(sitemap).not.toContain('<loc>https://hyperfocusam.com/get-started/</loc>');
   });
+
+  // Both of these shipped live and were invisible to every existing check: the
+  // source read as correct, and Lighthouse only ever looked at / and /blog/.
+  // These are source guards against a revert; the general case is covered by
+  // widening lighthouserc.json, whose axe color-contrast audit is what caught
+  // them. Found 2026-08-15 audit.
+  it('keeps the email capture input legible against components/_form.scss', () => {
+    const styles = read('src/static/css/components/_email-capture.scss');
+    // `input[type="email"]` in components/_form.scss is (0,1,1) and sets both
+    // `background: surface-sunken` and `color: inherit`. A bare `&__input` is
+    // (0,1,0) and loses on both, leaving #e8e9f0 text on a #f7f6f3 field —
+    // ratio 1.12, i.e. the visitor cannot see the address they are typing.
+    expect(styles).toMatch(/input#\{&\}__input\s*\{/);
+    expect(styles).not.toMatch(/input#\{&\}__input\s*\{[^}]*color:\s*_palette\(text-on-dark\)/);
+    // The --dark variant is (0,2,0) and outranks the fix, so it must not
+    // reinstate the translucent field. ZhIndex.js mounts variant="dark".
+    expect(styles).not.toMatch(/background-color:\s*rgba\(255,\s*255,\s*255,\s*0\.05\)/);
+  });
+
+  it('recolours bare links when a dark band is repainted white', () => {
+    const styles = read('src/static/css/pages/_content-field-notes.scss');
+    // base/_textures.scss gives `.section-dark a` the paper-white text-on-dark.
+    // .field-notes-content repaints .section-dark white, so anchors must be in
+    // the recolour list or they render #e8e9f0 on #ffffff — ratio 1.21. The
+    // buttons were already handled, which is why only the quiet link broke.
+    expect(styles).toMatch(/a:not\(\.button\):not\(\.button-secondary\)\s*\{[\s\S]*?color:\s*_palette\(text-body\)/);
+  });
 });

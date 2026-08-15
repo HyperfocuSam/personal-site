@@ -64,24 +64,37 @@
     }
   }
 
-  &__input {
+  // `input#{&}__input` and not `&__input`, and the two must not be swapped back.
+  // components/_form.scss styles the bare element — `input[type="email"]`,
+  // specificity (0,1,1) — with `background: surface-sunken` AND `color: inherit`.
+  // A single class is (0,1,0), so the element selector used to win on BOTH
+  // declarations: the field rendered opaque cream while `inherit` pulled
+  // `text-on-dark` down from `.email-capture` above. #e8e9f0 on #f7f6f3 is a
+  // contrast ratio of 1.12 — the visitor could not see the address they typed,
+  // on every mount except the homepage (which had its own override in
+  // pages/_field-notes.scss and is why this went unseen for so long).
+  // Matching (0,1,1) and relying on import order — form at main.scss:20,
+  // this file at :32 — is what makes these declarations apply at all.
+  // Treatment copied from the homepage override that was already correct:
+  // a light field on the ink band, ink text. Found 2026-08-15 audit.
+  input#{&}__input {
     flex: 1;
     min-width: 220px;
     padding: 0.85em 1.2em;
     font-size: 1rem;
-    border: 2px solid rgba(_palette(text-on-dark), 0.3);
+    border: 1px solid _palette(ink);
     border-radius: map-get($radius, md);
-    background-color: rgba(255, 255, 255, 0.08);
-    color: _palette(text-on-dark);
+    background: _palette(surface-base);
+    color: _palette(ink);
     outline: none;
     transition: border-color 0.2s $ease-out-snappy;
 
     &::placeholder {
-      color: rgba(_palette(text-on-dark), 0.45);
+      color: _palette(text-body);
     }
 
     &:focus {
-      border-color: _palette(text-on-dark);
+      border-color: _palette(verification);
     }
 
     @include breakpoint(small) {
@@ -166,10 +179,16 @@
     background-color: _palette(surface-dark-subtle);
     border-top: 1px solid _palette(surface-dark-border);
 
-    &__input,
+    // `.email-capture--dark .email-capture__input` is (0,2,0) and outranks the
+    // (0,1,1) rule above, so this block has to carry the light field too or the
+    // 1.12-contrast bug simply comes back on every --dark mount — which is the
+    // Chinese homepage (ZhIndex.js passes variant="dark"). The old `&__input`
+    // sibling compiled to `.email-capture--dark__input`, a class that exists
+    // nowhere; dropped rather than kept as decoration.
     .email-capture__input {
-      background-color: rgba(255, 255, 255, 0.05);
-      border-color: _palette(surface-dark-border-strong);
+      background: _palette(surface-base);
+      border-color: _palette(ink);
+      color: _palette(ink);
 
       &:focus {
         border-color: _palette(amber);
