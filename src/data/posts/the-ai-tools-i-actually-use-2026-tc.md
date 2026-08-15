@@ -24,7 +24,7 @@
 
 **Microsoft Copilot** — 企業辦公室的預設。
 
-**Wispr Flow** — 每日使用：語音輸入、文字輸出。ADHD 稅。這個月加了一個同事到 Adaptig 的座位。[試 Flow](https://wisprflow.ai/)。
+**Wispr Flow** — 每日使用：語音輸入、文字輸出。ADHD 稅。這個月加了一個同事到 Adaptig 的座位。[試 Flow](https://ref.wisprflow.ai/sam-wong)。
 
 **Notion** — 客戶工作區與中間那些雜亂檔案。[Notion](https://www.notion.com/)。
 
@@ -36,7 +36,7 @@
 
 **Replit** — 我有真的應用程式放在上面。[Replit](https://replit.com/)。
 
-**Firecrawl** — 我付 Hobby 方案，每月 $19，有收據。你靠爬蟲吃飯，這是我會真心推薦的那一個。[Firecrawl](https://www.firecrawl.dev/)。（8 月 13 日信用卡扣款失敗——那是我的問題，不是產品評價。）
+**Firecrawl** — 我付 Hobby 方案，每月 $19，有收據。你靠爬蟲吃飯，這是我會真心推薦的那一個。[Firecrawl](https://firecrawl.link/sam-wong)。（8 月 13 日信用卡扣款失敗——那是我的問題，不是產品評價。）
 
 **n8n** — €240 年費到期之前我取消了 Cloud。我還在用 n8n。[n8n](https://n8n.io/)。
 

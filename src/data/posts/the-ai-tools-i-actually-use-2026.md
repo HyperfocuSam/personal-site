@@ -27,7 +27,7 @@ If it fails any of those, it leaves. Manus Pro left in August. n8n Cloud left in
 
 **Microsoft Copilot** — default in enterprise rooms. No creator affiliate. If Adaptig ever sells seats as a Microsoft partner, that is a company motion, not a link on this page.
 
-**Wispr Flow** — voice in, text out, every day. ADHD tax. I added a teammate to the Adaptig seat this month. [Try Flow](https://wisprflow.ai/). Affiliate program exists (25% of year one); I am applying.
+**Wispr Flow** — voice in, text out, every day. ADHD tax. I added a teammate to the Adaptig seat this month. [Try Flow](https://ref.wisprflow.ai/sam-wong).
 
 **Notion** — where client workspaces and the messy middle live. [Notion](https://www.notion.com/) pays affiliates on net-new Plus/Business upgrades (up to $50 plus 20% of year-one revenue, 180-day cookie). I am applying. Until the approved link exists, that is a normal link.
 
@@ -39,7 +39,7 @@ If it fails any of those, it leaves. Manus Pro left in August. n8n Cloud left in
 
 **Replit** — I publish real apps on it. Their public referral is credits, not cash. Fine if you want to offset your own bill. [Replit](https://replit.com/).
 
-**Firecrawl** — I pay Hobby, $19/month, and I have the receipts. If you scrape for a living, this is the one I would actually recommend. [Firecrawl](https://www.firecrawl.dev/) pays 25% for 12 months, then 15%. Applying. (Card failed on 13 Aug — that is a me problem, not a product review.)
+**Firecrawl** — I pay Hobby, $19/month, and I have the receipts. If you scrape for a living, this is the one I would actually recommend. [Firecrawl](https://firecrawl.link/sam-wong). (Card failed on 13 Aug — that is a me problem, not a product review.)
 
 **n8n** — I cancelled the Cloud yearly before the €240 hit. I still use it. If you want hosted Cloud, [their affiliate page](https://n8n.io/affiliates/) is 30% of year one on Starter/Pro, PayPal, €100 minimum. No paid ads. Applying.
 
