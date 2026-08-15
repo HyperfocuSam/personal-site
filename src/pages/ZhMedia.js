@@ -16,7 +16,7 @@ const episodes = [
     likes: null,
     embedUrl: 'https://www.youtube.com/embed/lWY4JVlz960',
     membersOnly: false,
-    description: 'Sam 分享 AI 三大心法，並即場示範如何用 AI 拒絕朋友借錢，全場爆笑。',
+    description: '我分享 AI 三大心法，並即場示範如何用 AI 拒絕朋友借錢，全場爆笑。',
     highlights: [],
   },
   {
@@ -28,9 +28,9 @@ const episodes = [
     likes: '944+',
     embedUrl: 'https://www.youtube.com/embed/1cJ6dwOad6g',
     membersOnly: false,
-    description: 'Sam 拆解三大 AI 工具迷思，比較 o3 與 4o 的分別，並示範大部分付費用戶都忽略的隱藏功能。',
+    description: '我拆解三大 AI 工具迷思，比較 o3 與 4o 的分別，並示範大部分付費用戶都忽略的隱藏功能。',
     highlights: [
-      { time: '08:53', label: 'Sam 自我介紹' },
+      { time: '08:53', label: '自我介紹' },
       { time: '13:33', label: '「課金 AI = 投資自己」' },
       { time: '30:00', label: 'o3 vs 4o 深入解析' },
       { time: '44:19', label: '隱藏功能示範' },
@@ -45,7 +45,7 @@ const episodes = [
     likes: null,
     embedUrl: 'https://www.youtube.com/embed/7Gswgk7Qd7Q',
     membersOnly: true,
-    description: 'Sam 分享三個幫助你拯救專注力、提升生產力的 AI 工具。',
+    description: '我分享三個幫助你拯救專注力、提升生產力的 AI 工具。',
     highlights: [],
   },
 ];
@@ -277,11 +277,11 @@ const ZhMedia = () => (
           </div>
           {/* Single-expression text: adjacent text nodes break react-snap hydration (#418) */}
           <p>
-            {'Sam 曾以嘉賓專家身份三度出演 '}
+            {'我曾以嘉賓專家身份三度出演 '}
             <strong>會八十</strong>
             ，一個由阿Bu、陳強與 Greg 主持的熱門廣東話 YouTube 節目。
             節目涵蓋科技、AI 工具與實用數碼技能，面向香港觀眾。
-            Sam 的三集節目累計觀看次數超過 98,000。
+            我的三集節目累計觀看次數超過 98,000。
           </p>
         </div>
       </section>
@@ -297,9 +297,9 @@ const ZhMedia = () => (
 
       <section className="section-dark section-dark--centered section-padding">
         <div className="content-standard">
-          <h3>有興趣邀請 Sam 上你的節目？</h3>
+          <h3>想邀請我上你的節目？</h3>
           <p>
-            Sam 可以接受 Podcast 訪問（直播或預錄）、YouTube 直播、座談討論、
+            我可以接受 Podcast 訪問（直播或預錄）、YouTube 直播、座談討論、
             會議主題演講，主題包括 AI 應用、生產力與實用科技。
           </p>
           <ul className="actions">

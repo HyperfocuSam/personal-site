@@ -148,7 +148,7 @@ const ZhBlog = () => {
         <section className="section-sunken section-padding">
           <div className="content-standard">
             <h3>關於作者</h3>
-            <AuthorCard />
+            <AuthorCard language="zh-Hant" />
           </div>
         </section>
 

@@ -6,7 +6,7 @@ import Main from '../layouts/Main';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 import servicesZh from '../data/services-zh';
 
-import testimonials from '../data/testimonials';
+import testimonials from '../data/testimonials-zh';
 import ServiceGroup from '../components/Services/ServiceGroup';
 import FaqSection from '../components/FaqSection/FaqSection';
 import { zhServicesFaqs } from '../data/faqs-zh';

@@ -58,9 +58,12 @@ const About = () => (
               company, no city. Third person for the summary, first person from
               "How It Started" on, same split that works in the homepage hero. */}
           <h2>Quick Version</h2>
+          {/* ONE VOICE (Sam's ruling, 2026-08-15): visible prose stays first
+              person; the entity signal keeps the name right here, and
+              metadata/JSON-LD stay third person. */}
           <p>
-            Sam Wong is Co-Founder &amp; Director of Academy at Adaptig, an AI
-            train-the-trainer based in Hong Kong. He trains the people who train
+            I&rsquo;m Sam Wong, Co-Founder &amp; Director of Academy at Adaptig, an AI
+            train-the-trainer based in Hong Kong. I train the people who train
             AI &mdash; 10,000+ professionals across 70+ organizations in 13 countries.
           </p>
           <p>
@@ -75,7 +78,7 @@ const About = () => (
               "Registered Speaker", never "Trainer" — the HKPC trainer claim is
               explicitly banned in memory_sam_profile.md. */}
           <p>
-            He is a <strong>Registered Speaker</strong> with the Hong Kong
+            I am a <strong>Registered Speaker</strong> with the Hong Kong
             Productivity Council and an <strong>Official Trainer Partner</strong> of
             the Hong Kong College of Technology.
           </p>
@@ -402,7 +405,7 @@ const About = () => (
               'https://www.threads.net/@sam_ai_cbo',
               'https://www.instagram.com/sam_ai_cbo/',
             ],
-            description: 'Co-Founder & Director of Academy at Adaptig. I train the people who train AI. 10,000+ professionals trained across 70+ organizations in 13 countries on practical AI adoption that changes behavior, not just builds awareness.',
+            description: 'Co-Founder & Director of Academy at Adaptig. Sam Wong trains the people who train AI — 10,000+ professionals across 70+ organizations in 13 countries on practical AI adoption that changes behavior.',
           })}
         </script>
 

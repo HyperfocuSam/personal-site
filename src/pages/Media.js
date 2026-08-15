@@ -213,7 +213,7 @@ const Media = () => (
           </div>
           {/* Single-expression text: adjacent text nodes break react-snap hydration (#418) */}
           <p>
-            {'Sam has appeared as a recurring guest expert on '}
+            {'I have appeared as a recurring guest expert on '}
             <strong>Club 80 (會八十)</strong>
             , a popular Cantonese YouTube show hosted by
             阿Bu, 陳強, and Greg.
@@ -290,9 +290,9 @@ const Media = () => (
       <section className="section-dark section-dark--centered section-padding">
         <div className="content-standard">
           <ScrollReveal variant="fade-up">
-            <h3>Interested in having Sam on your show?</h3>
+            <h3>Want me on your show?</h3>
             <p>
-              Sam is available for podcast interviews, live streams, panel discussions,
+              I am available for podcast interviews, live streams, panel discussions,
               and conference talks on AI adoption, productivity, and practical technology use.
             </p>
             <ul className="actions">

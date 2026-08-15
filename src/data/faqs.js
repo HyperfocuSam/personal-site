@@ -9,15 +9,19 @@
 //
 // One array per page drives BOTH the visible block and the schema, the way
 // components/Home/HomeFAQ.js already does it.
+//
+// Voice convention (Sam's ruling, 2026-08-15): QUESTIONS may name Sam Wong —
+// they are the searcher's voice and match the query shape. ANSWERS are first
+// person — the answers are Sam speaking on his own site.
 
 export const servicesFaqs = [
   {
     q: 'What types of AI training does Sam Wong offer?',
-    a: 'Sam Wong offers corporate AI workshops through Adaptig, multi-session AI Pioneer Programs for cohort-based learning, 1-1 AI coaching for professionals, Train-the-Trainer certification programs, and keynotes and event sessions. Services are available for organizations, individuals, and aspiring AI trainers.',
+    a: 'I offer corporate AI workshops through Adaptig, multi-session AI Pioneer Programs for cohort-based learning, 1-1 AI coaching for professionals, Train-the-Trainer certification programs, and keynotes and event sessions. Services are available for organizations, individuals, and aspiring AI trainers.',
   },
   {
     q: 'Who are Sam Wong\'s typical clients for AI training?',
-    a: 'Sam Wong works with enterprises across banking, retail, education, engineering, tourism, and technology sectors. Notable clients include a major Hong Kong bank with 1,530 participants across 13 countries, Chow Tai Fook (three repeat engagements), Hong Kong Jockey Club, HSBC, Arup, PolyU, and YPO.',
+    a: 'I work with enterprises across banking, retail, education, engineering, tourism, and technology sectors. Notable clients include a major Hong Kong bank with 1,530 participants across 13 countries, Chow Tai Fook (three repeat engagements), Hong Kong Jockey Club, HSBC, Arup, PolyU, and YPO.',
   },
   {
     q: 'What results can teams expect from corporate AI workshops?',
@@ -37,38 +41,38 @@ export const servicesFaqs = [
   },
   {
     q: 'Where is Sam Wong based and what languages does he work in?',
-    a: 'Sam Wong is based in Hong Kong and available globally, with particular focus across the Asia-Pacific region. He delivers training in English and Cantonese. Workshops have been delivered to teams across 13 countries.',
+    a: 'I\'m based in Hong Kong and available globally, with particular focus across the Asia-Pacific region. I deliver training in English and Cantonese, and have run workshops for teams across 13 countries.',
   },
   {
     q: 'How much does corporate AI training cost in Hong Kong?',
-    a: 'Every engagement is quoted after a free 30-minute discovery call, because scope depends on headcount, language, delivery mode, and how much follow-through the organization wants. Sam Wong offers half-day and full-day workshops, multi-session Pioneer Programs (typically 6 sessions over 6 weeks), and executive advisory packages. Some programs may be eligible for Hong Kong government funding such as NITTP, which matches 1:1 up to HKD 250,000 per company per financial year.',
+    a: 'Every engagement is quoted after a free 30-minute discovery call, because scope depends on headcount, language, delivery mode, and how much follow-through the organization wants. I offer half-day and full-day workshops, multi-session Pioneer Programs (typically 6 sessions over 6 weeks), and executive advisory packages. Some programs may be eligible for Hong Kong government funding such as NITTP, which matches 1:1 up to HKD 250,000 per company per financial year.',
   },
   {
     q: 'Are AI training workshops available in Cantonese?',
-    a: 'Yes. Sam Wong delivers AI training in both English and Cantonese, making workshops accessible to Hong Kong teams regardless of language preference. Materials can be provided in English, Traditional Chinese, or bilingual formats.',
+    a: 'Yes. I deliver AI training in both English and Cantonese, making workshops accessible to Hong Kong teams regardless of language preference. Materials can be provided in English, Traditional Chinese, or bilingual formats.',
   },
   {
     q: 'What industries does Sam Wong provide AI training for in Hong Kong?',
-    a: 'Sam Wong has delivered AI training across banking and finance (a major Hong Kong bank, HSBC), retail and luxury (Chow Tai Fook, an international toy company), engineering (Arup, a major Hong Kong utility), education (PolyU, HKCT), tourism (Hong Kong Jockey Club), and professional services. Workshop content is customized to each industry\'s workflows, compliance requirements, and use cases.',
+    a: 'I have delivered AI training across banking and finance (a major Hong Kong bank, HSBC), retail and luxury (Chow Tai Fook, an international toy company), engineering (Arup, a major Hong Kong utility), education (PolyU, HKCT), tourism (Hong Kong Jockey Club), and professional services. Workshop content is customized to each industry\'s workflows, compliance requirements, and use cases.',
   },
 ];
 
 export const aboutFaqs = [
   {
     q: 'Who is Sam Wong?',
-    a: 'Sam Wong is Co-Founder & Director of Academy at Adaptig, a Hong Kong-based AI train-the-trainer who has personally trained 10,000+ professionals across 70+ organizations. He co-founded Adaptig, a global AI trainer network spanning 4 continents and 8 languages, where he is Co-Founder & Director of Academy. He focuses on practical, human-first AI adoption that changes behavior, not just builds awareness.',
+    a: 'I\'m Sam Wong, Co-Founder & Director of Academy at Adaptig, a Hong Kong-based AI train-the-trainer. I have personally trained 10,000+ professionals across 70+ organizations, and co-founded Adaptig — a global AI trainer network spanning 4 continents and 8 languages. My focus is practical, human-first AI adoption that changes behavior, not just builds awareness.',
   },
   {
     q: 'What is Sam Wong\'s background?',
-    a: 'Sam Wong holds a Master of Arts in Public & Comparative History from the Chinese University of Hong Kong, specializing in records management and knowledge systems. His career moved from Executive Assistant to the President of ThreeSixty Group (Sharper Image / FAO Schwarz) to AI Product Manager at RENPHO, where he built an AI division from scratch. In 2024, he started AICBO — free 1-on-1 AI tutoring — which grew into 300 coaching sessions and led to co-founding Adaptig.',
+    a: 'I hold a Master of Arts in Public & Comparative History from the Chinese University of Hong Kong, specializing in records management and knowledge systems. My career moved from Executive Assistant to the President of ThreeSixty Group (Sharper Image / FAO Schwarz) to AI Product Manager at RENPHO, where I built an AI division from scratch. In 2024, I started AICBO — free 1-on-1 AI tutoring — which grew into 300 coaching sessions and led to co-founding Adaptig.',
   },
   {
     q: 'What organizations does Sam Wong work with?',
-    a: 'Sam Wong works with Adaptig (Adaptig Group Limited), a global AI trainer network he co-founded spanning North America, Latin America, Europe, and Asia-Pacific. His enterprise clients include a major Hong Kong bank, Chow Tai Fook, Hong Kong Jockey Club, HSBC, Arup, PolyU, China Travel Service, and HKCT.',
+    a: 'I co-founded Adaptig (Adaptig Group Limited), a global AI trainer network spanning North America, Latin America, Europe, and Asia-Pacific. My enterprise clients include a major Hong Kong bank, Chow Tai Fook, Hong Kong Jockey Club, HSBC, Arup, PolyU, China Travel Service, and HKCT.',
   },
   {
     q: 'What is Sam Wong\'s training approach?',
-    a: 'Sam Wong\'s approach is built on four principles: humans are the point (AI is a tool, the goal is meaningful work), start with the smallest step (small wins compound into real change), psychological safety comes first (people don\'t adopt what they fear), and frameworks beat features (tools change, thinking patterns endure). He emphasizes behavior change over tool training.',
+    a: 'My approach is built on four principles: humans are the point (AI is a tool, the goal is meaningful work), start with the smallest step (small wins compound into real change), psychological safety comes first (people don\'t adopt what they fear), and frameworks beat features (tools change, thinking patterns endure). I emphasize behavior change over tool training.',
   },
 ];
 

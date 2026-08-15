@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 
 import Main from '../layouts/Main';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
-import testimonials from '../data/testimonials';
+import testimonials from '../data/testimonials-zh';
 import TestimonialSection from '../components/Testimonials/TestimonialSection';
 
 const ZhAbout = () => (
@@ -63,14 +63,14 @@ const ZhAbout = () => (
       <section className="section-base section-padding">
         <div className="content-narrow">
           <h2>簡單版本</h2>
-          {/* Was first-person with no name, no title, no company, no numbers —
-              the same gap the English page closed. /zh is the half that ranks
-              (#2 in Hong Kong for 「企業 AI 培訓 香港 工作坊」), so it is the
-              half worth spending entity signal on. Third person for the summary,
-              first person from 為何開始 on, matching About.js. */}
+          {/* ONE VOICE (Sam's ruling, 2026-08-15): visible prose is first
+              person everywhere — the old third-person "entity block" flipped
+              person four times in four paragraphs and read as confusing. The
+              entity signal survives: the name, title and numbers stay right
+              here in first person, and metadata/JSON-LD stay third person. */}
           <p>
-            Sam Wong（黃力桐）是 Adaptig 聯合創辦人兼學院總監，一位駐香港的 AI
-            導師培訓師——他教的是教 AI 的人。至今為 70+ 間機構、10,000+
+            我是 Sam Wong（黃力桐），Adaptig 聯合創辦人兼學院總監，駐香港的 AI
+            導師培訓師——我教的是教 AI 的人。至今為 70+ 間機構、10,000+
             位專業人士提供培訓，遍及 13 個國家。
           </p>
           <p>
@@ -79,7 +79,7 @@ const ZhAbout = () => (
           {/* Same two credentials as About.js — 註冊講者 (Registered Speaker),
               never 導師/講師, per the banned-claim list in memory_sam_profile.md. */}
           <p>
-            他是香港生產力促進局（HKPC）註冊講者，以及香港專業進修學校（HKCT）官方培訓夥伴。
+            我是香港生產力促進局（HKPC）註冊講者，也是香港專業進修學校（HKCT）官方培訓夥伴。
           </p>
 
           <h2>為何開始</h2>
@@ -163,8 +163,8 @@ const ZhAbout = () => (
       <section className="section-sunken section-padding">
         <div className="content-wide">
           <TestimonialSection
-            title="學員怎麼說"
-            subtitle="受訓學員與輔導對象的真實回饋。"
+            title="客戶怎麼說"
+            subtitle="來自企業客戶團隊的真實回饋。"
             testimonials={testimonials}
             limit={2}
           />

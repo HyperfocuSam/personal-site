@@ -151,7 +151,7 @@ const ZhSpeaking = () => (
       <section className="section-dark section-dark--centered section-padding">
         <div className="content-standard">
           <ScrollReveal variant="fade-up">
-            <h2>邀請 Sam 到你的活動</h2>
+            <h2>邀請我到你的活動</h2>
             <p>
               主題演講、座談、半日工作坊、多節計劃都可以。實體或線上，粵語或英語。
             </p>

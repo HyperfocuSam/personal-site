@@ -186,7 +186,7 @@ const faqItems = [
   },
   {
     q: 'Are workshops available in Cantonese?',
-    a: 'Yes. Sam delivers workshops in both English and Cantonese.'
+    a: 'Yes. I deliver workshops in both English and Cantonese.'
       + ' Materials can be provided in English, Traditional Chinese,'
       + ' or bilingual formats. Most Hong Kong corporate clients'
       + ' prefer Cantonese delivery with English materials.',
@@ -195,7 +195,7 @@ const faqItems = [
     q: 'What makes this different from other AI training providers?',
     a: 'Three things: (1) Behavior change focus — workshops are'
       + ' designed around your team\'s actual workflows, not generic'
-      + ' demos. (2) Practitioner-led — Sam uses AI daily in his own'
+      + ' demos. (2) Practitioner-led — I use AI daily in my own'
       + ' work and brings real examples. (3) Outcome measurement —'
       + ' participants report saving 5-8 hours per week after the'
       + ' Pioneer Program.',
@@ -205,7 +205,7 @@ const faqItems = [
     a: 'Every corporate engagement starts with a discovery call to'
       + ' understand your team\'s roles, tools, compliance'
       + ' requirements, and goals. Workshop exercises use your actual'
-      + ' work scenarios — not textbook examples. Sam has delivered'
+      + ' work scenarios — not textbook examples. I have delivered'
       + ' across banking, retail, engineering, education, tourism,'
       + ' and professional services.',
   },
@@ -218,7 +218,7 @@ const faqItems = [
   },
   {
     q: 'Do you offer training outside Hong Kong?',
-    a: 'Yes. Through Adaptig, Sam has a global trainer network'
+    a: 'Yes. Through Adaptig, I have a global trainer network'
       + ' spanning North America, Latin America, Europe, and'
       + ' Asia-Pacific. In-person and virtual formats available.'
       + ' a major Hong Kong bank engagement covered 13 countries.',
