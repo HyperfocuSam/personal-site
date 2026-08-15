@@ -859,6 +859,25 @@
   .fn-stamp {
     letter-spacing: 0;
   }
+
+  // The redesigned zh homepage reuses the EN hero/receipt components; their
+  // kerning-meta tracking is tuned for uppercase Latin and reads gappy on CJK.
+  .dark-hero__credential,
+  .dark-hero__cta,
+  .proof-receipt__stamp,
+  .proof-receipt__primary,
+  .proof-receipt__fragments {
+    letter-spacing: 0.02em;
+  }
+
+  // The EN hero type scale wraps the 11-character Chinese claim with a lone
+  // 人。 orphan on line two — CJK glyphs are full-width, so the same point
+  // size carries ~40% fewer characters per line. One size down keeps the
+  // claim on a single line inside the hero's copy column.
+  .dark-hero__headline {
+    font-size: clamp(2.2rem, 2rem + 2vw, 3.25rem);
+    max-width: none;
+  }
 }
 
 .field-notes-content.zh > .lang-toggle {

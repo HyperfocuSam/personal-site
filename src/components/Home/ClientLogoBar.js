@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // w/h are each file's intrinsic dimensions — passed to <img> so the browser
 // can reserve aspect-ratio space before load (prevents marquee CLS).
@@ -55,9 +56,11 @@ const logoClients = [
 
 const textClients = ['Arup', 'ThreeSixty'];
 
-const ClientLogoBar = () => (
+const LABEL = { en: 'verified engagements', 'zh-Hant': '獲客戶團隊信賴' };
+
+const ClientLogoBar = ({ language }) => (
   <section className="logo-marquee full-bleed">
-    <p className="logo-marquee__label">verified engagements</p>
+    <p className="logo-marquee__label">{LABEL[language] || LABEL.en}</p>
     <div className="logo-marquee__track">
       <div className="logo-marquee__scroll" aria-hidden="false">
         {logoClients.map(({
@@ -99,5 +102,13 @@ const ClientLogoBar = () => (
     </div>
   </section>
 );
+
+ClientLogoBar.propTypes = {
+  language: PropTypes.oneOf(['en', 'zh-Hant']),
+};
+
+ClientLogoBar.defaultProps = {
+  language: 'en',
+};
 
 export default ClientLogoBar;

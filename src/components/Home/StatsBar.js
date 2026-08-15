@@ -41,7 +41,7 @@ StatNumber.defaultProps = {
   decimal: false,
 };
 
-const StatsBar = () => (
+const StatsBar = ({ language }) => (
   <section className="stats-strip full-bleed">
     <div className="stats-strip__inner content-wide">
       {statsBarItems.map((stat) => (
@@ -61,11 +61,21 @@ const StatsBar = () => (
             className="stats-strip__leader fn-receipt__leader"
             aria-hidden="true"
           />
-          <span className="stats-strip__label fn-receipt__label">{stat.label}</span>
+          <span className="stats-strip__label fn-receipt__label">
+            {language === 'zh-Hant' && stat.labelZh ? stat.labelZh : stat.label}
+          </span>
         </div>
       ))}
     </div>
   </section>
 );
+
+StatsBar.propTypes = {
+  language: PropTypes.oneOf(['en', 'zh-Hant']),
+};
+
+StatsBar.defaultProps = {
+  language: 'en',
+};
 
 export default StatsBar;

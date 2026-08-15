@@ -55,4 +55,8 @@ describe('narrative voice — visible prose is first person', () => {
     expect(read('pages/About.js')).toContain('I&rsquo;m Sam Wong');
     expect(read('pages/ZhAbout.js')).toContain('我是 Sam Wong（黃力桐）');
   });
+
+  it('the zh homepage leads with the first-person claim', () => {
+    expect(read('components/Home/HeroSection.js')).toContain('我教的是教 AI 的人。');
+  });
 });

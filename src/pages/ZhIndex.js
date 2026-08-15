@@ -6,11 +6,25 @@ import Main from '../layouts/Main';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 import testimonialsZh from '../data/testimonials-zh';
 import TestimonialSection from '../components/Testimonials/TestimonialSection';
+import HeroSection from '../components/Home/HeroSection';
+import StatsBar from '../components/Home/StatsBar';
+import ProofReceipt from '../components/Home/ProofReceipt';
+import ClientLogoBar from '../components/Home/ClientLogoBar';
+import ServicesEditorial from '../components/Home/ServicesEditorial';
+import LatestWriting from '../components/Home/LatestWriting';
+import EmailCapture from '../components/EmailCapture/EmailCapture';
+import ScrollReveal from '../components/ScrollReveal';
 
 // Pass a bare title and let Main.js's titleTemplate add "| Sam Wong", the way
 // every other page does. The old value carried the brand itself AND was under
 // the template's 48-char threshold, so it rendered with the suffix twice:
 // "Sam Wong | AI 培訓專家 - 香港 | Sam Wong".
+//
+// 2026-08-15: rebuilt on the redesigned EN skeleton (same language-aware
+// components, one-voice ruling). /zh is the half that ranks #2 in Hong Kong
+// for the commercial query — until now it had no hero CTA at all. Dropped:
+// the 你好。hero, the 我的平台 platforms section, the old receipts band
+// (ProofReceipt carries it). No FAQ here — /zh/services owns the zh FAQPage.
 const ZhIndex = () => (
   <Main
     title="香港企業 AI 培訓與工作坊"
@@ -31,124 +45,76 @@ const ZhIndex = () => (
     ]}
   >
     <Helmet><html lang="zh-Hant" /></Helmet>
-    <article className="post field-notes-content zh" id="zh-index">
-      {/* Dark hero */}
-      <header className="page-hero">
-        <div className="content-standard">
-          <div className="title">
-            <h1>你好。</h1>
-            <p>
-              我幫機構和專業人士把 AI 真正用進日常工作。
-              培訓、一對一輔導、培訓師發展——你要找的，都在這裡。
-            </p>
+    <article className="homepage-dark field-notes zh" id="zh-index">
+      {/* 1. Hero (white) — the claim, the credential, one red CTA, portrait */}
+      <HeroSection language="zh-Hant" />
+
+      {/* 2. Stats (soft) — the four canonical numbers */}
+      <ScrollReveal variant="fade-up-long">
+        <StatsBar language="zh-Hant" />
+      </ScrollReveal>
+
+      {/* 3. Proof receipt (ink) — the one quantified receipt */}
+      <ScrollReveal variant="fade-in">
+        <ProofReceipt language="zh-Hant" />
+      </ScrollReveal>
+
+      {/* 4. Client logos (white) — logos are language-neutral, label is not */}
+      <ScrollReveal variant="fade-in">
+        <ClientLogoBar language="zh-Hant" />
+      </ScrollReveal>
+
+      {/* 5. Services (soft) */}
+      <ScrollReveal variant="fade-up-long">
+        <ServicesEditorial language="zh-Hant" />
+      </ScrollReveal>
+
+      {/* 6. Testimonials (white) — the Chinese client quotes */}
+      <ScrollReveal variant="scale-in">
+        <TestimonialSection
+          title="客戶怎麼說"
+          testimonials={testimonialsZh}
+          limit={3}
+          variant="dark-pullquote"
+        />
+      </ScrollReveal>
+
+      {/* 7. Conversion band (ink) — the ask repeats the hero's verbatim */}
+      <ScrollReveal variant="fade-up">
+        <section className="section-dark section-dark--centered section-padding">
+          <div className="content-standard">
+            <ul className="actions">
+              <li>
+                <Link to="/zh/book" className="button" data-cta="home_band_book">
+                  預約通話
+                </Link>
+              </li>
+              <li>
+                <Link to="/zh/services" className="button-secondary" data-cta="home_band_services">
+                  查看服務選項
+                </Link>
+              </li>
+            </ul>
           </div>
-        </div>
-      </header>
+        </section>
+      </ScrollReveal>
 
-      {/* 2026-08-02: 實績受 Sam 指示加到中文主頁。Single-expression text:
-          adjacent text nodes break react-snap hydration (#418). */}
-      <section className="section-sunken section-padding">
-        <div className="content-wide">
-          <h3>實績，有數據為證</h3>
-          {/* The food manufacturer's Chinese name was live here while every
-              English page said "a Hong Kong food manufacturer" — Sam's
-              2026-07-12 ruling covers both spellings, and the guard test only
-              knew the Latin one until now. */}
-          <p>
-            周大福 5 隊在 3 小時內交付完整市場方案 · 一間香港食品製造商 6 個部門與管理層先後回訪 · 一個 400 人培訓日發展成 24 個月的 AI 學習社群
-          </p>
-          <p>
-            {/* Pointed at the English /case-notes until 2026-08-12, hence the
-                「（英文版）」 note. There is a Chinese page now. */}
-            <Link to="/zh/case-notes" className="button-ghost">
-              查看完整實績記錄 &rarr;
-            </Link>
-          </p>
-        </div>
-      </section>
+      {/* 8. Selected writing (white) — curated zh posts */}
+      <ScrollReveal variant="fade-up-long">
+        <LatestWriting language="zh-Hant" />
+      </ScrollReveal>
 
-      <section className="section-base section-padding">
-        <div className="content-wide">
-          <TestimonialSection
-            title="獲客戶團隊信賴"
-            subtitle="來自客戶團隊與受訓專業人士的真實回饋。"
-            testimonials={testimonialsZh}
-            limit={2}
-            featured
-          />
-        </div>
-      </section>
+      {/* 9. Email capture — honest note: the newsletter posts are English */}
+      <ScrollReveal variant="fade-up">
+        <EmailCapture
+          title="來自真實客戶現場的實戰筆記"
+          blurb="每次發佈新文章時一封電郵：工作坊框架、應用案例、我實際使用的工具。（文章以英文為主）"
+          caption="只有實戰筆記"
+          variant="dark"
+        />
+      </ScrollReveal>
 
-      <section className="section-sunken section-padding">
-        <div className="content-wide">
-          <h3>我做的三件事</h3>
-          <p>把 AI 帶進真實工作，有三條路徑：</p>
-          <div className="card-grid cols-3">
-            <div className="card">
-              <h4>企業工作坊</h4>
-              <p>統一團隊認知、降低恐懼、建立與日常工作流程掛鉤的實用技能。</p>
-              <Link to="/zh/services#organizations" className="button-ghost">
-                了解更多 &rarr;
-              </Link>
-            </div>
-            <div className="card">
-              <h4>一對一輔導</h4>
-              <p>圍繞你的項目、角色與目標的個人化課程。</p>
-              <Link to="/zh/services#one-on-one" className="button-ghost">
-                了解更多 &rarr;
-              </Link>
-            </div>
-            <div className="card">
-              <h4>培訓師培訓計劃</h4>
-              <p>協助培訓師掌握 Adaptig 方法論，自信教授 AI。</p>
-              <Link to="/zh/services#train-the-trainer" className="button-ghost">
-                了解更多 &rarr;
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-base section-padding">
-        <div className="content-wide">
-          <h3>我的平台</h3>
-          <div className="card-grid cols-1">
-            <div className="card">
-              <h4>
-                <a href="https://adaptig.ai" target="_blank" rel="noopener noreferrer">
-                  Adaptig
-                </a>
-              </h4>
-              <p>全球培訓師網絡，為企業提供 AI 應用工作坊。</p>
-            </div>
-          </div>
-          {/* Single-expression text: adjacent text nodes break react-snap hydration (#418) */}
-          <p style={{ textAlign: 'center', marginTop: '1rem', opacity: 0.7 }}>
-            {'同時是 '}
-            <a href="https://dotai.hk" target="_blank" rel="noopener noreferrer">DotAI</a>
-            {' 的創始成員——香港 AI 培訓社群。'}
-          </p>
-        </div>
-      </section>
-
-      <section className="section-dark section-dark--centered section-padding">
-        <div className="content-standard">
-          <ul className="actions">
-            <li>
-              <Link to="/zh/services" className="button" data-cta="home_band_services">
-                查看服務選項
-              </Link>
-            </li>
-            <li>
-              <Link to="/zh/book" className="button-secondary" data-cta="home_band_book">
-                預約諮詢
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <p className="lang-toggle">
+      <p className="lang-toggle lang-toggle--dark">
         <Link to="/">View in English</Link>
       </p>
     </article>
