@@ -5,6 +5,18 @@
 // linkedPost: slug of the corresponding post in another language (for hreflang)
 const posts = [
   {
+    slug: 'the-ai-tools-i-actually-use-2026-tc',
+    title: '2026 年我真正在用的 AI 工具',
+    date: '2026-08-15',
+    excerpt: '工作坊之後總有人問我用邊套。這是 2026 年我自己付費的版本——有誠實的 affiliate 申報,沒有假的 ChatGPT 連結。',
+    tags: ['ai-tools', 'productivity', 'workflow'],
+    type: 'insight',
+    language: 'zh-Hant',
+    featured: false,
+    image: '/images/blog/tool-stack-cover.webp',
+    linkedPost: 'the-ai-tools-i-actually-use-2026',
+  },
+  {
     slug: 'the-ai-tools-i-actually-use-2026',
     title: 'The AI Tools I Actually Use in 2026',
     date: '2026-08-15',
@@ -13,6 +25,7 @@ const posts = [
     type: 'insight',
     featured: false,
     image: '/images/blog/tool-stack-cover.webp',
+    linkedPost: 'the-ai-tools-i-actually-use-2026-tc',
   },
   {
     slug: 'five-questions-corporate-ai-training-hong-kong-tc',
