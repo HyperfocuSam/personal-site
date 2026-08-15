@@ -20,7 +20,7 @@ const posts = [
     slug: 'the-ai-tools-i-actually-use-2026',
     title: 'The AI Tools I Actually Use in 2026',
     date: '2026-08-15',
-    excerpt: 'Someone always asks for my stack after a workshop. This is the 2026 version I actually pay for — with honest affiliate disclosure, and no fake ChatGPT links.',
+    excerpt: 'Someone always asks for my stack after a workshop. This is the 2026 version — what I actually pay for, what left, and what I would not link you to.',
     tags: ['ai-tools', 'productivity', 'workflow'],
     type: 'insight',
     featured: false,
