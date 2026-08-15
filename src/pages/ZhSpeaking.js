@@ -71,8 +71,8 @@ const ZhSpeaking = () => (
       {/* Photo band */}
       <div className="full-bleed photo-band">
         <OptimizedImage
-          src="/images/home/ypo-stage-wide.jpg"
-          alt="Sam Wong 在 YPO 全球活動的舞台上，紐約 Skirball Center"
+          src="/images/home/ypo-stage-sam-lectern.jpg"
+          alt="Sam Wong 在洛杉磯 Skirball Cultural Center 的 YPO 全球活動台上演講"
           width={1200}
           height={675}
           loading="lazy"

@@ -69,8 +69,8 @@ const Speaking = () => (
       {/* Photo band */}
       <div className="full-bleed photo-band">
         <OptimizedImage
-          src="/images/home/ypo-stage-wide.jpg"
-          alt="Sam Wong on stage at the YPO Global Event, Skirball Center, New York"
+          src="/images/home/ypo-stage-sam-lectern.jpg"
+          alt="Sam Wong presenting from the lectern at the YPO Global Event, Skirball Cultural Center, Los Angeles"
           width={1200}
           height={675}
           loading="lazy"
