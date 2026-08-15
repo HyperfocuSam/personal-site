@@ -92,4 +92,11 @@ cat > build/.vercel/project.json <<'JSON'
 JSON
 trap 'rm -rf build/vercel.json build/.vercel build/api' EXIT
 
-npx vercel deploy build --yes "$@"
+# --scope is not optional, even though the project link above already names the
+# org. Without it `vercel deploy --prod` returns {"status":"error","reason":
+# "deploy_failed","message":"Not authorized"} while `vercel whoami`, the project
+# GET and the deployments list all succeed with the same token — so it reads as
+# an auth outage rather than a missing flag. Hit for real on 2026-08-15.
+# The slug is the personal scope the login can actually see; `vercel teams ls`
+# prints it. The team_ id in project.json is the project's accountId and stays.
+npx vercel deploy build --yes --scope hyperfocusams-projects-dabaf648 "$@"
