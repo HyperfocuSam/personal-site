@@ -41,7 +41,7 @@ If it fails any of those, it leaves. Manus Pro left in August. n8n Cloud left in
 
 **Firecrawl** — I pay Hobby, $19/month, and I have the receipts. If you scrape for a living, this is the one I would actually recommend. [Firecrawl](https://firecrawl.link/sam-wong). (Card failed on 13 Aug — that is a me problem, not a product review.)
 
-**n8n** — I cancelled the Cloud yearly before the €240 hit. I still use it. If you want hosted Cloud, [their affiliate page](https://n8n.io/affiliates/) is 30% of year one on Starter/Pro, PayPal, €100 minimum. No paid ads. Applying.
+**n8n** — I cancelled the Cloud yearly before the €240 hit. I still use it, self-hosted. If you want the hosted version, start at [n8n](https://n8n.io/).
 
 **Railway** — deploys I actually ship. [Railway](https://railway.com/) pays 15% of the first 12 months. New user gets $20 credits.
 
@@ -51,7 +51,7 @@ If it fails any of those, it leaves. Manus Pro left in August. n8n Cloud left in
 
 **[ElevenLabs](https://try.elevenlabs.io/2qk2r619xoll)** — voice for demos and the occasional client explainer. I am in their official PartnerStack program: 22% of year-one customer transactions, 11% on business-tier. This is the live link.
 
-**HeyGen** — API credits still burning this month. They are running 50% commission through 31 October 2026, then it drops back to 35% for three months. [HeyGen affiliate](https://www.heygen.com/affiliate-program). Time-sensitive if you make avatar video for a living.
+**HeyGen** — API credits still burning this month. Worth a look if you make avatar video for a living. [HeyGen](https://www.heygen.com/).
 
 **Canva** — still in the room, especially with non-technical teams. Affiliate is invite-only (Canvassador). No public apply I can hand you. Ordinary link: [Canva](https://www.canva.com/).
 
