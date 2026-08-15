@@ -49,7 +49,7 @@ If it fails any of those, it leaves. Manus Pro left in August. n8n Cloud left in
 
 **[Gamma](https://try.gamma.app/rnpecucowtbn)** — this is the one link I can already stand behind. I am in their PartnerStack program. 25% of the first 12 months of a paid sub, 60-day cookie. I still open decks in it. If you need a first draft of a slide story, start here.
 
-**ElevenLabs** — voice for demos and the occasional client explainer. [ElevenLabs](https://elevenlabs.io/). Existing users join the creator affiliate from inside the app (22% of year one on the creator/pro tiers). I am applying from the account I already pay for.
+**[ElevenLabs](https://try.elevenlabs.io/2qk2r619xoll)** — voice for demos and the occasional client explainer. I am in their official PartnerStack program: 22% of year-one customer transactions, 11% on business-tier. This is the live link.
 
 **HeyGen** — API credits still burning this month. They are running 50% commission through 31 October 2026, then it drops back to 35% for three months. [HeyGen affiliate](https://www.heygen.com/affiliate-program). Time-sensitive if you make avatar video for a living.
 
