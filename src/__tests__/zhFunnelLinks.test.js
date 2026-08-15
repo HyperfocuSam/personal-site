@@ -9,6 +9,9 @@ import fs from 'fs';
 import path from 'path';
 
 import servicesZh from '../data/services-zh';
+import posts from '../data/posts';
+import { isZhPath, counterpartOf } from '../data/langPairs';
+import { routesFor, footerLinksFor } from '../data/routes';
 
 const root = path.resolve(__dirname, '..', '..');
 const read = (rel) => fs.readFileSync(path.join(root, rel), 'utf8');
@@ -119,5 +122,78 @@ describe('data-cta coverage on funnel <Link> buttons in src/pages', () => {
 
   it.each(explicitChecks)('%s contains data-cta="%s"', (file, ctaId) => {
     expect(read(file)).toContain(`data-cta="${ctaId}"`);
+  });
+});
+
+// The gap that survived the 2026-08-12 nav fix for three days, and the reason
+// this block is a loop over the data rather than another hand-written table:
+// isZhPath() tested the path, Chinese posts live at /blog/<slug>-tc, and so all
+// 28 of them rendered an English header AND footer, sent "Book a Call" into the
+// English funnel, and offered a Chinese reader 「中文」 before dropping them on
+// /zh. Adding a post can never re-open it now — the assertions grow with the
+// data. Both directions are asserted, because an over-broad fix that matched
+// "-tc" anywhere in a slug would be its own bug.
+describe('a post carries its own language, whatever its path looks like', () => {
+  const zhPosts = posts.filter((post) => post.language === 'zh-Hant');
+  const enPosts = posts.filter((post) => post.language !== 'zh-Hant');
+
+  it('has Chinese posts to check, and they do not live under /zh', () => {
+    expect(zhPosts.length).toBeGreaterThan(20);
+    zhPosts.forEach((post) => {
+      expect(`/blog/${post.slug}`).not.toMatch(/^\/zh(\/|$)/);
+    });
+  });
+
+  it.each(zhPosts.map((post) => [post.slug, post.language]))(
+    'gives %s the Chinese chrome',
+    (slug) => {
+      const pathname = `/blog/${slug}`;
+      expect(isZhPath(pathname, 'zh-Hant')).toBe(true);
+      expect(routesFor(pathname, 'zh-Hant')[0].path).toMatch(/^\/zh/);
+      expect(footerLinksFor(pathname, 'zh-Hant')[0].path).toMatch(/^\/zh/);
+    },
+  );
+
+  it.each(enPosts.slice(0, 12).map((post) => [post.slug]))(
+    'leaves %s in English',
+    (slug) => {
+      const pathname = `/blog/${slug}`;
+      expect(isZhPath(pathname, 'en')).toBe(false);
+      expect(routesFor(pathname, 'en')[0].path).not.toMatch(/^\/zh/);
+    },
+  );
+
+  it('offers a Chinese post the ENGLISH switcher, pointing at its real twin', () => {
+    zhPosts.forEach((post) => {
+      const other = counterpartOf(`/blog/${post.slug}`, {
+        lang: 'zh-Hant',
+        href: post.linkedPost ? `/blog/${post.linkedPost}` : undefined,
+      });
+      // Never 'zh' — that is the label that told a Chinese reader to switch to
+      // Chinese, with an aria-label to match.
+      expect(other.lang).toBe('en');
+      if (post.linkedPost) {
+        expect(other.href).toBe(`/blog/${post.linkedPost}`);
+      } else {
+        // No twin: the English blog index, not the homepage. They were reading.
+        expect(other.href).toBe('/blog');
+      }
+    });
+  });
+
+  it('keeps every declared linkedPost resolvable and pointing back', () => {
+    posts.filter((post) => post.linkedPost).forEach((post) => {
+      const twin = posts.find((p) => p.slug === post.linkedPost);
+      expect(twin).toBeDefined();
+      expect(twin.linkedPost).toBe(post.slug);
+      expect(twin.language === 'zh-Hant').toBe(post.language !== 'zh-Hant');
+    });
+  });
+
+  it('still reads unflagged routes from the path', () => {
+    expect(isZhPath('/zh/about')).toBe(true);
+    expect(isZhPath('/about')).toBe(false);
+    expect(counterpartOf('/about')).toEqual({ href: '/zh/about', lang: 'zh' });
+    expect(counterpartOf('/zh/about')).toEqual({ href: '/about', lang: 'en' });
   });
 });

@@ -34,16 +34,53 @@ const stripSlash = (path) => (
   path.length > 1 && path.endsWith('/') ? path.slice(0, -1) : path
 );
 
-export const isZhPath = (pathname) => /^\/zh(\/|$)/.test(stripSlash(pathname || '/'));
+// ⚠ The path is NOT sufficient to know a page's language, and treating it as
+// such shipped a real bug for as long as Chinese posts have existed.
+//
+// Chinese blog posts do not live under /zh — they live at /blog/<slug>-tc (23
+// of them) and /blog/zh-<slug> (5). So this predicate answered "English" for
+// all 28, and because routesFor/footerLinksFor/counterpartOf all delegate their
+// entire language decision to it, every Chinese article rendered an English
+// header AND an English footer, its "Book a Call" button pushed the reader into
+// the English funnel, and the switcher offered 「中文」 — to a Chinese reader —
+// then dropped them on /zh, losing the article. Found live 2026-08-15.
+//
+// The fix is NOT a slug regex. `language: 'zh-Hant'` in data/posts/index.js is
+// the authoritative field and a second source of truth would drift the first
+// time a slug is named differently. But importing that metadata here would pull
+// ~17 KB gzipped of it into the main bundle — it currently sits in lazy chunks
+// — for the sake of the nav on every page. So the language is passed DOWN from
+// the one component that already resolves it (Post.js computes postLang before
+// it renders <Main>), and the path sniff stays as the fallback for every route
+// that is not a post.
+export const isZhPath = (pathname, lang) => {
+  if (lang) return lang === 'zh-Hant' || lang === 'zh';
+  return /^\/zh(\/|$)/.test(stripSlash(pathname || '/'));
+};
 
 /**
  * The other-language counterpart of a path, and which language that is.
  *
  * @param   {string} pathname  e.g. '/about/' or '/zh/services'
+ * @param   {object} [override]
+ * @param   {string} [override.lang]  'en' | 'zh' | 'zh-Hant' — the page's real
+ *                                    language when the path cannot reveal it
+ * @param   {string} [override.href]  the known counterpart, e.g. a post's twin
  * @returns {{ href: string, lang: 'zh'|'en' }}
  */
-export const counterpartOf = (pathname) => {
+export const counterpartOf = (pathname, override = {}) => {
   const path = stripSlash(pathname || '/');
+  const { lang, href } = override;
+
+  if (lang) {
+    const pageIsZh = isZhPath(path, lang);
+    // A post with no twin still needs somewhere to go: the other language's
+    // blog index, not the homepage — the reader was reading, not browsing.
+    return {
+      href: href || (pageIsZh ? '/blog' : '/zh/blog'),
+      lang: pageIsZh ? 'en' : 'zh',
+    };
+  }
 
   if (isZhPath(path)) {
     return { href: ZH_TO_EN[path] || '/', lang: 'en' };

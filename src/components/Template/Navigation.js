@@ -1,19 +1,23 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import { Link, useLocation } from 'react-router-dom';
 
 import Hamburger from './Hamburger';
 import { routesFor } from '../../data/routes';
 import { counterpartOf, isZhPath } from '../../data/langPairs';
 
-const Navigation = () => {
+// `language` and `counterpartHref` are passed down by pages whose path cannot
+// reveal their language — Chinese posts live at /blog/<slug>-tc, not under /zh.
+// Without them all 28 rendered this header in English. See data/langPairs.js.
+const Navigation = ({ language, counterpartHref }) => {
   const { pathname } = useLocation();
   const [scrolled, setScrolled] = useState(false);
-  const other = counterpartOf(pathname);
+  const other = counterpartOf(pathname, { lang: language, href: counterpartHref });
   // On a Chinese page the whole header is Chinese, not just the toggle. Until
   // 2026-08-12 this rendered the English list on /zh, so the only way out of a
   // Chinese page was back into English.
-  const routes = routesFor(pathname);
-  const isZh = isZhPath(pathname);
+  const routes = routesFor(pathname, language);
+  const isZh = isZhPath(pathname, language);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -85,9 +89,19 @@ const Navigation = () => {
           {isZh ? '預約通話' : 'Book a Call'}
         </Link>
       </div>
-      <Hamburger />
+      <Hamburger language={language} />
     </header>
   );
+};
+
+Navigation.propTypes = {
+  language: PropTypes.string,
+  counterpartHref: PropTypes.string,
+};
+
+Navigation.defaultProps = {
+  language: undefined,
+  counterpartHref: undefined,
 };
 
 export default Navigation;

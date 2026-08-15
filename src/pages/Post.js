@@ -190,6 +190,13 @@ const Post = () => {
     <Main
       title={post.title}
       description={post.excerpt}
+      // A Chinese post lives at /blog/<slug>-tc, so nothing downstream can work
+      // its language out from the path. Passing it here is what gives the post
+      // a Chinese header, a Chinese footer, a Book-a-Call that goes to
+      // /zh/book, og:locale=zh_HK, and a switcher that offers ENGLISH and lands
+      // on the actual twin instead of dumping the reader on /zh.
+      language={postLang}
+      counterpartHref={linkedPost ? `/blog/${linkedPost.slug}` : undefined}
       canonicalUrl={postUrl}
       ogTitle={post.title}
       ogDescription={post.excerpt}

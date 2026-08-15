@@ -61,14 +61,19 @@ export const ZH_FOOTER_LINKS = [
 ];
 
 /**
- * Header/menu routes for whichever language the current path is in.
+ * Header/menu routes for whichever language the current page is in.
  * @param {string} pathname  from useLocation()
+ * @param {string} [lang]    the page's real language when the path cannot show
+ *                           it — Chinese posts live at /blog/<slug>-tc, not
+ *                           under /zh. See the note in data/langPairs.js.
  */
-export const routesFor = (pathname) => (isZhPath(pathname) ? ZH_ROUTES : EN_ROUTES);
+export const routesFor = (pathname, lang) => (
+  isZhPath(pathname, lang) ? ZH_ROUTES : EN_ROUTES
+);
 
 /** Footer quick links, same rule. */
-export const footerLinksFor = (pathname) => (
-  isZhPath(pathname) ? ZH_FOOTER_LINKS : EN_FOOTER_LINKS
+export const footerLinksFor = (pathname, lang) => (
+  isZhPath(pathname, lang) ? ZH_FOOTER_LINKS : EN_FOOTER_LINKS
 );
 
 export default EN_ROUTES;

@@ -28,9 +28,13 @@ const needsSuffix = (title) => titleWidth(title) <= 48 && !/Sam Wong/.test(title
 
 const isZhUrl = (url) => /\/zh(?:\/|$)/.test(url || '');
 
-const getOgLocale = (props) => (
-  isZhUrl(props.canonicalUrl || props.ogUrl) ? 'zh_HK' : 'en_US'
-);
+// The URL alone is not enough: Chinese posts live at /blog/<slug>-tc, so every
+// one of them used to advertise og:locale="en_US". Pages that know their own
+// language pass it; see the note in data/langPairs.js.
+const getOgLocale = (props) => {
+  if (props.language) return props.language === 'zh-Hant' ? 'zh_HK' : 'en_US';
+  return isZhUrl(props.canonicalUrl || props.ogUrl) ? 'zh_HK' : 'en_US';
+};
 
 const getAlternateOgLocale = (props) => {
   const languages = (props.hreflangTags || []).map((tag) => tag.lang);
@@ -92,9 +96,11 @@ const Main = (props) => (
     </Helmet>
     <a className="skip-to-content" href="#main">Skip to content</a>
     <div id="wrapper">
-      {!props.hideNav && <Navigation />}
+      {!props.hideNav && (
+        <Navigation language={props.language} counterpartHref={props.counterpartHref} />
+      )}
       <main id="main" role="main">{props.children}</main>
-      {!props.hideNav && <Footer />}
+      {!props.hideNav && <Footer language={props.language} />}
       <a
         href="https://wa.me/85264315177"
         className="floating-whatsapp"
@@ -117,6 +123,11 @@ Main.propTypes = {
   ]),
   title: PropTypes.string,
   description: PropTypes.string,
+  // 'zh-Hant' for a Chinese page whose path does not say so (a -tc post).
+  // Drives the nav, the footer, the switcher and og:locale together, so they
+  // cannot disagree the way they did before 2026-08-15.
+  language: PropTypes.string,
+  counterpartHref: PropTypes.string,
   canonicalUrl: PropTypes.string,
   ogTitle: PropTypes.string,
   ogDescription: PropTypes.string,
@@ -139,6 +150,8 @@ Main.propTypes = {
 
 Main.defaultProps = {
   children: null,
+  language: undefined,
+  counterpartHref: undefined,
   title: null,
   description: 'Sam Wong - Co-Founder & Director of Academy at Adaptig. I train the people '
     + 'who train AI: Train-the-Trainer programs, corporate AI workshops, and 1-1 coaching.',

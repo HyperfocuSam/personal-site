@@ -1,14 +1,18 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link, useLocation } from 'react-router-dom';
 
 import ContactIcons from '../Contact/ContactIcons';
 import { footerLinksFor } from '../../data/routes';
 import { isZhPath } from '../../data/langPairs';
 
-const Footer = () => {
+// Every string below branches on `isZh`, so when the language was read from
+// the path alone the whole footer — tagline, bio, headings, copyright — came
+// out English on all 28 Chinese posts. See the note in data/langPairs.js.
+const Footer = ({ language }) => {
   const { pathname } = useLocation();
-  const isZh = isZhPath(pathname);
-  const links = footerLinksFor(pathname);
+  const isZh = isZhPath(pathname, language);
+  const links = footerLinksFor(pathname, language);
 
   return (
     <footer id="site-footer" role="contentinfo">
@@ -64,6 +68,14 @@ const Footer = () => {
       </div>
     </footer>
   );
+};
+
+Footer.propTypes = {
+  language: PropTypes.string,
+};
+
+Footer.defaultProps = {
+  language: undefined,
 };
 
 export default Footer;

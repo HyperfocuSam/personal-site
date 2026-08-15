@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import PropTypes from 'prop-types';
 import { Link, useLocation } from 'react-router-dom';
 import Menu from 'react-burger-menu/lib/menus/slide';
 import { routesFor } from '../../data/routes';
@@ -10,12 +11,13 @@ import { routesFor } from '../../data/routes';
 // route into client re-rendering (React #418/#423). The chunk was ~12KB —
 // not worth a sitewide hydration failure.
 
-const Hamburger = () => {
+const Hamburger = ({ language }) => {
   const [open, setOpen] = useState(false);
   // Mobile carries the Hong Kong audience — 131 of 429 sessions, and the 172
   // visitors who arrived from a Cantonese YouTube show landed here first. The
-  // burger menu must speak the same language as the page behind it.
-  const routes = routesFor(useLocation().pathname);
+  // burger menu must speak the same language as the page behind it. `language`
+  // is required because a Chinese post's path does not say so — see langPairs.
+  const routes = routesFor(useLocation().pathname, language);
 
   return (
     <div className="hamburger-container">
@@ -61,6 +63,14 @@ const Hamburger = () => {
       </Menu>
     </div>
   );
+};
+
+Hamburger.propTypes = {
+  language: PropTypes.string,
+};
+
+Hamburger.defaultProps = {
+  language: undefined,
 };
 
 export default Hamburger;
