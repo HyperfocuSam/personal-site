@@ -5,8 +5,6 @@ Someone always asks for "your stack" after a workshop. I used to send a screensh
 
 This is the 2026 version. Not the workshop curriculum — that still starts with Copilot inside the company wall, and I wrote that up [here](/blog/ai-tool-stack-3000-professionals). This is what I pay for when I am building Adaptig, writing, and shipping my own work.
 
-**Disclosure:** some links below are affiliate links. If you buy through them, I may earn a commission. I only link tools I already use. A few tools I use every week have no official affiliate program, so those stay as ordinary links. I will not invent a "ChatGPT affiliate" for you. Those pages are unofficial.
-
 ## How I decide what stays
 
 Three questions, same ones I teach in the room:
