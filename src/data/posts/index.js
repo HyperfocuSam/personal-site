@@ -5,6 +5,29 @@
 // linkedPost: slug of the corresponding post in another language (for hreflang)
 const posts = [
   {
+    slug: 'the-ai-tools-i-actually-use-2026-tc',
+    title: '2026 年，我真正付錢用的 AI 工具',
+    date: '2026-08-15',
+    excerpt: '每次工作坊結束，總有人問我自己實際用甚麼。這是 2026 年我付錢在用的版本。',
+    tags: ['ai-tools', 'productivity', 'workflow'],
+    type: 'insight',
+    language: 'zh-Hant',
+    featured: false,
+    image: '/images/blog/tool-stack-cover.webp',
+    linkedPost: 'the-ai-tools-i-actually-use-2026',
+  },
+  {
+    slug: 'the-ai-tools-i-actually-use-2026',
+    title: 'The AI Tools I Actually Use in 2026',
+    date: '2026-08-15',
+    excerpt: 'Someone always asks for my stack after a workshop. This is the 2026 version I actually pay for — with honest affiliate disclosure, and no fake ChatGPT links.',
+    tags: ['ai-tools', 'productivity', 'workflow'],
+    type: 'insight',
+    featured: false,
+    image: '/images/blog/tool-stack-cover.webp',
+    linkedPost: 'the-ai-tools-i-actually-use-2026-tc',
+  },
+  {
     slug: 'five-questions-corporate-ai-training-hong-kong-tc',
     title: '香港企業採購 AI 培訓前，必問供應商的五條問題',
     date: '2026-07-29',

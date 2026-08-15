@@ -38,7 +38,8 @@
     }
   }
 
-  .dark-hero {
+  // Scope hero overrides to field-notes pages ONLY (not homepage-dark)
+  &:not(.homepage-dark) .dark-hero {
     background: _palette(surface-base);
     overflow: visible;
     padding: 3rem 1.125rem 3.25rem;
@@ -664,7 +665,7 @@
 }
 
 @media screen and (min-width: 737px) {
-  .field-notes {
+  .field-notes:not(.homepage-dark) {
     .dark-hero {
       padding: 5.5rem 2rem 5rem;
 
