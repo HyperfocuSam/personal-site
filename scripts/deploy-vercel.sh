@@ -16,6 +16,34 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
+# The guard that would have caught the 2026-08-06 → 08-15 fork.
+# Two lanes write to this repo: Cursor agents merge PRs into origin/main, and
+# this machine builds and deploys. Deploying is a LOCAL step, so a merged PR
+# reaches the live site only if someone pulled it first. Nobody did for nine
+# days — 22 commits sat on origin/main, including two finished blog posts that
+# 404'd on the live site while their PRs showed green.
+# Deploying behind origin is how content silently never ships; deploying ahead
+# of it puts something live that no branch on GitHub can reproduce.
+# Override with ALLOW_UNSYNCED=1 for a deliberate hotfix.
+if [ "${ALLOW_UNSYNCED:-0}" != "1" ] && git rev-parse --git-dir >/dev/null 2>&1; then
+  git fetch origin --quiet || echo "  (warning: could not reach origin — sync unverified)" >&2
+  behind=$(git rev-list --count HEAD..origin/main 2>/dev/null || echo 0)
+  ahead=$(git rev-list --count origin/main..HEAD 2>/dev/null || echo 0)
+  if [ "$behind" -gt 0 ]; then
+    echo "✗ $behind commit(s) on origin/main are NOT in this build." >&2
+    echo "  Merged PRs would not reach the live site. Run: git pull --no-rebase" >&2
+    echo "  git log --oneline HEAD..origin/main" >&2
+    exit 1
+  fi
+  if [ "$ahead" -gt 0 ]; then
+    echo "✗ $ahead local commit(s) are not on origin/main." >&2
+    echo "  Push first so the live site matches a branch someone else can rebuild:" >&2
+    echo "    git push origin main" >&2
+    exit 1
+  fi
+  echo "✓ in sync with origin/main"
+fi
+
 if [ ! -f build/index.html ]; then
   echo "✗ no build/ — run: npm run predeploy" >&2
   exit 1
