@@ -10,10 +10,10 @@ const cases = [
     title: 'Multi-session corporate AI training program',
     type: 'Corporate training',
     scale: '1,530 banking professionals across 13 countries',
-    // Not "average satisfaction": that is the framing the ruling bans, and the
-    // session count is dropped here and in speaking.js until Sam confirms it —
-    // the two files said 5 and 51 for this same engagement.
-    receipts: ['9.2/10 programme score', '"Finally, AI training that\'s actually useful!" — participant'],
+    // Not "average satisfaction": that is the framing the ruling bans.
+    // 5 sessions, ruled by Sam 2026-08-15 — speaking.js had said 51 for this
+    // same engagement, and now carries 5 too. Recorded in memory_sam_profile.
+    receipts: ['9.2/10 programme score', '5 sessions', '"Finally, AI training that\'s actually useful!" — participant'],
     summary: 'A multi-session program designed and delivered for banking teams — prompt craft applied to real banking workflows, measured after every session.',
     blogSlug: '1500-banking-professionals-ai-adoption',
     image: '/images/blog/sam-virtual-training.webp',

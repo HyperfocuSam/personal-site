@@ -62,7 +62,7 @@ export const engagements = [
     year: '2024-25',
     org: 'a major Hong Kong bank',
     title: 'Enterprise AI Training Program',
-    description: 'Comprehensive AI adoption training delivered across 13 countries.',
+    description: 'Comprehensive AI adoption training delivered across 5 sessions in 13 countries.',
     stat: '1,530 participants, 9.2/10 satisfaction',
   },
   {
