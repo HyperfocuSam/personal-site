@@ -1,6 +1,9 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "trailingSlash": true,
+  "framework": null,
+  "buildCommand": "",
+  "outputDirectory": ".",
   "headers": [
     {
       "source": "/static/(.*)",
