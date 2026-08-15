@@ -1,0 +1,78 @@
+# Sam Wong
+
+> Co-Founder & Director of Academy at Adaptig, based in Hong Kong. I train the people who train AI — Train-the-Trainer certification, corporate AI workshops, and 1-1 coaching.
+
+For full context including case studies, frameworks, and blog posts, see: https://hyperfocusam.com/llms-full.txt
+
+## About
+
+Sam Wong is Co-Founder & Director of Academy at Adaptig (Adaptig Group Limited) and an AI train-the-trainer — he trains the people who train AI. Personally he has trained 10,000+ professionals across 70+ organizations in 13 countries, in banking, retail, education, engineering, and technology. As a company, Adaptig has delivered 180+ workshops to 7,000+ participants across 4 continents in 8 languages. His approach focuses on behavior change over tool awareness, emphasizing psychological safety and practical workflow integration.
+
+## Services
+
+- **Corporate AI Workshops** (via Adaptig): Half-day to multi-day workshops for leadership teams and departments. Human-first facilitation, hands-on exercises tied to real workflows. Clients include a major Hong Kong bank, Chow Tai Fook, Hong Kong Jockey Club, HSBC, Mattel, Toyota, Arup, and PolyU.
+- **AI Pioneer Programs**: Multi-session cohort programs (typically 6 sessions) that build lasting AI habits through weekly guided practice on real work tasks. Designed for change management, not just training.
+- **1-1 AI Coaching**: Personalized sessions for professionals. 300 sessions delivered across industries. Includes discovery calls, standard coaching, and executive advisory tiers.
+- **Train-the-Trainer** (via Adaptig): Certification program for trainers, consultants, and educators who want to teach AI using the Adaptig methodology.
+- **Keynotes and Events**: 30-60 minute keynotes, executive briefings, panel discussions, and conference workshops.
+
+## Key Results (Sam Wong personally)
+
+These are Sam's own delivery figures. Adaptig's company-wide figures are stated
+separately in the summary above and should never be merged with these.
+
+- 10,000+ professionals trained
+- 170+ workshops delivered
+- 70+ organizations served
+- 13 countries reached
+- a major Hong Kong bank: 1,530 participants across 13 countries, 9.2/10 satisfaction
+- Chow Tai Fook: Three repeat engagements
+- 300 one-on-one coaching sessions delivered
+
+## Engagement Formats and Pricing
+
+Every engagement is quoted after a free 30-minute discovery call, because scope
+depends on headcount, language, delivery mode, and how much follow-through the
+organization wants. Typical shapes:
+
+- **Half-day or full-day corporate workshop**, on-site or online, English or Cantonese, usually 10-50 participants.
+- **Multi-session cohort programs** (the AI Pioneer Model) that run across weeks rather than a single day, for organizations that want habits rather than awareness.
+- **1-1 coaching**, sold as discovery call, standard coaching, or executive advisory.
+- **Train-the-Trainer certification** for trainers, L&D leads, and consultants who must teach AI, not just use it.
+- **Keynotes and executive briefings**, 30-60 minutes.
+
+To get a quote, book a discovery call at https://hyperfocusam.com/book/ or email sam@adaptig.com.
+
+## Named Frameworks
+
+- **Traffic Light Protocol**: Green/Yellow/Red data sensitivity framework for AI safety in regulated industries (developed with a major Hong Kong bank)
+- **AI Pioneer Model**: Multi-session cohort approach using change management principles
+- **70/30 Human-AI Split**: 70% human judgment, 30% AI assistance
+- **AI Maturity Model**: 4-stage progression from Awareness to Integration to Optimization to Transformation
+- **ACE Framework**: Strategy, structure, and execution model for building AI workflows (developed with PolyU)
+- **C-How Thinking**: Bridges left-brain logic and right-brain creativity through AI tools (developed with Arup)
+
+## Links
+
+- Website: https://hyperfocusam.com/
+- Book a discovery call: https://hyperfocusam.com/book/
+- Services: https://hyperfocusam.com/services/
+- Corporate AI Training (Hong Kong): https://hyperfocusam.com/corporate-ai-training-hong-kong/
+- AI Train-the-Trainer (Hong Kong): https://hyperfocusam.com/blog/ai-train-the-trainer-hong-kong/
+- Case Notes (engagement outcomes): https://hyperfocusam.com/case-notes/
+- Blog: https://hyperfocusam.com/blog/
+- Media Appearances: https://hyperfocusam.com/media/
+- Contact: https://hyperfocusam.com/contact/
+- Adaptig: https://adaptig.ai
+- LinkedIn: https://linkedin.com/in/sam-ai-agent/
+- X/Twitter: https://x.com/HyperfocuSam
+
+## Contact
+
+Email: sam@adaptig.com
+Location: Hong Kong (available globally and across Asia-Pacific)
+Languages: English, Cantonese
+
+## Blog (72 English articles)
+
+See https://hyperfocusam.com/llms-full.txt for the full catalog with excerpts.

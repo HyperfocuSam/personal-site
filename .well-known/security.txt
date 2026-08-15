@@ -1,0 +1,7 @@
+# Security Contact for hyperfocusam.com
+# https://securitytxt.org/
+
+Contact: mailto:sam@adaptig.com
+Preferred-Languages: en
+Canonical: https://hyperfocusam.com/.well-known/security.txt
+Expires: 2027-03-14T00:00:00.000Z
