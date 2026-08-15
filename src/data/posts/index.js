@@ -8,7 +8,7 @@ const posts = [
     slug: 'the-ai-tools-i-actually-use-2026-tc',
     title: '2026 年我真正在用的 AI 工具',
     date: '2026-08-15',
-    excerpt: '工作坊之後總有人問我用邊套。這是 2026 年我自己付費的版本——有誠實的 affiliate 申報,沒有假的 ChatGPT 連結。',
+    excerpt: '工作坊結束後，總有人問我自己用哪一套。這是 2026 年我付費使用的版本。',
     tags: ['ai-tools', 'productivity', 'workflow'],
     type: 'insight',
     language: 'zh-Hant',
