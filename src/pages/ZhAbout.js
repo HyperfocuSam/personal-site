@@ -73,8 +73,12 @@ const ZhAbout = () => (
             導師培訓師——我教的是教 AI 的人。至今為 70+ 間機構、10,000+
             位專業人士提供培訓，遍及 13 個國家。
           </p>
+          {/* 2026-08-15 DeepSeek native-reader audit: 「工具的炒作」 was a
+              "tool hype" calque. The 不是…而是 shape itself stays — it is
+              Sam's own recorded phrasing (tone-lexicon TC-003), whatever the
+              judge says about the pattern. */}
           <p>
-            我幫助企業和個人以實用、以人為本的方式應用 AI。我的焦點不是工具的炒作，而是真正的行為改變。
+            我幫助企業和個人以實用、以人為本的方式應用 AI。我在意的不是工具有多熱門，而是行為有沒有真正改變。
           </p>
           {/* Same two credentials as About.js — 註冊講者 (Registered Speaker),
               never 導師/講師, per the banned-claim list in memory_sam_profile.md. */}
@@ -86,13 +90,16 @@ const ZhAbout = () => (
           <p>
             我自小就有 ADHD，二十多歲才確診。那些年我讀歷史出身、做著行政助理，一直覺得自己在跟自己的腦袋打仗。
           </p>
+          {/* Em-dash budget (house rate ≈1 per 400 CJK): this page carried
+              three ——; the one in the entity block does the real work, so
+              the other two went. */}
           <p>
-            找到 AI 和自動化工具之後，一切都不一樣了。起初它們只是幫我應付自己狀態的工具，後來變成一個使命——讓更多人發現，當恰當的支援碰上合適的工具，可以創造多大的可能。
+            找到 AI 和自動化工具之後，一切都不一樣了。起初它們只是幫我應付自己狀態的工具，後來變成一個使命：讓更多人發現，當恰當的支援碰上合適的工具，可以創造多大的可能。
           </p>
 
           <h2>轉變</h2>
           <p>
-            AI 不只讓我做事更快，它改變了我看待工作本身的方式。我開始為「清晰」而不只是「效率」建系統——後來發現，同一套模式幫到的團隊，遠遠超出我自己的範疇。
+            AI 不只讓我做事更快，它改變了我看待工作本身的方式。我開始為「清晰」而不只是「效率」建系統。後來發現，同一套模式幫到的團隊，遠遠超出我自己的範疇。
           </p>
 
           <h2>職業路徑</h2>
@@ -101,8 +108,10 @@ const ZhAbout = () => (
             到加入 RENPHO 擔任 AI 產品經理及 AI 團隊主管，
             並在那裡從零組建了一個 AI 部門。
           </p>
+          {/* Naked 「應用」 as the noun "adoption" reads as a verb in
+              Chinese (2026-08-15 audit) — give the sentence its subject. */}
           <p>
-            我學到一個簡單的事實：應用從來不是工具問題，而是人的問題。技能重要，但心理安全感才是讓人開始的關鍵。
+            我學到一個簡單的事實：讓人真正用上 AI，從來不是工具問題，而是人的問題。技能重要，但心理安全感才是讓人開始的關鍵。
           </p>
         </div>
       </section>
@@ -117,7 +126,9 @@ const ZhAbout = () => (
             </div>
             <div className="card">
               <h4>從最小的一步開始。</h4>
-              <p>小勝利會累積成真正的改變。</p>
+              {/* 「小勝利」 was a "small wins" calque; the replacement is
+                  Sam's own recorded phrasing, tone-lexicon TC-003. */}
+              <p>真正的改變，誕生於一件件能夠重複發生的小事。</p>
             </div>
             <div className="card">
               <h4>心理安全感優先。</h4>
@@ -154,7 +165,9 @@ const ZhAbout = () => (
             </li>
             <li>
               <strong>RENPHO AI Division</strong>
-              {' — 帶領策略性 AI 轉型和團隊能力發展。'}
+              {/* 「策略性」 = "strategic" jargon filler (2026-08-15 audit) —
+                  the receipt is leading the transformation, not the adjective. */}
+              {' — 帶領 AI 轉型和團隊能力發展。'}
             </li>
           </ul>
         </div>

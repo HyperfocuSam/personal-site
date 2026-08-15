@@ -26,7 +26,11 @@ const COPY = {
   'zh-Hant': {
     h1: '我教的是教 AI 的人。',
     credential: 'Sam Wong · Adaptig 聯合創辦人兼學院總監 · 香港',
-    subtitle: '企業工作坊、一對一輔導、培訓師認證——目標是課程完結幾星期後，AI 仍然在日常工作裡。',
+    // 2026-08-15 DeepSeek native-reader audit, two rounds: 「AI 仍然在日常
+    // 工作裡」 was an "AI is still in daily work" calque, and 「——目標是…」
+    // was the English "— with the goal that…" clause shape. Split sentence,
+    // subject restored.
+    subtitle: '企業工作坊、一對一輔導、培訓師認證。目標只有一個：課程完結幾星期後，團隊仍在日常工作中使用 AI。',
     book: '預約通話',
     bookPath: '/zh/book',
     services: '查看服務選項 ',

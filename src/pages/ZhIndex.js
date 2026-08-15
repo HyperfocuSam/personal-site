@@ -106,10 +106,13 @@ const ZhIndex = () => (
 
       {/* 9. Email capture — honest note: the newsletter posts are English */}
       <ScrollReveal variant="fade-up">
+        {/* 2026-08-15 DeepSeek audit: 「客戶現場」 was a "client site" calque
+            — 培訓現場 is the natural collocation; the caption gained its verb
+            (只寄 = the anti-spam promise stated as an action). */}
         <EmailCapture
-          title="來自真實客戶現場的實戰筆記"
+          title="來自真實培訓現場的實戰筆記"
           blurb="每次發佈新文章時一封電郵：工作坊框架、應用案例、我實際使用的工具。（文章以英文為主）"
-          caption="只有實戰筆記"
+          caption="只寄實戰筆記"
           variant="dark"
         />
       </ScrollReveal>

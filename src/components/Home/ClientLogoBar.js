@@ -56,7 +56,10 @@ const logoClients = [
 
 const textClients = ['Arup', 'ThreeSixty'];
 
-const LABEL = { en: 'verified engagements', 'zh-Hant': '獲客戶團隊信賴' };
+// zh label: 「獲…信賴」 was flagged twice across two independent DeepSeek
+// audit rounds (2026-08-15) as press-release passive — the label now states
+// the fact the logos prove instead.
+const LABEL = { en: 'verified engagements', 'zh-Hant': '合作過的客戶團隊' };
 
 const ClientLogoBar = ({ language }) => (
   <section className="logo-marquee full-bleed">

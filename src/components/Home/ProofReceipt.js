@@ -21,8 +21,11 @@ const COPY = {
   },
   'zh-Hant': {
     stamp: '實績，有數據為證',
-    primary: '1,530 位參加者 · 13 個國家 · 0 宗資料事故 · 9.2/10 — 一間銀行的亞太區 AI 計劃',
-    fragments: '周大福：3 小時內交出 5 份提案 · 一間食品製造商：6 個部門再度預約 · 一日員工日變成 24 個月的 AI 社群',
+    // 2026-08-15 DeepSeek native-reader audit: Chinese states the subject
+    // first, then the numbers (the EN numbers-first strip read as an English
+    // stat card), and 「一日員工日」 was a word-for-word "one staff day".
+    primary: '一間銀行的亞太區 AI 計劃：1,530 位參加者 · 13 個國家 · 0 宗資料事故 · 9.2/10',
+    fragments: '周大福：3 小時內交出 5 份提案 · 一間食品製造商：6 個部門再度預約 · 一個員工日，發展成 24 個月的 AI 社群',
     link: '查看完整實績記錄 →',
   },
 };
