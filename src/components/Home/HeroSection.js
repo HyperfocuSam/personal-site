@@ -62,13 +62,14 @@ const HeroSection = ({ language }) => {
           </div>
         </div>
         {/* Rendered unconditionally (hydration safety); CSS hides it below
-            980px. The cutout portrait is already preloaded in index.html. */}
+            980px. The portrait is preloaded in index.html behind the same
+            980px media query, so phones never fetch it. */}
         <div className="dark-hero__photo">
           <OptimizedImage
-            src={`${PUBLIC_URL}/images/Sam.png`}
+            src={`${PUBLIC_URL}/images/sam-hero.jpg`}
             alt="Sam Wong"
-            width={380}
-            height={440}
+            width={640}
+            height={794}
             loading="eager"
             fetchPriority="high"
           />

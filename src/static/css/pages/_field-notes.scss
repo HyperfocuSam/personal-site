@@ -778,10 +778,13 @@
         grid-template-columns: minmax(0, 1fr) 320px;
       }
 
+      // The portrait is now a framed photograph, not a transparent cutout, so
+      // it needs an edge of its own against the light field.
       &__photo {
         display: block;
 
         img {
+          border-radius: map-get($radius, lg);
           display: block;
           height: auto;
           width: 100%;
