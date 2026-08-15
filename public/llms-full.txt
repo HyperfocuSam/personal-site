@@ -82,7 +82,7 @@ Sam Wong is Co-Founder & Director of Academy at Adaptig (Adaptig Group Limited) 
 
 ### Insights & Commentary
 
-- [The AI Tools I Actually Use in 2026](https://hyperfocusam.com/blog/the-ai-tools-i-actually-use-2026/) (2026-08-15) — Someone always asks for my stack after a workshop. This is the 2026 version I actually pay for — with honest affiliate disclosure, and no fake ChatGPT links.
+- [The AI Tools I Actually Use in 2026](https://hyperfocusam.com/blog/the-ai-tools-i-actually-use-2026/) (2026-08-15) — Someone always asks for my stack after a workshop. This is the 2026 version — what I actually pay for, what left, and what I would not link you to.
 - [The architect that never writes code](https://hyperfocusam.com/blog/the-architect-that-never-writes-code/) (2026-07-11) — Companion take to the build log: the most expensive model in the stack wrote zero implementation code. Four bugs died at the spec stage, three workers passed the same five gates, and the blind pick landed on the cheapest. The pattern, not the model, is the asset.
 - [180 People, Six Sessions, One Pattern](https://hyperfocusam.com/blog/180-people-six-sessions-one-pattern/) (2026-07-04) — Across six different AI sessions and 180 participants at one organisation, the pattern was consistent -- the executives were more anxious than their staff. What this means for who you train first.
 - [What a 500-Person AI Webinar Can and Can't Do](https://hyperfocusam.com/blog/what-a-500-person-ai-webinar-can-and-cant-do/) (2026-06-30) — I delivered a firmwide AI awareness webinar for a global advertising group in Hong Kong. About 500 people. Here's what a broadcast that size can realistically do, what it can't, and the three design choices that make it worth running.
