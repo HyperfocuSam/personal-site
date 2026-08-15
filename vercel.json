@@ -1,6 +1,9 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "trailingSlash": true,
+  "git": {
+    "deploymentEnabled": false
+  },
   "framework": null,
   "buildCommand": "",
   "outputDirectory": ".",

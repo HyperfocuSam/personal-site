@@ -36,6 +36,21 @@ describe('conversion origins survive in the CSP', () => {
     expect(policy).toBeDefined();
   });
 
+  it('keeps Vercel from building this repo itself', () => {
+    // The site is uploaded PREBUILT: react-snap prerenders locally because its
+    // pinned 2019 Chromium cannot be trusted in a container, and every route's
+    // SEO value IS that prerendered HTML. But `buildCommand: ""` with
+    // `outputDirectory: "."` means a Git-triggered build serves the REPO ROOT,
+    // which has no index.html — so every URL on the site returns 404.
+    //
+    // This is not hypothetical. It happened twice on 2026-08-15: a push at
+    // 06:43 and another at 08:36, each silently replacing a good CLI
+    // deployment and taking the whole site down until someone redeployed.
+    // The tell is a deployment with source=git sitting on top of source=cli.
+    expect(vercel.git).toBeDefined();
+    expect(vercel.git.deploymentEnabled).toBe(false);
+  });
+
   it('lets the contact form POST to its own /api/contact', () => {
     // Since 2026-08-14 the form posts same-origin to api/contact.js (Resend).
     // connect-src 'self' covers the fetch() the React handler makes;
