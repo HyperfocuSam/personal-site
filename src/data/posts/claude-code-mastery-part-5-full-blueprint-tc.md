@@ -48,6 +48,8 @@ Ada/
 
 ## 數據如何流動
 
+*編按（2026 年 7 月）：下文描述的自動發佈流程及早晨簡報排程，自 2026 年 7 月初起已暫停；文章現時經人手審閱後才發佈。*
+
 一個 session 不是一場對話，而是一個具有明確階段的 lifecycle。
 
 **Session start。** InstructionsLoaded hook 觸發。它讀取 worklog 最後 15 行，檢查 priority todo file。在我尚未輸入任何文字之前，Claude 已經知道：上個 session 發送了 a client invoice，今天有兩個 item 到期，HKCT training 還有四天。兩秒。500 tokens 以下。

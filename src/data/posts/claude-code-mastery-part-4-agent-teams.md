@@ -110,7 +110,7 @@ Ada 早晨提醒 03/23:
 - 14:00 client call
 
 要跟進:
-- [OVERDUE] CTF 發票 — 逾期26日
+- [OVERDUE] 客戶發票 — 逾期 26 日
 - [DUE SOON] a client 工作坊 — 3日後
 
 Full briefing 喺 Craft.

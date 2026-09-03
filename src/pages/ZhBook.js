@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
 import Main from '../layouts/Main';
-import RoamEmbed, { ROAM_LOBBY_URL } from '../components/Book/RoamEmbed';
+import { ROAM_LOBBY_URL } from '../components/Book/RoamEmbed';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 
 // The Chinese half of the site had no booking page at all: /zh linked to the
@@ -104,22 +104,22 @@ const ZhBook = () => (
 
       <section className="book-page__embed-section">
         <div className="book-page__embed-wrap">
-          <p className="book-page__fallback">
-            趕時間？
-            <a href={ROAM_LOBBY_URL} target="_blank" rel="noopener noreferrer">
-              直接開 Ro.am 預約頁
+          <div className="book-page__actions">
+            <a
+              href={ROAM_LOBBY_URL}
+              className="button"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cta="zh_book_roam_direct"
+            >
+              去 Ro.am 揀時間
             </a>
-            ，那邊載入較快。
-          </p>
-          <RoamEmbed placement="zh_book_page" />
+            <Link to="/zh/contact" className="button-secondary" data-cta="zh_book_contact">
+              改為留言
+            </Link>
+          </div>
           <p className="book-page__fallback">
-            {'預約系統本身是英文介面。載入不到的話，可以 '}
-            <a href={ROAM_LOBBY_URL} target="_blank" rel="noopener noreferrer">
-              直接在 Ro.am 預約
-            </a>
-            {'，或者 '}
-            <Link to="/zh/contact">聯絡我</Link>
-            。
+            預約頁會在新分頁開啟，介面是英文。時間以你的時區顯示；我在香港。
           </p>
         </div>
       </section>

@@ -1,71 +1,60 @@
-# Microsoft Copilot Training for Hong Kong Companies: What Actually Works
+# Microsoft Copilot Training for Hong Kong Companies: Count the Licenses First
 
-Most companies in Hong Kong already pay for Microsoft 365. That means they already have access to Copilot. But access and adoption are completely different things.
+Most companies in Hong Kong already pay for Microsoft 365, so they assume they already have Copilot. Often they have a handful of seats, bought as a trial, spread across people who never asked for them. I have walked into a session designed around Copilot and found that most of the room could not open it. I now count licenses before I count participants, and I would tell any company buying Copilot training to do the same before they sign with me or anyone else.
 
-I've delivered Microsoft Copilot training to teams across banking, retail, engineering, and education in Hong Kong. The pattern is always the same: the company bought Copilot licenses six months ago, maybe 10% of staff use it occasionally, and nobody knows what it can actually do beyond "summarize this email."
+## Why I still start with Copilot
 
-That's not a training gap. That's a waste of money your company is already spending.
+When I [wrote about why I teach Copilot instead of ChatGPT](/blog/why-i-teach-copilot-not-chatgpt), the response was immediate, because every enterprise training buyer faces the same three worries: data security, IT pushback, and staff pasting confidential documents into consumer tools. Copilot sits inside the Microsoft 365 boundary. The data stays where it already lives, IT has already approved the platform, and there is no new login.
 
-## Why Copilot First
+For Hong Kong companies dealing with PDPO and cross-border data questions, that matters more than anywhere else. When I [ran five sessions for 1,530 banking professionals at a major Hong Kong bank](/blog/1500-banking-professionals-ai-adoption), the first twenty minutes of every session went on data safety using the [Traffic Light Protocol](/blog/traffic-light-protocol-ai-safety). Starting inside the tenant meant we could skip the "is this tool allowed?" conversation and spend the time on actual workflows.
 
-When I [wrote about why I teach Copilot instead of ChatGPT](/blog/why-i-teach-copilot-not-chatgpt), the response was immediate -- it resonated because every enterprise training buyer faces the same dilemma. They want to train their team on AI, but they're nervous about data security, IT pushback, and employees uploading confidential documents into consumer tools.
+The same rule ran a [6-session Pioneer Program for a Hong Kong food manufacturer's HR team](/blog/how-to-design-ai-pioneer-program): Copilot only, inside their Microsoft 365 tenant, because their IT lead had already found staff using personal phones for AI. That constraint sounds limiting. It removed a month of arguments.
 
-Copilot solves all three problems because it sits inside the Microsoft 365 security boundary. The data stays where it already lives. IT has already approved the platform. There's no new login, no new tool to learn, no new security review.
+## Two questions for your IT team before you book anyone
 
-For Hong Kong companies dealing with PDPO compliance and cross-border data concerns, this matters more than anywhere else. When I [trained 1,530 banking professionals at a major Hong Kong bank](/blog/1500-banking-professionals-ai-adoption), the first 20 minutes of every session focused on data safety using the [Traffic Light Protocol](/blog/traffic-light-protocol-ai-safety). Starting with Copilot meant we could skip the "is this tool allowed?" conversation entirely and focus on building actual workflows.
+1. How many of the people who will be in the room have a paid Microsoft 365 Copilot seat today, and which SKU?
+2. On what date do the rest get one?
 
-## What Copilot Training Should Cover
+If the answer to the second question is "we're looking into it," you are buying a demo, not training.
 
-Bad Copilot training looks like a Microsoft product demo. Someone shows the Copilot icon in Word, clicks "summarize," and says "isn't that amazing?" The audience nods politely. Nothing changes.
+On price, the number people quote is usually wrong. Microsoft sells Copilot at about US$30 per user per month on enterprise plans, and around US$18 to US$21 for organizations under 300 seats on the standalone business plan. Your IT contact knows which one you have. Ask, because a trainer who prints one flat price gets corrected in the room.
 
-Good Copilot training starts with the work your team already does. Here's what that looks like across the four applications where Copilot delivers the most immediate value:
+## What Copilot training should cover
 
-**Outlook:** Email drafting, meeting preparation, and follow-up automation. The average Hong Kong professional spends 2-3 hours per day on email. Copilot can cut that by 30-40% -- but only if people learn to use it for triage and drafting, not just summarization.
+Bad Copilot training looks like a Microsoft product demo. Someone clicks the Copilot icon in Word, chooses "summarize," and says "isn't that amazing?" The audience nods. Nothing changes on Monday.
 
-**Excel:** Data analysis, formula generation, and pattern recognition. Most teams I train have analysts who spend hours building pivot tables and writing VLOOKUP formulas. Copilot can do this conversationally, but people need to learn how to describe what they want in plain language rather than spreadsheet syntax.
+Good Copilot training starts with the work your team already does, in the four apps where Copilot earns its seat:
 
-**Teams:** Meeting summaries, action item extraction, and transcript search. This is often the fastest win -- one session on Teams Copilot and participants immediately save 30-60 minutes per meeting in follow-up documentation.
+**Outlook.** Triage and first drafts, not summaries. Summarizing an email you were going to read anyway saves nothing. Drafting the reply to the one you were avoiding does.
 
-**Word:** Document drafting, reformatting, and content synthesis. Particularly valuable for teams that produce regular reports, proposals, or compliance documents.
+**Excel.** Describe the analysis in plain language, let Copilot write the formula, then check it. Checking is the skill, and it is the part people skip. Bring a real file. A departmental P&L with 36 rows teaches more than any sample dataset, and a messy export with deleted-but-present rows teaches what Copilot does when the data is dirty — it hallucinates until you clean it.
 
-## The Common Mistakes
+**Teams.** Meeting recap and action items. This is the fastest win and the one people keep using.
 
-Three patterns I see repeatedly in Hong Kong companies that have tried Copilot training and given up:
+**Word.** Policy and report drafts from a bullet list. HR teams use it for recruitment policies and onboarding documents.
 
-**1. They trained everyone at once.** A company-wide webinar where someone demos Copilot features for an hour. Nobody practices. Nobody applies it to their actual work. A week later, the only people using Copilot are the ones who were already using it before the training.
+## The three ways companies waste the license
 
-The fix: [Train 10-20 Pioneers deeply](/blog/how-to-design-ai-pioneer-program), then let them pull the rest of the organization forward.
+**They train everyone at once.** A company-wide webinar, no practice, no application to real work. A week later the only people using Copilot are the ones who were using it before.
 
-**2. They treated it as an IT rollout, not a behavior change project.** IT deployed the licenses. Maybe they sent an email with "tips and tricks." Nobody changed how they work because nobody showed them how Copilot fits into their specific daily tasks.
+**They treat it as an IT rollout.** Licenses deployed, a "tips and tricks" email sent, nobody shown how Copilot fits their Friday report. Start from workflows, not features. "Show me the report you write every week" is a better opening than "here's what Copilot can do."
 
-The fix: Start from workflows, not features. "Show me the report you write every Friday" is a better opening than "here's what Copilot can do."
+**They measure the wrong thing.** Activations, query counts, session numbers. None of those predict whether the Friday report got faster. Measure time saved on named tasks, in hours per week.
 
-**3. They measured the wrong things.** License activation rates. Number of Copilot queries. Session counts. None of these predict whether people are actually more productive. The metric that matters is time saved on specific tasks -- measured in hours per week, not clicks per day.
+## What a good program looks like
 
-## What a Good Copilot Training Program Looks Like
+**Session 1 (half day).** Safety framework, then Outlook and Teams workflows. Participants leave with three to five things they will use on Monday.
 
-Based on delivering Copilot-focused workshops across multiple Hong Kong industries, here's the structure that consistently produces lasting adoption:
+**Session 2 (half day, week 2).** Excel and Word, tied to each participant's own deliverables. They bring their files. We redesign them together.
 
-**Session 1 (Half-day):** Safety framework + Outlook and Teams workflows. Participants leave with 3-5 workflows they'll use on Monday morning. This is the quick win that builds momentum.
+**Sessions 3 to 6 (60 minutes each, weeks 3 to 6).** Weekly check-ins. What did you try, what worked, what didn't. This is where the behavior change happens, through repetition and someone asking.
 
-**Session 2 (Half-day, week 2):** Excel and Word workflows tied to each participant's actual deliverables. They bring their own documents. We redesign them together.
+That is the structure behind the [Pioneer Program](/blog/how-to-design-ai-pioneer-program), and it is why the second department at that food manufacturer was booked before the first one finished.
 
-**Sessions 3-6 (60 min each, weeks 3-6):** Weekly check-ins. What did you try? What worked? What didn't? This is where the behavior change happens -- through repetition, accountability, and troubleshooting.
+## Funding
 
-When I ran this structure for [the food manufacturer's HR team](/blog/how-to-design-ai-pioneer-program), participants saved 5-8 hours per week by the end of the program. The tools were limited to Copilot and Microsoft 365 -- no ChatGPT, no third-party tools, no security debates.
+Two schemes matter for Hong Kong companies in 2026. NITTP, formerly RTTP, matches course fees 1:1 up to HK$250,000 per enterprise per financial year for VTC-registered courses. The BUD Fund has a HK$7 million cumulative ceiling per company and a HK$150,000 cap per application on the fast-track Easy BUD route, and it funds training only inside a wider upgrading project. TVP closed to new applications in December 2024. The details, checked in August 2026, are in [the buyer's guide](/blog/how-to-choose-ai-training-hong-kong).
 
-## The ROI for Hong Kong Companies
+## If you have Copilot and nobody uses it
 
-At current Copilot pricing (approximately HK$230/user/month for Microsoft 365 E3 + Copilot), a company paying for 50 licenses is spending roughly HK$138,000 per year. If fewer than 10% are using it actively, that's HK$124,000 wasted annually on unused licenses.
-
-A structured training program that moves adoption from 10% to 60-70% doesn't just pay for itself -- it turns an existing cost center into a productivity multiplier.
-
-For Hong Kong companies exploring government support, the NITTP (formerly RTTP) matches training costs 1:1 up to HK$250,000 per company per financial year for VTC-registered courses, and the [BUD Fund](/blog/hk-2026-budget-ai-training) — HK$7 million cumulative per company, with fast-track Easy BUD applications capped at HK$150,000 each — can cover training that sits inside a wider upgrading project. See the [funding section of the buyer's guide](/blog/how-to-choose-ai-training-hong-kong) for what changed in 2025-26.
-
-## Getting Started
-
-If your company already has Microsoft 365 with Copilot and adoption is low, the problem isn't the tool. It's the training approach.
-
-A half-day workshop will get awareness. A 6-session [Pioneer Program](/blog/how-to-design-ai-pioneer-program) will get adoption. The difference is whether people are still using Copilot a month after the training ends.
-
----
+Count the licenses. Pick one department and one weekly task. If the count is right and the task is real, six weeks is enough to change how that department works. If the count is wrong, no training fixes it, and I would rather tell you that before the first session than find out at the second.

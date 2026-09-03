@@ -166,7 +166,7 @@ const methodologies = [
   {
     name: 'AI Maturity Model',
     description: 'A 4-stage framework: Awareness, Experimentation,'
-      + ' Integration, Transformation. 80% of companies are stuck at'
+      + ' Integration, Transformation. Most companies I meet are at'
       + ' Stage 1. The Pioneer Model moves them to Stage 2.',
     link: '/blog/ai-maturity-trap-stuck-stage-one',
   },
@@ -391,9 +391,9 @@ const CorporateTraining = () => (
           <p>
             After training 10,000+ professionals across 70+
             organizations, the pattern is clear: one-off
-            sessions produce awareness, not adoption. The Ebbinghaus
-            forgetting curve says people forget roughly 70% of new
-            information within 24 hours. The fix isn&rsquo;t better
+            sessions produce awareness, not adoption. Fifteen prompts
+            learned on a Wednesday are two prompts by Friday and none
+            by the following Monday. The fix isn&rsquo;t better
             content &mdash; it&rsquo;s a different structure.
           </p>
           <p>
@@ -415,7 +415,7 @@ const CorporateTraining = () => (
           </p>
           <p>
             <Link to="/blog/why-ai-training-doesnt-stick">
-              Read more: Why AI Training Doesn&rsquo;t Stick (And What Actually Works) →
+              Read more: Why AI Training Doesn&rsquo;t Stick →
             </Link>
           </p>
         </div>
@@ -616,8 +616,9 @@ const CorporateTraining = () => (
           </p>
           <p>
             Don&rsquo;t wait for government programs to be fully
-            rolled out. Companies that invest in structured AI
-            training now will have a 12-18 month head start.
+            rolled out. The companies that invest in structured AI
+            training now are the ones whose second department
+            asks for it.
           </p>
           <p>
             <Link to="/blog/how-to-choose-ai-training-hong-kong">

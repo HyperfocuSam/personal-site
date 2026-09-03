@@ -1,4 +1,4 @@
-# Why AI Training Doesn't Stick (And What Actually Works)
+# Why AI Training Doesn't Stick
 
 I've trained over 10,000 professionals on AI adoption. The uncomfortable truth is that most of the AI training happening in companies right now will produce zero lasting behavior change.
 
@@ -8,19 +8,15 @@ A company books a half-day workshop. An external trainer shows up, demos ChatGPT
 
 I know this because I've been that trainer. And after training 10,000+ professionals across banking, retail, education, engineering, and tourism, I've learned that the workshop itself is the least important part of making AI training stick.
 
-## The Forgetting Problem
+## The forgetting problem
 
-There's a well-known principle in learning science: the [Ebbinghaus forgetting curve](https://en.wikipedia.org/wiki/Forgetting_curve). People forget roughly 70% of new information within 24 hours. After a week, retention drops to about 10%.
+An employee learns fifteen prompts, three frameworks and two tools in a single session. By Friday they remember two prompts and no frameworks. By the following Monday it is as if the training never happened. That is not a failure of the content. It is what a one-off format does to anything.
 
-Now apply that to a one-off AI workshop. An employee learns 15 prompts, three frameworks, and two tools in a single session. By Friday, they remember maybe two prompts and zero frameworks. By the following Monday, it's as if the training never happened.
+When I [ran five sessions for 1,530 banking professionals at a major Hong Kong bank](/blog/1500-banking-professionals-ai-adoption), the program scored 9.2/10. But I knew from experience that satisfaction scores don't predict adoption. What predicted adoption was whether participants used at least one AI tool in their actual work within the first 48 hours. That became the real metric.
 
-This isn't a failure of the training. It's a failure of the format.
+## Where it fails
 
-When I [trained 1,500 banking professionals at a major Hong Kong bank](/blog/1500-banking-professionals-ai-adoption), the satisfaction rating was 9.2/10. But I knew from experience that satisfaction scores don't predict adoption. What predicted adoption was whether participants used at least one AI tool in their actual work within the first 48 hours. That became the real metric.
-
-## The Three Reasons AI Training Fails
-
-After running programs across 70+ organizations, I've identified three patterns that kill AI training effectiveness. All three are fixable.
+Across 70+ organizations the same things kill AI training. All of them are fixable.
 
 ![Concept map: why AI training doesn't stick. Three problems — teaching tools instead of workflows, training everyone at once, and no follow-through — each mapped to what actually works, plus the six-session fix arc: safety, workflow integration, then independence.](/images/blog/why-ai-training-doesnt-stick.png)
 
@@ -40,7 +36,7 @@ Large groups can't practice. They can't ask specific questions about their role.
 
 The approach that actually works is what I call the [Pioneer Model](/blog/how-to-design-ai-pioneer-program). Instead of training everyone, you select 10-20 curious, influential people and train them deeply over multiple sessions. These Pioneers become internal champions who pull the rest of the organization forward.
 
-When I ran a [6-session Pioneer Program for the food manufacturer's HR team](/blog/how-to-design-ai-pioneer-program), the 19 participants ended up saving 5-8 hours per week. More importantly, they started teaching their colleagues without being asked. The training multiplied itself because the Pioneers had enough depth to help others.
+When I ran a [6-session Pioneer Program for the food manufacturer's HR team](/blog/how-to-design-ai-pioneer-program), the 19 participants started teaching their colleagues without being asked, and the company had booked the next department before the first cohort finished. The training multiplied itself because the Pioneers had enough depth to help others.
 
 ### 3. There's no follow-through system
 
@@ -82,18 +78,6 @@ If you have budget for one thing, don't buy a workshop. Buy a 6-session program 
 
 Select participants who are curious, influential, and willing to experiment. Give them real tasks every week. Measure time saved on actual workflows, not satisfaction scores. Let them become the internal champions who pull everyone else forward.
 
-If budget is truly limited, at minimum do this: run the workshop, then schedule three 30-minute follow-up sessions over the next six weeks. Just three touchpoints. Ask "what did you try?" and "what's blocking you?" That alone will double your adoption rate compared to a standalone workshop.
+If budget is truly limited, at minimum do this: run the workshop, then schedule three 30-minute follow-up sessions over the next six weeks. Just three touchpoints. Ask "what did you try?" and "what's blocking you?" In every engagement where nobody asked those questions, the answer six months later was that the training had happened and nothing else had.
 
-The companies that win the AI adoption race won't be the ones that trained the most people. They'll be the ones whose training actually changed how people work. (The same principle applies to everything -- even [rebuilding your own website's SEO](/blog/seo-rebuild-one-day-claude-code). Knowing what to do is easy. Actually doing it is where AI co-pilots change the equation.)
-
----
-
-## Sources & Further Reading
-
-- Ebbinghaus, H., "[Memory: A Contribution to Experimental Psychology](https://en.wikipedia.org/wiki/Forgetting_curve)" (1885) -- The foundational research showing roughly 70% of new information is lost within 24 hours without reinforcement.
-- McKinsey, "[The State of AI in 2025](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai)" (Nov 2025) -- 88% of organizations use AI, but nearly two-thirds have not begun scaling it across the enterprise.
-- Microsoft & LinkedIn, "[2024 Work Trend Index](https://www.microsoft.com/en-us/worklab/work-trend-index/ai-at-work-is-here-now-comes-the-hard-part)" (May 2024) -- Only 39% of people who use AI at work have received company training.
-
----
-
-*I've spent two years figuring out what makes AI training actually stick. If your team tried a workshop and nothing changed, [that's the conversation I want to have](/contact).*
+The companies that win the AI adoption race won't be the ones that trained the most people. They'll be the ones whose training actually changed how people work.

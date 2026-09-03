@@ -292,6 +292,24 @@ const Services = () => {
           path="/services/"
         />
 
+        {/* Profession pages. These carry the internal links that keep the five
+            new routes out of the orphan list — the site has shipped indexable
+            routes with zero inbound links before. */}
+        <section className="services-verticals" id="by-profession">
+          <h2>Training by profession</h2>
+          <p>
+            Each of these is built from a delivered engagement, not a service
+            description, and each carries its own receipts.
+          </p>
+          <ul>
+            <li><Link to="/ai-training-healthcare-hong-kong">Healthcare professionals &rarr;</Link></li>
+            <li><Link to="/ai-training-teachers-hong-kong">Teachers &rarr;</Link></li>
+            <li><Link to="/ai-training-nonprofit-hong-kong">NGOs and social services &rarr;</Link></li>
+            <li><Link to="/ai-training-sme-owners-hong-kong">Small business owners &rarr;</Link></li>
+            <li><Link to="/ai-training-executive-assistants-hong-kong">Executive assistants and operations &rarr;</Link></li>
+          </ul>
+        </section>
+
         <p className="services-footer-link">
           <Link to="/corporate-ai-training-hong-kong">
             Corporate AI Training in Hong Kong — Full Guide →

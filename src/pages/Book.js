@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
 import Main from '../layouts/Main';
-import RoamEmbed, { ROAM_LOBBY_URL } from '../components/Book/RoamEmbed';
+import { ROAM_LOBBY_URL } from '../components/Book/RoamEmbed';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 
 // The scheduler and its failure detection live in components/Book/RoamEmbed —
@@ -109,22 +109,27 @@ const Book = () => (
 
       <section className="book-page__embed-section">
         <div className="book-page__embed-wrap">
-          <p className="book-page__fallback">
-            {'In a hurry? '}
-            <a href={ROAM_LOBBY_URL} target="_blank" rel="noopener noreferrer">
-              Open the scheduler on Ro.am
+          {/* The Ro.am iframe took 4–17 s to render against a 4 s median dwell
+              and had reported no human load since 2026-08-15 (PostHog, checkup
+              2026-09-03). Sam's ruling: drop the embed, send people straight to
+              the scheduler or the form. Two actions, nothing to wait for. */}
+          <div className="book-page__actions">
+            <a
+              href={ROAM_LOBBY_URL}
+              className="button"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cta="book_roam_direct"
+            >
+              Pick a time on Ro.am
             </a>
-            {' — it loads faster there.'}
-          </p>
-          <RoamEmbed placement="book_page" />
+            <Link to="/contact" className="button-secondary" data-cta="book_contact">
+              Send a message instead
+            </Link>
+          </div>
           <p className="book-page__fallback">
-            {'If the scheduler doesn’t load, '}
-            <a href={ROAM_LOBBY_URL} target="_blank" rel="noopener noreferrer">
-              book directly on Ro.am
-            </a>
-            {' or '}
-            <Link to="/contact">contact me</Link>
-            .
+            The scheduler opens in a new tab. Times are shown in your local zone;
+            I am in Hong Kong.
           </p>
         </div>
       </section>

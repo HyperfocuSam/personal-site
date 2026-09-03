@@ -1,4 +1,4 @@
-// Real testimonials curated from DotAI Academy feedback surveys and corporate training engagements
+// Real testimonials curated from public-class feedback surveys and corporate training engagements
 // Attribution: "Course + date" for academy (anonymous survey data), "Role — Company" for corporate
 
 const testimonialData = {
@@ -59,26 +59,27 @@ const testimonialData = {
     },
   ],
 
-  // DotAI Academy program feedback (not specifically about Sam)
+  // Public-class programme feedback (not specifically about Sam). The community
+  // is not named in EN — Sam's ruling 2026-08-02, reaffirmed 2026-09-03.
   academy: [
     {
       quote:
         'Both instructors did a great job of delivering compelling content. People always come first.',
-      attribution: 'Participant — DotAI Academy, May 2025',
+      attribution: 'Participant — Public AI class, May 2025',
       category: 'academy',
     },
     {
       quote:
         'Very comprehensive and practical experience sharing with hands-on '
         + 'in-class exercises using AI tools.',
-      attribution: 'Participant — DotAI Academy, Jul 2025',
+      attribution: 'Participant — Public AI class, Jul 2025',
       category: 'academy',
     },
     {
       quote:
         'The instructors\' passion, knowledge and experience in AI, and their '
         + 'selflessness to share with participants.',
-      attribution: 'Participant — DotAI Academy, Sep 2025',
+      attribution: 'Participant — Public AI class, Sep 2025',
       category: 'academy',
     },
     {
@@ -97,7 +98,7 @@ const testimonialData = {
     {
       quote:
         'Vibe coding section was crystal clear, well-structured class overall.',
-      attribution: 'Participant — DotAI Academy, Jul 2025',
+      attribution: 'Participant — Public AI class, Jul 2025',
       category: 'academy',
     },
   ],
@@ -130,7 +131,7 @@ const testimonialData = {
       quote:
         'Thank you for the practical sharing and for sharing your vision and experience '
         + 'with others in the field. Very encouraging.',
-      attribution: 'Participant — DotAI Executive Webinar, Apr 2025',
+      attribution: 'Participant — Executive AI webinar, Apr 2025',
       category: 'corporate',
     },
     {

@@ -237,7 +237,7 @@ const Media = () => (
               <div className="card fn-card">
                 <h4>Master Class with a business publication</h4>
                 <p>
-                  DotAI was invited to co-create a Master Class with
+                  Invited to co-create a Master Class with
                   a local business publication, covering Vibe
                   Marketing and the AI-employee mindset.
                 </p>
@@ -245,7 +245,7 @@ const Media = () => (
               <div className="card fn-card">
                 <h4>Ming Pao Partnership</h4>
                 <p>
-                  Ming Pao partners with DotAI for an AI
+                  Ming Pao partnership on an AI
                   journalism application course covering
                   translation, fact-checking, and automated
                   news planning.
@@ -254,7 +254,7 @@ const Media = () => (
               <div className="card fn-card">
                 <h4>CTgoodjobs Future Leader Awards</h4>
                 <p>
-                  DotAI invited as judges and mentors for
+                  Invited as judge and mentor for
                   the CTgoodjobs Future Leader Awards 2025,
                   sharing AI entrepreneurship methods.
                 </p>
@@ -262,8 +262,7 @@ const Media = () => (
               <div className="card fn-card">
                 <h4>JoJo Ventures Speaker Spotlight</h4>
                 <p>
-                  Featured as Founding Member and Corporate AI Training Partner
-                  at DotAI and Co-Founder of Adaptig at
+                  Featured as Co-Founder & Director of Academy at Adaptig at
                   JoJo Ventures event.
                 </p>
               </div>

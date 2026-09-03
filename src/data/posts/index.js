@@ -669,9 +669,9 @@ const posts = [
   },
   {
     slug: 'microsoft-copilot-training-hong-kong',
-    title: 'Microsoft Copilot Training for Hong Kong Companies: What Actually Works',
+    title: 'Microsoft Copilot Training for Hong Kong Companies: Count the Licenses First',
     date: '2026-03-15',
-    excerpt: 'Your company already pays for Copilot. Here\'s why adoption is low, what Copilot training should actually cover, and the program structure that produces lasting behavior change.',
+    excerpt: 'Your company already pays for Microsoft 365, so it assumes it has Copilot. Count the licenses first, then train on the four apps where Copilot earns its seat — and the 6-week structure that makes it stick.',
     tags: ['ai-adoption', 'enterprise', 'ai-tools'],
     type: 'methodology',
     image: '/images/blog/microsoft-copilot-training-hk-cover.webp',
@@ -679,7 +679,7 @@ const posts = [
   },
   {
     slug: 'why-ai-training-doesnt-stick',
-    title: 'Why AI Training Doesn\'t Stick (And What Actually Works)',
+    title: 'Why AI Training Doesn\'t Stick',
     date: '2026-03-15',
     excerpt: 'Most corporate AI training produces zero lasting behavior change. After training 10,000+ professionals across 70+ organizations, here\'s what actually makes AI adoption stick.',
     tags: ['ai-adoption', 'enterprise'],
@@ -813,9 +813,9 @@ const posts = [
   },
   {
     slug: 'how-to-design-ai-pioneer-program',
-    title: 'How to Design a 6-Session AI Pioneer Program That Actually Changes Behavior',
+    title: 'How to Design a 6-Session AI Pioneer Program',
     date: '2026-03-04',
-    excerpt: 'How I designed a 6-session corporate AI training program for 19 HR professionals, using Copilot-only tools and a change management approach that saved 5-8 hours per week.',
+    excerpt: 'How I designed a 6-session, Copilot-only AI program for 19 HR professionals at a Hong Kong food manufacturer — and why the next department was booked before the first one finished.',
     tags: ['enterprise', 'ai-adoption'],
     type: 'case-study',
     image: '/images/blog/pioneer-program-cover.webp',

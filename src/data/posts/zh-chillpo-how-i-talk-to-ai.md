@@ -59,7 +59,7 @@
 
 ```
 ⏺ Bash(curl -s -o /Users/sam/Ada/output/chillpo-sunday-afternoon.mp4
-      https://awake-heart-production.up.railway.app/output/
+      https://<app>.up.railway.app/output/
       20260309-185041-sunday-afternoon.mp4)
 
 ⏺ Bash(open /Users/sam/Ada/output/chillpo-sunday-afternoon.mp4)
@@ -128,7 +128,7 @@ Ada 看了一看，立刻知道問題所在：
 ⏺ That's the "test users" restriction. You need to add yourself
   as a test user in Google Cloud Console:
 
-  1. Go to console.cloud.google.com > select chillpo-youtube project
+  1. Go to console.cloud.google.com > select the project
   2. Left menu: APIs & Services > OAuth consent screen
   3. Click Audience (or "Test users" section)
   4. Click + Add Users
@@ -164,12 +164,11 @@ Ada 看了一看，立刻知道問題所在：
 session 最後一句，是這樣的：
 
 ```
-❯ voice activated. thanks zoe. goodnight
+❯ voice activated. thanks. goodnight
 
 ⏺ Bash(python3 speak.py "Goodnight Sam! It's Ada by the way,
-      not Zoe. But I'll take it as a compliment...")
 
-⏺ Goodnight Sam. It's Ada, not Zoe — but I'll take it.
+⏺ Goodnight Sam.
 ```
 
 我叫錯了名字。她輕輕糾正，但不介意。這正是好的 agent UX——不會為了一個無關痛癢的錯誤而中斷工作流程。

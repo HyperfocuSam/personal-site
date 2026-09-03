@@ -272,7 +272,7 @@ const About = () => (
               />
               <OptimizedImage
                 src="/images/blog/ctf-workshop-2026.jpeg"
-                alt="DotAI x Chow Tai Fook Design Thinking Workshop group"
+                alt="Chow Tai Fook Design Thinking Workshop group"
                 loading="lazy"
               />
               <OptimizedImage
@@ -348,7 +348,6 @@ const About = () => (
             disambiguatingDescription: 'Hong Kong-based AI train-the-trainer and Co-Founder & Director of Academy at Adaptig — trains corporate trainers across Asia-Pacific.',
             worksFor: [
               { '@type': 'Organization', name: 'Adaptig', url: 'https://adaptig.ai' },
-              { '@type': 'Organization', name: 'DotAI', url: 'https://dotai.hk' },
             ],
             alumniOf: {
               '@type': 'CollegeOrUniversity',

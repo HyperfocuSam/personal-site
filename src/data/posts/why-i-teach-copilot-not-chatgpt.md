@@ -1,40 +1,29 @@
-
 # Why I Teach Copilot Instead of ChatGPT in Enterprise Workshops
 
-When companies hire me as an AI workshop facilitator, most expect me to open ChatGPT on day one. I don't. For enterprise workshops, I almost always start with Microsoft Copilot -- the tool already inside their security boundary, already paid for, and already approved by IT.
+When companies hire me to run an AI workshop, most expect me to open ChatGPT on day one. I don't. For enterprise rooms I almost always start with Microsoft Copilot — the tool already inside their security boundary, already approved by IT, and usually already paid for.
 
-This is a deliberate choice, and it changes everything about how adoption plays out.
+This is a deliberate choice, and it changes how adoption plays out.
 
-## The Shadow IT Problem
+## The shadow IT problem
 
-Every enterprise I've worked with has the same dirty secret: employees are already using AI. They're just using it on personal phones, with personal accounts, uploading company data into consumer-grade tools with zero data protection.
+Every enterprise I have worked with has the same open secret: employees are already using AI, on personal phones, with personal accounts, uploading company data into consumer tools with no data protection. At one Hong Kong manufacturer the IT lead had found exactly that before we started, and it set the rules for [the whole program](/blog/how-to-design-ai-pioneer-program).
 
-When I start with ChatGPT in a corporate workshop, I accidentally validate this behavior. I'm teaching people to use a tool that IT might block tomorrow. When I start with Copilot, I'm teaching within the security fence. There's no debate about "is this allowed?" It's already allowed. It's already paid for. It's already integrated with their email, their documents, their calendar.
+If I open ChatGPT in a corporate workshop, I validate that behavior. I am teaching a tool IT might block next month. If I open Copilot, I am teaching inside the fence. There is no debate about "is this allowed?" It is allowed, it is integrated with their email, their documents, and their calendar, and the session goes on the work instead of the argument.
 
-## The Adoption Curve Is Steeper With ChatGPT
+## The adoption curve is steeper with ChatGPT
 
-ChatGPT is a standalone tool. You have to open a new browser tab, context-switch, copy-paste data in, and copy-paste results out. Copilot lives inside the tools people already use -- Word, Outlook, Excel, Teams. The friction to adoption is dramatically lower.
+ChatGPT is a standalone tool. You open a new tab, switch context, copy data in, copy results out. Copilot lives inside Word, Outlook, Excel, and Teams. The gap sounds small. In a room of finance staff at four in the afternoon it is the difference between a tool that gets used on Thursday and one that gets admired on Tuesday.
 
-When I [helped PolyU's finance team build AI workflows](/blog/polyu-finance-ai-workflow), the breakthrough came when AI stopped being a "separate activity" and became part of their existing Excel and email workflow. That integration is what turns occasional users into daily users.
+When I [worked with PolyU's finance team](/blog/polyu-finance-ai-workflow), the breakthrough came when AI stopped being a separate activity and became part of the Excel file and the Outlook draft they were already in. That integration is what turns occasional users into daily users.
 
-## When I Do Teach ChatGPT
+## When I do teach ChatGPT
 
-I'm not dogmatic about this. ChatGPT and Gemini are genuinely better at certain tasks -- creative brainstorming, complex analysis, image generation. At [Chow Tai Fook's design workshop](/blog/ctf-ai-design-thinking-workshop-2026), we used four different AI tools because jewelry design requires capabilities that Copilot doesn't have.
+I am not dogmatic about this. ChatGPT and Gemini are better at some things — creative brainstorming, complex analysis, image generation. At [Chow Tai Fook's design workshop](/blog/ctf-ai-design-thinking-workshop-2026) we used four different AI tools, because jewelry design needs capabilities Copilot does not have.
 
-The principle is: start with the tool that has the lowest barrier to sustained daily use, then expand to specialized tools for specific workflows. For most enterprises, that starting point is Copilot.
+The principle is to start with the tool that has the lowest barrier to sustained daily use, then add specialized tools for specialized workflows. For most enterprises the starting point is Copilot.
 
-## The Real Lesson
+One caveat I have learned to say out loud: check who actually has a license. "Already paid for" is only true if someone paid for it, and I have designed [Copilot-only programs](/blog/microsoft-copilot-training-hong-kong) for rooms where most seats had never been assigned. Count them before you book the trainer.
 
-The tool choice isn't really about the tool. It's about designing for adoption, not demonstration.
+## The real lesson
 
-A workshop where everyone leaves saying "wow, ChatGPT is amazing" but nobody uses it next week has failed. A workshop where everyone leaves with Copilot integrated into their actual email workflow -- even if it's less flashy -- has succeeded.
-
-As an AI workshop facilitator, my job isn't to show people the most impressive AI demo. It's to make sure they're still using AI a month later. Starting with the tool that's already in their ecosystem is the single biggest predictor of long-term adoption.
-
-## Sources & Further Reading
-
-- Gartner, "The State of Microsoft 365 Copilot: Survey Results" (Oct 2024, G00820869) -- 80% of organizations are piloting Copilot, but only 16% have transitioned to production. Organizations without change management planning saw up to 60% decline in user engagement.
-- Microsoft & LinkedIn, "[2024 Work Trend Index](https://www.microsoft.com/en-us/worklab/work-trend-index/ai-at-work-is-here-now-comes-the-hard-part)" (May 2024) -- 78% of AI users bring their own AI tools to work (BYOAI). Leaders' top concern: cybersecurity and data privacy.
-- Forrester Consulting, "[The Total Economic Impact of Microsoft 365 Copilot](https://marketingassets.microsoft.com/gdc/gdc70WbNv/original)" (Mar 2025) -- Documents measurable enterprise ROI from Copilot when deployed with proper governance and change management.
-
----
+The tool choice is not really about the tool. It is about designing for adoption rather than demonstration. A workshop where everyone leaves saying "wow, ChatGPT is amazing" and nobody uses it next week has failed. A workshop where everyone leaves with Copilot wired into the email they were going to write anyway has done its job, even if nobody was amazed.

@@ -23,7 +23,7 @@ const PERSON_ID = `${SITE_URL}/#person`;
 const voiceClusters = [
   { id: 'corporate', title: 'Enterprise training', quotes: testimonialData.corporate },
   { id: 'public-classes', title: 'Public classes', quotes: testimonialData.aboutSam },
-  { id: 'academy', title: 'DotAI Academy', quotes: testimonialData.academy },
+  { id: 'academy', title: 'Public AI classes', quotes: testimonialData.academy },
 ];
 
 // Case-study posts that are NOT already linked from a case note above, so the

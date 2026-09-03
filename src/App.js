@@ -52,6 +52,12 @@ const ZhContact = lazyRoute(() => import('./pages/ZhContact'));
 const ZhSpeaking = lazyRoute(() => import('./pages/ZhSpeaking'));
 const ZhMediaKit = lazyRoute(() => import('./pages/ZhMediaKit'));
 
+// Profession pages — 「為誰而設」. One component, both languages, five slugs.
+// Registered explicitly rather than as a `:slug` param so react-snap prerenders
+// each one: the SEO/GEO value of this site IS the prerendered HTML, and a param
+// route would have snapped to a single page.
+const Vertical = lazyRoute(() => import('./pages/Vertical'));
+
 // Media Kit (designed HTML version)
 const MediaKit = lazyRoute(() => import('./pages/MediaKit'));
 
@@ -85,6 +91,16 @@ const exactRoutes = {
   '/zh/contact': ZhContact,
   '/zh/speaking': ZhSpeaking,
   '/zh/media/kit': ZhMediaKit,
+  '/ai-training-healthcare-hong-kong': Vertical,
+  '/zh/ai-training-healthcare-hong-kong': Vertical,
+  '/ai-training-teachers-hong-kong': Vertical,
+  '/zh/ai-training-teachers-hong-kong': Vertical,
+  '/ai-training-nonprofit-hong-kong': Vertical,
+  '/zh/ai-training-nonprofit-hong-kong': Vertical,
+  '/ai-training-sme-owners-hong-kong': Vertical,
+  '/zh/ai-training-sme-owners-hong-kong': Vertical,
+  '/ai-training-executive-assistants-hong-kong': Vertical,
+  '/zh/ai-training-executive-assistants-hong-kong': Vertical,
   '/services': Services,
   '/speaking': Speaking,
 };
@@ -124,6 +140,16 @@ const App = () => (
         <Route path="/zh/contact" element={<ZhContact />} />
         <Route path="/zh/speaking" element={<ZhSpeaking />} />
         <Route path="/zh/media/kit" element={<ZhMediaKit />} />
+        <Route path="/ai-training-healthcare-hong-kong" element={<Vertical slug="ai-training-healthcare-hong-kong" lang="en" />} />
+        <Route path="/zh/ai-training-healthcare-hong-kong" element={<Vertical slug="ai-training-healthcare-hong-kong" lang="zh" />} />
+        <Route path="/ai-training-teachers-hong-kong" element={<Vertical slug="ai-training-teachers-hong-kong" lang="en" />} />
+        <Route path="/zh/ai-training-teachers-hong-kong" element={<Vertical slug="ai-training-teachers-hong-kong" lang="zh" />} />
+        <Route path="/ai-training-nonprofit-hong-kong" element={<Vertical slug="ai-training-nonprofit-hong-kong" lang="en" />} />
+        <Route path="/zh/ai-training-nonprofit-hong-kong" element={<Vertical slug="ai-training-nonprofit-hong-kong" lang="zh" />} />
+        <Route path="/ai-training-sme-owners-hong-kong" element={<Vertical slug="ai-training-sme-owners-hong-kong" lang="en" />} />
+        <Route path="/zh/ai-training-sme-owners-hong-kong" element={<Vertical slug="ai-training-sme-owners-hong-kong" lang="zh" />} />
+        <Route path="/ai-training-executive-assistants-hong-kong" element={<Vertical slug="ai-training-executive-assistants-hong-kong" lang="en" />} />
+        <Route path="/zh/ai-training-executive-assistants-hong-kong" element={<Vertical slug="ai-training-executive-assistants-hong-kong" lang="zh" />} />
         <Route path="/services" element={<Services />} />
         <Route path="/speaking" element={<Speaking />} />
         <Route path="*" element={<NotFound />} />

@@ -128,7 +128,7 @@ For Hong Kong companies, this is non-negotiable. Any trainer working with enterp
 
 ### 3. "What happens after the workshop?"
 
-If the answer is "nothing," you're buying awareness, not adoption. The Ebbinghaus forgetting curve means your team will lose 70% of what they learned within 24 hours. [Multi-session programs](/blog/why-ai-training-doesnt-stick) with follow-up checkpoints consistently outperform one-off sessions for lasting behavior change.
+If the answer is "nothing," you're buying awareness, not adoption. [Multi-session programs](/blog/why-ai-training-doesnt-stick) with follow-up checkpoints consistently outperform one-off sessions for lasting behavior change.
 
 ### 4. "Can you show me a case study from my industry?"
 

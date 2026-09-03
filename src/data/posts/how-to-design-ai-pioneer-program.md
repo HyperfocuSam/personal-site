@@ -1,74 +1,45 @@
+# How to Design a 6-Session AI Pioneer Program
 
-# How to Design a 6-Session AI Pioneer Program That Actually Changes Behavior
+Most corporate AI training fails because it treats adoption like an IT rollout. This is what I learned designing a 6-session program for 19 HR professionals at a Hong Kong food manufacturer — and why the Pioneer model has worked better than anything else I have tried in two years of enterprise workshops.
 
-Most corporate AI training fails because it treats AI adoption like an IT rollout. Here's what I learned designing a 6-session corporate AI training program for 19 HR professionals at a Hong Kong food manufacturer -- and why the "Pioneer" model works better than anything I've tried in two years of enterprise workshops.
+## The problem with one-off workshops
 
-## The Problem With One-Off Workshops
+I have trained 10,000+ professionals across banking, jewelry, tourism, and education, and the pattern repeats: a half-day workshop generates excitement, people leave buzzing, and three weeks later almost nobody has changed a daily workflow. A single session can spark interest. It cannot build a habit. When I ran [a 75-minute session for 400 educators at HKCT](/blog/hkct-ai-education-workshop), the energy in the hall was real, but a keynote cannot follow up on whether anyone used what they learned.
 
-I've trained 10,000+ professionals across banking, jewelry, tourism, and education. The pattern is always the same: a half-day workshop generates excitement, participants leave buzzing with ideas, and three weeks later, almost nobody has changed their daily workflow.
+This company's HR team came to me with the request every company makes: "Can you train our team on AI?" In the first meeting we made the pivot that shaped everything after. Instead of booking a workshop, we designed a program.
 
-The reason is simple. A single session can spark interest, but it can't build habits. When I ran [a 75-minute session for 400 educators at HKCT](/blog/hkct-ai-education-workshop), the energy was incredible -- but a keynote can't follow up on whether anyone actually used what they learned.
+## Why the Pioneer model
 
-The company's HR team came to me with the same request every company makes: "Can you train our team on AI?" But during our first meeting, we made a critical pivot. Instead of booking a workshop, we designed a program.
+The idea is stolen from change management, not from training. Instead of teaching everyone at once, you select a small group of Pioneers — 10 to 20 people who are curious, influential, and willing to experiment in front of colleagues. You train them deeply over weeks, not hours. Then they pull everyone else forward, and you do not have to.
 
-## Why We Chose the Pioneer Model
+For this company that meant 19 HR staff, every Wednesday afternoon, six weeks. The rules were specific:
 
-The idea is stolen from change management, not training. Instead of teaching everyone at once, you select a small group of "Pioneers" -- 10 to 20 people who are curious, influential, and willing to experiment. You train them deeply over weeks, not hours. Then they become the internal champions who pull everyone else forward.
+- **Copilot-only tooling.** The company runs Microsoft 365, so the whole program stayed inside their existing security boundary: no ChatGPT, no third-party apps, no shadow IT. This was non-negotiable after their IT lead found staff using personal phones for AI.
+- **Real work, not exercises.** Every session, participants brought actual tasks from their week. If someone needed to draft a recruitment policy, that became the practice material.
+- **Behavior over tools.** The goal was never "learn Copilot." It was "change how you approach repetitive work." The tool is the mechanism.
 
-For the company, this meant 19 HR team members meeting every Wednesday afternoon for six weeks. The rules were specific:
+## The six sessions
 
-- **Copilot-only tooling.** the company uses Microsoft 365 Business Standard. We restricted the entire program to tools within their existing security boundary -- no ChatGPT, no third-party apps, no shadow IT. This was non-negotiable after their IT lead flagged staff using personal phones for AI, creating data leakage risks.
-- **Real work, not exercises.** Every session required participants to bring actual tasks from their week. We didn't use hypothetical scenarios. If someone needed to draft a recruitment policy, that became their practice material.
-- **Behavior over tools.** The goal was never "learn Copilot." It was "change how you approach repetitive work." The tool is just the mechanism.
+**Sessions 1 and 2: Foundations.** AI literacy and the security protocol: Tier 1 is public research, Tier 2 is drafting and formatting, Tier 3 is confidential data that stays off AI tools entirely. This comes first because nothing kills adoption faster than IT shutting everything down after someone uploads salary data into a public model.
 
-## The 6-Session Structure
+**Sessions 3 and 4: Application.** Participants brought their own workflows and we rebuilt them. Recruitment screening. Policy drafting. Meeting summaries. The instruction was never "here is how to use AI for HR." It was "here is how your weekly report goes from 90 minutes to 15."
 
-Here's how I designed the program's arc. Each session built on the previous one, but could also stand alone if someone missed a week.
+**Session 5: Integration.** By week five people were designing processes, not learning features. I introduced the 3-3-3 AI Habit Framework: pick three tasks, use AI on them for three weeks, measure three outcomes. It gives people a structure to keep going after the trainer leaves.
 
-**Session 1-2: Foundations.** Basic AI literacy, security protocols, the difference between Tier 1 (public research), Tier 2 (formatting and drafting), and Tier 3 (confidential data that stays off AI tools). We established what's safe to use and what isn't -- because nothing kills adoption faster than an IT department shutting everything down after someone uploads salary data into a public model.
+**Session 6: Showcase.** Before-and-after. Each participant showed one workflow they had changed and what it cost them in time before and after. We placed the company on the [AI Maturity Model](/blog/ai-maturity-trap-stuck-stage-one) — Stage 2, Experimentation — so they could see the path to Stage 3 rather than just feel good about Stage 2.
 
-**Session 3-4: Application.** Participants brought their own workflows and we rebuilt them with AI assistance. HR recruitment screening. Policy document drafting. Meeting summary generation. The key was making it specific -- not "here's how to use AI for HR" but "here's how to cut your weekly report from 90 minutes to 15."
+## What made it work
 
-**Session 5: Integration.** By week five, participants weren't learning tools anymore -- they were designing processes. We introduced what I call the 3-3-3 AI Habit Framework: pick 3 tasks, use AI for 3 weeks, measure 3 outcomes. This gives people a structured way to build the habit after the program ends.
+**The Wednesday rhythm.** Meeting weekly at the same time created accountability. People knew they would be asked what they tried. When I [ran five sessions for 1,530 bankers at a major Hong Kong bank](/blog/1500-banking-professionals-ai-adoption), the scale was the story. Here, consistency was.
 
-**Session 6: Showcase.** The final session was a Before/After presentation. Each participant demonstrated one workflow they'd transformed, with specific time savings. We also introduced the AI Maturity Model -- the company was at Stage 2 (Experimentation) and could now see the path to Stage 3 (Integration) and Stage 4 (Transformation).
+**Enterprise-grade constraints.** Restricting the program to Copilot inside their tenant sounds limiting. It accelerated adoption, because nobody had to wonder "am I allowed to use this?" Their IT lead, skeptical after a failed AI vision project years earlier, became a supporter once he saw we were not asking for new licenses or infrastructure.
 
-## What Made It Work
+**Cross-functional spillover.** By session four, HR participants were showing colleagues in other departments what they had built. Nobody asked them to.
 
-Three design decisions made this program different from the dozens of workshops I've delivered:
+## What happened after
 
-**1. The Wednesday rhythm.** Meeting weekly at the same time created accountability. Participants knew they'd need to show progress. When I [trained 1,500 bankers across 13 countries at a major Hong Kong bank](/blog/1500-banking-professionals-ai-adoption), the scale was impressive but the format was one-and-done. The company program proved that consistency beats intensity.
+The result I trust most is not a number I measured. Sales and Marketing had booked their batch before the HR batch finished. Over the following year six departments and more than a hundred staff went through the room, and when the finance team sat down months later they walked in already knowing what the tools did, because HR colleagues had told them at lunch. I wrote up [the whole year](/blog/food-company-year-of-ai-six-departments).
 
-**2. Enterprise-grade constraints.** Restricting to Copilot within their Microsoft tenant sounds limiting, but it actually accelerated adoption. No one had to worry about "am I allowed to use this?" The security question was answered before we started. Their IT lead, who had been skeptical after a failed AI vision project years earlier, became a supporter once he saw we weren't asking for new licenses or infrastructure.
+Two things I would change. Add a pre-program assessment so each person measures against their own starting point, not the group's. And bring department heads into the room from week one, because a manager who watches the change happen is a manager who funds the next batch.
 
-**3. Cross-functional spillover.** Although this was an HR cohort, the techniques spread. By session four, participants were showing colleagues in other departments what they'd learned. That organic expansion is exactly what the Pioneer model is designed to create.
-
-## The Results
-
-After six sessions, the aggregate data told a clear story:
-
-- **5-8 hours per week** saved per participant on routine tasks
-- **19 internal champions** who could train others without external support
-- **Zero security incidents** -- the Copilot-only approach eliminated shadow IT concerns
-- the company moved from Stage 2 to early Stage 3 on the AI Maturity Model
-- Batch 2 was confirmed before Batch 1 even finished -- they immediately signed up another cohort
-
-The ROI math is straightforward. Even at the conservative end of 5 hours saved per week across 19 people, that's 95 hours of recovered productivity every week. Over a year, that's nearly 5,000 hours.
-
-## What I'd Do Differently
-
-The format works, but I'd make two changes for the next iteration. First, I'd add a pre-program assessment so participants can see their own starting point and measure growth against it, not just against the group. Second, I'd involve department heads from session one -- having them see the transformation in real time makes the business case for enterprise rollout much easier.
-
-## The Takeaway
-
-If you're planning corporate AI training for your organization, the most important decision isn't which tools to teach. It's whether you're building a program or booking a workshop. A single session can light the spark. But if you want behavior change that sticks, you need the Pioneer model: small group, real work, weekly rhythm, and enough time for habits to form.
-
-The company proved that six weeks is enough. Not to make everyone an AI expert -- but to make AI a natural part of how they work.
-
-## Sources & Further Reading
-
-- Microsoft & LinkedIn, "[2024 Work Trend Index](https://www.microsoft.com/en-us/worklab/work-trend-index/ai-at-work-is-here-now-comes-the-hard-part)" (May 2024) -- AI power users are 37% more likely to have a virtual learning program and 61% more likely to hear from their CEO about generative AI.
-- Harvard Business Review, "[Evaluating ROI on Your Company's Learning and Development Initiatives](https://hbr.org/2023/10/evaluating-roi-on-your-companys-learning-and-development-initiatives)" (Oct 2023) -- Programs that start with needs analysis produce significantly higher retention and application of skills.
-- Deloitte, "[State of AI in the Enterprise](https://www.deloitte.com/uk/en/services/consulting/blogs/2024/ai-powered-employee-experience.html)" (2024) -- 94% of business leaders agree AI is critical for success, yet organizations struggle with proving business value and insufficient enablement.
-
----
+Six weeks was enough. Not to make anyone an expert, but to make AI part of how a department works, and to make the next department ask for it.

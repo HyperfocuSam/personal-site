@@ -85,7 +85,7 @@ const cases = [
   {
     id: 'openclaw',
     period: 'Mar – Apr 2026',
-    org: 'DotAI × OpenClaw',
+    org: 'OpenClaw Hong Kong launch',
     title: 'Launch livestream + AI agent classes',
     type: 'Keynote + workshops',
     scale: '1,400+ registrants for the launch livestream',
@@ -157,7 +157,7 @@ const cases = [
   {
     id: 'dotai-academy',
     period: 'Jul 2025 – ongoing',
-    org: 'DotAI Academy',
+    org: 'Public AI classes, Hong Kong',
     title: 'Cantonese public classes + AI Builders bootcamp',
     type: 'Public classes',
     scale: 'Recurring evening series',

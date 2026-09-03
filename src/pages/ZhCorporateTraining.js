@@ -161,7 +161,7 @@ const methodologies = [
   {
     name: 'AI 成熟度模型',
     description: '四階段框架：認知、實驗、融合、轉型。'
-      + '80% 的公司停留在第一階段。'
+      + '我遇到的公司大多停留在第一階段。'
       + 'Pioneer 模式幫助他們推進到第二階段。',
     link: '/blog/ai-maturity-trap-stuck-stage-one',
   },
@@ -392,7 +392,7 @@ const ZhCorporateTraining = () => (
             to="/blog/why-ai-training-doesnt-stick"
             style={{ fontSize: '0.9em' }}
           >
-            閱讀更多：為何 AI 培訓無法持久（以及什麼才有效）&rarr;
+            閱讀更多：為何 AI 培訓無法持久 &rarr;
           </Link>
         </div>
       </section>
@@ -656,7 +656,7 @@ const ZhCorporateTraining = () => (
           </p>
           <p style={{ marginTop: '1rem' }}>
             無需等待政府計劃完全推出。現在投資有系統的 AI
-            培訓的公司，會有 12-18 個月的領先優勢。
+            培訓的公司，才會有第二個部門主動要求開班。
           </p>
           <Link
             to="/blog/hk-2026-budget-ai-training"

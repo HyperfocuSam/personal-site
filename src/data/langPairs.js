@@ -23,6 +23,11 @@ export const EN_TO_ZH = {
   '/services': '/zh/services',
   '/speaking': '/zh/speaking',
   '/corporate-ai-training-hong-kong': '/zh/corporate-ai-training-hong-kong',
+  '/ai-training-healthcare-hong-kong': '/zh/ai-training-healthcare-hong-kong',
+  '/ai-training-teachers-hong-kong': '/zh/ai-training-teachers-hong-kong',
+  '/ai-training-nonprofit-hong-kong': '/zh/ai-training-nonprofit-hong-kong',
+  '/ai-training-sme-owners-hong-kong': '/zh/ai-training-sme-owners-hong-kong',
+  '/ai-training-executive-assistants-hong-kong': '/zh/ai-training-executive-assistants-hong-kong',
 };
 
 export const ZH_TO_EN = Object.entries(EN_TO_ZH)

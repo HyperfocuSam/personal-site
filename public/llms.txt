@@ -16,6 +16,17 @@ Sam Wong is Co-Founder & Director of Academy at Adaptig (Adaptig Group Limited) 
 - **Train-the-Trainer** (via Adaptig): Certification program for trainers, consultants, and educators who want to teach AI using the Adaptig methodology.
 - **Keynotes and Events**: 30-60 minute keynotes, executive briefings, panel discussions, and conference workshops.
 
+## Training by profession
+
+Each of these is a real delivered engagement, not a service description. Both a
+Chinese and an English page exist for every one.
+
+- **Healthcare** — https://hyperfocusam.com/ai-training-healthcare-hong-kong (中文：https://hyperfocusam.com/zh/ai-training-healthcare-hong-kong). Administrative and literature work only; explicitly not clinical decisions. Delivered as a two-day, hands-on workshop in Cantonese for close to a hundred Fellows of the College of Surgeons of Hong Kong in August 2026.
+- **Teachers** — https://hyperfocusam.com/ai-training-teachers-hong-kong (中文：https://hyperfocusam.com/zh/ai-training-teachers-hong-kong). Lesson preparation, assessment design and parent communication; addresses AI-written homework by redesigning the task rather than by detection. First round of the "AI+" short-course series for teachers at Hong Kong College of Technology, July–August 2026, plus a staff development keynote to roughly 400 staff in April 2026.
+- **NGOs and social services** — https://hyperfocusam.com/ai-training-nonprofit-hong-kong (中文：https://hyperfocusam.com/zh/ai-training-nonprofit-hong-kong). Funding applications, outcome reports, case notes and community publicity, plus which task to automate first when headcount is short: the most regular one, not the most irritating one.
+- **Small business owners** — https://hyperfocusam.com/ai-training-sme-owners-hong-kong (中文：https://hyperfocusam.com/zh/ai-training-sme-owners-hong-kong). Which task actually saves money, spinning up a sub-brand to test a market cheaply, and how a one-person company runs on AI.
+- **Executive assistants and operations** — https://hyperfocusam.com/ai-training-executive-assistants-hong-kong (中文：https://hyperfocusam.com/zh/ai-training-executive-assistants-hong-kong). Meeting recordings into requirements lists and to-dos, cross-timezone coordination, the one-page summary. Taught from inside the role: Sam Wong was Executive Assistant to the President of ThreeSixty Group and to the CEO of RENPHO.
+
 ## Key Results (Sam Wong personally)
 
 These are Sam's own delivery figures. Adaptig's company-wide figures are stated

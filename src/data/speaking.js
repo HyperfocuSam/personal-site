@@ -140,9 +140,9 @@ export const engagements = [
   {
     id: 'everyone-ai',
     year: '2025-26',
-    org: 'DotAI',
+    org: 'Everyone.ai Day',
     title: 'Everyone.ai Day Keynote',
-    description: 'Opening keynote at DotAI\'s flagship community event. Invited back for 2026.',
+    description: 'Opening keynote at Hong Kong\'s largest AI community event. Invited back for 2026.',
     stat: '2 consecutive years',
   },
   {

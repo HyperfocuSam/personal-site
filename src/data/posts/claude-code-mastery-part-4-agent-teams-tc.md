@@ -84,6 +84,8 @@ Agent team 真正的回報，在這裡出現。平行執行，用於無依賴的
 
 ## Cron job——無人監督的自動化
 
+*編按（2026 年 7 月）：下文描述的自動發佈流程及早晨簡報排程，自 2026 年 7 月初起已暫停；文章現時經人手審閱後才發佈。*
+
 Agent team 再加上排程執行，系統就開始改變性質。以下 7 個 cron job 正在跑：
 
 | Job | 時間 | 做甚麼 |
@@ -105,7 +107,7 @@ Ada 早晨提醒 03/23:
 - 14:00 client call
 
 要跟進:
-- [OVERDUE] CTF 發票 — 逾期26日
+- [OVERDUE] 客戶發票 — 逾期 26 日
 - [DUE SOON] a client 工作坊 — 3日後
 
 Full briefing 喺 Craft.
