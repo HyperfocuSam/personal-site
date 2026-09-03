@@ -18,7 +18,7 @@ import ScrollReveal from '../components/ScrollReveal';
 // Pass a bare title and let Main.js's titleTemplate add "| Sam Wong", the way
 // every other page does. The old value carried the brand itself AND was under
 // the template's 48-char threshold, so it rendered with the suffix twice:
-// "Sam Wong | AI 培訓專家 - 香港 | Sam Wong".
+// "Sam Wong | 企業 AI 培訓 - 香港 | Sam Wong".
 //
 // 2026-08-15: rebuilt on the redesigned EN skeleton (same language-aware
 // components, one-voice ruling). /zh is the half that ranks #2 in Hong Kong
@@ -30,12 +30,12 @@ const ZhIndex = () => (
     title="香港企業 AI 培訓與工作坊"
     description="Sam Wong 是 Adaptig 聯合創辦人兼學院總監，駐香港的 AI 導師培訓師。已培訓 10,000+ 位專業人士、遍及 13 個國家。企業工作坊、一對一教練、導師認證，粵語英語皆可。"
     canonicalUrl={`${SITE_URL}/zh`}
-    ogTitle="Sam Wong | AI 培訓專家"
+    ogTitle="Sam Wong | 企業 AI 培訓 · Adaptig 共同創辦人兼學院總監"
     ogDescription="幫助企業和個人自信應用 AI。企業工作坊、一對一輔導、培訓師培訓計劃。"
     ogImage={DEFAULT_OG_IMAGE}
     ogUrl={`${SITE_URL}/zh`}
     ogType="website"
-    twitterTitle="Sam Wong | AI 培訓專家"
+    twitterTitle="Sam Wong | 企業 AI 培訓 · Adaptig 共同創辦人兼學院總監"
     twitterDescription="幫助企業和個人自信應用 AI。"
     twitterImage={DEFAULT_OG_IMAGE}
     hreflangTags={[

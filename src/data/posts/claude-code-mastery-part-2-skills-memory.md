@@ -148,5 +148,3 @@ In Part 3, I'll cover Claude Code's hooks system — the event-driven automation
 Memory tells Claude what it knows. Skills tell Claude how to act. Hooks tell Claude when to act — and when to stop.
 
 ---
-
-*[Connect with me on LinkedIn](https://www.linkedin.com/in/sam-ai-agent/) for more on building AI systems that actually work.*

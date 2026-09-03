@@ -55,5 +55,3 @@ The cumulative effect isn't "I'm faster." It's "I have more unbroken stretches o
 ---
 
 *This post is based on my appearance on [Club 80 Episode 049](https://www.youtube.com/watch?v=7Gswgk7Qd7Q). The full episode (in Cantonese) covers these tools in more detail with live demos. You can also check out all my media appearances on my [Media page](/media).*
-
-*If you have ADHD and found tools that actually work for you, I want to hear about them — [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*

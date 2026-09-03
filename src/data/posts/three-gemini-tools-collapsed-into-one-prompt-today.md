@@ -21,5 +21,3 @@ I will write back after I have actually run Omni against a real brief. Probably 
 Day one read. Not a finished pattern. Just the day the toolbox got smaller.
 
 ---
-
-*Connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*

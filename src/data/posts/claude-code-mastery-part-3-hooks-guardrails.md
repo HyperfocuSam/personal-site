@@ -165,5 +165,3 @@ Autonomous AI with guardrails is an employee who never forgets to double-check.
 Next in the series: [Part 4 -- Agent Teams](/blog/claude-code-mastery-part-4-agent-teams), where I cover multi-agent collaboration, sub-agent delegation, and what happens when your AI agents start working with each other. It gets weird. In a good way.
 
 ---
-
-*I train companies across 13 countries on AI adoption that actually sticks. If you are building with Claude Code and want to compare notes, connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*

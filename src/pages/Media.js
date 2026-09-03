@@ -262,7 +262,7 @@ const Media = () => (
               <div className="card fn-card">
                 <h4>JoJo Ventures Speaker Spotlight</h4>
                 <p>
-                  Featured as Head of Corporate Training
+                  Featured as Founding Member and Corporate AI Training Partner
                   at DotAI and Co-Founder of Adaptig at
                   JoJo Ventures event.
                 </p>

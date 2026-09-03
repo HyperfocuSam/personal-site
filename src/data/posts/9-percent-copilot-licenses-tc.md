@@ -75,5 +75,3 @@
 * Microsoft 與 LinkedIn「2024 Work Trend Index」（2024 年 5 月）：[AI 重度用戶有虛擬學習計劃的可能性高 37%，聽到 CEO 談 generative AI 的可能性高 61%](https://www.microsoft.com/en-us/worklab/work-trend-index/ai-at-work-is-here-now-comes-the-hard-part)。
 
 ---
-
-*我寫的是企業 AI adoption 裡真正行得通的東西——不是 slide 上好聽的東西。有共鳴的話，[LinkedIn 找我](https://linkedin.com/in/sam-ai-agent)。*

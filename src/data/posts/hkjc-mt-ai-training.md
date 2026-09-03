@@ -49,5 +49,3 @@ Feedback scores landed between 4 and 5 out of 5 across the group. But the thing 
 *If you're building AI capabilities for emerging leaders in your organization, I'd be happy to share what I've learned. Connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*
 
 ---
-
-*I design and deliver [corporate AI training programs](/services) for teams across Hong Kong and Asia-Pacific. See my full range of [training services](/corporate-ai-training-hong-kong).*

@@ -127,5 +127,3 @@ The gap between "I installed Claude Code" and "Claude Code runs my business" is 
 If it's not in CLAUDE.md, it remembers nothing.
 
 ---
-
-*I train organizations on AI adoption and build agent systems for my own business. Connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*

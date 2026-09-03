@@ -116,5 +116,3 @@ Memory 告訴 Claude 它知道甚麼。Skills 告訴它怎樣做。Hooks 告訴�
 如果不在 memory.md 裡，它甚麼都沒記住。
 
 ---
-
-*想多看怎樣建真正用得著的 AI 系統，在 LinkedIn 聯絡我：[sam-ai-agent](https://www.linkedin.com/in/sam-ai-agent/)*

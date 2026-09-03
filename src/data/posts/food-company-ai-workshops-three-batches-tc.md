@@ -49,5 +49,3 @@ HR 現在大約 Stage 3——有了穩定 workflow，每星期省回真實時間
 4 月 29 日之後，我會知道多一點。
 
 ---
-
-*我寫的是我在香港以至其他地方的培訓房間裡實際觀察到的東西。如果對你有用，在 [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/) 聯絡我。*

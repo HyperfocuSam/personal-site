@@ -31,5 +31,3 @@ The CTS engagement could have been another session where executives watched Chat
 *If you're planning AI strategy training for your management team and want to discuss approaches, connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*
 
 ---
-
-*I design and deliver [corporate AI training programs](/services) for teams across Hong Kong and Asia-Pacific. See my full range of [training services](/corporate-ai-training-hong-kong).*

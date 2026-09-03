@@ -51,5 +51,3 @@ The judges noted that their presentation balanced technology with emotional reso
 The teams that excelled weren't necessarily the most technically proficient with any single tool - they were the ones who knew how to orchestrate multiple tools toward a coherent creative outcome.
 
 ---
-
-*This was my third workshop with Chow Tai Fook's design team. If you're interested in AI adoption training for your organization, feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*

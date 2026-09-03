@@ -40,5 +40,3 @@ The companies that will dominate their industries in 2027 are not the ones with 
 - Microsoft & LinkedIn, "[2024 Work Trend Index](https://www.microsoft.com/en-us/worklab/work-trend-index/ai-at-work-is-here-now-comes-the-hard-part)" (May 2024) -- 75% of knowledge workers use AI at work, but 60% of leaders worry their organization lacks a plan to implement it.
 
 ---
-
-*I run [AI training programs](/services) for teams that are ready to close the gap. The starting point is usually smaller than people expect.*

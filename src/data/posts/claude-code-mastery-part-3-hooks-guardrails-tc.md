@@ -159,5 +159,3 @@ uv run ~/.claude/hooks/prompt-injection-defender/post-tool-defender.py
 系列下一篇：[第 4 篇 Agent Teams](/blog/claude-code-mastery-part-4-agent-teams-tc)——多 agent 協作、子 agent 委派、當你的 AI agent 開始互相合作會發生甚麼。會變得奇怪——是好的那種奇怪。
 
 ---
-
-*我在 13 個國家教企業做真正留得住的 AI adoption。如果你也在用 Claude Code 搭系統，歡迎在 [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/) 交流。*

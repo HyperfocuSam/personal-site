@@ -69,5 +69,3 @@ If your company already has Microsoft 365 with Copilot and adoption is low, the 
 A half-day workshop will get awareness. A 6-session [Pioneer Program](/blog/how-to-design-ai-pioneer-program) will get adoption. The difference is whether people are still using Copilot a month after the training ends.
 
 ---
-
-*I deliver [Microsoft Copilot training and corporate AI workshops](/corporate-ai-training-hong-kong) for Hong Kong enterprises. If your team has Copilot licenses but low adoption, see my full range of [training services](/services) or connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*

@@ -38,5 +38,3 @@ As an AI workshop facilitator, my job isn't to show people the most impressive A
 - Forrester Consulting, "[The Total Economic Impact of Microsoft 365 Copilot](https://marketingassets.microsoft.com/gdc/gdc70WbNv/original)" (Mar 2025) -- Documents measurable enterprise ROI from Copilot when deployed with proper governance and change management.
 
 ---
-
-*The tool question matters less than the adoption question. If your team has licenses nobody uses, [that's where I start](/services).*

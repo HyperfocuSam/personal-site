@@ -104,6 +104,13 @@ const ZhBook = () => (
 
       <section className="book-page__embed-section">
         <div className="book-page__embed-wrap">
+          <p className="book-page__fallback">
+            趕時間？
+            <a href={ROAM_LOBBY_URL} target="_blank" rel="noopener noreferrer">
+              直接開 Ro.am 預約頁
+            </a>
+            ，那邊載入較快。
+          </p>
           <RoamEmbed placement="zh_book_page" />
           <p className="book-page__fallback">
             {'預約系統本身是英文介面。載入不到的話，可以 '}

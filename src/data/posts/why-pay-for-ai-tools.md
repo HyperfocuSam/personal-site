@@ -85,6 +85,3 @@ I discussed all of this on Club 80 (Episode 024), a Cantonese show that covers t
 </div>
 
 ---
-
-*If you want to discuss AI adoption for your team or organization, connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*
-

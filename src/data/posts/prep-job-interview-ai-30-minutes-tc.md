@@ -35,5 +35,3 @@ NotebookLM 的 podcast 模式做的事很特定：兩位主持人輪流把你的
 Play smart，永遠好過死記爛背。
 
 ---
-
-*在 [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/) 聯絡我。*

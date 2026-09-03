@@ -73,5 +73,3 @@ It wasn't that I couldn't do this manually. [The gap between knowing what to do 
 AI didn't do this for me. It made the "should" tasks take hours instead of weeks. That's the difference.
 
 ---
-
-*I help companies adopt AI through [workshops, coaching, and pioneer programs](/services). If your team is navigating AI adoption, I'd welcome a conversation.*

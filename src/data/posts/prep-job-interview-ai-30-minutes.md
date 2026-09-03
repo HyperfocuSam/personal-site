@@ -51,5 +51,3 @@ The workflow costs nothing beyond tools most people in this market already have:
 Play smart is always cheaper than cram harder.
 
 ---
-
-*Connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*

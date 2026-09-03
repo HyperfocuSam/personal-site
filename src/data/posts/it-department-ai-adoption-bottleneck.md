@@ -38,5 +38,3 @@ These are fixable problems. But they remind me that the IT conversation isn't a 
 Your IT department doesn't want to block AI forever. They need someone to tell them what "safe" looks like. That's a communication problem, not a technology one. And if you're the trainer who solves it, you've just removed the single biggest blocker to everything else you're trying to do.
 
 ---
-
-*If your AI rollout is stuck at the IT conversation, I've been there. [See how I approach it](/corporate-ai-training-hong-kong) or reach out on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*

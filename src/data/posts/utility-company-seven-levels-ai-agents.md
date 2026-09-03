@@ -24,7 +24,7 @@ The core of the workshop was a classification system I've been refining through 
 
 **Level 5 -- LLM-Supported Workflow Systems.** Multi-branch automation where AI handles decision points. The same email arrives, but now the system routes it differently based on AI classification -- urgent vs. routine, internal vs. external, action-required vs. FYI. This is where real process automation begins.
 
-**Level 6 -- Self-Built Python Agent Ecosystem.** Custom agent systems built with code. I briefly showed my own setup: a main AI agent managing specialized sub-agents for different task domains. The ElevenLabs demo went further -- a the utility customer service voice agent built live in the session, using a knowledge base of the utility information and a cloned voice to answer questions verbally. This was the moment the room went quiet, in a good way.
+**Level 6 -- Self-Built Python Agent Ecosystem.** Custom agent systems built with code. I briefly showed my own setup: a main AI agent managing specialized sub-agents for different task domains. The ElevenLabs demo went further -- a customer-service voice agent for the utility built live in the session, using a knowledge base of the utility information and a cloned voice to answer questions verbally. This was the moment the room went quiet, in a good way.
 
 **Level 7 -- IDE/CLI-Based Agentic Interface.** Tools like Claude Code, Gemini CLI, or Codex where the AI operates directly in a development environment with full system access. This is the bleeding edge. I showed it not because the utility needs it now, but because understanding where the ceiling is helps you plan the stairs.
 
@@ -32,7 +32,7 @@ The core of the workshop was a classification system I've been refining through 
 
 Theory without practice is useless in corporate training. We ran five case studies, each building on the previous level:
 
-**Case Study 1: Visual Translator Agent.** Participants built their first Copilot agent that could extract text from images and translate it into Traditional Chinese. We tested it on product labels and -- fittingly -- a the utility utility bill. The structured prompt was six lines. The result was accurate extraction and translation that would have taken a human translator 15 minutes per document.
+**Case Study 1: Visual Translator Agent.** Participants built their first Copilot agent that could extract text from images and translate it into Traditional Chinese. We tested it on product labels and -- fittingly -- one of the utility's own bills. The structured prompt was six lines. The result was accurate extraction and translation that would have taken a human translator 15 minutes per document.
 
 **Case Study 2: Data Analysis Agent.** Using a sample the utility dataset with sales, social listening, and competitive data, participants built an agent that could clean messy multi-source Excel data and produce a strategic insights report. The prompt positioned the AI as a "Senior Consumer Insights Analyst" with specific output requirements: executive summary, cross-source insight matrix, ranked growth drivers, and stakeholder-ready recommendations.
 
@@ -44,7 +44,7 @@ Theory without practice is useless in corporate training. We ran five case studi
 
 ## What a Utility Company Actually Needs
 
-the utility doesn't need Level 7 agents. They probably won't need Level 6 for a while either. But after three hours together, the team had a clear picture of where they sit (Level 1-2), where the immediate gains are (Level 2-3), and what the roadmap looks like if they want to move toward process automation (Level 4-5).
+The utility doesn't need Level 7 agents. They probably won't need Level 6 for a while either. But after three hours together, the team had a clear picture of where they sit (Level 1-2), where the immediate gains are (Level 2-3), and what the roadmap looks like if they want to move toward process automation (Level 4-5).
 
 The most impactful takeaway wasn't any single tool demo. It was the data analysis case study. When the team saw AI clean a messy dataset and produce a structured strategic report -- with proper assumptions labeling and data quality flags -- the reaction was immediate recognition. That's their Monday morning. That's the work they do every week that could be 80% faster.
 
@@ -57,5 +57,3 @@ This was Module 3 in a series, and the progression across modules mirrors what I
 For the utility, the answer starts with report automation, data analysis, and document processing. Not glamorous. Not the kind of thing that makes viral demos. But for a company that keeps the lights on for millions of Hong Kong residents, reliable process improvement beats flashy demos every time.
 
 ---
-
-*I run AI adoption workshops for enterprise teams across Hong Kong. If your organization is trying to figure out where AI agents fit in your operations, I'd welcome a conversation. See my [corporate AI training services](/services) or connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*

@@ -283,7 +283,7 @@ const ZhCorporateTraining = () => (
             '@type': 'Person',
             name: 'Sam Wong',
             url: SITE_URL,
-            jobTitle: 'AI 培訓專家',
+            jobTitle: 'Adaptig 共同創辦人兼學院總監',
           },
         })}
       </script>
@@ -379,6 +379,21 @@ const ZhCorporateTraining = () => (
             我的做法不同。每個工作坊皆從你團隊的實際工作流程出發——他們寫的電郵、建立的報告、所作的決策。我們以
             AI 重新設計這些流程，行為改變才扎得住根：因為一切連著真實工作，不是假設性示範。
           </p>
+          {/* Single-expression text: adjacent text nodes break react-snap hydration (#418) */}
+          <p>
+            <Link to="/blog/how-to-design-ai-pioneer-program">
+              Pioneer Program 模式
+            </Link>
+            {' 之所以有效，因為它建基於變革管理原則：'
+              + '以工作流程為本的練習、每週問責、'
+              + '以及在培訓師離開後仍能持續推動採用的內部推動者。'}
+          </p>
+          <Link
+            to="/blog/why-ai-training-doesnt-stick"
+            style={{ fontSize: '0.9em' }}
+          >
+            閱讀更多：為何 AI 培訓無法持久（以及什麼才有效）&rarr;
+          </Link>
         </div>
       </section>
 
@@ -648,39 +663,6 @@ const ZhCorporateTraining = () => (
             style={{ fontSize: '0.9em' }}
           >
             閱讀完整分析：5,000 萬 AI 預算實際代表什麼 &rarr;
-          </Link>
-        </div>
-      </section>
-
-      {/* 點解大部分培訓失敗 */}
-      <section className="section-base section-padding">
-        <div className="content-narrow">
-          <h2>為何大部分企業 AI 培訓會失敗</h2>
-          <p>
-            大部分 AI 培訓教工具而不是工作流程。
-            你的團隊參加完工作坊，試用 ChatGPT 一個星期，
-            之後就回到舊的做法。培訓只是流於形式，卻沒有改變行為。
-          </p>
-          <p>
-            為 70+ 機構培訓超過10,000名專業人士後，規律非常清楚：
-            一次性培訓只能產生認知，不是採用。
-            人在 24 小時內會忘記 70% 的新資訊。
-            解決方法不是更好的內容 — 而是不同的結構。
-          </p>
-          {/* Single-expression text: adjacent text nodes break react-snap hydration (#418) */}
-          <p>
-            <Link to="/blog/how-to-design-ai-pioneer-program">
-              Pioneer Program 模式
-            </Link>
-            {' 之所以有效，因為它建基於變革管理原則：'
-              + '以工作流程為本的練習、每週問責、'
-              + '以及在培訓師離開後仍能持續推動採用的內部推動者。'}
-          </p>
-          <Link
-            to="/blog/why-ai-training-doesnt-stick"
-            style={{ fontSize: '0.9em' }}
-          >
-            閱讀更多：為何 AI 培訓無法持久（以及什麼才有效）&rarr;
           </Link>
         </div>
       </section>

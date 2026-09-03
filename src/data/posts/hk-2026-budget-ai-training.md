@@ -55,5 +55,3 @@ Several industry groups have noted that HK$50 million is "far from adequate" for
 The budget is a useful signal. But companies that wait for government programs to solve their AI adoption gap will find themselves 18 months behind those that invested now.
 
 ---
-
-*I deliver [corporate AI training](/corporate-ai-training-hong-kong) for Hong Kong enterprises through [Adaptig](https://adaptig.ai) and [DotAI](https://dotai.hk). See my full range of [training services](/services) or [get in touch](/contact).*

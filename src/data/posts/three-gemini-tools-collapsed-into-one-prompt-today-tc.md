@@ -17,5 +17,3 @@ I/O 2026，Google 發佈 Gemini Omni。提案是：不用再在三個工具之�
 我會在用 Omni 跑過真實 brief 之後回來寫後續。下一批 Adaptig case-study illustration 是合適的 pilot：同一套餵了 Nano Banana 幾個月的 prompt、同樣的品牌約束，看甚麼存活。Day one 的判斷。不是定案的 pattern。只是 toolbox 變小的一日。
 
 ---
-
-*[在 LinkedIn 聯絡我](https://www.linkedin.com/in/sam-ai-agent/)*

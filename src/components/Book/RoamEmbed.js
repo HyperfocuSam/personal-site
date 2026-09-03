@@ -6,7 +6,9 @@ import { track } from '../../utils/track';
 export const ROAM_LOBBY_URL = 'https://ro.am/samwong/';
 const ROAM_EMBED_SCRIPT = 'https://ro.am/lobbylinks/embed.js';
 const ACCENT_COLOR = '#c8965a';
-const LOAD_TIMEOUT_MS = 8000;
+// 4 s: PostHog shows a 4 s median dwell on /book, so an embed that has not
+// rendered by then was never seen. 8 s let those visits report nothing at all.
+const LOAD_TIMEOUT_MS = 4000;
 
 /**
  * The Ro.am scheduler, and the instrumentation that proves it rendered.

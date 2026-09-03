@@ -28,5 +28,3 @@ The AI training market is splitting into two tracks, and I don't think most trai
 I'm building both simultaneously. Some weeks that feels strategic. Other weeks it feels like I'm spread across too many surfaces. The honest answer is I don't know which track will be more valuable in 18 months. I know which one is more interesting to me right now — watching a non-technical founder build something real in two hours. That moment when they look up from the screen and say "wait, it actually works?" — that's the shift. Everything else is commentary.
 
 ---
-
-*I work with leadership teams and organizations on [practical AI adoption](/services). The best starting point is usually a conversation about what you've already tried.*

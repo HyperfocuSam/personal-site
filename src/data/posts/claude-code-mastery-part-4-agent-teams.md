@@ -151,5 +151,3 @@ Those numbers compound. The system gets better because the memory gets richer. T
 Next in the series: Part 5, where I pull everything together into a complete blueprint -- CLAUDE.md, memory, skills, hooks, agents, and cron -- with a starter template you can fork and customize. The full stack, one repo.
 
 ---
-
-*I train companies across 13 countries on AI adoption that actually sticks. If you are building with Claude Code and want to compare notes, connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*

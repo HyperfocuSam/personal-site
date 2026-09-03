@@ -86,3 +86,32 @@ describe('anonymised clients stay anonymised', () => {
     expect(bar).toContain('Bank of China (Hong Kong)');
   });
 });
+
+// Hardened 2026-09-03: the sitewide find-and-replace that anonymised clients
+// left grammar wreckage ("a the food manufacturer", ". the company ...") on
+// live buyer pages, and one post re-identified the client by a detail
+// ("the biscuit tins most of us grew up with"). Names were clean; the text
+// was not. Both classes of leak are checked here so they cannot ship again.
+const IDENTIFYING_DETAILS = ['biscuit tins', '餅乾罐', '曲奇罐'];
+const ARTEFACTS = [
+  /\ba the\b/,
+  /\bthe the\b/,
+  /(^|\. )the (company|utility|food manufacturer|bank)\b/m,
+];
+
+describe('anonymisation leaves no artefacts behind', () => {
+  const posts = fs.readdirSync(path.join(root, 'src/data/posts'))
+    .filter((f) => f.endsWith('.md'))
+    .map((f) => path.join('src/data/posts', f));
+
+  it.each(IDENTIFYING_DETAILS)('never re-identifies a client by "%s"', (detail) => {
+    const offenders = posts.filter((f) => fs.readFileSync(path.join(root, f), 'utf8').includes(detail));
+    expect(offenders).toEqual([]);
+  });
+
+  it.each(ARTEFACTS.map(String))('no find-and-replace wreckage matching %s', (src) => {
+    const re = ARTEFACTS.find((r) => String(r) === src);
+    const offenders = posts.filter((f) => re.test(fs.readFileSync(path.join(root, f), 'utf8')));
+    expect(offenders).toEqual([]);
+  });
+});

@@ -51,5 +51,3 @@ Agent framework 免費給你 80%：model integration、tool calling、memory ext
 Agent 不是 feature，是 architecture。一旦有 routing、memory、tools、specialist delegation，你已不是在做 chatbot，而是在做一個會判斷誰該處理甚麼、記得自己學過甚麼、會執行實際動作的系統。Framework 令 architecture 變得人人可及；產品的部分——UX、edge case、文化假設——仍然在你手上。而 craft 正正在那裡。
 
 ---
-
-*Sam Wong 在 13 個國家做 AI adoption training，訓練超過 10,000 位專業人士。[LinkedIn](https://www.linkedin.com/in/sam-ai-agent/) | [Adaptig](https://adaptig.ai)*

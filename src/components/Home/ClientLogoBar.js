@@ -76,6 +76,7 @@ const ClientLogoBar = ({ language }) => (
             width={w}
             height={h}
             loading="lazy"
+            style={{ aspectRatio: `${w} / ${h}` }}
             className="logo-marquee__logo"
           />
         ))}
@@ -95,6 +96,7 @@ const ClientLogoBar = ({ language }) => (
             width={w}
             height={h}
             loading="lazy"
+            style={{ aspectRatio: `${w} / ${h}` }}
             className="logo-marquee__logo"
           />
         ))}

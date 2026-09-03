@@ -79,5 +79,3 @@ Three ways to bridge that gap:
 The five prompts work. The question is whether you'll use them tomorrow, or just save this post and forget about it.
 
 ---
-
-*I train enterprise teams on AI adoption through [workshops, coaching, and pioneer programs](/services). If procrastination, productivity, or ADHD-friendly AI workflows are your thing, connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*

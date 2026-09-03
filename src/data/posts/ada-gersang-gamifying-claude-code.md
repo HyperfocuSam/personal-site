@@ -108,5 +108,3 @@ The game is playable but early. A few things I want to build:
 The repo is live on GitHub. Seven commits deep, 328KB total. No client data, no recordings, no secrets — just game code.
 
 ---
-
-*Building things at the intersection of AI tooling and actual work. More on [LinkedIn](https://linkedin.com/in/sam-ai-agent/).*

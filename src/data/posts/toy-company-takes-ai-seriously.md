@@ -6,7 +6,7 @@ That smallness turned out to be the most important feature of the entire engagem
 
 ## The Setup
 
-the company is publicly listed, with separate HK and US operations. The Hong Kong team approached us through a referral in late 2025. Their initial concerns were standard: data security anxiety, tool confusion (they were already using Microsoft Copilot through their enterprise license but had no structured approach), and a specific request that needed addressing before anything else could proceed.
+The company is publicly listed, with separate HK and US operations. The Hong Kong team approached us through a referral in late 2025. Their initial concerns were standard: data security anxiety, tool confusion (they were already using Microsoft Copilot through their enterprise license but had no structured approach), and a specific request that needed addressing before anything else could proceed.
 
 We structured the engagement as Tier 1 -- what I call the "Magic Show" format. Two sessions designed to build general awareness and executive buy-in, not hands-on skill building. Session one on January 6 focused on AI trends in Hong Kong, multimodal capabilities, and the demo that would determine whether Tier 2 ever happened. Session two on February 9 covered practical productivity workflows for the broader staff.
 
@@ -54,7 +54,7 @@ I spent a deliberate segment on data security, using what I call the [traffic li
 
 The golden rule I gave them: if you would not post it on a public notice board, do not paste it into a free AI tool.
 
-This was not a throwaway compliance slide. the company had raised data security as a primary concern from the very first meeting in October 2025. Addressing it early and with a clear, memorable framework removed the anxiety that was blocking experimentation. People who feel safe try more things.
+This was not a throwaway compliance slide. The company had raised data security as a primary concern from the very first meeting in October 2025. Addressing it early and with a clear, memorable framework removed the anxiety that was blocking experimentation. People who feel safe try more things.
 
 ## Why Small Groups Work
 
@@ -77,5 +77,3 @@ Tier 1 was completed. As of March 2026, discussions about Tier 2 were underway -
 The engagement also validated something I have been refining in my approach: the [tool-agnostic teaching method](/blog/why-i-teach-copilot-not-chatgpt). I did not teach "how to use ChatGPT." I taught how to communicate with AI systems using transferable skills -- role setup, structured output, iterative refinement. When the tools change (and they will change), the skills remain.
 
 ---
-
-*I run AI adoption training for corporate teams across Hong Kong and Asia. If your organization is exploring AI training -- whether for 12 people or 1,200 -- I would be glad to talk through what a practical engagement looks like. See my [corporate AI training services](/services) or connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*

@@ -12,12 +12,12 @@ const ZhAbout = () => (
     title="關於 Sam Wong — 香港 AI 導師培訓師"
     description="Sam Wong 是 Adaptig 聯合創辦人兼學院總監，一位駐香港的 AI 導師培訓師——他教的是教 AI 的人。已為 70+ 間機構、10,000+ 位專業人士提供培訓，遍及 13 個國家。"
     canonicalUrl={`${SITE_URL}/zh/about`}
-    ogTitle="關於 Sam Wong | AI 培訓專家"
+    ogTitle="關於 Sam Wong | Adaptig 共同創辦人兼學院總監"
     ogDescription="為何我從事這份工作，以及我如何走到今天。由 ADHD 診斷到培訓超過 10,000 位專業人士應用 AI。"
     ogImage={DEFAULT_OG_IMAGE}
     ogUrl={`${SITE_URL}/zh/about`}
     ogType="profile"
-    twitterTitle="關於 Sam Wong | AI 培訓專家"
+    twitterTitle="關於 Sam Wong | Adaptig 共同創辦人兼學院總監"
     twitterDescription="為何我從事這份工作，以及我如何走到今天。"
     twitterImage={DEFAULT_OG_IMAGE}
     hreflangTags={[
@@ -105,8 +105,7 @@ const ZhAbout = () => (
           <h2>職業路徑</h2>
           <p>
             我的職涯由 FAO Schwarz 和 Sharper Image 的行政助理開始，
-            到加入 RENPHO 擔任 AI 產品經理及 AI 團隊主管，
-            並在那裡從零組建了一個 AI 部門。
+            到加入 RENPHO 先做 CEO 行政助理，再轉任 AI 產品經理。
           </p>
           {/* Naked 「應用」 as the noun "adoption" reads as a verb in
               Chinese (2026-08-15 audit) — give the sentence its subject. */}

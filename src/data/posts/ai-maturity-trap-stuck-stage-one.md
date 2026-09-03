@@ -46,5 +46,3 @@ Don't wait until you're at Stage 4 to start. Map your hard problems now. The AI 
 - IBM Institute for Business Value, "[2024 Banking & Financial Markets Outlook](https://www.ibm.com/thought-leadership/institute-business-value/en-us/report/2024-banking-financial-markets-outlook)" (Jan 2024) -- 78% of financial institutions tactically implement gen AI, but strategic enterprise-wide scaling remains elusive.
 
 ---
-
-*Most companies I work with are at Stage 1. The ones that move are the ones that [appoint someone to own it](/services).*

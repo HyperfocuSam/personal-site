@@ -93,5 +93,3 @@ In the banking program, post-workshop surveys showed that participants who under
 If you are designing AI training for your organization, start here. Not with prompting techniques. Not with tool demos. Start with making people feel safe. The Traffic Light Protocol takes fifteen minutes and changes the entire trajectory of what follows.
 
 ---
-
-*I design and deliver [corporate AI training programs](/services) that start with safety and build toward lasting adoption. See my full range of [training services](/corporate-ai-training-hong-kong) or connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*

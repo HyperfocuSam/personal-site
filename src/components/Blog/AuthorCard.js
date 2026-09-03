@@ -12,7 +12,7 @@ const AuthorCard = ({ compact, language }) => {
       <Link to={zh ? '/zh/about' : '/about'} className="author-card__image-link">
         <OptimizedImage
           src={`${PUBLIC_URL}/images/Sam.png`}
-          alt="Sam Wong - AI Training Specialist"
+          alt="Sam Wong"
           className="author-card__image"
           width={760}
           height={880}

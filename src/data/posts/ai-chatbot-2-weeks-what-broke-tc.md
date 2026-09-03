@@ -65,5 +65,3 @@ Day 10-14：測試、迭代、對舊 codebase 的 security audit、寫給非技�
 chatbot 死在第三輪，不是因為 AI 失敗——是因為 guardrail 守錯了東西。
 
 ---
-
-*我寫建 AI 產品和教企業採用 AI 的實戰。有共鳴的話，[LinkedIn 找我](https://linkedin.com/in/sam-ai-agent)。*

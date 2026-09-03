@@ -59,5 +59,3 @@ Training engineers on AI isn't about showing them impressive demos. It's about r
 The technology keeps moving. The format held up, though: one complete workflow, ten minutes on data safety, and the rest of the workday to test it. If you're planning a session for a technical team, start there.
 
 ---
-
-*If you're exploring AI training for technical teams and want to discuss what might work for your organization, connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*

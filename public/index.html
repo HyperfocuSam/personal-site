@@ -227,6 +227,10 @@
     <meta name="theme-color" content="#FFFFFF" />
 
     <link rel="preload" as="font" href="%PUBLIC_URL%/fonts/jetbrains-mono-latin.woff2" type="font/woff2" crossorigin />
+    <!-- Bitter is the hero/LCP face; without this preload the LCP text waits ~2 s for the font (Lighthouse 2026-09-03). -->
+    <link rel="preload" as="font" href="%PUBLIC_URL%/fonts/bitter-latin.woff2" type="font/woff2" crossorigin />
+    <!-- /book: the Ro.am scheduler took 4-17 s to render against a 4 s median dwell; warm the origin early. -->
+    <link rel="preconnect" href="https://ro.am" crossorigin />
     <link rel="stylesheet" href="%PUBLIC_URL%/fonts/fonts.css" />
     <link rel="preload" as="image" href="%PUBLIC_URL%/images/sam-hero.webp" type="image/webp" fetchpriority="high" media="(min-width: 980px)" />
 

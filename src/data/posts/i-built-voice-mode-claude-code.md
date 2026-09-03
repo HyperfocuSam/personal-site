@@ -77,5 +77,3 @@ The insight I keep coming back to: accessibility features aren't just for people
 If you use Claude Code and you've ever caught yourself skimming past an important caveat -- try voice mode. Your ears might catch what your eyes missed.
 
 ---
-
-*Building accessible developer tools is something I think about a lot. If you want to talk about AI adoption, developer experience, or workshop design, find me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/). I also run [corporate AI training](/corporate-ai-training-hong-kong) in Hong Kong.*

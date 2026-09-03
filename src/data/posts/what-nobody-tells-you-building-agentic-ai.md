@@ -55,5 +55,3 @@ Agents are not a feature. They are an architecture. The moment you have routing,
 The frameworks make the architecture accessible. The product work -- the UX, the edge cases, the cultural assumptions -- that is still on you.
 
 ---
-
-*Sam Wong builds agentic AI systems and trains companies on AI adoption across 13 countries. Connect on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*

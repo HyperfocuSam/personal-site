@@ -37,5 +37,3 @@ If you work closely with any AI tool -- an assistant, an agent, a code-generatio
 That's what the 14 fixes did. The drawing is still on my desktop. The fixes are still running. Only one of those changed how I work.
 
 ---
-
-*I share reflections on AI adoption and the human side of technology on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/). If this resonated, I'd like to hear from you.*

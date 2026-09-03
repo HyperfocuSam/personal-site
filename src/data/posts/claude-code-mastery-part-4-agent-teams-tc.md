@@ -148,5 +148,3 @@ Blog pipeline 是最進取的一個：auto-publish 模式。每個星期一，sc
 系列下一篇，第 5 篇，我會把一切拼成完整藍圖：CLAUDE.md、memory、skills、hooks、agents、cron——full stack，一個 repo。
 
 ---
-
-*我在 13 個國家教企業做真正留得住的 AI adoption。如果你也在用 Claude Code 搭系統，歡迎在 [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/) 交流。*

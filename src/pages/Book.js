@@ -109,6 +109,13 @@ const Book = () => (
 
       <section className="book-page__embed-section">
         <div className="book-page__embed-wrap">
+          <p className="book-page__fallback">
+            {'In a hurry? '}
+            <a href={ROAM_LOBBY_URL} target="_blank" rel="noopener noreferrer">
+              Open the scheduler on Ro.am
+            </a>
+            {' — it loads faster there.'}
+          </p>
           <RoamEmbed placement="book_page" />
           <p className="book-page__fallback">
             {'If the scheduler doesn’t load, '}

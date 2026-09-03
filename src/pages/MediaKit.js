@@ -121,7 +121,7 @@ const MediaKit = () => (
           <div className="media-kit-bio__column">
             <span className="media-kit-bio__lang-label">中文</span>
             <p>
-              {'Sam Wong 是一位AI培訓專家，已為超過10,000名來自銀行、零售、教育及科技行業的專業人士提供培訓。'
+              {'Sam Wong 是 Adaptig 共同創辦人兼學院總監、DotAI 創始成員及企業 AI 培訓夥伴，已為超過10,000名來自銀行、零售、教育及科技行業的專業人士提供培訓。'
                 + '他透過 Adaptig（Adaptig Group Limited）設計及執行企業AI工作坊，'
                 + '協助機構從AI好奇階段進入AI實戰能力階段。客戶包括一間大型香港銀行、周大福、香港賽馬會、'
                 + 'Arup 及理工大學。Sam 駐港，專注於改變行為而非純粹提升認知的實用AI應用培訓。'}

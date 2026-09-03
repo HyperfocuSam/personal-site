@@ -1,6 +1,6 @@
 # A Year of AI Training at a Hong Kong Food Company: Six Departments, Twenty Sessions
 
-In July 2025, a Hong Kong food manufacturer -- the Hong Kong food company behind the biscuit tins most of us grew up with -- booked a single AI workshop. Standard format. The kind of session that ends when the projector powers down.
+In July 2025, a Hong Kong food manufacturer -- a brand most of us grew up eating -- booked a single AI workshop. Standard format. The kind of session that ends when the projector powers down.
 
 Then they came back.
 

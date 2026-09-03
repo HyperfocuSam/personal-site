@@ -32,5 +32,3 @@ And iteration matters more than either. The best prompters I've trained don't wr
 The Wharton study validated what practitioners already know. The art of prompting isn't about magic words. It's about being precise about what you actually need. That's a skill most organizations haven't started teaching, and every week they wait, their teams default to "be creative" and wonder why the outputs are mediocre.
 
 ---
-
-*I teach prompt engineering as structured input design in [corporate workshops](/services). If your team is stuck at "be creative," that's a solvable problem.*

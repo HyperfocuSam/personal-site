@@ -9,7 +9,7 @@ I've trained 10,000+ professionals across banking, jewelry, tourism, and educati
 
 The reason is simple. A single session can spark interest, but it can't build habits. When I ran [a 75-minute session for 400 educators at HKCT](/blog/hkct-ai-education-workshop), the energy was incredible -- but a keynote can't follow up on whether anyone actually used what they learned.
 
-the company's HR team came to me with the same request every company makes: "Can you train our team on AI?" But during our first meeting, we made a critical pivot. Instead of booking a workshop, we designed a program.
+The company's HR team came to me with the same request every company makes: "Can you train our team on AI?" But during our first meeting, we made a critical pivot. Instead of booking a workshop, we designed a program.
 
 ## Why We Chose the Pioneer Model
 
@@ -63,7 +63,7 @@ The format works, but I'd make two changes for the next iteration. First, I'd ad
 
 If you're planning corporate AI training for your organization, the most important decision isn't which tools to teach. It's whether you're building a program or booking a workshop. A single session can light the spark. But if you want behavior change that sticks, you need the Pioneer model: small group, real work, weekly rhythm, and enough time for habits to form.
 
-the company proved that six weeks is enough. Not to make everyone an AI expert -- but to make AI a natural part of how they work.
+The company proved that six weeks is enough. Not to make everyone an AI expert -- but to make AI a natural part of how they work.
 
 ## Sources & Further Reading
 
@@ -72,5 +72,3 @@ the company proved that six weeks is enough. Not to make everyone an AI expert -
 - Deloitte, "[State of AI in the Enterprise](https://www.deloitte.com/uk/en/services/consulting/blogs/2024/ai-powered-employee-experience.html)" (2024) -- 94% of business leaders agree AI is critical for success, yet organizations struggle with proving business value and insufficient enablement.
 
 ---
-
-*I design and deliver [corporate AI training programs](/services) for teams across Hong Kong and Asia-Pacific. See my full range of [training services](/corporate-ai-training-hong-kong).*

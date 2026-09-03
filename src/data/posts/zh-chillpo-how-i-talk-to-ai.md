@@ -205,5 +205,3 @@ session 最後一句，是這樣的：
 ---
 
 *最重要的技能不是寫 code。是知道何時說「yes please」，何時貼上錯誤訊息，何時什麼都不說。*
-
-*想了解更多 AI 協作技巧，可以在 [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/) 找我。我提供[企業 AI 培訓和工作坊](/zh/services)，教團隊怎樣真正用 AI 做事。*

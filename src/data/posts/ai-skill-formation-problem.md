@@ -32,5 +32,3 @@ The same applies in corporate settings. Teach evaluation before generation. Make
 The irony is that making people better at working with AI requires making them do more work without AI first. That's a harder sell than "AI will make you 10x faster." But it's the version that actually holds up six months later.
 
 ---
-
-*If your team is navigating this tension — wanting AI speed without losing the skills underneath — that's exactly what my [training programs](/services) are designed for.*

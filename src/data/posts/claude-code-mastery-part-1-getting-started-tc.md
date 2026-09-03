@@ -124,5 +124,3 @@ MCP 即 Model Context Protocol——一個標準，讓 Claude Code 連接外部�
 如果不在 CLAUDE.md 裡，它甚麼都記不住。
 
 ---
-
-*我幫機構做 AI adoption 培訓，也為自己的生意搭 agent 系統。歡迎在 [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/) 交流。*

@@ -47,5 +47,3 @@ That's the gap most AI training doesn't close. People understand what the tools 
 *If you're thinking about AI training for your team or community, I'm always happy to discuss what's working. Connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*
 
 ---
-
-*I design and deliver [corporate AI training programs](/services) for teams across Hong Kong and Asia-Pacific. See my full range of [training services](/corporate-ai-training-hong-kong).*

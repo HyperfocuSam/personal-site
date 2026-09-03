@@ -89,5 +89,3 @@ But the work hasn't disappeared. It has shifted. From writing code to writing sp
 The chatbot crashed on turn three. Not because the AI failed. Because the guardrail was guarding the wrong thing.
 
 ---
-
-*I write about building AI products and training enterprises to adopt them. If this landed, I'm on [LinkedIn](https://linkedin.com/in/sam-ai-agent).*

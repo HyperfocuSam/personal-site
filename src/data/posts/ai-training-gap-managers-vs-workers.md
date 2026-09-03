@@ -17,7 +17,7 @@ This is the part companies keep getting wrong. "AI training" in most organizatio
 
 When I [ran a 6-session program for the food manufacturer's HR team](/blog/how-to-design-ai-pioneer-program), the breakthrough wasn't in session two when they learned Copilot. It was in session five when a participant said "I can figure out what to ask" instead of asking me for a prompt list. That shift — from "give me the 100 prompts" to "I can think through this myself" — is what actual training produces. A webinar can't do that.
 
-But here's what I don't know yet: whether that shift sticks after month six. the food manufacturer is into Batch 3 now. I'm watching. The early signals are good — participants from Batch 1 are teaching colleagues without being asked. But I don't have a year of data. I'm going on pattern recognition, not proof.
+But here's what I don't know yet: whether that shift sticks after month six. The food manufacturer is into Batch 3 now. I'm watching. The early signals are good — participants from Batch 1 are teaching colleagues without being asked. But I don't have a year of data. I'm going on pattern recognition, not proof.
 
 ## The 84% Number and What It Actually Means
 
@@ -32,5 +32,3 @@ Start with 15 willing people, not 200 reluctant ones. Solve the security questio
 The uncomfortable truth about the 70/14 gap is that it's not a resource problem. Most organizations have the budget. They have the tools — Copilot is already bundled with their Microsoft licenses. What they don't have is someone who wakes up in the morning thinking "AI adoption is my job." Until that person exists, the gap holds.
 
 ---
-
-*I run [corporate AI training](/services) focused on behavior change, not demos. If your organization is sitting in this gap, I'd like to hear what's blocking you — [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*

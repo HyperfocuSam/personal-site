@@ -37,5 +37,3 @@ I teach AI to organizations for a living, and I regularly have to calibrate what
 *If you're planning AI introduction for an educational institution and want to discuss approaches, connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*
 
 ---
-
-*I design and deliver [corporate AI training programs](/services) for teams across Hong Kong and Asia-Pacific. See my full range of [training services](/corporate-ai-training-hong-kong).*

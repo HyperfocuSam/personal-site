@@ -38,5 +38,3 @@ Education is where the AI adoption gap hurts most. When the Hong Kong government
 HKCT decided to solve it themselves. Twenty-four months. Monthly sessions. A WhatsApp community. And a mandatory deadline. It's the most structurally committed approach to institutional AI adoption I've seen from any school in Hong Kong. Whether the execution matches the ambition — I'll be reporting from inside the program for the next two years.
 
 ---
-
-*I write about AI adoption as it actually happens — in training rooms, WhatsApp groups, and the gap between policy and practice. More at [hyperfocusam.com/blog](/blog) or connect on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*

@@ -90,5 +90,3 @@ The companies that get this right are building internal AI capability, not depen
 - McKinsey, "[The State of AI in Early 2024](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-2024)" (May 2024) -- 65% of organizations regularly use gen AI, but scaling remains the gap between adoption and embedded behavior change.
 
 ---
-
-*I write about AI adoption, corporate training, and what actually happens when organizations try to change. Connect with me on [LinkedIn](https://www.linkedin.com/in/sam-ai-agent/).*

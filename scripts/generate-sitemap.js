@@ -20,6 +20,11 @@ const BILINGUAL_PAIRS = {
   '/blog': '/zh/blog',
   '/media': '/zh/media',
   '/corporate-ai-training-hong-kong': '/zh/corporate-ai-training-hong-kong',
+  '/case-notes': '/zh/case-notes',
+  '/contact': '/zh/contact',
+  '/book': '/zh/book',
+  '/speaking': '/zh/speaking',
+  '/media/kit': '/zh/media/kit',
 };
 
 // AI discoverability assets — plain .txt files at root, no trailing slash.

@@ -57,5 +57,3 @@
 這 5 條 prompt 是有用的。問題是你明天會不會真的用——還是把這篇文章 save 下來，連它也一起拖延掉。
 
 ---
-
-*我提供企業 AI 培訓和 1-1 coaching（[了解服務](/zh/services)），教團隊真正把 AI 融入 workflow；想交流在 LinkedIn 找我（[Sam Wong](https://www.linkedin.com/in/sam-ai-agent/)）。*

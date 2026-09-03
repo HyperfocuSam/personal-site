@@ -78,5 +78,3 @@ Budget 60% for the humans, 40% for the tools. Most organizations run 95/5 and th
 - Microsoft & LinkedIn, "[2024 Work Trend Index](https://www.microsoft.com/en-us/worklab/work-trend-index/ai-at-work-is-here-now-comes-the-hard-part)" (May 2024) -- AI power users are 37% more likely to have a virtual learning program and 61% more likely to hear from their CEO about generative AI.
 
 ---
-
-*I write about what actually works in enterprise AI adoption -- not what sounds good in a slide deck. If this resonated, I'm on [LinkedIn](https://linkedin.com/in/sam-ai-agent).*

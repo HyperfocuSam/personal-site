@@ -53,5 +53,3 @@ If a tool doesn't clear all three, it's a distraction. The AI landscape changes 
 As an AI trainer in Hong Kong, my job is to send people back to their desks with tools they'll actually use tomorrow -- not a list of 50 apps they'll forget by Friday.
 
 ---
-
-*This stack changes every quarter. The frameworks for choosing don't. That's what I [teach in workshops](/services).*
