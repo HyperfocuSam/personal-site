@@ -86,3 +86,45 @@ describe('every image a booker sees resolves to a file', () => {
     });
   });
 });
+
+// 2026-09-08: the homepage hero, author avatar, media kit and every Person
+// schema `image` moved off the drifted AI cutout (`Sam.png` / `sam-hero.jpg` —
+// one Gemini portrait whose likeness had slid off Sam) onto a portrait edited
+// from Sam's own photograph, chosen by him. Same cache rule as above: new
+// filenames, old files deleted, no reference may point back.
+describe('the site portrait is the 2026-09 photograph', () => {
+  const pages = [
+    'src/components/Home/HeroSection.js',
+    'src/components/Blog/AuthorCard.js',
+    'src/pages/MediaKit.js',
+    'src/pages/ZhMediaKit.js',
+    'src/pages/About.js',
+    'src/pages/Index.js',
+    'src/pages/CorporateTraining.js',
+    'src/pages/ZhCorporateTraining.js',
+    'public/index.html',
+  ];
+
+  it('has retired the AI cutout from the repo entirely', () => {
+    ['Sam.png', 'Sam.webp', 'sam-hero.jpg', 'sam-hero.webp'].forEach((f) => {
+      expect(fs.existsSync(path.join(root, 'public/images', f))).toBe(false);
+    });
+    pages.forEach((p) => {
+      expect(read(p)).not.toMatch(/images\/(Sam|sam-hero)\.(png|webp|jpg)/);
+    });
+  });
+
+  it('ships the replacement in both formats, and every slot points at it', () => {
+    [['sam-hero-2026-09', 'jpg'], ['sam-hero-2026-09', 'webp'],
+      ['sam-portrait-2026-09', 'png'], ['sam-portrait-2026-09', 'webp']].forEach(([name, ext]) => {
+      const file = path.join(root, `public/images/${name}.${ext}`);
+      expect(fs.existsSync(file)).toBe(true);
+      expect(fs.statSync(file).size).toBeGreaterThan(20 * 1024);
+    });
+    expect(read('src/components/Home/HeroSection.js')).toContain('/images/sam-hero-2026-09.jpg');
+    expect(read('public/index.html')).toContain('/images/sam-hero-2026-09.webp');
+    pages.filter((p) => !p.includes('HeroSection')).forEach((p) => {
+      expect(read(p)).toContain('/images/sam-portrait-2026-09.png');
+    });
+  });
+});

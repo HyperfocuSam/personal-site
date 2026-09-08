@@ -47,7 +47,7 @@ const Index = () => (
           '@type': 'ProfessionalService',
           name: 'Sam Wong - Co-Founder & AI Train-the-Trainer',
           url: SITE_URL,
-          image: `${SITE_URL}/images/Sam.png`,
+          image: `${SITE_URL}/images/sam-portrait-2026-09.png`,
           description: 'Hong Kong-based AI train-the-trainer. Co-Founder & Director of Academy at Adaptig, delivering Train-the-Trainer certification, corporate workshops, and coaching for enterprises across Asia-Pacific.',
           areaServed: ['Hong Kong', 'Asia-Pacific', 'Global'],
           serviceType: ['AI Training', 'Corporate AI Workshops', 'Prompt Engineering Training', 'Executive AI Coaching', 'Train-the-Trainer Certification'],

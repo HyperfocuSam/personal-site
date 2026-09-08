@@ -11,7 +11,7 @@ const AuthorCard = ({ compact, language }) => {
     <div className={`author-card ${compact ? 'author-card--compact' : ''}`}>
       <Link to={zh ? '/zh/about' : '/about'} className="author-card__image-link">
         <OptimizedImage
-          src={`${PUBLIC_URL}/images/Sam.png`}
+          src={`${PUBLIC_URL}/images/sam-portrait-2026-09.png`}
           alt="Sam Wong"
           className="author-card__image"
           width={760}

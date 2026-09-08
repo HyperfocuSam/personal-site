@@ -271,7 +271,7 @@ const CorporateTraining = () => (
           '@type': 'ProfessionalService',
           name: 'Sam Wong - Corporate AI Training Hong Kong',
           url: `${SITE_URL}/corporate-ai-training-hong-kong`,
-          image: `${SITE_URL}/images/Sam.png`,
+          image: `${SITE_URL}/images/sam-portrait-2026-09.png`,
           description:
             'Enterprise AI workshops and adoption programs for Hong Kong'
             + ' companies, delivered on site in English and Cantonese.',

@@ -257,7 +257,7 @@ const ZhCorporateTraining = () => (
           '@type': 'ProfessionalService',
           name: 'Sam Wong - 香港企業 AI 培訓',
           url: `${SITE_URL}/zh/corporate-ai-training-hong-kong`,
-          image: `${SITE_URL}/images/Sam.png`,
+          image: `${SITE_URL}/images/sam-portrait-2026-09.png`,
           description:
             '香港企業 AI 培訓及工作坊。'
             + '企業工作坊、輔導、培訓師認證計劃，'

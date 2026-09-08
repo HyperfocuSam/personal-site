@@ -72,7 +72,7 @@ const MediaKit = () => (
       <div className="media-kit-hero">
         <div className="media-kit-hero__inner">
           <OptimizedImage
-            src="/images/Sam.png"
+            src="/images/sam-portrait-2026-09.png"
             alt="Sam Wong"
             className="media-kit-hero__image"
             width={150}

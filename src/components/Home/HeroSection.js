@@ -66,7 +66,7 @@ const HeroSection = ({ language }) => {
             980px media query, so phones never fetch it. */}
         <div className="dark-hero__photo">
           <OptimizedImage
-            src={`${PUBLIC_URL}/images/sam-hero.jpg`}
+            src={`${PUBLIC_URL}/images/sam-hero-2026-09.jpg`}
             alt="Sam Wong"
             width={640}
             height={794}
