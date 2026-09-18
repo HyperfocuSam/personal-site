@@ -15,7 +15,7 @@
     "prebuild": "node scripts/generate-sitemap.js && node scripts/generate-llms-txt.js && node scripts/generate-post-content.js",
     "build": "rimraf ./build && react-scripts build",
     "lint": "eslint \"**/*.js\"",
-    "predeploy": "npm run build && react-snap && node scripts/inject-suspense-markers.js",
+    "predeploy": "npm run build && node scripts/prerender.js && node scripts/inject-suspense-markers.js",
     "deploy": "gh-pages -d build --dotfiles",
     "start": "react-scripts start",
     "test": "npx jest",
@@ -81,9 +81,13 @@
       "/zh/media/kit"
     ],
     "skipThirdPartyRequests": true,
+    "concurrency": 1,
     "puppeteerArgs": [
       "--no-sandbox",
-      "--disable-setuid-sandbox"
+      "--disable-setuid-sandbox",
+      "--disable-background-timer-throttling",
+      "--disable-backgrounding-occluded-windows",
+      "--disable-renderer-backgrounding"
     ],
     "minifyHtml": {
       "collapseWhitespace": false,
