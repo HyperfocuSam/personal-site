@@ -299,8 +299,10 @@ describe('2026-09-18 checkup regressions', () => {
       expect(page).toContain("import verticals from '../data/verticals'");
       expect(page).toContain('section-sunken section-padding services-verticals');
     });
+    /* eslint-disable no-template-curly-in-string -- asserting literal source text */
     expect(en).toContain('<Link to={`/${v.slug}`}>{v.en.title}</Link>');
     expect(zh).toContain('<Link to={`/zh/${v.slug}`}>{v.zh.title}</Link>');
+    /* eslint-enable no-template-curly-in-string */
     expect(read('src/static/css/pages/_services.scss')).toMatch(/^\.services-verticals \{/m);
     // And a second inbound route from the lander that outranks /services.
     expect(read('src/pages/CorporateTraining.js')).toContain('/services#by-profession');
