@@ -69,8 +69,31 @@ if [ "$routes" -lt 100 ]; then
   echo "✗ only $routes prerendered routes, expected ~121 — react-snap probably hung" >&2
   fail=1
 fi
+
+# The guard for the failure mode that looks perfect (2026-09-18).
+# react-helmet-async commits head tags inside a requestAnimationFrame, and a
+# BACKGROUND tab in modern headless Chrome never runs one. At react-snap
+# concurrency > 1 the page therefore keeps its body, its <title> and its
+# canonical — it passes every check above — and silently ships without the
+# page-specific JSON-LD (FAQPage, BlogPosting, Course, CollectionPage). A
+# different, random ~20% of pages each build. Nothing visible is wrong; the
+# structured data simply stops existing. Every page carries at least the three
+# global blocks (Person, Organization, WebSite), so a page-level schema means
+# four or more.
+for page in index about services blog/index book contact; do
+  f="build/${page%/index}/index.html"
+  [ "$page" = "index" ] && f="build/index.html"
+  [ -f "$f" ] || continue
+  n=$(grep -c 'application/ld+json' "$f" || true)
+  if [ "$n" -lt 4 ]; then
+    echo "✗ $f has only $n JSON-LD blocks (expected >=4) — the page-specific" >&2
+    echo "  schema was lost. Re-run: npm run predeploy (concurrency MUST be 1)." >&2
+    fail=1
+  fi
+done
+
 [ "$fail" -eq 0 ] || { echo "REFUSING TO DEPLOY." >&2; exit 1; }
-echo "✓ $routes routes prerendered"
+echo "✓ $routes routes prerendered, structured data intact"
 
 # Vercel reads BOTH vercel.json and the project link from the deployment root,
 # which is build/ — and `npm run build` rimrafs build/ every time. Without the
