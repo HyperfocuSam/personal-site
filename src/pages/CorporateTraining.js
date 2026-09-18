@@ -271,7 +271,7 @@ const CorporateTraining = () => (
           '@type': 'ProfessionalService',
           name: 'Sam Wong - Corporate AI Training Hong Kong',
           url: `${SITE_URL}/corporate-ai-training-hong-kong`,
-          image: `${SITE_URL}/images/sam-portrait-2026-09.png`,
+          image: `${SITE_URL}/images/sam-portrait-2026-09.webp`,
           description:
             'Enterprise AI workshops and adoption programs for Hong Kong'
             + ' companies, delivered on site in English and Cantonese.',
@@ -482,6 +482,12 @@ const CorporateTraining = () => (
           </div>
           <p className="corporate-inline-link">
             <Link to="/case-notes">See the delivered engagements →</Link>
+          </p>
+          {/* Second inbound route to the profession pages: this lander outranks
+              /services for the head term, so a reader arriving here should be
+              able to reach their own profession without going back up a level. */}
+          <p className="corporate-inline-link">
+            <Link to="/services#by-profession">Training written for your profession →</Link>
           </p>
 
           <h2 className="corporate-section-subhead">Featured Case Studies</h2>

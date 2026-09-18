@@ -74,25 +74,25 @@ const STATIC_PAGES = [
   { path: '/ai-training-nonprofit-hong-kong', priority: '0.9', changefreq: 'monthly', source: 'src/data/verticals.js' },
   { path: '/ai-training-sme-owners-hong-kong', priority: '0.9', changefreq: 'monthly', source: 'src/data/verticals.js' },
   { path: '/ai-training-executive-assistants-hong-kong', priority: '0.9', changefreq: 'monthly', source: 'src/data/verticals.js' },
-  { path: '/book', priority: '0.8', changefreq: 'monthly', source: 'src/pages/Book.js' },
-  // Chinese pages
-  { path: '/zh', priority: '1.0', changefreq: 'weekly', lang: 'zh-Hant', alternate: '/', source: 'src/pages/ZhIndex.js' },
-  { path: '/zh/about', priority: '0.8', changefreq: 'monthly', lang: 'zh-Hant', alternate: '/about', source: 'src/pages/ZhAbout.js' },
-  { path: '/zh/blog', priority: '0.8', changefreq: 'weekly', lang: 'zh-Hant', alternate: '/blog', source: 'src/pages/ZhBlog.js' },
-  { path: '/zh/services', priority: '0.9', changefreq: 'weekly', lang: 'zh-Hant', alternate: '/services', source: 'src/pages/ZhServices.js' },
-  { path: '/zh/media', priority: '0.8', changefreq: 'monthly', lang: 'zh-Hant', alternate: '/media', source: 'src/pages/ZhMedia.js' },
-  { path: '/zh/corporate-ai-training-hong-kong', priority: '0.9', changefreq: 'weekly', lang: 'zh-Hant', alternate: '/corporate-ai-training-hong-kong', source: 'src/pages/ZhCorporateTraining.js' },
-  { path: '/zh/case-notes', priority: '0.8', changefreq: 'monthly', lang: 'zh-Hant', alternate: '/case-notes', source: 'src/pages/ZhCaseNotes.js' },
-  { path: '/zh/contact', priority: '0.7', changefreq: 'monthly', lang: 'zh-Hant', alternate: '/contact', source: 'src/pages/ZhContact.js' },
-  { path: '/zh/book', priority: '0.8', changefreq: 'monthly', lang: 'zh-Hant', alternate: '/book', source: 'src/pages/ZhBook.js' },
-  { path: '/zh/speaking', priority: '0.8', changefreq: 'monthly', lang: 'zh-Hant', alternate: '/speaking', source: 'src/pages/ZhSpeaking.js' },
-  { path: '/zh/media/kit', priority: '0.8', changefreq: 'monthly', lang: 'zh-Hant', alternate: '/media/kit', source: 'src/pages/ZhMediaKit.js' },
+  // The five ZH twins of the profession pages above.
   { path: '/zh/ai-training-healthcare-hong-kong', priority: '0.9', changefreq: 'monthly', lang: 'zh-Hant', alternate: '/ai-training-healthcare-hong-kong', source: 'src/data/verticals.js' },
   { path: '/zh/ai-training-teachers-hong-kong', priority: '0.9', changefreq: 'monthly', lang: 'zh-Hant', alternate: '/ai-training-teachers-hong-kong', source: 'src/data/verticals.js' },
   { path: '/zh/ai-training-nonprofit-hong-kong', priority: '0.9', changefreq: 'monthly', lang: 'zh-Hant', alternate: '/ai-training-nonprofit-hong-kong', source: 'src/data/verticals.js' },
   { path: '/zh/ai-training-sme-owners-hong-kong', priority: '0.9', changefreq: 'monthly', lang: 'zh-Hant', alternate: '/ai-training-sme-owners-hong-kong', source: 'src/data/verticals.js' },
   { path: '/zh/ai-training-executive-assistants-hong-kong', priority: '0.9', changefreq: 'monthly', lang: 'zh-Hant', alternate: '/ai-training-executive-assistants-hong-kong', source: 'src/data/verticals.js' },
 ];
+
+// The 2026-09-03 hreflang commit appended the profession pages by pasting a
+// whole second copy of the '/book' entry and the eleven Chinese static pages
+// underneath them. Nothing read the array for uniqueness, so sitemap.xml shipped
+// 146 <url> blocks for 134 URLs on every deploy until 2026-09-18. A sitemap that
+// lists a URL twice spends crawl budget on the repeat and tells Google the file
+// is not maintained. Fail the build instead of shipping it again.
+const duplicatePaths = STATIC_PAGES.map((p) => p.path)
+  .filter((p, i, all) => all.indexOf(p) !== i);
+if (duplicatePaths.length) {
+  throw new Error(`STATIC_PAGES lists these paths more than once: ${[...new Set(duplicatePaths)].join(', ')}`);
+}
 
 function parsePosts() {
   const content = fs.readFileSync(POSTS_FILE, 'utf-8');
@@ -260,9 +260,13 @@ function generateRssFeed() {
   let rss = '<?xml version="1.0" encoding="UTF-8"?>\n';
   rss += '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n';
   rss += '  <channel>\n';
-  rss += '    <title>Sam Wong | Co-Founder & AI Train-the-Trainer</title>\n';
+  // Hardcoded, and therefore never passed through escapeXml — one raw '&' at
+  // line 4 made the entire feed not-well-formed, so a strict reader rejected
+  // every item in it, not just the title. robots.txt advertises this file as a
+  // second sitemap.
+  rss += `    <title>${escapeXml('Sam Wong | Co-Founder & AI Train-the-Trainer')}</title>\n`;
   rss += `    <link>${SITE_URL}/blog</link>\n`;
-  rss += '    <description>AI adoption insights, workshop reflections, and practical AI training tips from Sam Wong.</description>\n';
+  rss += `    <description>${escapeXml('AI adoption insights, workshop reflections, and practical AI training tips from Sam Wong.')}</description>\n`;
   rss += '    <language>en</language>\n';
   rss += `    <atom:link href="${SITE_URL}/feed.xml" rel="self" type="application/rss+xml" />\n`;
   rss += `    <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>\n`;

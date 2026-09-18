@@ -66,6 +66,14 @@ const MediaKit = () => (
     twitterTitle="Media Kit | Sam Wong"
     twitterDescription="Speaker media kit for Sam Wong, Co-Founder of Adaptig and AI train-the-trainer. 10,000+ professionals trained across 13 countries."
     twitterImage={DEFAULT_OG_IMAGE}
+    // /zh/media/kit has declared en -> here since it shipped; this side declared
+    // nothing back, leaving the site's only non-reciprocal hreflang pair. A
+    // one-way annotation is ignored, so neither page got the cluster.
+    hreflangTags={[
+      { lang: 'en', href: `${SITE_URL}/media/kit` },
+      { lang: 'zh-Hant', href: `${SITE_URL}/zh/media/kit` },
+      { lang: 'x-default', href: `${SITE_URL}/media/kit` },
+    ]}
   >
     <article id="media-kit">
       {/* Hero */}
