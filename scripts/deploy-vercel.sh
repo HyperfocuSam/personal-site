@@ -83,9 +83,13 @@ cp vercel.json build/vercel.json
 # Serverless functions live in api/ at the repo root, but Vercel only sees the
 # deployment root (build/), so they must travel with the artifact. The contact
 # form posts to /api/contact — shipping a build without it is the 88-day dead
-# form all over again, hence the hard check.
+# form all over again, hence the hard check. form-token.js and _form-guard.js
+# are load-bearing too since 2026-09-17: /api/contact refuses every submission
+# without a token, so a build missing either one is a form that rejects humans.
 cp -R api build/api
-[ -f build/api/contact.js ] || { echo "✗ build/api/contact.js missing after copy" >&2; exit 1; }
+for f in contact.js form-token.js _form-guard.js; do
+  [ -f "build/api/$f" ] || { echo "✗ build/api/$f missing after copy" >&2; exit 1; }
+done
 mkdir -p build/.vercel
 cat > build/.vercel/project.json <<'JSON'
 {"projectId":"prj_LqDvQEsJZ5TbghrByKKat7dGyNpv","orgId":"team_HfeGEAmmbft7JYl4UZ4ILErY","projectName":"hyperfocusam"}
