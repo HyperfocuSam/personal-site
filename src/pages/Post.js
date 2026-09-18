@@ -186,6 +186,26 @@ const Post = () => {
     },
   };
 
+  // Same three links the local <Helmet> used to write, in the same order.
+  // x-default is emitted unconditionally: a page declaring hrefLang="zh-Hant"
+  // with no x-default is an incomplete cluster and search engines discard the
+  // lot, which was leaving the two TC-only posts with a language and no default.
+  const hreflangTags = [
+    { lang: postLang === 'zh-Hant' ? 'zh-Hant' : 'en', href: postUrl },
+    ...(linkedPost
+      ? [{
+        lang: linkedPost.language === 'zh-Hant' ? 'zh-Hant' : 'en',
+        href: `${SITE_URL}/blog/${linkedPost.slug}/`,
+      }]
+      : []),
+    {
+      lang: 'x-default',
+      href: linkedPost && postLang !== 'en'
+        ? `${SITE_URL}/blog/${linkedPost.slug}/`
+        : postUrl,
+    },
+  ];
+
   return (
     <Main
       title={post.title}
@@ -208,6 +228,11 @@ const Post = () => {
       twitterImage={imageUrl}
       articlePublishedTime={post.date}
       articleTags={post.tags}
+      // These used to be emitted from this page's own <Helmet> below, which is
+      // why no post ever carried og:locale:alternate: Main derives that tag from
+      // `hreflangTags`, and posts never passed any. Routing them through the prop
+      // keeps the cluster in ONE place and lets the locale pair follow it.
+      hreflangTags={hreflangTags}
     >
       <Helmet>
         <html lang={postLang === 'zh-Hant' ? 'zh-Hant' : 'en'} />
@@ -263,28 +288,6 @@ const Post = () => {
             })}
           </script>
         )}
-        {/* hreflang tags for bilingual posts */}
-        <link rel="alternate" hrefLang={postLang === 'zh-Hant' ? 'zh-Hant' : 'en'} href={postUrl} />
-        {linkedPost && (
-          <link
-            rel="alternate"
-            hrefLang={linkedPost.language === 'zh-Hant' ? 'zh-Hant' : 'en'}
-            href={`${SITE_URL}/blog/${linkedPost.slug}/`}
-          />
-        )}
-        {/* x-default hreflang — the English version, or this page when it stands alone.
-            Emitted unconditionally: a page that declares hrefLang="zh-Hant" with no
-            x-default is an incomplete cluster and search engines discard the lot.
-            That was leaving the two TC-only posts with a language and no default. */}
-        <link
-          rel="alternate"
-          hrefLang="x-default"
-          href={
-            linkedPost && postLang !== 'en'
-              ? `${SITE_URL}/blog/${linkedPost.slug}/`
-              : postUrl
-          }
-        />
       </Helmet>
       <ScrollProgress />
       <article

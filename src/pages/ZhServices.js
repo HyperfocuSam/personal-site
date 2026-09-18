@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet-async';
 import Main from '../layouts/Main';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 import servicesZh from '../data/services-zh';
+import verticals from '../data/verticals';
 
 import testimonials from '../data/testimonials-zh';
 import ServiceGroup from '../components/Services/ServiceGroup';
@@ -202,16 +203,18 @@ const ZhServices = () => {
         {/* 為誰而設 — 五個界別頁的內部連結。ZH twins must ship together with the
             EN ones; a Chinese page linking only to English pages is the defect
             routes.js was written to end. */}
-        <section className="services-verticals" id="zh-by-profession">
-          <h2>按專業界別</h2>
-          <p>以下每一個界別，都由已交付的工作坊發展出來，並各自附上往績。</p>
-          <ul>
-            <li><Link to="/zh/ai-training-healthcare-hong-kong">醫護人員 &rarr;</Link></li>
-            <li><Link to="/zh/ai-training-teachers-hong-kong">教師 &rarr;</Link></li>
-            <li><Link to="/zh/ai-training-nonprofit-hong-kong">社福機構及 NGO &rarr;</Link></li>
-            <li><Link to="/zh/ai-training-sme-owners-hong-kong">中小企老闆 &rarr;</Link></li>
-            <li><Link to="/zh/ai-training-executive-assistants-hong-kong">行政支援及行政助理 &rarr;</Link></li>
-          </ul>
+        <section className="section-sunken section-padding services-verticals" id="zh-by-profession">
+          <div className="content-standard">
+            <h2>按專業界別</h2>
+            <p>以下每一個界別，都由已交付的工作坊發展出來，並各自附上往績。</p>
+            <ul>
+              {verticals.map((v) => (
+                <li key={v.slug}>
+                  <Link to={`/zh/${v.slug}`}>{v.zh.title}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </section>
 
         <p className="lang-toggle">

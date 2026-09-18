@@ -33,7 +33,15 @@
   }
 
   &__language.fn-stamp {
-    color: _palette(verification);
+    // `verification` (#a28b52 heritage gold) on the stamp's own white field
+    // (#ffffff, set just above) measures 3.31:1 — an AA failure at every size,
+    // and this stamp runs at 0.72rem. It is the SAME failure `.fn-stamp--verified`
+    // in components/_field-notes.scss already documented and solved, so it gets
+    // the same answer: the gold moves to the border, which carries no contrast
+    // duty, and the text runs ink-soft. `text-secondary` (#4a4e63) on #ffffff
+    // measures 8.20:1. The hover state below is unchanged — ink on highlighter.
+    border-color: _palette(verification);
+    color: _palette(text-secondary);
 
     &:hover,
     &:focus-visible {
@@ -203,6 +211,15 @@
     font-size: 0.88rem;
     line-height: 1.5;
     margin-bottom: 0.6rem;
+
+    // Lighthouse `link-in-text-block`: the /services link sits mid-sentence and
+    // was distinguished from the surrounding prose by colour alone, which a
+    // reader who cannot separate those two hues cannot see at all. An underline
+    // is the non-colour cue the audit asks for.
+    a {
+      text-decoration: underline;
+      text-underline-offset: 0.15em;
+    }
   }
 
   &__links {

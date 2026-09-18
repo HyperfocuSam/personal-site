@@ -82,10 +82,19 @@ describe('conversion origins survive in the CSP', () => {
     expect(directive('connect-src')).toContain('https://www.google.com');
   });
 
-  it('lets the booking page load and frame the Ro.am embed', () => {
-    expect(directive('script-src')).toContain('https://ro.am');
-    expect(directive('frame-src')).toContain('https://ro.am');
-    expect(directive('connect-src')).toContain('https://ro.am');
+  it('has retired the Ro.am booking embed', () => {
+    // The embed came off /book on 2026-09-03 — it took 4-17 s to render against
+    // a 4 s median dwell and was the last step of the funnel. PostHog confirms
+    // it: the last `booking_embed_loaded` ever fired 2026-08-22, and the 7 days
+    // to 2026-09-18 show 5 /book pageviews, 0 loads, 0 failures. The allowance
+    // outlived the integration by 15 days. Same reasoning as Formspree above —
+    // a CSP carrying origins the site no longer talks to is a CSP nobody reads
+    // carefully, which is how the next real omission gets in. Restoring the
+    // embed means restoring these three entries AND this test.
+    expect(directive('script-src')).not.toContain('ro.am');
+    expect(directive('frame-src')).not.toContain('ro.am');
+    expect(directive('connect-src')).not.toContain('ro.am');
+    expect(read('public/index.html')).not.toContain('preconnect" href="https://ro.am');
   });
 
   it('still allows the two analytics vendors', () => {

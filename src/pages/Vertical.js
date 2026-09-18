@@ -56,6 +56,7 @@ const Vertical = ({ slug, lang }) => {
     <Main
       title={copy.metaTitle}
       description={copy.answer.slice(0, 155)}
+      canonicalUrl={selfUrl}
       ogTitle={`${copy.metaTitle} | Sam Wong`}
       ogDescription={copy.lede}
       ogImage={DEFAULT_OG_IMAGE}

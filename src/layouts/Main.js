@@ -67,7 +67,16 @@ const Main = (props) => (
     >
       {props.title && <title>{props.title}</title>}
       <meta name="description" content={props.description} />
-      {props.canonicalUrl && <link rel="canonical" href={ensureTrailingSlash(props.canonicalUrl)} />}
+      {/* Canonical used to be strictly opt-in: a page that forgot `canonicalUrl`
+          shipped with NO <link rel="canonical"> and nobody noticed, because 24
+          of the 25 page components happened to pass it. Vertical.js did not, so
+          all ten profession pages went live self-canonical-less on 2026-09-03 —
+          the newest and thinnest pages on the site, left for Google to
+          canonicalise however it liked. Every consumer of this layout passes
+          ogUrl, so fall back to it and the next page cannot repeat it. */}
+      {(props.canonicalUrl || props.ogUrl) && (
+        <link rel="canonical" href={ensureTrailingSlash(props.canonicalUrl || props.ogUrl)} />
+      )}
       {/* Open Graph */}
       {props.ogTitle && <meta property="og:title" content={props.ogTitle} />}
       {props.ogDescription && <meta property="og:description" content={props.ogDescription} />}

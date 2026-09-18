@@ -67,8 +67,9 @@
          Adding a conversion integration means editing `headers` in
          vercel.json and verifying against the LIVE URL:
              curl -sI https://hyperfocusam.com/contact/ | grep -i content-security-policy
-         `src/__tests__/conversionOrigins.test.js` fails the build if
-         formspree.io or ro.am ever leaves that policy. -->
+         `src/__tests__/conversionOrigins.test.js` fails the build if the
+         origins the site actually talks to ever leave that policy — and
+         asserts that retired ones (formspree.io, ro.am) stay out of it. -->
     <meta name="referrer" content="strict-origin-when-cross-origin" />
 
     <!-- Primary Meta Tags (title + description managed per-page by react-helmet-async) -->
@@ -91,7 +92,7 @@
       "name": "Sam Wong",
       "alternateName": ["Samuel Wong", "黃力桐"],
       "url": "https://hyperfocusam.com",
-      "image": "https://hyperfocusam.com/images/sam-portrait-2026-09.png",
+      "image": "https://hyperfocusam.com/images/sam-portrait-2026-09.webp",
       "sameAs": [
         "https://www.linkedin.com/in/sam-ai-agent/",
         "https://x.com/HyperfocuSam",
@@ -199,8 +200,6 @@
     <link rel="preload" as="font" href="%PUBLIC_URL%/fonts/jetbrains-mono-latin.woff2" type="font/woff2" crossorigin />
     <!-- Bitter is the hero/LCP face; without this preload the LCP text waits ~2 s for the font (Lighthouse 2026-09-03). -->
     <link rel="preload" as="font" href="%PUBLIC_URL%/fonts/bitter-latin.woff2" type="font/woff2" crossorigin />
-    <!-- /book: the Ro.am scheduler took 4-17 s to render against a 4 s median dwell; warm the origin early. -->
-    <link rel="preconnect" href="https://ro.am" crossorigin />
     <link rel="stylesheet" href="%PUBLIC_URL%/fonts/fonts.css" />
     <link rel="preload" as="image" href="%PUBLIC_URL%/images/sam-hero-2026-09.webp" type="image/webp" fetchpriority="high" media="(min-width: 980px)" />
 
