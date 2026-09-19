@@ -60,6 +60,45 @@ const COPY = {
 // the Chinese form and both messages were confirmed delivered.
 const CONTACT_ENDPOINT = '/api/contact';
 
+// Mints the signed token /api/contact now demands on every submission. Added
+// 2026-09-17 after the funnel digests found every September contact mail was
+// spam with zero matching PostHog events — the bots POST /api/contact directly
+// and never run this file, so the honeypot below never saw them. Requiring a
+// token forces a prior GET from a client that keeps the value and waits.
+// Same-origin, so `connect-src 'self'` already covers it and the CSP needs no
+// new entry (see the note in public/index.html about why that matters).
+const TOKEN_ENDPOINT = '/api/form-token';
+
+// Mirrors MIN_TOKEN_AGE_MS in api/_form-guard.js. The client waits out the
+// remainder itself rather than letting a fast submit come back 403.
+const MIN_TOKEN_AGE_MS = 3000;
+
+const fetchToken = async () => {
+  if (typeof fetch !== 'function') return '';
+  // react-snap prerenders every route with this user agent and no /api routes
+  // behind its static server, so the request would only ever be a 404 warning
+  // in the build log. Same guard the analytics bootstrap in index.html uses.
+  if (typeof navigator !== 'undefined' && navigator.userAgent === 'ReactSnap') return '';
+  try {
+    const res = await fetch(TOKEN_ENDPOINT, { headers: { Accept: 'application/json' } });
+    if (!res.ok) return '';
+    const data = await res.json();
+    return typeof data.token === 'string' ? data.token : '';
+  } catch {
+    return '';
+  }
+};
+
+// Token shape is `v1.<ms>.<nonce>.<sig>`; the timestamp is plaintext on purpose
+// so the client can tell how long it still has to wait. NaN for anything else,
+// which reads as "do not wait" and lets the server be the one to refuse it.
+const tokenAgeMs = (token) => {
+  const ts = Number(String(token || '').split('.')[1]);
+  return Number.isFinite(ts) ? Date.now() - ts : NaN;
+};
+
+const sleep = (ms) => new Promise((resolve) => { setTimeout(resolve, ms); });
+
 const ContactForm = ({ initialInterest, placement, language }) => {
   const t = COPY[language] || COPY.en;
   const [interest, setInterest] = useState(initialInterest);
@@ -105,6 +144,53 @@ const ContactForm = ({ initialInterest, placement, language }) => {
   // old free tier there is no monthly quota left for them to burn through.
   const gotchaRef = useRef(null);
 
+  // The DOM node carries the token for the native no-JS POST; the ref carries
+  // it for the fetch path. Written imperatively rather than through state:
+  // a hidden input whose value arrives after the prerendered HTML is exactly
+  // the hydration mismatch (React #418) this file has been bitten by before.
+  const tokenNodeRef = useRef(null);
+  const tokenRef = useRef('');
+
+  const storeToken = useCallback((value) => {
+    tokenRef.current = value || '';
+    if (tokenNodeRef.current) tokenNodeRef.current.value = tokenRef.current;
+  }, []);
+
+  useEffect(() => {
+    let cancelled = false;
+    // public/index.html mints one as soon as a prerendered contact page loads,
+    // so the clock is already running before React hydrates — and so the form
+    // still works if the bundle never hydrates at all. Await that request
+    // rather than firing a second one; on a client-side navigation to the
+    // contact page there is no bootstrap and this fetches its own.
+    const pending = (typeof window !== 'undefined' && window.__hfFormTokenPromise) || null;
+    const source = pending ? Promise.resolve(pending).catch(() => '') : fetchToken();
+    source.then((value) => { if (!cancelled) storeToken(value || ''); });
+    return () => { cancelled = true; };
+  }, [storeToken]);
+
+  // Tokens are single-use server-side, so every attempt burns one — including
+  // an attempt that failed on a 502. Without this, a retry after any error
+  // would be refused as a replay.
+  const refreshToken = useCallback(() => {
+    storeToken('');
+    fetchToken().then(storeToken);
+  }, [storeToken]);
+
+  const readyToken = useCallback(async () => {
+    let value = tokenRef.current;
+    if (!value) {
+      value = await fetchToken();
+      storeToken(value);
+    }
+    if (!value) return '';
+    const age = tokenAgeMs(value);
+    const wait = Number.isFinite(age) ? MIN_TOKEN_AGE_MS - age : 0;
+    // Capped: a clock-skewed client must not sit here forever.
+    if (wait > 0) await sleep(Math.min(wait, MIN_TOKEN_AGE_MS) + 250);
+    return value;
+  }, [storeToken]);
+
   const noteStarted = useCallback((e) => {
     // A bot filling the honeypot must not register as a started form; these
     // funnel numbers only just became trustworthy.
@@ -120,6 +206,7 @@ const ContactForm = ({ initialInterest, placement, language }) => {
     setError(null);
 
     try {
+      const formToken = await readyToken();
       const res = await fetch(CONTACT_ENDPOINT, {
         method: 'POST',
         headers: {
@@ -137,6 +224,7 @@ const ContactForm = ({ initialInterest, placement, language }) => {
           // Read straight off the DOM node: a bot that fills the field never
           // dispatches React's onChange, so component state would miss it.
           _gotcha: (gotchaRef.current && gotchaRef.current.value) || '',
+          _ft: formToken,
         }),
       });
 
@@ -151,7 +239,14 @@ const ContactForm = ({ initialInterest, placement, language }) => {
       } else {
         const data = await res.json().catch(() => ({}));
         setError(data.error || t.errorServer);
-        track('contact_form_failed', { reason: 'server', status: res.status });
+        // 403 is the bot gate refusing this submission. Worth its own reason so
+        // a spike of humans tripping it is visible instead of being filed as a
+        // generic server error.
+        track('contact_form_failed', {
+          reason: res.status === 403 ? 'blocked' : 'server',
+          status: res.status,
+        });
+        refreshToken();
       }
     } catch {
       setError(t.errorNetwork);
@@ -159,10 +254,11 @@ const ContactForm = ({ initialInterest, placement, language }) => {
         reason: cspBlockedRef.current ? 'csp_blocked' : 'network',
         status: 0,
       });
+      refreshToken();
     } finally {
       setSubmitting(false);
     }
-  }, [interest, name, email, message, placement, t]);
+  }, [interest, name, email, message, placement, t, readyToken, refreshToken]);
 
   if (submitted) {
     return (
@@ -208,6 +304,13 @@ const ContactForm = ({ initialInterest, placement, language }) => {
         {/* Carries the page language into the native no-JS POST. Rendered
             unconditionally with a per-page-constant value — hydration-safe. */}
         <input type="hidden" name="language" value={language} />
+
+        {/* The form token for the native no-JS POST. Uncontrolled and empty in
+            the prerendered HTML — its value is written imperatively by the
+            effect above, or by the bootstrap in public/index.html if the React
+            bundle never hydrates. A controlled value here would prerender as
+            a stale token and mismatch on hydration. */}
+        <input type="hidden" name="_ft" ref={tokenNodeRef} />
 
         <label className="contact-form__field" htmlFor="name">
           <span className="contact-form__field-label">{t.name}</span>
