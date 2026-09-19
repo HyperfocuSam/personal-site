@@ -6,7 +6,7 @@
     <description>AI adoption insights, workshop reflections, and practical AI training tips from Sam Wong.</description>
     <language>en</language>
     <atom:link href="https://hyperfocusam.com/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Fri, 18 Sep 2026 19:38:09 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 19 Sep 2026 04:32:33 GMT</lastBuildDate>
     <item>
       <title>2026 年，我真正付錢用的 AI 工具</title>
       <link>https://hyperfocusam.com/blog/the-ai-tools-i-actually-use-2026-tc/</link>
@@ -400,10 +400,10 @@
       <pubDate>Tue, 17 Mar 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>AI Change Management: What Actually Works (A Field Report From 70+ Organizations)</title>
+      <title>AI Change Management: The Second Department Is the Only Score I Trust</title>
       <link>https://hyperfocusam.com/blog/ai-change-management-what-actually-works/</link>
       <guid isPermaLink="true">https://hyperfocusam.com/blog/ai-change-management-what-actually-works/</guid>
-      <description>Most companies approach AI adoption like a software rollout. After training 10,000+ professionals across 70+ organizations, here is what actually drives lasting behavior change.</description>
+      <description>A training event ends when the projector powers down. The score I actually trust is whether a second department asks for the program without being sold — and what it took to get there across six departments at one Hong Kong food manufacturer.</description>
       <pubDate>Mon, 23 Mar 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
@@ -449,6 +449,13 @@
       <pubDate>Sun, 15 Mar 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
+      <title>香港企業買 Copilot 培訓之前：先數清楚有幾多個 licence</title>
+      <link>https://hyperfocusam.com/blog/microsoft-copilot-training-hong-kong-tc/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/microsoft-copilot-training-hong-kong-tc/</guid>
+      <description>公司已經在付 Microsoft 365 的錢，就以為自己有 Copilot。先數 licence，再數參加人數——然後把培訓落在 Copilot 真正值回那個 seat 的四個 app 上。</description>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
       <title>Why AI Training Doesn't Stick</title>
       <link>https://hyperfocusam.com/blog/why-ai-training-doesnt-stick/</link>
       <guid isPermaLink="true">https://hyperfocusam.com/blog/why-ai-training-doesnt-stick/</guid>
@@ -460,6 +467,13 @@
       <link>https://hyperfocusam.com/blog/hk-2026-budget-ai-training/</link>
       <guid isPermaLink="true">https://hyperfocusam.com/blog/hk-2026-budget-ai-training/</guid>
       <description>Hong Kong earmarked HK$50 million for AI training in the 2026-27 Budget. Here's what it actually means for corporate training, what's missing, and what to do now.</description>
+      <pubDate>Sat, 14 Mar 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>2026 年預算案那 HK$5,000 萬 AI 培訓撥款，對你公司實際上代表甚麼</title>
+      <link>https://hyperfocusam.com/blog/hk-2026-budget-ai-training-tc/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/hk-2026-budget-ai-training-tc/</guid>
+      <description>2026-27 年度預算案撥出 HK$5,000 萬做 AI 培訓。這筆錢實際上是甚麼、漏了甚麼，以及在沒有政府資助的情況下你應該怎樣開始。</description>
       <pubDate>Sat, 14 Mar 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
@@ -547,6 +561,13 @@
       <pubDate>Wed, 04 Mar 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
+      <title>六節的 AI Pioneer Program，我是怎樣設計出來的</title>
+      <link>https://hyperfocusam.com/blog/how-to-design-ai-pioneer-program-tc/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/how-to-design-ai-pioneer-program-tc/</guid>
+      <description>我為一間香港食品製造商的 19 位 HR 同事設計了一個六節、只用 Copilot 的 AI program——以及為甚麼第二個部門在第一個部門完成之前就已經落了 order。</description>
+      <pubDate>Wed, 04 Mar 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
       <title>The AI Training Gap: 70% of Managers Want It, 14% of Workers Get It</title>
       <link>https://hyperfocusam.com/blog/ai-training-gap-managers-vs-workers/</link>
       <guid isPermaLink="true">https://hyperfocusam.com/blog/ai-training-gap-managers-vs-workers/</guid>
@@ -582,10 +603,10 @@
       <pubDate>Tue, 27 Jan 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>The AI Maturity Trap: Why Most Companies Are Stuck at Stage 1</title>
+      <title>The AI Maturity Trap: The Stage 1 Company That Thinks It Is at Stage 2</title>
       <link>https://hyperfocusam.com/blog/ai-maturity-trap-stuck-stage-one/</link>
       <guid isPermaLink="true">https://hyperfocusam.com/blog/ai-maturity-trap-stuck-stage-one/</guid>
-      <description>Most companies think they're behind on AI. They're right -- but the fix isn't more tools. The 4-stage maturity model and how to move past Stage 1.</description>
+      <description>A Stage 1 company usually believes it is at Stage 2, because someone gave a one-hour presentation. The four-stage model, why a company does not have one score, and the four moves that get a department from 1 to 2.</description>
       <pubDate>Tue, 20 Jan 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
@@ -614,6 +635,13 @@
       <link>https://hyperfocusam.com/blog/why-i-teach-copilot-not-chatgpt/</link>
       <guid isPermaLink="true">https://hyperfocusam.com/blog/why-i-teach-copilot-not-chatgpt/</guid>
       <description>Most AI trainers default to ChatGPT. Here's why I start with Microsoft Copilot for enterprise workshops and how it changes adoption.</description>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>為甚麼企業工作坊我教 Copilot，不教 ChatGPT</title>
+      <link>https://hyperfocusam.com/blog/why-i-teach-copilot-not-chatgpt-tc/</link>
+      <guid isPermaLink="true">https://hyperfocusam.com/blog/why-i-teach-copilot-not-chatgpt-tc/</guid>
+      <description>大部分 AI trainer 第一日就開 ChatGPT。我不會。企業的房間我由 Copilot 起手，而這個選擇改變了採用之後怎樣發展。</description>
       <pubDate>Tue, 30 Dec 2025 00:00:00 GMT</pubDate>
     </item>
     <item>
