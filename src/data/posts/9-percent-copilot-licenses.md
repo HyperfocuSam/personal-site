@@ -1,80 +1,37 @@
 # 9% of Copilot Licenses Are Actually Used. I'm Not Surprised.
 
-This week I was in a meeting with someone who ran AI adoption across KPMG in the Nordics. He dropped a number: 9% of all Copilot licenses are activated. Not productively used. Not used daily. Activated.
+This week I sat in a meeting with someone who ran AI adoption across KPMG in the Nordics. He put a number on the table: 9% of Copilot licenses get activated. Not used daily, not used productively. Activated. I did not ask him for his methodology and I cannot give you one, so take it as what it is — a number from the person whose job it was to move it.
 
-A pension fund in the UK distributed laptops with [Copilot pre-installed and zero training](/blog/microsoft-copilot-training-hong-kong). No onboarding session. No documentation beyond what Microsoft ships by default. The procurement team checked a box. The AI transformation was declared underway.
+He also described a UK pension fund that handed out laptops with [Copilot pre-installed and no training at all](/blog/microsoft-copilot-training-hong-kong). No onboarding, nothing beyond the documentation Microsoft ships. Procurement checked the box. The transformation was declared underway.
 
-After 10,000+ professionals across 70+ organizations in 13 countries, I have my own number for this pattern: [roughly 4% of participants sustain meaningful AI use after a one-off workshop](/blog/why-ai-training-doesnt-stick). Four percent lasting adoption. Ninety-six percent revert to their old workflows within two weeks.
+After 10,000+ professionals across 70+ organizations in 13 countries, my own figure for the same gap is roughly 4% of participants [sustaining meaningful use after a one-off workshop](/blog/why-ai-training-doesnt-stick), which is to say ninety-six out of a hundred are back in their old workflow within two weeks. <!-- SAM: where does the 4% come from — a count, or your estimate? If it is an estimate I would rather say so in the sentence. -->
 
-The 9% activation rate and my 4% adoption rate are measuring different things, but they're pointing at the same problem. The gap between buying AI and using AI is not a technology gap. It's a human gap.
+Different measurements, same gap, and none of it is sitting in the software.
 
-## The Procurement-Training Ratio
+## The ratio nobody can give you
 
-Here's what the typical AI rollout looks like:
+The usual version of this story is a budget split: companies spend everything on procurement and nothing on enablement. I believe that is true. I also do not have a clean ratio for it, and neither does anyone who quotes one at you. What I can tell you is the shape of the failure, because I get called in after it: six figures of licenses, an email announcing them, maybe a thirty-minute webinar, and a question three months later about why usage is flat. Then a consultant is commissioned to write a report about the adoption gap.
 
-1. Executive reads a [McKinsey report](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai) about AI productivity gains.
-2. IT department procures enterprise licenses. Six figures. Sometimes seven.
-3. An email goes out: "Your new AI tools are available."
-4. A one-page PDF or a 30-minute webinar follows, maybe.
-5. Three months later, someone asks why usage is flat.
+The question I would ask before any of that money moves is smaller and more awkward. Who, by name, is responsible for whether these seats get used, and what else is on that person's plate? Everything else in [a change management program](/blog/ai-change-management-what-actually-works) hangs off the answer.
 
-The ratio of money spent on procurement versus training is roughly 100:1 in most organizations I've worked with. They spend 99% of the budget getting the tool into the building and 1% getting it into the workflow.
+## What the Nordic rollout did differently
 
-Then they commission a consultant to write a report about the "adoption gap."
+The KPMG version, as he described it, ran for twelve months rather than an afternoon, with its own budget and headcount. They created AI champion roles inside the business, attached to recognition and to bonuses, so driving adoption in a team was part of somebody's actual job rather than a favor.
 
-## What Actually Works: The KPMG Model
+The part that interested me most was the sequence at the top. The Nordic CEOs went through a session themselves, saw what the tools did, and funded the rollout immediately. Not next quarter. I have watched the opposite plenty of times, where the executives approve a program they have never used, and the program then has to survive on the enthusiasm of people with no budget.
 
-The KPMG Nordics rollout was different. Here's what they did:
+## The other route: keep showing up
 
-**Twelve months of sustained investment.** Not a workshop. Not a "lunch and learn." A year-long program with dedicated budget, headcount, and executive attention.
+One institution I work with in Hong Kong got to the same place from a different direction. After a single workshop, [HKCT signed for 24 months of continuous learning](/blog/when-a-school-commits-to-24-months-of-ai): monthly sessions, a WhatsApp channel for the weeks in between, and this month's questions shaping next month's content.
 
-**AI champion roles with recognition and bonuses.** They created formal positions within the organization -- people whose job included driving AI adoption in their teams. These weren't volunteer assignments. They came with performance recognition and financial incentives.
+The structural difference is what I get to see. In a one-off workshop I teach what the tool can do, from the outside. In a continuous engagement I find out what people are actually stuck on, in the gap between sessions, and build the next one around it. The first session is the tool done properly rather than demonstrated. The second is whatever broke after the first. From about month three the questions change shape, from "how do I use this" to "can it do this thing I am stuck on," and that shift is the whole point.
 
-**Unwavering executive support.** The Nordic CEOs of KPMG experienced AI capabilities firsthand in a training session. Once they understood what was possible, they immediately funded the rollout. Not "we'll consider it next quarter." Immediately.
+I should declare the obvious bias: the continuous model is also the one I would rather sell. It is longer, it is steadier, and it is better work. Treat the recommendation accordingly.
 
-The result: adoption that stuck. Not because the tool was better. Because the organization invested in the human side of change.
+Hong Kong has now written the same gap into policy. The HK$2 billion AI-in-education fund pays for systems and explicitly leaves out teacher training, so schools can buy a platform nobody has been shown how to run.
 
-## What Actually Works: The Continuous Model
+## The friction point in week one
 
-One institution I work with in Hong Kong took a different path to the same destination. Instead of a one-off engagement, they signed a 24-month continuous learning contract. Monthly sessions. A WhatsApp community for real-time support between sessions. A feedback loop where this month's questions shape next month's content.
+In both cases people leave the first session excited, try the tool, and hit a friction point in week one. That part never varies. What varies is what happens next. If nobody is there, they revert, and the license renews anyway. If someone answers — in the channel, in the next session, in a message — they push through it once, and the habit forms on the other side.
 
-The difference is structural. In a one-off workshop, I teach you what AI can do. In a continuous engagement, I watch what you're actually struggling with and address it in real time.
-
-Here's what continuous looks like in practice:
-
-- **Month 1:** Introduction. NotebookLM, properly -- not a demo. "Here's what's possible."
-- **Month 2:** Advanced features of the tool they're actually using. Address specific blockers from Month 1.
-- **Month 3-6:** Department-specific applications. Real workflows, real data, real problems.
-- **Ongoing:** WhatsApp community where staff ask questions and share wins. I respond. Peers respond. A culture forms.
-
-By month three, people stop asking "how do I use this tool" and start asking "can AI do this thing I'm stuck on." That's the shift. That's adoption.
-
-Hong Kong has now codified this same gap into education policy: the government's HK$2 billion AI-in-education fund explicitly excludes teacher training, so schools can buy systems nobody is trained to run -- [I've written about what it looks like when a school decides to fund the training itself](/blog/when-a-school-commits-to-24-months-of-ai).
-
-## The Pattern
-
-Session after session, across companies and countries, the pattern is the same:
-
-**One-off training:** People are excited during the workshop. They try the tool for a week. They hit a friction point. No one is there to help. They revert.
-
-**Sustained engagement:** People are excited during the first session. They try the tool. They hit a friction point. They ask for help -- in the community, in the next session, in a direct message. Someone responds. They push through. A habit forms.
-
-The difference isn't the content of the training. It's the presence of support after the training ends.
-
-## What This Means for Organizations
-
-If you're planning an AI rollout, here's what your budget should look like:
-
-- 40% on tools and infrastructure
-- 60% on training, champions, and ongoing support
-
-Budget 60% for the humans, 40% for the tools. Most organizations run 95/5 and then blame the tool.
-
----
-
-## Sources & Further Reading
-
-- McKinsey, "[The State of AI in 2025](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai)" (Nov 2025) -- 88% of organizations use AI, but nearly two-thirds have not begun scaling it across the enterprise.
-- Microsoft & LinkedIn, "[2024 Work Trend Index](https://www.microsoft.com/en-us/worklab/work-trend-index/ai-at-work-is-here-now-comes-the-hard-part)" (May 2024) -- AI power users are 37% more likely to have a virtual learning program and 61% more likely to hear from their CEO about generative AI.
-
----
+The content of the training is not what decides it. The presence of someone after the training ends is. If you are budgeting a rollout and there is no line item for the months after launch, you are buying the 9%.

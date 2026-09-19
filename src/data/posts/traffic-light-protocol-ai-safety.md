@@ -1,95 +1,35 @@
 # The Traffic Light Protocol: How I Teach AI Safety in 15 Minutes
 
-Every AI workshop I deliver hits the same wall within the first ten minutes. Someone raises their hand and asks: "But what about data security?"
+Every workshop I run hits the same wall inside ten minutes. A hand goes up: "But what about data security?" It has happened with bankers, with [jewelry designers at Chow Tai Fook](/blog/ctf-ai-design-thinking-workshop-2026), with [engineers at Arup](/blog/arup-ai-lunch-learn), with HR teams, with teachers. Until the question is answered the room does not move, because nobody experiments with a tool they think could get them fired.
 
-It does not matter whether I am training bankers, jewelry designers, HR professionals, or engineers. The question always comes. And until it is answered, nobody moves. People will not experiment with a tool they believe could get them fired.
+Somewhere past the 10,000th professional I settled on the version I now use everywhere, and it takes fifteen minutes.
 
-Somewhere past the 10,000th professional, I landed on a framework that consistently breaks through this wall in under fifteen minutes. I call it the Traffic Light Protocol.
+I should say where the colors come from, because I get credited for them and they are not mine. The traffic light comes out of privacy guidance that predates any of these tools, and most compliance teams I meet already have some version of it written down somewhere. What I built is the fifteen-minute version that survives contact with a room of people who have not read the document.
 
-## Why Policies Fail and Frameworks Stick
+## Why the document loses to the metaphor
 
-Most organizations handle AI safety with a document. A 30-page acceptable use policy that nobody reads. Or worse, a blanket ban that pushes usage underground.
+At a [program for 1,530 staff at a major Hong Kong bank](/blog/1500-banking-professionals-ai-adoption), the compliance team had produced proper AI guidelines. Well written, legally sound, and ignored. When I asked why, the answer was not that it was too long. People assumed it said "don't use AI," so reading it could only cost them something.
 
-I have seen both approaches fail at scale. At a [1,530-person banking program](/blog/1500-banking-professionals-ai-adoption), the compliance team had produced detailed AI guidelines. Well-written, legally sound, completely ignored. Participants told me they did not read it because they assumed it would just say "don't use AI."
+That is the pattern everywhere. A thirty-page acceptable use policy is a reference document — nobody runs it in their head at 4pm with a deadline. A blanket ban is worse, because it pushes the same behavior onto personal phones where nobody can see it. What people can hold is a mental model with three states and an action attached to each.
 
-The problem is not the content. The problem is the format. People do not internalize policy documents. They internalize mental models.
+## Red, yellow, green
 
-## The Three Colors
+**Red: never goes into an external AI tool.** Client names, account numbers, HKID numbers, transaction records, salary and performance data, patient records, unreleased designs, internal system screenshots. The word doing the work is "external." Plenty of companies have an internal tool with the data handling already sorted; red is about the public ones.
 
-The Traffic Light Protocol classifies all workplace data into three categories. Everyone already knows what red, yellow, and green mean. That is the entire point.
+**Yellow: anonymize first.** Internal and non-public, usable once the identifying parts come out. Process documents with the team names stripped. Meeting minutes where the individuals become "the team lead." Metrics aggregated instead of per person. Draft communications with the client references removed. The test I give is one sentence: if this text appeared on a public website tomorrow, would anyone be embarrassed or harmed? If yes, it is yellow, and it needs work before it touches anything.
 
-### Red: Never Enter Into External AI Tools
+**Green: use it freely.** Published reports, press releases, regulatory guidelines, industry research, general questions, anything invented for practice. This is the category that changes the mood in the room. Most people have been treating everything they touch as red, and seeing how much of their week is actually green is what gives them permission to start.
 
-This is non-negotiable. Red data must never be pasted, uploaded, or described in any external AI tool.
+## The three-second check
 
-Examples vary by industry, but the pattern is consistent:
-- **Banking:** Client names, account numbers, transaction records, HKID numbers, internal system screenshots
-- **Retail:** Customer purchase history with PII, supplier pricing agreements, unreleased product designs
-- **HR:** Employee performance reviews with names, salary data, disciplinary records
-- **Healthcare:** Patient records, diagnostic data, prescription history
+The framework only earns its place if it runs faster than the hesitation it replaces. Before anything goes into a tool, three questions. Does this contain names, account numbers or personal data? Red, stop. Could it do its job with the identifying parts taken out? Yellow, do that first. Is it published, or invented? Green, go.
 
-The key word is "external." Many organizations have internal AI tools with appropriate data handling. Red data is specifically about public-facing tools like ChatGPT, Claude, or Gemini.
+Three seconds, no document. In practice the check gets internalized somewhere in the first session, and after that people argue about the edge cases themselves. I have watched a finance team work out on their own that the quarterly board pack is yellow while the published financials are green, which is the moment the protocol stops being mine and starts being theirs.
 
-### Yellow: Requires Anonymization First
+## What it does not do
 
-Yellow is where most real work lives, and where most mistakes happen. This data is internal and non-public, but can be used with AI if properly anonymized.
+It does not draw the line. Someone with authority still has to decide where red starts for that company, and where nobody has decided, I am teaching a mental model with no policy behind it. At [a Hong Kong food manufacturer](/blog/food-company-ai-workshops-three-batches) the IT lead had set the boundaries before I arrived: Copilot as the tool, research and drafting fine, anything touching customer data, P&L figures or employee records stays offline. That constraint sounds like it limits the training. It removed a month of arguments and it is why the sessions went anywhere.
 
-Examples:
-- Internal process documents (remove team names, project codes)
-- Meeting minutes (strip names, use "Team Lead" instead of "Sarah")
-- Performance metrics (aggregate, never individual)
-- Draft communications (remove client-specific references)
+The zones also move by industry, and the tiering is easier to teach in some rooms than others. When I ran the first session of a [24-month program at HKCT](/blog/when-a-school-commits-to-24-months-of-ai), the yellow zone was wider than in banking and the cost of getting red wrong was more personal, because red there is a named student. Assignment briefs, fine. Student records, never. Exam content, obviously not. Same three colors, a different map.
 
-I teach a simple test: "If this text appeared on a public website, would anyone be embarrassed or harmed?" If yes, it needs anonymization before it touches an AI tool.
-
-### Green: Safe to Use Freely
-
-Green data is publicly available information. This is where people should be spending most of their AI experimentation time.
-
-Examples:
-- Published annual reports and press releases
-- Industry research and market data
-- Regulatory guidelines and public policy documents
-- General knowledge questions and skill-building prompts
-
-When I show this category, I watch the room relax. Most professionals have been avoiding AI entirely because they assumed everything they work with is off-limits. Seeing that a large portion of their information tasks involve green data gives them permission to start.
-
-## The 3-Second Check
-
-The framework only works if it is fast. I teach people to run a three-second mental check before every AI interaction:
-
-1. Does this contain names, account numbers, or PII? **Red. Stop.**
-2. Is this internal but could be anonymized? **Yellow. Anonymize first.**
-3. Is this publicly available or completely fictional? **Green. Proceed.**
-
-Three seconds. No policy document required.
-
-## What Happens in the Room
-
-I have now used this framework with banking professionals, jewelry designers at Chow Tai Fook, HR teams running Pioneer Programs, engineers at Arup, and tourism executives. The reaction is remarkably consistent.
-
-Before the Traffic Light: arms crossed, skeptical faces, questions about risk. The room feels defensive.
-
-After the Traffic Light: people start nodding. Within five minutes they are suggesting their own examples. "So our quarterly board pack would be yellow, but the published financials would be green?" Exactly.
-
-At a 500-person webinar, I ran a live poll asking participants to classify five scenarios. The accuracy rate was above 90 percent on the first attempt. No prior training, no policy document, just three colors and common sense.
-
-## Why It Works
-
-The Traffic Light Protocol works because it replaces anxiety with a decision framework. Most AI safety training tells people what they cannot do. This tells people what they can do, with clear boundaries. It is one of the reasons [most AI training doesn't stick](/blog/why-ai-training-doesnt-stick) — it starts with restriction instead of permission.
-
-Three specific design choices make it effective:
-
-1. **Universal metaphor.** Everyone on the planet knows traffic lights. Zero explanation needed for the mental model itself.
-2. **Action-oriented.** Each color maps to a specific action: stop, modify, or proceed. There is no ambiguity about what to do next.
-3. **Permissive by default.** By showing green first in practice exercises, people realize they have more safe territory than they assumed. This shifts the emotional baseline from fear to confidence.
-
-## Building On the Foundation
-
-The Traffic Light is the first fifteen minutes. But it sets the tone for everything that follows. Once people feel safe, they experiment. Once they experiment, they discover real use cases. Once they discover real use cases, behavior changes.
-
-In the banking program, post-workshop surveys showed that participants who understood the data classification system were significantly more likely to report using AI tools in their daily work one month later. Safety was not a barrier to adoption. It was the enabler.
-
-If you are designing AI training for your organization, start here. Not with prompting techniques. Not with tool demos. Start with making people feel safe. The Traffic Light Protocol takes fifteen minutes and changes the entire trajectory of what follows.
-
----
+And I cannot tell you it makes adoption stick on its own. What I can tell you is what happens inside the fifteen minutes: arms uncross, and within five minutes people are proposing their own examples instead of waiting for permission. That is the part that has to happen before [any of the rest of it works](/blog/why-ai-training-doesnt-stick), which is why it goes before the prompting, before the tool demo, before anything else on the agenda. If you are building AI training for your own company and wondering where to start, it costs you fifteen minutes.
