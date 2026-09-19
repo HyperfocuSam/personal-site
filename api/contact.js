@@ -21,8 +21,25 @@
 //                   ONLY after (a) the domain verifies in Resend and (b) Sam
 //                   approved the auto-reply copy below. An auto-reply from an
 //                   unverified sender would fail per-lead, silently.
+//   CONTACT_FORM_SECRET  optional — HMAC key for the form token, defaults to
+//                   RESEND_API_KEY. See api/_form-guard.js.
+//
+// Bot protection (2026-09-17). The 2026-09-06 and 2026-09-13 funnel digests
+// found every contact mail that week was spam while PostHog showed zero form
+// events: the bots POST this route directly and never run the page's JS. Three
+// server-side gates now stand in front of Resend, in this order — per-IP rate
+// limit, honeypot, and a signed token from /api/form-token that must be at
+// least three seconds old. None of them can be skipped by skipping the React
+// form, which was the whole problem with defending this in the component.
+
+const { verifyToken, clientIp, rateLimit } = require('./_form-guard');
 
 const RESEND_API = 'https://api.resend.com/emails';
+
+// A human submits once, thinks, maybe corrects a typo and submits again. Five
+// in ten minutes from one address is already generous; a script doing volume
+// is nowhere near it.
+const SUBMIT_RATE = { windowMs: 10 * 60 * 1000, max: 5 };
 
 // Mirrors the client-side rule loosely; the real validation is a human reading
 // the message. Length caps are abuse control, not correctness.
@@ -65,6 +82,37 @@ const succeed = (req, res) => {
   return res.status(200).send(SUCCESS_HTML);
 };
 
+// The native no-JS POST needs a readable page on failure too, not raw JSON —
+// and it needs the mailto, because a rejected human must still have a door.
+const errorPage = (message) => `<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex"><title>Message not sent — Sam Wong</title>
+<style>body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+background:#FFF6F0;color:#0A0E23;display:grid;place-items:center;min-height:100vh;margin:0}
+main{max-width:28rem;padding:2rem;text-align:center}a{color:#0A0E23}</style></head>
+<body><main><h1>Message not sent</h1>
+<p>${message}</p>
+<p>You can always email me directly:
+<a href="mailto:sam@adaptig.com">sam@adaptig.com</a></p>
+<p lang="zh-Hant">訊息未能傳送，可以直接電郵給我。</p>
+<p><a href="/contact/">&larr; Back to the contact form</a></p></main></body></html>`;
+
+// `reason` never reaches the visitor: naming the failed check is free tuning
+// feedback for whoever is probing. It goes to the Vercel function log instead,
+// which is the only place these rejections are observable — PostHog cannot see
+// a request that never ran the page's JavaScript.
+const refuse = (req, res, status, message, reason) => {
+  console.warn('contact_blocked', JSON.stringify({
+    reason,
+    status,
+    ip: clientIp(req),
+    ua: String(req.headers['user-agent'] || '').slice(0, 120),
+  }));
+  if (isJsonRequest(req)) return res.status(status).json({ error: message });
+  res.setHeader('Content-Type', 'text/html; charset=utf-8');
+  return res.status(status).send(errorPage(message));
+};
+
 module.exports = async (req, res) => {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
@@ -78,13 +126,44 @@ module.exports = async (req, res) => {
   const message = field(body, 'message', 5000);
   const language = field(body, 'language', 10) === 'zh-Hant' ? 'zh-Hant' : 'en';
 
-  // Honeypot, same contract Formspree had: a filled _gotcha is a bot, and bots
-  // get a convincing success so they don't retry. They outnumbered humans on
-  // this form 97 attempts to 11.
-  if (field(body, '_gotcha', 100)) return succeed(req, res);
+  // Gate 1 — rate limit, before anything else touches the body. Counts every
+  // attempt including the ones the gates below reject, so a script does not get
+  // unlimited free tries at guessing a token.
+  const limit = rateLimit(`contact:${clientIp(req)}`, SUBMIT_RATE);
+  if (!limit.ok) {
+    res.setHeader('Retry-After', String(limit.retryAfter));
+    return refuse(req, res, 429, 'Too many messages from this connection. Please try again shortly.', 'rate_limited');
+  }
+
+  // Gate 2 — honeypot, same contract Formspree had: a filled _gotcha is a bot,
+  // and bots get a convincing success so they don't retry. They outnumbered
+  // humans on this form 97 attempts to 11.
+  if (field(body, '_gotcha', 100)) {
+    console.warn('contact_blocked', JSON.stringify({ reason: 'honeypot', ip: clientIp(req) }));
+    return succeed(req, res);
+  }
+
+  // Gate 3 — the form token. This is the one the September 2026 spam cannot
+  // satisfy: it requires a prior GET of /api/form-token, holding the value, and
+  // waiting. A missing token is answered honestly rather than with a fake
+  // success, because a real visitor whose token fetch failed needs to see that
+  // something went wrong and find the mailto on the error page.
+  const token = verifyToken(field(body, '_ft', 300));
+  if (!token.ok) {
+    if (token.reason === 'not_configured') {
+      return refuse(req, res, 500, 'Mail service not configured.', 'not_configured');
+    }
+    return refuse(
+      req,
+      res,
+      403,
+      'Your message could not be verified. Please reload the page and try again.',
+      token.reason,
+    );
+  }
 
   if (!name || !message || !EMAIL_RE.test(email)) {
-    return res.status(400).json({ error: 'Please fill in name, a valid email, and a message.' });
+    return refuse(req, res, 400, 'Please fill in name, a valid email, and a message.', 'invalid_fields');
   }
 
   const key = process.env.RESEND_API_KEY;

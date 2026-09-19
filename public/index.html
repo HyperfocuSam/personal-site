@@ -48,6 +48,54 @@
       }());
     </script>
 
+    <script>
+      // Contact-form bot token bootstrap (2026-09-17).
+      //
+      // /api/contact refuses any submission without a signed token from
+      // /api/form-token that is at least three seconds old — the gate that the
+      // September 2026 spam, which POSTs the API directly and never runs this
+      // page, cannot pass. ContactForm.js mints one on mount; this runs
+      // earlier and independently of the React bundle, so (a) the token is
+      // already ageing while the app hydrates, and (b) the form still submits
+      // through its native no-JS POST if the bundle never hydrates at all —
+      // the failure mode that `action`/`method` on the form exist for.
+      //
+      // Only fires on a page that actually contains the form, so it costs no
+      // request anywhere else. Same-origin: `connect-src 'self'` in the
+      // vercel.json CSP already allows it, no policy edit needed.
+      (function mintContactFormToken() {
+        if (window.navigator.userAgent === 'ReactSnap') return;
+
+        function fillInputs() {
+          if (!window.__hfFormToken) return;
+          var fields = document.querySelectorAll('input[name="_ft"]');
+          for (var i = 0; i < fields.length; i += 1) {
+            if (!fields[i].value) fields[i].value = window.__hfFormToken;
+          }
+        }
+
+        function start() {
+          if (!document.querySelector('form.contact-form')) return;
+          window.__hfFormTokenPromise = fetch('/api/form-token', {
+            headers: { Accept: 'application/json' }
+          })
+            .then(function (res) { return res.ok ? res.json() : null; })
+            .then(function (data) {
+              window.__hfFormToken = (data && data.token) || '';
+              fillInputs();
+              return window.__hfFormToken;
+            })
+            .catch(function () { return ''; });
+        }
+
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', start);
+        } else {
+          start();
+        }
+      }());
+    </script>
+
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
