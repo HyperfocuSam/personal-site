@@ -601,9 +601,9 @@ const posts = [
   },
   {
     slug: 'ai-change-management-what-actually-works',
-    title: 'AI Change Management: What Actually Works (A Field Report From 70+ Organizations)',
+    title: 'AI Change Management: The Second Department Is the Only Score I Trust',
     date: '2026-03-23',
-    excerpt: 'Most companies approach AI adoption like a software rollout. After training 10,000+ professionals across 70+ organizations, here is what actually drives lasting behavior change.',
+    excerpt: 'A training event ends when the projector powers down. The score I actually trust is whether a second department asks for the program without being sold — and what it took to get there across six departments at one Hong Kong food manufacturer.',
     tags: ['ai-adoption', 'enterprise'],
     type: 'methodology',
     image: '/images/blog/ai-change-management-cover.webp',

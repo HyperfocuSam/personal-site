@@ -1,92 +1,53 @@
+# AI Change Management: The Second Department Is the Only Score I Trust
 
-# AI Change Management: What Actually Works (A Field Report From 70+ Organizations)
+The request arrives in almost the same words every time. Can you give our staff a list of 100 prompts they can use? I understand the instinct. A list is concrete, it can be circulated, and it closes the training item on somebody's plan. It also [does nothing to how anyone works](/blog/why-ai-training-doesnt-stick). Two weeks later the list is in a shared folder nobody opens.
 
-Most companies approach AI adoption like a software rollout. They buy the licenses, run a half-day workshop, send a follow-up email with "resources," and call it done. Three months later, usage is at 4%. The licenses renew anyway.
+What a company is usually asking for underneath that request is a change management program. The distinction is not academic. A training event ends when the projector powers down. A change management program is judged months later, by whether a second department asked for it without being sold.
 
-I've trained over 10,000 professionals across 70+ organizations. The pattern is consistent enough that I can almost predict, from the first scoping call, which companies will see lasting behavior change and which ones will have a very expensive Copilot subscription gathering dust.
+I have trained 10,000+ professionals across 70+ organizations in 13 countries, and I can now guess from the scoping call which companies will still be using anything in six months. What separates them has nothing to do with which tool they bought.
 
-The difference isn't the tool. It's never the tool.
+## What I am actually trying to build
 
-## The Mistake Everyone Makes
+I stopped telling clients the goal is for staff to "learn AI." The goal is for someone to reach for the tool the way they reach for email — before deciding whether to. That instinct comes from repetition somewhere low-stakes, with someone around to answer the question that stops them on day three. Most corporate training has no day three.
 
-When a large hospitality group in Hong Kong approached me about AI training, their initial ask was what I hear from almost every client: "Can you give our staff a list of 100 prompts they can use?"
+## Start with what people are afraid of
 
-I understand why this is the instinct. It feels concrete. Measurable. Manageable. Give people a list, check the training box, move on.
+Before I open a single interface in a first session, I ask the room what worries them about AI at work. In the HR cohort at [a Hong Kong food manufacturer](/blog/food-company-year-of-ai-six-departments) — nineteen people, six sessions, January into February — job replacement came up in the first few minutes. Shadow IT came up shortly after: staff using personal phones and free accounts because nobody had given them anything safer.
 
-The problem is that [a list of prompts doesn't change behavior](/blog/why-ai-training-doesnt-stick). It gives people something to forget. Within two weeks, the list lives in a drawer or a shared folder nobody opens.
+If those two things are not said out loud in session one, they sit in the room for the whole program, quietly throttling everything. The [Traffic Light Protocol](/blog/traffic-light-protocol-ai-safety) does the second half of that job, which is why it is the first fifteen minutes and not a compliance annex at the end.
 
-What this client actually needed — what they came to understand over the course of our engagement — was a change management program, not a training event.
+## Select a cohort, do not spray the company
 
-## What Change Management Actually Means in an AI Context
+The programs that produce anything share one structural feature: they do not start with everyone. Ten to fifteen people with enough credibility and curiosity to become the person others ask, [trained intensively before anyone else](/blog/how-to-design-ai-pioneer-program). They build the use cases that are specific to that company, and they answer the questions I am not there for.
 
-AI change management is not about managing resistance to technology. It's about changing how people think about their own work.
+Fifteen people who genuinely change how they work move more of an organization than two hundred who attended a session. I say that as someone whose business would be better served by selling the two hundred.
 
-Here's the specific reframe I use with every new client: the goal is not for staff to "learn AI." The goal is for staff to develop the instinct to reach for AI the same way they reach for email or a spreadsheet — automatically, without thinking about whether to do it.
+## The blocker is usually IT, and usually for good reasons
 
-That instinct doesn't come from a workshop. It comes from repetition in a low-stakes, high-support environment. And it requires three things most corporate training programs skip entirely:
+The people who stall an AI program are rarely the skeptical frontline staff. They are more often [the IT lead](/blog/it-department-ai-adoption-bottleneck), and their concerns are legitimate: staff already using unvetted tools on personal devices, company data going somewhere nobody can audit.
 
-**1. Starting with fear, not features.** In every first session I run, before I show a single interface, I ask the room: "What worries you about AI at work?" In a 19-person HR team at the hospitality group I mentioned, fear of job replacement came up in the first four minutes. Shadow IT — staff using personal phones and free AI accounts because nobody had given them a safer alternative — came up shortly after. If you don't address these in the first session, they sit in the room for the entire program, silently throttling engagement.
+At the food manufacturer the security architecture was fixed before I arrived, and I agreed with it. Copilot as the primary tool, inside the tenant they already pay for. Research and summarization fine, drafting and formatting fine, anything touching internal customer data, P&L figures or employee records stays offline. Any session was open to audit, at any time.
 
-**2. Selecting pioneers, not mass-training everyone.** The most effective AI adoption programs I've run share one structural feature: they don't start with the whole organization. They identify 10–15 high-potential employees — people with enough credibility and curiosity to become internal champions — and [train them intensively before anyone else](/blog/how-to-design-ai-pioneer-program). These are the people who will answer their colleagues' questions, catch the errors, and build the informal use cases that make AI feel relevant to the specific industry and company.
+Framing the program as a governance exercise rather than a technology rollout is what turned the block into a watching brief. That is not a trick. Working inside an institution's actual risk appetite is the job, not a constraint on the job. If your program has no answer for IT at the design stage, it will stall at the first complaint, and the complaint will be correct.
 
-With the hospitality group, we ran a 6-session program over six weeks with a cross-functional cohort of 19 HR staff. By Session 4, participants were bringing their own prompts. By Session 6, they were presenting "Before vs. After" workflows to their own management — a 4,320+ annual hours saved estimate built from the specific tasks they'd actually measured. Management, which had started skeptical, left that session asking about Batch 2.
+## Shadow IT is a demand signal
 
-**3. Measuring time saved, not sessions attended.** Most training programs measure the wrong thing. "We trained 200 people" is not an outcome. "Policy drafting that took 1 hour now takes 10 minutes" is an outcome. I push every client to document specific task-level time savings during the program, not after it. This does two things: it gives staff immediate feedback that the behavior change is worth the effort, and it gives management the ROI numbers they need to justify budget for the next phase.
+When staff are using personal AI accounts on personal devices, most companies treat it as a discipline problem. Block the sites, publish the policy, move on.
 
-## The IT Director Problem
+It tells you two things instead: the staff want this, and you have not given them a safe way to do it. So the question I take to the client is how to make the sanctioned option as easy to reach as the unsanctioned one — which, for most Hong Kong companies, means [the Copilot seats they are already paying for](/blog/microsoft-copilot-training-hong-kong) rather than a new tool and a new login.
 
-Here's a pattern I didn't anticipate when I started doing this work: the [biggest blockers to AI adoption](/blog/it-department-ai-adoption-bottleneck) are often not the skeptical frontline staff. They're the IT directors.
+## The second batch is harder than the first
 
-At the hospitality group, the IT lead came into the engagement with legitimate concerns. Staff were already using free, unvetted AI tools on personal devices. Company data was at risk. He'd seen a failed AI implementation years earlier — a computer vision project for manufacturing that never shipped — and his trust in "AI projects" was low.
+I assumed the opposite. Batch 1 is new, gets senior attention, and the cohort feels chosen. Batch 2 inherits expectations and a benchmark, and the material that earned the first room does not transfer.
 
-The breakthrough came when I reframed the entire program as a governance exercise, not a technology one. We were not, I told him, installing a system. We were teaching digital literacy. All exercises would use Tier 1 and Tier 2 data only — publicly available information, drafting and formatting tasks. Nothing internal. Nothing sensitive. He could audit any session.
+At the food manufacturer, Batch 2 started in February and moved into Sales and Marketing: three sessions instead of six, around thirty people, a completely different set of worries. HR was careful about confidentiality. Sales wanted to move faster and was worried AI would make their output generic. Their red zone is client pricing and deal terms, not employee records, so the security conversation had to be run from scratch rather than referenced. [I rebuilt roughly 60% of the content](/blog/food-company-ai-workshops-three-batches) and kept the framework.
 
-Once he felt in control of the security boundary, he stopped blocking and started watching. By the final session, he was asking about the next phase.
+That is the actual design principle: fixed architecture, rebuilt examples. I use the same three-part shape every time — reduce the fear, build the habit, get it into the workflow — and throw away the exercises.
 
-If your AI adoption program doesn't have a strategy for winning over IT early, it will stall. Not because IT is obstructionist — their concerns are usually legitimate — but because the governance gap is real and someone has to close it.
+## What told me it had worked
 
-## The Shadow IT Signal You're Ignoring
+Not a satisfaction score. By March the managing director had asked for a follow-up executive session on AI agents, and Manufacturing Operations had asked for three sessions of their own in April. Over the year it reached six departments and more than a hundred staff, and by the time the later teams sat down they had already heard about it at lunch from someone in HR. Internal word of mouth did more for adoption than anything I presented.
 
-When staff are using personal AI accounts on personal devices at work, most organizations treat this as a compliance problem. Block the sites, write the policy, move on.
+The Operations batch is the one I am least sure about. Their day is production lines, supplier escalations and quality deviation reports, and a hypothetical drafting exercise would lose them in ten minutes, so I built the material around a fabricated production dataset and prompts written for their actual documents. Whether that lands, I will know afterwards.
 
-I treat it as a demand signal.
-
-When I see shadow IT, it tells me two things: the staff want to use AI, and the organization hasn't given them a safe way to do it. That's not a discipline problem — it's an adoption failure. The question isn't "how do we stop them?" It's "how do we channel this behavior into something the organization can support and govern?"
-
-In the hospitality group case, the answer was Microsoft Copilot — already bundled with their existing M365 licenses, already authenticated through their corporate tenant, already within the IT director's security perimeter. We didn't need to introduce new tools. We needed to make the safe option feel as accessible as the unsafe one.
-
-## What Batch 2 Looks Like
-
-Here's something the change management literature doesn't usually tell you: the second cohort is always harder than the first.
-
-The first cohort benefits from the novelty. They are Pioneers. They get senior attention. They feel special. The second cohort joins a program that already has history — expectations, internal benchmarks, the weight of "this is what Batch 1 did."
-
-With the hospitality group, Batch 2 started in February 2026 and expanded beyond HR into Sales and Marketing. The challenge shifted from "how do we get people excited?" to "how do we make this feel relevant to a different function?" A Social Post prompt that resonates with a marketing team does nothing for an HR manager. A policy drafting workflow that an HR team loves is invisible to a campaign manager.
-
-The answer is modular design with a fixed framework. I use the same underlying principles — Spark (reduce fear), Shift (build habits), Shape (embed into workflow) — but I rebuild the examples and exercises for each new cohort's actual work. Same architecture, different content.
-
-By March 2026, the engagement had expanded: the MD had requested a follow-up executive session on AI agents, and the Manufacturing Operations department had asked for 3 additional sessions in April. That's the signal that change management has worked — not that people attended training, but that they asked for more.
-
-## The Three Things That Actually Drive Lasting Adoption
-
-After running programs across 70+ organizations — banks, retailers, universities, hospitality groups, toy companies, logistics firms — the factors that predict lasting behavior change are consistent:
-
-**Select, don't spray.** Pioneer programs outperform mass training every time. 15 people who genuinely change how they work will change more of the organization than 200 people who sat through a session.
-
-**Solve real friction, not hypothetical use cases.** Every exercise in a well-designed AI adoption program should use the participant's actual work. Not generic examples. Not "imagine you work in HR." Real tasks from real jobs. This is what turns a workshop into a workflow change.
-
-**Give IT the governance story from day one.** The security conversation is not an obstacle to the program. It is part of the program. Build it in at the design stage, not after the first complaint.
-
----
-
-AI change management is not a new discipline. It borrows heavily from organizational change management frameworks that have existed for decades. What's new is the speed of the technology cycle and the breadth of the behavioral change required. When every knowledge worker's job is affected simultaneously, you can't treat AI like a niche tool rollout.
-
-The companies that get this right are building internal AI capability, not dependency on external trainers. The goal of every program I run is to make itself unnecessary within 12–18 months. If the Pioneers are still waiting for me to tell them what to do by Session 6, I've failed.
-
-## Sources & Further Reading
-
-- McKinsey, "[The State of AI in 2025](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai)" (Nov 2025) -- 88% of organizations use AI, but nearly two-thirds have not begun scaling it across the enterprise.
-- Microsoft & LinkedIn, "[2024 Work Trend Index](https://www.microsoft.com/en-us/worklab/work-trend-index/ai-at-work-is-here-now-comes-the-hard-part)" (May 2024) -- Only 39% of people who use AI at work have received company training. 60% of leaders worry their organization lacks a plan to implement AI.
-- McKinsey, "[The State of AI in Early 2024](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-2024)" (May 2024) -- 65% of organizations regularly use gen AI, but scaling remains the gap between adoption and embedded behavior change.
-
----
+One thing I would push any buyer on: measure task-level time savings during the program, not after it. Not because the number impresses anyone, but because the person who sees their own hour turn into ten minutes in week two is the person still doing it in week ten. If the Pioneers are still waiting for me to tell them what to try by the final session, the program did not work, whatever the evaluation says.
