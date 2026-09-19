@@ -85,9 +85,12 @@ describe('S1 verified bug regressions', () => {
   });
 
   it('targets the rendered homepage stat strip for speakable schema', () => {
-    const source = read('src/pages/Index.js');
+    // Moved out of Index.js on 2026-09-18: both homepages now build their
+    // JSON-LD from data/homeSchema.js, so the selector is asserted there.
+    const source = read('src/data/homeSchema.js');
     expect(source).not.toContain('.hero-stats');
-    expect(source).toContain("cssSelector: ['.stats-strip', \"meta[name='description']\"]");
+    expect(source).toContain('cssSelector: t.speakableSelector');
+    expect(source).toContain("speakableSelector: ['.stats-strip', \"meta[name='description']\"]");
   });
 
   it('emits locale and locale alternate metadata for bilingual routes', () => {
@@ -280,7 +283,7 @@ describe('2026-09-18 checkup regressions', () => {
 
   it('points the Person schema at the 44 KB WebP, not the 794 KB PNG', () => {
     // Finding 5. Every consumer of schema `image` fetches the file named there.
-    ['src/pages/Index.js', 'src/pages/About.js', 'src/pages/CorporateTraining.js',
+    ['src/data/homeSchema.js', 'src/pages/About.js', 'src/pages/CorporateTraining.js',
       'src/pages/ZhCorporateTraining.js', 'public/index.html'].forEach((p) => {
       expect(read(p)).not.toMatch(/image":?\s*[:=]?\s*.?[^\n]*sam-portrait-2026-09\.png/);
     });

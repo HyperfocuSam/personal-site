@@ -99,7 +99,9 @@ describe('the site portrait is the 2026-09 photograph', () => {
     'src/pages/MediaKit.js',
     'src/pages/ZhMediaKit.js',
     'src/pages/About.js',
-    'src/pages/Index.js',
+    // Both homepages read their schema `image` from data/homeSchema.js
+    // since 2026-09-18; Index.js no longer names a portrait itself.
+    'src/data/homeSchema.js',
     'src/pages/CorporateTraining.js',
     'src/pages/ZhCorporateTraining.js',
     'public/index.html',
