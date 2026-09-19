@@ -1,48 +1,43 @@
+# The AI Maturity Trap: The Stage 1 Company That Thinks It Is at Stage 2
 
-# The AI Maturity Trap: Why Most Companies Are Stuck at Stage 1
+Someone on X posted their company's AI transformation model and the replies were more interesting than the model. Person after person admitted their own company was at the very beginning, and almost none of them said it was because they lacked tools.
 
-Someone on X shared their company's "AI Transformation Model" -- a framework for assessing where organizations actually are in their AI journey. The responses were revealing. Most people admitted their companies were at the very beginning. Not because they lacked tools. Because they lacked a realistic assessment of where they stood.
+I use a version of the same four-stage assessment in my own training, refined across manufacturers, banks, universities and retailers. It is not mine and I say so in the room. Maturity ladders have existed in every technology cycle; what I have added is the part where I stop letting a company grade itself on intention.
 
-I've been using a version of this AI maturity assessment in my own training for the past year, refined across engagements with manufacturers, banks, universities, and retailers. Here's what it looks like, and why most companies are stuck at Stage 1.
+## The four stages
 
-## The 4-Stage Model
+**Stage 1, Awareness.** The company knows AI exists. A few people are experimenting on their own, usually on personal devices, usually quietly. No policy, no training, no strategy. Leadership says something should be done and has not said what.
 
-**Stage 1: Awareness.** The company knows AI exists. Some employees are experimenting on their own (usually secretly, on personal devices). There's no policy, no training, no strategy. Leadership says "we need to do something about AI" but hasn't defined what.
+**Stage 2, Experimentation.** A structured pilot is running. A small group is being trained, there is a usage policy people have actually read, and the security boundaries are defined.
 
-**Stage 2: Experimentation.** A structured pilot is running. A small team (10-20 people) is being trained. There's a basic AI usage policy. Some security boundaries are defined. This is where the food manufacturer was when we started their Pioneer Program -- aware of the potential, but lacking the framework to capture it.
+**Stage 3, Integration.** AI is inside specific workflows. Nobody calls it "using AI" because it is how the job gets done. Time savings are measured, useful prompts are written down somewhere shared, and internal champions exist.
 
-**Stage 3: Integration.** AI is embedded in specific workflows. Teams don't "use AI" as a separate activity -- it's part of how they do their job. Time savings are measured. Best practices are documented. Internal champions exist.
+**Stage 4, Transformation.** The operating model changes. Roles and workflows get redesigned around what the combination can do, and decisions get made on things a human working alone would not have surfaced.
 
-**Stage 4: Transformation.** AI changes the organization's operating model. New roles emerge. Workflows are redesigned around human-AI collaboration. The company makes decisions differently because AI surfaces insights that humans alone would miss.
+## The trap
 
-## Where Most Companies Actually Are
+A Stage 1 company usually believes it is at Stage 2, because someone gave a one-hour presentation about ChatGPT at an all-hands. That is awareness with better slides. Nobody was selected, nothing was practiced on real work, and no boundary was published.
 
-In my experience across dozens of engagements: 80% of companies are at Stage 1, 15% at Stage 2, and almost none beyond that.
+I used to quote a distribution here, a percentage of companies stuck at Stage 1. I have cut it, because I do not have a defensible source for it and nor does anyone else selling you a maturity assessment. What I can describe is what rooms look like, and the more useful finding is that the question is wrong at the company level.
 
-The trap is that Stage 1 companies often think they're at Stage 2 because they've "done AI training" -- meaning someone gave a one-hour presentation about ChatGPT at an all-hands meeting. That's not experimentation. That's awareness with better PowerPoint.
+## A company does not have one score
 
-## How to Move From Stage 1 to Stage 2
+At [a Hong Kong food manufacturer I have now run four separate engagements for](/blog/food-company-ai-workshops-three-batches), the departments are nowhere near each other. HR, after six sessions and months of practice, is somewhere around Stage 3 — consistent workflows, real time saved weekly. Sales and Marketing sits between 2 and 3. Operations has not started. The executive group is Stage 2 in practice and Stage 4 in intention, which is its own kind of gap.
 
-The transition from Stage 1 to 2 is the hardest. It requires three things:
+That patchwork is probably the normal state of any organization doing this seriously: pockets of genuine adoption inside larger areas of inertia. Training creates more pockets. Whether the pockets ever connect is a question about management, not about the content of a workshop, and I would rather say that than sell the ladder as something a training program climbs on your behalf.
 
-**1. Permission.** Explicitly tell employees they are allowed to use AI for specific tasks. Define the security tiers. Publish a policy. Until this happens, people will either not use AI at all or use it secretly.
+## Getting from 1 to 2
 
-**2. Structure.** A single workshop helps, but it's not enough. When I [designed the 4-module experiment at DoRich](/blog/dorich-ai-efficiency-workshop), the structure -- literacy, creativity, visual creation, data analysis -- gave participants a clear path from "what is this" to "I can do this myself."
+The first step is the hardest one and it is mostly not technical.
 
-**3. Accountability.** Assign someone to own AI adoption. Not the CTO. Not an "AI committee." One person whose job includes tracking adoption metrics, identifying workflow opportunities, and following up after training sessions.
+**Publish the permission.** Tell people explicitly what they are allowed to use AI for, and define the zones so the answer survives without you in the room. Until that exists, people either avoid the tools or use them where you cannot see. [The three colors take fifteen minutes](/blog/traffic-light-protocol-ai-safety) and remove the single biggest reason nobody starts.
 
-## The Collect-Your-Hard-Problems Principle
+**Give it a shape people can repeat.** A single workshop is a start and it is not enough. When I ran a session for [the Dorich community](/blog/dorich-ai-efficiency-workshop) I built it around four prompt patterns practiced on material people brought with them, rather than four skills explained in the abstract. The feedback that stayed with me was not about what AI can do — it was "I finally know what to type."
 
-Ethan Mollick says to "collect your hard problems and good ideas now, because they'll get more valuable as AI improves." He's right. The companies that move to Stage 3 fastest are the ones that start documenting their most painful, repetitive workflows today -- even before they have the AI solution.
+**Pick tools the whole company can actually open.** For [China Travel Service](/blog/cts-tourism-ai-training) that meant training executives on Doubao and Dreamina instead of the Western stack, because half the business operates where ChatGPT needs a VPN. A pilot running on tools a large part of your staff cannot reach produces a Stage 2 that only exists in one office.
 
-When I [trained tourism executives at CTS](/blog/cts-tourism-ai-training), the most valuable output wasn't the training itself. It was the list of 15 specific workflow pain points that emerged during the session. That list became the roadmap for everything that followed.
+**Give it to one person.** Not a committee, not the CTO as an extra line in an already full job. One named person whose work includes tracking whether anything is being used and following up after the sessions. [Selecting the right few people first](/blog/how-to-design-ai-pioneer-program) is the other half of that.
 
-Don't wait until you're at Stage 4 to start. Map your hard problems now. The AI maturity journey starts with knowing exactly where you're stuck.
+Ethan Mollick's advice is to collect your hard problems now, because they get more valuable as the tools improve, and I think that is right. The companies that reach Stage 3 fastest are the ones already writing down their most repetitive, most painful workflows before they have any idea which tool will handle them.
 
-## Sources & Further Reading
-
-- McKinsey, "[The State of AI in 2025](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai)" (Nov 2025) -- Only 1% of companies scored above 50 on McKinsey's 100-point AI maturity scale. Average scores declined 9 points year-over-year.
-- McKinsey, "[Technology Trends Outlook 2025](https://www.mckinsey.com/~/media/mckinsey/business%20functions/mckinsey%20digital/our%20insights/the%20top%20trends%20in%20tech%202025/mckinsey-technology-trends-outlook-2025.pdf)" (2025) -- 88% of organizations use AI, but fewer than one-third have scaled it enterprise-wide.
-- IBM Institute for Business Value, "[2024 Banking & Financial Markets Outlook](https://www.ibm.com/thought-leadership/institute-business-value/en-us/report/2024-banking-financial-markets-outlook)" (Jan 2024) -- 78% of financial institutions tactically implement gen AI, but strategic enterprise-wide scaling remains elusive.
-
----
+Where I get it wrong is grading from outside the building. I can tell you what a department looks like after I have spent six sessions with it. I cannot tell you what a company is from a scoping call, and I have been confidently wrong in both directions. If you want to know where you are, ask one team what they did with AI last Tuesday. The answer is the assessment.

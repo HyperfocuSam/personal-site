@@ -873,9 +873,9 @@ const posts = [
   },
   {
     slug: 'ai-maturity-trap-stuck-stage-one',
-    title: 'The AI Maturity Trap: Why Most Companies Are Stuck at Stage 1',
+    title: 'The AI Maturity Trap: The Stage 1 Company That Thinks It Is at Stage 2',
     date: '2026-01-20',
-    excerpt: 'Most companies think they\'re behind on AI. They\'re right -- but the fix isn\'t more tools. The 4-stage maturity model and how to move past Stage 1.',
+    excerpt: 'A Stage 1 company usually believes it is at Stage 2, because someone gave a one-hour presentation. The four-stage model, why a company does not have one score, and the four moves that get a department from 1 to 2.',
     tags: ['ai-adoption', 'enterprise'],
     type: 'framework',
     image: '/images/blog/maturity-trap-cover.webp',
