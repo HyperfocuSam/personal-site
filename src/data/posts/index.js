@@ -5,6 +5,29 @@
 // linkedPost: slug of the corresponding post in another language (for hreflang)
 const posts = [
   {
+    slug: 'calendar-for-real-adhd-tc',
+    title: '給看不了行事曆的人的行事曆',
+    date: '2026-09-22',
+    excerpt: '一頁白紙，一個 LOG 掣，卡片按緊急程度變色、慢慢飄，由 agent 餵日期。我為自己的 ADHD 做的行事曆，今天開源。',
+    tags: ['adhd', 'ai-agents', 'open-source', 'productivity'],
+    type: 'announcement',
+    language: 'zh-Hant',
+    featured: false,
+    image: '/images/blog/calendar-for-real-adhd-demo.gif',
+    linkedPost: 'calendar-for-real-adhd',
+  },
+  {
+    slug: 'calendar-for-real-adhd',
+    title: 'A calendar for people who cannot look at a calendar',
+    date: '2026-09-22',
+    excerpt: 'One white page, one LOG button, cards coloured by urgency that drift instead of stacking, fed by an agent. The calendar I built for my own ADHD, open-sourced today.',
+    tags: ['adhd', 'ai-agents', 'open-source', 'productivity'],
+    type: 'announcement',
+    featured: false,
+    image: '/images/blog/calendar-for-real-adhd-demo.gif',
+    linkedPost: 'calendar-for-real-adhd-tc',
+  },
+  {
     slug: 'the-ai-tools-i-actually-use-2026-tc',
     title: '2026 年，我真正付錢用的 AI 工具',
     date: '2026-08-15',
