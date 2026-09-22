@@ -289,6 +289,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/ai-training-executive-assistants-hong-kong/" />
   </url>
   <url>
+    <loc>https://hyperfocusam.com/blog/calendar-for-real-adhd-tc/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/blog/calendar-for-real-adhd-tc/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/blog/calendar-for-real-adhd/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/blog/calendar-for-real-adhd/" />
+  </url>
+  <url>
+    <loc>https://hyperfocusam.com/blog/calendar-for-real-adhd/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyperfocusam.com/blog/calendar-for-real-adhd/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://hyperfocusam.com/blog/calendar-for-real-adhd-tc/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hyperfocusam.com/blog/calendar-for-real-adhd/" />
+  </url>
+  <url>
     <loc>https://hyperfocusam.com/blog/the-ai-tools-i-actually-use-2026-tc/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
@@ -1046,13 +1064,13 @@
   </url>
   <url>
     <loc>https://hyperfocusam.com/llms.txt</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://hyperfocusam.com/llms-full.txt</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
