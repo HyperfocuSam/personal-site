@@ -257,7 +257,7 @@ const ZhCorporateTraining = () => (
           '@type': 'ProfessionalService',
           name: 'Sam Wong - 香港企業 AI 培訓',
           url: `${SITE_URL}/zh/corporate-ai-training-hong-kong`,
-          image: `${SITE_URL}/images/sam-portrait-2026-09.png`,
+          image: `${SITE_URL}/images/sam-portrait-2026-09.webp`,
           description:
             '香港企業 AI 培訓及工作坊。'
             + '企業工作坊、輔導、培訓師認證計劃，'
@@ -480,6 +480,10 @@ const ZhCorporateTraining = () => (
               查看所有客戶
             </Link>
           </div>
+          {/* 與英文版對稱：由這裡直接進入按專業界別的課程頁。 */}
+          <p className="corporate-inline-link">
+            <Link to="/zh/services#zh-by-profession">按你的專業界別查看培訓 →</Link>
+          </p>
         </div>
       </section>
 

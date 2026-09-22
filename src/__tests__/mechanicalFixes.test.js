@@ -10,6 +10,8 @@ import { cleanup, render } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 
 import Main from '../layouts/Main';
+import Vertical from '../pages/Vertical';
+import verticals from '../data/verticals';
 
 const root = path.resolve(__dirname, '..', '..');
 const read = (relativePath) => fs.readFileSync(path.join(root, relativePath), 'utf8');
@@ -83,9 +85,12 @@ describe('S1 verified bug regressions', () => {
   });
 
   it('targets the rendered homepage stat strip for speakable schema', () => {
-    const source = read('src/pages/Index.js');
+    // Moved out of Index.js on 2026-09-18: both homepages now build their
+    // JSON-LD from data/homeSchema.js, so the selector is asserted there.
+    const source = read('src/data/homeSchema.js');
     expect(source).not.toContain('.hero-stats');
-    expect(source).toContain("cssSelector: ['.stats-strip', \"meta[name='description']\"]");
+    expect(source).toContain('cssSelector: t.speakableSelector');
+    expect(source).toContain("speakableSelector: ['.stats-strip', \"meta[name='description']\"]");
   });
 
   it('emits locale and locale alternate metadata for bilingual routes', () => {
@@ -176,5 +181,145 @@ describe('S1 verified bug regressions', () => {
     // the recolour list or they render #e8e9f0 on #ffffff — ratio 1.21. The
     // buttons were already handled, which is why only the quiet link broke.
     expect(styles).toMatch(/a:not\(\.button\):not\(\.button-secondary\)\s*\{[\s\S]*?color:\s*_palette\(text-body\)/);
+  });
+});
+
+// ── Checkup round 3 (2026-09-18 audit, findings 1-9) ────────────────────────
+// Each of these shipped live and no existing check looked at it. They are
+// written against the RENDERED head or the GENERATED file, not the source
+// string, because every one of them was a source that read as correct.
+describe('2026-09-18 checkup regressions', () => {
+  const head = (selector) => document.head.querySelector(selector);
+
+  it('emits a self-canonical on every profession page, both languages', () => {
+    // Finding 1: all ten went live with no <link rel="canonical"> at all,
+    // because canonical was opt-in and Vertical.js was the one component that
+    // never opted in.
+    verticals.forEach((v) => {
+      ['en', 'zh'].forEach((lang) => {
+        document.head.innerHTML = '';
+        render(
+          <MemoryRouter>
+            <Vertical slug={v.slug} lang={lang} />
+          </MemoryRouter>,
+        );
+        const expected = lang === 'zh'
+          ? `https://hyperfocusam.com/zh/${v.slug}/`
+          : `https://hyperfocusam.com/${v.slug}/`;
+        expect(head('link[rel="canonical"]')).toHaveAttribute('href', expected);
+        cleanup();
+      });
+    });
+  });
+
+  it('falls back to ogUrl so a page cannot ship canonical-less again', () => {
+    render(
+      <MemoryRouter>
+        <Main title="No canonical prop" ogUrl="https://hyperfocusam.com/somewhere">
+          <div />
+        </Main>
+      </MemoryRouter>,
+    );
+    expect(head('link[rel="canonical"]'))
+      .toHaveAttribute('href', 'https://hyperfocusam.com/somewhere/');
+  });
+
+  it('gives a bilingual blog post og:locale:alternate', () => {
+    // Finding 8: Post.js wrote its hreflang links from its own <Helmet>, so the
+    // hreflangTags prop Main derives the alternate locale from was always
+    // undefined and no post ever carried the tag.
+    const source = read('src/pages/Post.js');
+    expect(source).toContain('hreflangTags={hreflangTags}');
+    expect(source).not.toContain('{/* hreflang tags for bilingual posts */}');
+
+    render(
+      <MemoryRouter>
+        <Main
+          title="A post"
+          language="en"
+          canonicalUrl="https://hyperfocusam.com/blog/x/"
+          hreflangTags={[
+            { lang: 'en', href: 'https://hyperfocusam.com/blog/x/' },
+            { lang: 'zh-Hant', href: 'https://hyperfocusam.com/blog/x-tc/' },
+            { lang: 'x-default', href: 'https://hyperfocusam.com/blog/x/' },
+          ]}
+        >
+          <div />
+        </Main>
+      </MemoryRouter>,
+    );
+    expect(head('meta[property="og:locale"]')).toHaveAttribute('content', 'en_US');
+    expect(head('meta[property="og:locale:alternate"]')).toHaveAttribute('content', 'zh_HK');
+  });
+
+  it('reciprocates the Chinese media kit hreflang', () => {
+    // Finding 6: /zh/media/kit declared en -> /media/kit and got nothing back,
+    // the site's only non-reciprocal pair. A one-way annotation is discarded.
+    const kit = read('src/pages/MediaKit.js');
+    ['en', 'zh-Hant', 'x-default'].forEach((lang) => {
+      expect(kit).toContain(`{ lang: '${lang}', href:`);
+    });
+  });
+
+  it('ships a sitemap with no duplicate <loc>', () => {
+    // Finding 3: the 2026-09-03 hreflang commit pasted a second copy of /book
+    // and the eleven Chinese static pages, so 146 <url> blocks shipped for 134
+    // URLs on every deploy for 15 days.
+    const locs = read('public/sitemap.xml').match(/<loc>[^<]+<\/loc>/g);
+    expect(locs).not.toBeNull();
+    expect(new Set(locs).size).toBe(locs.length);
+    // And the generator now refuses to build one.
+    expect(read('scripts/generate-sitemap.js')).toContain('lists these paths more than once');
+  });
+
+  it('ships a well-formed feed with the channel title escaped', () => {
+    // Finding 4: one raw & at line 4 made the WHOLE feed not-well-formed, so a
+    // strict reader rejected every item. robots.txt advertises it as a sitemap.
+    const feed = read('public/feed.xml');
+    expect(feed).toContain('<title>Sam Wong | Co-Founder &amp; AI Train-the-Trainer</title>');
+    // Every & in the file must open a real entity.
+    expect(feed.match(/&(?!(amp|lt|gt|quot|apos|#\d+|#x[0-9a-fA-F]+);)/g)).toBeNull();
+  });
+
+  it('points the Person schema at the 44 KB WebP, not the 794 KB PNG', () => {
+    // Finding 5. Every consumer of schema `image` fetches the file named there.
+    ['src/data/homeSchema.js', 'src/pages/About.js', 'src/pages/CorporateTraining.js',
+      'src/pages/ZhCorporateTraining.js', 'public/index.html'].forEach((p) => {
+      expect(read(p)).not.toMatch(/image":?\s*[:=]?\s*.?[^\n]*sam-portrait-2026-09\.png/);
+    });
+    const png = fs.statSync(path.join(root, 'public/images/sam-portrait-2026-09.png')).size;
+    const webp = fs.statSync(path.join(root, 'public/images/sam-portrait-2026-09.webp')).size;
+    expect(webp).toBeLessThan(png / 4);
+  });
+
+  it('links every profession page from both services pages', () => {
+    // Finding 2. The links themselves shipped 2026-09-03; what did not ship was
+    // any styling for the block, so it rendered as a bare list outside the
+    // page's banded rhythm. Both are asserted here.
+    const en = read('src/pages/Services.js');
+    const zh = read('src/pages/ZhServices.js');
+    [en, zh].forEach((page) => {
+      expect(page).toContain("import verticals from '../data/verticals'");
+      expect(page).toContain('section-sunken section-padding services-verticals');
+    });
+    /* eslint-disable no-template-curly-in-string -- asserting literal source text */
+    expect(en).toContain('<Link to={`/${v.slug}`}>{v.en.title}</Link>');
+    expect(zh).toContain('<Link to={`/zh/${v.slug}`}>{v.zh.title}</Link>');
+    /* eslint-enable no-template-curly-in-string */
+    expect(read('src/static/css/pages/_services.scss')).toMatch(/^\.services-verticals \{/m);
+    // And a second inbound route from the lander that outranks /services.
+    expect(read('src/pages/CorporateTraining.js')).toContain('/services#by-profession');
+    expect(read('src/pages/ZhCorporateTraining.js')).toContain('/zh/services#zh-by-profession');
+  });
+
+  it('keeps the blog language switch above AA contrast', () => {
+    // Finding 7. verification (#a28b52) on the stamp's own white field measures
+    // 3.31:1; text-secondary (#4a4e63) measures 8.20:1. Same answer the
+    // .fn-stamp--verified variant already reached.
+    const styles = read('src/static/css/pages/_post.scss');
+    expect(styles).toMatch(/&__language\.fn-stamp \{[\s\S]*?color: _palette\(text-secondary\)/);
+    expect(styles).not.toMatch(/&__language\.fn-stamp \{\s*color: _palette\(verification\)/);
+    // and the author-bio link carries a non-colour cue (link-in-text-block).
+    expect(styles).toMatch(/&__bio \{[\s\S]*?a \{[\s\S]*?text-decoration: underline/);
   });
 });

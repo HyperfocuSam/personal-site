@@ -7,6 +7,7 @@ import OptimizedImage from '../components/Template/OptimizedImage';
 import EmailCapture from '../components/EmailCapture/EmailCapture';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
 import services from '../data/services';
+import verticals from '../data/verticals';
 import testimonials from '../data/testimonials';
 import ServiceGroup from '../components/Services/ServiceGroup';
 import ScrollReveal from '../components/ScrollReveal';
@@ -294,20 +295,27 @@ const Services = () => {
 
         {/* Profession pages. These carry the internal links that keep the five
             new routes out of the orphan list — the site has shipped indexable
-            routes with zero inbound links before. */}
-        <section className="services-verticals" id="by-profession">
-          <h2>Training by profession</h2>
-          <p>
-            Each of these is built from a delivered engagement, not a service
-            description, and each carries its own receipts.
-          </p>
-          <ul>
-            <li><Link to="/ai-training-healthcare-hong-kong">Healthcare professionals &rarr;</Link></li>
-            <li><Link to="/ai-training-teachers-hong-kong">Teachers &rarr;</Link></li>
-            <li><Link to="/ai-training-nonprofit-hong-kong">NGOs and social services &rarr;</Link></li>
-            <li><Link to="/ai-training-sme-owners-hong-kong">Small business owners &rarr;</Link></li>
-            <li><Link to="/ai-training-executive-assistants-hong-kong">Executive assistants and operations &rarr;</Link></li>
-          </ul>
+            routes with zero inbound links before.
+            The block shipped 2026-09-03 with a class nothing styled, so it
+            rendered as a bare list against the page's banded sections; it now
+            uses the same section-sunken / content-standard rhythm as the rest
+            of the page. Link text comes from verticals.js so it cannot drift
+            from the <h1> each page actually renders. */}
+        <section className="section-sunken section-padding services-verticals" id="by-profession">
+          <div className="content-standard">
+            <h2>Training by profession</h2>
+            <p>
+              Each of these is built from a delivered engagement, not a service
+              description, and each carries its own receipts.
+            </p>
+            <ul>
+              {verticals.map((v) => (
+                <li key={v.slug}>
+                  <Link to={`/${v.slug}`}>{v.en.title}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </section>
 
         <p className="services-footer-link">

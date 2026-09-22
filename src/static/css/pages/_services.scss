@@ -502,3 +502,71 @@
     font-size: 1.1rem;
   }
 }
+
+// «Training by profession» / 「按專業界別」 — the internal links that keep the
+// five profession routes off the orphan list. Shipped 2026-09-03 carrying a
+// class nothing styled, so on both /services and /zh/services it rendered as a
+// bare list butted against the banded sections above it. Deliberately NOT
+// nested under #services: /zh/services renders the same block inside
+// #zh-services and must look identical.
+//
+// Warm field, never white: `surface-sunken` (#f7f6f3) is the paper the page's
+// other quiet bands sit on, so this reads as one more section rather than as
+// content that fell out of the layout.
+.services-verticals {
+  h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  > .content-standard > p {
+    color: _palette(text-body);
+    margin-bottom: 1.1rem;
+    max-width: 58ch;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    border-bottom: 1px solid _palette(border-subtle);
+    margin: 0;
+    padding: 0;
+
+    &:first-child {
+      border-top: 1px solid _palette(border-subtle);
+    }
+  }
+
+  li a {
+    color: _palette(ink);
+    display: block;
+    padding: 0.85rem 1.75rem 0.85rem 0;
+    position: relative;
+    text-decoration: none;
+
+    // The arrow is decorative and lives in CSS so it never lands in the link
+    // text an answer engine or a screen reader reads out.
+    &::after {
+      content: "\2192";
+      color: _palette(text-secondary);
+      position: absolute;
+      right: 0.25rem;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: transform 0.18s ease, color 0.18s ease;
+    }
+
+    &:hover,
+    &:focus-visible {
+      color: _palette(signal);
+
+      &::after {
+        color: _palette(signal);
+        transform: translateY(-50%) translateX(0.25rem);
+      }
+    }
+  }
+}

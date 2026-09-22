@@ -99,7 +99,9 @@ describe('the site portrait is the 2026-09 photograph', () => {
     'src/pages/MediaKit.js',
     'src/pages/ZhMediaKit.js',
     'src/pages/About.js',
-    'src/pages/Index.js',
+    // Both homepages read their schema `image` from data/homeSchema.js
+    // since 2026-09-18; Index.js no longer names a portrait itself.
+    'src/data/homeSchema.js',
     'src/pages/CorporateTraining.js',
     'src/pages/ZhCorporateTraining.js',
     'public/index.html',
@@ -123,8 +125,13 @@ describe('the site portrait is the 2026-09 photograph', () => {
     });
     expect(read('src/components/Home/HeroSection.js')).toContain('/images/sam-hero-2026-09.jpg');
     expect(read('public/index.html')).toContain('/images/sam-hero-2026-09.webp');
+    // Extension-agnostic since 2026-09-18: the Person JSON-LD `image` moved to
+    // the 44 KB WebP (the PNG is 794 KB and every consumer of the schema field
+    // fetches it), while the <img> slots keep the PNG that OptimizedImage
+    // swaps for the WebP in-browser and the media kit offers as a download.
+    // What this guards is that every slot points at the 2026-09 portrait.
     pages.filter((p) => !p.includes('HeroSection')).forEach((p) => {
-      expect(read(p)).toContain('/images/sam-portrait-2026-09.png');
+      expect(read(p)).toMatch(/\/images\/sam-portrait-2026-09\.(png|webp)/);
     });
   });
 });

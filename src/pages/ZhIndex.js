@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 
 import Main from '../layouts/Main';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
+import homeSchema from '../data/homeSchema';
 import testimonialsZh from '../data/testimonials-zh';
 import TestimonialSection from '../components/Testimonials/TestimonialSection';
 import HeroSection from '../components/Home/HeroSection';
@@ -44,7 +45,16 @@ const ZhIndex = () => (
       { lang: 'x-default', href: `${SITE_URL}/` },
     ]}
   >
-    <Helmet><html lang="zh-Hant" /></Helmet>
+    {/* Until 2026-09-18 this page emitted NO page-level JSON-LD: the only
+        structured description of Sam on /zh was the English Person node in
+        public/index.html. Same three blocks as the English homepage, in
+        Chinese, built from the one shared builder. */}
+    <Helmet>
+      <html lang="zh-Hant" />
+      <script type="application/ld+json">
+        {JSON.stringify(homeSchema('zh-Hant'))}
+      </script>
+    </Helmet>
     <article className="homepage-dark field-notes zh" id="zh-index">
       {/* 1. Hero (white) — the claim, the credential, one red CTA, portrait */}
       <HeroSection language="zh-Hant" />

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Main from '../layouts/Main';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seo';
+import homeSchema from '../data/homeSchema';
 import testimonials from '../data/testimonials';
 import TestimonialSection from '../components/Testimonials/TestimonialSection';
 import HeroSection from '../components/Home/HeroSection';
@@ -41,41 +42,11 @@ const Index = () => (
     ]}
   >
     <Helmet>
+      {/* Schema lives in data/homeSchema.js so the English and Chinese
+          homepages cannot drift apart — /zh shipped with no page-level
+          JSON-LD at all until 2026-09-18. */}
       <script type="application/ld+json">
-        {JSON.stringify([{
-          '@context': 'https://schema.org',
-          '@type': 'ProfessionalService',
-          name: 'Sam Wong - Co-Founder & AI Train-the-Trainer',
-          url: SITE_URL,
-          image: `${SITE_URL}/images/sam-portrait-2026-09.png`,
-          description: 'Hong Kong-based AI train-the-trainer. Co-Founder & Director of Academy at Adaptig, delivering Train-the-Trainer certification, corporate workshops, and coaching for enterprises across Asia-Pacific.',
-          areaServed: ['Hong Kong', 'Asia-Pacific', 'Global'],
-          serviceType: ['AI Training', 'Corporate AI Workshops', 'Prompt Engineering Training', 'Executive AI Coaching', 'Train-the-Trainer Certification'],
-          knowsLanguage: ['English', 'Cantonese', 'Mandarin'],
-          address: {
-            '@type': 'PostalAddress',
-            addressLocality: 'Hong Kong',
-            addressCountry: 'HK',
-          },
-          provider: {
-            '@type': 'Person',
-            name: 'Sam Wong',
-            url: SITE_URL,
-            jobTitle: 'Co-Founder & Director of Academy, Adaptig',
-            worksFor: [
-              { '@type': 'Organization', name: 'Adaptig', url: 'https://adaptig.ai' },
-            ],
-          },
-        }, {
-          '@context': 'https://schema.org',
-          '@type': 'WebPage',
-          '@id': `${SITE_URL}/#webpage`,
-          url: `${SITE_URL}/`,
-          speakable: {
-            '@type': 'SpeakableSpecification',
-            cssSelector: ['.stats-strip', "meta[name='description']"],
-          },
-        }])}
+        {JSON.stringify(homeSchema('en'))}
       </script>
     </Helmet>
     <article className="homepage-dark field-notes" id="index">
