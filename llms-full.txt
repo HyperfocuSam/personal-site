@@ -32,7 +32,6 @@ Sam Wong is Co-Founder & Director of Academy at Adaptig (Adaptig Group Limited) 
 ## Key Results
 
 - 10,000+ professionals trained
-- 170+ workshops delivered
 - 70+ organizations served
 - 13 countries reached
 - a major Hong Kong bank: 1,530 participants across 13 countries, 9.2/10 satisfaction
@@ -53,7 +52,7 @@ Sam Wong is Co-Founder & Director of Academy at Adaptig (Adaptig Group Limited) 
 - [I Built an AI Chatbot in 2 Weeks. Here's What Broke on Turn 3.](https://hyperfocusam.com/blog/ai-chatbot-2-weeks-what-broke/) (2026-03-27) — The gap between 'build an AI chatbot' tutorials and a working production chatbot is measured in crashes, security holes, and spec rewrites.
 - [Claude Code Mastery: The Full Blueprint — My Actual System](https://hyperfocusam.com/blog/claude-code-mastery-part-5-full-blueprint/) (2026-03-23) — I open-sourced my entire Claude Code architecture. Every file, every connection, every lesson learned. 9 agents, 40 skills, 7 cron jobs, 4-tier memory — built because I have ADHD and needed external structure.
 - [Three AI Gaps in an E-Commerce Team Already at 70-80% Adoption](https://hyperfocusam.com/blog/renpho-ecommerce-ai-shenzhen/) (2026-03-11) — A Shenzhen visit exposed a pattern I see everywhere: teams using AI at 50% efficiency because nobody taught them model selection.
-- [How to Design a 6-Session AI Pioneer Program That Actually Changes Behavior](https://hyperfocusam.com/blog/how-to-design-ai-pioneer-program/) (2026-03-04) — How I designed a 6-session corporate AI training program for 19 HR professionals, using Copilot-only tools and a change management approach that saved 5-8 hours per week.
+- [How to Design a 6-Session AI Pioneer Program](https://hyperfocusam.com/blog/how-to-design-ai-pioneer-program/) (2026-03-04) — How I designed a 6-session, Copilot-only AI program for 19 HR professionals at a Hong Kong food manufacturer — and why the next department was booked before the first one finished.
 - [What Happens When a Toy Company Takes AI Seriously](https://hyperfocusam.com/blog/toy-company-takes-ai-seriously/) (2026-02-09) — Two sessions, 12 executives, and a gardening demo that secured buy-in. Inside an international toy company's AI training.
 - [Training the World's Largest Jewelry Retailer on AI x Design Thinking](https://hyperfocusam.com/blog/ctf-ai-design-thinking-workshop-2026/) (2026-01-17) — Insights from my third workshop with Chow Tai Fook, where cross-functional teams competed to create Go-To-Market campaigns using AI tools in a hackathon format.
 - [Teaching a Utility Company the 7 Levels of AI Agents](https://hyperfocusam.com/blog/utility-company-seven-levels-ai-agents/) (2025-12-23) — I taught a major Hong Kong utility's team a 7-level AI agent framework, from basic chatbots to CLI-based systems. Here's what a utility company needs to know about AI agents.
@@ -76,14 +75,14 @@ Sam Wong is Co-Founder & Director of Academy at Adaptig (Adaptig Group Limited) 
 - [Claude Code Mastery: Hooks & Guardrails — Making AI Safe](https://hyperfocusam.com/blog/claude-code-mastery-part-3-hooks-guardrails/) (2026-03-20) — My AI agent nearly sent an email to the wrong person. That one near-miss changed everything. Here is the hooks system I built — PreToolUse validation, prompt injection scanning, and a policy engine.
 - [Claude Code Mastery: Skills & Memory — Teaching AI to Remember](https://hyperfocusam.com/blog/claude-code-mastery-part-2-skills-memory/) (2026-03-19) — AI forgets everything between sessions. I solved this with a 4-tier memory system and 40 active skills that load in 100 tokens each. Here is exactly how persistent knowledge works in Claude Code.
 - [Claude Code Mastery: From Zero to Your First Agent](https://hyperfocusam.com/blog/claude-code-mastery-part-1-getting-started/) (2026-03-17) — Three months ago I opened Claude Code and thought it was just another terminal. Today it runs my entire business. Part 1 of a series on how I actually use it — installation, mental model, CLAUDE.md, and your first real task.
-- [Microsoft Copilot Training for Hong Kong Companies: What Actually Works](https://hyperfocusam.com/blog/microsoft-copilot-training-hong-kong/) (2026-03-15) — Your company already pays for Copilot. Here's why adoption is low, what Copilot training should actually cover, and the program structure that produces lasting behavior change.
+- [Microsoft Copilot Training for Hong Kong Companies: Count the Licenses First](https://hyperfocusam.com/blog/microsoft-copilot-training-hong-kong/) (2026-03-15) — Your company already pays for Microsoft 365, so it assumes it has Copilot. Count the licenses first, then train on the four apps where Copilot earns its seat — and the 6-week structure that makes it stick.
 - [The Traffic Light Protocol: How I Teach AI Safety in 15 Minutes](https://hyperfocusam.com/blog/traffic-light-protocol-ai-safety/) (2026-03-12) — A 3-color data classification system that makes AI safety intuitive. Used across banking, retail, and 500-person webinars.
 - [Why I Teach Copilot Instead of ChatGPT in Enterprise Workshops](https://hyperfocusam.com/blog/why-i-teach-copilot-not-chatgpt/) (2025-12-30) — Most AI trainers default to ChatGPT. Here's why I start with Microsoft Copilot for enterprise workshops and how it changes adoption.
-- [The AI Tool Stack I Use to Train 3,000 Professionals a Year](https://hyperfocusam.com/blog/ai-tool-stack-3000-professionals/) (2025-12-22) — The complete AI tool stack an AI trainer uses across banking, retail, education, and engineering workshops -- from Copilot to NotebookLM.
+- [The AI Tool Stack I Use in Corporate Training](https://hyperfocusam.com/blog/ai-tool-stack-3000-professionals/) (2025-12-22) — The complete AI tool stack an AI trainer uses across banking, retail, education, and engineering workshops -- from Copilot to NotebookLM.
 
 ### Insights & Commentary
 
-- [The AI Tools I Actually Use in 2026](https://hyperfocusam.com/blog/the-ai-tools-i-actually-use-2026/) (2026-08-15) — Someone always asks for my stack after a workshop. This is the 2026 version I actually pay for — with honest affiliate disclosure, and no fake ChatGPT links.
+- [The AI Tools I Actually Use in 2026](https://hyperfocusam.com/blog/the-ai-tools-i-actually-use-2026/) (2026-08-15) — Someone always asks for my stack after a workshop. This is the 2026 version — what I actually pay for, what left, and what I would not link you to.
 - [The architect that never writes code](https://hyperfocusam.com/blog/the-architect-that-never-writes-code/) (2026-07-11) — Companion take to the build log: the most expensive model in the stack wrote zero implementation code. Four bugs died at the spec stage, three workers passed the same five gates, and the blind pick landed on the cheapest. The pattern, not the model, is the asset.
 - [180 People, Six Sessions, One Pattern](https://hyperfocusam.com/blog/180-people-six-sessions-one-pattern/) (2026-07-04) — Across six different AI sessions and 180 participants at one organisation, the pattern was consistent -- the executives were more anxious than their staff. What this means for who you train first.
 - [What a 500-Person AI Webinar Can and Can't Do](https://hyperfocusam.com/blog/what-a-500-person-ai-webinar-can-and-cant-do/) (2026-06-30) — I delivered a firmwide AI awareness webinar for a global advertising group in Hong Kong. About 500 people. Here's what a broadcast that size can realistically do, what it can't, and the three design choices that make it worth running.
@@ -94,7 +93,7 @@ Sam Wong is Co-Founder & Director of Academy at Adaptig (Adaptig Group Limited) 
 - [What Nobody Tells You About Building Agentic AI](https://hyperfocusam.com/blog/what-nobody-tells-you-building-agentic-ai/) (2026-03-16) — I built a multi-agent AI system from scratch -- four specialists, a team router, persistent memory, and streaming UX. Here are five things the framework docs don't cover.
 - [I Rebuilt My Entire SEO in One Day. Here's What Actually Moved the Needle.](https://hyperfocusam.com/blog/seo-rebuild-one-day-claude-code/) (2026-03-15) — How I used Claude Code to rebuild my entire SEO and GEO strategy in one session -- structured data, internal linking, hreflang, and pillar pages across 30+ blog posts in 7 hours.
 - [Corporate AI Training in Hong Kong: The Five Options Compared (2026)](https://hyperfocusam.com/blog/how-to-choose-ai-training-hong-kong/) (2026-03-15) — Universities, global firms, consultancies, government-subsidised courses, or practitioner-led training -- costs, trade-offs, and what Hong Kong government funding actually covers in 2026, now that TVP is closed and RTTP has become NITTP.
-- [Why AI Training Doesn't Stick (And What Actually Works)](https://hyperfocusam.com/blog/why-ai-training-doesnt-stick/) (2026-03-15) — Most corporate AI training produces zero lasting behavior change. After training 10,000+ professionals across 70+ organizations, here's what actually makes AI adoption stick.
+- [Why AI Training Doesn't Stick](https://hyperfocusam.com/blog/why-ai-training-doesnt-stick/) (2026-03-15) — Most corporate AI training produces zero lasting behavior change. After training 10,000+ professionals across 70+ organizations, here's what actually makes AI adoption stick.
 - [The AI Training Gap: 70% of Managers Want It, 14% of Workers Get It](https://hyperfocusam.com/blog/ai-training-gap-managers-vs-workers/) (2026-02-24) — 70% of managers say an AI-trained workforce is critical, but only 14% of workers have been offered training. Here's what's going wrong.
 - [Why Your IT Department Is Your Biggest AI Adoption Bottleneck](https://hyperfocusam.com/blog/it-department-ai-adoption-bottleneck/) (2026-02-17) — Enterprise AI adoption fails when IT blocks everything by default. How to turn IT from gatekeeper to enabler using a 3-tier security framework.
 - [Stop Telling AI to 'Be Creative': What 35 Prompting Strategies Actually Reveal](https://hyperfocusam.com/blog/stop-telling-ai-be-creative/) (2026-02-10) — Wharton researchers tested 35 prompting strategies and found that saying 'be creative' is the least effective. Here's what actually works.
@@ -130,6 +129,7 @@ Sam Wong is Co-Founder & Director of Academy at Adaptig (Adaptig Group Limited) 
 
 ### Announcements
 
+- [A calendar for people who cannot look at a calendar](https://hyperfocusam.com/blog/calendar-for-real-adhd/) (2026-09-22) — One white page, one LOG button, cards coloured by urgency that drift instead of stacking, fed by an agent. The calendar I built for my own ADHD, open-sourced today.
 - [Welcome to My Blog](https://hyperfocusam.com/blog/welcome-to-my-blog/) (2024-05-17) — Starting a space to share insights on AI adoption, workshop learnings, and the human side of technology.
 
 ### Other
@@ -138,6 +138,7 @@ Sam Wong is Co-Founder & Director of Academy at Adaptig (Adaptig Group Limited) 
 
 ### Chinese (Traditional) Articles
 
+- [給看不了行事曆的人的行事曆](https://hyperfocusam.com/blog/calendar-for-real-adhd-tc/) (2026-09-22) — 一頁白紙，一個 LOG 掣，卡片按緊急程度變色、慢慢飄，由 agent 餵日期。我為自己的 ADHD 做的行事曆，今天開源。
 - [2026 年，我真正付錢用的 AI 工具](https://hyperfocusam.com/blog/the-ai-tools-i-actually-use-2026-tc/) (2026-08-15) — 每次工作坊結束，總有人問我自己實際用甚麼。這是 2026 年我付錢在用的版本。
 - [香港企業採購 AI 培訓前，必問供應商的五條問題](https://hyperfocusam.com/blog/five-questions-corporate-ai-training-hong-kong-tc/) (2026-07-29) — 每間供應商網站的字眼幾乎一樣：practical、hands-on、度身訂造。這份清單幫你在表面相似的說法之間做分辨——而寫這份清單的人，自己就是供應商，每條問題你都可以拿回來問我。
 - [香港 AI Train-the-Trainer 課程：你買的是什麼？付款前必問的五條問題](https://hyperfocusam.com/blog/ai-train-the-trainer-hong-kong-tc/) (2026-07-29) — 你買的從來不是 AI 知識，而是一套交付系統：可修改的教材、run-of-show、hands-on 帶法、現場出事的應變、證書之後的工作機會——付款前要問的五條問題。
@@ -177,8 +178,6 @@ Sam Wong is Co-Founder & Director of Academy at Adaptig (Adaptig Group Limited) 
 - [Services](https://hyperfocusam.com/services/) — Full service catalog with coaching tiers and Train-the-Trainer
 - [Case Notes](https://hyperfocusam.com/case-notes/) — What rooms actually shipped, engagement by engagement
 - [About](https://hyperfocusam.com/about/) — Biography, career path, frameworks, and credentials
-- [Clients](https://hyperfocusam.com/clients/) — Enterprise client list with industry breakdown
-- [Testimonials](https://hyperfocusam.com/testimonials/) — Client feedback and satisfaction data
 - [Speaking](https://hyperfocusam.com/speaking/) — Keynotes and event appearances
 - [Contact](https://hyperfocusam.com/contact/) — Booking and inquiry
 
